@@ -31,7 +31,7 @@ In the case of the GBIF API, the data are available only in the form of JSON.  H
 |serialization|Internet Media Type|
 |---|---|
 |web page (HTML)|text/html|
-|JSON|application/xml|
+|JSON|application/json|
 |XML|application/xml|
 |CSV|text/csv|
 
@@ -41,3 +41,45 @@ Notes:
 
 ## Simple functions to request data from an API
 
+### Function httpGet
+
+**Description** Performs an HTTP GET call to a URL and requests a particular Internet Media Type.  The function returns the HTTP status code and the response body.
+
+**Arguments and Return Type**
+
+| name | type | description|
+|---|---|---|
+| uri | string | The URL of the endpoint or file to be retrieved |
+| acceptMime | string | The Internet Media Type requested. |
+| *return value* | sequence of two items | First item is the HTTP status code, second item is the response body |
+
+**Example (Python 3)**
+
+Code is [here](python/http_library.py).  The function uses the **requests** module, which is not in the standard library and must be installed using PIP.  The code can be copied and pasted into a script, or the http_library.py file can be included in the same directory as the script and imported. If copy and paste is used, the libraries **requests**, **csv**, and **json** must be imported (see lines 1-3 of the [code](python/http_library.py)).
+
+The return value is a list of two items: the HTTP status code as an integer and the response body as a string.
+
+```python
+import http_library
+uri = 'http://api.gbif.org/v1/occurrence/search?recordedBy=William%20A.%20Haber'
+acceptMime = 'application/json'
+response = http_library.httpGet(uri, acceptMime)
+print('Status: '+string(response[0]+'\nBody:\n'+response[1]))
+```
+
+**Example (XQuery)**
+This function uses functions from the BaseX HTTP module, and is therefore BaseX-specific.
+
+The function can be copied from this [code](xquery/http_library.xq), or called from this [module](xquery/http_library.xqm).  The module namespace and retrieval URL are shown in the example below.
+
+The return value is a sequence of two items: the HTTP status code as a string and the response body as an XML node (the structure of the node depends on the serialization requested).
+
+```xquery
+xquery version "3.1";
+
+import module namespace vudsscapi = 'https://github.com/HeardLibrary/digital-scholarship/tree/master/code/api' at 'https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/code/api/xquery/http_library.xqm';
+
+let $uri := "http://api.gbif.org/v1/occurrence/search?recordedBy=William%20A.%20Haber"
+let $acceptMime := "application/json"
+return vudsscapi:httpGet($uri,$acceptMime)
+```
