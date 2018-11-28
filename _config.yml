@@ -18,6 +18,4 @@ js: >-
 # Build settings
 markdown: kramdown
 # theme: tdwg-theme-jekyll
-remote_theme: https://github.com/tdwg/tdwg-theme-jekyll
-plugins:
-  - jekyll-feed
+remote_theme: https://github.com/joshgerdes/jekyll-uno
