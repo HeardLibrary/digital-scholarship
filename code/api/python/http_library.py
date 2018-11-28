@@ -3,11 +3,11 @@ import csv        # library to read/write/parse CSV files
 import json       # library to convert JSON to Python data structures
 
 # performs a generic HTTP GET
-def httpGet(baseUri,acceptMime):
+def httpGet(uri,acceptMime):
     if acceptMime == '':
         acceptMime = '*.*'                         # if no mime type specified, accept anything
     headerDict = {'Accept' : acceptMime}           # headers are sent as a dictionary
-    r = requests.get(baseUri, headers=headerDict)
+    r = requests.get(uri, headers=headerDict)
     return [r.status_code, r.text]                 # status code is an integer, response body is a string
 
 # requests tabular data from an API and returns a table consisting of a list of lists.  If GET fails, the list is empty
