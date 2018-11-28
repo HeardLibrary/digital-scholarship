@@ -1,3 +1,5 @@
+(: Steve Baskauf 2018-11-28 CC0 :)
+
 xquery version "3.1";
 
 (: performs generic HTTP GET :)

@@ -1,3 +1,5 @@
+# Steve Baskauf 2018-08-04  CC0
+
 import requests   # best library to manage HTTP transactions
 import csv        # library to read/write/parse CSV files
 import json       # library to convert JSON to Python data structures

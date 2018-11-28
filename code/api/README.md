@@ -1,5 +1,7 @@
 # Code for interacting with APIs
 
+This code is freely available under a [Creative Commons CC0 license](https://creativecommons.org/publicdomain/zero/1.0/) ![](https://licensebuttons.net/l/zero/1.0/88x31.png)
+
 ## Introduction
 
 Technically, an **application program interface (API)** is a system of functions and communication protocols to make it easy to develop software.  In common usage, "an API" generally means a web API where an application (software) can communicate through the Internet with a server that provides data services through a standardized protocol.  
