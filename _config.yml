@@ -1,1 +1,23 @@
-theme: jekyll-theme-dinky
+# Site settings
+title: Vanderbilt Digital Scholarship Resources
+description: Website for the Vanderbilt Libraries digital scholarship resources
+url: "https://heardlibrary.github.io"
+baseurl: "/digital-scholarship"
+
+navbar:
+  left:
+  - text: Introduction
+    href: introduction/
+  right:
+  - text: GitHub
+    href: https://github.com/HeardLibrary/digital-scholarship
+
+js: >-
+  
+
+# Build settings
+markdown: kramdown
+# theme: tdwg-theme-jekyll
+remote_theme: https://github.com/tdwg/tdwg-theme-jekyll
+plugins:
+  - jekyll-feed
