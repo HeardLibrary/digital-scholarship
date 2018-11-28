@@ -85,3 +85,35 @@ let $uri := "http://api.gbif.org/v1/occurrence/search?recordedBy=William%20A.%20
 let $acceptMime := "application/json"
 return vudsscapi:httpGet($uri,$acceptMime)
 ```
+
+### Function retrieveData
+
+**Description** Retrieves a "flat" data file or data from an API and loads it into a table-like data structure for the chosen language.  The HTTP call is made using the httpGet function described above.
+
+TODO: talk about error handling
+
+**Arguments and Return Type**
+
+| name | type | description|
+|---|---|---|
+| uri | string | The URL of the endpoint or file to be retrieved |
+| responseType | string | The type of serialization provided by the server. Options: csv, json |
+| param1 | string | For CSV, param1 is the delimiter character.  For JSON, param1 is the name (i.e. key) of the data array |
+| *return value* | data structure | For Python, a list of string lists.  For XQuery, ... |
+
+**Example (Python 3)**
+This function requires that the top-level structure is an object and that one of the name/value pairs has a value that is an array of ...
+
+Code is [here](python/http_library.py).  The function uses the **requests** module, which is not in the standard library and must be installed using PIP.  The code can be copied and pasted into a script, or the http_library.py file can be included in the same directory as the script and imported. If copy and paste is used, the libraries **requests**, **csv**, and **json** must be imported (see lines 1-3 of the [code](python/http_library.py)).
+
+The return value is a list of lists.
+
+```python
+import http_library
+uri = 'http://api.gbif.org/v1/occurrence/search?recordedBy=William%20A.%20Haber'
+responseType = 'json'
+param1 = 'results'
+response = http_library.retrieveData(uri, responseType, param1)
+print(response)
+```
+
