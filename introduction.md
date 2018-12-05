@@ -1,10 +1,18 @@
 ---
 permalink: /introduction/
+title: Introduction page
 ---
 
 # Level 1 heading
 
+This is the Introduction page, introduction.md
+
 Sample text
+[test link to home page: index.md](index.md)
+[test link to home page: index](index)
+[test link to home page: /](/)
+[test link to home page: ../](../)
+
 
 ## Level 2 heading
 
