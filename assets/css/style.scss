@@ -2,4 +2,18 @@
 ---
 
 @import "{{ site.theme }}";
-header {   background: #000000; }
+header {   
+    background: #000000; 
+
+    h1 {
+        font: 40px/48px 'Minion', "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #D8AB4C;
+    }
+    p {
+            color: #D8AB4C;
+    }    
+}
+#banner { 
+    background: #D8AB4C;
+    border: 1px solid #D8AB4C;  
+}
