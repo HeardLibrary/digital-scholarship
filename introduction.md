@@ -8,10 +8,13 @@ title: Introduction page
 This is the Introduction page, introduction.md
 
 Sample text
-[test link to home page: index.md](index.md)
-[test link to home page: index](index)
-[test link to home page: /](/)
-[test link to home page: ../](../)
+[test link to home page: index.md](index.md) yes, to the page in the same directory
+
+[test link to home page: index](index) no; to a page in a lower directory
+
+[test link to home page: /](/) no; to libraries home page
+
+[test link to home page: ../](../)  yes
 
 
 ## Level 2 heading
