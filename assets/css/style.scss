@@ -48,10 +48,10 @@ header {
   
   .breadcrumb { border: 0px;  display: block;}
   .breadcrumb li {font-size: 14px;}
-  .breadcrumb a {color: $brand-color;}
-  .breadcrumb a:hover {color: darken($brand-color, 20%);}
+  .breadcrumb a {color: #000000;}
+  .breadcrumb a:hover {color: darken(#000000, 20%);}
   .breadcrumb>.active a {color: #555555; }
-  .breadcrumb>li+li:before {color:$brand-color; content: "\003E\00a0";}  
+  .breadcrumb>li+li:before {color:#000000; content: "\003E\00a0";}  
 
 section {
     width:650px;
