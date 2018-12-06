@@ -1,7 +1,7 @@
 ---
-permalink: /stats/
-title: stats page
-breadcrumb: stats
+permalink: /clean/
+title: Data Cleaning
+breadcrumb: Clean
 ---
 
 # The home page (level 1 heading)
