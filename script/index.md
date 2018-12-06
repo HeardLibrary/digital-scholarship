@@ -12,7 +12,7 @@ The resources here are intended to get you up and running on the scripting langu
 
 XQuery is a functional programming language that excells at processing XML.  It is a favorite tool for dealing with markup systems like the Text Encoding Initiative (TEI) and is often used in Digital Humanities projects.
 
-[XQuery resources page](xquery/
+[XQuery resources page](xquery/)
 
 [XQuery Working Group website](https://heardlibrary.github.io/xquery-working-group/)
 
