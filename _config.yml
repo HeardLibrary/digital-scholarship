@@ -1,6 +1,6 @@
 # Site settings
-title: Vanderbilt Digital Scholarship Resources
-description: Vanderbilt Libraries digital scholarship resources by the Digital Scholarship and Scholarly Communications Office
+title: Digital Scholarship Resources
+description: Provided by the Vanderbilt Libraries Digital Scholarship and Scholarly Communications Office
 url: "https://heardlibrary.github.io"
 baseurl: "/digital-scholarship"
 theme: jekyll-theme-leap-day
