@@ -4,35 +4,31 @@ title: Home page
 breadcrumb: Home
 ---
 
-# The home page (level 1 heading)
+# About
 
-This is the designated home page, index.md
+This site is intended to be a one-stop resource for information broadly related to managing your digital life.  Although the pages are arranged in a topic hierarchy, you can navigate in other ways using the navigation pages linked below.
 
-## Important information in a level 2 heading
+In addition to the resources on this site, you can browse the Digital Scholarship [code repository](https://github.com/HeardLibrary/digital-scholarship) to find bits of code that might help you.
 
-[link to the introduction page: introduction](introduction) yes with a trailing slash, as designated in the permalink
+# Ways to navigate
 
-[link to the introduction page: introduction.md](introduction.md) yes with a trailing slash, as designated in the permalink
+## FAQ
 
-[test link to doc in nextfakedir: fakedir/nextfakedir/thirdpage.md](fakedir/nextfakedir/thirdpage.md) 404
+[Frequently asked questions - Beginner](beginner)
 
-[test link to doc in nextfakedir: fakedir/anotherpage.md](fakedir/anotherpage.md) 404
+[Frequently asked questions - Intermediate](intermediate)
 
-[test link to scrape page in real dir: scrape/index.md](scrape/index.md) yes
+[Frequently asked questions - Advanced](advanced)
 
-[test link to stats page in real dir: stats/](stats/) yes
+## By Topics
 
-[test link to scrape page in real dir: vis/index](vis/index) yes but no trailing slash and displays "index" despit the permalink designation
+[Data cleaning](clean/)
 
-Blah, blah, blah
+[Data management](manage/)
 
-```xml
-<!-->Code block test<-->
-<html>
-    <body>
-        blah
-    </body>
-<ntml>
-```
+[Data visualization](vis/)
 
-more stuff
+[Geospatial data](geo/)
+
+[Scripting/programming languages](script/)
+

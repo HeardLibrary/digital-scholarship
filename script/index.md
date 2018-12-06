@@ -1,12 +1,12 @@
 ---
-permalink: /scrape/
-title: scrape page
-breadcrumb: Scrape
+permalink: /script/
+title: Scripting and programming languages
+breadcrumb: Script
 ---
 
 # The home page (level 1 heading)
 
-This is the scrape home page, index.md
+This is the scripting and programming page
 
 ## Important information in a level 2 heading
 

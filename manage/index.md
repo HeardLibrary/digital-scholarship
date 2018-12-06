@@ -1,12 +1,12 @@
 ---
-permalink: /vis/
-title: Home page
-breadcrumb: Visualizations
+permalink: /manage/
+title: Data management
+breadcrumb: Manage
 ---
 
 # The home page (level 1 heading)
 
-This is the data vis page
+This is the data management home page
 
 ## Important information in a level 2 heading
 

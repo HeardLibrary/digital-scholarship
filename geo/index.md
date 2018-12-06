@@ -1,12 +1,12 @@
 ---
-permalink: /vis/
-title: Home page
-breadcrumb: Visualizations
+permalink: /geo/
+title: Geospatial resources
+breadcrumb: Geospatial
 ---
 
 # The home page (level 1 heading)
 
-This is the data vis page
+This is the geospatial resources page
 
 ## Important information in a level 2 heading
 
