@@ -6,7 +6,7 @@ breadcrumb: Clean
 
 # The home page (level 1 heading)
 
-This is the stats home page, index.md
+This is the data cleaning page
 
 ## Important information in a level 2 heading
 
