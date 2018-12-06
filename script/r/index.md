@@ -6,3 +6,4 @@ breadcrumb: R
 
 # R Resources
 
+[Installing R and R Studio](install)

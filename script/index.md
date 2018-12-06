@@ -26,7 +26,7 @@ Python Working Group website
 
 ## R
 
-R is broadly used to script mathematical analyses and transformations.  It is popular for its powerful statistical and graphical output functions.  There is a growing number of packages that are available to do a wide variety of tasks.
+R is a freely-available, open-source programming language that is widely used for statistics and data visualization.  It is available for PC, Mac, and Linux.  Although R itself is a programming language, there are collections of pre-programmed functions, code, and data sets called packages that can be called on by users.  R can be run from the command line, but it is often used through an integrated development environment (IDE) called RStudio.  RStudio makes it easy to run R commands, create scripts, and check on the values of variables. 
 
 [R resources page](r/)
 
