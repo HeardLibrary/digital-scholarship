@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: Home page
+breadcrumb: Home
 ---
 
 # The home page (level 1 heading)

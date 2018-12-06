@@ -1,6 +1,7 @@
 ---
 permalink: /vis/
 title: Home page
+breadcrumb: Visualizations
 ---
 
 # The home page (level 1 heading)

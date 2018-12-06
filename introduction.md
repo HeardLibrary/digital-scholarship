@@ -1,6 +1,7 @@
 ---
 permalink: /introduction/
 title: Introduction page
+breadcrumb: Introduction
 ---
 
 # Level 1 heading

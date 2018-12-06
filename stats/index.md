@@ -1,6 +1,7 @@
 ---
 permalink: /stats/
 title: stats page
+breadcrumb: stats
 ---
 
 # The home page (level 1 heading)

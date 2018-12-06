@@ -1,6 +1,7 @@
 ---
 permalink: /scrape/
 title: scrape page
+breadcrumb: Scrape
 ---
 
 # The home page (level 1 heading)
