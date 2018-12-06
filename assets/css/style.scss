@@ -4,6 +4,7 @@
 @import "{{ site.theme }}";
 header {   
     background: #000000; 
+    padding: 12px 20px 20px 20px;
 
     h1 {
         font: 40px/48px 'Minion', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -16,4 +17,12 @@ header {
 #banner { 
     background: #D8AB4C;
     border: 1px solid #D8AB4C;  
+    height: 25px;
+    .button {
+        margin-left: 3px;
+        padding: 5px 6px;
+        margin-top: 3px;
+        line-height:7px;
+        font-size:7px;    
+    }
 }
