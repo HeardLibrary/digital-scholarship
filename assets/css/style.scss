@@ -7,6 +7,7 @@ header {
     padding: 12px 20px 12px 20px;
     h1 {
         font: 40px/48px 'Minion', "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-shadow: 0px 2px 0px #000000;
         color: #D8AB4C;
     }
     p {
@@ -15,7 +16,8 @@ header {
 }
 
 #banner { 
-    margin-right:-0px;
+    margin-right: 0;
+    right: 0;
     top: 100px;
     background: #D8AB4C;
     border: 1px solid #D8AB4C;  
