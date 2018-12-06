@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: Home page
+title: Digital Scholarship Resources
 breadcrumb: Home
 ---
 
