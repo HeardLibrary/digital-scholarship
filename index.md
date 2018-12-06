@@ -20,7 +20,7 @@ In addition to the resources on this site, you can browse the Digital Scholarshi
 
 [Frequently asked questions - Advanced](advanced)
 
-## By Topics
+## By Topic
 
 [Data cleaning](clean/)
 
