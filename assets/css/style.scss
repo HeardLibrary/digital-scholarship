@@ -22,36 +22,37 @@ header {
     background: #D8AB4C;
     border: 1px solid #D8AB4C;  
     height: 25px;
+
     .button {
         padding: 5px 6px;
         margin-top: 3px;
         line-height: 7px;
         font-size: 12px;    
     }
+
+    .breadcrumb {
+        padding-top:4px;
+        list-style: none;
+        border-radius: 4px;
+      }
+      .breadcrumb > li {
+        display: inline-block;
+      }
+      .breadcrumb > li + li:before {
+        padding: 0 5px;
+      }  
+      .breadcrumb { border: 0px;  display: block;}
+      .breadcrumb li {font-size: 14px;}
+      .breadcrumb a {color: #000000;}
+      .breadcrumb a:hover {color: darken(#000000, 20%);}
+      .breadcrumb>.active a {color: #555555; }
+      .breadcrumb>li+li:before {color:#000000; content: "\003E\00a0";
+    }      
+
 #logo {
     display: none;
     }
 }
-
-.breadcrumb {
-    float:left;
-    padding-top:5px;
-    list-style: none;
-    border-radius: 4px;
-  }
-  .breadcrumb > li {
-    display: inline-block;
-  }
-  .breadcrumb > li + li:before {
-    padding: 0 5px;
-  }
-  
-  .breadcrumb { border: 0px;  display: block;}
-  .breadcrumb li {font-size: 14px;}
-  .breadcrumb a {color: #000000;}
-  .breadcrumb a:hover {color: darken(#000000, 20%);}
-  .breadcrumb>.active a {color: #555555; }
-  .breadcrumb>li+li:before {color:#000000; content: "\003E\00a0";}  
 
 section {
     width:650px;
