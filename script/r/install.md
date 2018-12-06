@@ -6,7 +6,7 @@ breadcrumb: Install
 
 # Installing R and R Studio
 
-# How do I acquire R ?
+## How do I acquire R ?
 
 R can be downloaded from one of many Comprehensive R Archive Network (CRAN) sites.  The closest one to Vanderbilt is at UT Knoxville: - <http://mirrors.nics.utk.edu/cran/> .  From the UTK CRAN site homepage, click on the "Download R for \[OS\]" link that is appropriate for your operating system. 
 
