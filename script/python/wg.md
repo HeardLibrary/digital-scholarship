@@ -1,5 +1,5 @@
 ---
-permalink: /script/python/wg
+permalink: /script/python/wg/
 title: Python Working Group
 breadcrumb: Working Group
 ---
@@ -36,3 +36,6 @@ Second cycle: **Fridays** from 12:10 to 2:00 PM (Intro: 12:10 to 1:00 PM, Worksh
 | Apr 12 | 5 |  |  |
 | Apr 19 | 6 |  |  |
 
+# Python Resources
+
+Here's a [page of Python resources](/script/python/)
