@@ -22,7 +22,7 @@ Python is an easy to learn general purpose programming language.  It is broadly 
 
 [Python resources page](python/)
 
-Python Working Group website
+[Python Working Group website](python/wg/)
 
 ## R
 
