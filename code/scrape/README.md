@@ -30,7 +30,7 @@ Lines 15 to 36 perform [a search](https://www.sec.gov/cgi-bin/browse-edgar?actio
 
 Lines 38 to 56 load the [filing detail pages](https://www.sec.gov/Archives/edgar/data/34088/000003408816000065/0000034088-16-000065-index.htm), then search through the HTML to find the links to the actual FORM 10-K webpages.  
 
-![](python/detail.png)
+![](python/10-K.png)
 
 Lines 58 through 78 load the [Form 10-K web page](https://www.sec.gov/Archives/edgar/data/34088/000003408816000065/xom10k2015.htm) for each filing.  Beautiful Soup is used to find the signatures table at the bottom of the form and extract the names and titles of the officers.
 
