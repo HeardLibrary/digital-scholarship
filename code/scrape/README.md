@@ -20,4 +20,20 @@ In this example, three rounds of scraping are used to travers the web of human-r
 
 The [example](python/scrape-sec.py) uses the [Beautiful Soup](https://pypi.org/project/beautifulsoup4/) Python library to clean up HTML and make it easier to search.  
 
+In the script, lines 1 to 13 load CIK ID numbers for corporations from a text file (one number per row).
+
+![](python/atom.png)
+
+Lines 15 to 36 perform [a search](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000034088&type=10-K&dateb=&owner=exclude&start=0&count=40&output=atom) for each corporation to find all of the 10-K forms for the years in which the corporation filed the form.  Beautiful Soup functions are used to locate and extract the URLs of the web pages that describe the filings.
+
+![](python/detail.png)
+
+Lines 38 to 56 load the [filing detail pages](https://www.sec.gov/Archives/edgar/data/34088/000003408816000065/0000034088-16-000065-index.htm), then search through the HTML to find the links to the actual FORM 10-K webpages.  
+
+![](python/detail.png)
+
+Lines 58 through 78 load the [Form 10-K web page](https://www.sec.gov/Archives/edgar/data/34088/000003408816000065/xom10k2015.htm) for each filing.  Beautiful Soup is used to find the signatures table at the bottom of the form and extract the names and titles of the officers.
+
+![](python/signatures.png)
+
 The example is also presented in the form of a [Python Jupyter notebook](python/scrape-sec.ipynb) (requires [Jupyter notebooks](https://jupyter.org/) to be installed on your computer).
