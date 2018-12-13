@@ -18,7 +18,7 @@ The repository structure is described below.
 │   │   └── xquery             : XQuery versions
 │   │       ├── http_library.xq     : API XQuery code for cut/paste
 │   │       └── http_library.xqm    : API XQuery module for import
-│   └── csv                    : code for manipulating fielded text files
+│   ├── csv                    : code for manipulating fielded text files
 │   │   ├── README.md          : description of included code
 │   │   ├── python             : Python versions
 │   │   └── xquery             : XQuery versions
