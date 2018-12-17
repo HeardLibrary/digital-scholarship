@@ -40,6 +40,10 @@ When writing and testing Python code with a code editor, the code is written in 
 
 ## Websites
 
+[Software Carpentry Programming with Python](http://swcarpentry.github.io/python-novice-inflammation/)
+
+[Software Carpentry Plotting and Programming in Python](http://swcarpentry.github.io/python-novice-inflammation/)
+
 [Python IDEs and Code Editors (Guide)](https://realpython.com/python-ides-code-editors-guide/)
 
 [Python 3.x documentation](https://docs.python.org/3/) - the official documentation for Python for the latest stable release of Python 3

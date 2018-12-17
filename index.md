@@ -30,5 +30,7 @@ In addition to the resources on this site, you can browse the Digital Scholarshi
 
 [Geospatial data](geo/)
 
+[Linked Open Data (LOD)](lod/)
+
 [Scripting/programming languages](script/)
 

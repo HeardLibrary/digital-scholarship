@@ -1,24 +1,12 @@
 ---
 permalink: /geo/
-title: Geospatial resources
+title: Geospatial data resources
 breadcrumb: Geospatial
 ---
 
-# The home page (level 1 heading)
+# Geospatial Data Resources
 
-This is the geospatial resources page
+The [Digital Scholarship and Scholarly Communications Office](https://www.library.vanderbilt.edu/scholarly/) supports geospatial research, including the use of geographic information systems (GIS).  For more information [contact Stacy Curry Johnson](mailto:stacy.e.curry@vanderbilt.edu), Librarian for Geospatial Data and Systems.
 
-## Important information in a level 2 heading
+[visit the Research Guide for GIS](http://researchguides.library.vanderbilt.edu/content.php?pid=45375&sid=3244601)
 
-Blah, blah, blah
-
-```xml
-<!-->Code block test<-->
-<html>
-    <body>
-        blah
-    </body>
-<ntml>
-```
-
-more stuff

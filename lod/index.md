@@ -6,7 +6,10 @@ breadcrumb: LOD
 
 # Linked Open Data
 
-Linked Data is a graph-based data representation.  
+Linked Data is a graph-based data representation that enables sharing and linking data among providers. Linked Open Data makes those data freely available.
 
-[Linked Data Working Group website](https://heardlibrary.github.io/linked-data/)
+At Vanderbilt, the [Digital Scholarship and Scholarly Communications Office](https://www.library.vanderbilt.edu/scholarly/) sponsors a Linked Data Working Group that explores issues related to Linked Data.
 
+[visit the Linked Data Working Group website](https://heardlibrary.github.io/linked-data/)
+
+[Linked Data WG SPARQL endpoint](https://sparql.vanderbilt.edu/)

@@ -1,24 +1,16 @@
 ---
 permalink: /vis/
-title: Home page
+title: Data visualization
 breadcrumb: Visualizations
 ---
 
-# The home page (level 1 heading)
+# Data Visualization Resources
 
-This is the data vis page
+## Tableau
 
-## Important information in a level 2 heading
+[go to the Tableau Public website](https://public.tableau.com/en-us/s/)
 
-Blah, blah, blah
+## R and ggplot
 
-```xml
-<!-->Code block test<-->
-<html>
-    <body>
-        blah
-    </body>
-<ntml>
-```
+[go to the ggplot2 website](https://ggplot2.tidyverse.org/index.html)
 
-more stuff

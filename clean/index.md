@@ -1,24 +1,19 @@
 ---
 permalink: /clean/
-title: Data Cleaning
+title: Data cleaning
 breadcrumb: Clean
 ---
 
-# The home page (level 1 heading)
+# Data Cleaning Resources
 
-This is the data cleaning page
+## Open Refine
 
-## Important information in a level 2 heading
+[go to the Open Refine website](http://openrefine.org/)
 
-Blah, blah, blah
+## R Markdown
 
-```xml
-<!-->Code block test<-->
-<html>
-    <body>
-        blah
-    </body>
-<ntml>
-```
+[go to the R Markdown website](https://rmarkdown.rstudio.com/)
 
-more stuff
+## Jupyter Notebooks
+
+[go to the Jupyter Notebook website](https://jupyter.org/)
