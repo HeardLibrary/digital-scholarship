@@ -22,7 +22,7 @@ When I look at the screen of my computer, I see what appears to be a flat surfac
 
 ## Where actually is my desktop?
 
-![](images/mac-desktop-path.png)
+![](images/mac-desktop-tree.png)
 
 In reality, the two image files are somewhere on the hard drive of my computer.  The hard drive is organized in a hierarchical way, called the directory tree.  A parent directory can contain a number of child directories, and those child directories can be parents of other child directories.  From the diagram above, you can see that there is a directory many layers deep called "Desktop".  That directory is an index that keeps track of the part of the hard drive that actually contains the two image files that I saw on my graphical desktop.  There isn't really anything special about that directory other than that the computer is set up to display its contents in a special graphical way.
 
@@ -32,4 +32,16 @@ Long ago, personal computers could have only one user.  Now personal computers a
 
 ![](images/mac-system.png)
 
-To see what 
+To see what users are enabled on your computer, drop down the apple menu at the upper left of your screen and select System Preferences.  If necessary, click on the button at the top that contains rows of dots so that you can see the preferences options.  Double click on Users & Groups.
+
+![](images/mac-users.png)
+
+There are several important things that you can see from this window.  You can see who is currently logged on, and whether the current user is an administrator user or not.  If you are using your own computer, you generally should be logged on as an administrator user, otherwise you may be prevented from taking important actions like installing new software.  If you are using a work computer, you may not be an administator user.  In that case there may be some changes that you won't be allowed to make on your computer.
+
+You can also see that there are several other users listed that are not currently logged in.
+
+![](images/mac-guest-desktop-tree.png)
+
+Here is another view of the directory tree.  In the previous view, the home folder of the logged in user (baskausj) was selected.  I could tell that it was for the logged in user because the user folder icon was a little house.  In this view, the home folder of a non-logged in user (Guest) was selected.  Notice that the Guest user also has a folder called "Desktop".  Most of the Guest user folders have little red "do not" symbols on them.  Since I'm not logged in as the Guest user, I'm not allowed to access them.
+
+Every user on the computer has its own Documents, Downloads, Music, etc. folders.  It can be confusing if you unknowingly log out from your normal user account and log on to a different one.  The graphical desktop and the contents of all of these familiar folders will be different because they aren't actually the same folders as your user folders (even though they have the same names).
