@@ -38,6 +38,10 @@ When writing and testing Python code with a code editor, the code is written in 
 
 # For more information
 
+## Python Working Group at Vanderbilt
+
+Home page of the [Python Working Group](wg) of the [Vanderbilt Libraries Digital Scholarship and Scholarly Communications Office](https://www.library.vanderbilt.edu/scholarly/)
+
 ## Websites
 
 [Software Carpentry Programming with Python](http://swcarpentry.github.io/python-novice-inflammation/)
