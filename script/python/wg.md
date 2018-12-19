@@ -18,23 +18,23 @@ First cycle: **Tuesdays** from 12:10 to 2:00 PM (Intro: 12:10 to 1:00 PM, Worksh
 
 | Date | Session | Topic | Notes |
 |---|---|---|
-| Jan 14 | 1 |  |  |
-| Jan 22 | 2 |  |  |
-| Jan 29 | 3 |  |  |
-| Feb 5 | 4 |  |  |
-| Feb 12 | 5 |  |  |
-| Feb 19 | 6 |  |  |
+| Jan 14 | 1 | Getting started |  |
+| Jan 22 | 2 | Python scripting basics |  |
+| Jan 29 | 3 | Using objects |  |
+| Feb 5 | 4 | Using data structures |  |
+| Feb 12 | 5 | Input and output |  |
+| Feb 19 | 6 | How to hack |  |
 
 Second cycle: **Fridays** from 12:10 to 2:00 PM (Intro: 12:10 to 1:00 PM, Workshop: 1:00 to 2:00 PM)
 
 | Date | Session | Topic | Notes |
 |---|---|---|
-| Mar 15 | 1 |  |  |
-| Mar 22 | 2 |  |  |
-| Mar 29 | 3 |  |  |
-| Apr 5 | 4 |  |  |
-| Apr 12 | 5 |  |  |
-| Apr 19 | 6 |  |  |
+| Mar 15 | 1 | Getting started |  |
+| Mar 22 | 2 | Python scripting basics |  |
+| Mar 29 | 3 | Using objects |  |
+| Apr 5 | 4 | Using data structures |  |
+| Apr 12 | 5 | Input and output |  |
+| Apr 19 | 6 | How to hack |  |
 
 # Python Resources
 
