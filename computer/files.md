@@ -45,3 +45,23 @@ You can also see that there are several other users listed that are not currentl
 Here is another view of the directory tree.  In the previous view, the home folder of the logged in user (baskausj) was selected.  I could tell that it was for the logged in user because the user folder icon was a little house.  In this view, the home folder of a non-logged in user (Guest) was selected.  Notice that the Guest user also has a folder called "Desktop".  Most of the Guest user folders have little red "do not" symbols on them.  Since I'm not logged in as the Guest user, I'm not allowed to access them.
 
 Every user on the computer has its own Documents, Downloads, Music, etc. folders.  It can be confusing if you unknowingly log out from your normal user account and log on to a different one.  The graphical desktop and the contents of all of these familiar folders will be different because they aren't actually the same folders as your user folders (even though they have the same names).
+
+# Programs and files
+
+## What is a file?
+
+## What is a program?
+
+## What does it mean for a program to be "running"
+
+# File associations and extensions
+
+## How does my computer know what a file is "for"?
+
+## Get info
+
+## File type associations
+
+## Unhiding file extensions
+
+## Changing file associations
