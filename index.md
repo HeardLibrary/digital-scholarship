@@ -34,3 +34,4 @@ In addition to the resources on this site, you can browse the Digital Scholarshi
 
 [Scripting/programming languages](script/)
 
+[Understanding my computer](computer/)
