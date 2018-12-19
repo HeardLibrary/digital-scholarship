@@ -1,5 +1,5 @@
 ---
-permalink: /installation
+permalink: /computer/installation
 title: Installing software
 breadcrumb: Installation
 ---

@@ -1,5 +1,5 @@
 ---
-permalink: /files
+permalink: /computer/files
 title: Files
 breadcrumb: Files
 ---

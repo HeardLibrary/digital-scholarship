@@ -22,7 +22,7 @@ Topics include:
 - Files and programs
 - File associations and extensions
 
-[Go to Lesson 1: Files](file)
+[Go to Lesson 1: Files](files)
 
 ## Lesson 2: Directories
 
@@ -31,7 +31,7 @@ Topics include:
 - The cloud
 - Downloads
 
-[Go to Lesson 2: Directories](directory)
+[Go to Lesson 2: Directories](directories)
 
 ## Lesson 3: Installing software
 
@@ -40,7 +40,7 @@ Topics include:
 - Seeing what's running
 - Ways to install software
 
-[Go to Lesson 3: Installing software](install)
+[Go to Lesson 3: Installing software](installation)
 
 ## Lesson 4: Connections
 
@@ -51,7 +51,7 @@ Topics include:
 - External drives
 - Additional monitors
 
-[Go to Lesson 4: Connections](connection)
+[Go to Lesson 4: Connections](connections)
 
 ## Lesson 5: Backup
 

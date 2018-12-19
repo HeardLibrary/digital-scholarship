@@ -1,5 +1,5 @@
 ---
-permalink: /directories
+permalink: /computer/directories
 title: Directories
 breadcrumb: Directories
 ---
