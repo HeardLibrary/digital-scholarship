@@ -24,11 +24,11 @@ Version 2 of Python has been in wide use for many years.  So although it is no l
 
 ## Installing a Python distribution
 
-The most basic way to run Python is to install a distribution on your computer, then issue commands one line at a time using the terminal (or "command prompt" on Windows).  [Instructions for installing Python]() (see also the note about Thonny below)
+The most basic way to run Python is to install a distribution on your computer, then issue commands one line at a time using the terminal (or "command prompt" on Windows).  [Instructions for installing Python](install) (see also the note about Thonny below)
 
 ## Using an Integrated Development Environment (IDE)
 
-An Integrated Development Environment is an auxillary program that makes it easier to write, test, debug, and run a programming language.  An IDE called IDLE is installed automatically when Python is installed.  Another IDE designed specifically for beginners is [Thonny](https://thonny.org/). Installing Thonny also installs Python 3.7 at the same time.  [Instructions for getting started with Thonny]()
+An Integrated Development Environment is an auxillary program that makes it easier to write, test, debug, and run a programming language.  An IDE called IDLE is installed automatically when Python is installed.  Another IDE designed specifically for beginners is [Thonny](https://thonny.org/). Installing Thonny also installs Python 3.7 at the same time.  [Instructions for getting started with Thonny](thonny)
 
 ## Using a code editor
 
@@ -40,7 +40,7 @@ When writing and testing Python code with a code editor, the code is written in 
 
 ## Python Working Group at Vanderbilt
 
-Home page of the [Python Working Group](wg) of the [Vanderbilt Libraries Digital Scholarship and Scholarly Communications Office](https://www.library.vanderbilt.edu/scholarly/)
+[Home page of the Python Working Group](wg) of the [Vanderbilt Libraries Digital Scholarship and Scholarly Communications Office](https://www.library.vanderbilt.edu/scholarly/)
 
 ## Websites
 
