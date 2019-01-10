@@ -12,7 +12,7 @@ The Python Working Group is a working group of the [Digital Scholarship and Scho
 
 The group meets weekly throughout the semester.  Each session is composed of two parts: an introductory session (12:10-1:00 PM) focused on helping new users, and a free-format second hour (1:00-2:00 PM) where participants can work on particular problems they are facing.  Participants in the first hour are welcome to stay for the second hour to get additional help with the new concepts that have been introduced.  Participants are also welcomd to arrive at the meeting at the start of the second hour if they just want to workshop a problem that they are having.
 
-## Vemue
+## Venue
 
 The Working Group meets in the Eskind Training Room (Room 010 in the basement of the Eskind Biomedical Library).
 
