@@ -10,11 +10,11 @@ Thonny is an Integrated Development Environment (IDE) designed to make it easier
 
 Thonny comes pre-installed if you install the Raspbian operating system on a Raspberry Pi computer.
 
-![](images/thonny-raspberry-pi.jpg)
+<img src="images/thonny-raspberry-pi.jpg" border="1">
 
 ## Installing Thonny on a Mac
 
-![](images/thonny-1.png)
+<img src="images/thonny-1.png" border="1">
 
 1. Go to the website <https://thonny.org/> and click on the Mac link in the upper right corner.
 
