@@ -48,5 +48,39 @@ Click Open.
 
 2. Once you've moved the application to your Applications folder, you don't really need the installation file any more.  You can go to your Downloads folder and delete it if you like to keep your Downloads folder uncluttered.
 
-## Installing Thonny on a PC
+# Installing Thonny on a PC
+
+## Install
+
+1. Go to the website <https://thonny.org/> and click on the Windows link in the upper right corner.
+
+<img src="../images/thonny-pc.png" style="border:1px solid black">
+
+2. A file named something like thonny-3.0.8.exe will be downloaded to the normal place on your browser.  Here's where it goes on Chrome:
+
+<img src="../images/thonny-10.png" style="border:1px solid black">
+
+3. Double-click the file to open it.  You will see a window like the one below.  
+
+<img src="../images/thonny-11.png" style="border:1px solid black">
+
+4. Click on Accept and move through the normal options.  If you want a desktop icon, check that option.  You'll see an install progress window like this:
+
+<img src="../images/thonny-12.png" style="border:1px solid black">
+
+Click the necessary buttons to complete the installation.
+
+5. If you said you wanted a desktop icon, it will look like this.  
+
+<img src="../images/thonny-13.png" style="border:1px solid black">
+
+Double-click it to start.  Otherwise, find and run the Thonny application from your Start menu.
+
+## Cleanup
+
+1. If you don't like clutter in your Downloads folder, you can delete the executable installer file.
+
+<img src="../images/thonny-14.png" style="border:1px solid black">
+
+# Running a Python script in Thonny
 
