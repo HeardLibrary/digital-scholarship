@@ -86,5 +86,36 @@ Double-click it to start.  Otherwise, find and run the Thonny application from y
 
 1\. When your run Thonny, there will be at least two panes visible in the window.  The top pane is the editing window.  This is the place where you can compose your script.  The bottom pane, called the Shell window, is the place where the script runs.
 
+<img src="../images/thonny-7.png" style="border:1px solid black">
+
+A third window, the Assistant window, may or may not be there.  It will pop up as necessary.
+
+2\. To test Thonny, copy and paste this script into the editing window:
+
+```python
+number = 5
+divisor = 6
+print(number/divisor)
+```
+
+To run the script, click the green Run button.  
+
+*Note: if this is the first time you have run a new script, Thonny will prompt you to save the script somewhere.  Since this is practice, it doesn't matter where you save it or what you call the file, although you should end the file name with the extension ".py".*
+
+The results will show up in the Shell window.  In this case the Assistant window has indicated that everything was good with my code.
+
 <img src="../images/thonny-8.png" style="border:1px solid black">
 
+3\. We can also directly issue Python commands by typing them in the Shell window.  For example, if I want to know what the value of the variable `number` is, I can type the command
+
+```python
+print(number)
+```
+
+directly in the Shell window, then press Enter (or Return) to execute the command and see the results immediately.  
+
+<img src="../images/thonny-9.png" style="border:1px solid black">
+
+4\. The Assistant window may be helpful if there are errors.  In the example below, there were several unnecessary spaces inserted at the beginning of line 3.  Because Python is particularly sensitive to incorrect indentation, this caused an error when the script was run.  The error shows up in the Shell window, but the error message is also displayed in a more cleaned-up form in the Assistant window.
+
+<img src="../images/thonny-9a.png" style="border:1px solid black">
