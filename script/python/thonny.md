@@ -12,11 +12,13 @@ Thonny comes pre-installed if you install the Raspbian operating system on a Ras
 
 <img src="../images/thonny-raspberry-pi.jpg">
 
-## Installing Thonny on a Mac
+# Installing Thonny on a Mac
+
+## Install
 
 1. Go to the website <https://thonny.org/> and click on the Mac link in the upper right corner.
 
-<img src="../images/thonny-1.png" style="border:1px solid black">
+<img src="../images/thonny-1mac.png" style="border:1px solid black">
 
 2. A file named something like thonny-3.0.8.dmg will be downloaded to the normal place on your browser.  Here's where it goes on Chrome:
 
@@ -37,3 +39,14 @@ You can now run Thonny by doublc-clicking on it in your Applications folder or b
 <img src="../images/thonny-4.png" style="border:1px solid black">
 
 Click Open.
+
+## Cleanup
+
+<img src="../images/thonny-6.png" style="border:1px solid black">
+
+1. The .dmg installation file is behaving like a disk drive, so you'll see it on your desktop as a drive icon.  To get rid of it, drag it to the trash can to eject it.
+
+2. Once you've moved the application to your Applications folder, you don't really need the installation file any more.  You can go to your Downloads folder and delete it if you like to keep your Downloads folder uncluttered.
+
+## Installing Thonny on a PC
+
