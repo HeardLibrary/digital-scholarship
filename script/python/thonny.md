@@ -16,25 +16,25 @@ Thonny comes pre-installed if you install the Raspbian operating system on a Ras
 
 ## Install
 
-\1. Go to the website <https://thonny.org/> and click on the Mac link in the upper right corner.
+1\. Go to the website <https://thonny.org/> and click on the Mac link in the upper right corner.
 
 <img src="../images/thonny-1mac.png" style="border:1px solid black">
 
-\2. A file named something like thonny-3.0.8.dmg will be downloaded to the normal place on your browser.  Here's where it goes on Chrome:
+2\. A file named something like thonny-3.0.8.dmg will be downloaded to the normal place on your browser.  Here's where it goes on Chrome:
 
 <img src="../images/thonny-2.png" style="border:1px solid black">
 
-\3. Double-click the file to open it.  You will see a window like the one below.  
+3\. Double-click the file to open it.  You will see a window like the one below.  
 
 <img src="../images/thonny-3.png" style="border:1px solid black">
 
-\4. Drag the Thonny.app icon into your Applications folder.  
+4\. Drag the Thonny.app icon into your Applications folder.  
 
 <img src="../images/thonny-5.png" style="border:1px solid black">
 
 You can now run Thonny by doublc-clicking on it in your Applications folder or by opening it in Launchpad.
 
-\5. The first time you open the Thonny application, you may get a message something like the one below:  
+5\. The first time you open the Thonny application, you may get a message something like the one below:  
 
 <img src="../images/thonny-4.png" style="border:1px solid black">
 
@@ -44,33 +44,33 @@ Click Open.
 
 <img src="../images/thonny-6.png" style="border:1px solid black">
 
-\1. The .dmg installation file is behaving like a disk drive, so you'll see it on your desktop as a drive icon.  To get rid of it, drag it to the trash can to eject it.
+1\. The .dmg installation file is behaving like a disk drive, so you'll see it on your desktop as a drive icon.  To get rid of it, drag it to the trash can to eject it.
 
-\2. Once you've moved the application to your Applications folder, you don't really need the installation file any more.  You can go to your Downloads folder and delete it if you like to keep your Downloads folder uncluttered.
+2\. Once you've moved the application to your Applications folder, you don't really need the installation file any more.  You can go to your Downloads folder and delete it if you like to keep your Downloads folder uncluttered.
 
 # Installing Thonny on a PC
 
 ## Install
 
-\1. Go to the website <https://thonny.org/> and click on the Windows link in the upper right corner.
+1\. Go to the website <https://thonny.org/> and click on the Windows link in the upper right corner.
 
 <img src="../images/thonny-1pc.png" style="border:1px solid black">
 
-\2. A file named something like thonny-3.0.8.exe will be downloaded to the normal place on your browser.  Here's where it goes on Chrome:
+2\. A file named something like thonny-3.0.8.exe will be downloaded to the normal place on your browser.  Here's where it goes on Chrome:
 
 <img src="../images/thonny-10.png" style="border:1px solid black">
 
-\3. Double-click the file to open it.  You will see a window like the one below.  
+3\. Double-click the file to open it.  You will see a window like the one below.  
 
 <img src="../images/thonny-11.png" style="border:1px solid black">
 
-\4. Click on Accept and move through the normal options.  If you want a desktop icon, check that option.  You'll see an install progress window like this:
+4\. Click on Accept and move through the normal options.  If you want a desktop icon, check that option.  You'll see an install progress window like this:
 
 <img src="../images/thonny-12.png" style="border:1px solid black">
 
 Click the necessary buttons to complete the installation.
 
-\5. If you said you wanted a desktop icon, it will look like this.  
+5\. If you said you wanted a desktop icon, it will look like this.  
 
 <img src="../images/thonny-13.png" style="border:1px solid black">
 
@@ -78,11 +78,13 @@ Double-click it to start.  Otherwise, find and run the Thonny application from y
 
 ## Cleanup
 
-\1. If you don't like clutter in your Downloads folder, you can delete the executable installer file.
+1\. If you don't like clutter in your Downloads folder, you can delete the executable installer file.
 
 <img src="../images/thonny-14.png" style="border:1px solid black">
 
 # Running a Python script in Thonny
 
-\1. When your run Thonny, there will be at least two panes visible in the window.  The top pane is the editing window.  This is the place where you can compose your script.  The bottom pane, called the Shell window, is the place where the script runs.
+1\. When your run Thonny, there will be at least two panes visible in the window.  The top pane is the editing window.  This is the place where you can compose your script.  The bottom pane, called the Shell window, is the place where the script runs.
+
+<img src="../images/thonny-8.png" style="border:1px solid black">
 
