@@ -179,3 +179,10 @@ You should see the value (5) printed on the screen, like this:
 Alternatively, you can enter the command `quit()`, which has the same effect.
 
 2\. You can now quit the console program in the usual way for your operating system (clicking the X at the top of the window).   In most cases with Python, you can probably get away with skipping step 1 and just closing the consloe program.  However, it's a good general practice to stop running processes before you close the console window because in some cases, just closing the window doesn't actually stop the program that is running.
+
+----
+Revised 2019-01-12
+
+<a href="https://creativecommons.org/licenses/by/4.0/legalcode"><img src="https://licensebuttons.net/l/by/4.0/88x31.png"/></a>
+
+Credit: "Vanderbilt Libraries Digital scholarship and Scholarly Communications Office"
