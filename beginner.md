@@ -1,5 +1,5 @@
 ---
-permalink: /beginner
+permalink: /beginner/
 title: Beginner FAQ
 breadcrumb: Beginner
 ---

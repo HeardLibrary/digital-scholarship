@@ -1,5 +1,5 @@
 ---
-permalink: /script/r/install
+permalink: /script/r/install/
 title: Installing R and R Studio
 breadcrumb: Install
 ---

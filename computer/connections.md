@@ -1,5 +1,5 @@
 ---
-permalink: /computer/connections
+permalink: /computer/connections/
 title: Connected devices
 breadcrumb: Connections
 ---

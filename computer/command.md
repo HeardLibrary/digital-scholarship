@@ -1,5 +1,5 @@
 ---
-permalink: /computer/command
+permalink: /computer/command/
 title: Command Line
 breadcrumb: Command
 ---

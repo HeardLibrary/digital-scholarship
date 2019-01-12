@@ -1,5 +1,5 @@
 ---
-permalink: /advanced
+permalink: /advanced/
 title: Advanced FAQ
 breadcrumb: Advanced
 ---

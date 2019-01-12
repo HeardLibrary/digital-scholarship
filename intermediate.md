@@ -1,5 +1,5 @@
 ---
-permalink: /intermediate
+permalink: /intermediate/
 title: Intermediate FAQ
 breadcrumb: Intermediate
 ---

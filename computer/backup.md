@@ -1,5 +1,5 @@
 ---
-permalink: /computer/backup
+permalink: /computer/backup/
 title: Backing up your computer
 breadcrumb: Backup
 ---
