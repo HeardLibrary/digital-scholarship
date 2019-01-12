@@ -3,14 +3,35 @@ permalink: /script/python/install/
 title: Installing Python 
 breadcrumb: Install
 ---
-
-# Installing Python
+# Background
 
 ## Before starting
 
-There are [many flavors of Python](https://www.infoworld.com/article/3267976/python/anaconda-cpython-pypy-and-more-know-your-python-distributions.html) and there is no way we could describe how to install all of them.  In the instructions here, we will assume the reference implementation of Python: CPython.  It is the default and most widely used flavor.  We will be installing Python 3. (For information about the distinction between Python 2 and 3, see the [Python resources page](../#python-2-vs-python-3))
+There are [many flavors of Python](https://www.infoworld.com/article/3267976/python/anaconda-cpython-pypy-and-more-know-your-python-distributions.html) and there is no way we could describe how to install all of them.  In the instructions here, we will install the reference implementation of Python: CPython.  It is the default and most widely used flavor.  The version of Python we will be installing is version 3. (For information about the distinction between Python 2 and 3, see the [Python resources page](../#python-2-vs-python-3))
 
-If you think that you are going to want to exclusively use the Integrated Development Environment called Thonny, then you can skip thes instructions and the follow the [Thonny instalation instructions](thonny) instead of these instructions. Thonny automatically installs a bundled implementation of CPython 3 as part of its installation.  However, if you want to also be able to run Python from the command line or edit scripts using a code editor, you should go ahead and install Python using these instructions. You can install stand-alone Python and also install Thonny later if you wish.
+If you think that you are going to want to exclusively use the Integrated Development Environment called Thonny, then you can skip thes instructions and the follow the [Thonny instalation instructions](thonny) instead of these instructions. Thonny automatically installs a bundled implementation of CPython 3 as part of its installation.  However, if you want to also be able to run Python from the command line or edit scripts using a code editor, you should go ahead and install Python using these instructions. You can install stand-alone Python as described here and also install Thonny later if you wish.
+
+## What's the console?
+
+Although most users are used to interacting with a computer through a graphical interface involving windows and a mouse or trackpad, it is also possible to interact with a computer using a non-graphical interface.  That kind of interface is variously known as a *console*, *terminal*, or the *command line* and we'll use those terms more or less interchangeably.  In the old pre-windows day, the console was a physical device on which users typed text commands using a syntax particular to each operating system (sometimes known as the disk operating system, or DOS).  Now the console is a program that runs in a window in the graphical interface, but that window mimics the behavior of the old-fashioned console.  
+
+Many advanced users favor using the command line because it may allow for options not available in the graphical interface, and may enable automating or scripting a series of commands in a way not easily accomplished using the graphical interface.  
+
+## What's the shell?
+
+In this lesson, we will show you how to run Python through a console using its interactive interpreter, also known as its *shell*.  When using the shell, you issue Python commands one at a time, they are executed immediately, and you can see the result immediately (if there is anything to see). Even though you may rarely run Python programs this way, examples are often shown as shell commands, so understanding how the shell works is important.  In most cases, the behavior of a line of code in the shell is the same as the behavior of that same line if the Python script were run from a multiline script from a file.  However, the Python shell also processes commands like 
+
+```
+2 + 2
+```
+
+that would not do anything useful in a multiline script.
+
+## Getting started if you are a non-native English speaker
+
+The OpenTechSchool has a nice [Introduction to Programming with Python](https://opentechschool.github.io/python-beginners/) that is available in English, Deutsch, Español, русский, 한국인, and Română.  So check that site out if it would be helpful to get a second explanation in one of those languages.
+
+# Installing Python
 
 ## Mac installation
 
@@ -46,15 +67,15 @@ At the end of the installation, you will be given an option to delete the Instal
 
 ## Starting Python on a Mac
 
-1\. To run Python in the simplest way, you will need to use the command line.  On a Mac, the application for doing this is called "Terminal".  The easiest way to get to the command line via Terminal is to click on the Spotlight Search icon (small magnifying glass in the upper right of the screen) and start typing "terminal" in the search box.  When terminal.app shows up in the results, click on it to open a Terminal window.  
+1\. To run Python in the simplest way (using the shell), you will need to use the console/command line.  On a Mac, the application for doing this is called "Terminal".  The easiest way to get to the command line via Terminal is to click on the Spotlight Search icon (small magnifying glass in the upper right of the screen) and start typing "terminal" in the search box.  When terminal.app shows up in the results, click on it to open a Terminal window.  
 
 <img src="../images/install6mac.png" style="border:1px solid black">
 
-2\. When you enter the Terminal window, you should see a line with the your computer name, a tilde ("~") followed by your username, and finally a "$" character.  This is the system prompt.  It means that you can issue any kind of command line command that the Mac operating system will understand.  
+2\. When you enter the Terminal window, you should see a line with the your computer name, a tilde (`~`) followed by your username, and finally a "$" character.  This is the system prompt.  It means that you can issue any kind of command line command that the Mac operating system will understand.  
 
 *Note: The Mac operating system is build on the Linux operating system.  So the commands that you give in this window are sometimes called "bash commands" (a type of Linux commands).  Hence you see "bash" listed in the header of the terminal window.*
 
-Enter `python3`.  You should get a message, followed by `>>>`.  These three greater-than characters are the Python prompt.  When you see them instead of the system prompt, it means that Python is running and you need to give commands that Python understands, not generic Linux commands.  
+Enter `python3`.  You should get a message, followed by `>>>`.  These three greater-than characters are the Python prompt.  When you see them instead of the system prompt, it means that the Python shell is running and you need to give commands that Python understands, not generic Linux commands.  
 
 <img src="../images/install7mac.png" style="border:1px solid black">
 
@@ -94,13 +115,13 @@ Click Close.
 
 ## Starting Python on Windows
 
-1\. To run Python in the simplest way, you will need to use the command line.  On Windows, the application for doing this is called "Command Prompt".  The easiest way to get to the command prompt is to start typing "command" in the search box next to the start button.  When Command Prompt shows up in the results, click on it to open a Command Prompt window.  
+1\. To run Python in the simplest way (using the shell), you will need to use the console/command line.  On Windows, the application for doing this is called "Command Prompt".  The easiest way to get to the command prompt is to start typing "command" in the search box next to the start button.  When Command Prompt shows up in the results, click on it to open a Command Prompt window.  
 
 <img src="../images/install5pc.png" style="border:1px solid black">
 
 2\. When you enter the Command Prompt window, you should see a line with the path to your user directory, followed by a ">" character.  This is the system prompt.  It means that you can issue any kind of command line command that Windows will understand.  
 
-Enter `python`.  You should get a message, followed by `>>>`.  These three greater-than characters are the Python prompt.  When you see them instead of the system prompt, it means that Python is running and you need to give commands that Python understands, not generic Windows commands.  
+Enter `python`.  You should get a message, followed by `>>>`.  These three greater-than characters are the Python prompt.  When you see them instead of the system prompt, it means that the Python shell is running and you need to give commands that Python understands, not generic Windows commands.  
 
 <img src="../images/install6pc.png" style="border:1px solid black">
 
@@ -117,17 +138,17 @@ then that means that Windows can't find Python from your home directory.  The so
 
 # Trying out Python 
 
-*Important note: in the examples shown here, screenshots will only be shown for Macs.  That's because the operation of Python in Windows and Mac is in most cases identical.  However, there is a critical difference in how you start Python applications in Mac and Windows.  In Windows, you simply enter `python` at the command line, but on Macs, you must enter `python3`.  The "3" at the end of the command is present to allow a user to be able to run both Python 2 and Python 3 on the same computer.  If you switch back and forth between Macs and PCs, it is difficult to remember this.*
+*Important note: in the examples shown here, screenshots will only be shown for Macs.  That's because the operation of the Python shell in Windows and Mac is in most cases identical.  However, there is a critical difference in how you start Python applications in Mac and Windows.  In Windows, to start the shell you simply enter `python` at the command line, but on Macs, you must enter `python3`.  The "3" at the end of the command is present to allow a Mac user to be able to run both Python 2 and Python 3 on the same computer.  If you switch back and forth between Macs and PCs, it is important to remember this.*
 
-*Adding a final "3" also applies to Python's package manager, PIP. To give a PIP command at the Windows command line, one types `pip` followed by the command.  On a Mac, one must type `pip3` followed by the same command.*
+*Adding a final "3" on Macs also applies to Python's package manager, PIP. To give a PIP command at the Windows command line, one types `pip` followed by the command.  On a Mac, one must type `pip3` followed by the same command.*
 
-## Giving commands
+## Giving commands using the Python shell
 
-1\. If you haven't already launched Python at the command line, do it now.  (See the end of the appropriate section above ([mac](#starting-python-on-a-mac) [Windows](#starting-python-on-pc)) for details of the way to do this.)  You should see the Python command prompt `>>>` if Python is running.  
+1\. If you haven't already launched the Python shell (interactive interpreter) in the console, do it now.  (See the end of the appropriate section above (for [mac](#starting-python-on-a-mac) or [Windows](#starting-python-on-windows)) for details of the way to do that.)  You should see the Python command prompt `>>>` if Python is running.  
 
 <img src="../images/try1.png" style="border:1px solid black">
 
-2\. Enter each of the following lines at the Python command prompt one at a time, pressing Enter/Return after each line.  Each time you enter a line, it is executed by Python and and you should see the command prompt again before you type the next line.
+2\. Enter each of the following lines at the Python prompt one at a time, pressing Enter/Return after each line.  Each time you enter a line, it is executed by the shell and and you should see the Python prompt again before you type the next line.
 
 ```
 number = 5
@@ -135,11 +156,11 @@ divisor = 6
 print(number/divisor)
 ```
 
-After entering each of the first two lines you won't see anything happen except the command prompt reappear.  That's because the first two commands tell Python to load a number into a named storage location (a *variable*), but they don't tell Python to actually show you anything.  The third line tells Python to divide the two numbers, then print the answer in the terminal window.  It should look something like this:
+After entering each of the first two lines you won't see anything happen except for the prompt reappearing.  That's because the first two commands tell Python to load a number into a named storage location (a *variable*), but they don't tell Python to actually show you anything.  The third line tells Python to divide the two numbers, then show the answer in the console.  It should look something like this:
 
 <img src="../images/try2.png" style="border:1px solid black">
 
-3\. When you execute Python commands at the command prompt like this, Python "remembers" what has happened before.  For example, after you loaded a five into the variable `number`, it's still there after you used the variable in a calculation.  To see what its value is, enter the following line:
+3\. When you execute Python commands in the shell like this, Python "remembers" what has happened before.  For example, after you loaded a 5 into the variable `number`, it's still there after you used the variable in a calculation.  To see what its value is, enter the following line:
 
 ```
 print(number)
@@ -149,10 +170,12 @@ You should see the value (5) printed on the screen, like this:
 
 <img src="../images/try3.png" style="border:1px solid black">
 
-## Quitting Python
+## Quitting the Python shell
 
-1\. To quit Python, hold on the Control key (control or Ctrl depending on your keyboard) and press the Z key.  You may or may not have to press Enter after that.  The terminal window should now show the appropriate systen prompt for your operating system.  
+1\. To quit the Python shell, hold on the Control key (labeled `control` or `Ctrl` depending on your keyboard) and press the Z key.  You may or may not have to press Enter after that.  The console window should now show the appropriate systen prompt for your operating system. 
 
 <img src="../images/try4.png" style="border:1px solid black">
 
-2\. You can now quit the terminal program in the usual way for your operting system.   In most cases with Python, you can probably get away with skipping step 1 and just closing the terminal program.  However, it's a good practice to stop running processes before you close the terminal window because in some cases, just closing the window doesn't actually stop the program that is running.
+Alternatively, you can enter the command `quit()`, which has the same effect.
+
+2\. You can now quit the console program in the usual way for your operating system (clicking the X at the top of the window).   In most cases with Python, you can probably get away with skipping step 1 and just closing the consloe program.  However, it's a good general practice to stop running processes before you close the console window because in some cases, just closing the window doesn't actually stop the program that is running.
