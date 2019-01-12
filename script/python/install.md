@@ -9,7 +9,7 @@ breadcrumb: Install
 
 There are [many flavors of Python](https://www.infoworld.com/article/3267976/python/anaconda-cpython-pypy-and-more-know-your-python-distributions.html) and there is no way we could describe how to install all of them.  In the instructions here, we will install the reference implementation of Python: CPython.  It is the default and most widely used flavor.  The version of Python we will be installing is version 3. (For information about the distinction between Python 2 and 3, see the [Python resources page](../#python-2-vs-python-3))
 
-If you think that you are going to want to exclusively use the Integrated Development Environment called Thonny, then you can skip thes instructions and the follow the [Thonny instalation instructions](thonny) instead of these instructions. Thonny automatically installs a bundled implementation of CPython 3 as part of its installation.  However, if you want to also be able to run Python from the command line or edit scripts using a code editor, you should go ahead and install Python using these instructions. You can install stand-alone Python as described here and also install Thonny later if you wish.
+If you think that you are going to want to exclusively use the Integrated Development Environment called Thonny, then you can skip thes instructions and the follow the [Thonny installation instructions](thonny) instead of these instructions. Thonny automatically installs a bundled implementation of CPython 3 as part of its installation.  However, if you want to also be able to run Python from the command line or edit scripts using a code editor, you should go ahead and install Python using these instructions. You can install stand-alone Python as described here and also install Thonny later if you wish.
 
 ## What's the console?
 
@@ -182,7 +182,3 @@ Alternatively, you can enter the command `quit()`, which has the same effect.
 
 ----
 Revised 2019-01-12
-
-<a href="https://creativecommons.org/licenses/by/4.0/legalcode"><img src="https://licensebuttons.net/l/by/4.0/88x31.png"/></a>
-
-Credit: "Vanderbilt Libraries Digital scholarship and Scholarly Communications Office"

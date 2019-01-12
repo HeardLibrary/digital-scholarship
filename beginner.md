@@ -6,7 +6,5 @@ breadcrumb: Beginner
 
 # Frequently Asked Questions - Beginner
 
-Why is the sky blue?
-
-Why is the grass green?
+Still working on this page.
 
