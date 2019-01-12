@@ -43,3 +43,6 @@ Second cycle: **Fridays** from 12:10 to 2:00 PM (Intro: 12:10 to 1:00 PM, Worksh
 # Python Resources
 
 Here's a [page of Python resources](../)
+
+----
+Revised 2019-01-12

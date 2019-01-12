@@ -18,6 +18,8 @@ Grant funding agencies are increasingly requiring applicants to submit a data ma
 
 [Research data repositories](repository/)
 
+[Version control resources](control/)
+
 ## Publication in scholarly repositories
 
 Scholarly repositories preserve and dissiminate scholarly research in many forms. By uploading papers to scholarly repositories, professors can immediately share them with colleagues and other interested parties around the world. Scholarly repositories are essential components of the so-called "green" open access model.
@@ -49,3 +51,6 @@ Researchers who share datasets are also seeing increased citations to their work
 While these findings are specific to cancer clinical trials, we can expect to see more studies addressing citation rates for datasets in a variety of disciplines. 
 
 Piwowar HA, Day RS, Fridsma DB (2007) Sharing Detailed Research Data Is Associated with Increased Citation Rate. PLoS ONE 2(3): e308. <http://dx.doi.org/10.1371/journal.pone.0000308>
+
+----
+Revised 2019-01-12

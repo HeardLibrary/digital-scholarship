@@ -29,3 +29,6 @@ When used for open projects, Github is availalbe for free.
 The Open Science Framework is a permanent data repository.  However, it also includes version control for its native files and enables a form of version control for commonly used tools like Dropbox and Box.  
 
 [read about version control at OSF](http://help.osf.io/m/projectfiles/l/524182-file-revisions-and-version-control)
+
+----
+Revised 2019-01-12

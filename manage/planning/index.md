@@ -37,3 +37,6 @@ White EP, Baldridge E, Brym ZT, Locey KJ, McGlinn DJ, et al. (2013). Nine simple
 Create a two page data management plan to include in your next grant application with the Data Management Plan Tool (DMPTool). The tool will walk you through a series of questions that the DMP must address, customized to the requirements of the funder. The DMPTool provides guidance in answering those questions, and creates an exportable data management plan based on your responses.  When you log in and select Vanderbilt as your institution, the tool will use your VUnetID to create an account for you.
 
 [Go to the DMP Tool](https://dmptool.org/)
+
+----
+Revised 2019-01-12

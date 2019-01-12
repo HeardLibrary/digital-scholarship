@@ -19,3 +19,6 @@ breadcrumb: R
 [R examples for *The Analysis of Biological Data*](http://whitlockschluter.zoology.ubc.ca/r-code) is a companion website for the very accessible Witlock and Schluter print text *The Analysis of Biological Data*.  
 
 [Online R resources for Beginners](http://www.introductoryr.co.uk/R_Resources_for_Beginners.html) is a page of links to many other R online resources, including online books, video tutorials, and other websites.
+
+----
+Revised 2019-01-12

@@ -65,3 +65,6 @@ Every user on the computer has its own Documents, Downloads, Music, etc. folders
 ## Unhiding file extensions
 
 ## Changing file associations
+
+----
+Revised 2019-01-12

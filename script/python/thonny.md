@@ -119,3 +119,6 @@ directly in the Shell window, then press Enter (or Return) to execute the comman
 4\. The Assistant window may be helpful if there are errors.  In the example below, there were several unnecessary spaces inserted at the beginning of line 3.  Because Python is particularly sensitive to incorrect indentation, this caused an error when the script was run.  The error shows up in the Shell window, but the error message is also displayed in a more cleaned-up form in the Assistant window.
 
 <img src="../images/thonny-9a.png" style="border:1px solid black">
+
+----
+Revised 2019-01-12

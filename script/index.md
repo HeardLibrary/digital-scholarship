@@ -32,3 +32,6 @@ R is a freely-available, open-source programming language that is widely used fo
 
 [R Working Group website](https://commodore-r-group.github.io/)
 
+
+----
+Revised 2019-01-12
