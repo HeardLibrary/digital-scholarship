@@ -1,31 +1,21 @@
 ---
-permalink: /map
+permalink: /map/
 title: Site map
 breadcrumb: Map
 ---
 
 # Site map
 
-Frequently asked questions
-
-&nbsp;&nbsp;Beginner
-
-&nbsp;&nbsp;Intermediate
-
-&nbsp;&nbsp;Advanced
-
-Topics
-
-&nbsp;&nbsp;Data cleaning
-
-&nbsp;&nbsp;Data management
-
-&nbsp;&nbsp;&nbsp;&nbsp;Planning resources
-
-&nbsp;&nbsp;&nbsp;&nbsp;Repositories
-
-&nbsp;&nbsp;Data visualization
-
+Frequently asked questions<br/>
+&nbsp;&nbsp;Beginner<br/>
+&nbsp;&nbsp;Intermediate<br/>
+&nbsp;&nbsp;Advanced<br/>
+Topics<br/>
+&nbsp;&nbsp;Data cleaning<br/>
+&nbsp;&nbsp;Data management<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Planning resources<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Repositories<br/>
+&nbsp;&nbsp;Data visualization<br/>
 &nbsp;&nbsp;Digital security
 
 &nbsp;&nbsp;Geospatial data
