@@ -35,3 +35,7 @@ In addition to the resources on this site, you can browse the Digital Scholarshi
 [Scripting/programming languages](script/)
 
 [Understanding my computer](computer/)
+
+## Site Map
+
+[Go to the site map](map/)
