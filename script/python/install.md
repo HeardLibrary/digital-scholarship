@@ -3,6 +3,8 @@ permalink: /script/python/install/
 title: Installing Python 
 breadcrumb: Install
 ---
+# Installing Python
+
 # Background
 
 ## Before starting
@@ -31,7 +33,7 @@ that would not do anything useful in a multiline script.
 
 The OpenTechSchool has a nice [Introduction to Programming with Python](https://opentechschool.github.io/python-beginners/) that is available in English, Deutsch, Español, русский, 한국인, and Română.  So check that site out if it would be helpful to get a second explanation in one of those languages.
 
-# Installing Python
+# Installation instructions
 
 ## Mac installation
 
