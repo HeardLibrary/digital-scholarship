@@ -36,6 +36,8 @@ A code editor is a specialized text editor that comes with tools that make it ea
 
 When writing and testing Python code with a code editor, the code is written in the editor window and run separately by the command line in the terminal/command prompt window.  When a change is made in the editor and saved, re-running the code at the command line shows the effects of the changes that were made.
 
+[Instructions for using a code editor to write Python](editor)
+
 # For more information
 
 ## Python Working Group at Vanderbilt
