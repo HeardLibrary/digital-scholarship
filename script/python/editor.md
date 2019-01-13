@@ -70,23 +70,32 @@ Notice that there's no syntax highlighting because the editor doesn't know what 
 
 <img src="../images/save-as-windows.png" style="border:1px solid black">
 
-When you have navigated to your home directory, select Python as the file type and name the file `divide_numbers.py`.  
+When you have navigated to your home directory, select Python as the file type (if necessary) and name the file `divide_numbers.py`.  
 
 *Note: in Python, it is best not to use hyphens to separate words in file names. It's better to use underscores for that purpose.  Do not leave spaces in the file names, either.*
 
-3b. Mac: In the Save As dialog, ...
+3b. Mac: In the Save As dialog, click on your home folder in the Favorites list.  *If the dialog box doesn't show all of this stuff, click on the button to the right of the directory name (circled here in red).*
+
+<img src="../images/save-as-mac.jpg" style="border:1px solid black">
+
+Select Python as the file type (if necessary) and name the file `divide_numbers.py`.  
+
+*Note: in Python, it is best not to use hyphens to separate words in file names. It's better to use underscores for that purpose.  Do not leave spaces in the file names, either.*
 
 4\. You should now see Python syntax highlighting (colored text) in the code editor:
 
 <img src="../images/code-snippet-highlighted.png" style="border:1px solid black">
+<img src="../images/highlight-mac.png" style="border:1px solid black">
 
 5\. Open the appropriate console for your operating system (Command Prompt for Windows or Terminal for Mac).  If you don't know how to do that, see [these instructions for mac](../install/#starting-python-on-a-mac) or [these instructions for Windows](../install/#starting-python-on-windows)).  However, do not launch the Python shell.  (If you do launch it accidentally, enter `quit()` to stop it.) 
 
-6a. Windows: If you are using Windows, enter the command `dir` to do a listing of the home directory.  You should see the name of the file you just saved.  
+6a. Windows: Enter the command `dir` to do a listing of the home directory.  You should see the name of the file you just saved.  
 
 <img src="../images/home-folder-cmd-prompt-windows.png" style="border:1px solid black">
 
-6b. Mac: 
+6b. Mac: Enter the command `ls` to do a listing of the home directory.  You should see the name of the file you just saved. 
+
+<img src="../images/home-folder-terminal-mac.png" style="border:1px solid black">
 
 7\. If you don't see your file, you may not have actually saved the file in your home directory.  You can either figure out how to save the file in your home directory, or save the file to some other known directory and use the `cd` command line command to change to that directory.  Get help from someone if necessary.
 
@@ -110,6 +119,7 @@ The console should print the number `0.8333333333333334`, then show the command 
 
 or this on a Mac:
 
+<img src="../images/results-mac.png" style="border:1px solid black">
 
 Notice that the console does not output any information other than what the script said to print.  There is no indiction that any other lines of the code had executed.  Also note that unlike in the [Python shell](../install/#giving-commands-using-the-python-shell), you cannot execute individual Python commands, or examine the values of variables by printing them.
 
@@ -124,6 +134,7 @@ divisor = 2
 Here's what should happen:
 
 <img src="../images/result-modified-windows.png" style="border:1px solid black">
+<img src="../images/output-modified-mac.png" style="border:1px solid black">
 
 Again, only the results of the print command are displayed in the console output.  
 
@@ -138,7 +149,7 @@ pring(number/divisor)
 the Python processor will provide an error message, since "pring" is not a valid Python command.
 
 <img src="../images/error.png" style="border:1px solid black">
-
+<img src="../images/error-mac.png" style="border:1px solid black">
 
 ----
 Revised 2019-01-12
