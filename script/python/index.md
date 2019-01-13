@@ -20,6 +20,12 @@ A final significant aspect of Python is that many people have created add-ons, c
 
 Version 2 of Python has been in wide use for many years.  So although it is no longer in development there is still a large amout of code out in the wild that is written in Python 2.  Since our focus is on helping new users who will primarily be using Python 3 in the future, our focus is on that version of the language.  Fortunately, most Python 3 code will also run as Python 2 (and vice versa) with minimal modification.
 
+## What is Anaconda?
+
+Anaconda is an umbrella system for data science that includes many of the most important tools used in data science.  It includes both the Python and R programming languages, most of the common Python libraries used in science and engineering (including NumPy, SciPy, Matplotlib, and pandas), and many commonly used R packages.  Anaconda also includes the popular Jupyter notebook system (see below), RStudio, the Spyder Python development environment, and has its own custom package management system.  The Anaconda Navigator provides access to the system through a desktop GUI. 
+
+If you want to start off with many major data science tools at once, you should consider [installing Anaconda](https://docs.anaconda.com/anaconda/install/).  However, since Anaconda includes so much stuff, it can eventually sprawl to gigabytes in size.  So if you are new to Python, you might start with a simpler Python distribution and upgrade to Anaconda later. 
+
 # Ways to write and run Python
 
 ## Installing a Python distribution
@@ -48,9 +54,9 @@ Jupyter notebooks provide a way to document and run Python scripts interactively
 
 Jupyter notebooks are particularly great if you are running code that is essentially linear - for example a data processing pipeline or data manipulation leading to a visualization.  However, Jupyter notebooks cannot display intermediate calculations taking place in loops or in function calls.  This makes them less useful for running more complex applications that make extensive use of loops and functions.
 
-We do not currently have web pages on using Jupyter notebooks, but there is a lot of helpful information online.  To set up a Jupyter notebook on your computer, go to the [Project Jupyter homepage](https://jupyter.org/).  If you are affiliated with Vanderbilt, you can use the ACCRE JupyterHub without installing Jupyter notebooks on your own computer. 
+We do not currently have web pages on using Jupyter notebooks, but there is a lot of helpful information online.  One source is [Jupyter Notebook for Beginners: A Tutorial](https://www.dataquest.io/blog/jupyter-notebook-tutorial/).
 
-[Sign in to Jupyter at ACCRE](https://jupyter.accre.vanderbilt.edu/hub/login) and select Vanderbilt University as the identity provider.
+To set up a Jupyter notebook on your computer, go to the [Project Jupyter homepage](https://jupyter.org/).  If you are affiliated with Vanderbilt, you can use the ACCRE JupyterHub without installing Jupyter notebooks on your own computer. [Sign in to Jupyter at ACCRE](https://jupyter.accre.vanderbilt.edu/hub/login) and select Vanderbilt University as the identity provider.
 
 # For more information
 
