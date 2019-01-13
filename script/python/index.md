@@ -42,6 +42,16 @@ When writing and testing Python code with a code editor, the code is written in 
 
 [Instructions for using a code editor to write Python](editor)
 
+## Using Jupyter notebooks
+
+Jupyter notebooks provide a way to document and run Python scripts interactively.  They operate by running a localhost webserver on your computer that you can interact with via a web browser.  Jupyter notebooks can run Python code as well as other scripting languages such as R.
+
+Jupyter notebooks are particularly great if you are running code that is essentially linear - for example a data processing pipeline or data manipulation leading to a visualization.  However, Jupyter notebooks cannot display intermediate calculations taking place in loops or in function calls.  This makes them less useful for running more complex applications that make extensive use of loops and functions.
+
+We do not currently have web pages on using Jupyter notebooks, but there is a lot of helpful information online.  To set up a Jupyter notebook on your computer, go to the [Project Jupyter homepage](https://jupyter.org/).  If you are affiliated with Vanderbilt, you can use the ACCRE JupyterHub without installing Jupyter notebooks on your own computer. 
+
+[Sign in to Jupyter at ACCRE](https://jupyter.accre.vanderbilt.edu/hub/login) and select Vanderbilt University as the identity provider.
+
 # For more information
 
 ## Python Working Group at Vanderbilt
