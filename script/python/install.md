@@ -182,5 +182,9 @@ Alternatively, you can enter the command `quit()`, which has the same effect.
 
 2\. You can now quit the console program in the usual way for your operating system (clicking the X at the top of the window).   In most cases with Python, you can probably get away with skipping step 1 and just closing the consloe program.  However, it's a good general practice to stop running processes before you close the console window because in some cases, just closing the window doesn't actually stop the program that is running.
 
+# Effective develpment of Python scripts
+
+Although issuing Python commands one line at a time is fine for learing how commands work, it is easier to develop Python scripts as a whole by writing them in a code editor, or using an integrated development environment (IDE).  The Thonny IDE was mentioned at the top of this page.  Instructions for developing code using a code editor are on [this page](../editor/).
+
 ----
 Revised 2019-01-12

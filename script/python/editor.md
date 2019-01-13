@@ -6,6 +6,10 @@ breadcrumb: Editor
 
 # Using a code editor to write Python
 
+The page will get you started writing Python scripts by editing them in a code editor, saving them in a file, then running the script via the command line.  An alternate method is to do the code development using an Integrated Development Environment (IDE).  There are instructions for getting started with an beginner's IDE called Thonny on [this page](../thonny/).
+
+*Note: these instructions assume that you have already installed a distribution of Python on your computer.  If you haven't done that yet, see the [Instructions for installing Python](../install/) first.
+
 # Chosing a code editor
 
 There are many excellent free code editors available that can help you more easily create Python scripts.  Some of them are described at the [Guru99 website](https://www.guru99.com/best-free-code-editors-windows-mac.html).  Two will be mentioned here: Atom and Visual Studio Code (not part of Microsoft’s Visual Studio IDE).  They are not necessarily better than all the others, but we have experience with them and can recommend them.  Both editors are available for Mac, Windows, and Linux, so if you get used to one, you can continue to use it if you change platforms at some time in the future.
@@ -129,7 +133,7 @@ Notice that the console does not output any information other than what the scri
 divisor = 2
 ```
 
-10\. To see the effect of the changes, return to the console and run the file again as you did before.  *Note: in Windows, you can bring up the previous command by pressing the up arrow key once, then pressing Enter/Return.*  
+10\. To see the effect of the changes, return to the console and run the file again as you did before.  *Note: you can bring up the previous command in the console by pressing the up arrow key once, then pressing Enter/Return.*  
 
 Here's what should happen:
 
