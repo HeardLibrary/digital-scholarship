@@ -206,7 +206,7 @@ If you examine the table of triples carefully, you will notice several things:
 
 # For more information
 
-If you want to watch a quirky video on this topic, view [tnis YouTube video](https://www.youtube.com/watch?v=XAGifYBiXMY)
+If you want to watch a quirky video on this topic, view [this YouTube video](https://www.youtube.com/watch?v=XAGifYBiXMY)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XAGifYBiXMY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
