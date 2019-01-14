@@ -47,7 +47,7 @@ By [design](https://tools.ietf.org/html/rfc3986), URIs are intended to be global
 mailto:steve.baskauf@vanderbilt.edu
 urn:oasis:names:specification:docbook:dtd:xml:4.1.2
 ```
-# HHTP URIs
+## HHTP URIs
 
 A specific variant of URIs that are of primary interest to Linked Data are HTTP URIs.  These are URIs that begin with "http://" or "https://".  The reason these URIs are important to Linked Data is because it's possible for them to be URLs (i.e. to use them to look stuff up through the Internet).  However, just because it's possible to use an HTTP URI to look something up doesn't necessarily mean that every valid HTTP URI will actually do something if you paste it into a browser.  For example, the HTTP URI
 
@@ -121,3 +121,6 @@ There are no official rules about what abbreviations should be used for namespac
 
 The abbreviations for the two Dublin Core namespaces, `dc:` and `dcterms:` are the traditional abbreviations.  More recently, other abbreviations have been used, such as `dct:` instead of `dcterms:` and using `dc:` for `http://purl.org/dc/terms/` instead of `http://purl.org/dc/terms/`.  For that reason, it's a best practice to state the abbreviations that you are going to use before you use them. 
 
+# Building a graph
+
+## 
