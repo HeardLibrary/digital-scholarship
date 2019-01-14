@@ -47,7 +47,7 @@ By [design](https://tools.ietf.org/html/rfc3986), URIs are intended to be global
 mailto:steve.baskauf@vanderbilt.edu
 urn:oasis:names:specification:docbook:dtd:xml:4.1.2
 ```
-## HHTP URIs
+## HTTP URIs
 
 A specific variant of URIs that are of primary interest to Linked Data are HTTP URIs.  These are URIs that begin with "http://" or "https://".  The reason these URIs are important to Linked Data is because it's possible for them to be URLs (i.e. to use them to look stuff up through the Internet).  However, just because it's possible to use an HTTP URI to look something up doesn't necessarily mean that every valid HTTP URI will actually do something if you paste it into a browser.  For example, the HTTP URI
 
