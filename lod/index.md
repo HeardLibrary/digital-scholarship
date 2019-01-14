@@ -10,7 +10,7 @@ Linked Data is a graph-based data representation that enables sharing and linkin
 
 At Vanderbilt, the [Digital Scholarship and Scholarly Communications Office](https://www.library.vanderbilt.edu/scholarly/) sponsors a Linked Data Working Group that explores issues related to Linked Data.
 
-[Beginner's lesson on Graphs, URIs, and Triples](../graphs/)
+[Beginner's lesson on Graphs, URIs, and Triples](../lod/graphs/)
 
 [visit the Linked Data Working Group website](https://heardlibrary.github.io/linked-data/)
 
