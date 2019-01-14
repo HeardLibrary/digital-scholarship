@@ -203,3 +203,10 @@ If you examine the table of triples carefully, you will notice several things:
 5. The predicate `rdfs:label` is an important property that helps consuming applications to know how to label entities.  That's how the software that built the bubble diagram knew what labels to put under the bubbles.
 6. There is no problem with repeating properties, or with declaring an resource to be a member of more than one class (i.e. to give it more than one rdf:type property).  For example, Vanderbilt University was declared to be both a `foaf:Organization` and a `grid:Education`.  
 
+
+# For more information
+
+If you want to watch a quirky video on this topic, view [tnis YouTube video](https://www.youtube.com/watch?v=XAGifYBiXMY)
+
+----
+Revised 2019-01-14
