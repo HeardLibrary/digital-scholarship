@@ -130,17 +130,76 @@ Vanderbilt is an instance).
 
 Here are what the tables look like:
 
-![table of people](../images/person-table.png)
-
 [Table of people](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/vandy/person.csv)
 
-![table of documents](../images/document-table.png)
+![table of people](../images/person-table.png)
 
 [Table of documents](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/vandy/work.csv)
 
+![table of documents](../images/document-table.png)
+
+[Table of institutions](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/vandy/institution.csv)
+
 ![table of institutions](../images/institution-table.png)
 
-[Table of institutions](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/vandy/institution.csv))
+The hyperlink above each table will take you to the actual file in our sample data repository.
 
-The hyperlink below each table will take you to the actual file in our sample data repository.
+There are several important columns in each table.  Each table has a column containing a unique URI identifier for the item described in each row.  In the people table, it's the orcidId column, in the documents table, it's the doi column, and in the institutions table, it's the grid column.  In conventional relational database terms, these columns serve as the primary key for the item in the row.  
+
+The people table also has an important column: creator.  The creator column is the link between the document and the person who created it.  In relational database terms, it's a foreign key that links to the primary key of the person table.  Notice that there isn't any column that links the person table to the institution table.  However, since every person in the table is affiliated with Vanderbilt, we can imagine a column in the people table containing the grid ID for Vanderbilt that would link the person to the correct row (the only row!) in the institution table.  
+
+In addition to the columns that link one table to another, there are also a number of columns that contain additional metadata about the item, such as starting and ending page numbers for the documents, given names for the people, and the city in which the institution is located.  We can consider these columns to describe properties of the entities described in the rows.
+
+There are several columns in the institution table that have HTTP URIs, but that don't link to any table in this database.  For example, there is a URI for Vanderbilt's website.  You could imagine that the database contained a fourth table about websites.  In that case, the homepage column in the institutions table could be a foreign key to that website table, which might contain information about web traffic, size of the page, etc.
+
+We can use the following terminology in talking about this database.  Each table represents a *class* of thing (person, document, institution).  Each row in a table represents a particular *instance* of that class (a particular document, a particular person, etc.).  Each column header in the table represents a *property* that exists for the class of that table, and each cell in the table represents the *value* of the property for the particular instance.
+
+## Graph model
+
+![graph model](../images/graph-model.png)
+
+The diagram above shows how the three classes of things are related to each other.  (For a larger view of the model, view [this PDF](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/vandy/graph-model.pdf)).  Although each bubble representing a class in the model is labeled with the URI of a particular instance, the bubble represents the class in general.  
+
+In this model, we have done a significant thing: we have listed well-known URIs that stand for the kinds of things (the *type* of the class), the linking properties that connect the classes, and the metadata properties for each column in the tables.  For example, `foaf:Person` or `http://xmlns.com/foaf/0.1/Person` is a URI from the FOAF vocabulary that we can use to describe the class of persons.  `dcterms:creator` or `http://purl.org/dc/terms/creator` is a URI from Dublin Core that we can use as a property connecting a document to its creator.  `dcterms:title` or `http://purl.org/dc/terms/title` is a URI from Dublin core that we can use as a property describing the title of a document.  
+
+Notice that it is conventional for the local names of URIs for class types to begin with capital letters ("Person" in `foaf:Person`) and for the local names of URIs used for properties to begin with lower case letters ("creator" in `dcterms:creator`).  Properties that are used to connect one thing to another thing are sometimes called *object properties*, and properties that are used to connect a thing to textual (string) metadata about that thing are sometimes called *datatype properties*.  
+
+In "bubble diagrams" it is also conventional to represent entities as ovals, and text metadata as rectangles.  So the title of the document shown in this diagram isn't really a part of the main model, it's just an illustration of how a datatype property (dcterms:title) connects to text metadata ("Jews in the United States").  
+
+## Graph diagram of the dataset
+
+![dataset graph](https://github.com/HeardLibrary/digital-scholarship/raw/master/data/rdf/vandy/vandy-graph.png)
+
+The diagram above shows how the entire dataset present in the three tables can be represented as a graph.  (To see a larger version of the graph, click here](https://github.com/HeardLibrary/digital-scholarship/raw/master/data/rdf/vandy/vandy-graph.png).) There is one instance of an institution (Vanderbilt University), two instances of people (Julian Hillyer and Shaul Kelner), and five instances of documents ("Jews in the United States", "Insect immunology and hematopoiesis", "Let My People Go", etc.), each represented by an oval.  The many text metadata properties of the entities are shown as rectangles.  The arrows represent the object and datatype properties that connect the entities to other entities or metadata.  
+
+Each arrow connecting one thing to another can be considered a link.  We can describe that link by a sort of sentence that describes the connection.  For example, we could say:
+
+```
+"Ethnographers and History" creator "Shaul Kelner".
+```
+
+which would describe the connection between two bubbles.  But in Linked Data, we use URIs to name things, so using the URIs for the two entities, we could say:
+
+```
+<http://dx.doi.org/10.1353/ajh.2014.0012> dcterm:creator <http://orcid.org/0000-0003-2360-0589>.
+```
+
+Notice that in writing this kind of sentence, unabbreviated URIs are enclosed in angle brackets, while CURIEs (abbreviated URIs) are written by themselves.  This kind of statement is called an *RDF triple*.  [Resource Description Framework (RDF)](https://www.w3.org/RDF/) is the W3C Standard for describing graphs in Linked Data.  (A *resource* is any kind of thing - it's what we have been referring to as "entities" elsewhere on this page.)  In an manner analogous to a sentence, the first part of the triple is called the *subject*, the second is the *precicate* (synonymous with *property*), and the third is the *object*.  The triple is ended with a period. 
+
+## The graph as RDF triples
+
+We can describe the graph completely by simply writing a triple for every connection in the graph diagram.  That has been done in [this table](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/vandy/vandy-triples.csv).  There are 66 triples in the graph.  If you count the arrows in the diagram, you will find fewer than 66 because the label properties are written under the bubbles rather than showing them linked as arrows.
+
+Since the Wikipedia page, Vanderbilt website, and Wikidata entry for Vanderbilt (Q29052) are identified with URIs, they are shown as bubbles rather than rectangles in the bubble chart, and are enclosed in angle brackets in the table of triples.  If we were able to retrieve additional things about those three URI-identified resources (which we could do for at least the Wikidata entry), we could extend the graph as Tim Berners-Lee suggested in his fourth characteristic of Linked Data.
+
+## Some final notes
+
+If you examine the table of triples carefully, you will notice several things:
+
+1. Subjects and predicates of triples are always URIs.  Objects can be either URIs or *literals* (text strings).
+2. Some of the literals are followed by a datatype, e.g. `"2014-12-22T22:25:56.900Z"^^xsd:dateTime`.  This provides additional information about how to interpret the string, and indicates that it is actually an abstract resource (an instant of time) rather than just text.
+3. Some of the literals are followed by a language tag, e.g. `"Insect immunology and hematopoiesis"@en`.  Sometimes a property will be repeated with several values in different languages.  
+4. The predicate `rdf:type` is a really important property that is used to indicate the class to which the resource belongs.  It is a best practice to indicate the type of every resource if possible.
+5. The predicate `rdfs:label` is an important property that helps consuming applications to know how to label entities.  That's how the software that built the bubble diagram knew what labels to put under the bubbles.
+6. There is no problem with repeating properties, or with declaring an resource to be a member of more than one class (i.e. to give it more than one rdf:type property).  For example, Vanderbilt University was declared to be both a `foaf:Organization` and a `grid:Education`.  
 
