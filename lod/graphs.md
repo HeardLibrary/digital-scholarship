@@ -123,4 +123,24 @@ The abbreviations for the two Dublin Core namespaces, `dc:` and `dcterms:` are t
 
 # Building a graph
 
-## 
+## Conventional tables about people, publications, and institutions
+
+In this example, we will look at a dataset about researchers at Vanderbilt University.  The dataset consists of three tables: one about people who do research at Vanderbilt, one about publications written by those researchers, and another about academic institutions (of which 
+Vanderbilt is an instance).
+
+Here are what the tables look like:
+
+![table of people](../images/person-table.png)
+
+[Table of people](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/vandy/person.csv)
+
+![table of documents](../images/document-table.png)
+
+[Table of documents](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/vandy/work.csv)
+
+![table of institutions](../images/institution-table.png)
+
+[Table of institutions](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/vandy/institution.csv))
+
+The hyperlink below each table will take you to the actual file in our sample data repository.
+
