@@ -18,7 +18,7 @@ In this example, three rounds of scraping are used to travers the web of human-r
 
 **Example (Python 3)**
 
-The [example](python/scrape-sec.py) uses the [Beautiful Soup](https://pypi.org/project/beautifulsoup4/) Python library to clean up HTML and make it easier to search.  
+The [example](python/scrape_sec.py) uses the [Beautiful Soup](https://pypi.org/project/beautifulsoup4/) Python library to clean up HTML and make it easier to search.  
 
 In the script, lines 1 to 13 load CIK ID numbers for corporations from a text file (one number per row).
 

@@ -15,13 +15,17 @@ The repository structure is described below.
 │   │   ├── README.md          : description of included code
 │   │   ├── python             : Python versions
 │   │   └── xquery             : XQuery versions
-│   │   │   └── http_library.py     : API Python module for import or cut/paste
+│   │       ├── http_library.py     : API Python module for import or cut/paste
 │   │       ├── http_library.xq     : API XQuery code for cut/paste
 │   │       └── http_library.xqm    : API XQuery module for import
 │   ├── csv                    : code for manipulating fielded text files
 │   │   ├── README.md          : description of included code
 │   │   ├── python             : Python versions
 │   │   └── xquery             : XQuery versions
+│   ├── gui                    : code for generating a graphical interface for user interaction
+│   │   ├── README.md          : description of included code
+│   │   └── python             : Python versions
+│   │       └── simple_form.py      : simple script that generates two text boxes and a button
 |   └── scrape                 : example code for scraping a website
 │       ├── README.md          : description of included code
 │       └── python             : Python versions

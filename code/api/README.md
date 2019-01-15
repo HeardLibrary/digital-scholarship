@@ -43,6 +43,12 @@ Notes:
 
 ## Simple functions to request data from an API
 
+### Simple code to retrieve a document
+
+**Description** This simple script retrieves a document from the Internet and displays it.
+
+**Example (Python3)** Code is [here](python/request.py).  The script uses the **requests** module, which is not in the standard library and must be installed using PIP.  
+
 ### Function httpGet
 
 **Description** Performs an HTTP GET call to a URL and requests a particular Internet Media Type.  The function returns the HTTP status code and the response body.
