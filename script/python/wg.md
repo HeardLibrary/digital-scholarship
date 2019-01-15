@@ -14,7 +14,7 @@ The group meets weekly throughout the semester.  Each session is composed of two
 
 ## Venue
 
-The Working Group meets in the Eskind Training Room (Room 010 in the basement of the Eskind Biomedical Library).
+The Working Group meets in the Eskind Training Room (Room 010 in the basement of the Eskind Biomedical Library).  To get there, walk past the circulation desk and veer to the left.  Take the elevators or stair down one floor, then turn right when you come out.
 
 ## Schedule - Spring 2018
 
