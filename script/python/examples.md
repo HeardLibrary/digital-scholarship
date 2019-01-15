@@ -18,19 +18,26 @@ There are two easy ways to get the examples onto your computer from Github.
 
 ## Retrieving libraries that aren't in the standard library
 
-Some modules that aren't included in the standard libary must be retrieved using the PIP application.  If you receive an error message saying that a package can't be found, retrieve it at the command line (in this example, the **requests** library):
+Some modules that aren't included in the standard libary must be retrieved using the PIP application, Python's standard package manager.  If you receive an error message saying that a module can't be found, like this: 
+
+<img src="../images/no-module.png" style="border:1px solid black">
+
+retrieve the package at the command line (in this example, the **bs4** package):
 
 On Windows:
 
 ```
-pip install requests
+pip install bs4
 ```
 
 On Mac:
 
 ```
-pip3 install requests
+pip3 install bs4
 ```
+
+<img src="../images/pip-install.png" style="border:1px solid black">
+
 
 ## Week 1
 
@@ -41,4 +48,4 @@ pip3 install requests
 [Sets up a simple graphical interface with text boxes and a button](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/gui/python/simple_form.py)
 
 ----
-Revised 2019-01-14
+Revised 2019-01-15
