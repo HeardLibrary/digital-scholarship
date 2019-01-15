@@ -12,9 +12,9 @@ The examples below are appropriate for each week of the intro tutorial.
 
 There are two easy ways to get the examples onto your computer from Github.
 
-1. Click the Raw button, then select all, copy, and paste into a blank page of your editor.
+1. Click the Raw button, then select all, copy, and paste into a blank file in your code editor.  You can then save the file.
 
-2. Right-click on the Raw button, then select "Save link as" (or similar options depending on your browser).  When prompted, navigate to the place where you want to save the file.  If you are planning to run from the command line, your home folder will be convenient.  (See step 3 of [this page](../editor/#workflow-for-editing-and-testing-python-code) if you don't know how to find your home folder.)
+2. Right-click on the Raw button, then select "Save link as" (or similar options depending on your browser).  When prompted, navigate to the place where you want to save the file.  If you are planning to run from the command line, your home folder will be convenient.  (See step 3 of [this page](../editor/#workflow-for-editing-and-testing-python-code) if you don't know how to find your home folder.)  You can open the file in your code editor or IDE to modify it.
 
 ## Retrieving libraries that aren't in the standard library
 
