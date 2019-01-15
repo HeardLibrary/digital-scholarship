@@ -62,6 +62,8 @@ To set up a Jupyter notebook on your computer, go to the [Project Jupyter homepa
 
 If you are new to Python, an excellent starting-off point is [Python For Beginners](https://www.python.org/about/gettingstarted/), part of the official Python website.  It contains links to a massive number of other resources, including tutorials, videos, books, lists of editors and IDEs, and code examples.
 
+Some examples of code to play with are [here](examples)
+
 ## Python Working Group at Vanderbilt
 
 [Home page of the Python Working Group](wg) of the [Vanderbilt Libraries Digital Scholarship and Scholarly Communications Office](https://www.library.vanderbilt.edu/scholarly/)
