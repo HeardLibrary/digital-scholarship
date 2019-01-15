@@ -47,7 +47,7 @@ Notes:
 
 **Description** This simple script retrieves a document from the Internet and displays it.
 
-**Example (Python3)** Code is [here](python/request.py).  The script uses the **requests** module, which is not in the standard library and must be installed using PIP.  
+**Example (Python3)** Code is [here](python/http_request.py).  The script uses the **requests** module, which is not in the standard library and must be installed using PIP.  
 
 ### Function httpGet
 

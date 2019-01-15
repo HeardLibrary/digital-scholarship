@@ -2,6 +2,8 @@
 
 Code and documentation for digital scholarship resources provided by the Vanderbilt Libraries Digital Scholarship and Scholarly Communications Office.
 
+[Go to the Digital Scholarship Resources website](https://heardlibrary.github.io/digital-scholarship/)
+
 ## Repo structure
 
 The repository structure is described below. 
