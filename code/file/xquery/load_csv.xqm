@@ -1,6 +1,6 @@
 xquery version "3.1";
 
-module namespace vudssccsv = 'https://github.com/HeardLibrary/digital-scholarship/tree/master/code/csv';
+module namespace vudssctext = 'https://github.com/HeardLibrary/digital-scholarship/tree/master/code/csv';
 
 (: These functions call functions that are particular to BaseX.  You will need to modifiy it for other XQuery processors. :)
 
@@ -14,13 +14,13 @@ module namespace vudssccsv = 'https://github.com/HeardLibrary/digital-scholarshi
    If the file is in the chosen base directory, then $relativePath is simply the file name (including any extension). :)
 
 (: function from http://www.xqueryfunctions.com/xq/functx_trim.html :)
-declare function vudssccsv:trim
+declare function vudssctext:trim
   ( $arg as xs:string? )  as xs:string {
 
    replace(replace($arg,'\s+$',''),'^\s+','')
  } ;
  
-declare function vudssccsv:loadCsv($baseLocation as xs:string, $relativePath as xs:string, $delimiter as xs:string) as element()
+declare function vudssctext:loadCsv($baseLocation as xs:string, $relativePath as xs:string, $delimiter as xs:string) as element()
 {
 (: This function reads from a CSV file. :)
 
@@ -52,7 +52,7 @@ let $xmlDoc := csv:parse($csvDoc, map { 'header' : true(),'separator' : $delimit
 return $xmlDoc/csv
 };
 
-declare function vudssccsv:loadTextList($baseLocation as xs:string, $relativePath as xs:string) as xs:string*
+declare function vudssctext:loadTextList($baseLocation as xs:string, $relativePath as xs:string) as xs:string*
 {
 (: This function reads from a text file where items are separated by newlines.  A sequence of strings is returned. :)
 
@@ -66,7 +66,7 @@ let $baseUri :=
 let $path := $baseUri||fn:replace($relativePath,"\\","/")
 
 let $textDoc := file:read-text($path)
-let $stringSequence := tokenize(vudssccsv:trim($textDoc),'\n') (: get rid of any trailing newlines :)
+let $stringSequence := tokenize(vudssctext:trim($textDoc),'\n') (: get rid of any trailing newlines :)
 
 return $stringSequence
 };
