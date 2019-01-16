@@ -68,4 +68,4 @@ return $stringSequence
 };
 
 (:local:loadTextList("b","sample.txt") :)
-local:loadCsv("b","sample.txt",",")
+local:loadCsv("b","sample.csv",",")
