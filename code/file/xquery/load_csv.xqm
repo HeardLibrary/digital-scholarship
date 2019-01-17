@@ -72,7 +72,7 @@ let $stringSequence := tokenize(vudssctext:trim($textDoc),'\n') (: get rid of an
 return $stringSequence
 };
 
-declare function vudssctext:test($baseLocation as xs:string) as xs:string
+declare function vudssctext:test($baseLocation as xs:string) as xs:string+
 {
 (: A function to test the reported value of the base location :)
 
