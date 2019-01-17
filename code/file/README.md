@@ -8,9 +8,7 @@ Note: this code is still under development and may be unstable.
 
 The functions in this library are used to load text data from a local file or a location on the Internet, and return it in a typical data structure for the language.  Types of text files include text lists where items are separated by newlines and fielded text (colloqually "CSV files").
 
-### Code to retrieve a text list
-
-**Description** A quick and dirty way to specify a list of items to be processed by a script is to use a text editor to create a text document where each item is on a separate line (i.e. items separated by newlines = hard returns).  The document is saved as simple text file using ASCII or UTF-8 character encoding (NOT in Word or PDF format).  The code opens or retrieves the file, then transforms it into an appropriate data structure for the language.
+Several functions allow specifying a file location relative to directories specified by system variables.  The function *test* can be used to determine the value returned by relative directory options.
 
 ### Function test
 
@@ -38,6 +36,10 @@ let $path := test("c")
 return $path
 ```
 
+## Code to retrieve a text list
+
+**Description** A quick and dirty way to specify a list of items to be processed by a script is to use a text editor to create a text document where each item is on a separate line (i.e. items separated by newlines = hard returns).  The document is saved as simple text file using ASCII or UTF-8 character encoding (NOT in Word or PDF format).  The code opens or retrieves the file, then transforms it into an appropriate data structure for the language.
+
 ### Function loadTextList
 
 **Description** Loads a text file from a local drive location and returns a sequence or list of strings.
@@ -64,6 +66,10 @@ import module namespace vudssctext = 'https://github.com/HeardLibrary/digital-sc
 let $list := loadTextList("c", "file.txt")
 return $list
 ```
+
+## Code to retrieve data from a CSV file
+
+**Description** Fielded text files (often called comma separated files, or CSV) are a standard method of structuring simple datasets.  These functions load CSV data and return it in a two-dimensional data structure appropriate for the programming language
 
 ### Function loadCsv
 
