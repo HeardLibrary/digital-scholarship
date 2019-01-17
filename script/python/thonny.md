@@ -120,5 +120,25 @@ directly in the Shell window, then press Enter (or Return) to execute the comman
 
 <img src="../images/thonny-9a.png" style="border:1px solid black">
 
+# Installing a package in Thonny
+
+Sometimes you will try to import a module and receive an error message saying that the module is not found:
+
+<img src="../images/thonny-no-numpy.png" style="border:1px solid black">
+
+To fix this problem, go to the Tools menu and select "Manage packages..."
+
+<img src="../images/thonny-menu-numpy.png" style="border:1px solid black">
+
+In the resulting window, type the name of the missing package and press the Enter/Return key.  When the package is found, click the Install button:
+
+<img src="../images/thonny-find-numpy.png" style="border:1px solid black">
+
+Close the window, then re-run your program.  You should now see results without an error:
+
+<img src="../images/thonny-numpy-success.png" style="border:1px solid black">
+
+
+
 ----
-Revised 2019-01-12
+Revised 2019-01-17
