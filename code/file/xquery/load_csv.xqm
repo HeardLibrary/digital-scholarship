@@ -8,7 +8,8 @@ module namespace vudssctext = 'https://github.com/HeardLibrary/digital-scholarsh
 
 (: When the value of $baseLocation is "c", the base URI is set to be the current working directory (usually defaults to the user directory)
    When the value of $baseLocation is "b", the base URI is set to the directory from which the script was invoked/saved.
-   When the value of $baseLocation is any other value, the base URI is set to the empty string; i.e. the relative path is the absolute path. :)
+   When the value of $baseLocation is any other value, the base URI is set to the empty string; i.e. the relative path is the absolute path.
+   To determine the value of the base URI on your computer, use the function vudssctext:test($baseLocation) :)
 
 (: $relativePath should contain the path from the chosen base directory to, and including the file name.  Slashes can be either direction.
    If the file is in the chosen base directory, then $relativePath is simply the file name (including any extension). :)
@@ -44,7 +45,7 @@ let $baseUri :=
     default return ""
 
 (: If it's a Windows file system, replace backslashes with forward slashes.  Otherwise, nothing happens. :)
-let $path := $baseUri||fn:replace($relativePath,"\\","/")
+let $path := fn:replace($baseUri||$relativePath,"\\","/")
 
 let $csvDoc := file:read-text($path)
 let $xmlDoc := csv:parse($csvDoc, map { 'header' : true(),'separator' : $delimiter })
@@ -63,7 +64,7 @@ let $baseUri :=
     default return ""
 
 (: If it's a Windows file system, replace backslashes with forward slashes.  Otherwise, nothing happens. :)
-let $path := $baseUri||fn:replace($relativePath,"\\","/")
+let $path := fn:replace($baseUri||$relativePath,"\\","/")
 
 let $textDoc := file:read-text($path)
 let $stringSequence := tokenize(vudssctext:trim($textDoc),'\n') (: get rid of any trailing newlines :)
@@ -71,7 +72,7 @@ let $stringSequence := tokenize(vudssctext:trim($textDoc),'\n') (: get rid of an
 return $stringSequence
 };
 
-declare function vudssctext:test($baseLocation as xs:string) as xs:string*
+declare function vudssctext:test($baseLocation as xs:string) as xs:string
 {
 (: A function to test the reported value of the base location :)
 

@@ -40,7 +40,7 @@ let $baseUri :=
     default return ""
 
 (: If it's a Windows file system, replace backslashes with forward slashes.  Otherwise, nothing happens. :)
-let $path := $baseUri||fn:replace($relativePath,"\\","/")
+let $path := fn:replace($baseUri||$relativePath,"\\","/")
 
 let $csvDoc := file:read-text($path)
 let $xmlDoc := csv:parse($csvDoc, map { 'header' : true(),'separator' : $delimiter })
@@ -59,7 +59,7 @@ let $baseUri :=
     default return ""
 
 (: If it's a Windows file system, replace backslashes with forward slashes.  Otherwise, nothing happens. :)
-let $path := $baseUri||fn:replace($relativePath,"\\","/")
+let $path := fn:replace($baseUri||$relativePath,"\\","/")
 
 let $textDoc := file:read-text($path)
 let $stringSequence := tokenize(local:trim($textDoc),'\n') (: get rid of any trailing newlines :)
@@ -67,5 +67,5 @@ let $stringSequence := tokenize(local:trim($textDoc),'\n') (: get rid of any tra
 return $stringSequence
 };
 
-(:local:loadTextList("b","sample.txt") :)
-local:loadCsv("b","sample.csv",",")
+(:local:loadTextList("c","sample.txt") :)
+local:loadCsv("c","sample.csv",",")
