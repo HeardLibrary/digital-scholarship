@@ -70,3 +70,16 @@ let $stringSequence := tokenize(vudssctext:trim($textDoc),'\n') (: get rid of an
 
 return $stringSequence
 };
+
+declare function vudssctext:test($baseLocation as xs:string) as xs:string*
+{
+(: A function to test the reported value of the base location :)
+
+let $baseUri :=
+  switch ($baseLocation)
+    case "c" return file:current-dir()
+    case "b" return file:base-dir()
+    default return ""
+
+return $baseUri
+};
