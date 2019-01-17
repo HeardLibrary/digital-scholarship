@@ -10,6 +10,8 @@ The functions in this library are used to load text data from a local file or a 
 
 Several functions allow specifying a file location relative to directories specified by system variables.  The function *test* can be used to determine the value returned by relative directory options.
 
+[Some general notes on loading data into the XQuery processor BaseX](https://github.com/baskaufs/msc/tree/master/ssda-example)
+
 ### Function test
 
 **Description** Determines the value that the system is returning for the current or base directory.
