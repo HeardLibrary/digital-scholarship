@@ -18,6 +18,8 @@ There are two easy ways to get the examples onto your computer from Github.
 
 ## Retrieving libraries that aren't in the standard library
 
+*Note: For instructions on installing packages in Thonny, see [these instructions](../thonny/#installing-a-package-in-thonny).*  
+
 Some modules that aren't included in the standard libary must be retrieved using the PIP application, Python's standard package manager.  If you receive an error message saying that a module can't be found, like this: 
 
 <img src="../images/no-module.png" style="border:1px solid black">
@@ -41,7 +43,7 @@ pip3 install bs4
 
 ## Week 1
 
-[A simple script to retrieve data from a URL](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/api/python/http_request.py) - requires the **requests** library
+[A simple script to retrieve data from a URL](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/api/python/http_request.py) - requires the **requests** library; does not seem to work in Thonny even when the requests package is installed
 
 [Uses the "turtle" drawing tool to make a shape](https://github.com/baskaufs/msc/blob/master/python/turn_right.py)
 
