@@ -50,7 +50,7 @@ let $path := fn:replace($baseUri||$relativePath,"\\","/")
 let $csvDoc := file:read-text($path)
 let $xmlDoc := csv:parse($csvDoc, map { 'header' : true(),'separator' : $delimiter })
 
-return $xmlDoc/csv
+return $xmlDoc/csv/record
 };
 
 declare function vudssctext:loadCsvInternet($uri as xs:string, $delimiter as xs:string) as element()*
