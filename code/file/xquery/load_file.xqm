@@ -4,8 +4,6 @@ module namespace vudssctext = 'https://github.com/HeardLibrary/digital-scholarsh
 
 (: These functions call functions that are particular to BaseX.  You will need to modifiy it for other XQuery processors. :)
 
-(: These functions call functions that are particular to BaseX.  You will need to modifiy it for other XQuery processors. :)
-
 (: When the value of $baseLocation is "c", the base URI is set to be the current working directory
    When the value of $baseLocation is "b", the base URI is set to the base directory.
    When the value of $baseLocation is any other value, the base URI is set to the empty string; i.e. the relative path is the absolute path.

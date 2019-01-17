@@ -20,10 +20,12 @@ The repository structure is described below.
 │   │       ├── http_library.py     : API Python module for import or cut/paste
 │   │       ├── http_library.xq     : API XQuery code for cut/paste
 │   │       └── http_library.xqm    : API XQuery module for import
-│   ├── csv                    : code for manipulating fielded text files
+│   ├── file                   : code for manipulating text files
 │   │   ├── README.md          : description of included code
 │   │   ├── python             : Python versions
 │   │   └── xquery             : XQuery versions
+│   │       ├── load_file.xq        : file loading XQuery code for cut/paste
+│   │       └── load_file.xqm       : file loading XQuery module for import
 │   ├── gui                    : code for generating a graphical interface for user interaction
 │   │   ├── README.md          : description of included code
 │   │   └── python             : Python versions
