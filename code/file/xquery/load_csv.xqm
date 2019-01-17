@@ -82,5 +82,7 @@ let $baseUri :=
     case "b" return file:base-dir()
     default return ""
 
-return $baseUri
+return if (count($baseUri) = 1)
+  then  $baseUri
+  else  ''
 };
