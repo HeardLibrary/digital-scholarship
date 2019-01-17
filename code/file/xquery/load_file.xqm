@@ -19,7 +19,7 @@ declare function vudssctext:trim
    replace(replace($arg,'\s+$',''),'^\s+','')
  } ;
  
-declare function vudssctext:loadCsv($baseLocation as xs:string, $relativePath as xs:string, $delimiter as xs:string) as element()
+declare function vudssctext:loadCsv($baseLocation as xs:string, $relativePath as xs:string, $delimiter as xs:string) as element()*
 {
 (: This function reads from a CSV file. :)
 
