@@ -51,6 +51,31 @@ let $xmlDoc := csv:parse($csvDoc, map { 'header' : true(),'separator' : $delimit
 return $xmlDoc/csv/record
 };
 
+declare function local:loadCsvInternet($uri as xs:string, $delimiter as xs:string) as element()*
+{
+(: This function reads from a CSV file located at a URL on the Internet. :)
+
+(: The returned element is a sequence of XML nodes with the following pattern:
+
+<record>
+  <firstColumnHeader>cellValue</firstColumnHeader>
+  <secondColumnHeader>cellValue</secondColumnHeader>
+</record>,
+<record>
+  <firstColumnHeader>cellValue</firstColumnHeader>
+  <secondColumnHeader>cellValue</secondColumnHeader>
+</record>
+
+where firstColumnHeader, etc. is the name of the header in the first column in the table and cellValue is the value in that column for that record.  Note: column headers must be valid XML element names, so no initial numerals, no spaces, etc. :)
+
+(: $delimiter is typically a comma "," but may be other characters depending on the file.  For tab delimited files, use "&#9;" :)
+
+let $csvDoc := http:send-request(<http:request method='get' href='{$uri}'/>)[2] (: ignore initial response element :)
+let $xmlDoc := csv:parse($csvDoc, map { 'header' : true(),'separator' : $delimiter })
+
+return $xmlDoc/csv/record
+};
+
 declare function local:loadTextList($baseLocation as xs:string, $relativePath as xs:string) as xs:string*
 {
 (: This function reads from a text file where items are separated by newlines.  A sequence of strings is returned. :)
@@ -71,4 +96,5 @@ return $stringSequence
 };
 
 (:local:loadTextList("c","sample.txt") :)
-local:loadCsv("c","sample.csv",",")
+(:local:loadCsv("c","sample.csv",",") :)
+local:loadCsvInternet("https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/code/file/xquery/sample.csv",",")
