@@ -42,7 +42,7 @@ Here are a few ad hoc observations that might help you chose between Atom and V.
 
 Atom has a nice build-in Markdown previewer.  You can also install a package that enables GitHub integration within the editor.  (Atom was created by the GitHub people.) However, Atom also has an annoying navigator pane that sometimes appears at inconvenient times (but that can easily be closed by `Ctrl \` in Windows or `option \` in Mac).
 
-When editing Python, V.S. Code makes faint guidelines to make the indentation levels more apparent (see the screenshot above).  This can be helpful in long scripts.  It also shows a miniature view of the whole script at the right side of the screen, and you can click and drag on the miniscript view to move rapidly through the whole script.  
+When editing Python, V.S. Code makes faint guidelines to make the indentation levels more apparent (see the screenshot above).  This can be helpful in long scripts.  It also shows a miniature view of the whole script at the right side of the screen, and you can click and drag on the miniscript view to move rapidly through the whole script.  V.S. Code has debugging features that let you step through your Python code and see what's going on as the program runs.
 
 Both editors have autocomplete features, which can be awesome or annoying depending on what you like.
 
@@ -159,5 +159,17 @@ the Python processor will provide an error message, since "pring" is not a valid
 <img src="../images/error.png" style="border:1px solid black">
 <img src="../images/error-mac.png" style="border:1px solid black">
 
+# Debugging using V.S. Code
+
+One of the challenging aspects of coding is understanding what is going on in your program when things are not working.  V.S. Code has some nice built-in features to help you debug your code.  To use those features, go to the Debug menu and select Start Debugging.
+
+<img src="../images/vs-code-debug.png" style="border:1px solid black">
+
+When you are in debugging mode, several features become available on the screen.  If you click just to the left of the line numbers, you can set *breakpoints*.  A breakpoint is a place in the code where execution will pause in order to give you an opportunity to figure out what is going on at that point.  A set breakpoint appears as a red dot to the left of the line number.  To start running the code, click on the continue button in the little control panel at the top.  The script will run until it reaches the breakpoint and then pause.  The line at which the code is stopped is highlighted and the breakpoint dot is surrounded by a yellow pointer.
+
+While the code is paused, you can examine the situation of the variables in the program.  The pane to the left of the editing pane shows a list of variables and their values.  If the variable is a list, the components of the list can be displayed by clicking on the triangle to the left of the variable name.  If you want to watch a few particular variables, you can add them to the Watch list at the bottom of the pane.  You can also see what the values are of variables by just mousing over them in the main editing pane.
+
+Below the editing pane is a console pane that can display several things.  If you have problems with the code itself (such as syntax errors), clicking on the PROBLEMS tab will display them.  The DEBUG CONSOLE tab will display any printed output.  The TERMINAL tab allows you to issue any command line commands that you could normally type into your operating system console.
+
 ----
-Revised 2019-01-13
+Revised 2019-01-18
