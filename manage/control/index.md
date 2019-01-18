@@ -12,7 +12,7 @@ Version control is a system to record changes to files over time.  It makes it p
 
 # Version control systems
 
-## Git and Github
+## Git and GitHub
 
 One of the most commonly used version control systems is Git.  Git is a system that operates on your computer to control interactions between it and a server that centrally manages the version control.
 
@@ -20,9 +20,11 @@ One of the most commonly used version control systems is Git.  Git is a system t
 
 Github is a website and web service that provides a place for groups to manage their projects using Git.
 
-When used for open projects, Github is availalbe for free.
+When used for open projects, GitHub is available for free.
 
-[go to Github](https://github.com/)
+[go to GitHub](https://github.com/)
+
+[view notes from a Vanderbilt Libraries workshop on GitHub](http://heardlibrary.github.io/workshops/tech/2016/01/22/github-ed-tech.html)
 
 ## Open Science Framework (OSF)
 
@@ -31,4 +33,4 @@ The Open Science Framework is a permanent data repository.  However, it also inc
 [read about version control at OSF](http://help.osf.io/m/projectfiles/l/524182-file-revisions-and-version-control)
 
 ----
-Revised 2019-01-12
+Revised 2019-01-18
