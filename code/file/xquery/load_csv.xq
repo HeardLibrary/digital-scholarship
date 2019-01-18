@@ -2,9 +2,10 @@ xquery version "3.1";
 
 (: These functions call functions that are particular to BaseX.  You will need to modifiy it for other XQuery processors. :)
 
-(: When the value of $baseLocation is "c", the base URI is set to be the current working directory (usually defaults to the user directory)
-   When the value of $baseLocation is "b", the base URI is set to the directory from which the script was invoked/saved.
-   When the value of $baseLocation is any other value, the base URI is set to the empty string; i.e. the relative path is the absolute path. :)
+(: When the value of $baseLocation is "c", the base URI is set to be the current working directory
+   When the value of $baseLocation is "b", the base URI is set to the base directory.
+   When the value of $baseLocation is any other value, the base URI is set to the empty string; i.e. the relative path is the absolute path.
+   To determine the value of these directories on your computer, use the function vudssctext:test($baseLocation) :)
 
 (: $relativePath should contain the path from the chosen base directory to, and including the file name.  Slashes can be either direction.
    If the file is in the chosen base directory, then $relativePath is simply the file name (including any extension). :)
