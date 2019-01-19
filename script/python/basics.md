@@ -476,9 +476,22 @@ print("That's all folks!")
 
 # Challenge problems
 
-1. The Disney character-testing program is stupid because the user has to modify the value of the variable `name` in line 1 in order to get the program to do the test.  It would be much better to have a graphical interface where the user enters the name in a text box, then clicks a button to see whether the name is of a Disney character.  Use the code [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/gui/python/simple_form.py) to create the graphical interface, then hack the GIU code by inserting the code from the previous example into the `doSomethingButtonClick()` function.  In the function, instead of printing the value of `firstInputBox.get()`, assign it to the variable name, then use the rest of the example code above as the remainder of the function.  Notice that the `if` code blocks will have to be indented 8 spaces, since the function itself is already indented 4 spaces.  **Embelishments:** Make the labels on the form and button appropriate for your app.  Get rid of the unnecessary second text box.
+1. **Disney checker**  The Disney character-testing program is stupid because the user has to modify the value of the variable `name` in line 1 in order to get the program to do the test.  It would be much better to have a graphical interface where the user enters the name in a text box, then clicks a button to see whether the name is of a Disney character.  Use the code [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/gui/python/simple_form.py) to create the graphical interface, then hack the GIU code by inserting the code from the previous example into the `doSomethingButtonClick()` function.  The best way to grab the code from the website is to click the Raw button, then highlight all the text, copy, then paste into your editor.  In the function, instead of printing the value of `firstInputBox.get()`, assign it to the variable name, then use the rest of the example code above as the remainder of the function.  Notice that the `if` code blocks will have to be indented 8 spaces, since the function itself is already indented 4 spaces.  **Embelishments:** Make the labels on the form and button appropriate for your app.  Get rid of the unnecessary second text box.
 
-2. 
+2. **Create a webpage checker**  *Note: we couldn't get the `requests` library to work on Thonny, so you may need to do this one using a code editor.*  Starting with the code [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/api/python/http_request.py), add a condition to check for an HTTP status code of 200.  If the status code is 200 ("OK"), then print a message saying that the web page is working.  If the status code is something else, tell the user that the web page isn't working and print the status code.  **Embelishments:** Check for other common response codes, like 301, 302, 303, 403, and 404.  You can see the meanings of the codes [on Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).  You can also try to create a GUI version using the code mentioned in problem 1.
+
+3. **Latte maker**  Create the latte-making function `makeLatte(beans, milk, extras, water)` described earlier in the exercise.  The function will need to have some complicated `if` statements to check for the kinds of beans, milk, and extras.  You should consider whether you should create additional functions that would be called by the `makeLatte()` function to figure out things about the possible ingredients.  Here are the program parameters:
+
+| Minimum inputs (you can have more):| |
+|---|---|
+| beans | "decaf", "regular", "dark roast" |
+| milk | "whole", "skim", "soy" |
+| extras | "none", "pumpkin spice", "vanilla" |
+| water | "yes", "no" |
+
+Required output:
+
+Print a single string formed by concatenating adjective strings in front of the string "latte".  You can use whatever adjectives you think would work best for marketing, but at a minimum, you should be able to produce "regular non-fat plain latte", "decaf skinny vanilla latte", and "dark fat pumpkin spice latte" (substitute something else for "fat" if you can think of something better).  If "no" is selected for water, then provide some kind of error message.  **Embelishments:** Create a GUI version using the code mentioned in problem 1.  You'll have to add extra text boxes.  Create an option for a randomly generated latte using the random.choice() function.  Add an extra button to the GUI labeled "Surprise me" that generates the random latte.
 
 ----
 Revised 2019-01-19
