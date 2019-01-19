@@ -4,11 +4,13 @@ title: Basics of Python structure
 breadcrumb: Basics
 ---
 
+Note: this is the second lesson in a beginner's introduction to Python.  For the whole schedule, see the [Vanderbilt Python Working Group homepage](wg/)
+
 # Basics of Python Structure
 
 *Warning: Pretty much everything on this page is an oversimplification.  But you can learn the details when you need to know them.*
 
-*Note: in these instructions a *folder* means the same thing as a *directory*. 
+Note: in these instructions a *folder* means the same thing as a *directory*. 
 
 ## Objects
 
@@ -22,7 +24,7 @@ The following conventions are suggestions for naming conventions that are common
 
 Your code is less likely to have bugs if it is easy for a human to read it and easily tell what's going on.  For that reason, it is better to have object names that are descriptive of what the object is or does.  For example, a name like `loadParticipantData` is better than `x`.
 
-The following **characters** can be considered "safe" in Python: upper and lower case Roman letters, numerals, and the underscore (`_`) character. Periods (dots) have special use in Python.  Spaces are bad. Hypens can cause problems in some circumstances, so it's better to avoid them.  As a general practice, it's probably safest to begin object names with letters, since other symbols sometimes have special uses, and in some contexts, object names beginning with numerals might have problems.
+The following **characters** can be considered "safe" for names in Python: upper and lower case Roman letters, numerals, and the underscore (`_`) character. Periods (dots) have special use in Python.  Spaces are bad. Hypens can cause problems in some circumstances, so it's better to avoid them.  As a general practice, it's probably safest to begin object names with letters, since other symbols sometimes have special uses, and in some contexts, object names beginning with numerals might have problems.
 
 For **names** of variables and functions, we recommend camelCase.  In camelCase, descriptive words are concatenated, with the first word beginning with a lower case letter and subsequent words beginning with capital letters.  Examples: `companyReportFileName` and `convertXmlToJson`.  
 
@@ -54,7 +56,7 @@ To create a literal containing a quote, enclose it in the other kind of quote:
 `Why is he called "Paco"?'
 ```
 
-A back slash is used to generate special characters, such as a *newline*. The character after the backslash has a special meaning and is not included in the string. Example:
+A back slash is used to generate special characters, such as a *newline* ("hard return" character). The character after the backslash has a special meaning and is not included in the string. Example:
 
 ```python
 'This is the first line of text.\nThis is the second line of text.'
@@ -98,13 +100,13 @@ tooMany = sum > 10
 studentCount = studentCount + 1
 ```
 
-In the third example above, the variable `tooMany` will contain a boolean (True or False) depending on a conditino (whether the number in `sum` is greater than 10 or not).
+In the third example above, the variable `tooMany` will contain a boolean (True or False) depending on a condition (whether the number in `sum` is greater than 10 or not).
 
 The fourth example above may seem strange, because no number can be equal to itself plus 1.  But the statment actual is saying "take the number that's in `studentCount`, add one to it, and put the answer back in `studentCount`.
 
 ## Examples to try
 
-Try re-running with different values of `numberWidgets`.
+Try re-running the following scripts with different values of `numberWidgets`.
 
 ```python
 numberWidgets = 1
@@ -119,7 +121,9 @@ tooMany = sum > 10
 print(tooMany)
 ```
 
-How do these differ? (Pay attention to the quotes!)
+Notice that when we tell Python to print a variable, it prints the value that's stored in the variable, not the variable name.
+
+How do the following scripts differ? (Pay attention to the quotes!)
 
 ```python
 firstNumber = 325
@@ -137,7 +141,7 @@ print(together)
 print(type(together))
 ```
 
-Notice in the last two examples that Python determines the type of a variable by the kind of thing you put into it.
+Notice in the last two examples that Python determines the type of a variable by the kind of object you put into it.
 
 # Functions
 
@@ -174,7 +178,7 @@ len()
 
 ## Build-in function examples
 
-Try this with different values for the numbers:
+Try the following script with different values for the numbers:
 
 ```python
 firstNumber = 50
@@ -183,7 +187,7 @@ biggest = max(firstNumber, secondNumber, 100)
 print(biggest)
 ```
 
-Try changing the value of `name`:
+In the following script, try changing the value of `name`:
 ```python
 name = 'Steve'
 howLong = len(name)
@@ -203,7 +207,7 @@ def functionName(parameter1, parameter2):
 ```
 
 Notes:
-1. The inputs to the function are variables called *parameters*.  The parameters are used in the code block.  
+1. The inputs to the function are variables called *parameters*.  The parameters are used to do tings in the code block.  
 2. The parameters and any other variables in the function are *local*.  That means that they can have the same name as objects outside the function without either the variables or the other objects having any effect on each other.
 3. In Python, code blocks are defined by consistent indentation.  The standard for Python is an indentation of four spaces.  If you are using a Python IDE or code editor, it should automatically indent four spaces for you (including when you press the tab key).  If you are using another kind of text editor, do NOT insert tab characters.
 4. The return statement indicates what the function should output.
@@ -219,7 +223,7 @@ def multiplication(firstNumber, secondNumber):
 print(multiplication(3,5))
 ```
 
-In this example, the function is defined in the first three lines.  The function is called in the last line.  Usually, functions are defined at the start of the program and other code follows.  Python knows that the print statement is not part of the function because it is not indented.
+In this example, the function is defined in the first three lines.  (The star (`*`) character is the multiply operator.)  The function is called in the last line of the script.  Usually, functions are defined at the start of the program and other code follows.  Python knows that the print statement is not part of the function because it is not indented.
 
 Using the function is called *calling* the function. Inserting values into the function when it is called is called *passing* values into the function.  
 
@@ -243,7 +247,7 @@ Notice that in this example, the arguments that are put into the function when i
 ## Using a function from a module
 We can reuse useful functions that we have created without actually including the function code in the file with our script.  We do that by placing the functions in a separate file, then importing the code from that file into our script.  The file containing the importable functions is called a *module*.
 
-An example of a module is [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/functions/simple_math.py).  The four functions in this library aren't really that useful.  When we know how to write more complicated code, we can create more usefule modules.  
+An example of a module is [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/functions/simple_math.py).  The four functions in this module aren't really that useful.  When we know how to write more complicated code, we can create more useful modules.  
 
 There are two ways to get this library onto your computer:  
 
@@ -287,7 +291,7 @@ print(product)
 
 In this example, Python was able to find the module because it was in the same directory as the script that called it.  However, it would be really annoying to have to always put the module file in the directory where the script lives.  
 
-If a module is called and Python doesn't find it in the same directory as the calling script, it will look in other standard places that have been specified when Python was installed.  Python actually comes with a lot of pre-made modules, called the *standard library*.  You don't have to do anything to get those modules, all you have to do is to include them in your code as an import statement.
+If a module is called and Python doesn't find it in the same directory as the calling script, it will look in other standard places that have been specified when Python was installed.  Python actually comes with a lot of pre-made modules, called the *standard library*.  You don't have to do anything to get those modules, all you have to do is to retrieve them in your code as an import statement.
 
 Here is a fun example using the standard `random` module:
 
@@ -320,7 +324,7 @@ This example finds the square root of the number, then finds the largest whole n
 
 ## What if the module isn't in the standard library?
 
-Python would take up a lot more space on your computer if it included every known module that the Python community has created.  Sometimes you will see an Python script on the Internet that uses a module that isn't in the standard library.  If you try to run that script, an error will be generated saying that it can't be found.  In that case, either use your IDE's package manager or PIP at the command line to install the missing module.  Once you've installed it on that particular computer, you won't need to do it again.  Instructions for using PIP are [here](../examples/#retrieving-libraries-that-arent-in-the-standard-library) and for installing packages in the Thonny IDE are [here](../thonny/#installing-a-package-in-thonny).
+Python would take up a lot more space on your computer if it included every known module that the Python community has created.  Sometimes you will see an Python script on the web that uses a module that isn't in the standard library.  If you try to run that script, an error will be generated saying that the module can't be found.  In that case, either use your IDE's package manager or PIP at the command line to install the missing module.  Once you've installed it on that particular computer, you won't need to do it again.  Instructions for using PIP are [here](../examples/#retrieving-libraries-that-arent-in-the-standard-library) and for installing packages in the Thonny IDE are [here](../thonny/#installing-a-package-in-thonny).
 
 If you have installed Python by installing Anaconda, Anaconda has already installed many of the typical modules used in the STEM and data science world.
 
@@ -332,7 +336,7 @@ If you want to try using this package, you will need to download the `functions`
 
 <img src="../images/package-directory.png">
 
-Notice that there is a third file in the directory called `__init__.py`.  This file actually doesn't have any contents - its presence is simply a signal to Python that the directory is a package.
+Notice that there is a third file in the directory called `__init__.py`.  That file actually doesn't have any contents - its presence is simply a signal to Python that the directory is a package.
 
 Now create this script in the directory where you placed the `functions` folder:
 
@@ -358,13 +362,13 @@ DonaldDuck
 
 The system of specifying the function by connecting the package, module, and function by dots:
 
-```
+```text
 package.module.function()
 ```
 
 reflects the hierarchy of function within module file and module file within package directory:
 
-```
+```text
 package directory
 module file
 function code
@@ -415,9 +419,9 @@ Notes:
 4. The `print 'That is all!'` statement is not included in the code block, so it will be executed regardless of the condition.
 
 Questions:
-1. Predict what would happen of `name = 'Mickey Mouse'`
-2. Predict what would happen of `name = 'Minnie Mouse'`
-3. Predict what would happen of `name = 'Micky Mouse'`
+1. Predict what would happen if `name = 'Mickey Mouse'`
+2. Predict what would happen if `name = 'Minnie Mouse'`
+3. Predict what would happen if `name = 'Micky Mouse'`
 
 We don't have to evaluate the condition separately.  We can evaluate it right in the `if` statement.  Here is a simplification of the code:
 
@@ -430,7 +434,7 @@ if name == 'Mickey Mouse':
 print('That is all!')
 ```
 
-It's behavior will be the same except for stating the value of the condition.
+It's behavior will be the same except for printing the value of the condition.
 
 ## if ... else ...
 
@@ -448,9 +452,11 @@ else:
 print('That is all?')
 ```
 
+Notice that both of the conditional code blocks are indented by the same amount.  That helps make it clear that they are two options.
+
 Questions:
-1. Predict what would happen of `name = 'Mickey Mouse'`
-2. Predict what would happen of `name = 'Minnie Mouse'`
+1. Predict what would happen if `name = 'Mickey Mouse'`
+2. Predict what would happen if `name = 'Minnie Mouse'`
 
 ## if ... elif ... else ...
 
@@ -478,20 +484,22 @@ print("That's all folks!")
 
 1. **Disney checker**  The Disney character-testing program is stupid because the user has to modify the value of the variable `name` in line 1 in order to get the program to do the test.  It would be much better to have a graphical interface where the user enters the name in a text box, then clicks a button to see whether the name is of a Disney character.  Use the code [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/gui/python/simple_form.py) to create the graphical interface, then hack the GIU code by inserting the code from the previous example into the `doSomethingButtonClick()` function.  The best way to grab the code from the website is to click the Raw button, then highlight all the text, copy, then paste into your editor.  In the function, instead of printing the value of `firstInputBox.get()`, assign it to the variable name, then use the rest of the example code above as the remainder of the function.  Notice that the `if` code blocks will have to be indented 8 spaces, since the function itself is already indented 4 spaces.  **Embelishments:** Make the labels on the form and button appropriate for your app.  Get rid of the unnecessary second text box.
 
-2. **Create a webpage checker**  *Note: we couldn't get the `requests` library to work on Thonny, so you may need to do this one using a code editor.*  Starting with the code [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/api/python/http_request.py), add a condition to check for an HTTP status code of 200.  If the status code is 200 ("OK"), then print a message saying that the web page is working.  If the status code is something else, tell the user that the web page isn't working and print the status code.  **Embelishments:** Check for other common response codes, like 301, 302, 303, 403, and 404.  You can see the meanings of the codes [on Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).  You can also try to create a GUI version using the code mentioned in problem 1.
+2. **Create a webpage checker**  *Note: we couldn't get the `requests` library to work on Thonny, so you may need to do this one using a code editor.*  Starting with the code [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/api/python/http_request.py), add a condition to check for an HTTP status code of 200.  If the status code is 200 ("OK"), then print a message saying that the web page is working.  If the status code is something else, tell the user that the web page isn't working and print the status code.  **Embelishments:** Check for other common response codes, like 301, 302, 303, 403, and 404.  You can see the meanings of the codes [on Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).  You can also try to create a GUI version using the code mentioned in problem 1.  Put the URL in the text box and label the button "Check web page".
 
 3. **Latte maker**  Create the latte-making function `makeLatte(beans, milk, extras, water)` described earlier in the exercise.  The function will need to have some complicated `if` statements to check for the kinds of beans, milk, and extras.  You should consider whether you should create additional functions that would be called by the `makeLatte()` function to figure out things about the possible ingredients.  Here are the program parameters:
 
-| Minimum inputs (you can have more):| |
+**Minimum inputs** (you can have more):
+
+| variable | possible string values |
 |---|---|
 | beans | "decaf", "regular", "dark roast" |
 | milk | "whole", "skim", "soy" |
 | extras | "none", "pumpkin spice", "vanilla" |
 | water | "yes", "no" |
 
-Required output:
+**Required output**:
 
-Print a single string formed by concatenating adjective strings in front of the string "latte".  You can use whatever adjectives you think would work best for marketing, but at a minimum, you should be able to produce "regular non-fat plain latte", "decaf skinny vanilla latte", and "dark fat pumpkin spice latte" (substitute something else for "fat" if you can think of something better).  If "no" is selected for water, then provide some kind of error message.  **Embelishments:** Create a GUI version using the code mentioned in problem 1.  You'll have to add extra text boxes.  Create an option for a randomly generated latte using the random.choice() function.  Add an extra button to the GUI labeled "Surprise me" that generates the random latte.
+Print a single string formed by concatenating adjective strings in front of the string "latte".  You can use whatever adjectives you think would work best for marketing, but at a minimum, you should be able to produce "regular non-fat plain latte", "decaf skinny vanilla latte", and "dark fat pumpkin spice latte" (substitute a different adjective for "fat" if you can think of a better euphamism).  If "no" is selected for water, then provide some kind of error message.  **Embelishments:** Create a GUI version using the code mentioned in problem 1.  You'll have to add extra text boxes.  Create an option for a randomly generated latte using the `random.choice()` function.  Add an extra button to the GUI labeled "Surprise me" that generates the random latte.
 
 ----
 Revised 2019-01-19
