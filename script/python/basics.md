@@ -4,7 +4,7 @@ title: Basics of Python structure
 breadcrumb: Basics
 ---
 
-Note: this is the second lesson in a beginner's introduction to Python.  For the whole schedule, see the [Vanderbilt Python Working Group homepage](wg/)
+Note: this is the second lesson in a beginner's introduction to Python.  For the whole schedule, see the [Vanderbilt Python Working Group homepage](../wg/)
 
 # Basics of Python Structure
 
@@ -42,7 +42,7 @@ A *boolean* is a true or false value.
 
 In a *literal*, you state explicitly what the object is.  String literals are written within single or double quotes:
 
-```python
+```text
 "cat"
 'dog'
 "My name is Steve."
@@ -51,7 +51,7 @@ In a *literal*, you state explicitly what the object is.  String literals are wr
 
 To create a literal containing a quote, enclose it in the other kind of quote:
 
-```python
+```text
 "That's OK!"
 `Why is he called "Paco"?'
 ```
