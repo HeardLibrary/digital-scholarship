@@ -31,7 +31,7 @@ secondInputBox.insert(END, 'default text for second box')
 
 #set up action button
 def doSomethingButtonClick():
-	doTheThing()
+    doTheThing()
 doSomethingButton = ttk.Button(mainframe, text = "Do Something", width = 30, command = lambda: doSomethingButtonClick() )
 doSomethingButton.grid(column=4, row=15, sticky=W)
 
@@ -43,8 +43,8 @@ def doTheThing():  # This is the function that is invoked when the Do Something 
     print(secondInputBox.get())
 
 
-def main():	
-	root.mainloop()
-	
+def main():
+    root.mainloop()
+    
 if __name__=="__main__":
-	main()
+    main()
