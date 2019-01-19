@@ -6,9 +6,9 @@ breadcrumb: Basics
 
 # Basics of Python Structure
 
-*Note: These notes go along with an in-person class that includes explanation and an opportunity for questions.  So they are brief and probably are insufficient as a tutorial. If you need a more detailed tutorial, see some of the resources listed [here](https://heardlibrary.github.io/digital-scholarship/script/python/).*
-
 *Warning: Pretty much everything on this page is an oversimplification.  But you can learn the details when you need to know them.*
+
+*Note: in these instructions a *folder* means the same thing as a *directory*. 
 
 ## Objects
 
@@ -22,7 +22,7 @@ The following conventions are suggestions for naming conventions that are common
 
 Your code is less likely to have bugs if it is easy for a human to read it and easily tell what's going on.  For that reason, it is better to have object names that are descriptive of what the object is or does.  For example, a name like `loadParticipantData` is better than `x`.
 
-The following **characters** can be considered "safe" in Python: upper and lower case Roman letters, numerals, and the underscore (`_`) character. Periods have special use in Python.  Spaces are bad. Hypens can cause problems in some circumstances, so it's better to avoid them.  As a general practice, it's probably safest to begin object names with letters, since other symbols sometimes have special uses, and in some contexts, object names beginning with numerals might have problems.
+The following **characters** can be considered "safe" in Python: upper and lower case Roman letters, numerals, and the underscore (`_`) character. Periods (dots) have special use in Python.  Spaces are bad. Hypens can cause problems in some circumstances, so it's better to avoid them.  As a general practice, it's probably safest to begin object names with letters, since other symbols sometimes have special uses, and in some contexts, object names beginning with numerals might have problems.
 
 For **names** of variables and functions, we recommend camelCase.  In camelCase, descriptive words are concatenated, with the first word beginning with a lower case letter and subsequent words beginning with capital letters.  Examples: `companyReportFileName` and `convertXmlToJson`.  
 
@@ -267,7 +267,7 @@ print(product)
 
 Notes:
 1. When we put the name of the module file in the import statement, we didn't need to add the `.py` extension.
-2. When calling the functions, we had to put the name of the module in front of the function name, separated by a period.
+2. When calling the functions, we had to put the name of the module in front of the function name, separated by a dot.
 
 Writing out a long module name is annoying.  As a shortcut, we can abbreviate it using the `as` clause in the `import` statement.  Here's an example:
 
@@ -294,7 +294,7 @@ Here is a fun example using the standard `random` module:
 ```python
 import random
 
-dayList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+dayList = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 x = random.choice(dayList)
 
 print(x)
@@ -328,7 +328,157 @@ If you have installed Python by installing Anaconda, Anaconda has already instal
 
 Sometimes related modules are grouped together into *packages*.  From the standpoint of file structure, a package is a folder that holds several Python text files (with `.py` file extensions).  You can see an example of a package called `functions` [here](https://github.com/HeardLibrary/digital-scholarship/tree/master/code/pylesson/functions).  The function package contains two modules: the useless `simple_math` module that you used before, and another one called `simple_string` that contains two silly little functions that can be viewed [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/functions/simple_string.py).  
 
-If you want to try using this package, you will need to 
+If you want to try using this package, you will need to download the `functions` folder to your computer's hard drive.  The easiest way to do that is to go to [this web page](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/functions.zip), click the download button, open the .zip file, and copy the `functions` folder to the folder from which you've been running Python (probably your user folder).  After you've finished the download, it should look something like this:
+
+<img src="../images/package-directory.png">
+
+Notice that there is a third file in the directory called `__init__.py`.  This file actually doesn't have any contents - its presence is simply a signal to Python that the directory is a package.
+
+Now create this script in the directory where you placed the `functions` folder:
+
+```python
+import functions.simple_math
+import functions.simple_string
+
+answer = functions.simple_math.subtraction(10, 3)
+print(answer)
+
+firstName = 'Donald'
+lastName = 'Duck'
+combinedString = functions.simple_string.concatenation(firstName, lastName)
+print(combinedString)
+```
+
+The subtraction function subtracts the second argument from the first and the concatenation function joins the two string arguments together.  If you run the script, you should get the following result:
+
+```
+7
+DonaldDuck
+```
+
+The system of specifying the function by connecting the package, module, and function by dots:
+
+```
+package.module.function()
+```
+
+reflects the hierarchy of function within module file and module file within package directory:
+
+```
+package directory
+module file
+function code
+```
+
+We can simplify the function names several ways:
+
+```python
+from functions import simple_math
+import functions.simple_string as st
+
+answer = simple_math.subtraction(10, 3)
+print(answer)
+
+firstName = 'Donald'
+lastName = 'Duck'
+combinedString = st.concatenation(firstName, lastName)
+print(combinedString)
+```
+
+In line 1, we simply imported the `simple_math` module by specifying that it was in the `function` package.  If we had wanted, we could have shortened the module name using an `as` clause.  In line 2, we directly specified the module by giving its "path" expressed using the dot notation.  
+
+In code examples, you will see all kinds of variations on these themes.  Just remember that functions live within modules, and modules live within packages.
+
+# Conditional execution
+
+Sometimes we want particular code to be executed only under certain conditions.  We can do that using an `if` statement.  
+
+## if statement
+
+Here is an example:
+
+```python
+name = 'Fred Flintstone'
+isMicky = name == 'Mickey Mouse'
+print(name)
+print(isMicky)
+
+if isMicky:
+    print('You are a Disney character')
+print('That is all!')
+```
+
+Notes:
+1. The double equals sign `==` is a comparison operator to test for equality.  When `name == 'Micky Mouse'` is evaluated, the resulting boolean value is assigned to the variable `isMicky`.  Other conditional operators are: `!=` (not equal), `>` (greater than), `<=` (less than or equal to), etc.
+2. The `if` statement controls whether the code block following the colon is executed or not (don't forget the colon!).  If the value following the keyword `if` has a value of `True`, then the code block is executed.  If the value is `False`, the code block is not executed. 
+3. As with code blocks in functions, the code block here is demarcated by indentation (of the standard four spaces).  In this example, there is only one line in the indented code block, but there could be many.
+4. The `print 'That is all!'` statement is not included in the code block, so it will be executed regardless of the condition.
+
+Questions:
+1. Predict what would happen of `name = 'Mickey Mouse'`
+2. Predict what would happen of `name = 'Minnie Mouse'`
+3. Predict what would happen of `name = 'Micky Mouse'`
+
+We don't have to evaluate the condition separately.  We can evaluate it right in the `if` statement.  Here is a simplification of the code:
+
+```python
+name = 'Fred Flintstone'
+print(name)
+
+if name == 'Mickey Mouse':
+    print('You are a Disney character')
+print('That is all!')
+```
+
+It's behavior will be the same except for stating the value of the condition.
+
+## if ... else ...
+
+You can create a structure where one code block is executed if the condition is true and a different block is executed if the condition is false.  Here is an example:
+
+```python
+name = 'Fred Flintstone'
+print(name)
+
+if name == 'Mickey Mouse':
+    print('You are a Disney character')
+    print('You are almost ready to go out of copyright!')
+else:
+    print('You are not a Disney character')
+print('That is all?')
+```
+
+Questions:
+1. Predict what would happen of `name = 'Mickey Mouse'`
+2. Predict what would happen of `name = 'Minnie Mouse'`
+
+## if ... elif ... else ...
+
+You can check for multiple conditions by following an initial `if` statement by additional conditions.  If none of the additional conditions are satisfied, the `else` code block will be satisfied.  Here is an example:
+
+```python
+name = 'Fred Flintstone'
+print(name)
+
+if name == 'Mickey Mouse':
+    print('You are a Disney character')
+    print('You are a mouse')
+elif name == 'Donald Duck':
+    print('You are a Disney character')
+    print('You are not a mouse')
+elif name == 'Minnie Mouse':
+    print('You are a Disney character')
+    print('Your boyfriend is getting old')
+else:
+    print('You are not a Disney character')
+print("That's all folks!")
+```
+
+# Challenge problems
+
+1. The Disney character-testing program is stupid because the user has to modify the value of the variable `name` in line 1 in order to get the program to do the test.  It would be much better to have a graphical interface where the user enters the name in a text box, then clicks a button to see whether the name is of a Disney character.  Use the code [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/gui/python/simple_form.py) to create the graphical interface, then hack the GIU code by inserting the code from the previous example into the `doSomethingButtonClick()` function.  In the function, instead of printing the value of `firstInputBox.get()`, assign it to the variable name, then use the rest of the example code above as the remainder of the function.  Notice that the `if` code blocks will have to be indented 8 spaces, since the function itself is already indented 4 spaces.  **Embelishments:** Make the labels on the form and button appropriate for your app.  Get rid of the unnecessary second text box.
+
+2. 
 
 ----
 Revised 2019-01-19
