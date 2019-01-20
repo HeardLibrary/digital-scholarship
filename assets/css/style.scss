@@ -2,6 +2,10 @@
 ---
 
 @import "{{ site.theme }}";
+code {
+    font-family: unset
+}
+
 header {   
     background: #000000; 
     padding: 12px 20px 12px 20px;
