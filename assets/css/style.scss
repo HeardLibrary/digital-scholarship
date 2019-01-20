@@ -2,16 +2,6 @@
 ---
 
 @import "{{ site.theme }}";
-pre {
-    code {
-        font-family: "'Courier New', Courier, monospace"
-    }
-}
-
-code {
-    font-family: "'Courier New', Courier, monospace"
-}
-
 header {   
     background: #000000; 
     padding: 12px 20px 12px 20px;
