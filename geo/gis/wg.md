@@ -24,3 +24,5 @@ Anyone who is interested in GIS, Mapping, OpenSource GIS, R & Python for GIS, or
 ## Venue
 
 Our group meets on most Wednesdays from 12:10 to 2:00 PM (again instruction is from 12:10-1:10 and the remainder is for help with your data) in the Training Room in the basement of the Eskind Biomedical Library (Room 010).  [Click here](schedule.md) to view the schedule for the current semester.
+
+[example sample data](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/gis/wg/qgis-example.zip)
