@@ -23,6 +23,20 @@ Anyone who is interested in GIS, Mapping, OpenSource GIS, R & Python for GIS, or
 
 ## Venue
 
-Our group meets on most Wednesdays from 12:10 to 2:00 PM (again instruction is from 12:10-1:10 and the remainder is for help with your data) in the Training Room in the basement of the Eskind Biomedical Library (Room 010).  [Click here](schedule.md) to view the schedule for the current semester.
+Our group meets on most Wednesdays from 12:10 to 2:00 PM (again instruction is from 12:10-1:10 and the remainder is for help with your data) in the Training Room in the basement of the Eskind Biomedical Library (Room 010).  
 
-[example sample data](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/gis/wg/qgis-example.zip)
+
+## Schedule of Topics
+
+| Date | Topic | Notes |
+|------|-------|-------|
+| Jan. 23| Introduction, software installation, basics  |  |
+| Jan. 30 | GIS data sources, ArcGIS basics, and coordinate systems |   |
+| Feb. 06 | Geocoding and working with Census data |  |
+| Feb. 13 | Geoprocessing and Spatial Analysis |  |
+| Feb. 20 | Opensource GIS QGIS|  |
+| Feb. 27 | QGIS continued |  |
+| Mar. 6 | No meeting (spring break week) |  |
+| Mar. 13 | Geospatial Data in R |  |
+| Mar. 20 | Geospatial Data with Python |  |
+| Mar. 27 |Web Mapping |  | |
