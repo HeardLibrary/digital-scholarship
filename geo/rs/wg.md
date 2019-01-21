@@ -31,13 +31,13 @@ Our group meets on most Thursdays from 12:10 to 2:00 PM (again instruction is fr
 
 | Date | Topic | Notes |
 |------|-------|-------|
-| Jan. 24| Introduction, software installation, basics  |  |
-| Jan. 31 | Data types, finding data, etc. |   |
+| Jan. 24| Introduction, software install, basics and foundations  |  |
+| Jan. 31 | Data types, finding data, etc. | 11:10am-1pm  |
 | Feb. 07 | ArcGIS and Imagery |  |
 | Feb. 14 | Opensource QGIS and Imagery |  |
-| Feb. 20 | LiDAR and point clouds|  |
-| Feb. 27 | Remote Sensing in R |  |
+| Feb. 21 | LiDAR and point clouds|  |
+| Feb. 28 | Remote Sensing in R | 11:10am - 1pm |
 | Mar. 6 | No meeting (spring break week) |  |
-| Mar. 13 | Drone Technology and Regulations |  |
-| Mar. 20 | 3D Modeling |  |
-| Mar. 27 | Advanced Google Earth|  | |
+| Mar. 14 | Drone Technology and Regulations |  |
+| Mar. 21 | 3D Modeling |  |
+| Mar. 28 | Advanced Google Earth|  | |
