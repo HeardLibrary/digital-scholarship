@@ -1,5 +1,5 @@
 ---
-permalink: /manage/control/github/manage/
+permalink: /manage/control/github/projects/
 title: Manage projects with GitHub
 breadcrumb: Manage Projects
 ---
