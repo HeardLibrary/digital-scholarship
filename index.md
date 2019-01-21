@@ -28,6 +28,8 @@ In addition to the resources on this site, you can browse the Digital Scholarshi
 
 [Data visualization](vis/)
 
+[Digital privacy](privacy/)
+
 [Geospatial data](geo/)
 
 [Linked Open Data (LOD)](lod/)

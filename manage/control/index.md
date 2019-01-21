@@ -18,13 +18,15 @@ One of the most commonly used version control systems is Git.  Git is a system t
 
 [Software Carpentry lessons on Git](http://swcarpentry.github.io/git-novice/)
 
-Github is a website and web service that provides a place for groups to manage their projects using Git.
+GitHub is a website and web service that provides a place for groups to manage their projects using Git.
 
 When used for open projects, GitHub is available for free.
 
 [go to GitHub](https://github.com/)
 
 [view notes from a Vanderbilt Libraries workshop on GitHub](http://heardlibrary.github.io/workshops/tech/2016/01/22/github-ed-tech.html)
+
+[GitHub resources (stub)](github/)
 
 ## Open Science Framework (OSF)
 
