@@ -40,4 +40,4 @@ Our group meets on most Thursdays from 12:10 to 2:00 PM (again instruction is fr
 | Mar. 6 | No meeting (spring break week) |  |
 | Mar. 14 | Drone Technology and Regulations |  |
 | Mar. 21 | 3D Modeling |  |
-| Mar. 28 | Advanced Google Earth|  | |
+| Mar. 28 | TBD|  | |

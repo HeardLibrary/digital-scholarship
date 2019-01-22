@@ -39,4 +39,4 @@ Our group meets on most Wednesdays from 12:10 to 2:00 PM (again instruction is f
 | Mar. 6 | No meeting (spring break week) |  |
 | Mar. 13 | Geospatial Data in R |  |
 | Mar. 20 | Geospatial Data with Python |  |
-| Mar. 27 |Web Mapping |  | |
+| Mar. 27 |Web Mapping MapBox |  | |
