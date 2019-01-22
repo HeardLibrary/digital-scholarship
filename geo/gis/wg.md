@@ -30,9 +30,9 @@ Our group meets on most Wednesdays from 12:10 to 2:00 PM (again instruction is f
 
 | Date | Topic | Notes |
 |------|-------|-------|
-| Jan. 23| Introduction, software installation, basics  |  |
+| Jan. 23| Introduction, software installation, ArcOnline  |  |
 | Jan. 30 | GIS data sources, ArcGIS basics, and coordinate systems |   |
-| Feb. 06 | Geocoding and working with Census data |  |
+| Feb. 06 | Geocoding and Georeferencing |  |
 | Feb. 13 | Geoprocessing and Spatial Analysis |  |
 | Feb. 20 | Opensource GIS QGIS|  |
 | Feb. 27 | QGIS continued |  |
