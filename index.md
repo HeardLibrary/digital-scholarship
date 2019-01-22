@@ -30,6 +30,8 @@ In addition to the resources on this site, you can browse the Digital Scholarshi
 
 [Digital privacy](privacy/)
 
+[Document markup](markup/)
+
 [Geospatial data](geo/)
 
 [Linked Open Data (LOD)](lod/)
