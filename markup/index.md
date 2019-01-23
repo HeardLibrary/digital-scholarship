@@ -24,6 +24,8 @@ Markdown is increasingly popular as a lightweight way to include formatting in t
 
 XML provides a powerful way to encode complex information in a text document.  It can also be used to impose structure to data.  As a W3C standard, its use is common across the Internet in forms such as XHTML web pages and SVG graphics.  There are also standards for accessing and manipulating XML data, such as XPath, XSLT, and XQuery.
 
+If you are interested in learning more about technology related to XML, check out the [XQuery working group](https://heardlibrary.github.io/xquery-working-group/).
+
 ## Basics of XML
 
 [Basic introduction to XML (slides)](resource/adventures-in-xml.pdf) Includes introduction to TEI.
