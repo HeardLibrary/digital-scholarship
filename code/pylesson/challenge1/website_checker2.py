@@ -17,9 +17,9 @@ elif responseCode == 302:
 elif responseCode == 303:
     print('The web page moved permanently. Response code: 303.')
 elif responseCode == 403:
-    print('The web page moved permanently. Response code: 403.')
+    print('Forbidden. You probably need access rights. Response code: 403.')
 elif responseCode == 404:
-    print('The web page moved permanently. Response code: 404.')
+    print('The web page was not found. Response code: 404.')
 # IETF April Fool's joke !
 elif responseCode == 418:
     print('The web page is a teapot. Seriously! Response code: 418.')
