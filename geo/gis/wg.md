@@ -30,13 +30,13 @@ Our group meets on most Wednesdays from 12:10 to 2:00 PM (again instruction is f
 
 | Date | Topic | Notes |
 |------|-------|-------|
-| Jan. 23| Introduction, software installation, ArcOnline  | "https://github.com/HeardLibrary/digital-scholarship/blob/master/data/gis/wg/Metro_Nashville_Schools.csv" |
-| Jan. 30 | GIS data sources, ArcGIS basics |   |
+| Jan. 23| Introduction, software installation, ArcOnline  | [https://github.com/HeardLibrary/digital-scholarship/blob/master/data/gis/wg/Metro_Nashville_Schools.csv]
+| Jan. 30 | GIS data sources, ArcGIS basics |   
 | Feb. 06 | Geocoding and Georeferencing |  |
-| Feb. 13 | Geoprocessing and Spatial Analysis |  |
-| Feb. 20 | Opensource GIS QGIS|  |
-| Feb. 27 | QGIS continued |  |
-| Mar. 6 | No meeting (spring break week) |  |
-| Mar. 13 | Geospatial Data in R |  |
-| Mar. 20 | Geospatial Data with Python |  |
-| Mar. 27 |Web Mapping MapBox |  | |
+| Feb. 13 | Geoprocessing and Spatial Analysis |  
+| Feb. 20 | Opensource GIS QGIS|  
+| Feb. 27 | QGIS continued |  
+| Mar. 6 | No meeting (spring break week)  
+| Mar. 13 | Geospatial Data in R |  
+| Mar. 20 | Geospatial Data with Python |  
+| Mar. 27 |Web Mapping MapBox |  
