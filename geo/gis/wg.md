@@ -30,7 +30,7 @@ Our group meets on most Wednesdays from 12:10 to 2:00 PM (again instruction is f
 
 | Date | Topic | Notes |
 |------|-------|-------|
-| Jan. 23| Introduction, software installation, ArcOnline  |  |
+| Jan. 23| Introduction, software installation, ArcOnline  | https://github.com/HeardLibrary/digital-scholarship/blob/master/data/gis/wg/Metro_Nashville_Schools.csv |
 | Jan. 30 | GIS data sources, ArcGIS basics |   |
 | Feb. 06 | Geocoding and Georeferencing |  |
 | Feb. 13 | Geoprocessing and Spatial Analysis |  |
