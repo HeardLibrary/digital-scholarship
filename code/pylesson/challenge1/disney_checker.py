@@ -1,4 +1,4 @@
-#libraries for GUI interface
+#modules for GUI interface
 import tkinter
 from tkinter import *
 from tkinter import ttk
