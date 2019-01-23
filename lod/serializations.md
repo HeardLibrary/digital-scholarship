@@ -130,6 +130,8 @@ The W3C provides an [RDF validator](https://www.w3.org/RDF/Validator/) that unfo
 
 ![graphical diagram](../images/w3c-validator-diagram.png)
 
-By using one of the 
+By using one of the converter tools to convert an RDF serialization to XML, then the W3C Validator, it's possible to generate a diagram for any serialization.
+
+#
 ----
 Revised 2019-01-14
