@@ -57,7 +57,8 @@ The repository structure is described below.
     │       └── qgis-example.zip    : 
     │
     └── xml                    : Extensible Markup Language (XML) examples
-        ├── menu-example       : generic XML example
+        ├── menu-example-errors.xml    : generic XML example with errors
+        ├── menu-example-corrected.xml : generic XML example (corrected)
         └── tei                : Text Encoding Initiative (TEI) examples
             ├── dickinson-tei-example.xml         : brief example of Dickinson text
             └── dickinson-variants-tei-example.xml : example with text variants
