@@ -48,6 +48,7 @@ The repository structure is described below.
     │   └── serializations         : RDF serialization examples
     │       ├── example.json   : JSON-LD example
     │       ├── example.nt     : N-Triples example
+    │       ├── example.nq     : N-Quads example
     │       ├── example.rdf    : XML example
     │       └── example.ttl    : Terse RDF Triple Language (Turtle) example
     │
