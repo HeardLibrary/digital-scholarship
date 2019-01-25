@@ -136,6 +136,25 @@ The W3C provides an [RDF validator](https://www.w3.org/RDF/Validator/) that unfo
 
 By using one of the converter tools to convert an RDF serialization to XML, then the W3C Validator, it's possible to generate a diagram for any serialization.
 
-#
+# Designating and identifying graphs
+
+Although triples can be serialized in a text document in one of the formats described above, simply existing in the same document does not make particular triples be part of a particular graph.  One of the features of RDF is that when triples are placed together in the same graph, they lose any identity that they may have had due to their source or theri position in a particular document.  That is good, because it makes it extremely easy to merge datasets from different sources.  However, it can also be bad because once the triples are dumped into a triplestore, we can lose track of any information about their provenance.  
+
+The solution to this is to associate triples with a graph URI.  A URI can be used to uniquely identify anything, including sets of triples (which is essentially a way to define a graoph).  Because there is no requirement that a URI actually resolve to anything, or be used to retrieve something (as in the case of a URL), we can simply "make up" a URI to refer to a set of triples.  As long as the form of the URI is valid, we can use any URI that we like.  (If we are concerned about possible collisions of a graph URI that we mint with graph URIs created by someone else, we should use a domain name that we control and have a systematic method for generating the URIs.)
+
+Let's say that we want to identify the set of four triples that we've been using in our examples using the URI `http://library.vanderbilt.edu/ldwg/researchers`.  There is a variant of N-Triples called [*N-Quads*](https://www.w3.org/TR/n-quads/) that allows us to designate that a particular triple is part of a particular graph.  The rules for N-Quads are essentially the same as for N-Triples, except that a fourth URI is added to each line indicating the graph to which the triple belongs.  Here is what our sample data would look like in N-Quads serialization if we assign the triples to the `http://library.vanderbilt.edu/ldwg/researchers` graph:
+
+```nquads
+<http://orcid.org/0000-0002-3178-0201> <http://purl.org/dc/terms/created> "2014-12-22T22:25:56.900Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> <http://library.vanderbilt.edu/ldwg/researchers>.
+<http://orcid.org/0000-0002-3178-0201> <http://www.loc.gov/mads/rdf/v1#hasAffiliation> <http://www.grid.ac/institutes/grid.152326.1> <http://library.vanderbilt.edu/ldwg/researchers>.
+<http://orcid.org/0000-0002-3178-0201> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> <http://library.vanderbilt.edu/ldwg/researchers>.
+<http://orcid.org/0000-0002-3178-0201> <http://www.w3.org/2000/01/rdf-schema#label> "Julian Hillyer" <http://library.vanderbilt.edu/ldwg/researchers>.
+```
+(Scroll the code window to the right to see all of the quads.) [Download file](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/serializations/example.nq)
+
+The recommended file extension for N-Quads is `.nq`.
+
+
+
 ----
 Revised 2019-01-14
