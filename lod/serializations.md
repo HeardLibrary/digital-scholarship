@@ -140,6 +140,8 @@ By using one of the converter tools to convert an RDF serialization to XML, then
 
 Although triples can be serialized in a text document in one of the formats described above, simply existing in the same document does not make particular triples be part of a particular graph.  One of the features of RDF is that when triples are placed together in the same graph, they lose any identity that they may have had due to their source or theri position in a particular document.  That is good, because it makes it extremely easy to merge datasets from different sources.  However, it can also be bad because once the triples are dumped into a triplestore, we can lose track of any information about their provenance.  
 
+## Graph URIs and N-Quads
+
 The solution to this is to associate triples with a graph URI.  A URI can be used to uniquely identify anything, including sets of triples (which is essentially a way to define a graoph).  Because there is no requirement that a URI actually resolve to anything, or be used to retrieve something (as in the case of a URL), we can simply "make up" a URI to refer to a set of triples.  As long as the form of the URI is valid, we can use any URI that we like.  (If we are concerned about possible collisions of a graph URI that we mint with graph URIs created by someone else, we should use a domain name that we control and have a systematic method for generating the URIs.)
 
 Let's say that we want to identify the set of four triples that we've been using in our examples using the URI `http://library.vanderbilt.edu/ldwg/researchers`.  There is a variant of N-Triples called [*N-Quads*](https://www.w3.org/TR/n-quads/) that allows us to designate that a particular triple is part of a particular graph.  The rules for N-Quads are essentially the same as for N-Triples, except that a fourth URI is added to each line indicating the graph to which the triple belongs.  Here is what our sample data would look like in N-Quads serialization if we assign the triples to the `http://library.vanderbilt.edu/ldwg/researchers` graph:
@@ -154,7 +156,53 @@ Let's say that we want to identify the set of four triples that we've been using
 
 The recommended file extension for N-Quads is `.nq`.
 
+## RDF datasets and the default graph
 
+An RDF *dataset* refers to a collection of graphs that interest us for some purpose.  In an RDF dataset, all but one of the graphs are named graphs.  The unnamed graph is called the *default graph*.  
+
+If we refer to a set of triples without designating that it is associated with a named graph, we can assume that those triples are part of the default graph.  For example, if an application expects an N-Quad file but we provide it with an N-Triple file (essentially an N-Quad file with the graph URIs missing), the application will assume that the triples belong to the default graph.  
+
+There is some lack of clarity about the exact meaning of RDF datasets and the roles of default and named graphs within them, and there are inconsistencies in how different applications handle cases where the name of a graph isn't specified. For more details, see the [W3C RDF Datasets](https://www.w3.org/TR/rdf11-datasets/) document and [this blog post](http://baskauf.blogspot.com/2017/02/sparql-weirdness-of-unnamed-graphs.html). For those wha aren't interested in the details, we can say that there are two "safe" approaches:
+
+- don't care about dividing triples up among named graphs and dump all triples that we want to consider part of our dataset into the default graph
+- care about dividing triples among named graphs and make sure that every triple is part of a named graph
+
+The troublesome situations occur when we mix triples from named graphs with triples where no graph is specified.
+
+## An aside on HTTP
+
+To understand how we can interact with a *triplestore* (a graph database that stores RDF triples), we need to know a little bit about *HyperText Transfer Protocol* (HTTP) and its cousin, HTTPS (secure HTTP).  
+
+![URL box example](../images/http-url.png)
+
+Most people have seen the `http://` that is the start of most URLs.  Today, many URLs start with `https://` indicating that communication is secure.  Regardless of the flavor, the HTTP protocol specifies how software on a local computer (the *client*) interacts with a remote computer (the *server*).  
+
+![HTTP GET example](../images/http-get.png)
+
+There are several kinds of transactions that can take place via HTTP.  The diagrapm above illustrates one of the most common, a GET request.  In a GET request, the client asks the server for a document.  In the example above, the client is a web browser, and the document requested is an HTML web page.  There are several key parts to the GET transaction:
+
+- the URL identifies the server
+- an Accept header says what kind of document the client wants (in this case text/html; a web page)
+- an HTTP status code (indicating if the server was successful in finding and serving; 200 "Success" in this case)
+- the response body containing the content of the file (in this case the HTML text document)
+
+If you carry out this transaction in a web browser, all of this interaction takes place under the hood.  When the browser receives the HTML text document, it renders it as a web page suitable for a human viewer.
+
+If you want to actually see the gory details of the transaction, you can use client software that will show you what's going on in the interaction.  We can use [Postman](https://www.getpostman.com/) to see what's actually going on:
+
+![HTTP GET in Postman](../images/postman-dialog.png)
+
+We can interact with a triplestore using HTTP GET if we want to query it.  We can also use another kind of HTTP request, POST, to load data into the triplestore.
+
+# Loading data into a triplestore
+
+There are very few useful things we can do with linked RDF data unless we can load it into a triplestore.  There are three main ways that we can load data:
+
+1. Using a graphical interface (GUI)
+2. Using HTTP POST
+3. Using software intermediaries
+
+We will see how to 
 
 ----
-Revised 2019-01-14
+Revised 2019-01-25
