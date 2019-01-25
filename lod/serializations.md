@@ -27,7 +27,7 @@ Here is an example of part of the graph diagrammed above:
 <http://orcid.org/0000-0002-3178-0201> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person>.
 <http://orcid.org/0000-0002-3178-0201> <http://www.w3.org/2000/01/rdf-schema#label> "Julian Hillyer".
 ```
-(Scroll the code window to the right to see all of the triples.)
+(Scroll the code window to the right to see all of the triples.) [Download file](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/serializations/example.nt)
 
 N-Triples is not particularly easy to read because no abbreviation of URIs is allowed.  But it is very easy to write software to consume it, and it's easy to manipulate the triples in a file, since each triple is on a separate line.
 
@@ -51,6 +51,8 @@ orcid:0000-0002-3178-0201 dcterms:created "2014-12-22T22:25:56.900Z"^^xsd:dateTi
                           rdf:type foaf:Person;
                           rdfs:label "Julian Hillyer".
 ```
+[Download file](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/serializations/example.ttl)
+
 The namespace prefixes that are used in the triples must be listed in a prolog at the start of the document.  Notice that URIs aren't required to be abbreviated.
 
 In Turtle, you can use whitespace to make the triples more readable.  In this example, the second through fourth triples are indented to show that they share the same subject.  
@@ -90,6 +92,7 @@ XML is the oldest serialization of RDF. For that reason, it is still one of the 
   </foaf:Person>
 </rdf:RDF>
 ```
+[Download file](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/serializations/example.rdf)
 
 RDF text files in XML serialization are usually given the file extension `.rdf`.
 
@@ -115,6 +118,7 @@ Here's the four triples we've been looking at (in compacted form):
   "http://www.w3.org/2000/01/rdf-schema#label": "Julian Hillyer"
 }
 ```
+[Download file](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/serializations/example.json)
 
 As in the case of XML, JSON-LD is intended primarily for machine consumption, so we won't belabor its details.  If you are interested in more information about JSON, JSON-LD, and providing structured data in web pages, see [this presentation](https://github.com/HeardLibrary/linked-data/blob/gh-pages/assets/notes-2018-fall/json-ld-2018-09-24.pdf).
 
