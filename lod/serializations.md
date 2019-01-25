@@ -173,7 +173,7 @@ The troublesome situations occur when we mix triples from named graphs with trip
 
 To understand how we can interact with a *triplestore* (a graph database that stores RDF triples), we need to know a little bit about *HyperText Transfer Protocol* (HTTP) and its cousin, HTTPS (secure HTTP).  
 
-![URL box example](../images/http-url.png)
+<img src="../images/http-url.png" style="border:1px solid black">
 
 Most people have seen the `http://` that is the start of most URLs.  Today, many URLs start with `https://` indicating that communication is secure.  Regardless of the flavor, the HTTP protocol specifies how software on a local computer (the *client*) interacts with a remote computer (the *server*).  
 
@@ -190,7 +190,7 @@ If you carry out this transaction in a web browser, all of this interaction take
 
 If you want to actually see the gory details of the transaction, you can use client software that will show you what's going on in the interaction.  We can use [Postman](https://www.getpostman.com/) to see what's actually going on:
 
-![HTTP GET in Postman](../images/postman-dialog.png)
+<img src="../images/postman-dialog.png" style="border:1px solid black">
 
 We can interact with a triplestore using HTTP GET if we want to query it.  We can also use another kind of HTTP request, POST, to load data into the triplestore.
 
@@ -202,7 +202,36 @@ There are very few useful things we can do with linked RDF data unless we can lo
 2. Using HTTP POST
 3. Using software intermediaries
 
-We will see how to 
+We will see how to load data in all three of these ways in the sections that follow.
+
+## Loading data using a GUI
+
+The Metaphactory triplestore has a graphical interface that allows users to load files by drag and drop:  
+
+<img src="../images/metaphactory-drag-drop.png" style="border:1px solid black">
+
+After the file loads, the interface reports that 4 triples were loaded.  By default, Metaphactory assigns all triples contained in a file loaded by drag-and-drop to a graph whose name is created from the file name and the load time:
+
+<img src="../images/metaphactory-result.png" style="border:1px solid black">
+
+We can examine the contents of the graph by running a SPARQL query using the query interface and this query:
+```sparql
+SELECT *
+FROM <file://example.ttl-25-01-2019-01-08-26>
+WHERE {
+  ?sub ?pred ?obj .
+}
+```
+
+Don't worry about the format of the query - it just lists every triple present in the graph.  When we run the query, we see in the output the same four triples as in the input document.
+
+<img src="../images/metaphactory-sparql.png" style="border:1px solid black">
+
+One problem with this GUI loading method is that it is not possible to specify a graph URI of our choice.
+
+## Loading data using SPARQL UPDATE
+
+
 
 ----
 Revised 2019-01-25
