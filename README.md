@@ -30,19 +30,35 @@ The repository structure is described below.
 │   │   ├── README.md          : description of included code
 │   │   └── python             : Python versions
 │   │       └── simple_form.py      : simple script that generates two text boxes and a button
-|   └── scrape                 : example code for scraping a website
+│   └── scrape                 : example code for scraping a website
 │       ├── README.md          : description of included code
 │       └── python             : Python versions
 │           ├── scrape-sec.py       : code to perform the scrape, including loops
 │           └── scrape-sec.ipynb    : Jupyter notebook of code for only a single instance of each resource
 └── data                       : sample data
-    └── rdf                    : Resource Description Framework (RDF) examples
-        └── vandy              : sample dataset of people associated with Vanderbilt and their works
-            ├── institution.csv     : source data table about insitutions
-            ├── person.csv          : source data table about people
-            ├── work.csv            : source data table about creative works (publications)
-            ├── graph-model.pdf     : diagram showing the relationships between the classes of institutions, people, and works
-            ├── vandy-graph.png     : graph diagram of instances of institution, people, and works represented in the source tables
-            ├── vandy-triples.csv   : table of 66 triples that describe the graph of institution, people, and works
-            └── vandy.ttl           : Turtle serialization of 66 triples in the graph of institution, people, and works
+    ├── rdf                    : Resource Description Framework (RDF) examples
+    │   ├── vandy              : sample dataset of people associated with Vanderbilt and their works
+    │   │   ├── institution.csv     : source data table about insitutions
+    │   │   ├── person.csv          : source data table about people
+    │   │   ├── work.csv            : source data table about creative works (publications)
+    │   │   ├── graph-model.pdf     : diagram showing the relationships between the classes of institutions, people, and works
+    │   │   ├── vandy-graph.png     : graph diagram of instances of institution, people, and works represented in the source tables
+    │   │   ├── vandy-triples.csv   : table of 66 triples that describe the graph of institution, people, and works
+    │   │   └── vandy.ttl           : Turtle serialization of 66 triples in the graph of institution, people, and works
+    │   └── serializations         : RDF serialization examples
+    │       ├── example.json   : JSON-LD example
+    │       ├── example.nt     : N-Triples example
+    │       ├── example.rdf    : XML example
+    │       └── example.ttl    : Terse RDF Triple Language (Turtle) example
+    │
+    ├── gis                    : Geographic Information Systems example data
+    │   └── wg                 : GIS working group examples
+    │       ├── Metro_Nashville_Schools.csv        : spreadsheet of data about Nashville schools
+    │       └── qgis-example.zip    : 
+    │
+    └── xml                    : Extensible Markup Language (XML) examples
+        ├── menu-example       : generic XML example
+        └── tei                : Text Encoding Initiative (TEI) examples
+            ├── dickinson-tei-example.xml         : brief example of Dickinson text
+            └── dickinson-variants-tei-example.xml : example with text variants
 ```

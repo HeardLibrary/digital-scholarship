@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:dcterms="http://purl.org/dc/terms/"
+         xmlns:mads="http://www.loc.gov/mads/rdf/v1#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <foaf:Person rdf:about="http://orcid.org/0000-0002-3178-0201">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-12-22T22:25:56.900Z</dcterms:created>
+    <mads:hasAffiliation rdf:resource="http://www.grid.ac/institutes/grid.152326.1"/>
+    <rdfs:label>Julian Hillyer</rdfs:label>
+  </foaf:Person>
+</rdf:RDF>

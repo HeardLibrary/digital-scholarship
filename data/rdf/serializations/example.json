@@ -1,0 +1,12 @@
+{
+  "@id": "http://orcid.org/0000-0002-3178-0201",
+  "@type": "http://xmlns.com/foaf/0.1/Person",
+  "http://purl.org/dc/terms/created": {
+    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value": "2014-12-22T22:25:56.900Z"
+  },
+  "http://www.loc.gov/mads/rdf/v1#hasAffiliation": {
+    "@id": "http://www.grid.ac/institutes/grid.152326.1"
+  },
+  "http://www.w3.org/2000/01/rdf-schema#label": "Julian Hillyer"
+}
