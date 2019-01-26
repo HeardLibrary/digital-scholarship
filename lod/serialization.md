@@ -1,5 +1,5 @@
 ---
-permalink: /lod/serializations/
+permalink: /lod/serialization/
 title: RDF serializations and triplestores
 breadcrumb: Serializations
 ---
@@ -263,7 +263,7 @@ In the Set Properties dialog, set a Content-Type header appropriate for the seri
 
 After the file is uploaded, click on the file name to observe it's properties.  Copy the Object URL to use as the LOAD URL in the SPARQL Updated command.  
 
-![AWS load URL](../images/aws3.png)
+<img src="../images/aws3.png" style="border:1px solid black">
 
 To carry out the LOAD command, use an application like Postman that can execute an HTTP POST request.  A critical part is that the request **must** include a Content-Type header of `application/sparql-update` if the request file is plain text:  
 
@@ -275,7 +275,13 @@ The body of the posted file should be plain text.  The text should consist of a 
 
 If the request is successful, the response body will indicate that the triples have been loaded.  In this example, the "mutationCount" indicates that 4 triples were loaded.
 
+We can show that the load was successful by a SPARQL query of the endpoint:
+
+<img src="../images/vu-endpoint-result.png" style="border:1px solid black">
+
+where we can see the four triples that were contained in the file that we loaded.
+
 
 
 ----
-Revised 2019-01-25
+Revised 2019-01-26
