@@ -12,7 +12,7 @@ At Vanderbilt, the [Digital Scholarship and Scholarly Communications Office](htt
 
 [Beginner's lesson on Graphs, URIs, and Triples](../lod/graphs/)
 
-[Beginner's lesson on serializations, graphs, and loading RDF data](../lod/serialize/)
+[Beginner's lesson on serializations, graphs, and loading RDF data](../lod/serialization/)
 
 [visit the Linked Data Working Group website](https://heardlibrary.github.io/linked-data/)
 
