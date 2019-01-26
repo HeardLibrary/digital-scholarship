@@ -12,6 +12,8 @@ At Vanderbilt, the [Digital Scholarship and Scholarly Communications Office](htt
 
 [Beginner's lesson on Graphs, URIs, and Triples](../lod/graphs/)
 
+[Beginner's lesson on serializations, graphs, and loading RDF data](../lod/serialize/)
+
 [visit the Linked Data Working Group website](https://heardlibrary.github.io/linked-data/)
 
 [Linked Data WG SPARQL endpoint](https://sparql.vanderbilt.edu/)

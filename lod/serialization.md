@@ -281,7 +281,21 @@ We can show that the load was successful by a SPARQL query of the endpoint:
 
 where we can see the four triples that were contained in the file that we loaded.
 
+Although this method of loading triples into a graph seems like a lot more bother than using a GUI, it has two advantages.  As mentioned before, you can choose the URI of the graph into which the triples are loaded. The other advantage is that you can script the process using any language that has the capability of making HTTP calls.  So the process of loading files into the store could be automated.
 
+## Loading data using a software intermediary
+
+In some cases, triplestores may have software that is designed to streamline the data entry process, either by providing a human-friendly interface, or by making it easier to import the data from other non-RDF sources.  
+
+An example of the first type of software is the web interface for adding to the Wikidata knowledge graph.  The Wikibase system on which Wikidata is built uses the Mediawiki platform to create an interface that allows people to enter data accurately by providing a form that populates the fields with valid entries as the user types:
+
+<img src="../images/wikidata-interface.png" style="border:1px solid black">
+
+If we create a SPARQL for the timezone of Pleasant View, TN, we can see that the data we added using the form is now present in the triplestore:
+
+<img src="../images/wikidata-query.png" style="border:1px solid black">
+
+There are a number of software systems for adding bulk data to Wikibase, including Quickstatements and Python bots.  We will explore some of these tools in future lessons.
 
 ----
 Revised 2019-01-26
