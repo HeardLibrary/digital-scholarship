@@ -324,8 +324,15 @@ import tkinter.scrolledtext as tkst
 at the top of the code.  To instantiate the scrolling text box, pass attributes shown below. Replace what's inside the curly brackets with appropriate values; width of 50 and height of 10 are a good place to start
 
 ```python
-scrollingTextBox = tkst.ScrolledText(master = {name of frame variable}, width  = {characters as an integer}, height = {characters as an integer})
+tkst.ScrolledText(master = {name of frame variable}, width  = {characters as an integer}, height = {characters as an integer})
 ```
+
+Here's an example with appropriate replacement values:
+
+```python
+scrollingTextBox = tkst.ScrolledText(master = mainframe, width  = 50, height = 10)
+```
+
 
 Use the `grid` method of the `ScrolledText` class to place the scrolling text box in the appropriate position on the grid.  Leave the padx and pady values as they are.  For the Latte Maker, use column 4 and row 17 (the "Surprise me!" button is in row 16).
 
