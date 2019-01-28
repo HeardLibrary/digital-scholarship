@@ -183,7 +183,7 @@ By adding the datatype `xsd:dateTime` we are indicating that "2014-12-22T22:25:5
 
 The other way we encode meaning is by using a standarized vocabulary to define the URIs that we use for predicates, and the class URIs that we use as objects for `rdf:type`.  For example, [dcterms:created](http://dublincore.org/documents/dcmi-terms/#terms-created) means the "date of creation of the resource".  Using this vocabulary makes it clear what `dcterms:created` means.  
 
-However, just using that term does not make the triple represent reality.  The subject resource is the person named Julian Hillyer.  From the triple, we might infer that Julian Hillyer was born on Dec. 22, 2014.  But that is clearly not true, since he published a paper and must be more than 5 years old in 2018.   The triple actually refers to the date of the creation of the ORCID *record* about Julian Hillyer, which is a different thing.
+However, just using that term does not make the triple represent reality.  The subject resource is the person named Julian Hillyer.  From the triple, we might infer that Julian Hillyer was born on Dec. 22, 2014.  But that is clearly not true, since he published a paper and must be more than 5 years old in 2019.   The triple actually refers to the date of the creation of the ORCID *record* about Julian Hillyer, which is a different thing.
 
 Thus we can see that simply making an assertion in RDF does not make that statement true, even if we have valid RDF using standardized terms.
 
@@ -232,7 +232,7 @@ Most people have seen the `http://` that is the start of most URLs.  Today, many
 
 ![HTTP GET example](../images/http-get.png)
 
-There are several kinds of transactions that can take place via HTTP.  The diagrapm above illustrates one of the most common, a GET request.  In a GET request, the client asks the server for a document.  In the example above, the client is a web browser, and the document requested is an HTML web page.  There are several key parts to the GET transaction:
+There are several kinds of transactions that can take place via HTTP.  The diagram above illustrates one of the most common, a GET request.  In a GET request, the client asks the server for a document.  In the example above, the client is a web browser, and the document requested is an HTML web page.  There are several key parts to the GET transaction:
 
 - the URL identifies the server
 - an Accept header says what kind of document the client wants (in this case text/html; a web page)
