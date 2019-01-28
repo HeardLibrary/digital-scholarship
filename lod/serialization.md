@@ -169,30 +169,23 @@ There is some lack of clarity about the exact meaning of RDF datasets and the ro
 
 The troublesome situations occur when we mix triples from named graphs with triples where no graph is specified.
 
-## An aside on HTTP
+# An aside on meaning
 
-To understand how we can interact with a *triplestore* (a graph database that stores RDF triples), we need to know a little bit about *HyperText Transfer Protocol* (HTTP) and its cousin, HTTPS (secure HTTP).  
+Although in its simplest form, an RDF graph is an abstraction involving URIs and strings, the reason we are interested in creating graphs is because they are a mechanism for encoding knowledge.  That's why we use the term *knowledge graph* to indicate that the graph of Linked Data **mean** something.
 
-<img src="../images/http-url.png" style="border:1px solid black">
+There are several ways that we indicate meaning in RDF graphs.  One is through datatyping of literals.  For example, take the following triple as an example:
 
-Most people have seen the `http://` that is the start of most URLs.  Today, many URLs start with `https://` indicating that communication is secure.  Regardless of the flavor, the HTTP protocol specifies how software on a local computer (the *client*) interacts with a remote computer (the *server*).  
+```turtle
+<http://orcid.org/0000-0002-3178-0201> dcterms:created "2014-12-22T22:25:56.900Z"^^xsd:dateTime .
+```
 
-![HTTP GET example](../images/http-get.png)
+By adding the datatype `xsd:dateTime` we are indicating that "2014-12-22T22:25:56.900Z" is not just a random string of characters, but that it denotes a real thing: an instant of time.  The datatype indicates that the format of the string conforms to a system for representing that real thing.
 
-There are several kinds of transactions that can take place via HTTP.  The diagrapm above illustrates one of the most common, a GET request.  In a GET request, the client asks the server for a document.  In the example above, the client is a web browser, and the document requested is an HTML web page.  There are several key parts to the GET transaction:
+The other way we encode meaning is by using a standarized vocabulary to define the URIs that we use for predicates, and the class URIs that we use as objects for `rdf:type`.  For example, [dcterms:created](http://dublincore.org/documents/dcmi-terms/#terms-created) means the "date of creation of the resource".  Using this vocabulary makes it clear what `dcterms:created` means.  
 
-- the URL identifies the server
-- an Accept header says what kind of document the client wants (in this case text/html; a web page)
-- an HTTP status code (indicating if the server was successful in finding and serving; 200 "Success" in this case)
-- the response body containing the content of the file (in this case the HTML text document)
+However, just using that term does not make the triple represent reality.  The subject resource is the person named Julian Hillyer.  From the triple, we might infer that Julian Hillyer was born on Dec. 22, 2014.  But that is clearly not true, since he published a paper and must be more than 5 years old in 2018.   The triple actually refers to the date of the creation of the ORCID *record* about Julian Hillyer, which is a different thing.
 
-If you carry out this transaction in a web browser, all of this interaction takes place under the hood.  When the browser receives the HTML text document, it renders it as a web page suitable for a human viewer.
-
-If you want to actually see the gory details of the transaction, you can use client software that will show you what's going on in the interaction.  We can use [Postman](https://www.getpostman.com/) to see what's actually going on:
-
-<img src="../images/postman-dialog.png" style="border:1px solid black">
-
-We can interact with a triplestore using HTTP GET if we want to query it.  We can also use another kind of HTTP request, POST, to load data into the triplestore.
+Thus we can see that simply making an assertion in RDF does not make that statement true, even if we have valid RDF using standardized terms.
 
 # Loading data into a triplestore
 
@@ -228,6 +221,31 @@ Don't worry about the format of the query - it just lists every triple present i
 <img src="../images/metaphactory-sparql.png" style="border:1px solid black">
 
 One problem with this GUI loading method is that it is not possible to specify a graph URI of our choice.
+
+## An aside on HTTP
+
+To understand how we can interact with a *triplestore* (a graph database that stores RDF triples), we need to know a little bit about *HyperText Transfer Protocol* (HTTP) and its cousin, HTTPS (secure HTTP).  
+
+<img src="../images/http-url.png" style="border:1px solid black">
+
+Most people have seen the `http://` that is the start of most URLs.  Today, many URLs start with `https://` indicating that communication is secure.  Regardless of the flavor, the HTTP protocol specifies how software on a local computer (the *client*) interacts with a remote computer (the *server*).  
+
+![HTTP GET example](../images/http-get.png)
+
+There are several kinds of transactions that can take place via HTTP.  The diagrapm above illustrates one of the most common, a GET request.  In a GET request, the client asks the server for a document.  In the example above, the client is a web browser, and the document requested is an HTML web page.  There are several key parts to the GET transaction:
+
+- the URL identifies the server
+- an Accept header says what kind of document the client wants (in this case text/html; a web page)
+- an HTTP status code (indicating if the server was successful in finding and serving; 200 "Success" in this case)
+- the response body containing the content of the file (in this case the HTML text document)
+
+If you carry out this transaction in a web browser, all of this interaction takes place under the hood.  When the browser receives the HTML text document, it renders it as a web page suitable for a human viewer.
+
+If you want to actually see the gory details of the transaction, you can use client software that will show you what's going on in the interaction.  We can use [Postman](https://www.getpostman.com/) to see what's actually going on:
+
+<img src="../images/postman-dialog.png" style="border:1px solid black">
+
+We can interact with a triplestore using HTTP GET if we want to query it.  We can also use another kind of HTTP request, POST, to load data into the triplestore.
 
 ## Loading data using SPARQL UPDATE
 
