@@ -351,11 +351,15 @@ see(END)
 
 1. **Abusing Robert Frost** Now that "Stopping by Woods on a Snowy Evening" is in the public domain, we can use it in any creative way we want.  Modify the ([poetry.py](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/poetry.py)) code to do the following:
 
- a. Create a `Poem` instance and assign `frostText` to its `text` attribute. 
- b. Assign "Stopping by woods on a snowy evening" to the `title` attribute of your poem.  
- c. Abuse the poem by changing "horse" to "dragon".
- d. Further abuse the poem by changing "woods" to "lava flow".
- e. Print the title and text of the poem.
+   a. Create a `Poem` instance and assign `frostText` to its `text` attribute. 
+
+   b. Assign "Stopping by woods on a snowy evening" to the `title` attribute of your poem.  
+
+   c. Abuse the poem by changing "horse" to "dragon".
+
+   d. Further abuse the poem by changing "woods" to "lava flows".
+
+   e. Print the title and text of the revised poem.
 
  2. **Scrolling Text Latte Maker** Add a scrolling text object to the bottom of the [GUI Latte Maker answer](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge1/latte_maker2.py) from last week.  When you create the scrolling text object, insert the initial text: 'Order record:\n\n'.  Replace the print statements in lines 103 and 111 with the `insert` and `see` methods applied to your `ScrolledText` object.
 
