@@ -31,4 +31,10 @@ frostText = frostText + 'He gives his harness bells a shake\nTo ask if there is 
 frostText = frostText + 'The woods are lovely, dark and deep,\nBut I have promises to keep,\nAnd miles to go before I sleep,\nAnd miles to go before I sleep.'
 
 myPoem = Poem()
+myPoem.text = frostText
+myPoem.title = 'Stopping by woods on a snowy evening'
+myPoem.abuse('horse', 'dragon')
+myPoem.abuse('woods', 'lava flows')
+print(myPoem.title)
+print()
 print(myPoem.text)
