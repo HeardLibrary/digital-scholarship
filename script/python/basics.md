@@ -501,5 +501,7 @@ print("That's all folks!")
 
 Print a single string formed by concatenating adjective strings in front of the string "latte".  You can use whatever adjectives you think would work best for marketing, but at a minimum, you should be able to produce "regular non-fat plain latte", "decaf skinny vanilla latte", and "dark fat pumpkin spice latte" (substitute a different adjective for "fat" if you can think of a better euphamism).  If "no" is selected for water, then provide some kind of error message.  **Embelishments:** Create a GUI version using the code mentioned in problem 1.  You'll have to add extra text boxes.  Create an option for a randomly generated latte using the `random.choice()` function.  Add an extra button to the GUI labeled "Surprise me" that generates the random latte.
 
+[next lesson on object-oriented programming in Python](../object/)
+
 ----
 Revised 2019-01-19
