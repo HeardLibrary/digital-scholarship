@@ -85,7 +85,7 @@ The Docker client will pull the "hello-world" image from Docker Hub to your comp
 Here are some of the most important Docker commands:
 
 ```
-# to pull an image from Docker Hub; "repo" is the repository name and "image" is the image name:
+# pull image from Docker Hub; "repo" is repository name, "image" is image name:
 docker pull repo/image
 
 # to run the container named "image" from the "repo" repository, version 2.1.5:
@@ -102,9 +102,9 @@ cocker container ls -all
 
 # Next steps
 
-[Example using Docker to install Blazegraph locally](../../lod/install/)
+[Example using Docker to install Blazegraph locally](../../lod/install/#using-docker-to-create-an-instance-of-blazegraph-on-your-local-computer)
 
-[Example using Docker Compose to install the components of Wikibase locally](../../lod/install/)
+[Example using Docker Compose to install the components of Wikibase locally](../../lod/install/#using-docker-compose-to-create-an-instance-of-wikibase-on-your-local-computer)
 
 ----
 Revised 2019-01-29
