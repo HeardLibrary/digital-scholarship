@@ -22,6 +22,8 @@ In addition to the resources on this site, you can browse the Digital Scholarshi
 
 ## By Topic
 
+[Application hosting and management](host/)
+
 [Data cleaning](clean/)
 
 [Data management](manage/)
