@@ -17,7 +17,7 @@ If you are a Windows user, there are several things you need to consider before 
 
 <img src="../images/virtualization-disabled.jpg" style="border:1px solid black">
 
-If Virtualization is disabled (see above), you will need to make a change to your BIOS to enable it.  This is not for amateurs, so either get professional help or use a different computer.
+   If Virtualization is disabled (see above), you will need to make a change to your BIOS to enable it.  This is not for amateurs, so either get professional help or use a different computer.
 - The Docker desktop client for Windows makes changes to your system that enables "Hyper-V" and subsequently disables VirtualBox.  That means that any VirtualBox virtual machine (VM) that you have will no longer start after you complete the installation.  At this point, it is not clear whether Hathi Trust capsules will be affected by this change, so if you are using them (or any other virtual machines), check whether your VM uses VirtualBox or not before doing the Docker installation.
 
 If you meet these three requirements, then proceed.
