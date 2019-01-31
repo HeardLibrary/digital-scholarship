@@ -6,7 +6,7 @@ breadcrumb: Install
 
 # Installing Blazegraph and Wikibase
 
-This tutorial will help you use Docker to install two well-known linked data applications that will be interesting to experiment with: Blazegraph and Wikibase.  These instructions assume that you have Docker already installed on your computer.  If you don't, there are [installation instructions](../../host/docker/)elsewhere.
+This tutorial will help you use Docker to install two well-known linked data applications that will be interesting to experiment with: Blazegraph and Wikibase.  These instructions assume that you have Docker already installed on your computer.  If you don't, there are [installation instructions](../../host/docker/) elsewhere.
 
 # Using Docker to create an instance of Blazegraph on your local computer
 
@@ -28,6 +28,45 @@ docker run --name blazegraph -d -p 8889:8080 lyrasis/blazegraph:2.1.5
 ```
 
 The `--name` option makes it possible to refer to the container in a more abbreviated way.  The `-d` option runs the container in [detached mode](https://docs.docker.com/engine/reference/run/#detached--d), a detail we will not worry about.  The `-p 8889:8080` port command maps the port number where the service is listening inside the container (8080 in this example) to the port number outside the container where clients connect.  The important thing here is that when we want to use Blazegraph via a web browser, we need to connect to port 8889.
+
+When Blazegraph is running on your computer locally, it is actually a localhost server that interacts through an IP address that you can access using a web browser.  Once the server is started using the docker run command listed above, it will continue to operate regardless of whether any web browser is connected to it or not.  
+
+To stop the Blazegraph server, issue the following command in the console window:
+
+```
+docker container stop blazegraph
+```
+
+Note that stopping the container does not get rid of it.  It is still present in an inactive form at the state when it was stopped.  To actually remove the container, list the containers using:
+
+```
+docker container ls --all
+```
+
+and find the ID of the lyrasis/blazegraph:2.1.5 container.  Then issue the command
+
+```
+docker container rm {containerId}
+```
+
+where `{containerId}` is the ID you found in the list.  For example, if the ID was `3413cbe0f296`, the command would be 
+
+```
+docker container rm 3413cbe0f296
+```
+
+Note that this removes the container, but doesn't delete the generic Docker image that you downloaded and used to set up the container.  To delete the image as well, list the images using
+
+```
+docker image ls
+```
+
+then give the command 
+```
+docker image rm {containerId}
+```
+
+
 
 ## Using Blazegraph
 
