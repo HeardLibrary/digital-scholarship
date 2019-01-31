@@ -8,6 +8,20 @@ breadcrumb: Docker
 
 Note: these instructions cover installing and testing Docker using preexisting container images.  They do NOT cover creating your own Docker container images.
 
+## Important note for Windows users
+
+If you are a Windows user, there are several things you need to consider before attempting to install the Docker desktop client that runs the show when you are using docker:
+
+- 64 bit Windows 10 is required.  
+- Hardware assisted virtualization must be enabled. To find out if it is enabled on your computer, type `Task Manager` in the search box and press enter.  Click on the performance tab, then the Performance tab.  
+
+<img src="../images/virtualization-disabled.png" style="border:1px solid black">
+
+If Virtualization is disabled (see above), you will need to make a change to your BIOS to enable it.  This is not for amateurs, so either get professional help or use a different computer.
+- The Docker desktop client for Windows makes changes to your system that enables "Hyper-V" and subsequently disables VirtualBox.  That means that any VirtualBox virtual machine (VM) that you have will no longer start after you complete the installation.  At this point, it is not clear whether Hathi Trust capsules will be affected by this change, so if you are using them (or any other virtual machines), check whether your VM uses VirtualBox or not before doing the Docker installation.
+
+If you meet these three requirements, then proceed.
+
 # Docker concepts
 
 This minimal non-technical introduction is designed for casual users.  For a more complete introduction, see the [Docker Overview](https://docs.docker.com/engine/docker-overview/) from the Docker online documentation.  There are also [Get Started](https://docs.docker.com/get-started/) pages, although they go into detail about creating containers.
@@ -27,8 +41,6 @@ The *Docker client application* is software that you install on your computer th
 In order to download the Docker client, you first need to create a Docker account by going to <https://id.docker.com/>.  
 
 If you are just getting started with Docker, you will probably want to install the free Community Edition.  Go to the [Docker CE page](https://docs.docker.com/install/#supported-platforms) and find the version for your operating system.  The install instructions are fairly straightforward and won't be repeated here. 
-
-**Important note for Windows users** *64 bit Windows is required.  The Docker desktop client for Windows makes changes to your system that disables VirtualBox.  That means that any VirtualBox virtual machine (VM) that you have will no longer start after you complete the installation.  At this point, it is not clear whether Hathi Trust capsules will be affected by this change, so if you are using them (or any other virtual machines), check whether your VM uses VirtualBox or not before doing the Docker installation.*
 
 Once you've installed the Docker client, it will start up automatically when you boot your computer and run in the background.  You can know it's there by looking in the system tray in the lower right of your screen on PC, or the menu bar in the upper right of your screen on Mac.  You should see the little whale icon there.  Clicking on it brings up options for managing the application.  
 
