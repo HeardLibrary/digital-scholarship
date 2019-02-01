@@ -49,7 +49,7 @@ and find the ID of the lyrasis/blazegraph:2.1.5 container.  Then issue the comma
 docker container rm {containerId}
 ```
 
-where `{containerId}` is the ID you found in the list.  For example, if the ID was `3413cbe0f296`, the command would be 
+where `{containerId}` is the ID you found in the list.  For example, if the ID were `3413cbe0f296`, the command would be 
 
 ```
 docker container rm 3413cbe0f296
@@ -66,7 +66,7 @@ then give the command
 docker image rm {containerId}
 ```
 
-
+where {containerId} is the ID you found in the image listing.
 
 ## Using Blazegraph
 
