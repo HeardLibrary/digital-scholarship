@@ -69,10 +69,10 @@ docker image ls
 
 then give the command 
 ```
-docker image rm {containerId}
+docker image rm {imageId}
 ```
 
-where {containerId} is the ID you found in the image listing.
+where {imageId} is the ID you found in the image listing.
 
 ## Starting Blazegraph
 

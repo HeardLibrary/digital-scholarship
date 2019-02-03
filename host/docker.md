@@ -102,17 +102,32 @@ Here are some of the most important Docker commands:
 # pull image from Docker Hub; "repo" is repository name, "image" is image name:
 docker pull repo/image
 
-# to run the container named "image" from the "repo" repository, version 2.1.5:
-docker run repo/image:2.1.5
+# to run the container named "image" from the "repo" repository, version 2.1.5 for the first time, associating it with the shortened name "shortName":
+docker run --name shortName repo/image:2.1.5
 
-# to list Docker images that have been pulled:
-docker image ls
+# to stop the container with the shortened name "shortName":
+docker container stop shortName
+
+# to restart the container using the shortened name "shortName":
+docker restart shortName
 
 # to list all Docker containers:
 cocker container ls -all
 # leave the "-all" off to see only containers that are currently running
 
+# to remove a container using the ID shown in the previous command:
+docker container rm {containerId}
+# replace {containerId} with the actual container ID
+
+# to list Docker images that have been pulled:
+docker image ls
+
+# to remove an image using the ID shown in the previous command:
+docker image rm {imageId}
+# replace {imageId} with the actual image ID
 ```
+
+If you really want to get rid of everything and start over, see [these instructions](../../lod/install/#cleaning-up-if-you-are-just-playing-around-with-this)
 
 # Next steps
 
