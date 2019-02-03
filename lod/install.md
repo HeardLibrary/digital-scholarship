@@ -142,13 +142,21 @@ For more details see [the Docker Compose overview page](https://docs.docker.com/
 
 ## Installing and running Wikibase
 
+**Note: Wikibase requres 4 GB of memory allocated to Docker in order to run in Docker Compose.  If your computer doesn't have at least 8 GB of memory, you probably won't be able to do this part of the exercist.**
+
 Start by going to Docker Hub (<https://hub.docker.com/>).  Enter `wikibase` in the search box at the top of the page.  The first hit you see should be `wikibase/wikebase`.  This is the typical set of images needed to run the Wikibase applicaiton.  Click on the link to get to the information page about that application.
 
 The containers needed to run Wikibase are described in the table at the left of the screen.  However, don't download them using the command in the upper right of the screen.  Instead click on the README link at the bottom of the screen to go to the developer's GitHub site.  The resulting page has step-by-step instructions.  
 
 You should have already done the first step.  (If not, go [here](https://heardlibrary.github.io/digital-scholarship/host/docker/) for more information.)  
 
-The second step is to put the `docker-compose.yml` file some place on your computer where you can find it.  The simplest place is to put it in your home folder so that you don't have to navigate around at the command line to find it.  If it is in your home folder, it will be ready to go as soon as you open a console window.  However, if you will eventually be running more than one Docker Compose applications, you should make a subdirectory for each one since you can't have several files named `docker-compose.yml` in the same directory.
+Look for the little Docker whale icon in the system tray.  Click on it an select Preferences... .  Click on the Advanced tab.  
+
+<img src="../images/increase-memory.png" style="border:1px solid black">
+
+Slide the memory slider from the default 2 GB to 4 GB.  *Note: since Docker starts up when you computer boots, it may use system resources at times you are not thinking about it.  If you are just experimenting with this, you might want to return the slider to 2 MB after you are done playing around.*
+
+The next step is to put the `docker-compose.yml` file some place on your computer where you can find it.  The simplest place is to put it in your home folder so that you don't have to navigate around at the command line to find it.  If it is in your home folder, it will be ready to go as soon as you open a console window.  However, if you will eventually be running more than one Docker Compose applications, you should make a subdirectory for each one since you can't have several files named `docker-compose.yml` in the same directory.
 
 Go to [this page](https://github.com/wmde/wikibase-docker/blob/master/docker-compose.yml), then right-click on the Raw button and select `Save Link As...`.  In the dialog, select your home folder (or wherever you decided to put it), and click Save.
 
@@ -159,6 +167,8 @@ docker-compose up
 ```
 
 The first time you do this command, Docker Compose will pull all of the files that it needs.  That will take a while.  After pulling and installing all of the pieces, then you will see a bunch of configuration steps going on.  If Wikibase is successfully running, you should eventually see a series of messages saying "Got no real changes" followed by "Sleeping for 10 seconds".  These messages will continue as long as Wikibase is running.  
+
+If you this phase goes on for many minutes and you see other kinds of messages, then Wikibase is not working and you probably won't be able to get it to work on this computer without professional help.  Run the down command as explained in the next section, then see the instructions below for cleaning up your computer after experimentation.
 
 Because this console window will never return to the prompt, when you want to stop Wikibase, you need to open a second console window.  Right click on the console icon in the task bar and select "New Window".  In the new console window, navigate to the place where you saved the YAML file, then enter :
 
@@ -179,6 +189,34 @@ localhost:8181
 From this page, you can manually set up new properties, add data, etc.  After you have added data, you can query it using the Wikibase Query Service at `localhost:8282`.
 
 Because Wikibase uses Blazegraph as a back end, you can see the Blazegraph interface at `http://localhost:8989/bigdata/`.  However, you can only query, since updating through that interface is disabled.  You can also access a QuickStatements interface, but that is beyond the scope of today's lesson.
+
+## Cleaning up if you are just playing around with this
+
+Obviously if you are planning to use any of these tools, you won't want to get rid of all of the pieces that you've created in this lesson.  But if you are just experimenting or if the installation has failed, do the following commands in your console window.  (These instructions are abbreviated from [this cheatsheet](https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes).  See it for further details if you just want to remove part of what you've installed.)
+
+**To stop and delete all containers**
+
+Stop all of the containers that are running:
+
+```
+docker stop $(docker ps -a -q)
+```
+
+Remove all containers:
+
+```
+docker rm $(docker ps -a -q)
+```
+
+**Remove all images**
+
+```
+docker rmi $(docker images -a -q)
+```
+**Uninstall Docker**
+
+Use the usual method for your operating system.  Docker Compose will be uninstalled when Docker is uninstalled.
+
 
 ----
 Revised 2019-02-03
