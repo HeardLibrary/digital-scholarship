@@ -122,5 +122,63 @@ The query results will appear below the box like this:
 
 # Using Docker Compose to create an instance of Wikibase on your local computer
 
+Docker Compose is a feature of Docker that allows you to coordinate running multiple Docker containers.  It is installed automatically when you install docker.  To ensure that Docker Compose is installed and functional, open a console window (Command Prompt on Windows or Terminal on Mac) on your computer and enter:
+
+```
+docker-compose --help
+```
+
+If Docker Compose is running, you should see some help information.
+
+## What is Compose?
+
+Compose is a way to run a complex application that uses several individual Docker applications simultaneously in a coordinated way.  
+
+The key feature is a file that defines all of the containers that are necessary, and the settings that are required in order for them to work together.  By default, this file is called `docker-compose.yml`.  Compose assumes that you have already pulled the images for the containers you need, although for some well-know images, it may be able to pull them automatically when you run the whole application.  
+
+When you run a Compose application, Compose starts (or restarts) all of the individual containers.  When you stop a Compose application, Compose shuts them all down safely.
+
+For more details see [the Docker Compose overview page](https://docs.docker.com/compose/overview/).
+
+## Installing and running Wikibase
+
+Start by going to Docker Hub (<https://hub.docker.com/>).  Enter `wikibase` in the search box at the top of the page.  The first hit you see should be `wikibase/wikebase`.  This is the typical set of images needed to run the Wikibase applicaiton.  Click on the link to get to the information page about that application.
+
+The containers needed to run Wikibase are described in the table at the left of the screen.  However, don't download them using the command in the upper right of the screen.  Instead click on the README link at the bottom of the screen to go to the developer's GitHub site.  The resulting page has step-by-step instructions.  
+
+You should have already done the first step.  (If not, go [here](https://heardlibrary.github.io/digital-scholarship/host/docker/) for more information.)  
+
+The second step is to put the `docker-compose.yml` file some place on your computer where you can find it.  The simplest place is to put it in your home folder so that you don't have to navigate around at the command line to find it.  If it is in your home folder, it will be ready to go as soon as you open a console window.  However, if you will eventually be running more than one Docker Compose applications, you should make a subdirectory for each one since you can't have several files named `docker-compose.yml` in the same directory.
+
+Go to [this page](https://github.com/wmde/wikibase-docker/blob/master/docker-compose.yml), then right-click on the Raw button and select `Save Link As...`.  In the dialog, select your home folder (or wherever you decided to put it), and click Save.
+
+In your console window, navigate to the place where you put the `docker-compose.yml` file.  Then issue the command 
+
+```
+docker-compose up
+```
+
+The first time you do this command, Docker Compose will pull all of the files that it needs.  That will take a while.  After pulling and installing all of the pieces, then you will see a bunch of configuration steps going on.  If Wikibase is successfully running, you should eventually see a series of messages saying "Got no real changes" followed by "Sleeping for 10 seconds".  These messages will continue as long as Wikibase is running.  
+
+Because this console window will never return to the prompt, when you want to stop Wikibase, you need to open a second console window.  Right click on the console icon in the task bar and select "New Window".  In the new console window, navigate to the place where you saved the YAML file, then enter :
+
+```
+docker-compose down
+```
+
+You should see things happening in both of the console windows as it shuts down.  When both windows have returned to the command prompt, Wikibase has been shut down.
+
+## Using Wikibase
+
+As was the case with stand-alone Blazegraph (described above), you actually use Wikibase by accessing it through a web browser.  The [Accessing your Wikibase instance and the Query Service UI README page](https://github.com/wmde/wikibase-docker/blob/master/README-compose.md) has a list of the ports through which you can access the various pieces of Wikibase.  The most basic entry point is the Wikibase Mediawiki interface (port 8181).  To get to it, open a browser window and enter the following in the URL box:
+
+```
+localhost:8181
+```
+
+From this page, you can manually set up new properties, add data, etc.  After you have added data, you can query it using the Wikibase Query Service at `localhost:8282`.
+
+Because Wikibase uses Blazegraph as a back end, you can see the Blazegraph interface at `http://localhost:8989/bigdata/`.  However, you can only query, since updating through that interface is disabled.  You can also access a QuickStatements interface, but that is beyond the scope of today's lesson.
+
 ----
-Revised 2019-01-29
+Revised 2019-02-03
