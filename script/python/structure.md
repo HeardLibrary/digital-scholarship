@@ -123,13 +123,11 @@ print(data[1])
 print(len(data[1]))
 ```
 
-<img src="../images/install1mac.png" style="border:1px solid black">
-
 # String manipulations
 
 ## Escape sequences
 
-Since some characters can't be typed on some keyboards, we can include them in strings by using an *escape sequence*.  In Python, the backslash character `\` us used to escape some characters that follow, i.e. to make them have a different meaning than if the `\` weren't there.  We have seen this before with the *newline* character ("hard return" character) that makes a string go to the next line.  We write it as `\n`.  Although this escape sequence is composed of two letters `\` and `n`, it represents a single character, the "newline" character. 
+Since some characters can't be typed on some keyboards, we can include them in strings by using an *escape sequence*.  In Python, the backslash character `\` is used to escape some characters that follow, i.e. to make them have a different meaning than if the `\` weren't there.  We have seen this before with the *newline* character ("hard return" character) that makes a string go to the next line.  We write it as `\n`.  Although this escape sequence is composed of two letters `\` and `n`, it represents a single character, the "newline" character. 
 
 A few other important escaped characters are:
 ```
@@ -142,7 +140,7 @@ A few other important escaped characters are:
 Here are a few examples you can try:
 
 ```
-windowsPath = 'Use this path: c:\\users\\baskauf\data.json'
+windowsPath = 'Use this path: c:\\users\\baskauf\\data.json'
 print(windowsPath)
 quote1 = "He said \"What's goin' on!\" to me."
 print(quote1)
@@ -181,14 +179,14 @@ print(len(nobelPeacePrize))
 print(nobelPeacePrize[12:15])
 ```
 
-Notice that escaped characters count as a single character even if we write them using several characters.
+Notice that escaped characters count as a single character even if we write them as an escape sequence using several characters.
 
 ## Useful string methods
 
 Try these methods:
 
 ```
-.split()  split a string into a list based on a separator
+.split()  split a string into a list based on a separator. Splits by any whitespace if no argument.
 .capitalize()  capitalize the first word
 .title()  capitalize all words
 .upper()  capitalize all letters
@@ -215,7 +213,7 @@ print('I wrote the modern version of "' + silly + '".')
 
 # Iterating using "for"
 
-Python has several ways to control the flow through a script.  We've already seen how if...else... can be used to make choices.  Another very common task is to repeat some code multiple times.  For example, suppose we want to do something with every item in a list.  A list is *iterable*, meaning that you can step through the list and operate on items in the sequence.  Here's an example:
+Python has several ways to control the flow through a script.  We've already seen how `if...else...` can be used to make choices.  Another very common task is to repeat some code multiple times.  For example, suppose we want to do something with every item in a list.  A list is *iterable*, meaning that you can step through the list and operate on each of the items in the sequence.  Here's an example:
 
 ```
 basket = ['apple', 'orange', 'banana', 'lemon', 'lime']
@@ -281,9 +279,11 @@ Notice several things:
 
 A dictionary is a structure that is essentially a list of key:value pairs.  Dictionaries are enclosed by curly braces.  Here's an example:
 
+```
 company = {'Mickey Mouse':'Disney', 'Donald Duck':'Disney', 'Daffy Duck':'Warner Brothers', 'Fred Flintstone':'Hanna Barbera'}
+```
 
-In a dictionary, we refer to items by their key, rather than their index number in the sequence.  So the order of key:value pairs in a dictionary is unimportant.  Here's how we refer to the value where the key is 'Daffy Duck': `company['Daffy Duck']`
+In a dictionary, we refer to items by their key, rather than their index number based on their position in the sequence.  So the order of key:value pairs in a dictionary is unimportant.  Here's how we refer to the value where the key is 'Daffy Duck': `company['Daffy Duck']`
 
 Here's an example of how we could use a dictionary:
 
@@ -311,7 +311,7 @@ Note: an error is known as an *exception*, so that's why the keyword for the blo
 
 Just as we could make lists of lists, we can make lists of dictionaries.  This could be useful if we want to keep track of more than two things that are linked.  In the previous example, we just wanted to link the character to the company.  But we might want to keep track of more than that. 
 
-In the list of dictionaries, we refer first to the index number of the dictionary in square brackets, then the key of the dictionary item (the list is the outer structure and the dictionary is the inner structure).  Can you understand how this works:
+In the list of dictionaries, we refer first to the index number of the dictionary in square brackets, then the key of the dictionary item (the list is the outer structure and the dictionary is the inner structure).  Can you understand how this works?
 
 ```
 characters = [{'name':'Mickey Mouse', 'company':'Disney', 'gender': 'male'}, {'name':'Daisy Duck', 'company':'Disney', 'gender': 'female'}, {'name':'Daffy Duck', 'company':'Warner Brothers', 'gender': 'male'},  {'name':'Fred Flintstone', 'company':'Hanna Barbera', 'gender': 'male'}, {'name':'WALL-E', 'company':'Pixar', 'gender': 'neutral'}, {'name':'Fiona', 'company':'DreamWorks', 'gender': 'female'}]
@@ -357,6 +357,9 @@ Questions: How did we solve the problem of the case where no character matches?
 
 # Challenge problems
 
-1. 
+1. In a [famous story](http://wbilljohnson.com/journal/math/gauss.htm), the young mathematician Kar Gauss's teacher assigned him the task of adding all of the numbers from 1 to 100, with the intention of keeping him busy for a while.  It didn't work because in a few moments, Gauss calculated the answer, 5050, using some clever thinking.  However, if Gauss were in school now, he could just write a Python script to do the calculation.  Can you write a script using `range()` to add all the numbers from 1 up to any number that you choose?
+
+2. Print the words of "Stopping by Woods on a Snowy Evening" in reverse order.  You can get the poem as a string [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/poetry.py).
+
 ----
-Revised 2019-02-03
+Revised 2019-02-04
