@@ -352,8 +352,6 @@ The final method, `see` needs to be applied after adding text in order to get th
 see(END)
 ```
 
-
-
 # Challenge problems
 
 1. **Abusing Robert Frost** Now that "Stopping by Woods on a Snowy Evening" is in the public domain, we can use it in any creative way we want.  Modify the ([poetry.py](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/poetry.py)) code to do the following:
@@ -369,6 +367,8 @@ see(END)
    e. Print the title and text of the revised poem.
 
  2. **Scrolling Text Latte Maker** Add a scrolling text object to the bottom of the [GUI Latte Maker answer](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge1/latte_maker2.py) from last week.  When you create the scrolling text object, insert the initial text: 'Order record:\n\n'.  Replace the print statements in lines 103 and 111 with the `insert` and `see` methods applied to your `ScrolledText` object.
+
+[next lesson on data structures in Python](../structures/)
 
 ----
 Revised 2019-01-27

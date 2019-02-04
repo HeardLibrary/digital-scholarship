@@ -3,6 +3,16 @@ permalink: /script/python/structures/
 title: Using data structures 
 breadcrumb: Structures
 ---
+Note: this is the fourth lesson in a beginner's introduction to Python.  For the whole schedule, see the [Vanderbilt Python Working Group homepage](../wg/)
+
+[previous lesson on object-oriented programming in Python](../object/)
+
+Answers for last week's challenge problems:
+
+1. [abusing Robert Frost poetry](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge2/frost_abuse.py)
+
+2. [latte maker with scrolling text box](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge2/latte_maker.py)
+
 # Using Data Structures
 
 Python includes a variety of data structures.  We will learn about two of the most important: lists and dictionaries
@@ -389,10 +399,11 @@ print(newDeck)
 
     b. Instead of just printing the five cards, use `.append()` to add them to another list called `hand`.  Print the whole hand list.
 
-2. In a [famous story](http://wbilljohnson.com/journal/math/gauss.htm), the young mathematician Karl Gauss's teacher assigned him the task of adding all of the numbers from 1 to 100, with the intention of keeping him busy for a while.  It didn't work because in a few moments, Gauss calculated the answer, 5050, using some clever thinking.  However, if Gauss were in school now, he could just write a Python script to do the calculation.  Write a script using `range()` to add all the numbers from 1 up to any number that you choose.
+    2. In a [famous story](http://wbilljohnson.com/journal/math/gauss.htm), the young mathematician Karl Gauss's teacher assigned him the task of adding all of the numbers from 1 to 100, with the intention of keeping him busy for a while.  It didn't work because in a few moments, Gauss calculated the answer, 5050, using some clever thinking.  However, if Gauss were in school now, he could just write a Python script to do the calculation.  Write a script using `range()` to add all the numbers from 1 up to any number that you choose.  *Note: if you use the `input()` function to get the person's number, you'll need to use the `int()` function to turn the entered string into an integer number.*
 
-3. a. Print the words of "Stopping by Woods on a Snowy Evening" in reverse order.  You can get the poem as a string [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/poetry.py). You will need to iterate using an index rather than iterating the words directly. 
-   b. Concatenate all of the words with spaces between them.  Can you put line breaks and stansas in what you think are the right places?
+    3. a. Print the words of "Stopping by Woods on a Snowy Evening" in reverse order.  You can get the poem as a string [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/poetry.py). You will need to iterate using an index rather than iterating the words directly. 
+    
+    b. Concatenate all of the words with spaces between them.  Can you put line breaks and stansas in what you think are the right places?
 
 ----
 Revised 2019-02-04
