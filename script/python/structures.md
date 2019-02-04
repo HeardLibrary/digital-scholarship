@@ -395,15 +395,15 @@ print(newDeck)
 
 The code after the `makeDeck()` function shows how the `choice()` function and the `.shuffle()` method can be used to randomize the cards in the deck.
 
-a. Use this function to write a script that "deals" a five card poker hand by printing five random cards from the deck.  Note that after each card is printed, it has to be removed from the deck so that when the next card is printed, there isn't any chance that you'll get the same one a second time.
+   a. Use this function to write a script that "deals" a five card poker hand by printing five random cards from the deck.  Note that after each card is printed, it has to be removed from the deck so that when the next card is printed, there isn't any chance that you'll get the same one a second time.
 
-b. Instead of just printing the five cards, use `.append()` to add them to another list called `hand`.  Print the whole hand list.
+   b. Instead of just printing the five cards, use `.append()` to add them to another list called `hand`.  Print the whole hand list.
 
-   2. In a [famous story](http://wbilljohnson.com/journal/math/gauss.htm), the young mathematician Karl Gauss's teacher assigned him the task of adding all of the numbers from 1 to 100, with the intention of keeping him busy for a while.  It didn't work because in a few moments, Gauss calculated the answer, 5050, using some clever thinking.  However, if Gauss were in school now, he could just write a Python script to do the calculation.  Write a script using `range()` to add all the numbers from 1 up to any number that you choose.  *Note: if you use the `input()` function to get the person's number, you'll need to use the `int()` function to turn the entered string into an integer number.*
+   2\. In a [famous story](http://wbilljohnson.com/journal/math/gauss.htm), the young mathematician Karl Gauss's teacher assigned him the task of adding all of the numbers from 1 to 100, with the intention of keeping him busy for a while.  It didn't work because in a few moments, Gauss calculated the answer, 5050, using some clever thinking.  However, if Gauss were in school now, he could just write a Python script to do the calculation.  Write a script using `range()` to add all the numbers from 1 up to any number that you choose.  *Note: if you use the `input()` function to get the person's number, you'll need to use the `int()` function to turn the entered string into an integer number.*
 
-   3. a. Print the words of "Stopping by Woods on a Snowy Evening" in reverse order.  You can get the poem as a string [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/poetry.py). You will need to iterate using an index rather than iterating the words directly. 
+   3\. a. Print the words of "Stopping by Woods on a Snowy Evening" in reverse order.  You can get the poem as a string [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/poetry.py). You will need to iterate using an index rather than iterating the words directly. 
     
-b. Concatenate all of the words with spaces between them.  Can you put line breaks and stansas in what you think are the right places?
+   b. Concatenate all of the words with spaces between them.  Can you put line breaks and stansas in what you think are the right places?
 
 ----
 Revised 2019-02-04
