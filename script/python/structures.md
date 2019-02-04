@@ -13,7 +13,7 @@ A list is a sequence of objects.  The objects may be the same or different, but 
 
 A list is created by putting the sequence in square brackets, separated by commas.  In the following example, a list is assigned to a variable:
 
-```
+```python
 basket = ['apple', 'orange', 'banana', 'lemon', 'lime']
 ```
 
@@ -25,7 +25,7 @@ To determin the count of items in a list, use the `len()` function.  In this exa
 
 Predict what would happen, then run the following code:
 
-```
+```python
 basket = ['apple', 'orange', 'banana', 'lemon', 'lime']
 howMany = len(basket)
 print(howMany)
@@ -44,7 +44,7 @@ What is the difference between the last two things that were printed?
 
 To add an item to a list, use the `.append()` method.  Here is an example:
 
-```
+```python
 basket.append('durian')
 ```
 
@@ -52,7 +52,7 @@ Notice that there is no assignment with this method -- you simply apply it and t
 
 A list can also be empty.  You can create an empty list like this:
 
-```
+```python
 hungry = []
 ```
 
@@ -60,25 +60,25 @@ You can then add items to the list using the `.append()` method.
 
 To change an item in a list, just assign a new value to that item:
 
-```
+```python
 basket[1] = 'tangerine'
 ```
 
 To remove an item from the list using its value, use the `.remove()` method:
 
-```
+```python
 basket.remove('banana')
 ```
 
 You can also delete an item using its index number:
 
-```
+```python
 del basket[3]
 ```
 
 Two lists can be combined using the `+` operator.  Predict what would happen, then run this code:
 
-```
+```python
 basket = ['apple', 'orange', 'banana', 'lemon', 'lime']
 print(basket)
 basket[1] = 'tangerine'
@@ -98,7 +98,7 @@ print(lunch)
 
 A list can contain any object, including other lists.  In some programming languages, there are two-dimensional structures called *arrays*.  To create an array-like structure in Python, make a list of lists.  Here's an example:
 
-```
+```python
 firstRow = [3, 5, 7, 9]
 secondRow = [4, 11, -1, 5]
 thirdRow = [-99, 0, 45, 0]
@@ -107,7 +107,7 @@ data = [firstRow, secondRow, thirdRow]
 
 An equivalent way to have created this list of lists would have been:
 
-```
+```python
 data = [[3, 5, 7, 9], [4, 11, -1, 5], [-99, 0, 45, 0]]
 ```
 
@@ -115,7 +115,7 @@ To reference a list of lists, first reference the outer list position, then the 
 
 Predict what would happen, then try:
 
-```
+```python
 data = [[3, 5, 7, 9], [4, 11, -1, 5], [-99, 0, 45, 0]]
 print(data[2][0])
 print(len(data))
@@ -139,7 +139,7 @@ A few other important escaped characters are:
 
 Here are a few examples you can try:
 
-```
+```python
 windowsPath = 'Use this path: c:\\users\\baskauf\\data.json'
 print(windowsPath)
 quote1 = "He said \"What's goin' on!\" to me."
@@ -153,7 +153,7 @@ print(table)
 
 In Python 3, all strings are composed of Unicode characters.  Unicode allows us to print characters outside of the Roman alphabet and typical ASCII characters.  To represent a Unicode character, we can write the escape sequence `\u` (for Unicode), followed by the [four character hexidecimal number for that character](https://en.wikipedia.org/wiki/List_of_Unicode_characters).  For example, two write the character for the Euro symbol, use `\u20ac`.  Here is an example you can try:
 
-```
+```python
 statement = "It costs $25.00, but that's \u20ac21.82 !"
 print(statement)
 nobelPeacePrize = 'Dag Hammarskj\u00f6ld'
@@ -166,14 +166,14 @@ print(box)
 
 Retrieving parts of strings uses the same notation as lists.  (You can essentially think of a string as a list of characters.)  So to get a particular character:
 
-```
+```python
 nobelPeacePrize = 'Dag Hammarskj\u00f6ld'
 print(nobelPeacePrize[2])
 ```
 
 and to get part of a string, use:
 
-```
+```python
 nobelPeacePrize = 'Dag Hammarskj\u00f6ld'
 print(len(nobelPeacePrize))
 print(nobelPeacePrize[12:15])
@@ -198,7 +198,7 @@ To do more sophisticated things, you'll need to learn to use regular expressions
 
 Examples to try:
 
-```
+```python
 play = 'the taming of the shrew'
 shakespere = play.title()
 wordList = play.split(' ')
@@ -215,7 +215,7 @@ print('I wrote the modern version of "' + silly + '".')
 
 Python has several ways to control the flow through a script.  We've already seen how `if...else...` can be used to make choices.  Another very common task is to repeat some code multiple times.  For example, suppose we want to do something with every item in a list.  A list is *iterable*, meaning that you can step through the list and operate on each of the items in the sequence.  Here's an example:
 
-```
+```python
 basket = ['apple', 'orange', 'banana', 'lemon', 'lime']
 for fruit in basket:
     print('I ate one ' + fruit)
@@ -224,7 +224,7 @@ print("I'm full now!")
 
 Each time the script iterates to another item in the list, it repeats the indented code below the `for` statement and the value of the iterator (`fruit` in this case) changes to the next item.  Strings are also iterable:
 
-```
+```python
 word = 'supercalifragilisticexpialidocious'
 print('Spell it out!')
 for letter in word:
@@ -238,19 +238,19 @@ You can generate an iterable range of numbers using `range()`.  The form of the 
 
 We can use a `for` statement to iterate through a range.  Here are examples:
 
-```
+```python
 for count in range(1,11):
     print(count)
 ```
 
-```
+```python
 print('Prepare to launch!')
 for countDown in range(10,0,-1):
     print(countDown)
 print('Lift off!')
 ```
 
-```
+```python
 cheer = ''
 for skipper in range(2, 10, 2):
     cheer = cheer + str(skipper) + ', '
@@ -262,7 +262,7 @@ Notice how we need to be careful that our second number goes one step beyond our
 
 Ranges are often used to index list items when we want to iterate through a list, but have access to the index number.  Here is an example:
 
-```
+```python
 basket = ['apple', 'orange', 'banana', 'lemon', 'lime']
 print('Here's a list of the fruit in the basket:")
 for fruitNumber in range(0, len(basket)):
@@ -279,7 +279,7 @@ Notice several things:
 
 A dictionary is a structure that is essentially a list of key:value pairs.  Dictionaries are enclosed by curly braces.  Here's an example:
 
-```
+```python
 company = {'Mickey Mouse':'Disney', 'Donald Duck':'Disney', 'Daffy Duck':'Warner Brothers', 'Fred Flintstone':'Hanna Barbera'}
 ```
 
@@ -287,7 +287,7 @@ In a dictionary, we refer to items by their key, rather than their index number 
 
 Here's an example of how we could use a dictionary:
 
-```
+```python
 company = {'Mickey Mouse':'Disney', 'Donald Duck':'Disney', 'Daffy Duck':'Warner Brothers', 'Fred Flintstone':'Hanna Barbera'}
 characterName = input("What's the character's name? ")
 print('That character works for ' + company[characterName])
@@ -295,7 +295,7 @@ print('That character works for ' + company[characterName])
 
 This works pretty well, as long as we type in one of the keys that's included in the dictionary.  But if we don't, we generate an error.  A solution is to include an error trap.  Here's how we can do that:
 
-```
+```python
 company = {'Mickey Mouse':'Disney', 'Donald Duck':'Disney', 'Daffy Duck':'Warner Brothers', 'Fred Flintstone':'Hanna Barbera'}
 characterName = input("What's the character's name? ")
 try:
@@ -313,7 +313,7 @@ Just as we could make lists of lists, we can make lists of dictionaries.  This c
 
 In the list of dictionaries, we refer first to the index number of the dictionary in square brackets, then the key of the dictionary item (the list is the outer structure and the dictionary is the inner structure).  Can you understand how this works?
 
-```
+```python
 characters = [{'name':'Mickey Mouse', 'company':'Disney', 'gender': 'male'}, {'name':'Daisy Duck', 'company':'Disney', 'gender': 'female'}, {'name':'Daffy Duck', 'company':'Warner Brothers', 'gender': 'male'},  {'name':'Fred Flintstone', 'company':'Hanna Barbera', 'gender': 'male'}, {'name':'WALL-E', 'company':'Pixar', 'gender': 'neutral'}, {'name':'Fiona', 'company':'DreamWorks', 'gender': 'female'}]
 print(characters[1]['company'])
 print(characters[0]['name'])
@@ -322,7 +322,7 @@ print(characters[4]['gender'])
 
 Because the list is iterable, we can iterate through each of the dictionaries.  In the following example, we step through each of the dictionaries (represented by the variable `character`) and check the name of each character to see if it is a match to the name we typed in.
 
-```
+```python
 characters = [{'name':'Mickey Mouse', 'company':'Disney', 'gender': 'male'}, {'name':'Daisy Duck', 'company':'Disney', 'gender': 'female'}, {'name':'Daffy Duck', 'company':'Warner Brothers', 'gender': 'male'},  {'name':'Fred Flintstone', 'company':'Hanna Barbera', 'gender': 'male'}, {'name':'WALL-E', 'company':'Pixar', 'gender': 'neutral'}, {'name':'Fiona', 'company':'DreamWorks', 'gender': 'female'}]
 characterName = input("What's the character's name? ")
 for character in characters:
@@ -334,7 +334,7 @@ This is a bit better than the earlier script, since we don't get an error if the
 
 Here is a more sophisticated script.  Can you figure out how it works?
 
-```
+```python
 characters = [{'name':'Mickey Mouse', 'company':'Disney', 'gender': 'male'}, {'name':'Daisy Duck', 'company':'Disney', 'gender': 'female'}, {'name':'Daffy Duck', 'company':'Warner Brothers', 'gender': 'male'},  {'name':'Fred Flintstone', 'company':'Hanna Barbera', 'gender': 'male'}, {'name':'WALL-E', 'company':'Pixar', 'gender': 'neutral'}, {'name':'Fiona', 'company':'DreamWorks', 'gender': 'female'}]
 characterName = input("What's the character's name? ")
 found = False
@@ -359,7 +359,7 @@ Questions: How did we solve the problem of the case where no character matches?
 
 1. **Dealing cards** Here is some code that generates a deck of cards as a list:
 
-```
+```python
 import random
 
 def makeDeck():
@@ -388,7 +388,6 @@ print(newDeck)
    a. Use this function to write a script that "deals" a five card poker hand by printing five random cards from the deck.  Note that after each card is printed, it has to be removed from the deck so that when the next card is printed, there isn't any chance that you'll get the same one a second time.
 
    b. Instead of just printing the five cards, use `.append()` to add them to another list called `hand`.  Print the whole hand list.
-
 
 2. In a [famous story](http://wbilljohnson.com/journal/math/gauss.htm), the young mathematician Kar Gauss's teacher assigned him the task of adding all of the numbers from 1 to 100, with the intention of keeping him busy for a while.  It didn't work because in a few moments, Gauss calculated the answer, 5050, using some clever thinking.  However, if Gauss were in school now, he could just write a Python script to do the calculation.  Write a script using `range()` to add all the numbers from 1 up to any number that you choose?
 
