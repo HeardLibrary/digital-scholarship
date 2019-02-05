@@ -210,5 +210,7 @@ If you want to watch a quirky video on this topic, view [this YouTube video](htt
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XAGifYBiXMY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+[next lesson on serializations and triplestores](../serialization/)
+
 ----
 Revised 2019-01-14

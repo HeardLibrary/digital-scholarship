@@ -3,7 +3,7 @@ permalink: /lod/serialization/
 title: RDF serializations and triplestores
 breadcrumb: Serializations
 ---
-[previous lesson](../graphs/)
+[previous lesson on graphs, URIs, and triples](../graphs/)
 
 # Linked Data Basics: RDF Serializations and Triplestores
 
@@ -314,6 +314,8 @@ If we create a SPARQL for the timezone of Pleasant View, TN, we can see that the
 <img src="../images/wikidata-query.png" style="border:1px solid black">
 
 There are a number of software systems for adding bulk data to Wikibase, including Quickstatements and Python bots.  We will explore some of these tools in future lessons.
+
+[next lesson on SPARQL](../sparql/)
 
 ----
 Revised 2019-01-26

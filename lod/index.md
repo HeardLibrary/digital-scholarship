@@ -10,9 +10,11 @@ Linked Data is a graph-based data representation that enables sharing and linkin
 
 At Vanderbilt, the [Digital Scholarship and Scholarly Communications Office](https://www.library.vanderbilt.edu/scholarly/) sponsors a Linked Data Working Group that explores issues related to Linked Data.
 
-[Beginner's lesson on Graphs, URIs, and Triples](../lod/graphs/)
+[Beginner's lesson on graphs, URIs, and triples](../lod/graphs/)
 
-[Beginner's lesson on serializations, graphs, and loading RDF data](../lod/serialization/)
+[Beginner's lesson on serializations and triplestores](../lod/serialization/)
+
+[Beginner's lesson on the SPARQL query language](../lod/sparql/)
 
 [Installing Blazegraph and Wikibase using Docker](../lod/install/)
 
