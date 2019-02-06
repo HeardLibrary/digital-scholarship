@@ -3,7 +3,7 @@ permalink: /lod/sparql/
 title: SPARQL
 breadcrumb: SPARQL
 ---
-**Note:** This tutorial assumes that you have a basic understanding of basic Linked Data and RDF terminology.  If necessary, review the lessons on [graphs, URIs, and triples](https://heardlibrary.github.io/digital-scholarship/lod/graphs/) and [serilizations and triplestores](https://heardlibrary.github.io/digital-scholarship/lod/serialization/) before proceeding.
+**Note:** This tutorial assumes that you have a basic understanding of basic Linked Data and RDF terminology.  If necessary, review the lessons on [graphs, URIs, and triples](../graphs/) and [serilizations and triplestores](../serialization/) before proceeding.
 
 # SPARQL
 
@@ -253,8 +253,6 @@ WHERE {
 The dataset used in the query would consist of only the three graphs: `http://vanderbilt.edu/orcid`, `http://vanderbilt.edu/wikidata`, and `http://vanderbilt.edu/doi`.  All other triples in the triplestore would be ignored.
 
 FROM clauses can be used in any kind of SPARQL query.
-
-# CONSTRUCT SPARQL queries
 
 
 
