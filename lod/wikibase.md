@@ -82,6 +82,8 @@ The problem of making statements about statements is handled by creating a "stat
 
 For every direct property attached to a subject item, there is also a simple *property* that connects the subject to a statement instance.  That statement instance is then connected to the object of the direct property by a *property statement*.  The direct property, simple property, and property statement for a particular property all share the same local name (`P2` in this example), but have different namespaces to differentiate them.  
 
+In a nutshell, the [Wikibase model requires](https://www.mediawiki.org/wiki/Wikibase/DataModel/Primer#Statements) "that 'Wikibase will not be about the truth, but about statements and their references.' This means that in Wikibase we do not actually model the items themselves, but statements about them."
+
 ## References
 
 Because the statement instance is a URI-identified resource, we can now say things about it, such as when it was last modified or what references support it.  Supporting references are a key component built in to the Wikidata model.  Under each statement displayed in the Wikibase GUI, there is an "add reference" link that allows a contributor to add reference information to the database.  The generic Wikibase implementation does not come with any built-in reference properties that can be used to link to reference sources, so they must be created as with any other property (i.e. go to Special Pages and Create a new property).  Here is an example of a refence property that we created in our Wikibase instance to mimic the "reference URL" property that already exists in Wikidata:
