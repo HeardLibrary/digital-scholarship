@@ -86,7 +86,7 @@ For every direct property attached to a subject item, there is also a simple *pr
 
 Because the statement instance is a URI-identified resource, we can now say things about it, such as when it was last modified or what references support it.  Supporting references are a key component built in to the Wikidata model.  Under each statement displayed in the Wikibase GUI, there is an "add reference" link that allows a contributor to add reference information to the database.  The generic Wikibase implementation does not come with any built-in reference properties that can be used to link to reference sources, so they must be created as with any other property (i.e. go to Special Pages and Create a new property).  Here is an example of a refence property that we created in our Wikibase instance to mimic the "reference URL" property that already exists in Wikidata:
 
-<img src="../images/wikidata-statement-instance.png" style="border:1px solid black">
+<img src="../images/reference-property.png" style="border:1px solid black">
 
 An important feature here is that the Data type of the value for this property is selected as "URL".  That forces the user to enter a URL when providing a value.
 
