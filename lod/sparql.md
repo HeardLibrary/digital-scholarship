@@ -254,7 +254,7 @@ The dataset used in the query would consist of only the three graphs: `http://va
 
 FROM clauses can be used in any kind of SPARQL query.
 
-
+[Wikibase data model](../wikibase/)
 
 ----
 Revised 2019-02-05
