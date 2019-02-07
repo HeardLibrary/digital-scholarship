@@ -35,8 +35,8 @@ Our group meets on most Thursdays from 12:10 to 2:00 PM (again instruction is fr
 | Jan. 31 | Data types, finding data, etc. | 11:10am-1pm  |
 | Feb. 07 | Classification Basics | <https://github.com/HeardLibrary/digital-scholarship/blob/master/data/gis/wg/Classification.pdf> Download sample data: <https://docs.google.com/uc?id=18CXceeQrjxQoM5Z80kvlvdTI4SmVBDZn|>
 | Feb. 14 | Opensource QGIS and Imagery |  |
-| Feb. 21 | LiDAR and point clouds|  |
-| Feb. 28 | Remote Sensing in R | 11:10am - 1pm |
+| Feb. 18 (Monday) | LiDAR and point clouds| 11:10 - 1pm |
+| Feb. 25 (Monday) | Remote Sensing in R | 11:10am - 1pm |
 | Mar. 6 | No meeting (spring break week) |  |
 | Mar. 14 | Drone Technology and Regulations |  |
 | Mar. 21 | 3D Modeling |  |
