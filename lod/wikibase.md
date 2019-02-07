@@ -113,6 +113,16 @@ wd:P2
   rdfs:label "broadscasts show"@en .
 ```
 
+Similarly, reference properties are connected to generic property entities by `wikibase:reference`.  This can be used to find the labels of reference properties.
+
+```turtle
+wd:P3
+  a wikibase:Property ;
+  wikibase:reference <http://wikibase.svc/prop/reference/P3> ;
+  schema:description "should be used for Internet URLs as references"@en ;
+  rdfs:label "reference URL"@en ;
+```
+
 ## Using the model to query
 
 If you have created these or similar properties and items, you can retrieve information about them using the Blazegraph SPARQL query interface that is built-in to the Wikibase application.  Make sure that Wikibase is running, then enter `http://localhost:8989/bigdata/` in a browser tab.  In the query text box, paste the namespace abbreviations listed at the top of the page.  You really only need to include the ones that you are going to use, but it doesn't hurt anything to paste them all in.  
@@ -139,15 +149,17 @@ WHERE {
   Here is a query that returns all of the references associated with a particular kind of statement made about NBC:
 
   ```sparql
-  SELECT DISTINCT ?refInstance ?refProp ?label ?value
+SELECT DISTINCT ?refInstance ?refProp ?label ?value
 WHERE {
-  wd:Q2 p:P2 ?stateInstance.
-  ?stateInstance prov:wasDerivedFrom ?refInstance.
+  wd:Q2 p:P2 ?statementInstance.
+  ?statementInstance prov:wasDerivedFrom ?refInstance.
+  ?refInstance ?refProp ?value.
   ?refEntity wikibase:reference ?refProp.
   ?refEntity rdfs:label ?label.
-  ?refInstance ?refProp ?value.
   }
   ```
+
+  Note that we had to include the `wikibase:reference` link to the generic property entity in order to get the label.
 
 ----
 Revised 2019-02-07
