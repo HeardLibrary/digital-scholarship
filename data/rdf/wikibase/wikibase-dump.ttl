@@ -1,0 +1,130 @@
+@prefix wd: <http://wikibase.svc/entity/> .
+@prefix wds: <http://wikibase.svc/entity/statement/> .
+@prefix wdt: <http://wikibase.svc/prop/direct/> .
+@prefix p: <http://wikibase.svc/prop/> .
+@prefix pr: <http://wikibase.svc/prop/reference/> .
+@prefix ps: <http://wikibase.svc/prop/statement/> .
+@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+# descriptions of the non-property items
+wd:Q2
+  wdt:P2 wd:Q3 ;
+  p:P2 <http://wikibase.svc/entity/statement/Q2-0509ef95-4bed-ec8a-3502-75fc735e0722> ;
+  wikibase:identifiers 0 ;
+  schema:version 7 ;
+  schema:description "National Broadcast Corporation"@en ;
+  rdfs:label "NBC"@en ;
+  wikibase:statements 1 ;
+  wikibase:sitelinks 0 ;
+  schema:dateModified "2019-02-07T14:52:51Z"^^xsd:dateTime .
+
+wd:Q3
+  wikibase:identifiers 0 ;
+  schema:version 4 ;
+  schema:description "The flagship news broadcast of the NBC network"@en ;
+  rdfs:label "NBC Nightly News"@en ;
+  wikibase:statements 0 ;
+  wikibase:sitelinks 0 ;
+  schema:dateModified "2019-02-06T18:25:43Z"^^xsd:dateTime .
+
+# description of the statement instance for the "wd:Q2 wdt:P2 wd:Q3." assertion
+<http://wikibase.svc/entity/statement/Q2-0509ef95-4bed-ec8a-3502-75fc735e0722>
+  ps:P2 wd:Q3 ;
+  wikibase:rank wikibase:NormalRank ;
+  prov:wasDerivedFrom <http://wikibase.svc/reference/823570733eac0ae3b5bdcdcacac99d309c1469a1> ;
+  a wikibase:BestRank .
+
+# description of the reference instance that supports the statement instance
+<http://wikibase.svc/reference/823570733eac0ae3b5bdcdcacac99d309c1469a1> pr:P3 <https://www.nbcnews.com/nightly-news> .
+
+# relating the properties as items to all of the actual RDF properties that are used for linking.
+wd:P2
+  wikibase:claim p:P2 ;
+  wikibase:directClaim wdt:P2 ;
+  wikibase:novalue <http://wikibase.svc/prop/novalue/P2> ;
+  wikibase:qualifier <http://wikibase.svc/prop/qualifier/P2> ;
+  wikibase:qualifierValue <http://wikibase.svc/prop/qualifier/value/P2> ;
+  wikibase:qualifierValueNormalized <http://wikibase.svc/prop/qualifier/value-normalized/P2> ;
+  wikibase:reference <http://wikibase.svc/prop/reference/P2> ;
+  wikibase:propertyType wikibase:WikibaseItem ;
+  wikibase:referenceValue <http://wikibase.svc/prop/reference/value/P2> ;
+  wikibase:referenceValueNormalized <http://wikibase.svc/prop/reference/value-normalized/P2> ;
+  wikibase:statementProperty <http://wikibase.svc/prop/statement/P2> ;
+  wikibase:statementValue <http://wikibase.svc/prop/statement/value/P2> ;
+  wikibase:statementValueNormalized <http://wikibase.svc/prop/statement/value-normalized/P2> ;
+  schema:version 2 ;
+  schema:description "The value is a news show that is broadcast by the subject network"@en ;
+  a wikibase:Property ;
+  rdfs:label "broadscasts show"@en ;
+  wikibase:statements 0 ;
+  schema:dateModified "2019-02-06T18:24:08Z"^^xsd:dateTime .
+
+wd:P3
+  wikibase:claim p:P3 ;
+  wikibase:directClaim wdt:P3 ;
+  wikibase:novalue <http://wikibase.svc/prop/novalue/P3> ;
+  wikibase:qualifier <http://wikibase.svc/prop/qualifier/P3> ;
+  wikibase:qualifierValue <http://wikibase.svc/prop/qualifier/value/P3> ;
+  wikibase:qualifierValueNormalized <http://wikibase.svc/prop/qualifier/value-normalized/P3> ;
+  wikibase:reference <http://wikibase.svc/prop/reference/P3> ;
+  wikibase:propertyType wikibase:Url ;
+  wikibase:referenceValue <http://wikibase.svc/prop/reference/value/P3> ;
+  wikibase:referenceValueNormalized <http://wikibase.svc/prop/reference/value-normalized/P3> ;
+  wikibase:statementProperty <http://wikibase.svc/prop/statement/P3> ;
+  wikibase:statementValue <http://wikibase.svc/prop/statement/value/P3> ;
+  wikibase:statementValueNormalized <http://wikibase.svc/prop/statement/value-normalized/P3> ;
+  schema:version 6 ;
+  schema:description "should be used for Internet URLs as references"@en ;
+  a wikibase:Property ;
+  rdfs:label "reference URL"@en ;
+  wikibase:statements 0 ;
+  schema:dateModified "2019-02-07T14:51:51Z"^^xsd:dateTime .
+
+# assertions that many properties are object properties
+p:P2 a owl:ObjectProperty .
+p:P3 a owl:ObjectProperty .
+wdt:P2 a owl:ObjectProperty .
+wdt:P3 a owl:ObjectProperty .
+<http://wikibase.svc/prop/statement/P2> a owl:ObjectProperty .
+<http://wikibase.svc/prop/statement/P3> a owl:ObjectProperty .
+<http://wikibase.svc/prop/qualifier/value/P2> a owl:ObjectProperty .
+<http://wikibase.svc/prop/qualifier/value/P3> a owl:ObjectProperty .
+<http://wikibase.svc/prop/statement/value/P2> a owl:ObjectProperty .
+<http://wikibase.svc/prop/statement/value/P3> a owl:ObjectProperty .
+<http://wikibase.svc/prop/statement/value-normalized/P2> a owl:ObjectProperty .
+<http://wikibase.svc/prop/statement/value-normalized/P3> a owl:ObjectProperty .
+<http://wikibase.svc/prop/reference/value/P2> a owl:ObjectProperty .
+<http://wikibase.svc/prop/reference/value/P3> a owl:ObjectProperty .
+<http://wikibase.svc/prop/reference/value-normalized/P3> a owl:ObjectProperty .
+<http://wikibase.svc/prop/reference/value-normalized/P2> a owl:ObjectProperty .
+<http://wikibase.svc/prop/qualifier/value-normalized/P2> a owl:ObjectProperty .
+<http://wikibase.svc/prop/qualifier/value-normalized/P3> a owl:ObjectProperty .
+<http://wikibase.svc/prop/qualifier/P2> a owl:ObjectProperty .
+<http://wikibase.svc/prop/qualifier/P3> a owl:ObjectProperty .
+<http://wikibase.svc/prop/reference/P2> a owl:ObjectProperty .
+<http://wikibase.svc/prop/reference/P3> a owl:ObjectProperty .
+
+# assertions in OWL that having no values actually have no values.
+<http://wikibase.svc/prop/novalue/P2>
+  a owl:Class ;
+  owl:complementOf [
+    a owl:Restriction ;
+    owl:onProperty wdt:P2 ;
+    owl:someValuesFrom owl:Thing
+  ] .
+
+<http://wikibase.svc/prop/novalue/P3>
+  a owl:Class ;
+  owl:complementOf [
+    a owl:Restriction ;
+    owl:onProperty wdt:P3 ;
+    owl:someValuesFrom owl:Thing
+  ] .
+
+# track last modified dateTime for the database
+<http://wikibase.svc> schema:dateModified "2019-02-07T14:52:50.000Z"^^xsd:dateTime .
