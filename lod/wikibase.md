@@ -3,7 +3,7 @@ permalink: /lod/wikibase/
 title: Wikibase
 breadcrumb: Wikibase
 ---
-**Note:** This tutorial assumes that you have a basic understanding of basic Linked Data, RDF terminology, and SPARQL.  If necessary, review the lessons on [graphs, URIs, and triples](../graphs/), [serilizations and triplestores](../serialization/), and [SPARQL](../sparql/) before proceeding.
+**Note:** This tutorial assumes that you have a basic understanding of basic Linked Data, RDF terminology, and SPARQL.  If necessary, review the lessons on [graphs, URIs, and triples](../graphs/), [serilizations and triplestores](../serialization/), and [SPARQL](../sparql/) before proceeding.  If you have not installed Wikibase on your computer and want to, see the lessons on [installing and using Docker](../..//host/docker/) and [Installing Wikibase on your local computer](../install/#using-docker-compose-to-create-an-instance-of-wikibase-on-your-local-computer)
 
 # Wikibase
 
@@ -41,87 +41,5 @@ or in unabbreviated terms:
 ```
 
 
-
-
-
-
-```turtle
-@prefix ns0: <http://wikibase.svc/prop/direct/> .
-@prefix ns1: <http://wikibase.svc/prop/> .
-@prefix ns2: <http://wikiba.se/ontology#> .
-@prefix schema: <http://schema.org/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix ns3: <http://wikibase.svc/prop/statement/> .
-
-<http://wikibase.svc/entity/Q2>
-  ns0:P2 <http://wikibase.svc/entity/Q3> ;
-  ns1:P2 <http://wikibase.svc/entity/statement/Q2-0509ef95-4bed-ec8a-3502-75fc735e0722> ;
-  ns2:identifiers 0 ;
-  schema:version 5 ;
-  schema:description "National Broadcast Corporation"@en ;
-  rdfs:label "NBC"@en ;
-  ns2:statements 0 ;
-  ns2:sitelinks 0 ;
-  schema:dateModified "2019-02-06T18:26:19Z"^^xsd:dateTime .
-
-<http://wikibase.svc/entity/Q3>
-  ns2:identifiers 0 ;
-  schema:version 4 ;
-  schema:description "The flagship news broadcast of the NBC network"@en ;
-  rdfs:label "NBC Nightly News"@en ;
-  ns2:statements 0 ;
-  ns2:sitelinks 0 ;
-  schema:dateModified "2019-02-06T18:25:43Z"^^xsd:dateTime .
-
-<http://wikibase.svc/entity/P2>
-  ns2:claim ns1:P2 ;
-  ns2:directClaim ns0:P2 ;
-  ns2:novalue <http://wikibase.svc/prop/novalue/P2> ;
-  ns2:qualifier <http://wikibase.svc/prop/qualifier/P2> ;
-  ns2:qualifierValue <http://wikibase.svc/prop/qualifier/value/P2> ;
-  ns2:qualifierValueNormalized <http://wikibase.svc/prop/qualifier/value-normalized/P2> ;
-  ns2:reference <http://wikibase.svc/prop/reference/P2> ;
-  ns2:propertyType ns2:WikibaseItem ;
-  ns2:referenceValue <http://wikibase.svc/prop/reference/value/P2> ;
-  ns2:referenceValueNormalized <http://wikibase.svc/prop/reference/value-normalized/P2> ;
-  ns2:statementProperty <http://wikibase.svc/prop/statement/P2> ;
-  ns2:statementValue <http://wikibase.svc/prop/statement/value/P2> ;
-  ns2:statementValueNormalized <http://wikibase.svc/prop/statement/value-normalized/P2> ;
-  schema:version 2 ;
-  schema:description "The value is a news show that is broadcast by the subject network"@en ;
-  a ns2:Property ;
-  rdfs:label "broadscasts show"@en ;
-  ns2:statements 0 ;
-  schema:dateModified "2019-02-06T18:24:08Z"^^xsd:dateTime .
-
-ns0:P2 a owl:ObjectProperty .
-<http://wikibase.svc/prop/statement/P2> a owl:ObjectProperty .
-<http://wikibase.svc/prop/qualifier/value/P2> a owl:ObjectProperty .
-<http://wikibase.svc/prop/statement/value/P2> a owl:ObjectProperty .
-<http://wikibase.svc/prop/statement/value-normalized/P2> a owl:ObjectProperty .
-<http://wikibase.svc/prop/reference/value/P2> a owl:ObjectProperty .
-<http://wikibase.svc/prop/reference/value-normalized/P2> a owl:ObjectProperty .
-<http://wikibase.svc/prop/qualifier/value-normalized/P2> a owl:ObjectProperty .
-<http://wikibase.svc/prop/qualifier/P2> a owl:ObjectProperty .
-ns1:P2 a owl:ObjectProperty .
-<http://wikibase.svc/prop/reference/P2> a owl:ObjectProperty .
-<http://wikibase.svc/prop/novalue/P2>
-  a owl:Class ;
-  owl:complementOf [
-    a owl:Restriction ;
-    owl:onProperty ns0:P2 ;
-    owl:someValuesFrom owl:Thing
-  ] .
-
-<http://wikibase.svc> schema:dateModified "2019-02-06T18:26:18.000Z"^^xsd:dateTime .
-<http://wikibase.svc/entity/statement/Q2-0509ef95-4bed-ec8a-3502-75fc735e0722>
-  ns3:P2 <http://wikibase.svc/entity/Q3> ;
-  ns2:rank ns2:NormalRank ;
-  a ns2:BestRank .
-```
-
-
 ----
-Revised 2019-02-06
+Revised 2019-02-07
