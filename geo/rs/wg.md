@@ -33,7 +33,7 @@ Our group meets on most Thursdays from 12:10 to 2:00 PM (again instruction is fr
 |------|-------|-------|
 | Jan. 24| Introduction, software install, basics and foundations  |  |
 | Jan. 31 | Data types, finding data, etc. | 11:10am-1pm  |
-| Feb. 07 | Classification Basics | <https://github.com/HeardLibrary/digital-scholarship/blob/master/data/gis/wg/QGIS Semiautomatic Classification.pdf> |
+| Feb. 07 | Classification Basics | <https://github.com/HeardLibrary/digital-scholarship/blob/master/data/gis/wg/Classification.pdf> |
 | Feb. 14 | Opensource QGIS and Imagery |  |
 | Feb. 21 | LiDAR and point clouds|  |
 | Feb. 28 | Remote Sensing in R | 11:10am - 1pm |
