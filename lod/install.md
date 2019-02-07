@@ -218,5 +218,7 @@ docker rmi $(docker images -a -q)
 Use the usual method for your operating system.  Docker Compose will be uninstalled when Docker is uninstalled.
 
 
+[The Wikibase data model](../wikibase/)
+
 ----
 Revised 2019-02-03
