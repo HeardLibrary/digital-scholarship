@@ -46,15 +46,15 @@ wd:Q3
 wd:P2
   wikibase:claim p:P2 ;
   wikibase:directClaim wdt:P2 ;
+  wikibase:statementProperty ps:P2 ;
   wikibase:novalue <http://wikibase.svc/prop/novalue/P2> ;
   wikibase:qualifier <http://wikibase.svc/prop/qualifier/P2> ;
   wikibase:qualifierValue <http://wikibase.svc/prop/qualifier/value/P2> ;
   wikibase:qualifierValueNormalized <http://wikibase.svc/prop/qualifier/value-normalized/P2> ;
-  wikibase:reference <http://wikibase.svc/prop/reference/P2> ;
+  wikibase:reference pr:P2 ;
   wikibase:propertyType wikibase:WikibaseItem ;
   wikibase:referenceValue <http://wikibase.svc/prop/reference/value/P2> ;
   wikibase:referenceValueNormalized <http://wikibase.svc/prop/reference/value-normalized/P2> ;
-  wikibase:statementProperty <http://wikibase.svc/prop/statement/P2> ;
   wikibase:statementValue <http://wikibase.svc/prop/statement/value/P2> ;
   wikibase:statementValueNormalized <http://wikibase.svc/prop/statement/value-normalized/P2> ;
   schema:version 2 ;
@@ -67,15 +67,15 @@ wd:P2
 wd:P3
   wikibase:claim p:P3 ;
   wikibase:directClaim wdt:P3 ;
+  wikibase:statementProperty ps:P3 ;
   wikibase:novalue <http://wikibase.svc/prop/novalue/P3> ;
   wikibase:qualifier <http://wikibase.svc/prop/qualifier/P3> ;
   wikibase:qualifierValue <http://wikibase.svc/prop/qualifier/value/P3> ;
   wikibase:qualifierValueNormalized <http://wikibase.svc/prop/qualifier/value-normalized/P3> ;
-  wikibase:reference <http://wikibase.svc/prop/reference/P3> ;
+  wikibase:reference pr:P3 ;
   wikibase:propertyType wikibase:Url ;
   wikibase:referenceValue <http://wikibase.svc/prop/reference/value/P3> ;
   wikibase:referenceValueNormalized <http://wikibase.svc/prop/reference/value-normalized/P3> ;
-  wikibase:statementProperty <http://wikibase.svc/prop/statement/P3> ;
   wikibase:statementValue <http://wikibase.svc/prop/statement/value/P3> ;
   wikibase:statementValueNormalized <http://wikibase.svc/prop/statement/value-normalized/P3> ;
   schema:version 6 ;
