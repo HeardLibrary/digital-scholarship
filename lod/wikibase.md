@@ -84,7 +84,7 @@ The problem of making statements about statements is handled by creating a "stat
 
 For every direct property attached to a subject item, there is also a simple *property* that connects the subject to a statement instance.  That statement instance is then connected to the object of the direct property by a *property statement*.  The direct property, simple property, and property statement for a particular property all share the same local name (`P2` in this example), but have different namespaces to differentiate them.  
 
-In a nutshell, the [Wikibase model requires](https://www.mediawiki.org/wiki/Wikibase/DataModel/Primer#Statements) "that 'Wikibase will not be about the truth, but about statements and their references.' This means that in Wikibase we do not actually model the items themselves, but statements about them."
+In a nutshell, the [Wikibase model requires](https://www.mediawiki.org/wiki/Wikibase/DataModel/Primer#Statements) "that 'Wikibase will not be about the truth, but about statements and their references.' This means that in Wikibase we do not actually model the items themselves, but statements about them."  As we can see from the structure diagrammed above, Wikibase is more focused in describing and documenting statements than it is describing the somewhat vague "items".  
 
 ## References
 
@@ -92,7 +92,7 @@ Because the statement instance is a URI-identified resource, we can now say thin
 
 <img src="../images/reference-property.png" style="border:1px solid black">
 
-An important feature here is that the Data type of the value for this property is selected as "URL".  That forces the user to enter a URL when providing a value.
+An important feature here is that the Data type of the value for this property is selected as "URL".  That forces the user to enter a URL when providing a value.  As you saw in the dropdown list there are many other possible kinds of values, including strings with various datatypes.
 
 Once the reference property has been created, we can use it.  Returning to our "NBC" item, we click on the add reference link and start typing "reference URL" in the property box, then select it from the dropdown list.  Enter the URL in the value box, and click the "save" link to the right of the statement value.  If you don't enter a URL, it will refuse to save the change. Here's what it looks like when we are finished:
 
@@ -102,7 +102,7 @@ After we have added the reference, here's a diagram of what the RDF looks like:
 
 <img src="../images/wikidata-statement-reference.png" style="border:1px solid black">
 
-We can see that Wikibase has now created a reference instance that is linked to the statement instance by `prov:wasDerivedFrom`.  Since the reference instance is a URI identified resource, we can say additional things about it.  The most important thing we want to say is how it is related to the statement.  That connection is made by the reference property that we created (`P3`, "reference URL").  The connection is made to the URL that we provided as the value of the reference (`https://www.nbcnews.com/nightly-news`).
+We can see that Wikibase has now created a reference instance that is linked to the statement instance by `prov:wasDerivedFrom`.  Since the reference instance is a URI identified resource, we can say additional things about it.  The most important thing we want to describe is the source of the reference itself.  That connection is made by the reference property that we created (`P3`, "reference URL").  The connection is made to the URL that we provided as the value of the reference (`https://www.nbcnews.com/nightly-news`).
 
 There are many other properties associated with the entities, the statement instances, and the reference instances.  For a complete listing, see [this annotated dump](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/wikibase/wikibase-dump.ttl) of the Wikibase dataset after the items and properties discussed above had been created.  At this point, we don't care about most of these details.  However, there is one more bit that we need to know in order to examine what's going on in our Wikibase database.
 
@@ -113,6 +113,7 @@ wd:P2
   a wikibase:Property ;
   wikibase:claim p:P2 ;
   wikibase:directClaim wdt:P2 ;
+  wikibase:statementProperty ps:P2;
   schema:description "The value is a news show that is broadcast by the subject network"@en ;
   rdfs:label "broadscasts show"@en .
 ```
