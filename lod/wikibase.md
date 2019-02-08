@@ -106,7 +106,7 @@ We can see that Wikibase has now created a reference instance that is linked to 
 
 There are many other properties associated with the entities, the statement instances, and the reference instances.  For a complete listing, see [this annotated dump](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/wikibase/wikibase-dump.ttl) of the Wikibase dataset after the items and properties discussed above had been created.  At this point, we don't care about most of these details.  However, there is one more bit that we need to know in order to examine what's going on in our Wikibase database.
 
-Because there are two specific kinds of properties (actually more than two, but we'll ignore the others) that are associated with every generic property, Wikidata defines an instance of an entity that's a generic property, then assoicates that generic property with the specific direct (`wdt:` namespace) and simple (`p:` namespace) properties.  The labels and descriptions are linked to the generic property, so that they don't have to be repeated for all of the other flavors of the property.  Here's an example:
+Because there are at least three specific kinds of properties (we'll ignore the others for now) that are associated with every generic property, Wikidata defines an instance of an entity that's a generic property, then assoicates that generic property with the specific direct (`wdt:` namespace) and simple (`p:` namespace) properties.  The labels and descriptions are linked to the generic property, so that they don't have to be repeated for all of the other flavors of the property.  Here's an example in Turtle:
 
 ```turtle
 wd:P2
@@ -118,15 +118,25 @@ wd:P2
   rdfs:label "broadscasts show"@en .
 ```
 
-Similarly, reference properties are connected to generic property entities by `wikibase:reference`.  This can be used to find the labels of reference properties.
+and as a diagram:
+
+<img src="../images/generic-prop-relationships.png" style="border:1px solid black">
+
+Notice that this is a description about the properties themselves, not any of the items that the properties are being used to describe.
+
+Similarly, reference properties are connected to generic property entities by `wikibase:reference`.  This can be used to find the labels of reference properties.  Here's an example in Turtle:
 
 ```turtle
 wd:P3
   a wikibase:Property ;
-  wikibase:reference <http://wikibase.svc/prop/reference/P3> ;
+  wikibase:reference pr:P3 ;
   schema:description "should be used for Internet URLs as references"@en ;
   rdfs:label "reference URL"@en ;
 ```
+
+and as a diagram:
+
+<img src="../images/generic-ref-prop-relationships.png" style="border:1px solid black">
 
 ## Using the model to query
 
