@@ -171,6 +171,23 @@ print(lineList)
 
 With this shortcut, you can read in all of the lines of a file in two lines of code (if you are OK with the trailing newlines at the end of each line).
 
+Another way to load lines from a file into a list is to read the entire file as a single string, then split the string.  This can also be done with only two lines of code:
+
+```python
+with open('datafile.txt', 'rt', encoding='utf-8') as fileObject:
+    lineList = fileObject.read().split('\n')
+print(lineList)
+```
+
+If you try creating a multiline text file in a text editor, then open it with the last example script, you should notice that it makes a difference whether you add a hard return (i.e. a newline) after the last line of text.  If you did, you will create a list like this:
+
+```
+['First line', 'Second line', 'Third line', '']
+```
+
+where the last string in the list is an empty string.  That's because it considers the final newline in the file to separate the third line from an empty string. To avoid the empty string, you need to remove the final newline in the file.  This problem does not happen in the previous ways of reading in lines, which are insensitive to a trailing newline.
+
+
 # CSV and Dict writer
 
 # Requests library for the web
