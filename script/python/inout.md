@@ -185,10 +185,267 @@ If you try creating a multiline text file in a text editor, then open it with th
 ['First line', 'Second line', 'Third line', '']
 ```
 
-where the last string in the list is an empty string.  That's because it considers the final newline in the file to separate the third line from an empty string. To avoid the empty string, you need to remove the final newline in the file.  This problem does not happen in the previous ways of reading in lines, which are insensitive to a trailing newline.
+where the last string in the list is an empty string.  That's because it considers the final newline in the file to separate the third line from an empty string. To avoid the empty string, you need to remove the final newline in the file.  This problem does not happen in the previous ways of reading in lines, which are insensitive to a trailing newline.  So they are probably "safer".
 
+# CSV reader/writer
 
-# CSV and Dict writer
+## CSV files
+
+An extremely common way to store tabular data is in *fielded text files*, commonly called *"CSV"* (comma separated values) files.  "Fielded text" is probably a better term, because the fields in the text aren't always delimited byt commas.  It is also fairly common for fields to be separated by tabs or some other characters.  But it's still common to call them "CSV" files regardless of the delimiter.
+
+A CSV file is simply a text file where the rows are on separate lines terminated by newlines, and the fields (i.e. columns) within the row are separated by commas.  Here's an example:
+
+```
+given_name,family_name,username,student_id
+Jimmy,Zhang,rastaman27,37258
+Ji,Kim,kimji8,44947
+Veronica,Fuentes,shakira<3,19846
+```
+
+Paste this text into a text editor, then save it as `students.txt`. You can then open the file with a spreadsheet program like Excel, Open Office, or Libre Office.  If you do, it will look something like this:
+
+<img src="../images/open-office-table.png" style="border:1px solid black">
+
+You can also create the CSV file directly in the spreadsheet program, then use Save As... to save it in the CSV format.
+
+**Note:** Although it is convenient to use Excel to work with CSV files since most people have Excel on their computers, if you are going to do serious work with CSV files using Excel is NOT recommended.  The reason for this is that Excel automatically converts some strings that include dashes (typically ID numbers or other codes) into dates when it imports them.  Because CSV files do not contain any metadata describing the format of the files, there is no known way to prevent this problem.  It is a frustrating and insidious problem that can ruin a large dataset in ways that are difficult to repair.  So it is better to install and use Libre Office (open source) or Open Office and use them instead.
+
+When saving a newly-created CSV file, you should use Save As... In Libre or Open Office, there is a checkbox in the dialog where you have the option to Edit Filter Settings.  
+
+<img src="../images/edit-filter-settings.png" style="border:1px solid black">
+
+The subsequent dialog box allows you to select a field delimiter, which will usually default to comma:
+
+<img src="../images/pick-delimiters.png" style="border:1px solid black">
+
+There is also a dropdown where you can select UTF-8 as the file encoding:
+
+<img src="../images/select-utf-8.png" style="border:1px solid black">
+
+If your file contains only ASCII characters (Latin alphabet, numeric, and typical symbol characters), the Edit Filter Settings isn't that critical, but if your text contains any non-Latin language characters, unusual symbols, or letters with diacritics, it's critical to make sure that the file is saved as UTF-8.  
+
+Libre or Open Office tend to assume that you want to use the last delimiter and character encoding that you used previously, so once you have saved a CSV file in this manner, it's usually safe to open and close it by just saving without going through the Save As... dialog.
+
+## Reading CSV files
+
+It would be relatively easy to write the Python code to parse CSV files if they contained only fields separated by commas.  However, it's also allowable for fields to be contined inside a text delimiter like quotes (to handle the case where the field text includes commas).  Then there's the problem of delimiting text fields that include quotes as part of their text.  For that reason, it is better to read and write CSV files using the CSV module that is included in the Python standard library.  To use CSV functions, add the line
+
+```python
+import csv
+```
+
+at the top of your program.
+
+To read a CSV file, after opening the file as described above you create a `.reader()` object like this:
+
+```python
+readerObject = csv.reader(fileObject)
+```
+
+The reader object is iterable, and each iterator is a row in the table that is a list.  If you have saved the student.csv file described above, you can explore the CSV reader object with this code:
+
+```python
+import csv
+
+fileObject = open('students.csv', 'r', newline='', encoding='utf-8')
+readerObject = csv.reader(fileObject)
+print(type(readerObject))
+print(readerObject)
+for row in readerObject:
+    print(type(row))
+    print(row)
+fileObject.close()
+```
+
+Note that when using the CSV reader, you don't need to specify text (`t`) in the second parameter.  The [CSV Reader doc](https://docs.python.org/3/library/csv.html) also says that the file object should be opened with `newline=`. (This is related to how Python 3 handles the difference in newline characters in different operating systems.  See [this](https://docs.python.org/release/3.2/library/functions.html#open) for details.)
+
+The output shows that the reader object itself isn't a thing that can be printed, but each of the rows we've iterated through in the reader object is just a familiar list.  So we can access and use them as we would use any other list.
+
+One useful function would be to read in a CSV file and then store its data as a list of lists.  We can then refer to this array-like object by row and column using this notation:
+
+```
+data[row][column]
+```
+
+This script creates a CSV-reading function that takes the file name as an argument and returns a list of lists:
+
+```python
+import csv
+
+def readCsv(filename):
+    fileObject = open(filename, 'r', newline='', encoding='utf-8')
+    readerObject = csv.reader(fileObject)
+    array = []
+    for row in readerObject:
+        array.append(row)
+    fileObject.close()
+    return array
+
+studentInfo = readCsv('students.csv')
+print(studentInfo)
+print()
+print(studentInfo[1][2])
+print()
+outputString = ''
+for row in range(0,len(studentInfo)):
+    for column in  range(0,len(studentInfo[row])):
+        outputString += studentInfo[row][column] + '\t'
+    outputString += '\n'
+print(outputString)
+```
+
+Notes:
+- Although we might consider the header row (row 0) to be something special, as far as the CSV reader is concerned, it's just another row.
+- In an attempt to make the columns line up, the inner for loop adds a tab character after each field.  But because the field values vary in length, they don't line up very well.
+- Notice how the `len()` function was used to establish the end of the range in each loop.
+- All of the items in a csv.reader() list are strings.  That is the case regardless of whether their form is that of an integer, floating point number, date, etc.  If you want data that has been read in using csv.reader() to have a different type, you need to run the values through the appropriate type conversion function (e.g. `int()`).
+
+If you want the option to skip a header row in the CSV file, you can use the following modification of the reading function. The second argument is a boolean, with `True` including the header row and `False` omitting it.
+
+```python
+import csv
+
+def readCsv(filename, header):
+    fileObject = open(filename, 'r', newline='', encoding='utf-8')
+    readerObject = csv.reader(fileObject)
+    array = []
+    if not header:
+        next(readerObject)
+    for row in readerObject:
+        array.append(row)
+    fileObject.close()
+    return array
+
+studentInfoNoheader = readCsv('students.csv', False)
+print(studentInfoNoheader)
+print()
+studentInfoHeader = readCsv('students.csv', True)
+print(studentInfoHeader)
+```
+
+Here's an example of how we can use some data from the web.  Go to [this page](https://github.com/jasonong/List-of-US-States/blob/master/states.csv), then right-click on the Raw button and select Save link as... Save the file in the directory from which you've been running your scripts.  In a new Python script, include the `import csv` line and the `readCsv()` function, followed by this code:
+
+```python
+states = readCsv('states.csv', False)
+code = input("Enter the two-letter state abbreviation: ")
+find = False
+for state in states:
+    if state[1] == code:
+        print('The state name is ' + state[0])
+        find = True
+if not find:
+    print("I couldn't find your state.")
+```
+
+## Writing CSV files
+
+The CSV module also makes it easy to write data to files in CSV format. As with the CSV reader, the file must be opened and a csv.writer() object created.  The output process is essentially the opposite of the input process.  Each row to be written should be a list.  If the list doesn't already consist of strings, they'll be "stringified" before they are written.  The `.writerow()` method is used to actually write the row to the file.  Here's an example:
+
+```python
+import csv
+
+data = [ ['name', 'company', 'nemesis'], ['Mickey Mouse', 'Disney', 'Donald Duck'], ['Road Runner', 'Warner Brothers', 'Wile Ethelbert Coyote'] ]
+fileObject = open('cartoons.csv', 'w', newline='', encoding='utf-8')
+writerObject = csv.writer(fileObject)
+for row in data:
+    print(row)
+    writerObject.writerow(row)
+fileObject.close()
+```
+
+If we run this script and open the resulting `cartoons.csv` file in a spreadsheet program, we see this:
+
+<img src="../images/cartoon-spreadsheet.png" style="border:1px solid black">
+
+A nice thing about CSV writer is that it takes care of escaping or enclosing in quotes any problematic characters.  for example, if I create the following data and run the script:
+
+```python
+import csv
+
+data = [ ['string', 'anotherString'], ['has "quotes" in it', "has 'single quotes' in it"], ['has, commas, in it', 'has\nnewlines\nin it'] ]
+fileObject = open('test.csv', 'w', newline='', encoding='utf-8')
+writerObject = csv.writer(fileObject)
+for row in data:
+    print(row)
+    writerObject.writerow(row)
+fileObject.close()
+```
+
+The resulting files look like this in a text editor and spreadsheet:
+
+<img src="../images/messy-text.png" style="border:1px solid black">
+
+You can see that the double quotes were escaped by writing two consecutive double quotes and the strings with commas and newlines in them were inclosed in single quotes so that when the file was opened in a spreadsheet that could import CSVs, the data came in correctly.
+
+The following script contains a reusable function called `writeCsv()`.  The first argument is the file path and the second is a list of lists.  The function does not return any value.
+
+```python
+import csv
+
+def writeCsv(fileName, arrqy):
+    fileObject = open(fileName, 'w', newline='', encoding='utf-8')
+    writerObject = csv.writer(fileObject)
+    for row in arrqy:
+        writerObject.writerow(row)
+    fileObject.close()
+
+data = [ ['col1', 'col2'], ['stuff', "more stuff"], ['second row', 'more data'] ]
+writeCsv('test.csv', data)
+```
+
+## Reading into dictionaries
+
+In the examples above, the CSV reader input each row of the file as a list.  It's alos possible to read the data in as a sequence of dictionaries, using the column headers as keys.  Here's an example that reads in the cartoons.csv file that was written in a previous example.
+
+```python
+import csv
+
+fileObject = open('cartoons.csv', 'r', newline='', encoding='utf-8')
+readerObject = csv.DictReader(fileObject)
+print(type(readerObject))
+print(readerObject)
+cartoon = []
+for row in readerObject:
+    print(type(row))
+    print(row)
+    cartoon.append(row)
+fileObject.close()
+print()
+print(cartoon[1]['name'] + ' works for ' + cartoon[1]['company'] + '. Its enemy is ' + cartoon[1]['nemesis'])
+```
+
+Notes:
+- If you run the script, you'll see that the type of the rows is *ordered dictionary*.  This is a more complicated data structure than the ordanary unordered dictionaries we saw in the last lesson.  However, you can use them in the same way as regular dictionaries.
+- Since the ordered dictionaries are put into a list, we refer to a value first by its row number, then by its key, which is the header for its column: `cartoon[rowNumber][keyString]`
+- It's possible to override the column headers (the first row) and use different keys for the columns.  See [this page](https://docs.python.org/3/library/csv.html#module-contents) for details.
+- There is also a dictionary writer that converts dictionaries to CSV files.  However, this is less likely to be useful, so we won't go into it.  See the [CSV module documentation](https://docs.python.org/3/library/csv.html#module-contents) for details.
+
+Here's a reusable function that takes a file path as an argument and returns a list of dictionaries:
+
+```python
+import csv
+
+def readDict(filename):
+    fileObject = open(filename, 'r', newline='', encoding='utf-8')
+    dictObject = csv.DictReader(fileObject)
+    array = []
+    for row in dictObject:
+        array.append(row)
+    fileObject.close()
+    return array
+
+cartoons = readDict('cartoons.csv')
+name = input("What's the character? ")
+find = False
+for character in cartoons:
+    if character['name'].lower() == name.lower():
+        print(name + " doesn't like " + character['nemesis'])
+        find = True
+if not find:
+    print("Sorry, I don't know that character.")
+```
+
+Notice that by comparing the lower case versions of both the name in the dictionary and the name input by the user, we've made the search case-insensitive.
 
 # Requests library for the web
 
@@ -202,4 +459,4 @@ where the last string in the list is an empty string.  That's because it conside
 
 
 
-Revised 2019-02-08
+Revised 2019-02-09
