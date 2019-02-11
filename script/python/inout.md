@@ -4,7 +4,7 @@ title: Input and output
 breadcrumb: Input/Output
 ---
 
-Note: this is the fifth lesson in a beginner's introduction to Python.  for the whole schedule, see the [Vanderbilt Python Working Group homepage](../wg/)
+Note: this is the fifth lesson in a beginner's introduction to Python.  For the whole schedule, see the [Vanderbilt Python Working Group homepage](../wg/)
 
 [prevous lesson on data structures](../structures/)
 
@@ -710,8 +710,36 @@ r = requests.get(uri, headers={'Accept' : 'application/json'})
 
 
 
-# Event-based code
- A. GUI with TkInter
+# TkInter graphical interface
+ 
+ Although Python isn't the greatest platform for building applications with graphical user interfaces (GUIs), it does include the tkinter module creating GUIs.  In a number of previous lessons, we've played around with using tkinter to create GUI versions of the scripts we wrote.  Here we'll present a brief overview since it's a significant possible method of user input and output.
+
+ The primary object of tkinter is an instance of the `Tk` class.  A `Tk` instance is usually the main *window* of an application.  The various items in the window (buttons, text boxes, dropdown lists, etc.) are called *widgets*.  Within the main window, widgets are organized in *frames*. 
+
+ As with everything else in Python, widgets are objects.  So they are usually created by assigning an instance of their class to a variable.  Since a window is likely to have more than one button or more than one text box, the different instances can be disginguished by their different variable names.  
+
+ Just instantiating a widget does not make it appear in the window.  The widgets are placed into a frame in one of two ways.  They can be *packed*, which basically means they are stuck into the frame in the order in which they are packed, or they can be assigned to a position in a *grid*.  The grid positions are referenced by their row and column and are relative.  Column 5 is to the right of column 3, but there doesn't have to be any column 0, 1, or 2, nor does there need to be a column 4.  The widths and heights of the columns and rows are determined by the size of the largest widget in that position.  A particular frame must either be populated by packing or by a grid -- you can't mix the two.
+
+ Each widget has a number of attributes and methods.  Some attributes are standard across widgets, such as `.width`, and can be assigned when the widget is instantiated by including them as arguments.  However, generally you need to read the documentation about each particular widget to know how to set it up.  The documentation can be complex, so it is often helpful to find an example to see how the widget is used in actual practice. 
+
+ The documentation for TkInter is at [this page](https://docs.python.org/3/library/tkinter.html)
+
+ # Challenge problems
+
+1. A. **Nashville Schools info** Load the [Nashville schools data](https://github.com/HeardLibrary/digital-scholarship/raw/master/data/gis/wg/Metro_Nashville_Schools.csv) directly from GitHub so that the user doesn't have to download the file.  Let the user enter the school name, then when the school is found, provide some information about the school that you think might be interesting, such as the percentage of students in that school that fall into particular categories. 
+   B. **Case-insensitive school search** Modify your script so that it doesn't matter whether the user capitalizes correctly or not.  You will want to use the `.lower()` method on both the string that the user inputs and the string from the CSV file with which it's being compared.
+   C. **Partial string school search** Modify the script in B so that the user doesn't have to enter the entire school name.  Use the `substring in string` boolean expression.  For example `'he' in 'hello'` evaluates to `True`, but `'hi' in 'hello'` evaluates to `False`.
+
+2. A.  **Advanced cartoon checker** Use the [cartoons.csv](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoons.csv) file to create a script that allows the user to input all or part of the name of a cartoon character, then tell the user the company that created the character, and the character's nemesis.  You can decide whether you want to access the CSV file from a downloaded local file, or to retrieve it from GitHub when the script runs.
+ 
+    **Program features**
+    - Notice that the nemesis for most characters hasn't been entered or isn't known.  So you should handle that.
+    - In order to allow the user to enter part of the character's name, use the `substring in string` boolean expression.  For example `'he' in 'hello'` evaluates to `True`, but `'hi' in 'hello'` evaluates to `False`.
+    - In order to make the search case insensitive, apply the `.lower()` method to both the string that the user entered and the character name in the CSV file.
+    - Handle gracefully the case where there are no matches.
+    - Also handle the case where there is more than one match.
+
+   B. **Cartoon checker with Wikidata search** The following script shows how to query the Wikidata API to learn more about items in its database.  
 
 ```python
 import requests   # best library to manage HTTP transactions
@@ -719,7 +747,7 @@ import requests   # best library to manage HTTP transactions
 endpointUrl = 'https://query.wikidata.org/sparql'
 query = '''select distinct ?property ?value
 where {
-  <http://www.wikidata.org/entity/Q3723661> ?propertyUri ?valueUri.
+  <''' + 'http://www.wikidata.org/entity/Q3723661' + '''> ?propertyUri ?valueUri.
   ?valueUri <http://www.w3.org/2000/01/rdf-schema#label> ?value.
   ?genProp <http://wikiba.se/ontology#directClaim> ?propertyUri.
   ?genProp <http://www.w3.org/2000/01/rdf-schema#label> ?property.
@@ -740,5 +768,17 @@ statements = data['results']['bindings']
 for statement in statements:
     print(statement['property']['value'] + ': ' + statement['value']['value'])
 ```
+
+   Notice that the cartoons.csv data file has a column containing the Wikidata identifier for each character.  Combine the script in part A with this script to follow up the character search with a retrieval of other information about the character from Wikidata.  You can accomplish this by replacing the hard-coded `'http://www.wikidata.org/entity/Q3723661'` string in the query with a variable. Note that you will have to decide what to do in cases where there are no matches to the user input, or when there are multiple matches.
+
+   C. **Cartoon checker with Wikidata search and GUI** Combine your answer in B with code from previous challenge problems that use a TkInter GUI.
+
+   **Program features**
+   - The user enters the character name in a text box.
+   - The user clicks a button to run the check.
+   - The user clicks another button to get more information about the character from Wikidata.
+   - The results of the search show up in a scrolled text box.  
+   - Can you figure out how to add a drop-down list to select the character to be looked up in Wikidata from among those that matched in the search?
+
 
 Revised 2019-02-11
