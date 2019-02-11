@@ -397,6 +397,8 @@ writeCsv('test.csv', data)
 
 In the examples above, the CSV reader input each row of the file as a list.  It's alos possible to read the data in as a sequence of dictionaries, using the column headers as keys.  Here's an example that reads in the cartoons.csv file that was written in a previous example.
 
+*Note:* If you want to go for the big time, download [this file](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoons.csv) by right clicking on the Raw button and saving the file in the directory where you are running the script.
+
 ```python
 import csv
 
@@ -439,24 +441,266 @@ name = input("What's the character? ")
 find = False
 for character in cartoons:
     if character['name'].lower() == name.lower():
-        print(name + " doesn't like " + character['nemesis'])
+        if character['nemesis'] == '':
+            print("I don't know the nemesis of " + name)
+        else:
+            print(name + " doesn't like " + character['nemesis'])
         find = True
 if not find:
     print("Sorry, I don't know that character.")
 ```
 
-Notice that by comparing the lower case versions of both the name in the dictionary and the name input by the user, we've made the search case-insensitive.
+Notice that by comparing the lower case versions of both the name in the dictionary and the name input by the user, we've made the search case-insensitive.  We also error trap the situation where either the character or its nemesis isn't known.
 
 # Requests library for the web
 
-# Reading and Writing JSON
+If we have data on our local computer in the form of a file, we can avoid hard-coding a large amount of information in our script, or having to do a lot of data entry when the script is run.  However, sometimes the information is already available online, so it would be nice to be able to make use of that information without requiring the user to download it.
 
- A. JSON name:value vs. dict
- B. JSON array vs. list
+There are features for using HTTP (Hypertext Transfer Protocol) in the Python standard library, but the best methods are part of the `requests` module.  (You may need to use PIP to install `requests` or in Thonny use "Manage packages..." under the Tools menu.)  Here is a simple example that makes an HTTP request and prints the response code using the `.status_code` method:
+
+```python
+import requests
+
+r = requests.get('http://bioimages.vanderbilt.edu/baskauf/24319.rdf')
+print('HTTP status code: ', r.status_code)
+```
+
+Note: The `requests.get()` method creates a requests "Response" instance.
+
+The `.text` method returns the body of the HTTP request.  The body is a single string containing the content of the delivered file.  
+
+The requests module is a great way to access data stored on GitHub. For example, here's some data on schools in Nashville: <https://github.com/HeardLibrary/digital-scholarship/blob/master/data/gis/wg/Metro_Nashville_Schools.csv>. This URL dereferences to the GitHub page for the data.  If we want to retrieve the data itself, we need the Raw file.  In the past, we downloade Raw data by right-clicking on the Raw button and selecting "Save link as...".  We can acquire the URL of the Raw data by right-clicking and selecting "Copy link address".  In this example, we get <https://github.com/HeardLibrary/digital-scholarship/raw/master/data/gis/wg/Metro_Nashville_Schools.csv>.  With the URL from the Raw file, we can retrieve the file contents as a string.  Here's an example:
+
+```python
+import requests
+
+r = requests.get('https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/gis/wg/Metro_Nashville_Schools.csv')
+print(r.text)
+```
+
+## Reading from CSV files from the web
+
+If the file that we are retrieving from the web is a CSV file (as was the case for the Nashville school data), we can use the same methods from the `csv` module as we did when loading data from a file locally.  
+
+When we open a file object, it's an iterable object and we can turn it into a reader or DictReader object.  However, the string that we get from the requests `.text` method is a string, which is not iterable.  However, as we saw at the end of the section on loading text from a file, we can turn a string containing newlines into a list using the `.split()` method, with '\n' as the argument.  Since a list is iterable, it can be passed into either the `.reader()` or `.DictReader()` methods.  Here is some code that reads in the Nashville school data and uses the `.reader()` function to create a list of lists serving as a table of the school data:
+
+```python
+import requests
+import csv
+
+r = requests.get('https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/gis/wg/Metro_Nashville_Schools.csv')
+fileText = r.text.split('\n')
+if fileText[len(fileText)-1] == '':
+    fileText = fileText[0:len(fileText)-1]
+fileRows = csv.reader(fileText)
+schoolData = []
+for row in fileRows:
+    schoolData.append(row)
+
+# print the IDs and names of all of the schools
+print(schoolData[0][2] + '\t' + schoolData[0][3])
+for school in range(1, len(schoolData)):
+    print(schoolData[school][2] + '\t' + schoolData[school][3])
+```
+
+Notes:
+- After the string is turned into a list, but before that list is turned into a .reader() object, there is a check to see if the file contained a final newline at the end of the last row of data in the CSV.  If so, the .split() method will create a final empty string in the list, which will result in an empty final list in the list of lists.  So the `if` statement removes the final empty string (if it's there) before creating the .reader() object.
+- As the first `for` loop iterates through the .reader() object, it appends the row list to the schoolData list of lists.
+- The school ID  is in the third column (column 2 counting from 0) of the table and the school name is in the fourth column, so the final `for` loop prints the IDs and names of all of the schools in the table.  
+
+If we replace the `.reader()` method with the `.DictReader()` method, we can create a list of dictionaries instead. Instantiating the dictionary reader is not sensitive to a trailing final newline, so we can leave off the `if` statement checking for it.
+
+```python
+import requests
+import csv
+
+r = requests.get('https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/gis/wg/Metro_Nashville_Schools.csv')
+fileText = r.text.split('\n')
+fileRows = csv.DictReader(fileText)
+schoolData = []
+for row in fileRows:
+    schoolData.append(row)
+
+# use the dictionary to look up a school ID
+schoolName = input("What's the name of the school? ")
+found = False
+for school in schoolData:
+    if school['School Name'] == schoolName:
+        print('The ID number for that school is: ' + school['School ID'])
+        found = True
+if not found:
+    print("I couldn't find that school.")
+```
+
+# JSON
+
+Currently, Javascript Object Notation (JSON) is one of the most popular was to transmit data between applications.  Most application programming interfaces (APIs) that are available online provide data in the form of JSON -- sometimes exclusively.  
+
+## JSON background
+
+Here are some basics about JSON.
+
+A basic unit of JSON is a *key:value pair*.  for example:
+
+```
+"name":"Steve"
+"fingers":10
+```
+
+The key (technically called a "name" in JSON) must be a string in quotes.  The value can be a string (in double quotes), a number (not in double quotes), or other things.  In JSON, double quotes must be used to enclose quotes -- single quotes aren't allowed.
+
+A *JSON object* is an unordered list of key:value pairs, separated by commas and enclosed in curly brackets:
+
+```json
+{"name":"Steve", "fingers":10, "street":"Keri Drive"}
+```
+
+A *JSON array* is an ordered list of values, separated by commas and enclosed in square brackets.  As in key:value pairs, array values can be strings (in double quotes), numbers (not in double quotes), or other things:
+
+```json
+["Steve", "Steven", "Esteban"]
+```
+
+The "other things" allowed as values in key:value pairs or arrays can be JSON objects or arrays.  Thus JSON can have complicated nested structures, such as arrays within objects, objects within arrays, arrays within arrays, objects within objexts, or more complicated combinations.  For example:
+
+```json
+{"name":["Steve", "Steven", "Esteban"], "fingers":10, "street":"Keri Drive"}
+```
+
+In this example, nesting an array as a value with a JSON object shows that the name key can have the multiple values within the array.  
+
+Whitespace is not important in JSON.  The following three JSON structures are exactly the same:
+
+```json
+{"name":["Steve","Steven","Esteban"], "fingers":10, "street":"Keri Drive"}
+```
+```json
+{"name":["Steve","Steven","Esteban"],
+ "fingers":10, 
+ "street":"Keri Drive"}
+```
+```json
+{
+  "name":
+         [
+         "Steve",
+         "Steven",
+         "Esteban"
+         ],
+  "fingers":10, 
+  "street":"Keri Drive"
+}
+```
+
+Whitespace can be used to make the JSON more readable to humans, but consuming software sees the alternatives as the same.
+
+For the details of JSON, see [this page](https://www.json.org/).
+
+## JSON and Python
+
+As you read the previous section, you may have noticed that JSON is very similar to data structures that we have used in Python (with the exception that JSON requires double quotes and Python allows either double or single quotes).  A "JSON object" is very similar to a Python dictionary.  A "JSON array" is very similar to a Python list. In the same way that JSON objects can be nested within arrays or arrays nested within objects, Python dictionaries can be nested within lists or lists nested within dictionaries.  So pretty much any JSON data structure can be translated into a complex Python data object.  
+
+There is a Python library, appropriately called the json module, that will convert a JSON string into a Python data object and vice versa.  Here is an example of how it can be used:
+
+```python
+import json
+
+jsonString = '''{
+  "name":
+         [
+         "Steve",
+         "Steven",
+         "Esteban"
+         ],
+  "fingers":10, 
+  "street":"Keri Drive"
+}'''
+
+data = json.loads(jsonString)
+
+print(data)
+print(data['name'])
+print(data['fingers'])
+print(data['name'][1])
+```
+
+Notes:
+- Notice how the triple single-quote was used to create a multi-line string that includes the newlines as part of the string.  Since newlines and spaces are ignored whitespace, the `.loads()` method has no problem with them and the multi-line string is easier for us to read.
+- In the dictionary that results from the `.loads()` method, we can refer to values by the key string.
+- Since the value of the `name` key is a list, we have to include an index number in second set of square brackets to refer to the value that we want.
+
+The json module has a `.dumps()` method that works in the reverse direction: it turns a data structure composed of dictionaries and lists into a JSON string that can be saved in a file or used in some other way.
+
+## JSON from APIs
+
+Since a lot of APIs on the web provide JSON through HTTP, the `requests` module has a method `.json()` that will directly turn JSON text from the body of an HTTP response into a Python data structure.  Essentially, it is like combining the requests module `.text()` method with the json module `.loads()` method in a single step.  
+
+The [Global Biodiversity Information Facility (GBIF)](https://www.gbif.org/) allows users to search its records of over a billion organism occurrences via its API.  Usually, an API has a web page that explains how to make the HTTP request.  The directions for searching occurrence records are on [this page](https://www.gbif.org/developer/occurrence#search).  The search URL is constructed by concatenating the root endpoint URI (`http://api.gbif.org/v1`) with the search subpath (`/occurrence/search`) followed by a question mark, then the query string.  It's typical to query APIs this way (combining a complete endpoint URL with a query string, separated by a question mark).  Usually, query strings must be "URL-encoded" so that characters that aren't "save" in the URL are escaped.  In our example, we are searching for occurrences recorded by "William A. Haber", so the spaces between the names muse be escaped with `%20`.  So the entire URL for the query is:
+
+```
+http://api.gbif.org/v1/occurrence/search?recordedBy=William%20A.%20Haber
+```
+
+If you put this URL directly into a browser URL bar, you can see the raw JSON response from the API.  
+
+Here's the basic structure of the JSON:
+
+```json
+{
+"offset":0,
+"limit":20,
+"endOfRecords":false,
+"count":2770,
+"results":[
+        ],
+"facets":[]
+}
+```
+
+The value of the `results` key is an array that contains a list of result objects separated by commas.  Each of the reult objects has a long list of key:value pairs whose values are what we really are interested in.  Here's some code that will fetch the JSON, turn it into a Python structure, pull out the results, and show us the first (index of 0) dictionary in the list of results:
+
+```python
+import requests   # best library to manage HTTP transactions
+import csv        # library to read/write/parse CSV files
+import json       # library to convert JSON to Python data structures
+
+url = 'http://api.gbif.org/v1/occurrence/search?recordedBy=William%20A.%20Haber'
+r = requests.get(url)
+data = r.json()
+
+print(data['results'][0])
+```
+
+To see more useful output, replace the print statement with this code
+
+```python
+resultsList = data['results']
+for result in resultsList:
+        print(result['species'] + ', date: ' + result['eventDate'])
+        print('Observed at: ' + result['locality'] + ', ' + result['country'] + '\n')
+```
+
+In this example, the API does not require any authentication.  Authentication is nearly always required to write to an API using an HTTP POST request and in a lot of cases it's also required for a read-only GET request as well.  This is to prevent abuse of the API.  
+
+Sometimes an API will offer results in several possible formats, such as JSON or XML.  In such cases, one may need to send an `Accept:` header with the desired Internet Media Type (MIME type).  The MIME type for JSON is `application/json` and for XML is `text/xml`.  The request headers are sent as a dictionary, like this: 
+
+```python
+r = requests.get(uri, headers={'Accept' : 'application/json'})
+```
+
+**API etiquette:**
+
+1. Do not try to scrape the entire contents of the API.  This is considered bad form.  If the site has open data, it will often provide a compressed dump of the entire dataset that you can download rather than making a massive API call.
+
+2. Do not try to download a massive amount of data.  Usually the API will place a limit on the number of results that can be retrieved in a single call.  To retrive many results, there is usually a paging feature where you can retrive a certain number of results (like 20 or 100) in each request.  The pages are numbered so you can request them sequentially.
+
+3. Do not hit the API repeatedly in a short period of time.  This is actually pretty easy to do with a script that can execute hundreds of operations per second.  Use the `.wait()` method from the time module to space your calls out.
+
+
 
 # Event-based code
  A. GUI with TkInter
 
 
 
-Revised 2019-02-09
+Revised 2019-02-10
