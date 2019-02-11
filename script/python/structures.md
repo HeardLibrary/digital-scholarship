@@ -404,6 +404,8 @@ The code after the `makeDeck()` function shows how the `choice()` function and t
    3\. a. Print the words of "Stopping by Woods on a Snowy Evening" in reverse order.  You can get the poem as a string [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/poetry.py). You will need to iterate using an index rather than iterating the words directly. 
     
    b. Concatenate all of the words with spaces between them.  Can you put line breaks and stansas in what you think are the right places?
+   
+[next lesson on input and output](../inout/)
 
 ----
 Revised 2019-02-04
