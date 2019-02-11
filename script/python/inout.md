@@ -52,7 +52,7 @@ fileObject.close()
 Notes:
 - The arguments of the open() function are strings and can be replaced with variables rather than literals if you want.
 - In the second argument, "wt", the "w" stands for "write" and the "t" stands for "text".
-- The last argument specifies the character encoding.  It can be omitted, since the default encoding in Python3 is UTF-8, but it's clear if you include it.
+- The last argument specifies the character encoding.  It can be omitted, since the default encoding in Python3 is UTF-8, but the situation is more clear if you include it.
 - The file write isn't necessarily completed untill you close the file with the `close()` function. 
 - Because the file name in the first argument doesn't specify any path, it will default to the directory from which the script is being run.
 
@@ -191,7 +191,7 @@ where the last string in the list is an empty string.  That's because it conside
 
 ## CSV files
 
-An extremely common way to store tabular data is in *fielded text files*, commonly called *"CSV"* (comma separated values) files.  "Fielded text" is probably a better term, because the fields in the text aren't always delimited byt commas.  It is also fairly common for fields to be separated by tabs or some other characters.  But it's still common to call them "CSV" files regardless of the delimiter.
+An extremely common way to store tabular data is in *fielded text files*, commonly called *"CSV"* (comma separated values) files.  "Fielded text" is probably a better term, because the fields in the text aren't always delimited by commas.  It is also fairly common for fields to be separated by tabs or some other characters.  But it's still common to call them "CSV" files regardless of the delimiter.
 
 A CSV file is simply a text file where the rows are on separate lines terminated by newlines, and the fields (i.e. columns) within the row are separated by commas.  Here's an example:
 
@@ -228,7 +228,7 @@ Libre or Open Office tend to assume that you want to use the last delimiter and 
 
 ## Reading CSV files
 
-It would be relatively easy to write the Python code to parse CSV files if they contained only fields separated by commas.  However, it's also allowable for fields to be contined inside a text delimiter like quotes (to handle the case where the field text includes commas).  Then there's the problem of delimiting text fields that include quotes as part of their text.  For that reason, it is better to read and write CSV files using the CSV module that is included in the Python standard library.  To use CSV functions, add the line
+It would be relatively easy to write the Python code to parse CSV files if they contained only fields separated by commas.  However, it's also allowable for fields to be contained inside a text delimiter like quotes (to handle the case where the field text includes commas).  Then there's the problem of delimiting text fields that include quotes as part of their text.  For that reason, it is better to read and write CSV files using the CSV module that is included in the Python standard library.  To use CSV functions, add the line
 
 ```python
 import csv
@@ -508,7 +508,7 @@ Notes:
 - As the first `for` loop iterates through the .reader() object, it appends the row list to the schoolData list of lists.
 - The school ID  is in the third column (column 2 counting from 0) of the table and the school name is in the fourth column, so the final `for` loop prints the IDs and names of all of the schools in the table.  
 
-If we replace the `.reader()` method with the `.DictReader()` method, we can create a list of dictionaries instead. Instantiating the dictionary reader is not sensitive to a trailing final newline, so we can leave off the `if` statement checking for it.
+If we replace the `.reader()` class with the `.DictReader()` class, we can create a list of dictionaries instead. Instantiating the dictionary reader is not sensitive to a trailing final newline, so we can leave off the `if` statement checking for it.
 
 ```python
 import requests
@@ -668,6 +668,7 @@ Here's the basic structure of the results JSON:
 "endOfRecords":false,
 "count":2770,
 "results":[
+    lots of results go in here
         ],
 "facets":[]
 }
@@ -726,7 +727,7 @@ r = requests.get(uri, headers={'Accept' : 'application/json'})
 
  The documentation for TkInter is at [this page](https://docs.python.org/3/library/tkinter.html)
 
- # Challenge problems
+# Challenge problems
 
 1. A. **Nashville Schools info** Load the [Nashville schools data](https://github.com/HeardLibrary/digital-scholarship/raw/master/data/gis/wg/Metro_Nashville_Schools.csv) directly from GitHub so that the user doesn't have to download the file.  Let the user enter the school name, then when the school is found, provide some information about the school that you think might be interesting, such as the percentage of students in that school that fall into particular categories. 
 
