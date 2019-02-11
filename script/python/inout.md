@@ -635,15 +635,31 @@ The json module has a `.dumps()` method that works in the reverse direction: it 
 
 Since a lot of APIs on the web provide JSON through HTTP, the `requests` module has a method `.json()` that will directly turn JSON text from the body of an HTTP response into a Python data structure.  Essentially, it is like combining the requests module `.text()` method with the json module `.loads()` method in a single step.  
 
-The [Global Biodiversity Information Facility (GBIF)](https://www.gbif.org/) allows users to search its records of over a billion organism occurrences via its API.  Usually, an API has a web page that explains how to make the HTTP request.  The directions for searching occurrence records are on [this page](https://www.gbif.org/developer/occurrence#search).  The search URL is constructed by concatenating the root endpoint URI (`http://api.gbif.org/v1`) with the search subpath (`/occurrence/search`) followed by a question mark, then the query string.  It's typical to query APIs this way (combining a complete endpoint URL with a query string, separated by a question mark).  Usually, query strings must be "URL-encoded" so that characters that aren't "save" in the URL are escaped.  In our example, we are searching for occurrences recorded by "William A. Haber", so the spaces between the names muse be escaped with `%20`.  So the entire URL for the query is:
+The [Global Biodiversity Information Facility (GBIF)](https://www.gbif.org/) allows users to search its records of over a billion organism occurrences via its API.  Usually, an API has a web page that explains how to make the HTTP request.  The directions for searching occurrence records are on [this page](https://www.gbif.org/developer/occurrence#search).  The search URL is constructed by concatenating the root endpoint URI (`http://api.gbif.org/v1`) with the search subpath (`/occurrence/search`) followed by a question mark, then the query string.  It's typical to query APIs this way (combining a complete endpoint URL with a query string, separated by a question mark).  
+
+Usually, the values in query strings must be "URL-encoded" so that characters that aren't "safe" in the URL are escaped.  In our example, we are searching for occurrences recorded by "William A. Haber", so the spaces between the names muse be escaped with `+`.  
+
+The requests module will automatically encode query string values of passed parameters and concatenate them with ampersands, the appropriate format when there are multiple parameters in the query string. The keys and values are included in the `.get()` method as a dictionary of keys and values to be encoded.  Here's an example:
+
+```python
+r = requests.get('http://api.gbif.org/v1/occurrence/search', params={'recordedBy' : 'William A. Haber'})
+```
+
+You can see the URL that requests generates by printing the `.url` attribute of the response instance:
+
+```python
+print(r.url)
+```
+
+After URL-encoding, the entire URL for the query is:
 
 ```
-http://api.gbif.org/v1/occurrence/search?recordedBy=William%20A.%20Haber
+http://api.gbif.org/v1/occurrence/search?recordedBy=William+A.+Haber
 ```
 
 If you put this URL directly into a browser URL bar, you can see the raw JSON response from the API.  
 
-Here's the basic structure of the JSON:
+Here's the basic structure of the results JSON:
 
 ```json
 {
@@ -660,12 +676,8 @@ Here's the basic structure of the JSON:
 The value of the `results` key is an array that contains a list of result objects separated by commas.  Each of the reult objects has a long list of key:value pairs whose values are what we really are interested in.  Here's some code that will fetch the JSON, turn it into a Python structure, pull out the results, and show us the first (index of 0) dictionary in the list of results:
 
 ```python
-import requests   # best library to manage HTTP transactions
-import csv        # library to read/write/parse CSV files
-import json       # library to convert JSON to Python data structures
-
-url = 'http://api.gbif.org/v1/occurrence/search?recordedBy=William%20A.%20Haber'
-r = requests.get(url)
+url = 'http://api.gbif.org/v1/occurrence/search'
+r = requests.get(url, params={'recordedBy' : 'William A. Haber'})
 data = r.json()
 
 print(data['results'][0])
@@ -701,6 +713,32 @@ r = requests.get(uri, headers={'Accept' : 'application/json'})
 # Event-based code
  A. GUI with TkInter
 
+```python
+import requests   # best library to manage HTTP transactions
 
+endpointUrl = 'https://query.wikidata.org/sparql'
+query = '''select distinct ?property ?value
+where {
+  <http://www.wikidata.org/entity/Q3723661> ?propertyUri ?valueUri.
+  ?valueUri <http://www.w3.org/2000/01/rdf-schema#label> ?value.
+  ?genProp <http://wikiba.se/ontology#directClaim> ?propertyUri.
+  ?genProp <http://www.w3.org/2000/01/rdf-schema#label> ?property.
+  FILTER(substr(str(?propertyUri),1,36)="http://www.wikidata.org/prop/direct/")
+  FILTER(LANG(?property) = "en")
+  FILTER(LANG(?value) = "en")  
+}'''
 
-Revised 2019-02-10
+# The endpoint defaults to returning XML, so the Accept: header is required
+r = requests.get(endpointUrl, params={'query' : query}, headers={'Accept' : 'application/json'})
+
+# delete the next two lines after you see how it works
+print(r.url)
+print(r.text)
+
+data = r.json()
+statements = data['results']['bindings']
+for statement in statements:
+    print(statement['property']['value'] + ': ' + statement['value']['value'])
+```
+
+Revised 2019-02-11
