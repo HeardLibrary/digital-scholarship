@@ -722,6 +722,8 @@ r = requests.get(uri, headers={'Accept' : 'application/json'})
 
  Each widget has a number of attributes and methods.  Some attributes are standard across widgets, such as `.width`, and can be assigned when the widget is instantiated by including them as arguments.  However, generally you need to read the documentation about each particular widget to know how to set it up.  The documentation can be complex, so it is often helpful to find an example to see how the widget is used in actual practice. 
 
+ Note that the TkInter interface is event-driven.  That means that while the program is running, it waits for an action on the part of the user (such as clicking a button) before executing code.  That requires associating functions with particular objects so that the function is triggered when something happens to the object.  The details of this are beyond the scope of this tutorial, so having an example template is helpful.
+
  The documentation for TkInter is at [this page](https://docs.python.org/3/library/tkinter.html)
 
  # Challenge problems
