@@ -33,7 +33,7 @@ Our group meets on most Thursdays from 12:10 to 2:00 PM (again instruction is fr
 |------|-------|-------|
 | Jan. 24| Introduction, software install, basics and foundations  |  |
 | Jan. 31 | Data types, finding data, etc. | 11:10am-1pm  |
-| Feb. 07 | Classification Basics | <https://github.com/HeardLibrary/digital-scholarship/blob/master/data/gis/wg/Classification.pdf> Download sample data: <https://docs.google.com/uc?id=18CXceeQrjxQoM5Z80kvlvdTI4SmVBDZn|>
+| Feb. 07 | Classification Basics | <https://github.com/HeardLibrary/digital-scholarship/blob/master/data/gis/wg/Classification.pdf> Download sample data: <http://bit.ly/2WWDA5A>
 | Feb. 14 | Opensource QGIS and Imagery |  |
 | Feb. 18 (Monday) | LiDAR and point clouds| 11:10 - 1pm |
 | Feb. 25 (Monday) | Remote Sensing in R | 11:10am - 1pm |
