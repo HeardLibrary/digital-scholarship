@@ -21,3 +21,4 @@ At Vanderbilt, the [Digital Scholarship and Scholarly Communications Office](htt
 [visit the Linked Data Working Group website](https://heardlibrary.github.io/linked-data/)
 
 [Linked Data WG SPARQL endpoint](https://sparql.vanderbilt.edu/)
+

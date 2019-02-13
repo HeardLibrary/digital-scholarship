@@ -142,7 +142,9 @@ For more details see [the Docker Compose overview page](https://docs.docker.com/
 
 ## Installing and running Wikibase
 
-**Note: Wikibase requres 4 GB of memory allocated to Docker in order to run in Docker Compose.  If your computer doesn't have at least 8 GB of memory, you probably won't be able to do this part of the exercist.**
+**Note: Wikibase requres 4 GB of memory allocated to Docker in order to run in Docker Compose.  If your computer doesn't have at least 8 GB of memory, you probably won't be able to do this part of the exercise.**
+
+**Additional note:**  You can also install Wikibase without using Docker, although it's more complicated.  Instructions are at [this web page](https://www.mediawiki.org/wiki/Wikibase/Installation).
 
 Start by going to Docker Hub (<https://hub.docker.com/>).  Enter `wikibase` in the search box at the top of the page.  The first hit you see should be `wikibase/wikebase`.  This is the typical set of images needed to run the Wikibase applicaiton.  Click on the link to get to the information page about that application.
 

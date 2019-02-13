@@ -254,7 +254,82 @@ The dataset used in the query would consist of only the three graphs: `http://va
 
 FROM clauses can be used in any kind of SPARQL query.
 
+# Sample queries
+
+The following queries can be carried out using the Linked Data Working Group's SPARQL endpoint (<https://sparql.vanderbilt.edu/>).  They are based on the 66 triples included in the graph that we've been using in the examples.  It's a named graph with the URI `http://vandy` (no trailing slash!).  So to exclude other triples in the database, we use an appropriate FROM clause.  The first example includes abbreviations for all of the namespaces included in the graph.  Many will not be needed in particular queries, but it doesn't hurt to just include them all as you hack.
+
+**List all triples in the graph**
+
+```sparql
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX grid: <http://www.grid.ac/ontology/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX madsrdf: <http://www.loc.gov/mads/rdf/v1#>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+
+SELECT DISTINCT *
+FROM <http://vandy>
+WHERE {
+  ?subject ?predicate ?oboject.
+  }
+  ```
+**List URIs and names of all articles** (query by class)
+
+```sparql
+SELECT DISTINCT ?article ?title
+FROM <http://vandy>
+WHERE {
+?article a foaf:Document.
+?article rdfs:label ?title.
+}
+```
+
+**List names of articles published before 2015** (using a FILTER)
+
+```sparql
+SELECT DISTINCT ?title ?date
+FROM <http://vandy>
+WHERE {
+?article a foaf:Document.
+?article rdfs:label ?title.
+?article dcterms:created ?date.
+FILTER (?year < "2014")
+}
+```
+
+**List names of articles created by people whose family name is "Hillyer"** (traversing one link in the graph)
+
+```sparql
+SELECT DISTINCT ?title
+FROM <http://vandy>
+WHERE {
+?article a foaf:Document.
+?article rdfs:label ?title.
+?article dcterms:creator ?person.
+?person foaf:familyName "Hillyer"
+}
+```
+
+**List the starting page numbers of articles written by people affiliated with institutions located in cities named "Nashville"** (traversing two links in the graph)
+
+```sparql
+SELECT DISTINCT ?startingPage
+FROM <http://vandy>
+WHERE {
+?university grid:cityName "Nashville".
+?person madsrdf:hasAffiliation ?university.
+?article dcterms:creator ?person.
+?article bibo:pageStart ?startingPage.
+}
+```
+
 [Wikibase data model](../wikibase/)
 
 ----
-Revised 2019-02-05
+Revised 2019-02-08
