@@ -31,11 +31,11 @@ Our group meets on most Wednesdays from 12:10 to 2:00 PM (again instruction is f
 | Date | Topic | Notes |
 |------|-------|-------|
 | Jan. 23| Introduction, software installation, ArcOnline  | <https://github.com/HeardLibrary/digital-scholarship/blob/master/data/gis/wg/Metro_Nashville_Schools.csv>
-| Jan. 30 | GIS data sources, ArcGIS basics |   
-| Feb. 06 | Geocoding and Georeferencing |  |
-| Feb. 13 | Geoprocessing and Spatial Analysis |  
-| Feb. 20 | Opensource GIS QGIS|  
-| Feb. 27 | QGIS continued |  
+| Jan. 30 |  |   
+| Feb. 06 | GIS data sources |  |
+| Feb. 13 | Opensource GIS QGIS | <http://duspviz.mit.edu/_assets/data/qgis-example.zip> 
+| Feb. 20 | Georeferencing |  
+| Feb. 27 | Geoprocessing and Spatial Analysis |  
 | Mar. 6 | No meeting (spring break week)  
 | Mar. 13 | Geospatial Data in R |  
 | Mar. 20 | Geospatial Data with Python |  
