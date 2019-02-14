@@ -18,6 +18,8 @@ Answers for last week's challenge problems:
 
 2\.a. [Basic cartoon checker](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_a.py)
 
+  b. [Cartoon checker with Wikidata](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_b.py)
+
 # How to Hack
 
 
