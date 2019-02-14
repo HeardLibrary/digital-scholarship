@@ -8,7 +8,7 @@ import tkinter.scrolledtext as tkst
 
 # this sets up the characteristics of the window
 root = Tk()
-root.title("Latte maker")
+root.title("Cartoon checker")
 mainframe = ttk.Frame(root, padding="3 3 12 12")
 mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
 mainframe.columnconfigure(0, weight=1)
