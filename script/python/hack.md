@@ -16,7 +16,11 @@ Answers for last week's challenge problems:
 
   c. [School data, partial search string](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/schools_c.py)
 
-2\.a. [Basic cartoon checker](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_a.py)
+2\.a. [Advanced cartoon checker](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_a.py)
+
+  b. [Cartoon checker with Wikidata search](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_b.pyy)
+
+  c. [Super cartoon checker with Wikidata search and GUI ](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_c.py)
 
   b. [Cartoon checker with Wikidata](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_b.py)
 
