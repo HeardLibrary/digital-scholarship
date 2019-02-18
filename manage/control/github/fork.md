@@ -10,8 +10,7 @@ breadcrumb: forking
 
 stub page under development
 
-![Forking a repository](images-2b/forks.jpg)
-
+<img src="images-2b/forks.jpg" alt="branch" width="300"/>
 
 [next page: managing projects](../projects/)
 
