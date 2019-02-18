@@ -21,4 +21,4 @@ The following pages provide information for developing basic skills with GitHub.
 [Managing a website with GitHub Pages](pages/)
 
 ----
-Revised 2019-01-21
+Revised 2019-02-18
