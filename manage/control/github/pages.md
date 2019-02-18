@@ -4,7 +4,7 @@ title: Managing a website with GitHub Pages
 breadcrumb: Pages websites
 ---
 
-[previous page: cloning](../clone/)
+[previous page: managing projects](../projects/)
 
 # Managing a website with GitHub Pages
 
