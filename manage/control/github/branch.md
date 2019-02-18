@@ -10,6 +10,8 @@ breadcrumb: branching
 
 stub page under development
 
+![branch](images-2b/branch-diagram.jpg)
+
 
 [next page: cloning](../clone/)
 
