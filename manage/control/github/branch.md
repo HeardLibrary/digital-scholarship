@@ -11,7 +11,7 @@ breadcrumb: branching
 stub page under development
 
 
-[next page: branching](../branch/)
+[next page: cloning](../clone/)
 
 ----
 Revised 2019-02-18

@@ -11,7 +11,7 @@ breadcrumb: cloning
 stub page under development
 
 
-[next page: forkikng](../fork/)
+[next page: forking](../fork/)
 
 ----
 Revised 2019-02-18
