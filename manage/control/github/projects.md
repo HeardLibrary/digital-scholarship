@@ -1,10 +1,12 @@
 ---
 permalink: /manage/control/github/projects/
-title: Manage projects with GitHub
+title: Managing projects with GitHub
 breadcrumb: Manage Projects
 ---
 
-# Managing projects with GitHub
+[previous page: forking](../fork/)
+
+# Managing Projects with GitHub
 
 This page is under development.
 
@@ -18,5 +20,8 @@ This page is under development.
 
 [project labels](https://github.com/tdwg/cd/labels)
 
+
+[next page: GitHub Pages websites](../pages/)
+
 ----
-Revised 2019-01-21
+Revised 2019-02-18
