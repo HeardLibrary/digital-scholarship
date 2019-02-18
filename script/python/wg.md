@@ -27,7 +27,7 @@ First cycle: **Tuesdays** from 12:10 to 2:00 PM (Intro: 12:10 to 1:00 PM, Worksh
 | Jan 29 | 3 | Object-oriented Python | [lesson webpage](../object/) |
 | Feb 5 | 4 | Using data structures | [lesson webpage](../structures/) |
 | Feb 12 | 5 | Input and output | [lesson webpage](../inout/) |
-| Feb 19 | 6 | How to hack |  |
+| Feb 19 | 6 | Practical problem solving | [lesson webpage](../hack/) |
 
 Second cycle: **Fridays** from 12:10 to 2:00 PM (Intro: 12:10 to 1:00 PM, Workshop: 1:00 to 2:00 PM)
 

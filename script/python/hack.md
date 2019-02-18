@@ -1,6 +1,6 @@
 ---
 permalink: /script/python/hack/
-title: How to hack
+title: Practical problem solving
 breadcrumb: Hacking
 ---
 
@@ -18,13 +18,12 @@ Answers for last week's challenge problems:
 
 2\.a. [Advanced cartoon checker](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_a.py)
 
-  b. [Cartoon checker with Wikidata search](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_b.pyy)
+  b. [Cartoon checker with Wikidata search](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_b.py)
 
   c. [Super cartoon checker with Wikidata search and GUI ](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_c.py)
 
-  b. [Cartoon checker with Wikidata](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_b.py)
 
-# How to Hack
+# How to Hack (a.k.a. practical problem solving)
 
 The primary goal of these lessons has been to give you the skills necessary to solve practical problems using Python (as opposed to teaching you to be a Python developer).  Since there is a virtually limitless number of possible problems, there is no way to provide a simple method for attacking them.  However, there are some strategies that you can use to help you solve problems in an efficient way.
 
@@ -36,7 +35,7 @@ One tip is to begin the query with "Python 3" (e.g. "Python 3 use API").  This h
 
 You will commonly get a variety of kinds of results that may include blog posts, Stack Overflow questions and answers, YouTube videos, reference materials, and courses and tutorials.  You can usually tell from the results titles how useful the results might be.  I generall skip over the first "sponsored" search results since someone paid for them to be there, not because they are most helpful. 
 
-If you can find a good blog post where the writer is talking about solving your exact problem, that is usually the most helpful because a good post will often outline the issues and also provide code examples.  Stack Overflow questions/answers can also be very helpful IF the problem is exactly the same as yours.  Often the question asked in the Google search result is somewhat different, but listed under the question are related questions and you can often find another question that is nearly identical to the problem you are trying to solve.  The other issue with Stack Overflow is that the answers may be over your head if you are a Python beginner.  For example, sometimes answers will involve complex object-oriented approaches.  But other answers (or other questions' answers) may provide a different code example that is less elegant, but easier to understand.  So don't give up!
+If you can find a good blog post where the writer is talking about solving your exact problem, that is usually the most helpful because a good post will often outline the issues and also provide code examples.  Stack Overflow questions/answers can also be very helpful IF the problem is exactly the same as yours.  Often the Stack Overflow question from the Google search result is somewhat different, but listed under the question are related questions and you can often find another question that is nearly identical to the problem you are trying to solve.  The other issue with Stack Overflow is that the answers may be over your head if you are a Python beginner.  For example, sometimes answers will involve complex object-oriented approaches.  But other answers (or other questions' answers) may provide a different code example that is less elegant, but easier to understand.  So don't give up!
 
 I generally do not like YouTube videos because they take to long to assess whether they will actually be helpful or not.  
 
@@ -54,9 +53,9 @@ Depending on your learning style, you might opt for trying to find a tutorial or
 
 There are also good YouTube lessons out there, but they require a greater time investment to check out.
 
-I will also confess to actually having paper books for reference.  I am often too impatient to look things up in them when Googling is an option, but sometimes they are the best solution, especially when you need a sequential explanation from simpler to more complex aspects of a problem.  I am partial to books in the O'Reilly series because they often oriented towards beginners and are not thick reference books that contain so much information that it's difficult to find what you want.  Of course you have to pay for them...
+I will also confess to actually having paper books for reference.  I am often too impatient to look things up in them when Googling is an option, but sometimes books are the best solution, especially when you need a sequential explanation from simpler to more complex aspects of a problem.  I am partial to books in the O'Reilly series because they often oriented towards beginners and are not thick reference books that contain so much information that it's difficult to find what you want.  Of course, you have to pay for them...
 
-Finally, I should mention that there are good online courses that you can pay to take.  I generally do not want to spend the time or money on them, but if you feel that you need a strong background in an entire area of programming, they might be an option for you.
+Finally, I should mention that there are good online courses that you can pay to take.  I generally do not want to spend the time or money on them, but if you feel that you need a strong background in an entire area of programming, they might be an option for you.  However, they may be geared towards people trying to upskill to a coding career, and might be more comprehensive than is necessary for someone who simply wants to use Python to solve a particular problem.
 
 # Example: Understanding API authorization
 
@@ -97,6 +96,6 @@ data = r.json()
 print(data)
 ```
 
-This took a lot of time and effort to achieve, and it required basic understanding about JSON, HTTP, dictionaries, and the requests module.  But with some digging and sorting out the helpful information from the giant mass of confusing information, I was able to solve the problems.  
+This took a lot of time and effort to achieve, and it required basic understanding about JSON, HTTP, dictionaries, and the requests module.  But with some digging and sorting out the helpful information from the giant mass of confusing information, I was able to solve the problem.  And now I have some basic code that I can reuse any time I need to retrieve data from an API that uses OAuth2 authentication.  
 
 Revised 2019-02-18
