@@ -6,10 +6,25 @@ breadcrumb: Manage Projects
 
 [previous page: forking](../fork/)
 
+# Managing Projects with GitHub
+
+In addition to the tools that allow GitHub to carry out its core functions (commits, forking, branching, pull requests), GitHub has a number of other tools that make it possible for organizations to plan and track the work that they are doing on document-based projects. On this page we'll introduce several important ones.
+
+## Collaboration infrastructure: organizations and teams
+
+Once you embark on collaborative work, you will probably need to set up infrastructure that is not dependent on your personal GitHub account. One key is to set up an organization.  Creating an organization allows repositories to be jointly owned by several people, so if an organizer leaves the organization, that person can be disentangled from the repositories without having to remove material from their personal repository.  
+
+Anyone can create an organization for free.  However, at this point in time, the organization can only have public repositories.  So for operations like labs that might want to have private repos, you'd need to use the P.I.'s account to create a private repo.
+
+<img src="../images-projects/new-organization.png" style="border:1px solid black">
+
+Once you've set up the organization, you can add members, change their status (owner, member, outside collaborator), grant administrative privileges to repos, and establish teams. The ownership of the repository can be granted to other members in the event that the person who created the organization leaves it.  
+
+In a personal account, other users can be granted push as collaborators, but personal accounts can't have teams.  An advantage of teams is that they can be @mention'ed as a team rather than individuals, and team members can have conversations that aren't limited to an issue, pull request, project, or repository.  Teams also are a way to control levels of access to particular repositories.  Members of the organization can request to join teams, and their requests can be approved by a team owner or maintainer.
 
 # Issues tracker
 
-GitHub comes with an integrated issues tracker that we can use for keeping track of work on tasks and general communication.
+There are three tools that allow you to track your progress on a project at three levels of granularity.  The finest-scale tool is the  integrated issues tracker that we can use for keeping track of work on tasks and general communication. We will also look at the medium-scale milestones, and large-scale projects tool.  
 
 ## Creating an issue
 
