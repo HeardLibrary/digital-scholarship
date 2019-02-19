@@ -8,7 +8,9 @@ breadcrumb: cloning
 
 # Cloning a GitHub Repository to Your Local Computer
 
-(still under development)
+The *cloning* process involves creating a complete copy of a repository on your local computer.  That includes all of the branches in the repository and all of the commit history of every branch.  
+
+![Cloning process](../images-branch/clone.jpg)
 
 In addition to cloning a repository from the website side, you can also clone from your local computer using the GitHub desktop client.  The process described here will work for cloning one of your own repositories, a repository that you've forked to your account from elsewhere, or another repository that you don't own, but to which you have been given write access.
 
@@ -19,8 +21,6 @@ Drop down the Current Repository menu in the upper left of the window.  Click on
 You'll be presented with a list of repositories at Github.com to which you have access.  Repos that you own or to which you have write access will show up with little book icons.  Repos that are clones of some other repo will have a little "fork" symbol.  Click on the name of the repo you want to clone and you'll have an opportunity to select where you want the local copy of the repo to live on your computer.  Once you've selected a location, the desktop client will default to that location the next time you clone.
 
 ![Select clone location](../images-branch/desktop-clone-location.png)
-
-![Cloning process](../images-branch/clone.jpg)
 
 ## Working with cloned files
 
