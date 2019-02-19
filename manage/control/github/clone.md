@@ -16,11 +16,11 @@ In addition to cloning a repository from the website side, you can also clone fr
 
 Drop down the Current Repository menu in the upper left of the window.  Click on the Add dropdown and select "Clone Repository...".
 
-![Select clone option](../images-branch/desktop-clone-option.png)
+<img src="../images-branch/desktop-clone-option.png" style="border:1px solid black">
 
 You'll be presented with a list of repositories at Github.com to which you have access.  Repos that you own or to which you have write access will show up with little book icons.  Repos that are clones of some other repo will have a little "fork" symbol.  Click on the name of the repo you want to clone and you'll have an opportunity to select where you want the local copy of the repo to live on your computer.  Once you've selected a location, the desktop client will default to that location the next time you clone.
 
-![Select clone location](../images-branch/desktop-clone-location.png)
+<img src="../images-branch/desktop-clone-location.png" style="border:1px solid black">
 
 ## Working with cloned files
 
@@ -30,11 +30,11 @@ After you've finished the cloning process, in the left column of the client, you
 
 By dropping down the Current Repository list, you can switch to a different cloned repository, including one that you cloned from the GitHub website side. By default, the desktop client chooses the master branch of a newly cloned repo.  However, you can change from the master branch to another existing branch by dropping down the middle "Current Branch" menu at the top of the window.  
 
-![Current branch](../images-branch/current-branch.png)
+<img src="../images-branch/current-branch.png" style="border:1px solid black">
 
 When you select a default branch in this dialog, we say that your are "checking out" that branch. Checking out a branch literally changes the files that are present on your local computer. For example, when I selected the master branch as my current branch, here's what several directories looked like:
 
-![Master branch directory](../images-branch/master-branch-directory.png)
+<img src="../images-branch/master-branch-directory.png" style="border:1px solid black">
 
 You can see that the pylesson directory has a lot of files in it and the lod directory doesn't.  If I change to the "gh-pages" branch:
 
