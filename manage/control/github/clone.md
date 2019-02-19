@@ -8,9 +8,17 @@ breadcrumb: cloning
 
 # Cloning a GitHub Repository to Your Local Computer
 
-The *cloning* process involves creating a complete copy of a repository on your local computer.  That includes all of the branches in the repository and all of the commit history of every branch.  
+The *cloning* process involves creating a complete copy of a repository on your local computer.  That includes all of the branches in the repository and all of the commit histories of every branch.  
 
 ![Cloning process](../images-branch/clone.jpg)
+
+Since your local copy of the repository contains every branch in the repository, how do you determine which branch you will actually be working with on your hard drive?  In Git, the process of switching branches is called "checking out" a branch.  You could think of it as checking out a book from the library.  When you check out one branch, you obtain a copy of it and you stop using another copy.  You can only have one copy checked out at a time.
+
+## The GitHub desktop client
+
+
+
+## Cloning with the desktop client
 
 In addition to cloning a repository from the website side, you can also clone from your local computer using the GitHub desktop client.  The process described here will work for cloning one of your own repositories, a repository that you've forked to your account from elsewhere, or another repository that you don't own, but to which you have been given write access.
 
