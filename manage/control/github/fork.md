@@ -18,7 +18,21 @@ The other major reason for forking is as a means to contribute to a project for 
 
 ## Fork and Pull Examples
 
+Let's imagine a scenario involving me and my alter ego, Tomy the Cat.  I've started an open source collaborative project called the "Nashville Coding Cats" club and created a repo on my account called "code-cats-rock".  Tomy visits my site and is excited about participating.  Here's what he sees:
 
+<img src="../images-fork/find-repo-to-fork.png" style="border:1px solid black">
+
+After he clicks on the repository name, he clicks on the `Fork` button at the upper left of the repository summary page.  
+
+<img src="../images-fork/click-to-fork.png" style="border:1px solid black">
+
+If he has has push access to multiple accounts, he may need to choose which account to put the fork in.
+
+The fork will now show up as a repository in his own account.  To prevent confusion, the name of forked repos is commonly displayed next to a little "fork" symbol to remind the user that the repo is from somewhere else.
+
+<img src="../images-fork/forked-repo-summary.png" style="border:1px solid black">
+
+At this point, the forked repo will show up on the list of repos that Tomy can clone in GitHub Desktop.  
 
 [next page: managing projects](../projects/)
 

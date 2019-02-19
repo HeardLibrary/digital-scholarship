@@ -22,6 +22,7 @@ Answers for last week's challenge problems:
 
   c. [Super cartoon checker with Wikidata search and GUI ](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_c.py)
 
+[Link to the Google Forms feeback](https://docs.google.com/forms/d/e/1FAIpQLSdeYmnsHTH8iyz6eWPF5PXBY98BUE0hfsTIgPJ3I3PXXjexRw/viewform?usp=sf_link)
 
 # How to Hack (a.k.a. practical problem solving)
 
