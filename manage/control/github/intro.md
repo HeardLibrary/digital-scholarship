@@ -48,13 +48,25 @@ After you have created the repository (or clicked on a repository name in the re
 
 <img src="../images-intro/file-list.png" style="border:1px solid black">
 
+## Commits
 
+In Git, a *branch* is a set of documents that change over time.  A *commit* is a point in the life of the repository where a set of changes to files in a branch are archived. You can imagine the situation like this:
 
 <img src="../images-2b/commits.jpg" alt="branch" width="300"/>
 
+The branch can have many changes over time as files are saved, perhaps on a local computer.  But those changes don't get archived on GitHub until a commit is made.  So you can think of a commit as a "frozen" record of the set of documents at a particular moment in time.
+
+When you're editing a document in the online editor, you use the `Edit file` tab.  If you click on the `Preview changes` tab, you can see how your file has changed since the previous commit.  Text that's been removed is shown in red and new text is shown in green.  Each time you make a commit, you are required to enter a commit summary.  Optionally, you can also add more detailed comments.
+
+Although typing a commit summary is annoying, it is important because it makes it possible to get an overview of how the branch has changed over time.  That's crucial, because in the unhappy situation where you need to revert back to an earlier commit, it will be the easiest way to find where that commit is.
+
 <img src="../images-intro/make-commit.png" style="border:1px solid black">
 
+Once you've made the commit, you'll see a summary of the file contents.  If you click on the `History` button, you can see the history of commits.
+
 <img src="../images-intro/file-summary.png" style="border:1px solid black">
+
+The commit history shows all of the commit summaries for commits that have affected this particular file in the past.  The button to the right of the commit summary allows you to see a "diff" that compares how every file in that commit had changed since the previous commit.
 
 <img src="../images-intro/commit-history.png" style="border:1px solid black">
 
