@@ -52,7 +52,7 @@ After you have created the repository (or clicked on a repository name in the re
 
 In Git, a *branch* is a set of documents that change over time.  A *commit* is a point in the life of the repository where a set of changes to files in a branch are archived. You can imagine the situation like this:
 
-<img src="../images-2b/commits.jpg" alt="branch" width="300"/>
+<img src="../images-intro/commits.jpg" alt="branch" width="300"/>
 
 The branch can have many changes over time as files are saved, perhaps on a local computer.  But those changes don't get archived on GitHub until a commit is made.  So you can think of a commit as a "frozen" record of the set of documents at a particular moment in time.
 
