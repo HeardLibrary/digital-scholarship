@@ -68,6 +68,8 @@ Back in Tomy's account, he can now decide whether he wants to keep the fork or n
 
 Note that deleting the branch will have no effect on the original repository.  Caution: do not delete the fork before the changes have been pulled into the organizational (base) repository!  If you do, it will be impossible to complete the merge.
 
+In summary, the process of making pull requests to move changes into the organizational repository from a forked repository is very similar to pulling in changes from a fork within the same repository.  The main difference is that there are more options for selecting the repository and forks to be used both at the head and base of the merge. 
+
 
 [next page: managing projects](../projects/)
 
