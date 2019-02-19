@@ -38,11 +38,11 @@ If you are a Mac user, after you have created the repository, you may want to ad
 
 It's an annoying hidden file that automatically is created in Mac folders and will be an annoyance to any non-Mac users who use your material.
 
-<img src="../images-intro/create-repo.png" style="border:1px solid black">
+<img src="../images-intro/add-ds-store-to-gitignore.png" style="border:1px solid black">
 
 The third special file is called `README.md`.  When a repository or directory within a repository has a README.md file, it will automatically display when the repository or directory is opened on the GitHub website.  So it's an important way to let potential users know the purpose of the files in that directory.  When you've set up everything, click on the `Create repository` button.
 
-<img src="../images-intro/add-ds-store-to-gitignore.png" style="border:1px solid black">
+<img src="../images-intro/create-repo.png" style="border:1px solid black">
 
 After you have created the repository (or clicked on a repository name in the repository list for your account), you'll see the list of files in the repository.  If you created a README.md page, it will also be displayed at the bottom of the page.  To create a new file using the online file editor, click the `Create new file` button.  You'll be at the same screen if you click on a file name, then click on the pencil icon at the upper right.
 
