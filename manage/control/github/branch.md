@@ -16,7 +16,7 @@ The main branch of a repository is called the *master* branch.  In a very simple
 
 The purpose of a branch is to allow for the development of documents independently of the master.  You might choose to create a branch if you want to develop a new feature of software you are developing, or you may create a branch if you are creating a significant revision of a document.  Working in a branch allows you to "take risks" without having to risk messing up the master.  
 
-<img src="../images-2b/branch-diagram.jpg" alt="branch" width="400"/>
+<img src="../../images-branch/branch-diagram.jpg" alt="branch" width="400"/>
 
 There are several possible fates of a branch.  A common fate is for a branch is for it to be merged back into the master.  This can happen when the revision is complete, or if the feature has been debugged and is ready to be deployed.  You might also decide that development of the branch is hopeless and just delete it and return to the master.  In some cases, a branch may remain as a separate entity from the master, with no intention of ever merging it (this is common when using GitHub Pages to manage a website).  
 
@@ -36,43 +36,43 @@ The number of branches also can influence the probability of creating merge conf
 
 When Tomy wanted to change the code, instead of committing his change directly to the master branch, he could have created a new branch.
 
-<img src="images-2b/create-branch-change.png" style="border:1px solid black">
+<img src="../images-branch/create-branch-change.png" style="border:1px solid black">
 
 After the "patch" branch is created, a new page opens to create a pull request:
 
-<img src="images-2b/create-pull-request.png" style="border:1px solid black">
+<img src="../images-branch/create-pull-request.png" style="border:1px solid black">
 
 Notice that the pull request includes an "@mention" with the my username.  That generates an email to the collaborator:
 
-<img src="images-2b/pull-request-email.png" style="border:1px solid black">
+<img src="../images-branch/pull-request-email.png" style="border:1px solid black">
 
 Clicking on the link to view the diff shows how the two branches differ:
 
-<img src="images-2b/online-diff.png" style="border:1px solid black">
+<img src="../images-branch/online-diff.png" style="border:1px solid black">
 
 The collaborator can follow the link in the email to the pull request dialog and approve the change if they want.
 
-<img src="images-2b/branch-pull-request.png" style="border:1px solid black">
+<img src="../images-branch/branch-pull-request.png" style="border:1px solid black">
 
 After clicking Merge pull request, there's a confirmation and opportunity to comment.
 
-<img src="images-2b/confirm-merge.png" style="border:1px solid black">
+<img src="../images-branch/confirm-merge.png" style="border:1px solid black">
 
 A happy ending! The change was made without conflicts!
 
-<img src="images-2b/successful-merge.png" style="border:1px solid black">
+<img src="../images-branch/successful-merge.png" style="border:1px solid black">
 
 Let's imagine a less happy ending. Perhaps I didn't see Tomy's email about the pull request and had gone ahead and made my change directly to the master branch before merging his patch branch.  That's generated a conflict that now shows up in the pull request dialog.
 
-<img src="images-2b/pull-request-merge-conflict.png" style="border:1px solid black">
+<img src="../images-branch/pull-request-merge-conflict.png" style="border:1px solid black">
 
 Clicking on the Resolve conflicts button brings up the online editor showing where the conflicts lie:
 
-<img src="images-2b/online-conflict-resolution.png" style="border:1px solid black">
+<img src="../images-branch/online-conflict-resolution.png" style="border:1px solid black">
 
 After editing the document so that the conflict is gone, click the Mark as resolved button, then click Commit merge.
 
-<img src="images-2b/online-conflict-resolved.png" style="border:1px solid black">
+<img src="../images-branch/online-conflict-resolved.png" style="border:1px solid black">
 
 This merges the modified, unconflicted branch into the patch branch.  You'll then go back to the pull request screen and have an opportunity to merge the patch branch into the master branch. The pull request can then be merged and the patch branch deleted.
 
