@@ -16,7 +16,7 @@ The main branch of a repository is called the *master* branch.  In a very simple
 
 The purpose of a branch is to allow for the development of documents independently of the master.  You might choose to create a branch if you want to develop a new feature of software you are developing, or you may create a branch if you are creating a significant revision of a document.  Working in a branch allows you to "take risks" without having to risk messing up the master.  
 
-<img src="../../images-branch/branch-diagram.jpg" alt="branch" width="400"/>
+<img src="../images-branch/branch-diagram.jpg" alt="branch" width="400"/>
 
 There are several possible fates of a branch.  A common fate is for a branch is for it to be merged back into the master.  This can happen when the revision is complete, or if the feature has been debugged and is ready to be deployed.  You might also decide that development of the branch is hopeless and just delete it and return to the master.  In some cases, a branch may remain as a separate entity from the master, with no intention of ever merging it (this is common when using GitHub Pages to manage a website).  
 
