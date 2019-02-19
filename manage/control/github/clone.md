@@ -98,7 +98,7 @@ A third possibility is that you've been working on a document for a long time, a
 
 In all three of these situations, version conflicts arise because work is being done on files that are not the most recent version. In many cases, the problem can be avoided by strict adherence to the work cycle outlined above.  Conflicts in edits carried out by different collaborators can be reduced by working on different branches, although those conflicts may still arise later when the branches are merged into the master.
 
-## Resolving a conflict using atom
+## Resolving a conflict using Atom
 
 Atom has a cool built-in feature for resolving version conflicts.  To illustrate, we'll use a scenario where my alter ego and collaborator, Tomy the Cat, has edited a Python script at the same time I was editing it.  Tomy made his edits using the online editor, changing the added number from 3 to 5:
 
