@@ -10,7 +10,7 @@ breadcrumb: forking
 
 The last major concept in working with GitHub is *forking* a repository.  When you fork a repository, you are making your own personal copy of a repository that is part of a different organization or person's account.  Your fork (fork is both a noun and verb) of the repository is completely independent of the source repository, and changes you make to the fork have no effect on the original repository unless you use a pull request to merge your changes back into it.
 
-<img src="../images-fork/forks.jpg" alt="branch"/>
+<img src="../images-fork/forks.jpg" alt="forking"/>
 
 There are two major reasons why you might want to fork someone else's repo.  One is to simply get a copy of the repo so that you can play with it.  In that case, you would fork the repo to your own account on the GitHub website, then use GitHub desktop to clone the repository to your local hard drive.  A simpler alternative would be to simply download the foreign repo as a zip file, then open the file somewhere on your hard drive.  The advantage of using the fork, then clone approach is that you can use the Git system to switch between branches in the forked repo and also potentially feed edits back to the original repo.  
 

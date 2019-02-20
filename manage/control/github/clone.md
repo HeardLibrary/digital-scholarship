@@ -10,7 +10,7 @@ breadcrumb: cloning
 
 The *cloning* process involves creating a complete copy of a repository on your local computer.  That includes all of the branches in the repository and all of the commit histories of every branch.  
 
-![Cloning process](../images-branch/clone.jpg)
+![Cloning process](../images-clone/clone.jpg)
 
 Since your local copy of the repository contains every branch in the repository, how do you determine which branch you will actually be working with on your hard drive?  In Git, the process of switching branches is called "checking out" a branch.  When you check out one branch, you obtain a copy of it and you stop using another copy.  You can only have one copy checked out at a time.
 
