@@ -20,13 +20,15 @@ Anyone can create an organization for free.  However, at this point in time, the
 
 Once you've set up the organization, you can add members, change their status (owner, member, outside collaborator), grant administrative privileges to repos, and establish teams. The ownership of the repository can be granted to other members in the event that the person who created the organization leaves it.  
 
-In a personal account, other users can be granted push as collaborators, but personal accounts can't have teams.  An advantage of teams is that they can be @mention'ed as a team rather than individuals, and team members can have conversations that aren't limited to an issue, pull request, project, or repository.  Teams also are a way to control levels of access to particular repositories.  Members of the organization can request to join teams, and their requests can be approved by a team owner or maintainer.
+In a personal account, other users can be granted push access as collaborators, but personal accounts can't have teams.  An advantage of teams is that they can be @mention'ed as a team rather than individuals, and team members can have conversations that aren't limited to an issue, pull request, project, or repository.  Teams also are a way to control levels of access to particular repositories.  Members of the organization can request to join teams, and their requests can be approved by a team owner or maintainer.  So teams may be a good option for large projects if they are open, or part of a paid account.
 
-# Issues tracker
+## Tools for tracking progress
 
-There are three tools that allow you to track your progress on a project at three levels of granularity.  The finest-scale tool is the  integrated issues tracker that we can use for keeping track of work on tasks and general communication. We will also look at the medium-scale milestones, and large-scale projects tool.  
+There are three tools that allow you to track your progress on a project at three levels of granularity.  The finest-scale tool is the integrated issues tracker that we can use for keeping track of work on tasks and general communication. At the medium-scale there are milestones, and for the large scale there is the projects tool.  
 
-## Creating an issue
+# Using the issues tracker
+
+The issues tracker is a way to keep up with very particular problems associated with a project.  They may be associated with a particular document or may be a general, overarching problem.
 
 To create a new issue within a particular repo, click the issues tab.  You'll see the list of existing open issues (if any).  To create a new issue, click on the `New issue` button.
 
@@ -54,7 +56,9 @@ Anyone on the team can reply to the issue and GitHub tracks all of the actions t
 
 <img src="../images-projects/mention-issue.png" style="border:1px solid black">
 
-In the rendered comment, you can mouse over the linked issue to see the details.  When the issue is resolved, you can close it with a comment.  
+In the rendered comment, you can mouse over the linked issue to see the details.  
+
+When the issue is resolved, you can close it with a comment.  
 
 <img src="../images-projects/view-related-issue.png" style="border:1px solid black">
 
@@ -92,7 +96,7 @@ It is also extremely easy for anyone who is annoyed with the amount of message t
 
 # Milestones
 
-Milestones are a way to track the progress towards a goal.  They are composed of issues or pull requests that must be completed before a goal is complete.  To see milestones or create a new one, click the Milestones tab on either the issues or pull requests page.  If you have any existing milestones, you'll see them listed with an indication of the progress towards completing them.  Progress is measured by the fraction of issues or pull requests that have been closed.
+Milestones are a way to track the progress towards a goal.  They are composed of a set of issues or pull requests that must be completed before a goal is complete.  To see milestones or create a new one, click the Milestones tab on either the issues or pull requests page.  If you have any existing milestones, you'll see them listed with an indication of the progress towards completing them.  Progress is measured by the fraction of issues or pull requests that have been closed.
 
 <img src="../images-projects/milestone-menu.png" style="border:1px solid black">
 
