@@ -54,7 +54,7 @@ docker-machine ls
 
 The list will show all of the machines that I have created using Docker Machine.  (There is also the localhost machine, which exists, but is not shown in the list.)  
 
-![Docker machine listing](../images/cli-machine-list.jpg)
+![Docker machine listing](../images/cli-machine-list.png)
 
 Notice that there is a start in the `ACTIVE` column for the `aws-sandbox` machine.  This means that the `aws-sandbox` is the machine that Docker will be taking to when you issue Docker commands.  It does NOT mean that the server instance is running (that's indicated in the `STATE` colunm), nor does it mean that any particular container has been started.  If no listed machine has a star in the `ACTIVE` column, then Docker commands that are issued will go to the localhost machine.  
 
@@ -122,6 +122,10 @@ Unless the machine has a fixed IP address, when the machine is stopped the dynam
 the now-invalid certificates, there is no way to "talk to" the daemon and let it know to use a new certificate for the new IP address.  
 
 There is undoubtedly some work-around for this, but as of this writing, I don't know what it is.  So without further information, it is critical that you leave the machine running until you no longer need to use it.
+
+# What's next?
+
+Clearly there is a lot more to know about using Docker and Docker Machine.  This is only intended to be a conceptual overview.  You should check out the [Docker Machine documentation](https://docs.docker.com/machine/overview/) for the details and commands necessary to create and manage machines.
 
 ----
 Revised 2019-02-26
