@@ -22,7 +22,7 @@ First cycle: **Tuesdays** from 12:10 to 2:00 PM (Intro: 12:10 to 1:00 PM, Worksh
 
 | Date | Session | Topic | Notes |
 |---|---|---|
-| Jan 15 | 1 | Getting started | [intro](../) / [install Python](../install/) / [install Thonny](../thonny/) / [install editor](editor) |
+| Jan 15 | 1 | Getting started | [intro](../) / [install Python](../install/) / [install Thonny](../thonny/) / [install editor](../editor/) |
 | Jan 22 | 2 | Python scripting basics | [lesson webpage](../basics/) |
 | Jan 29 | 3 | Object-oriented Python | [lesson webpage](../object/) |
 | Feb 5 | 4 | Using data structures | [lesson webpage](../structures/) |

@@ -134,7 +134,7 @@ If Docker Compose is running, you should see some help information.
 
 Compose is a way to run a complex application that uses several individual Docker applications simultaneously in a coordinated way.  
 
-The key feature is a file that defines all of the containers that are necessary, and the settings that are required in order for them to work together.  By default, this file is called `docker-compose.yml`.  Compose assumes that you have already pulled the images for the containers you need, although for some well-know images, it may be able to pull them automatically when you run the whole application.  
+The key feature is a file that defines all of the containers that are necessary, and the settings that are required in order for them to work together.  By default, this file is called `docker-compose.yml`.  Compose assumes that you have already pulled the images for the containers you need, although for some well-known images, it may be able to pull them automatically when you run the whole application.  
 
 When you run a Compose application, Compose starts (or restarts) all of the individual containers.  When you stop a Compose application, Compose shuts them all down safely.
 
