@@ -56,7 +56,7 @@ The list will show all of the machines that I have created using Docker Machine.
 
 ![Docker machine listing](../images/cli-machine-list.png)
 
-Notice that there is a start in the `ACTIVE` column for the `aws-sandbox` machine.  This means that the `aws-sandbox` is the machine that Docker will be taking to when you issue Docker commands.  It does NOT mean that the server instance is running (that's indicated in the `STATE` colunm), nor does it mean that any particular container has been started.  If no listed machine has a star in the `ACTIVE` column, then Docker commands that are issued will go to the localhost machine.  
+Notice that there is a star in the `ACTIVE` column for the `aws-sandbox` machine.  This means that the `aws-sandbox` is the machine that Docker will be taking to when you issue Docker commands.  It does NOT mean that the **machine instance** is running (that's indicated in the `STATE` colunm), nor does it mean that any particular **container** has been started.  If no listed machine has a star in the `ACTIVE` column, then Docker commands that are issued will go to the localhost machine.  (In the diagram above, the star indicates which of the "string telephones" we are communicating through.)
 
 In this case, the `aws-sandbox` machine is running on Amazon Web Services (AWS) Elastic Computing (EC2) platform.  If I look at my AWS EC2 console, I can see both of the Docker machines that I started up from my local computer.  I can also see several other EC2 instances that were not set up using Docker.  
 
@@ -68,11 +68,11 @@ Docker machines generally operate as servers that communicate through IP address
 docker run -d -p 8000:80 --name webserver kitematic/hello-world-nginx
 ```
 
-If I enter the IP address and port `3.84.39.45:8000` into a browser bar, I see the sample web page that was produced by the webserver of the running container `aws-sandbox`.
+If I enter the IP address and port `3.84.39.45:8000` into a browser bar, I see the sample web page that was produced by the nginx webserver container running in the machine `aws-sandbox`.
 
 <img src="../images/nginx-server.png" style="border:1px solid black">
 
-Note that getting a web page from the webserver requires that the `kitematic/hello-world-nginx` container (named "webserver") must actually be running.  It is not enough for the `aws-sandbox` to exist and be running (although that is also a necessary condition).  Once the webserver is running, it is irrelevant whether `aws-sandbox` is the active Docker compose machine or not.  The machine will continue in its current state, with containers running or not, regardless of whether it's connected to the Docker machine CLI on my local computer or not.
+Note that getting a web page from the nginx webserver requires that the `kitematic/hello-world-nginx` container (named "webserver") must actually be running.  It is not enough for the `aws-sandbox` machine to exist and be running (although that is also a necessary condition).  Once the webserver is running, it is irrelevant whether `aws-sandbox` is the active Docker compose machine or not.  The machine will continue in its current state, with containers running or not, regardless of whether it's connected to the Docker machine CLI on my local computer (i.e. the active machine).
 
 To change the active machine using the Mac or Linux terminal, you can use the command:
 
@@ -96,23 +96,25 @@ When Docker Machine communicates with a service to set up a new machine, it comm
 
 ![certs directory](../images/certs-directory.png)
 
-The other set of certificates are machine-specific.  They are located in a directory named after the machine, nested within a `machines` directory:
+The other set of certificates are machine-specific.  They are located in a directory named after the machine, nested within a `machines` directory, for example `.docker/machine/machines/aws-sandbox/`.
 
 ![machine directory](../images/machine-directory.png)
 
-When Docker Machine wants to know what machines it can control, it looks at the `config.json` files within each of the machine directories.  The `config.json` file tells Docker Machine where the various certificates that it needs can be found by means of absolute file paths.
+When Docker Machine wants to know what machines it can control, it looks at the `config.json` files within each of the machine directories.  The `config.json` file tells Docker Machine where the various certificates that it needs can be found by means of absolute file paths.  Here's what part of a `config.json` file looks like:
 
 ![config.json directory A](../images/config-json-a.png)
 `...`
 ![config.json directory B](../images/config-json-b.png)
 
-If a particular computer does not have the certificates for the machine and for the Compose instance that created the machine, it is not possible to communicate with the machine using the CLI.  Of course you could shut down or destroy the server instances using a different interface such as the AWS console, but you could not control the containers within them because you would be unable to establish secure communications with the daemon inside the machine.
+If a particular computer does not have the certificates for the machine and for the Docker Machine instance that created the machine, it is not possible to communicate with the machine using the CLI.  Of course you could shut down or destroy the server instances using a different interface such as the AWS console, but you could not control the containers within them because you would be unable to establish secure communications with the daemon inside the machine.
 
 There is a somewhat complicated solution to this problem.  You need to move the machine's directory into the `machines` directory of the other computer that you want to use to control the machine via Docker Machine. You also need to move the Docker Machine security certificates (that were located in the `certs` directory of the original computer).  However, you can't just replace the ones in the target computer's `certs` directory, because that would make it impossible for the target computer to communicate with any existing machines it had created.  So you need to create a different directory in the target computer to contain the certificates from the original computer.
 
-The final step is to edit the config.json file for the machine whose certificates were moved so that the absolute paths in the file reflect the absolute paths of the file locations on the target computer.  Once this is done, the Docker Machine on the target computer will be able to "talk" to the machine that was created on the original computer.
+The final step is to edit the `config.json` file for the machine whose certificates were moved so that the absolute paths in the file reflect the absolute paths of the file locations on the target computer.  Once this is done, the Docker Machine on the target computer will be able to "talk" to the machine that was created on the original computer.
 
 Understanding this is critical if you are working on a real project because if you don't have a copy of the Docker Machine and machine certificates somewhere and the hard drive crashes (is stolen, run over by a train, etc.) you will have no way to communicate with the daemon in the machine to make changes.
+
+Although I haven't tried it, it is probably also possible to just use the same Docker Machine certificates on different computers from the start (rather than letting Docker Machine generate them the first time it creates a machine).  Then one could just point the URLs in the moved machine directory to the existing Docker Machine certificates rather than having to move them as well.
 
 ## Stopping the server instance
 
