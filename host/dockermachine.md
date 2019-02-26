@@ -125,7 +125,7 @@ the now-invalid certificates, there is no way to "talk to" the daemon and let it
 
 There is undoubtedly some work-around for this, but as of this writing, I don't know what it is.  So without further information, it is critical that you leave the machine running until you no longer need to use it.
 
-## Commands cheat sheet
+# Commands cheat sheet
 
 Create a new Docker machine (hacked from [here](https://docs.docker.com/machine/examples/aws/)):
 
