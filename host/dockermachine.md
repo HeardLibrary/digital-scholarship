@@ -125,6 +125,58 @@ the now-invalid certificates, there is no way to "talk to" the daemon and let it
 
 There is undoubtedly some work-around for this, but as of this writing, I don't know what it is.  So without further information, it is critical that you leave the machine running until you no longer need to use it.
 
+## Commands cheat sheet
+
+Create a new Docker machine (hacked from [here](https://docs.docker.com/machine/examples/aws/)):
+
+```
+docker-machine create --driver amazonec2 --amazonec2-open-port 8000 --amazonec2-region us-east-1 --amazonec2-instance-type t2.large machine-name
+```
+
+Note the instance type option that isn't give in the original example (default is `t2.micro`).
+
+List Docker machines:
+
+```
+docker-machine ls
+```
+
+Look for the * that indicates which machine is active (connected to Docker).
+
+Change active machine:
+
+```
+eval $(docker-machine env machine-name)
+```
+
+Unset machine (activate localhost machine):
+
+```
+eval $(docker-machine env -u)
+```
+
+Display the contents of the active machine's config.json file:
+
+```
+docker-machine inspect machine-name
+```
+
+Go to the Linux terminal prompt INSIDE the machine:
+
+```
+docker-machine ssh machine-name
+```
+
+(Enter `exit` to return to the prompt of your local computer).
+
+Terminate the machine:
+
+```
+docker-machine rm machine-name
+```
+
+Note: this removes the machine, including all of the containers and images within it.  **This is the nuclear option.**  On AWS, the status of the machine instance state changes to `terminated` and eventually it disappears from the list.
+
 # What's next?
 
 Clearly there is a lot more to know about using Docker and Docker Machine.  This is only intended to be a conceptual overview.  You should check out the [Docker Machine documentation](https://docs.docker.com/machine/overview/) for the details and commands necessary to create and manage machines.
