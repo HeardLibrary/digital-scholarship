@@ -18,13 +18,13 @@ In this workshop, we assume that you are NOT an idiot and that you should be abl
 
 # The illusion of the desktop
 
-![](images/mac-desktop.png)
+![](../images/mac-desktop.png)
 
 When I look at the screen of my computer, I see what appears to be a flat surface.  There are some images that I've "saved to the desktop" and it appears that those little pictures are actually sitting on the surface of my desktop.  However, this is an illusion that my computer creates.
 
 ## Where actually is my desktop?
 
-![](images/mac-desktop-tree.png)
+<img src="../images/mac-desktop-tree.png" style="border:1px solid black">
 
 **Terminology tip: "directory" and "folder" mean the same thing.  We will use the terms interchangeably.**
 
@@ -44,7 +44,7 @@ There are several important things that you can see from this window.  You can s
 
 You can also see that there are several other users listed that are not currently logged in.
 
-![](images/mac-guest-desktop-tree.png)
+<img src="../images/mac-guest-desktop-tree.png" style="border:1px solid black">
 
 Here is another view of the directory tree.  In the previous view, the home folder of the logged in user (baskausj) was selected.  I could tell that it was for the logged in user because the user folder icon was a little house.  In this view, the home folder of a non-logged in user (Guest) was selected.  Notice that the Guest user also has a folder called "Desktop".  Most of the Guest user folders have little red "do not" symbols on them.  Since I'm not logged in as the Guest user, I'm not allowed to access them.
 
@@ -132,9 +132,27 @@ You are not likely to need to look at the Activity Monitor, but sometimes there 
 
 # File associations and extensions
 
+When discussing programs, we mentioned that script files generally can't run by themselves, but need to run within some other application.  Similarly, an image file can't display itself, an MP3 file can't make music by itself, and a Word document can't edit itself.  In all of these cases, the files are associated with some applcation that "knows" what to "do" with the file.  The connection between a type of file and the application that has been designated to handle it is called a *file type association*.  
+
+A *file extension* is a series of characters that follow the main part of a file name and are separated from it by a dot (`.`).  For example, if a file is named `gorilla.jpg`, then `.jpg` is the extension for that file.  File extensions are used to indicate the type of a file.  They are mostly (but not completely) standardized.
+
 ## How does my computer know what a file is "for"?
 
-## Get info
+In the past, Macs had a special way that they kept track of the type of a file.  The file type was stored as metadata within the file itself.  In that system, any Mac could know the type of a file by looking at that metadata, although other brands of computers would probably not know what to do with them.  However, Macs now follow the convention used by most of the rest of the computing world: use a file extension to keep track of the type of a file.
+
+Despite this change, Macs continue to hide the file extensions from their users.  Perhaps this is to reassure old Classic Mac users, or maybe Apple thinks that file extensions will be too confusing to new users.  However, in the spirit of "you are not an idiot and don't need to be treated like one", we are going to learn how to turn off the hiding of file extensions.
+
+## Get Info
+
+There are three ways in Finder that you can get information about a particular file, including its kind.  
+
+1. Right click on the file, then select `Get Info` from the menu that opens.
+2. Click on the file, then select `Get Info` from the Finder File menu at the upper left of the screen.
+3. Click on the file, hold down on the `command` key, then press the `i` key.  
+
+<img src="../images/get-info.png" style="border:1px solid black">
+
+
 
 ## File type associations
 
