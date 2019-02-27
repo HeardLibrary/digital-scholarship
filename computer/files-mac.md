@@ -34,11 +34,11 @@ In reality, the two image files are somewhere on the *hard drive* of my computer
 
 Long ago, personal computers could have only one user.  Now personal computers are set up to allow different users to log on and access their own files using personalized settings.  You may do some sort of login when you boot your computer, or your computer may be set up to log you in automatically.  
 
-![](images/mac-system.png)
+![](../images/mac-system.png)
 
 To see what users are enabled on your computer, drop down the apple menu at the upper left of your screen and select System Preferences.  If necessary, click on the button at the top that contains rows of dots so that you can see the preferences options.  Double click on Users & Groups.
 
-![](images/mac-users.png)
+![](../images/mac-users.png)
 
 There are several important things that you can see from this window.  You can see who is currently logged on, and whether the current user is an *administrator user* or not.  If you are using your own computer, you generally should be logged on as an administrator user, otherwise you may be prevented from taking important actions like installing new software.  If you are using a work computer, you may not be an administator user.  In that case, there may be some changes that you won't be allowed to make on your computer.
 
@@ -146,12 +146,18 @@ Despite this change, Macs continue to hide the file extensions from their users.
 
 There are three ways in Finder that you can get information about a particular file, including its kind.  
 
+![Mac icon without extension](../images/icon-no-extension.png)
+
+
 1. Right click on the file, then select `Get Info` from the menu that opens.
 2. Click on the file, then select `Get Info` from the Finder File menu at the upper left of the screen.
 3. Click on the file, hold down on the `command` key, then press the `i` key.  
 
 <img src="../images/get-info.png" style="border:1px solid black">
 
+The Get Info window shows all kinds of information about the file, including its kind, size, and often a preview of how the file would be rendered.  There is also a checkbox to control whether the file extension is displayed for that particular file.  Unchecking that box makes the extension show up in the file name in Finder:
+
+![Mac icon with extension](../images/icon-extension.png)
 
 
 ## File type associations
