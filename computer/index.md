@@ -22,7 +22,7 @@ Topics include:
 - Files and programs
 - File associations and extensions
 
-[Go to Lesson 1: Files](files)
+Go to Lesson 1: Files [for Mac](files-mac/) or [for PC](files-pc/)
 
 ## Lesson 2: Directories
 
@@ -74,3 +74,6 @@ Topics include:
 - Localhost web servers
 
 [Go to Lesson 6: Command line](command)
+
+----
+Revised 2019-02-27
