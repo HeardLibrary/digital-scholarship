@@ -156,27 +156,29 @@ There are three ways in Finder that you can get information about a particular f
 2. Click on the file, then select `Get Info` from the Finder File menu at the upper left of the screen.
 3. Click on the file, hold down on the `command` key, then press the `i` key.  
 
-<img src="../images-1-pc/get-info.png" style="border:1px solid black">
+<img src="../images-1-pc/file-properties.png" style="border:1px solid black">
 
 The Get Info window shows all kinds of information about the file, including its kind, size, and often a preview of how the file would be rendered.  
 
 ## Unhiding file extensions
 
+<img src="../images-1-pc/open-folder-options.png" style="border:1px solid black">
+
 The Get Info window has a checkbox to control whether the file extension is displayed for that particular file.  Unchecking that box makes the extension show up in the file name in Finder:
 
 Here's what the icon looks like when the extension is being hidden:
 
-<img src="../images-1-pc/icon-no-extension.png" style="border:1px solid black">
+<img src="../images-1-pc/hide-extensions.png" style="border:1px solid black">
 
 Here's what the icon looks like when the extension is displayed:
 
-<img src="../images-1-pc/icon-extension.png" style="border:1px solid black">
+<img src="../images-1-pc/show-file-extensions.png" style="border:1px solid black">
 
 Obviously, this is not a solution if you want to display file extensions for every file on your computer.  To accomplish that, you need to change a setting in your Preferences.  
 
 Click on an open Finder window, or on the Finder icon in the Dock to make Finder the active application.  Then drop down the Finder menu in the upper left and select `Preferences ...`.  
 
-![Mac extension preferences](../images-1-pc/mac-extension-preferences.png)
+
 
 Check the box next to `Show all filename extensions`, then close the window.  Now when you view files in finder, it should be clear what type of file they are based on their file extensions.
 
@@ -210,7 +212,13 @@ However, sometimes a newly-installed application may "hijack" a file association
 
 ## Changing file associations
 
-In Macs, it isn't particularly easy to find the file type association list.  However, it is relatively easy to find out what application is associated with one particular file type.  In Finder, locate a file of the type whose association you'd like to change.  In the Get Info window, there is a section labeled `Open with:`.  In that section, there is a dropdown list that shows both the default application that will generally be used to open that kind of file, and all of the applications that your computer thinks might be reasonable alternatives. If you change the selection in this dropdown, it will change the application that will be used to open **that particular file**.  However, if you then click the `Change All...` button below the list, that will change the default application used to open **all** files of that type (i.e. having that file extension). 
+In Macs, it isn't particularly easy to find the file type association list.  However, it is relatively easy to find out what application is associated with one particular file type.  In Finder, locate a file of the type whose association you'd like to change.  In the Get Info window, there is a section labeled `Open with:`.  In that section, there is a dropdown list that shows both the default application that will generally be used to open that kind of file, and all of the applications that your computer thinks might be reasonable alternatives. If you change the selection in this dropdown, it will change the application that will be used to open **that particular file**.  However, if you then click the `Change All...` button below the list, that will change the default application used to open **all** files of that type (i.e. having that file extension).
+
+<img src="../images-1-pc/default-apps.png" style="border:1px solid black">
+
+<img src="../images-1-pc/default-choices.png" style="border:1px solid black">
+
+<img src="../images-1-pc/default-app-by-extension.png" style="border:1px solid black">
 
 Once you have changed the file type association, you have changed what happens when you double-click on a file of that kind.  For example, if you associate `.png` images with Preview, the file will be opened with the typical viewing options, such as setting up a slideshow.  However, if you associate `.png` images with Adobe Photoshop, double-clicking on `.png` images will launch Photoshop (if it isn't already running), then open the file in the Photoshop application.
 
