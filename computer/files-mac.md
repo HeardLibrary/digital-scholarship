@@ -18,13 +18,13 @@ In this workshop, we assume that you are NOT an idiot and that you should be abl
 
 # The illusion of the desktop
 
-![](../images/mac-desktop.png)
+![](../images-1-mac/mac-desktop.png)
 
 When I look at the screen of my computer, I see what appears to be a flat surface.  There are some images that I've "saved to the desktop" and it appears that those little pictures are actually sitting on the surface of my desktop.  However, this is an illusion that my computer creates.
 
 ## Where actually is my desktop?
 
-<img src="../images/mac-desktop-tree.png" style="border:1px solid black">
+<img src="../images-1-mac/mac-desktop-tree.png" style="border:1px solid black">
 
 **Terminology tip: "directory" and "folder" mean the same thing.  We will use the terms interchangeably.**
 
@@ -34,17 +34,17 @@ In reality, the two image files are somewhere on the *hard drive* of my computer
 
 Long ago, personal computers could have only one user.  Now personal computers are set up to allow different users to log on and access their own files using personalized settings.  You may do some sort of login when you boot your computer, or your computer may be set up to log you in automatically.  
 
-![](../images/mac-system.png)
+![](../images-1-mac/mac-system.png)
 
 To see what users are enabled on your computer, drop down the apple menu at the upper left of your screen and select System Preferences.  If necessary, click on the button at the top that contains rows of dots so that you can see the preferences options.  Double click on Users & Groups.
 
-![](../images/mac-users.png)
+![](../images-1-mac/mac-users.png)
 
 There are several important things that you can see from this window.  You can see who is currently logged on, and whether the current user is an *administrator user* or not.  If you are using your own computer, you generally should be logged on as an administrator user, otherwise you may be prevented from taking important actions like installing new software.  If you are using a work computer, you may not be an administator user.  In that case, there may be some changes that you won't be allowed to make on your computer.
 
 You can also see that there are several other users listed that are not currently logged in.
 
-<img src="../images/mac-guest-desktop-tree.png" style="border:1px solid black">
+<img src="../images-1-mac/mac-guest-desktop-tree.png" style="border:1px solid black">
 
 Here is another view of the directory tree.  In the previous view, the home folder of the logged in user (baskausj) was selected.  I could tell that it was for the logged in user because the user folder icon was a little house.  In this view, the home folder of a non-logged in user (Guest) was selected.  Notice that the Guest user also has a folder called "Desktop".  Most of the Guest user folders have little red "do not" symbols on them.  Since I'm not logged in as the Guest user, I'm not allowed to access them.
 
@@ -106,13 +106,13 @@ Here are some examples.
 
 In the olden days, a computer could only run one program at a time.  However, now computers routinely run many programs at once.  Many of those programs start running when the computer is booted up and you don't even know it.  The operating system itself is a big program that runs all the time when the computer is turned on.  
 
-![Mac dock](../images/dock.png)
+![Mac dock](../images-1-mac/dock.png)
 
 Applications that have been started up by the user are usually shown in the *dock* at the bottom of the Mac desktop.  Icons of applications that are "pinned" to the dock are there all the time, regardless of whether they are running or not.  Applications that are running, but not pinned, will show up in the dock with dots under them while they are running.  They may disappear when you quit them.
 
 You should be aware that on a Mac just closing the final window of an application does not quit the application.  It is still running, and you'll see the dot under its icon in the dock.  
 
-![quit Mac](../images/quit-mac.png)
+![quit Mac](../images-1-mac/quit-mac.png)
 
 To actually quit the application, click on its icon in the dock, then go to the menu item named after the application.  Drop down the menu and select quit.  
 
@@ -120,11 +120,11 @@ To actually quit the application, click on its icon in the dock, then go to the 
 
 You can also quit an application by right-clicking on its icon in the dock, then selecting `Quit`.
 
-![Mac menu bar](../images/menu-bar.png)
+![Mac menu bar](../images-1-mac/menu-bar.png)
 
 Some of the applications that started up automatically when the computer booted have icons in the *menu bar* at the upper right of the Mac desktop. In this example, Dropbox, Box, Pulse Secure VPN, Docker, and other applications that started when the computer booted are showing up there.  In most cases, clicking on these icons will bring up some kind of menu that tells you the status of the application, gives notifications, or allows you to change settings.  For example, clicking on the Dropbox icon will tell you whether file synching is up to date.
 
-![Mac activity monitor](../images/activity-monitor.png)
+![Mac activity monitor](../images-1-mac/activity-monitor.png)
 
 The most complete way to know about every program that is running on a Mac is to launch the Activity Monitor.  To start up Activity Monitor, click on the spotlight search icon (magnifying glass) in the upper right of your computer, then start typing "activity".  When `Activity Monitor.app` appears as a list item, double-click on it.  
 
@@ -155,7 +155,7 @@ There are three ways in Finder that you can get information about a particular f
 2. Click on the file, then select `Get Info` from the Finder File menu at the upper left of the screen.
 3. Click on the file, hold down on the `command` key, then press the `i` key.  
 
-<img src="../images/get-info.png" style="border:1px solid black">
+<img src="../images-1-mac/get-info.png" style="border:1px solid black">
 
 The Get Info window shows all kinds of information about the file, including its kind, size, and often a preview of how the file would be rendered.  
 
@@ -165,17 +165,17 @@ The Get Info window has a checkbox to control whether the file extension is disp
 
 Here's what the icon looks like when the extension is being hidden:
 
-<img src="../images/icon-no-extension.png" style="border:1px solid black">
+<img src="../images-1-mac/icon-no-extension.png" style="border:1px solid black">
 
 Here's what the icon looks like when the extension is displayed:
 
-<img src="../images/icon-extension.png" style="border:1px solid black">
+<img src="../images-1-mac/icon-extension.png" style="border:1px solid black">
 
 Obviously, this is not a solution if you want to display file extensions for every file on your computer.  To accomplish that, you need to change a setting in your Preferences.  
 
 Click on an open Finder window, or on the Finder icon in the Dock to make Finder the active application.  Then drop down the Finder menu in the upper left and select `Preferences ...`.  
 
-![Mac extension preferences](../images/mac-extension-preferences.png)
+![Mac extension preferences](../images-1-mac/mac-extension-preferences.png)
 
 Check the box next to `Show all filename extensions`, then close the window.  Now when you view files in finder, it should be clear what type of file they are based on their file extensions.
 
