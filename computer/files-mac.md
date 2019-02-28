@@ -134,6 +134,8 @@ You are not likely to need to look at the Activity Monitor, but sometimes there 
 
 When discussing programs, we mentioned that script files generally can't run by themselves, but need to run within some other application.  Similarly, an image file can't display itself, an MP3 file can't make music by itself, and a Word document can't edit itself.  In all of these cases, the files are associated with some applcation that "knows" what to "do" with the file.  The connection between a type of file and the application that has been designated to handle it is called a *file type association*.  
 
+The file type association is important, because it controls what happens when you double-click on the icon of a file that isn't an executable file (a file that can run by itself).  "Opening" a file might mean opening it in an editor to change it, or it might mean making the file "do" something (like displaying an image, playing a sound file, or running a Python script).  In a lot of cases, whether opening a file allows you to edit it or have it do something may seem obvious.  Opening a word processing file generally means editing it, while opening a music file generally means playing it.  But in some cases, it isn't obvious.  You may be just as likely to want to edit a Python script as to run it when it's "opened".  We will learn how to control the behavior of "opening" files in a later section.
+
 A *file extension* is a series of characters that follow the main part of a file name and are separated from it by a dot (`.`).  For example, if a file is named `gorilla.jpg`, then `.jpg` is the extension for that file.  File extensions are used to indicate the type of a file.  They are mostly (but not completely) standardized.
 
 ## How does my computer know what a file is "for"?
@@ -153,7 +155,11 @@ There are three ways in Finder that you can get information about a particular f
 
 <img src="../images/get-info.png" style="border:1px solid black">
 
-The Get Info window shows all kinds of information about the file, including its kind, size, and often a preview of how the file would be rendered.  There is also a checkbox to control whether the file extension is displayed for that particular file.  Unchecking that box makes the extension show up in the file name in Finder:
+The Get Info window shows all kinds of information about the file, including its kind, size, and often a preview of how the file would be rendered.  
+
+## Unhiding file extensions
+
+The Get Info window also has a checkbox to control whether the file extension is displayed for that particular file.  Unchecking that box makes the extension show up in the file name in Finder:
 
 Here's what the icon looks like when the extension is being hidden:
 
@@ -163,12 +169,47 @@ Here's what the icon looks like when the extension is displayed:
 
 <img src="../images/icon-extension.png" style="border:1px solid black">
 
+Obviously, this is not a solution if you want to display file extensions for every file on your computer.  To accomplish that, you need to change a setting in your Preferences.  
+
+Click on a Finder window, or on the Finder icon in the Dock to make Finder the active application.  Then drop down the Finder menu in the upper left and select `Preferences ...`.  
+
+![Mac extension preferences](../images/mac-extension-preferences.png)
+
+Check the box next to `Show all filename extensions`, then close the window.  Now when you view files in finder, it should be clear what type of file they are based on their file extensions.
+
+Here are some common file extensions and the type of file they represent
+
+| extension | type |
+|----|----|
+| .txt | plain text files |
+| .csv | fielded text files (usually comma-separated values); generically spreadsheets |
+| .jpg or .jpeg | Joint Photography Experts Group (JPEG) image files |
+| .png | Portable Network Graphics (PNG) image files |
+| .docx | Microsoft Word documents |
+| .xlsx | Microsoft Excel spreadsheets |
+| .pptx | Microsoft PowerPoint presentations |
+| .json | Javascript Object Notation (JSON) data files |
+| . xml | eXtensible Markup Language (XML) data files |
+| .htm or .html | Hypertext Markup Language (HTML) web pages |
+| .md | Markdown formatted documents |
+| .mp3 | MP3 sound files |
+| .wav | WAV sound files |
+
+Notes:
+- Notice that in some cases there are two commonly used file extensions for a format.
+- In the case of files from Microsoft Office products, there is in each case an older format whose extension lacks the final "x".  For example: `.docx` and `.doc` are both used for Word documents.
 
 ## File type associations
 
-## Unhiding file extensions
+On a particular computer, a part of the system settings is a list of applications that are associated with particular file types (and extensions).  Generally, file type associations get set as the part of the process of installing an application.  For example, when you install Microsoft Office, the file types typically associated with Office applications (.docx, .xlsx, pptx, etc.) are associated with the appropriate Office application.
+
+However, sometimes a newly-installed application may "hijack" a file association by associating a previously assigned filetype to the new application.  For example, installing an open-source office suite might change the file associations to it instead of to Microsoft Office.  If the application is graceful, it will ask you whether you want to change the association before it makes the change.  However, sometimes applications make the change without consulting with you, which can be really annoying.
 
 ## Changing file associations
 
+In Macs, it isn't particularly easy to find the file type association list.  However, it is relatively easy to find out what application is associated with one particular file type.  In Finder, locate a file of the type whose association you'd like to change.  In the Get Info window, there is a section labeled `Open with:`.  In that section, there is a dropdown list that shows both the default application that will generally be used to open that kind of file, and all of the applications that your computer thinks might be reasonable alternatives. If you change the selection in this dropdown, it will change the application that will be used to open **that particular file**.  However, if you then click the `Change All...` button below the list, that will change the default application used to open **all** files of that type (i.e. having that file extension). 
+
+Once you have changed the file type association, you have changed what happens when you double-click on a file of that kind.  For example, if you associate `.png` images with Preview, the file will be opened with the typical viewing options, such as setting up a slideshow.  However, if you associate `.png` images with Adobe Photoshop, double-clicking on `.png` images will launch Photoshop (if it isn't already running), then open the file in the Photoshop application.
+
 ----
-Revised 2019-02-27
+Revised 2019-02-28
