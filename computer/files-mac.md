@@ -54,6 +54,11 @@ If you use your computer sometime and the desktop looks different, or folders an
 
 # Programs and files
 
+**Tech tip: The usual way to work with files in Windows is with *Finder*.  Finder is always running on a Mac -- there is no way to "turn it off".  To view files, click on the Finder icon at the lower left of your screen.**
+
+![Finder](../images-1-mac/finder.png)
+
+
 ## What is a file?
 
 The fundamental unit of organization of information on a computer is a *file*.  A file is a set of *bytes* that are grouped together for some purpose and given a common name.  We will not worry about the details of what a byte is -- we can just imagine that it is some unit of information.  By itself, a byte doesn't have any meaning.  It is given meaning when we know the type of the file that it's included in.  For example, in a text file, a byte might represent a character like a number or letter.  In an MP3 file, a byte is a digital representation of some part of a sound.  In a JPEG image, a byte represents some component of the colored dots that are used to make an image. 
@@ -63,6 +68,19 @@ A file has several fundamental properties.  One is its size.  File sizes are mea
 Another property of a file is its last-modified date.  This is the last time that the file was changed.  The last-modified date can be really useful if you are searching for a file but don't remember its name, or for sorting files by how recently you worked on them.
 
 File names and types are also important and will be discussed in detail below.
+
+## Get Info
+
+There are three ways in Finder that you can get information about a particular file.  
+
+
+1. Right click on the file, then select `Get Info` from the menu that opens.
+2. Click on the file, then select `Get Info` from the Finder File menu at the upper left of the screen.
+3. Click on the file, hold down on the `command` key, then press the `i` key.  
+
+<img src="../images-1-mac/get-info-unlabeled.png" style="border:1px solid black">
+
+The Get Info window shows all kinds of information about the file, including its kind, size, and often a preview of how the file would be rendered.  
 
 ## File names
 
@@ -146,18 +164,8 @@ In the past, Macs had a special way that they kept track of the type of a file. 
 
 Despite this change, Macs continue to hide the file extensions from their users.  Perhaps this is to reassure old Classic Mac users, or maybe Apple thinks that file extensions will be too confusing to new users.  However, in the spirit of "you are not an idiot and don't need to be treated like one", we are going to learn how to turn off the hiding of file extensions.
 
-## Get Info
-
-There are three ways in Finder that you can get information about a particular file, including its kind.  
-
-
-1. Right click on the file, then select `Get Info` from the menu that opens.
-2. Click on the file, then select `Get Info` from the Finder File menu at the upper left of the screen.
-3. Click on the file, hold down on the `command` key, then press the `i` key.  
-
 <img src="../images-1-mac/get-info.png" style="border:1px solid black">
 
-The Get Info window shows all kinds of information about the file, including its kind, size, and often a preview of how the file would be rendered.  
 
 ## Unhiding file extensions
 
@@ -212,6 +220,12 @@ However, sometimes a newly-installed application may "hijack" a file association
 In Macs, it isn't particularly easy to find the file type association list.  However, it is relatively easy to find out what application is associated with one particular file type.  In Finder, locate a file of the type whose association you'd like to change.  In the Get Info window, there is a section labeled `Open with:`.  In that section, there is a dropdown list that shows both the default application that will generally be used to open that kind of file, and all of the applications that your computer thinks might be reasonable alternatives. If you change the selection in this dropdown, it will change the application that will be used to open **that particular file**.  However, if you then click the `Change All...` button below the list, that will change the default application used to open **all** files of that type (i.e. having that file extension). 
 
 Once you have changed the file type association, you have changed what happens when you double-click on a file of that kind.  For example, if you associate `.png` images with Preview, the file will be opened with the typical viewing options, such as setting up a slideshow.  However, if you associate `.png` images with Adobe Photoshop, double-clicking on `.png` images will launch Photoshop (if it isn't already running), then open the file in the Photoshop application.
+
+## A final note on opening files
+
+You should keep in mind that setting a file association only changes the application that opens a file type when you double click on the file icon.  You can always open an application first, then go to the file menu and select the `open` option.  The application will open the file if it's able, regardless of whether the type of that file is associated with it.  
+
+This method is good if you usually open CSV files with a spreadsheet program, but want to actually look at the raw characters in the file by opening it in a text editor.
 
 [go on to Lesson 2: Directories](../directories-mac/)
 

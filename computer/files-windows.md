@@ -16,9 +16,11 @@ As long as everything works as it should, this simplified interface is great and
 
 In this workshop, we assume that you are NOT an idiot and that you should be able to see and understand what's actually going on with your computer without messing it up.  If the situation is not too complicated, you should be empowered to take action yourself.  If the problem is very technical, you should know enough to be able to seek out the help that you need. 
 
+**Tech tip: For many of the most common tasks that are done through menu choices, there is a shortcut key sequence that allows you to avoid having to go up to the menu and make a selection.  In many cases, you hold down on the `Ctrl` key and press some other key.  For example, the shortcut for print is usually to hold `Ctrl` then press `p`.  The shortcuts are often shown to the right of the menu item that they are equivalent to.**
+
 # The illusion of the desktop
 
-![](../images-1-pc/pc-desktop.png)
+![Windows desktop](../images-1-pc/pc-desktop.png)
 
 When I look at the screen of my computer, I see what appears to be a flat surface.  There are some images that I've "saved to the desktop" and it appears that those little pictures are actually sitting on the surface of my desktop.  However, this is an illusion that my computer creates.
 
@@ -34,27 +36,32 @@ In reality, the two image files are somewhere on the *hard drive* of my computer
 
 Long ago, personal computers could have only one user.  Now personal computers are set up to allow different users to log on and access their own files using personalized settings.  You may do some sort of login when you boot your computer, or your computer may be set up to log you in automatically.  
 
-![](../images-1-pc/pc-settings.png)
+<img src="../images-1-pc/pc-settings.png" style="border:1px solid black">
 
-To see what users are enabled on your computer, drop down the apple menu at the upper left of your screen and select System Preferences.  If necessary, click on the button at the top that contains rows of dots so that you can see the preferences options.  Double click on Users & Groups.
+To see what users are enabled on your computer, click on the Start icon (looks like a little window) at the lower left of your screen and click on the little gear. Click on Accounts.
 
-![](../images-1-pc/my-account.png)
+![Logged on user account](../images-1-pc/my-account.png)
 
-There are several important things that you can see from this window.  You can see who is currently logged on, and whether the current user is an *administrator user* or not.  If you are using your own computer, you generally should be logged on as an administrator user, otherwise you may be prevented from taking important actions like installing new software.  If you are using a work computer, you may not be an administator user.  In that case, there may be some changes that you won't be allowed to make on your computer.
+You will see a summary of the user that is logged in.  One important thing that you can see from this window is whether the current user is an *administrator user* or not.  If you are using your own computer, you generally should be logged on as an administrator user, otherwise you may be prevented from taking important actions like installing new software.  If you are using a work computer, you may not be an administator user.  In that case, there may be some changes that you won't be allowed to make on your computer.
 
-![](../images-1-pc/other-account.png)
+![List of other user accounts](../images-1-pc/other-account.png)
 
-You can also see that there are several other users listed that are not currently logged in.
+Click on the item labeled `Family & other users`, then scroll down the screen to `Other users`.  You can see there if there are other users listed that are not currently logged in.
 
 <img src="../images-1-pc/pc-other-desktop-tree.png" style="border:1px solid black">
 
-Here is another view of the directory tree.  In the previous view, the home folder of the logged in user (baskausj) was selected.  I could tell that it was for the logged in user because the user folder icon was a little house.  In this view, the home folder of a non-logged in user (Guest) was selected.  Notice that the Guest user also has a folder called "Desktop".  Most of the Guest user folders have little red "do not" symbols on them.  Since I'm not logged in as the Guest user, I'm not allowed to access them.
+Here is another view of the directory tree.  In the previous view, the `Desktop` folder was in the home folder of the logged in user (steve-bootcamp).  In this view, the `Desktop` folder was in the home folder of a non-logged in user (defaultuser1).  Both users have folders called "Desktop", but those folders are not the same.  As you can see, the defaultuser1 desktop folder is actually empty (vs. the steve-bootcamp user's desktop, which had the two image files).
 
 Every user on the computer has its own Documents, Downloads, Music, etc. folders.  It can be confusing if you unknowingly log out from your normal user account and log on to a different one.  The graphical desktop and the contents of all of these familiar folders will be different because they aren't actually the same folders as your user folders (even though they have the same names).  
 
 If you use your computer sometime and the desktop looks different, or folders and files appear to be missing, do not panic.  First, check whether you have accidentally logged in as a different user (then panic as necessary).
 
 # Programs and files
+
+**Tech tip: The usual way to work with files in Windows is with the *File Explorer*.  To launch File Explorer, click on the little file folder in the lower left of the screen.  It's usually the first icon after the search box.**
+
+![Opening File Explorer](../images-1-pc/file-explorer.png)
+
 
 ## What is a file?
 
@@ -65,6 +72,17 @@ A file has several fundamental properties.  One is its size.  File sizes are mea
 Another property of a file is its last-modified date.  This is the last time that the file was changed.  The last-modified date can be really useful if you are searching for a file but don't remember its name, or for sorting files by how recently you worked on them.
 
 File names and types are also important and will be discussed in detail below.
+
+## File Properties
+
+There are two ways in Windows that you can get information about a particular file.  
+
+1. Right click on the file, then select `Properties` from the menu that opens.
+2. Click on the file, then select `Properties` from the Home ribbon at the top of the File Explorer window.
+
+<img src="../images-1-pc/file-properties.png" style="border:1px solid black">
+
+The various tabs of the File Explorer window show all kinds of information about the file, including its kind, size, and modification date.  
 
 ## File names
 
@@ -108,30 +126,23 @@ Here are some examples.
 
 In the olden days, a computer could only run one program at a time.  However, now computers routinely run many programs at once.  Many of those programs start running when the computer is booted up and you don't even know it.  The operating system itself is a big program that runs all the time when the computer is turned on.  
 
-![Mac dock](../images-1-pc/task-bar.png)
+![Windows task bar](../images-1-pc/task-bar.png)
 
-Applications that have been started up by the user are usually shown in the *dock* at the bottom of the Mac desktop.  Icons of applications that are "pinned" to the dock are there all the time, regardless of whether they are running or not.  Applications that are running, but not pinned, will show up in the dock with dots under them while they are running.  They may disappear when you quit them.
+Applications that have been started up by the user are usually shown in the *task bar* at the bottom of the Windows desktop.  Icons of applications that are "pinned" to the task bar are there all the time, regardless of whether they are running or not.  Applications that are running have blue bars under them.  Applications that aren't pinned will show up in the task bar while they are running, but they will disappear when you exit them.
 
-You should be aware that on a Mac just closing the final window of an application does not quit the application.  It is still running, and you'll see the dot under its icon in the dock.  
+In Windows, to exit an application, all you need to do to exit an application is to click on the X in the last open window associated with that application.  Alternatively, you can right-click on its icon in the task bar, then select `Close window`.   
 
+![Windows system tray](../images-1-pc/system-tray.png)
 
+Some of the applications that started up automatically when the computer booted have icons in the *system tray* at the lower right of the Mac desktop. In this example, Dropbox and OneDrive (applications that started when the computer booted) are showing up there.  There are several other applications that were launched when the system booted that show up when you click on the up arrow on the left side of the system tray.  In most cases, clicking on these icons will bring up some kind of menu that tells you the status of the application, gives notifications, or allows you to change settings.  For example, clicking on the Dropbox icon will tell you whether file synching is up to date.
 
-To actually quit the application, click on its icon in the dock, then go to the menu item named after the application.  Drop down the menu and select quit.  
+The most complete way to know about every program that is running on in Windows is to launch the Task Manager.  To start up the Task Manager, hold down on the `Ctrl` and `Alt` keys at the same time, then press the `Delete` key.  This key combination (sometimes called the Windows "three finger salute") is the method of last resort for getting your computer's attention when it's locked up.  From the menu that pops up, select `Task Manager`.  
 
-**Tech tip: For many of the most common tasks that are done through menu choices, there is a shortcut key sequence that allows you to avoid having to go up to the menu and make a selection.  In many cases, you hold down on the `command` key and press some other key.  For example, the shortcut for quit is hold `command` then press `q`.  Some other shortcuts are nearly impossible to remember and require pressing three keys at once.  The shortcuts are often shown to the right of the menu item that they are equivalent to.**
+![Windows task manager](../images-1-pc/task-manager.png)
 
-You can also quit an application by right-clicking on its icon in the dock, then selecting `Quit`.
+Under normal circumstances, you are not likely to need to look at the Task Manager, but sometimes there are stubborn problems caused when a program won't finish quitting properly, or gets out of control and won't quit.  In the Task Manager, you can click on the name of the running App, then click on the `End task` button at the lower right of the window.  
 
-
-Some of the applications that started up automatically when the computer booted have icons in the *menu bar* at the upper right of the Mac desktop. In this example, Dropbox, Box, Pulse Secure VPN, Docker, and other applications that started when the computer booted are showing up there.  In most cases, clicking on these icons will bring up some kind of menu that tells you the status of the application, gives notifications, or allows you to change settings.  For example, clicking on the Dropbox icon will tell you whether file synching is up to date.
-
-![Mac activity monitor](../images-1-pc/task-manager.png)
-
-The most complete way to know about every program that is running on a Mac is to launch the Activity Monitor.  To start up Activity Monitor, click on the spotlight search icon (magnifying glass) in the upper right of your computer, then start typing "activity".  When `Activity Monitor.app` appears as a list item, double-click on it.  
-
-You are not likely to need to look at the Activity Monitor, but sometimes there are stubborn problems caused when a program won't finish quitting properly, or gets out of control and won't quit.  In the activity monitor, you can click on the name of the running "process", then click on the X button at the upper left of the window.  
-
-**Note:** it is not advisable to use this as a routine way to quit programs, or to quit processes whose purpose you don't understand.  However, the Activity Monitor is a way to discover if an application is a "hog" that is using up a lot of your system resources and slowing down other applications.  This may be relevant if you use a lot of applications, then close their windows without actually quitting them as described above.
+**Note:** it is not advisable to use this as a routine way to quit programs, or to quit background processes whose purpose you don't understand.  However, the Task Manager is a way to discover if an application is a "hog" that is using up a lot of your system resources and slowing down other applications.  In other cases, you inadvertently run multiple copies of the same application, and one or more copies of the applications that are "stuck" may be preventing the applications that you see on your screen from running properly.  With Task Manager, you can shut down the multiple instances of the application, then restart it in the normal way.
 
 # File associations and extensions
 
@@ -143,44 +154,29 @@ A *file extension* is a series of characters that follow the main part of a file
 
 ## How does my computer know what a file is "for"?
 
-In the past, Macs had a special way that they kept track of the type of a file.  The file type was stored as metadata within the file itself.  In that system, any Mac could know the type of a file by looking at that metadata, although other brands of computers would probably not know what to do with them.  However, Macs now follow the convention used by most of the rest of the computing world: use a file extension to keep track of the type of a file.
+Windows computers track the type of a file by following the convention used by most of the computing world: use a file extension to know what kind of file it is.
 
-Despite this change, Macs continue to hide the file extensions from their users.  Perhaps this is to reassure old Classic Mac users, or maybe Apple thinks that file extensions will be too confusing to new users.  However, in the spirit of "you are not an idiot and don't need to be treated like one", we are going to learn how to turn off the hiding of file extensions.
-
-## Get Info
-
-There are three ways in Finder that you can get information about a particular file, including its kind.  
-
-
-1. Right click on the file, then select `Get Info` from the menu that opens.
-2. Click on the file, then select `Get Info` from the Finder File menu at the upper left of the screen.
-3. Click on the file, hold down on the `command` key, then press the `i` key.  
-
-<img src="../images-1-pc/file-properties.png" style="border:1px solid black">
-
-The Get Info window shows all kinds of information about the file, including its kind, size, and often a preview of how the file would be rendered.  
+Despite this, by default Windows computers hide the file extensions from their users.  Perhaps Microsoft thinks that file extensions will be too confusing to new users.  In the spirit of "you are not an idiot and don't need to be treated like one", we are going to learn how to turn off the hiding of file extensions.
 
 ## Unhiding file extensions
 
 <img src="../images-1-pc/open-folder-options.png" style="border:1px solid black">
 
-The Get Info window has a checkbox to control whether the file extension is displayed for that particular file.  Unchecking that box makes the extension show up in the file name in Finder:
+The easiest way to get to the File Explorer Options is to start typing "folder" in the search box at the lower left of the screen.  (Why "folder" and not "file explorer"? Dunno.)  When File Explorer Options appears, click on it.  When the window opens up, click on the View tab. 
 
-Here's what the icon looks like when the extension is being hidden:
+In the Advanced settings section of the tab, there are a number of checkboxes for controlling how files and folders are displayed. 
+
+Notice how icon labels look when the extension is being hidden:
 
 <img src="../images-1-pc/hide-extensions.png" style="border:1px solid black">
 
-Here's what the icon looks like when the extension is displayed:
+Click to uncheck the `Hide extensions for known file types` checkbox, then click `Apply`. Notice that the labels under icons now show the file extension: 
 
 <img src="../images-1-pc/show-file-extensions.png" style="border:1px solid black">
 
-Obviously, this is not a solution if you want to display file extensions for every file on your computer.  To accomplish that, you need to change a setting in your Preferences.  
+It is really pretty difficult to do anything very complex on your computer without being able to see file extensions, so you should leave them as visible.  
 
-Click on an open Finder window, or on the Finder icon in the Dock to make Finder the active application.  Then drop down the Finder menu in the upper left and select `Preferences ...`.  
-
-
-
-Check the box next to `Show all filename extensions`, then close the window.  Now when you view files in finder, it should be clear what type of file they are based on their file extensions.
+**Tech tip: It is also an insult to your intelligence that your computer hides files from you.  So while you have this dialog open, you should click the `Show hidden files, folders, and drives` radio button, then hit Apply.  Hidden folders often contain files that you shouldn't mess with, but there is definitely no harm in you being able to see them.  They show up as gray in File Explorer.**
 
 Here are some common file extensions and the type of file they represent
 
@@ -212,13 +208,27 @@ However, sometimes a newly-installed application may "hijack" a file association
 
 ## Changing file associations
 
-In Macs, it isn't particularly easy to find the file type association list.  However, it is relatively easy to find out what application is associated with one particular file type.  In Finder, locate a file of the type whose association you'd like to change.  In the Get Info window, there is a section labeled `Open with:`.  In that section, there is a dropdown list that shows both the default application that will generally be used to open that kind of file, and all of the applications that your computer thinks might be reasonable alternatives. If you change the selection in this dropdown, it will change the application that will be used to open **that particular file**.  However, if you then click the `Change All...` button below the list, that will change the default application used to open **all** files of that type (i.e. having that file extension).
+In Windows, it's relatively easy to look at the file type association list.  To get to the list, click the Start button in the lower left, then click on the settings gear.  
+
+<img src="../images-1-pc/settings-apps.png" style="border:1px solid black">
+
+Click on the `Apps` item.
 
 <img src="../images-1-pc/default-apps.png" style="border:1px solid black">
 
+Click on the `Default apps` option.
+
 <img src="../images-1-pc/default-choices.png" style="border:1px solid black">
 
+Scroll down the screen until you see a list of ways to choose default apps.  
+
+<img src="../images-1-pc/pick-default-method.png" style="border:1px solid black">
+
+Click on the `Choose default apps by file type` option.  It may take a few moments for the window to be populated with all of the file types.
+
 <img src="../images-1-pc/default-app-by-extension.png" style="border:1px solid black">
+
+Eventually, you will see a list of file extensions, with a description of the file type below them.  At the right of the screen, you can select what application should be associated with that file type.  If there is already an application, you can click on the option to change it.  If it says "Choose a default", you may have trouble finding an application that will work for that kind of file.
 
 Once you have changed the file type association, you have changed what happens when you double-click on a file of that kind.  For example, if you associate `.png` images with Preview, the file will be opened with the typical viewing options, such as setting up a slideshow.  However, if you associate `.png` images with Adobe Photoshop, double-clicking on `.png` images will launch Photoshop (if it isn't already running), then open the file in the Photoshop application.
 
