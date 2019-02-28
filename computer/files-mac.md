@@ -146,8 +146,6 @@ Despite this change, Macs continue to hide the file extensions from their users.
 
 There are three ways in Finder that you can get information about a particular file, including its kind.  
 
-![Mac icon without extension](../images/icon-no-extension.png)
-
 
 1. Right click on the file, then select `Get Info` from the menu that opens.
 2. Click on the file, then select `Get Info` from the Finder File menu at the upper left of the screen.
@@ -157,7 +155,13 @@ There are three ways in Finder that you can get information about a particular f
 
 The Get Info window shows all kinds of information about the file, including its kind, size, and often a preview of how the file would be rendered.  There is also a checkbox to control whether the file extension is displayed for that particular file.  Unchecking that box makes the extension show up in the file name in Finder:
 
-![Mac icon with extension](../images/icon-extension.png)
+Here's what the icon looks like when the extension is being hidden:
+
+<img src="../images/icon-no-extension.png" style="border:1px solid black">
+
+Here's what the icon looks like when the extension is displayed:
+
+<img src="../images/icon-extension.png" style="border:1px solid black">
 
 
 ## File type associations
