@@ -22,7 +22,7 @@ Topics include:
 - Files and programs
 - File associations and extensions
 
-Go to Lesson 1: Files [for Mac](files-mac/) or [for PC](files-pc/)
+Go to Lesson 1: Files [for Mac](files-mac/) or [for Windows](files-windows/)
 
 ## Lesson 2: Directories
 
@@ -31,7 +31,7 @@ Topics include:
 - The cloud
 - Downloads
 
-[Go to Lesson 2: Directories](directories)
+Go to Lesson 2: Directories [for Mac](directories-mac/) or [for Windows](directories-windows/)
 
 ## Lesson 3: Installing software
 
