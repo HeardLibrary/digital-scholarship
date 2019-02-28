@@ -228,9 +228,17 @@ Click on the `Choose default apps by file type` option.  It may take a few momen
 
 <img src="../images-1-pc/default-app-by-extension.png" style="border:1px solid black">
 
-Eventually, you will see a list of file extensions, with a description of the file type below them.  At the right of the screen, you can select what application should be associated with that file type.  If there is already an application, you can click on the option to change it.  If it says "Choose a default", you may have trouble finding an application that will work for that kind of file.
+Eventually, you will see a list of file extensions, with a description of the file type below them.  At the right of the screen, you can select what application should be associated with that file type.  If there is already an application, you can click on the option to change it.  If it says "Choose a default", you may have trouble finding an application that will work for that kind of file. 
 
-Once you have changed the file type association, you have changed what happens when you double-click on a file of that kind.  For example, if you associate `.png` images with Preview, the file will be opened with the typical viewing options, such as setting up a slideshow.  However, if you associate `.png` images with Adobe Photoshop, double-clicking on `.png` images will launch Photoshop (if it isn't already running), then open the file in the Photoshop application.
+Once you have changed the file type association, you have changed what happens when you double-click on a file of that kind.  For example, if you associate `.png` images with Photos, the file will be opened with the typical viewing options, such as setting up a slideshow.  However, if you associate `.png` images with Adobe Photoshop, double-clicking on `.png` images will launch Photoshop (if it isn't already running), then open the file in the Photoshop application.
+
+When you are at the screen for selecting how to choose the default app, alternatively, you can click on `Set defaults by app`.  In that case, you will be presented with a list of applications installed on your computer.  Select an application, then click `Manage`.  That will present you a list of file types that could potentially be handled by that app.  In some cases, the file type might already be associated with the app, but in other cases, you might want to change the file type to the application that you are managing.  For example, CSV files may automatically have been associated with Microsoft Excel, but you might want to open them instead with OpenOffice Calc. 
+
+## A final note on opening files
+
+You should keep in mind that setting a file association only changes the application that opens a file type when you double click on the file icon.  You can always open an application first, then go to the file menu and select the `open` option.  The application will open the file if it's able, regardless of whether the type of that file is associated with it.  
+
+This method is good if you usually open CSV files with a spreadsheet program, but want to actually look at the raw characters in the file by opening it in a text editor.
 
 [go on to Lesson 2: Directories](../directories-windows/)
 
