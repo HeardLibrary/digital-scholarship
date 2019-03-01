@@ -87,12 +87,12 @@ The Get Info window shows all kinds of information about the file, including its
 Files are given names so that they can be found and recognized by humans or computer programs.  File names are a series of characters.  The rules about what characters can be used in file names vary among computer systems and programs that use the files.  In many cases, a computer system will let you get away with using unusual characters in a file name without complaining.  However, that same file name might cause a problem in another computer system.  Here are some good practices related to file names:
 
 - The most "safe" characters to use in file names are letters, numbers, and underscore (`_`). Dashes (`-`) are almost always safe.
-- It is not a good idea to put spaces in file names.  Most systems are fine with spaces, but there are infrequent circumstances when they cause problems.  Using spaces in file names is like not wearing your seat belt in a car.  99% of the time you can get away with it, but a small fraction of the time it causes problems.
-- In many cases, systems that use file names are *case-insensitive*.  That means they don't distinguish between upper- and lower-case letters.  However, that is not always true. If you are sloppy about the case of file names (for example, naming a file "Myfile.docx", then referring to it as "myfile.docx"), you will usually get away with it, but on some occasions, the file won't be recognized if the case is wrong.  For that reason, it is a good general practice to use only lower-case letters in a file name unless you have a reason not to.  If you choose a system of capitalization that includes capital letters (such as [camelCase](https://en.wikipedia.org/wiki/Camel_case)), use it consistently.
+- It is not a good idea to put spaces in file names.  Most systems are fine with spaces, but there are infrequent circumstances when they cause problems.  Using spaces in file names is like not wearing your seat belt in a car.  99% of the time you can get away with it, but a small fraction of the time it can cause serious problems.
+- Systems that use file names are often *case-insensitive*.  That means they don't distinguish between upper- and lower-case letters.  However, that is not always true. If you are sloppy about the case of file names (for example, naming a file "Myfile.docx", then referring to it as "myfile.docx"), you will usually get away with it, but on some occasions, the file won't be recognized if the case is wrong.  For that reason, it is a good general practice to use only lower-case letters in a file name unless you have a reason not to.  If you choose a system of capitalization that includes capital letters (such as [camelCase](https://en.wikipedia.org/wiki/Camel_case)), use it consistently.
 - Usually it doesn't matter where you put numbers in a file name, but there are odd situations where having a file name that starts with a number could cause a problem.
-- Don't use weird characters like parentheses in file names, even if the system you are using will let you.
+- Don't use weird characters like parentheses in file names, even if the system you are using will let you get away with it.
 
-Example of a "safe" file names:
+Examples of a "safe" file names:
 
 ```
 my_little_pony_previous.xlsx
@@ -114,11 +114,11 @@ A *program* is a set of instructions that cause a series of actions to take plac
 
 **Terminology tip: An "application" is a program that can interact with a user.  In this context, we will use the terms "program" and "application" interchangeably.  The term "app" is more commonly used to describe programs on portable devices, but it's just short for "application".**
 
-Programs are usually stored as files.  An *executable file* is a program that can run by itself and a *script* is often a file that contains commands that are carried out by some other program (sometimes called an *engine*). You can usually launch executable files by double-clicking on them.  Scripts have to be loaded into some other application after it is started up.
+Programs are usually stored as files.  An *executable file* is a program that can run by itself and a *script* is often a file that contains commands that are carried out by some other program (sometimes called an *engine*). You can usually launch executable files by double-clicking on them.  Scripts have to be loaded into some other application after it is started up; they generally can't run by themselves.
 
 Here are some examples.  
 - Microsoft Word is a program that is an application.  You double-click on an executable file to make it run.
-- An R script can be stored in a text file.  When the text file is loaded into an application like RStudio, it can run and make things happen.  However, double-clicking on the script file itself won't generally make it run (although it might cause it to be opened for editing in RStudio).
+- An R script can be stored in a text file.  When the text file is loaded into an application like RStudio, it can run and make things happen.  However, double-clicking on the script file itself won't generally make it run (although that might cause it to be opened for editing in RStudio).
 
 ## What does it mean for a application to be "running"?
 

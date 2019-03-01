@@ -44,7 +44,7 @@ To see what users are enabled on your computer, click on the Start icon (looks l
 
 You will see a summary of the user that is logged in.  One important thing that you can see from this window is whether the current user is an *administrator user* or not.  If you are using your own computer, you generally should be logged on as an administrator user, otherwise you may be prevented from taking important actions like installing new software.  If you are using a work computer, you may not be an administator user.  In that case, there may be some changes that you won't be allowed to make on your computer.
 
-![List of other user accounts](../images-1-pc/other-account.png)
+<img src="../images-1-pc/other-account.png" style="border:1px solid black">
 
 Click on the item labeled `Family & other users`, then scroll down the screen to `Other users`.  You can see there if there are other users listed that are not currently logged in.
 
@@ -52,7 +52,7 @@ Click on the item labeled `Family & other users`, then scroll down the screen to
 
 Here is another view of the directory tree.  In the previous view, the `Desktop` folder was in the home folder of the logged in user (steve-bootcamp).  In this view, the `Desktop` folder was in the home folder of a non-logged in user (defaultuser1).  Both users have folders called "Desktop", but those folders are not the same.  As you can see, the defaultuser1 desktop folder is actually empty (vs. the steve-bootcamp user's desktop, which had the two image files).
 
-Every user on the computer has its own Documents, Downloads, Music, etc. folders.  It can be confusing if you unknowingly log out from your normal user account and log on to a different one.  The graphical desktop and the contents of all of these familiar folders will be different because they aren't actually the same folders as your user folders (even though they have the same names).  
+Every user of the computer has its own Documents, Downloads, Music, etc. folders.  It can be confusing if you unknowingly log out from your normal user account and log on to a different one.  The graphical desktop and the contents of all of these familiar folders will be different because they aren't actually the same folders as your own user folders (even though they have the same names).  
 
 If you use your computer sometime and the desktop looks different, or folders and files appear to be missing, do not panic.  First, check whether you have accidentally logged in as a different user (then panic as necessary).
 
@@ -82,19 +82,19 @@ There are two ways in Windows that you can get information about a particular fi
 
 <img src="../images-1-pc/file-properties.png" style="border:1px solid black">
 
-The various tabs of the File Explorer window show all kinds of information about the file, including its kind, size, and modification date.  
+The various tabs of the File Properties window show all kinds of information about the file, including its kind, size, and modification date.  
 
 ## File names
 
 Files are given names so that they can be found and recognized by humans or computer programs.  File names are a series of characters.  The rules about what characters can be used in file names vary among computer systems and programs that use the files.  In many cases, a computer system will let you get away with using unusual characters in a file name without complaining.  However, that same file name might cause a problem in another computer system.  Here are some good practices related to file names:
 
 - The most "safe" characters to use in file names are letters, numbers, and underscore (`_`). Dashes (`-`) are almost always safe.
-- It is not a good idea to put spaces in file names.  Most systems are fine with spaces, but there are infrequent circumstances when they cause problems.  Using spaces in file names is like not wearing your seat belt in a car.  99% of the time you can get away with it, but a small fraction of the time it causes problems.
-- In many cases, systems that use file names are *case-insensitive*.  That means they don't distinguish between upper- and lower-case letters.  However, that is not always true. If you are sloppy about the case of file names (for example, naming a file "Myfile.docx", then referring to it as "myfile.docx"), you will usually get away with it, but on some occasions, the file won't be recognized if the case is wrong.  For that reason, it is a good general practice to use only lower-case letters in a file name unless you have a reason not to.  If you choose a system of capitalization that includes capital letters (such as [camelCase](https://en.wikipedia.org/wiki/Camel_case)), use it consistently.
+- It is not a good idea to put spaces in file names.  Most systems are fine with spaces, but there are infrequent circumstances when they cause problems.  Using spaces in file names is like not wearing your seat belt in a car.  99% of the time you can get away with it, but a small fraction of the time it can cause serious problems.
+- Systems that use file names are often *case-insensitive*.  That means they don't distinguish between upper- and lower-case letters.  However, that is not always true. If you are sloppy about the case of file names (for example, naming a file "Myfile.docx", then referring to it as "myfile.docx"), you will usually get away with it, but on some occasions, the file won't be recognized if the case is wrong.  For that reason, it is a good general practice to use only lower-case letters in a file name unless you have a reason not to.  If you choose a system of capitalization that includes capital letters (such as [camelCase](https://en.wikipedia.org/wiki/Camel_case)), use it consistently.
 - Usually it doesn't matter where you put numbers in a file name, but there are odd situations where having a file name that starts with a number could cause a problem.
-- Don't use weird characters like parentheses in file names, even if the system you are using will let you.
+- Don't use weird characters like parentheses in file names, even if the system you are using will let you get away with it.
 
-Example of a "safe" file names:
+Examples of a "safe" file names:
 
 ```
 my_little_pony_previous.xlsx
@@ -116,11 +116,11 @@ A *program* is a set of instructions that cause a series of actions to take plac
 
 **Terminology tip: An "application" is a program that can interact with a user.  In this context, we will use the terms "program" and "application" interchangeably.  The term "app" is more commonly used to describe programs on portable devices, but it's just short for "application".**
 
-Programs are usually stored as files.  An *executable file* is a program that can run by itself and a *script* is often a file that contains commands that are carried out by some other program (sometimes called an *engine*). You can usually launch executable files by double-clicking on them.  Scripts have to be loaded into some other application after it is started up.
+Programs are usually stored as files.  An *executable file* is a program that can run by itself and a *script* is often a file that contains commands that are carried out by some other program (sometimes called an *engine*). You can usually launch executable files by double-clicking on them.  Scripts have to be loaded into some other application after it is started up; they generally can't run by themselves.
 
 Here are some examples.  
 - Microsoft Word is a program that is an application.  You double-click on an executable file to make it run.
-- An R script can be stored in a text file.  When the text file is loaded into an application like RStudio, it can run and make things happen.  However, double-clicking on the script file itself won't generally make it run (although it might cause it to be opened for editing in RStudio).
+- An R script can be stored in a text file.  When the text file is loaded into an application like RStudio, it can run and make things happen.  However, double-clicking on the script file itself won't generally make it run (although that might cause it to be opened for editing in RStudio).
 
 ## What does it mean for a application to be "running"?
 
@@ -130,7 +130,7 @@ In the olden days, a computer could only run one program at a time.  However, no
 
 Applications that have been started up by the user are usually shown in the *task bar* at the bottom of the Windows desktop.  Icons of applications that are "pinned" to the task bar are there all the time, regardless of whether they are running or not.  Applications that are running have blue bars under them.  Applications that aren't pinned will show up in the task bar while they are running, but they will disappear when you exit them.
 
-In Windows, to exit an application, all you need to do to exit an application is to click on the X in the last open window associated with that application.  Alternatively, you can right-click on its icon in the task bar, then select `Close window`.   
+In Windows, to exit an application all you need to do to is click on the X in the upper right corner of the last open window associated with that application.  Alternatively, you can right-click on the application's icon in the task bar, then select `Close window`.   
 
 ![Windows system tray](../images-1-pc/system-tray.png)
 
@@ -138,11 +138,11 @@ Some of the applications that started up automatically when the computer booted 
 
 The most complete way to know about every program that is running on in Windows is to launch the Task Manager.  To start up the Task Manager, hold down on the `Ctrl` and `Alt` keys at the same time, then press the `Delete` key.  This key combination (sometimes called the Windows "three finger salute") is the method of last resort for getting your computer's attention when it's locked up.  From the menu that pops up, select `Task Manager`.  
 
-![Windows task manager](../images-1-pc/task-manager.png)
+<img src="../images-1-pc/task-manager.png" style="border:1px solid black">
 
 Under normal circumstances, you are not likely to need to look at the Task Manager, but sometimes there are stubborn problems caused when a program won't finish quitting properly, or gets out of control and won't quit.  In the Task Manager, you can click on the name of the running App, then click on the `End task` button at the lower right of the window.  
 
-**Note:** it is not advisable to use this as a routine way to quit programs, or to quit background processes whose purpose you don't understand.  However, the Task Manager is a way to discover if an application is a "hog" that is using up a lot of your system resources and slowing down other applications.  In other cases, you inadvertently run multiple copies of the same application, and one or more copies of the applications that are "stuck" may be preventing the applications that you see on your screen from running properly.  With Task Manager, you can shut down the multiple instances of the application, then restart it in the normal way.
+**Note:** it is not advisable to use this as a routine way to quit programs, or to quit background processes whose purpose you don't understand.  However, the Task Manager is a way to discover if an application is a "hog" that is using up a lot of your system resources and slowing down other applications.  In other cases, you might inadvertently launch multiple copies of the same application, with one or more invisible copies of the application being "stuck" and preventing the application copy that you see on your screen from running properly.  With Task Manager, you can shut down the multiple instances of the application, then restart it in the normal way.
 
 # File associations and extensions
 
@@ -162,7 +162,7 @@ Despite this, by default Windows computers hide the file extensions from their u
 
 <img src="../images-1-pc/open-folder-options.png" style="border:1px solid black">
 
-The easiest way to get to the File Explorer Options is to start typing "folder" in the search box at the lower left of the screen.  (Why "folder" and not "file explorer"? Dunno.)  When File Explorer Options appears, click on it.  When the window opens up, click on the View tab. 
+The easiest way to get to the File Explorer Options is to start typing "folder" in the search box at the lower left of the screen.  (You can also type "file explorer options", but that's more work.)  When File Explorer Options appears, click on it.  When the window opens up, click on the View tab. 
 
 In the Advanced settings section of the tab, there are a number of checkboxes for controlling how files and folders are displayed. 
 
@@ -174,9 +174,9 @@ Click to uncheck the `Hide extensions for known file types` checkbox, then click
 
 <img src="../images-1-pc/show-file-extensions.png" style="border:1px solid black">
 
-It is really pretty difficult to do anything very complex on your computer without being able to see file extensions, so you should leave them as visible.  
+It is really pretty difficult to do anything very complex on your computer without being able to see file extensions, so you should leave the extensions visible.  
 
-**Tech tip: It is also an insult to your intelligence that your computer hides files from you.  So while you have this dialog open, you should click the `Show hidden files, folders, and drives` radio button, then hit Apply.  Hidden folders often contain files that you shouldn't mess with, but there is definitely no harm in you being able to see them.  They show up as gray in File Explorer.**
+**Tech tip: It is also an insult to your intelligence that your computer hides some folders and files from you.  So while you have this dialog open, you should click the `Show hidden files, folders, and drives` radio button, then hit Apply.  Hidden folders often contain files that you shouldn't mess with, but there is definitely no harm in you being able to see them.  They show up as gray in File Explorer.**
 
 Here are some common file extensions and the type of file they represent
 
@@ -197,12 +197,12 @@ Here are some common file extensions and the type of file they represent
 | .wav | WAV sound files |
 
 Notes:
-- Notice that in some cases there are two commonly used file extensions for a format.
+- Notice that in some cases there are two commonly used file extensions for a file type.
 - In the case of files from Microsoft Office products, there is in each case an older format whose extension lacks the final "x".  For example: `.docx` and `.doc` are both used for Word documents.
 
 ## File type associations
 
-On a particular computer, a part of the system settings is a list of applications that are associated with particular file types (and extensions).  Generally, file type associations get set as the part of the process of installing an application.  For example, when you install Microsoft Office, the file types typically associated with Office applications (.docx, .xlsx, pptx, etc.) are associated with the appropriate Office application.
+On a particular computer, a part of the system settings is a list of applications that are associated with particular file types (and the extensions that identify them).  Generally, file type associations get set as the part of the process of installing an application.  For example, when you install Microsoft Office, the file types typically associated with Office applications (.docx, .xlsx, pptx, etc.) are associated with the appropriate Office application.
 
 However, sometimes a newly-installed application may "hijack" a file association by associating a previously assigned filetype to the new application.  For example, installing an open-source office suite might change the file associations to it instead of to Microsoft Office.  If the application is graceful, it will ask you whether you want to change the association before it makes the change.  However, sometimes applications make the change without consulting with you, which can be really annoying.
 
@@ -218,8 +218,6 @@ Click on the `Apps` item.
 
 Click on the `Default apps` option.
 
-<img src="../images-1-pc/default-choices.png" style="border:1px solid black">
-
 Scroll down the screen until you see a list of ways to choose default apps.  
 
 <img src="../images-1-pc/pick-default-method.png" style="border:1px solid black">
@@ -230,15 +228,15 @@ Click on the `Choose default apps by file type` option.  It may take a few momen
 
 Eventually, you will see a list of file extensions, with a description of the file type below them.  At the right of the screen, you can select what application should be associated with that file type.  If there is already an application, you can click on the option to change it.  If it says "Choose a default", you may have trouble finding an application that will work for that kind of file. 
 
-Once you have changed the file type association, you have changed what happens when you double-click on a file of that kind.  For example, if you associate `.png` images with Photos, the file will be opened with the typical viewing options, such as setting up a slideshow.  However, if you associate `.png` images with Adobe Photoshop, double-clicking on `.png` images will launch Photoshop (if it isn't already running), then open the file in the Photoshop application.
+Once you have changed the file type association, you have changed what happens when you double-click on a file of that kind.  For example, if you associate `.png` images with the Photos app, double-clicking on an image file will let you view the file and do some simple things with it.  However, if you associate `.png` images with Adobe Photoshop, double-clicking on `.png` images will launch Photoshop (if it isn't already running), then open the file in the Photoshop application.
 
-When you are at the screen for selecting how to choose the default app, alternatively, you can click on `Set defaults by app`.  In that case, you will be presented with a list of applications installed on your computer.  Select an application, then click `Manage`.  That will present you a list of file types that could potentially be handled by that app.  In some cases, the file type might already be associated with the app, but in other cases, you might want to change the file type to the application that you are managing.  For example, CSV files may automatically have been associated with Microsoft Excel, but you might want to open them instead with OpenOffice Calc. 
+When you are at the screen for selecting how to choose the default app, you can alternatively click on `Set defaults by app`.  In that case, you will be presented with a list of applications installed on your computer.  Select an application, then click `Manage`.  That will present you a list of file types that could potentially be handled by that app.  In some cases, the file type might already be associated with the app, but in other cases, you might want to change the file type to the application that you are managing.  For example, CSV files may automatically have been associated with Microsoft Excel, but you might want to open them instead with OpenOffice Calc. 
 
 ## A final note on opening files
 
-You should keep in mind that setting a file association only changes the application that opens a file type when you double click on the file icon.  You can always open an application first, then go to the file menu and select the `open` option.  The application will open the file if it's able, regardless of whether the type of that file is associated with it.  
+You should keep in mind that setting a file association only changes the application that opens a file type when you double click on the file icon.  You can open a file using any application if you open the application first, then go to the file menu and select the `open` option.  The application will open the file if it's able, regardless of whether the type of that file is associated with the application.  
 
-This method is good if you usually open CSV files with a spreadsheet program, but want to actually look at the raw characters in the file by opening it in a text editor.
+For example, you can use the method if you usually open CSV files with a spreadsheet program, but want to actually look at the raw characters in the file by opening it in a text editor.
 
 [go on to Lesson 2: Directories](../directories-windows/)
 
