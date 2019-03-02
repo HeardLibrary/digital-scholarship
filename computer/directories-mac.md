@@ -42,13 +42,13 @@ The path to files 3, 5, and 8 would be:
 /b/c/e/file8
 ```
 
-Note: for simplicity, the names used for the directories are a single letter, but they generally have the same naming rules as the rules for files.  The guidelines given for "safe" file names in the first lesson also apply to directory names.
+Note: for simplicity the names used for the directories in this example are a single letter.  Normally, they would have longer names. In general, directories have the same naming rules as files.  The guidelines given for "safe" file names in the first lesson also apply to directory names.
 
-**Tech tip: Annoyingly, the Windows operating system separates parts of the path with backslashes (`\`) instead of forward slashes. Otherwise, the way of specifying a path in Windows is the same as in the Unix system that Mac use.**
+**Tech tip: Annoyingly, the Windows operating system separates parts of the path with backslashes (`\`) instead of forward slashes. Otherwise, the way of specifying a path in Windows is the same as in the Unix system that Macs use.**
 
 ## Special directories on Macs
 
-In the first lesson, we saw that several special folders in a Mac (Documents, Downloads, Pictures, etc.) were duplicated for each user of the computer.  These special folders (a.k.a. directories) are kept sorted out by placing them in what is known as the *home directory* for the user.  When a user logs onto the computer, the operating system takes note of which user home directory is appropriate, and uses that home directory as the basis of reference for the other special folders (Documents, Downloads, etc.).  
+In the first lesson, we saw that several special folders in a Mac (Documents, Downloads, Pictures, etc.) were duplicated for each user of the computer.  These special folders (a.k.a. directories) are kept sorted by placing them in what is known as the *home directory* for the user.  When a user logs onto the computer, the operating system takes note of which user home directory is appropriate, and uses that home directory as the basis of reference for the other special folders (Documents, Downloads, etc.).  
 
 Because of the special status of the home folder, it has a special abbreviation in Linux: a tilde (`~`).  In the diagram above, the full path of `file6` would be:
 
@@ -78,19 +78,19 @@ When you open a Finder window, its exact appearance is going to depend on how yo
 
 ## Sidebar and toolbar
 
-There are two parts of the Finder window that you can choose to display or not.  The *toolbar* is at the top of the window.  It's most useful features are the back button, which allows you to go back to previous directories that you've viewed, and the set of four buttons that contol how the files are displayed (as icons, list, columns, or gallery).  The *sidebar* allows you to quickly jump to folders that you frequently use.  
+There are two parts of the Finder window that you can choose to display or not.  The *toolbar* is at the top of the window.  Its most useful features are the back button, which allows you to go back to previous directory that you viewed, and the set of four buttons that contol how the files are displayed (as icons, list, columns, or gallery).  The *sidebar* allows you to quickly jump to folders that you frequently use.  
 
 You can control whether the toolbar and sidebar are visible or not by going to the Finder View menu and toggling `show toolbar`/`hide toolbar` option.  Unless you are really hard up for screen space, I recommend leaving them visible.  (You can also show or hide just the sidebar, but toggling the toolbar shows or hides both).  
 
-Once the sidebar is visible, you can control what "favorite" folders are there in two ways.  To control which of the "special" folders are visible, click on a Finder window (or the Finder icon in the dock), then from the Finder menu, select `Preferences".  Click on the Sidebar tab.
+Once the sidebar is visible, there are two ways you can control what "favorite" folders are visible.  To control which of the "special" folders are visible, click on a Finder window (or the Finder icon in the dock), then from the Finder menu, select `Preferences".  Click on the Sidebar tab.
 
 <img src="../images-2-mac/sidebar-preferences.png" style="border:1px solid black">
 
-Uncheck the boxes of any items you don't want to see and check any that you think you may use.  For these exercises, make sure that your home folder is checked (the icon that looks like a little house) as well as the Location that has your computer name (in this case, `erebus's MacBook Pro`).  When you are done, close the window by clicking on the red dot.  **Note: you can always go to any of the special folders by dropping down the Finder `Go` menu, then selecting the folder you want.**
+Uncheck the boxes of any items you don't want to see, and check any that you think you might use frequently.  For these exercises, make sure that your home folder is checked (the icon that looks like a little house) as well as the Location that has your computer name (in this case, `erebus's MacBook Pro`).  When you are done, close the window by clicking on the red dot.  **Note: you can always go to any of the special folders by dropping down the Finder `Go` menu, then selecting the folder you want.**
 
 <img src="../images-2-mac/add-favorite.png" style="border:1px solid black">
 
-You can also add favorite "regular" folders to the sidebar.  Click and drag the folder over to the sidebar until a line shows up in the position where you want the folder to be, then drop it.  **Note: be careful that you see the line where the folder will be inserted between other folders on the list.  If you hold the folder *over* a folder in the list, you'll actually move the folder you were dragging *into* the folder on the list.**  If you add a folder to the favorites list, it is still in its original location in the directory tree as well.
+You can also add favorite "regular" folders to the sidebar.  Click and drag the folder over to the sidebar until a line shows up in the position where you want the folder to be, then drop it.  **Note: be careful that you see the line indicating where the folder will be inserted between other folders on the list.  If you hold the folder *over* a folder in the list, you'll actually move the folder you were dragging *into* the folder on the list.**  If you add a folder to the favorites list, it is also still in its original location in the directory tree.
 
 To remove a "regular" folder from the sidebar, just click and drag it somewhere out of the sidebar so that an X shows up next to its icon.  Drop it and it will be removed.  (If you drop it from the sidebar into a directory that is being displayed, it won't be moved there.) 
 
@@ -102,27 +102,27 @@ If you don't have very many files on your computer, it doesn't matter much what 
 
 In the Finder View menu, there is an option for `Show Path Bar`.  When you enable the path bar, you will see a little list of your path, from the highest level to the folder you are in.  This option is available in any display mode.
 
-The gallery view is again mostly useful if you need to sort through images.
+The *gallery view* is mostly useful if you need to sort through images.
 
-If you have a lot of files and many nested levels of directories, then you probably will either want to use the column or list view.  
+If you have a lot of files and many nested levels of directories, then you probably will either want to use the *column* or *list* view.  
 
 <img src="../images-2-mac/column-view.png" style="border:1px solid black">
 
-The column view is nice because it makes it easy to tell what level you are in on the file hierarchy. Because each level is shown in a different column, it is easy to jump up several level in the hierarchy with a single mouse click.  You can also scroll up and down at each level to see what's in the various levels without changing what's selected. The column view also has a nice preview feature that for certain file types can show you what's in the file without you having to open it.  The most annoying feature of the column view is that it shortens long file names and there is no way to adjust the column width to make the full names show up.  This can be a problem if you have a lot of files with long and similar names.
+The *column view* is nice because it makes it easy to tell your level in the file hierarchy. Because each level is shown in a different column, it is easy to jump up several level in the hierarchy with a single mouse click.  You can also scroll up and down at each level to see what's in the various levels without changing what's selected. The column view also has a nice preview feature that for certain file types can show you what's in the file without you having to open it.  The most annoying feature of the column view is that it shortens long file names and there is no way to adjust the column width to make the full names show up.  This can be a problem if you have a lot of files with long names that are similar.
 
 <img src="../images-2-mac/list-view.png" style="border:1px solid black">
 
-You can avoid some of these problems with the list view. In the list view, you can always see the full file name -- if necessary, you can click and drag the column divisions at the top of the window to make the column wide enough to see the whole name.  You can navigate to deeper layers in the file hierarchy by clicking on the little triangles at the left of the folder names to expand that folder.  Each level in the hierarchy is indented to the right of the previous level.  An advantage over the column view is that you can see deeper into several folders at once by expanding each of them. The disadvantage of this viewing option is that it requires a lot of vertical space on your computer. If you have a lot of files or folders in a folder, you may not be able to see other parts of the directory tree without doing a lot of scrolling up and down the page, particularly if you have a wide screen that is not very tall.  Another disadvantage of this view is that there is no file preview.  However, the view does show you detailed metadata about the files and folders, such as when they were last modified and their size.  This is the only view that allows you to see these metadata, and you can quickly sort what's visible on the screen by clicking on the column header for the characteristic that you want to sort by.  For example, you can easily tell which files were most recently modified.
+You can avoid some of these problems with the *list view*. In the list view, you can always see the full file name -- if necessary, you can click and drag the column divisions at the top of the window to make the column wide enough to see the whole name.  You can navigate to deeper layers in the file hierarchy by clicking on the little triangles at the left of the folder names to expand that folder.  Each level in the hierarchy is indented to the right of the previous level.  An advantage over the column view is that you can see deeper into several folders at once by expanding each of them. The disadvantage of this viewing option is that it requires a lot of vertical space on your computer. If you have a lot of files or folders in a folder, you may not be able to see other parts of the directory tree without doing a lot of scrolling up and down the page, particularly if you have a wide screen that is not very tall.  Another disadvantage of this view is that there is no file preview.  However, the view does show you detailed metadata about the files and folders, such as when they were last modified, and their size.  This is the only view that allows you to see these metadata, and you can quickly sort what's visible on the screen by clicking on the column header for the characteristic that you want to sort by.  For example, you can easily tell which files were most recently modified by clicking on the Date Modified column header.
 
 ## Exploring the entire directory tree
 
 <img src="../images-2-mac/finder-entire-directory-tree.png" style="border:1px solid black">
 
-If you enabled display of your computer in the sidebar menu, click on it and select columns view.  If not, drop down the Finder `Go` menu and select `Computer`. From this point, you can dive down into the directory, starting with the root directory in your hard drive (probably named `macOS`), to the `users` directory, then to your home folder, and finally to your `Documents` folder.
+If you included your computer in the sidebar, click on it and select columns view.  If your computer isn't in the sidebar, drop down the Finder `Go` menu and select `Computer`. Starting on the level of your whole computer, you can dive down into the directory, starting with the root directory in your hard drive (probably named `macOS`), to the `users` directory, then to your home folder, and finally to your `Documents` folder.
 
 <img src="../images-2-mac/documents-level.png" style="border:1px solid black">
 
-Now for contrast, click on the Documents favorite in the sidebar.  You will go directly to your Documents folder.  Although if you've enabled the Show Path Bar, you'll know where you are in the directory tree, there is no simple way to go to a higher level than the one you chose from the sidebar Favorites.  This can be very annoying, so it's best to start your navigation in either the column or list view at the highest level in the directory tree in which you think you are likely to operate.
+Now for contrast, click on the Documents favorite in the sidebar.  You will go directly to your Documents directory.  Although if you've enabled the Show Path Bar, you'll know where you are in the directory tree, there is no simple way to go to a higher level than the one you chose from the sidebar Favorites.  So if you have jumped directly to the Documents directory, you can't move up into your home directory.  This can be very annoying, so it's best to start your navigation at the highest level in the directory tree in which you think you are likely to operate.
 
 # Save file dialog
 
