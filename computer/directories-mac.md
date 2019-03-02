@@ -98,7 +98,7 @@ To remove a "regular" folder from the sidebar, just click and drag it somewhere 
 
 If you don't have very many files on your computer, it doesn't matter much what display mode you chose to use.  The classice Mac viewing system is *icon view*.  The icon view is most useful when looking for images because you can see tiny thumbnails.  I find icon view the most annoying because it takes so many clicks to navigate.  When you double-click on a folder, you enter that nested folder.  To back out of that deeper level, you have to use the back button.  It is very easy to get lost if you are deep into the directory tree, but there is a feature that can help you.  
 
-<img src="../images-1-mac/icon-view-and-path-bar.png" style="border:1px solid black">
+<img src="../images-2-mac/icon-view-and-path-bar.png" style="border:1px solid black">
 
 In the Finder View menu, there is an option for `Show Path Bar`.  When you enable the path bar, you will see a little list of your path, from the highest level to the folder you are in.  This option is available in any display mode.
 
@@ -106,21 +106,21 @@ The gallery view is again mostly useful if you need to sort through images.
 
 If you have a lot of files and many nested levels of directories, then you probably will either want to use the column or list view.  
 
-<img src="../images-1-mac/column-view.png" style="border:1px solid black">
+<img src="../images-2-mac/column-view.png" style="border:1px solid black">
 
 The column view is nice because it makes it easy to tell what level you are in on the file hierarchy. Because each level is shown in a different column, it is easy to jump up several level in the hierarchy with a single mouse click.  You can also scroll up and down at each level to see what's in the various levels without changing what's selected. The column view also has a nice preview feature that for certain file types can show you what's in the file without you having to open it.  The most annoying feature of the column view is that it shortens long file names and there is no way to adjust the column width to make the full names show up.  This can be a problem if you have a lot of files with long and similar names.
 
-<img src="../images-1-mac/list-view.png" style="border:1px solid black">
+<img src="../images-2-mac/list-view.png" style="border:1px solid black">
 
 You can avoid some of these problems with the list view. In the list view, you can always see the full file name -- if necessary, you can click and drag the column divisions at the top of the window to make the column wide enough to see the whole name.  You can navigate to deeper layers in the file hierarchy by clicking on the little triangles at the left of the folder names to expand that folder.  Each level in the hierarchy is indented to the right of the previous level.  An advantage over the column view is that you can see deeper into several folders at once by expanding each of them. The disadvantage of this viewing option is that it requires a lot of vertical space on your computer. If you have a lot of files or folders in a folder, you may not be able to see other parts of the directory tree without doing a lot of scrolling up and down the page, particularly if you have a wide screen that is not very tall.  Another disadvantage of this view is that there is no file preview.  However, the view does show you detailed metadata about the files and folders, such as when they were last modified and their size.  This is the only view that allows you to see these metadata, and you can quickly sort what's visible on the screen by clicking on the column header for the characteristic that you want to sort by.  For example, you can easily tell which files were most recently modified.
 
 ## Exploring the entire directory tree
 
-<img src="../images-1-mac/finder-entire-directory-tree.png" style="border:1px solid black">
+<img src="../images-2-mac/finder-entire-directory-tree.png" style="border:1px solid black">
 
 If you enabled display of your computer in the sidebar menu, click on it and select columns view.  If not, drop down the Finder `Go` menu and select `Computer`. From this point, you can dive down into the directory, starting with the root directory in your hard drive (probably named `macOS`), to the `users` directory, then to your home folder, and finally to your `Documents` folder.
 
-<img src="../images-1-mac/documents-level.png" style="border:1px solid black">
+<img src="../images-2-mac/documents-level.png" style="border:1px solid black">
 
 Now for contrast, click on the Documents favorite in the sidebar.  You will go directly to your Documents folder.  Although if you've enabled the Show Path Bar, you'll know where you are in the directory tree, there is no simple way to go to a higher level than the one you chose from the sidebar Favorites.  This can be very annoying, so it's best to start your navigation in either the column or list view at the highest level in the directory tree in which you think you are likely to operate.
 
