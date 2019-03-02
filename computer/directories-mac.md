@@ -84,11 +84,11 @@ You can control whether the toolbar and sidebar are visible or not by going to t
 
 Once the sidebar is visible, you can control what "favorite" folders are there in two ways.  To control which of the "special" folders are visible, click on a Finder window (or the Finder icon in the dock), then from the Finder menu, select `Preferences".  Click on the Sidebar tab.
 
-<img src="../images-1-mac/sidebar-preferences.png" style="border:1px solid black">
+<img src="../images-2-mac/sidebar-preferences.png" style="border:1px solid black">
 
 Uncheck the boxes of any items you don't want to see and check any that you think you may use.  For these exercises, make sure that your home folder is checked (the icon that looks like a little house) as well as the Location that has your computer name (in this case, `erebus's MacBook Pro`).  When you are done, close the window by clicking on the red dot.  **Note: you can always go to any of the special folders by dropping down the Finder `Go` menu, then selecting the folder you want.**
 
-<img src="../images-1-mac/add-favorite.png" style="border:1px solid black">
+<img src="../images-2-mac/add-favorite.png" style="border:1px solid black">
 
 You can also add favorite "regular" folders to the sidebar.  Click and drag the folder over to the sidebar until a line shows up in the position where you want the folder to be, then drop it.  **Note: be careful that you see the line where the folder will be inserted between other folders on the list.  If you hold the folder *over* a folder in the list, you'll actually move the folder you were dragging *into* the folder on the list.**  If you add a folder to the favorites list, it is still in its original location in the directory tree as well.
 
