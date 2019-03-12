@@ -73,7 +73,7 @@ Topics include:
 - The system path
 - Localhost web servers
 
-[Go to Lesson 6: Command line](command)
+Go to Lesson 6: Command line [for Mac (Unix shell)](command-unix) or [for Windows (DOS)](command-windows)
 
 ----
 Revised 2019-02-27
