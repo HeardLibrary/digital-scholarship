@@ -153,7 +153,30 @@ ls ~/*.*
 
 If you want to repeat an earlier command, you can use the up arrow key to move back to earlier commands and the down arrow key to move forward to later commands.  The command doesn't actually get executed until you press the `return` (or `Enter`) key.
 
-## Useful path-related applications
+## Changing the working directory
+
+In all of the previous examples, the list command was executed from the home directory as the current working directory and any relative paths were relative to the home directory.  You can change the current working directory (i.e. move around within the directory tree) using the *change directory* (`cd`) command.  The `cd` command is followed by either a relative or absolute path.  Recall that you can use `pdw` to see where you are in the directory tree.  Try these:
+
+```
+cd /
+pwd
+cd ~
+pwd
+cd Documents
+pwd
+cd ..
+pwd
+cd ..
+pwd
+cd ~/Downloads
+pdw
+```
+
+**Other shell commands**
+
+There are many other shell commands beyond the few we have used here.  For a complete lesson, see the [Software Carpentry lesson on the Unix Shell](https://swcarpentry.github.io/shell-novice/)
+
+## Applications
 
 **HTML**
 
@@ -182,29 +205,6 @@ ls ../Guest/*.* > Documents/files.txt
 This command lists the files (but not directories) in the Guest directory and pipes the listing to a file called `files.txt` located in the Documents subdirectory of the current working directory.  If you ran this command, you can open your Documents folder and open the `files.txt` file in a text editor.
 
 Note that if the file already exists, it will be overwritten with the new output.  If there is no output, the file will still be created -- it will just be empty.
-
-## Changing the working directory
-
-In all of the previous examples, the list command was executed from the home directory as the current working directory and any relative paths were relative to the home directory.  You can change the current working directory (i.e. move around within the directory tree) using the *change directory* (`cd`) command.  The `cd` command is followed by either a relative or absolute path.  Recall that you can use `pdw` to see where you are in the directory tree.  Try these:
-
-```
-cd /
-pwd
-cd ~
-pwd
-cd Documents
-pwd
-cd ..
-pwd
-cd ..
-pwd
-cd ~/Downloads
-pdw
-```
-
-**Other shell commands**
-
-There are many other shell commands beyond the few we have used here.  For a complete lesson, see the [Software Carpentry lesson on the Unix Shell](https://swcarpentry.github.io/shell-novice/)
 
 ## Running a program using the shell
 
@@ -275,8 +275,38 @@ echo "$PATH"
 
 Because all of the paths are crammed together and separated by colons, it can be a bit difficult to pick apart all of the paths.  But if you look carefully and don't see the path of the place where your program is installed, you may need to add it to the system PATH.
 
-The following method will work for recent versions of Mac OSX.
+The following method will work for recent versions of Mac OSX.  There are actually several ways to modify the system PATH variable on a Mac -- you can find others by Googling.
+
+**Note:** if you aren't comfortable making this modification, ask for help from a more advanced user.
 
 1\. Open Finder and navigate to your home folder.
+
 2\. The file you need is hidden by default.  To make it visible, hold on the `command` and `shift` keys, then press the period (`.`) key.  
+
 3\.  Look through the files until you find a grayed out one called `.bash_profile`.  
+
+<img src="../images-6-mac/bash-profile.png" style="border:1px solid black">
+
+For safe keeping, right click on it and select `Duplicate`. Then change its name by removing the initial dot.
+
+4\. Right-click on the file again and select `Open With > TextEdit.app`.
+
+5\. Add a line to the end of the existing file in this form:
+
+```
+export PATH=$PATH:newfilepath
+```
+
+where `newfilepath` is the additional file path where the system should look to find programs.  Here is an example:
+
+```
+export PATH=$PATH:~/Library/Python/3.7/bin
+```
+
+Including the `$PATH:` part means to take the existing path and add the new path to it.  This should be relatively harmless because even if your new path doesn't work, the existing paths will still be included in the system PATH variable.  
+
+6\. Save the file and close the TextEdit application.
+
+## Localhost web servers
+
+
