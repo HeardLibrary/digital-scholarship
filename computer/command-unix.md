@@ -267,7 +267,9 @@ When the shell tries to run a program, it first looks in the current working dir
 /Applications/doSomething
 ```
 
-However, you'd often like to be able to run a program from any working directory.  In that case, you need to add the location of the program to the system PATH variable.  The system PATH is a list of paths where the shell will look if it can't find the program in the current working directory.  You can see the paths of all directories currently in the system PATH variable by entering this command:
+However, you'd often like to be able to run a program from any working directory.  In that case, you need to add the location of the program to the system PATH variable.  The system PATH is a list of paths where the shell will look if it can't find the program in the current working directory.  If an application is well-designed, during the installation process, the installer will either add the necessary path to the PATH variable, or ask you if you want it to add the path to the PATH variable (you should say "yes").  However, some sloppier installers don't do this.
+
+You can see the paths of all directories currently in the system PATH variable by entering this command:
 
 ```
 echo "$PATH"
@@ -309,4 +311,85 @@ Including the `$PATH:` part means to take the existing path and add the new path
 
 ## Localhost web servers
 
+On of the major reasons for making you suffer through the complexities of dealing with the command line is because there are an increasing number of very important software packages that operate as localhost web servers on your local computer.  A localhost web server is accessed just like any other web server: through a web browser.  The difference here is that the connection to the server isn't through the Internet, but through an IP address (usually 127.0.0.1) that loops back to a port on your own computer rather than a remote remote computer somewhere else.  This special IP address has been given an abbreviation `localhost` that can be used instead of typing out the IP address numbers.  So a localhost URL looks like this:
 
+```
+http://localhost/someURL/
+```
+
+More commonly, the localhost server is accessed through some port other than the web port 80 (the default port you get if you don't specify one in a browser).  In that case, the port number follows a colon after `localhost`.  Here's an example:
+
+```
+http://localhost:8889/bigdata/
+```
+
+**Why ???**
+
+The reason applications are built this way is because when an application is designed as web servers, it's really easy to just install them on a cloud service with the same settings and data that have been worked out on the local computer version and voilà, you have a program that can be used by anyone anywhere on the web!  
+
+There are also an increasing number of applications that run using the Docker system.  Docker containers essentially behave like separate computers from the one on which they are running.  Although it's possible to communicate directly between a Docker container and a console, it's more common for the container to "talk" with the user through a port.  If the Docker container is running on your local computer, that port will be accessed through the localhost. For more information about Docker and its various flavors, visit [this page](../../host/)
+
+**Example applications**
+
+Here are some examples of software used at Vanderbilt that operate as web servers:
+
+OpenRefine for data cleaning (operates as a localhost server but doesn't have to be launched from the command line)
+
+Jupyter notebooks for Python and R
+
+XQuery: BaseX server and eXistdb
+
+Linked Data: Blazegraph and Stardog
+
+Wikibase (usually installed using Docker)
+
+## Example workflow for Blazegraph
+
+Assuming that Blazegraph has already been installed using Docker, open Terminal and enter
+
+```
+docker restart blazegraph
+```
+
+<img src="../images-6-mac/start-blazegraph.png" style="border:1px solid black">
+
+In this case, the path to the `docker` program is in the system PATH variable, so it doesn't matter where I am in the directory tree within the shell.  If that weren't the case, I'd need to use the `cd` command to move to the appropriate directory first.
+
+The Blazegraph server is communicating through port 8889, so to talk to it, I open any web browser and enter this in the browser URL bar:
+
+```
+http://localhost:8889/bigdata/
+```
+
+<img src="../images-6-mac/blazegraph-browser.png" style="border:1px solid black">
+
+I can then use the Blazegraph interface to do what I want.  To shut down the server, I enter in the console:
+
+```
+docker container stop blazegraph
+```
+
+<img src="../images-6-mac/stop-blazegraph.png" style="border:1px solid black">
+
+Nothing very intersting shows up on the console window, but now if I try to load
+
+```
+http://localhost:8889/bigdata/
+```
+
+in the browser, I get an error:
+
+<img src="../images-6-mac/blazegraph-browser.png" style="border:1px solid black">
+
+because the server isn't running any more.
+
+Although the commands illustrated here are ideosyncratic to this particular installation of Blazegraph, the workflow is similar for many applications of this type:
+
+1. Open a Terminal window.
+2. Execute a command line command to start the server.
+3. Enter an appropriate localhost URL in the browser URL bar.
+4. Work
+5. Execute a command line command to stop the server.
+6. Close the brower.
+
+Understanding what's going on here is important because just closing the browser doesn't stop the server.  It will continue running in the background on your computer until the next time you shut the computer down.  That may slow down other applications and failing to shut down the server properly could cause data loss.  
