@@ -50,7 +50,7 @@ Notice that the triple pattern contains *variables* (beginning with question mar
 
 ```sparql
 {
-?a dcterms:creator ?b.
+  ?a dcterms:creator ?b.
 }
 ```
 
@@ -59,7 +59,7 @@ We could have also listed the full URI if we use the angle bracket notation of T
 
 ```sparql
 {
-?document <http://purl.org/dc/terms/creator> ?person.
+  ?document <http://purl.org/dc/terms/creator> ?person.
 }
 ```
 
@@ -68,8 +68,8 @@ Here's what the graph pattern would be for the second example:
 
 ```sparql
 {
-?document dcterms:creator ?person.
-?document dcterms:title "Let My People Go"@en.
+  ?document dcterms:creator ?person.
+  ?document dcterms:title "Let My People Go"@en.
 }
 ```
 
@@ -85,8 +85,8 @@ A common triple pattern used in graph patterms is to say that a resource must be
 
 ```sparql
 {
-?resource a foaf:Document.
-?resource rdfs:label ?articleLabel. 
+  ?resource a foaf:Document.
+  ?resource rdfs:label ?articleLabel. 
 }
 ```
 
@@ -122,8 +122,8 @@ There are many conditions that can be used to limit the graph pattern.  FILTER s
 
 ```sparql
 {
-?person foaf:givenName ?firstName.
-FILTER (?firstName != "Steve")
+  ?person foaf:givenName ?firstName.
+  FILTER (?firstName != "Steve")
 }
 ```
 
@@ -131,8 +131,8 @@ would exclude people whose first names were "Steve".  In this example:
 
 ```sparql
 {
-?book dcterms:created ?year.
-FILTER (?year < "1928")
+  ?book dcterms:created ?year.
+  FILTER (?year < "1928")
 }
 ```
 
@@ -142,8 +142,8 @@ Here's a filter that restricts the pattern to titles that have English language 
 
 ```sparql
 {
-?book dcterms:title ?name.
-FILTER (langMatches(lang(?name)),"en")
+  ?book dcterms:title ?name.
+  FILTER (langMatches(lang(?name)),"en")
 }
 ```
 
@@ -178,8 +178,8 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT ?book
 WHERE
 {
-?book dcterms:created ?year.
-FILTER (?year < "1928")
+  ?book dcterms:created ?year.
+  FILTER (?year < "1928")
 }
 ```
 
@@ -188,8 +188,8 @@ For compactness, the query could also be written as:
 ```sparql
 PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT ?book WHERE {
-?book dcterms:created ?year.
-FILTER (?year < "1928")
+  ?book dcterms:created ?year.
+  FILTER (?year < "1928")
 }
 ```
 
@@ -198,8 +198,8 @@ The result of a SELECT query is all of the bindings that satisfy the graph patte
 ```sparql
 PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT DISTINCT ?book WHERE {
-?book dcterms:created ?year.
-FILTER (?year < "1928")
+  ?book dcterms:created ?year.
+  FILTER (?year < "1928")
 }
 ```
 
@@ -208,8 +208,8 @@ The SELECT clause can be used to return more than one bound variable.
 ```sparql
 PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT DISTINCT ?author ?year WHERE {
-?book dcterms:created ?year.
-?book dcterms:creator ?author.
+  ?book dcterms:created ?year.
+  ?book dcterms:creator ?author.
 }
 ```
 
@@ -218,8 +218,8 @@ The query above would provide a list of authors and the years in which they crea
 ```sparql
 PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT DISTINCT * WHERE {
-?book dcterms:created ?year.
-?book dcterms:creator ?author.
+  ?book dcterms:created ?year.
+  ?book dcterms:creator ?author.
 }
 ```
 
@@ -227,7 +227,7 @@ Using `*` is a good trick to list triples:
 
 ```sparql
 SELECT DISTINCT * WHERE {
-?subject ?predicate ?object.
+  ?subject ?predicate ?object.
 }
 LIMIT 10
 ```
@@ -245,8 +245,8 @@ FROM <http://vanderbilt.edu/orcid>
 FROM <http://vanderbilt.edu/wikidata>
 FROM <http://vanderbilt.edu/doi>
 WHERE {
-?book dcterms:created ?year.
-?book dcterms:creator ?author.
+  ?book dcterms:created ?year.
+  ?book dcterms:creator ?author.
 }
 ```
 
@@ -254,7 +254,7 @@ The dataset used in the query would consist of only the three graphs: `http://va
 
 FROM clauses can be used in any kind of SPARQL query.
 
-# Sample queries
+## Sample SELECT queries
 
 The following queries can be carried out using the Linked Data Working Group's SPARQL endpoint (<https://sparql.vanderbilt.edu/>).  They are based on the 66 triples included in the graph that we've been using in the examples.  It's a named graph with the URI `http://vandy` (no trailing slash!).  So to exclude other triples in the database, we use an appropriate FROM clause.  The first example includes abbreviations for all of the namespaces included in the graph.  Many will not be needed in particular queries, but it doesn't hurt to just include them all as you hack.
 
@@ -277,7 +277,7 @@ SELECT DISTINCT *
 FROM <http://vandy>
 WHERE {
   ?subject ?predicate ?oboject.
-  }
+}
   ```
 **List URIs and names of all articles** (query by class)
 
@@ -285,8 +285,8 @@ WHERE {
 SELECT DISTINCT ?article ?title
 FROM <http://vandy>
 WHERE {
-?article a foaf:Document.
-?article rdfs:label ?title.
+  ?article a foaf:Document.
+  ?article rdfs:label ?title.
 }
 ```
 
@@ -296,10 +296,10 @@ WHERE {
 SELECT DISTINCT ?title ?date
 FROM <http://vandy>
 WHERE {
-?article a foaf:Document.
-?article rdfs:label ?title.
-?article dcterms:created ?date.
-FILTER (?year < "2014")
+  ?article a foaf:Document.
+  ?article rdfs:label ?title.
+  ?article dcterms:created ?date.
+  FILTER (?year < "2014")
 }
 ```
 
@@ -309,10 +309,10 @@ FILTER (?year < "2014")
 SELECT DISTINCT ?title
 FROM <http://vandy>
 WHERE {
-?article a foaf:Document.
-?article rdfs:label ?title.
-?article dcterms:creator ?person.
-?person foaf:familyName "Hillyer"
+  ?article a foaf:Document.
+  ?article rdfs:label ?title.
+  ?article dcterms:creator ?person.
+  ?person foaf:familyName "Hillyer"
 }
 ```
 
@@ -322,14 +322,162 @@ WHERE {
 SELECT DISTINCT ?startingPage
 FROM <http://vandy>
 WHERE {
-?university grid:cityName "Nashville".
-?person madsrdf:hasAffiliation ?university.
-?article dcterms:creator ?person.
-?article bibo:pageStart ?startingPage.
+  ?university grid:cityName "Nashville".
+  ?person madsrdf:hasAffiliation ?university.
+  ?article dcterms:creator ?person.
+  ?article bibo:pageStart ?startingPage.
 }
 ```
 
-[Wikibase data model](../wikibase/)
+# CONSTRUCT SPARQL queries
+
+The CONSTRUCT SPARQL query form is similar to the SELECT form because both use graph patterns to bind parts of triples that fulfill the graph pattern to variables.  In the SELECT form, those variables (or things related to them like counts) are simply reported.  However, in the CONSTRUCT query form the bound variables are used to actually create new triple based on patterns specified in the CONSTRUCT clause.
+
+A CONSTRUCT query has the general form
+
+```
+CONSTRUCT {
+  graph to be constructed
+} 
+WHERE {
+  graph pattern to be satisfied
+}
+```
+
+The CONSTRUCT query can have PREFIX definitions in a prolog and can be restricted to particular graphs by FROM statements just as in the case of SELECT queries.
+
+Here is an example:
+
+```sparql
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+CONSTRUCT {
+  ?book foaf:maker ?author.
+}
+
+FROM <http://vandy>
+WHERE {
+  ?book dcterms:creator ?author.
+}
+```
+
+In this example, we find sets of books that are connected to authors by the `dcterms:creator` property and create a new graph that contains triples where those authors are connected to their books by a different property: `foaf:maker`.  Each binding of an author and a book is used to construct one triple connecting that author and book using the new property.
+
+In this case, DCMI and the creators of FOAF agreed that the two terms, `dcterms:creator` and `foaf:maker` are equivalent.  So in theory, a sufficiently smart computer could figure out that a triple containing one of those properties entails another triple using the other property.  But a generic triplestory and SPARQL endpoint don't automatically do that kind of reasoning, so using SPARQL CONSTRUCT, we can "materialize" those entailed triples and manually insert them back into the dataset by loading the result of the CONSTRUCT query back into the triplestore.
+
+A very similar use case is dealing with the FOAF and schema.org terms.  There is no declared equivalency between a lot of the terms, but for example most people would agree that a [foaf:Person](http://xmlns.com/foaf/spec/#term_Person) is probably the same thing as a [schema:Person](https://schema.org/Person) (both allow the person to be alive, dead, or fictional).  We could design a CONSTRUCT query that converted several terms Dublin Core or FOAF terms to schema.org terms at once:
+
+```sparql
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX schema: <https://schema.org/>
+
+CONSTRUCT {
+  ?person a schema:Person.
+  ?work schema:dateCreated ?date.
+  ?thing schema:name ?name.
+}
+WHERE {
+  ?person a foaf:Person.
+  ?work dcterms:created ?date.
+  ?thing foaf:firstName ?givenName.
+  ?thing foaf:familyName ?surname.
+  BIND( CONCAT(?givenName, " ", ?surname) as ?name)
+}
+```
+
+Notice the trick used to create an entire schema.org name from separate given and surnames.  The graph pattern as it is shown requires that a thing have both a first and last name in order for the combined name to be constructed.  
+
+## Getting a triple dump from an endpoint
+
+SPARQL CONSTRUCT can be used to pull all of a particular category of triples from a triplestore based on the restrictions given in the graph pattern or the FROM statement.  Here's an example that downloads one particular graph from a triplestore:
+
+```sparql
+CONSTRUCT {
+  ?subject ?predicate ?object.
+}
+FROM <http://vandy>
+WHERE {
+  ?subject ?predicate ?object.
+}
+```
+
+Notice that the graph pattern places no restriction on the triples -- they are only restricted by the FROM clause, which says that the triples have to be from the `http://vandy` graph.  
+
+Here is a construct query that retrieves all of the statements about "Shaul Kelner".
+
+```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  ?person ?predicate ?object.
+}
+WHERE {
+  ?person rdfs:label "Shaul Kelner".
+  ?person ?predicate ?object.
+}
+```
+
+In this example, the values of the `?person` variable are constrained to be people labeled as "Shaul Kelner".  The other two variables can have any value.
+
+## Refactoring data from Wikidata
+
+Although the Wikidata data model (essentially the same as the generic Wikibase data model) can be expressed as RDF, it has some significant differences from standard Linked Data practices.  In particular, all entities are "items" and don't have `rdf:type` assignments.  Nearly all properties are ideosyncratic to Wikidata, so with the notable exception of `rdfs:label`, virtually none of the "standard" Linked Data properties (Dublin Core, FOAF, schema.org, etc.) are used.
+
+Another challenge is that since Wikidata is by design very multilingual, acquiring every label will often result in more that what is needed.  So filtering for particular languages can be helpful.
+
+If we want to harvest data from Wikidata, but express it in more standard terms, we can use CONSTRUCT queries.  Here is an example:
+
+```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX schema: <https://schema.org/>
+
+CONSTRUCT {
+  ?president a foaf:Person.
+  ?president wdt:P39 wd:Q11696.
+  ?president rdfs:label ?nameTagged.
+  ?president schema:name ?name.
+  ?president foaf:familyName ?lastName.
+  ?president foaf:firstName ?firstName.
+  ?president dcterms:created ?birthDate.
+}
+WHERE {
+  ?president wdt:P39 wd:Q11696. #position held = President of the United States of America
+  ?president wdt:P31 wd:Q5. #restricts to actual humans vs. fictional humans
+  ?president wdt:P569 ?birthDate.
+
+  # find English labels (name) and drop the language tag
+  ?president rdfs:label ?nameTagged.
+  FILTER (langMatches(lang(?nameTagged),"en"))
+  BIND (str(?nameTagged) AS ?name)
+  
+  # pull out only the last names
+  ?president wdt:P734 ?surname.
+  ?surname rdfs:label ?lastNameTagged.
+  FILTER (langMatches(lang(?lastNameTagged),"en"))
+  BIND (str(?lastNameTagged) AS ?lastName)
+
+  # pull out only the first names
+  ?president wdt:P735 ?givenname.
+  ?givenname rdfs:label ?firstNameTagged.
+  FILTER (langMatches(lang(?firstNameTagged),"en"))
+  BIND (str(?firstNameTagged) AS ?firstName)
+}
+```
+
+**Notes:**
+- We assert rdf:type of foaf:Person to all of the presidents due the screening we did by requiring them to be real people.
+- There isn't really a well-known property for "position held" or controlled vocabulary that includes "presidents of the United States", so that property and value were just passed through to the new graph as-is.
+- Given names and surnames are items, not string labels (literals).  So to acquire the name strings themselves, we need to find the labels of the name items.
+- There aren't really rules for how terms can be used, so I chose to use `dcterms:created` for the birth dates.  That's kind of a non-standard use for a very well-known term.
+
+This example illustrates how the work done by the many people who support Wikidata can be leveraged to create a Linked Data dataset using pretty much any vocabulary we choose.
+
+Lesson on the [Wikibase data model](../wikibase/)
 
 ----
-Revised 2019-02-08
+Revised 2019-03-13
