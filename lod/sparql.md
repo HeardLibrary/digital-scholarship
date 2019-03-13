@@ -489,14 +489,22 @@ To get clean RDF triples, we need to use a client that can carry out HTTP calls 
 Most SPARQL queries can be made using either HTTP GET or POST. (There is a limit to the size of GET queries, but it is rather large.)  In the case of Vanderbilt's SPARQL endpoint, POST queries cannot be made without authentication, so GET is the only option there.  The Wikidata endpoint allows either without authentication.  The disadvantage of GET queries is that they must be URL-encoded before sending, which adds an extra layer of complexity.  So for this example, we'll use POST to the Wikidata Query Service endpoint.  
 
 Here are the details required: 
-1. The query endpoint URL is `https://query.wikidata.org/sparql`
-2. The HTTP request type should be set to POST.
-3. On the Headers tab, set a key of `Content-Type` and a value of that key of `application/sparql-query`.  **This is required and the query will NOT work if this header isn't sent!**
-4. On the Headers tab, set a key of `Accept` and a value for that key of `application/sparql-results+xml` to get RDF/XML.  To get RDF/Turtle (if supported by the endpoint), use a value of `text/turtle`.  To get JSON-LD, use a value of `application/ld+json`.
-5. On the Body tab, click the `raw` radio button.  Then in the box below, paste the query.
-6. Click the `Send` button.  
+
+<img src="../images/post-query1.png" style="border:1px solid black">
+
+1\. The query endpoint URL is `https://query.wikidata.org/sparql`
+2\. The HTTP request type should be set to POST.
+3\. On the Headers tab, set a key of `Content-Type` and a value of that key of `application/sparql-query`.  **This is required and the query will NOT work if this header isn't sent!**
+4\. On the Headers tab, set a key of `Accept` and a value for that key of `application/rdf+xml` to get RDF/XML.  To get RDF/Turtle (if supported by the endpoint), use a value of `text/turtle`.  To get JSON-LD, use a value of `application/ld+json`.
+
+<img src="../images/post-query2.png" style="border:1px solid black">
+
+5\. On the Body tab, click the `raw` radio button.  Then in the box below, paste the query.
+6\. Click the `Send` button.  
 
 In the box at the botton, you should see correctly serialized RDF/XML.  Notice that here the datatyping for the dateTime is correct and that the English language label was applied to the `rdfs:label` value, but not the various name values as specified in the CONSTRUCT query.
+
+<img src="../images/post-query3.png" style="border:1px solid black">
 
 For query with a few results, you can just click on the little copy icon (to the left of the magnifing lens icon at the top of the results pane) and paste into a text document, then save.  For larger queries, drop down the Send button and select `Send and Download`.  After the results have been received, you'll be propted for a save location and filename.
 
@@ -504,13 +512,29 @@ The resulting RDF/XML file can be loaded into a SPARQL endpoint if desired.
 
 ## Acquiring triples from an endpoint using GET
 
-An HTTP GET request is somewhat simpler than a POST request, since there is no text body to be sent to the server.  Instead, the query is sent as a part of a query parameter in the URL itself. The SPARQL protocol is more relaxed about the headers and will generally default to RDF/XML if none are sent.  The down side is that the query itself has to be URL encoded to make all of the non-alpanumeric characters "safe" to be included in a URL.  Here are the steps to do it using Postman:
+An HTTP GET request is somewhat simpler than a POST request, since there is no text body to be sent to the server.  Instead, the query is sent as a part of a query string appended to the URL itself. The SPARQL protocol is more relaxed about the headers and will generally default to RDF/XML if none are sent.  The downside is that the query itself has to be URL encoded to make all of the non-alpanumeric characters "safe" to be included in a URL.  Here are the steps to do a GET request using Postman:
 
-1. The query endpoint URL is `https://query.wikidata.org/sparql`
-2. The HTTP request type should be set to GET.
-3. Click on the Params tab, and set a key of `query`.
-4. Go to a URL encoding website.  I usually use [this one](https://meyerweb.com/eric/tools/dencoder/).  Paste the query into the box, then click the `Encode` button.  Copy the encoded text and paste it into the Value box for the `query` key. You'll see the entire icky URL in the URL box above.  
-5. If you don't care about the serialization of the results, just click the `Send` button.
+1\. The query endpoint URL is `https://query.wikidata.org/sparql`
+
+2\. The HTTP request type should be set to GET.
+
+3\. Click on the Params tab, and set a key of `query`.
+
+4\. Go to a URL encoding website.  I usually use [this one](https://meyerweb.com/eric/tools/dencoder/).  
+
+<img src="../images/url-encode.png" style="border:1px solid black">
+
+Paste the query into the box, then click the `Encode` button.  
+
+<img src="../images/url-encoded.png" style="border:1px solid black">
+
+Copy the encoded text and paste it into the Value box for the `query` key. You'll see the entire icky URL in the URL box above. 
+
+<img src="../images/get-query1.png" style="border:1px solid black">
+
+5\. If you don't care about the serialization of the results, just click the `Send` button.  Otherwise, set an Accept header as described in step 4 above.
+
+6\. You can also download the results as explained in the POST example.
 
 Lesson on the [Wikibase data model](../wikibase/)
 
