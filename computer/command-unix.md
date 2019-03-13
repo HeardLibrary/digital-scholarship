@@ -176,7 +176,7 @@ pdw
 
 There are many other shell commands beyond the few we have used here.  For a complete lesson, see the [Software Carpentry lesson on the Unix Shell](https://swcarpentry.github.io/shell-novice/)
 
-## Applications
+# Applications of the command line
 
 **HTML**
 
@@ -309,7 +309,7 @@ Including the `$PATH:` part means to take the existing path and add the new path
 
 6\. Save the file and close the TextEdit application.
 
-## Localhost web servers
+# Localhost web servers
 
 On of the major reasons for making you suffer through the complexities of dealing with the command line is because there are an increasing number of very important software packages that operate as localhost web servers on your local computer.  A localhost web server is accessed just like any other web server: through a web browser.  The difference here is that the connection to the server isn't through the Internet, but through an IP address (usually 127.0.0.1) that loops back to a port on your own computer rather than a remote remote computer somewhere else.  This special IP address has been given an abbreviation `localhost` that can be used instead of typing out the IP address numbers.  So a localhost URL looks like this:
 
@@ -333,15 +333,15 @@ There are also an increasing number of applications that run using the Docker sy
 
 Here are some examples of software used at Vanderbilt that operate as web servers:
 
-OpenRefine for data cleaning (operates as a localhost server but doesn't have to be launched from the command line)
+**OpenRefine** for data cleaning (operates as a localhost server but doesn't have to be launched from the command line)
 
-Jupyter notebooks for Python and R
+**Jupyter notebooks** for Python and R
 
-XQuery: BaseX server and eXistdb
+XQuery: **BaseX** server and **eXistdb**
 
-Linked Data: Blazegraph and Stardog
+Linked Data: **Blazegraph** and **Stardog**
 
-Wikibase (usually installed using Docker)
+**Wikibase** (usually installed using Docker)
 
 ## Example workflow for a Jupyter notebook
 
@@ -361,6 +361,12 @@ to list all of the files with the `.ipynb` extension.  I see that the notebook I
 
 <img src="../images-6-mac/find-jupyter-notebook.png" style="border:1px solid black">
 
+Then I enter
+
+```
+jupyter notebook
+```
+
 I get some text in the console window and my browser automatically opens to localhost port 8888:
 
 <img src="../images-6-mac/jupyter-notebook-directory.png" style="border:1px solid black">
@@ -377,11 +383,11 @@ I get a message in the browser saying that the server is stopped and that I can 
 
 If I forget to shut down the server from the browser, I can still shut it down using the shell.  If I hold the `Control` key and press `C`, I'll see a question in the shell asking if I want to shut down the server.
 
-**Note: Closing the Terminal (shell) window does NOT stop the server.**
+**Note: Just closing the Terminal (shell) window does NOT stop the server.**
 
 ## Example workflow for Blazegraph
 
-Assuming that Blazegraph has already been installed using Docker, open Terminal and enter
+Assuming that Blazegraph has already been installed using Docker, I open Terminal and enter
 
 ```
 docker restart blazegraph
@@ -391,15 +397,17 @@ docker restart blazegraph
 
 In this case, the path to the `docker` program is in the system PATH variable, so it doesn't matter where I am in the directory tree within the shell.  If that weren't the case, I'd need to use the `cd` command to move to the appropriate directory first.
 
-The Blazegraph server is communicating through port 8889, so to talk to it, I open any web browser and enter this in the browser URL bar:
+The Blazegraph server is communicating through port 8889, so to talk to the server, I open any web browser and enter this in the browser URL bar:
 
 ```
 http://localhost:8889/bigdata/
 ```
 
+I can then use the Blazegraph interface to do what I want.  
+
 <img src="../images-6-mac/blazegraph-browser.png" style="border:1px solid black">
 
-I can then use the Blazegraph interface to do what I want.  To shut down the server, I enter in the console:
+To shut down the server, I enter in the console:
 
 ```
 docker container stop blazegraph
@@ -415,7 +423,7 @@ http://localhost:8889/bigdata/
 
 in the browser, I get an error:
 
-<img src="../images-6-mac/blazegraph-browser.png" style="border:1px solid black">
+<img src="../images-6-mac/blazegraph-browser-fail.png" style="border:1px solid black">
 
 because the server isn't running any more.  There are more detailed instructions about the inital setup and running of Blazegraph using Docker [here](https://heardlibrary.github.io/digital-scholarship/lod/install/#using-docker-to-create-an-instance-of-blazegraph-on-your-local-computer)
 
