@@ -331,7 +331,7 @@ WHERE {
 
 # CONSTRUCT SPARQL queries
 
-The CONSTRUCT SPARQL query form is similar to the SELECT form because both use graph patterns to bind parts of triples that fulfill the graph pattern to variables.  In the SELECT form, those variables (or things related to them like counts) are simply reported.  However, in the CONSTRUCT query form the bound variables are used to actually create new triple based on patterns specified in the CONSTRUCT clause.
+The CONSTRUCT SPARQL query form is similar to the SELECT form because both use graph patterns to bind to variables parts of triples that fulfill the graph pattern.  In the SELECT form, those variables (or things related to them, like counts) are simply reported.  However, in the CONSTRUCT query form the bound variables are used to actually create new triples based on patterns specified in the CONSTRUCT clause.
 
 A CONSTRUCT query has the general form
 
@@ -346,7 +346,7 @@ WHERE {
 
 The CONSTRUCT query can have PREFIX definitions in a prolog and can be restricted to particular graphs by FROM statements just as in the case of SELECT queries.
 
-Here is an example:
+Here is an example that can be tested at the [Vanderbilt SPARQL endpoint](https://sparql.vanderbilt.edu/):
 
 ```sparql
 PREFIX dcterms: <http://purl.org/dc/terms/>
@@ -364,9 +364,9 @@ WHERE {
 
 In this example, we find sets of books that are connected to authors by the `dcterms:creator` property and create a new graph that contains triples where those authors are connected to their books by a different property: `foaf:maker`.  Each binding of an author and a book is used to construct one triple connecting that author and book using the new property.
 
-In this case, DCMI and the creators of FOAF agreed that the two terms, `dcterms:creator` and `foaf:maker` are equivalent.  So in theory, a sufficiently smart computer could figure out that a triple containing one of those properties entails another triple using the other property.  But a generic triplestory and SPARQL endpoint don't automatically do that kind of reasoning, so using SPARQL CONSTRUCT, we can "materialize" those entailed triples and manually insert them back into the dataset by loading the result of the CONSTRUCT query back into the triplestore.
+In this case, DCMI and the creators of FOAF agreed that the two terms, `dcterms:creator` and `foaf:maker` are equivalent.  So in theory, a sufficiently smart computer could figure out that a triple containing one of those properties entails another triple using the other property.  But a generic triplestore and SPARQL endpoint doesn't automatically do that kind of reasoning, so by using SPARQL CONSTRUCT, we can "materialize" those entailed triples and manually insert them back into the dataset by loading the result of the CONSTRUCT query back into the triplestore.
 
-A very similar use case is dealing with the FOAF and schema.org terms.  There is no declared equivalency between a lot of the terms, but for example most people would agree that a [foaf:Person](http://xmlns.com/foaf/spec/#term_Person) is probably the same thing as a [schema:Person](https://schema.org/Person) (both allow the person to be alive, dead, or fictional).  We could design a CONSTRUCT query that converted several terms Dublin Core or FOAF terms to schema.org terms at once:
+A very similar use case is dealing with the FOAF and schema.org terms.  There is no declared equivalency between a lot of the terms, but for example most people would agree that a [foaf:Person](http://xmlns.com/foaf/spec/#term_Person) is probably the same thing as a [schema:Person](https://schema.org/Person) (both allow the person to be alive, dead, or fictional).  We could design a CONSTRUCT query that converted several Dublin Core or FOAF terms to schema.org terms all at once:
 
 ```sparql
 PREFIX dcterms: <http://purl.org/dc/terms/>
@@ -387,11 +387,11 @@ WHERE {
 }
 ```
 
-Notice the trick used to create an entire schema.org name from separate given and surnames.  The graph pattern as it is shown requires that a thing have both a first and last name in order for the combined name to be constructed.  
+Notice the trick used to create an entire schema.org name from separate given and surnames.  The graph pattern as it is shown requires that a thing have both a first and last name in order for the combined name to be constructed. 
 
 ## Getting a triple dump from an endpoint
 
-SPARQL CONSTRUCT can be used to pull all of a particular category of triples from a triplestore based on the restrictions given in the graph pattern or the FROM statement.  Here's an example that downloads one particular graph from a triplestore:
+SPARQL CONSTRUCT can be used to pull all of a particular category of triples from a triplestore based on the restrictions given in the graph pattern or the FROM statement.  Here's an example that downloads one particular graph from a triplestore (this one can also be tested at the [Vanderbilt SPARQL endpoint](https://sparql.vanderbilt.edu/)):
 
 ```sparql
 CONSTRUCT {
@@ -405,7 +405,7 @@ WHERE {
 
 Notice that the graph pattern places no restriction on the triples -- they are only restricted by the FROM clause, which says that the triples have to be from the `http://vandy` graph.  
 
-Here is a construct query that retrieves all of the statements about "Shaul Kelner".
+Here is a construct query that retrieves all of the statements about "Shaul Kelner" and can be performed at the Vanderbilt endpoint:
 
 ```sparql
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -418,15 +418,15 @@ WHERE {
 }
 ```
 
-In this example, the values of the `?person` variable are constrained to be people labeled as "Shaul Kelner".  The other two variables can have any value.
+In this example, the values of the `?person` variable are constrained to be people labeled as "Shaul Kelner".  The other two variables can have any value.  It is not restricted to the `http://vandy` graph, and picks up a lot more triples that came from other graphs in the triplestore. 
 
 ## Refactoring data from Wikidata
 
 Although the Wikidata data model (essentially the same as the generic Wikibase data model) can be expressed as RDF, it has some significant differences from standard Linked Data practices.  In particular, all entities are "items" and don't have `rdf:type` assignments.  Nearly all properties are ideosyncratic to Wikidata, so with the notable exception of `rdfs:label`, virtually none of the "standard" Linked Data properties (Dublin Core, FOAF, schema.org, etc.) are used.
 
-Another challenge is that since Wikidata is by design very multilingual, acquiring every label will often result in more that what is needed.  So filtering for particular languages can be helpful.
+Another challenge is that since Wikidata is by design very multilingual, acquiring every label will often result in more labels than are needed.  So filtering labels for particular languages can be helpful.
 
-If we want to harvest data from Wikidata, but express it in more standard terms, we can use CONSTRUCT queries.  Here is an example:
+If we want to harvest data from Wikidata but express it in more standard terms, we can use CONSTRUCT queries.  Here is an example:
 
 ```sparql
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -471,14 +471,14 @@ WHERE {
 ```
 
 **Notes:**
-- We assert rdf:type of foaf:Person to all of the presidents due the screening we did by requiring them to be real people.
+- We assert `rdf:type` of `foaf:Person` to all of the presidents due the screening we did by requiring them to be real people.
 - There isn't really a well-known property for "position held" or controlled vocabulary that includes "presidents of the United States", so that property and value were just passed through to the new graph as-is.
 - Given names and surnames are items, not string labels (literals).  So to acquire the name strings themselves, we need to find the labels of the name items.
-- There aren't really rules for how terms can be used, so I chose to use `dcterms:created` for the birth dates.  That's kind of a non-standard use for a very well-known term.
+- There aren't really rules for how terms can be used, so I chose to use `dcterms:created` for the birth dates.  That's kind of a non-standard use for a very well-known term.  It also has a different intended meaning that its somewhat ambiguous use in the `http://vandy` graph where the value given was the date the record was created (see the value for Shaul Kelner).
 
 This example illustrates how the work done by the many people who support Wikidata can be leveraged to create a Linked Data dataset using pretty much any vocabulary we choose.
 
-## Acquiring triples from an endpoint
+## Acquiring triples from an endpoint using POST
 
 The Wikidata query examples above can be pasted directly into the [Wikidata Query Service](https://query.wikidata.org/) query box.  The resulting triples will show up in tabular form in the box at the bottom of the page.  
 
@@ -492,7 +492,7 @@ Here are the details required:
 1. The query endpoint URL is `https://query.wikidata.org/sparql`
 2. The HTTP request type should be set to POST.
 3. On the Headers tab, set a key of `Content-Type` and a value of that key of `application/sparql-query`.  **This is required and the query will NOT work if this header isn't sent!**
-4. On the Headers tab, set a key of `Accept` and a value for that key of `application/sparql-results+xml` to get RDF/XML.
+4. On the Headers tab, set a key of `Accept` and a value for that key of `application/sparql-results+xml` to get RDF/XML.  To get RDF/Turtle (if supported by the endpoint), use a value of `text/turtle`.  To get JSON-LD, use a value of `application/ld+json`.
 5. On the Body tab, click the `raw` radio button.  Then in the box below, paste the query.
 6. Click the `Send` button.  
 
@@ -501,6 +501,16 @@ In the box at the botton, you should see correctly serialized RDF/XML.  Notice t
 For query with a few results, you can just click on the little copy icon (to the left of the magnifing lens icon at the top of the results pane) and paste into a text document, then save.  For larger queries, drop down the Send button and select `Send and Download`.  After the results have been received, you'll be propted for a save location and filename.
 
 The resulting RDF/XML file can be loaded into a SPARQL endpoint if desired.
+
+## Acquiring triples from an endpoint using GET
+
+An HTTP GET request is somewhat simpler than a POST request, since there is no text body to be sent to the server.  Instead, the query is sent as a part of a query parameter in the URL itself. The SPARQL protocol is more relaxed about the headers and will generally default to RDF/XML if none are sent.  The down side is that the query itself has to be URL encoded to make all of the non-alpanumeric characters "safe" to be included in a URL.  Here are the steps to do it using Postman:
+
+1. The query endpoint URL is `https://query.wikidata.org/sparql`
+2. The HTTP request type should be set to GET.
+3. Click on the Params tab, and set a key of `query`.
+4. Go to a URL encoding website.  I usually use [this one](https://meyerweb.com/eric/tools/dencoder/).  Paste the query into the box, then click the `Encode` button.  Copy the encoded text and paste it into the Value box for the `query` key. You'll see the entire icky URL in the URL box above.  
+5. If you don't care about the serialization of the results, just click the `Send` button.
 
 Lesson on the [Wikibase data model](../wikibase/)
 
