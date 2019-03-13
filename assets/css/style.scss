@@ -2,17 +2,21 @@
 ---
 
 @import "{{ site.theme }}";
+
+/* This CSS overrides the defaults at https://github.com/pages-themes/leap-day/blob/master/_sass/jekyll-theme-leap-day.scss */
+
 code {
-    font-family: "Courier New"
+    font-family: "Courier New";
 }
 
 body {
-    font: unset
+    font: unset;
 }
 
 header {   
     background: #000000; 
-    /* padding: 12px 20px 12px 20px; */
+    padding: 12px 20px 12px 20px;
+    min-height: unset;
     h1 {
         font: 40px/48px 'Minion', "Helvetica Neue", Helvetica, Arial, sans-serif;
         text-shadow: 0px 2px 0px #000000;
@@ -36,6 +40,10 @@ header {
         margin-top: 3px;
         line-height: 7px;
         font-size: 12px;
+    }
+
+    /* I think this is what actually controls the position of the repo button */
+    .fork {
         float: right;  
     }
 #logo {
