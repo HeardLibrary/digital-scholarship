@@ -343,6 +343,42 @@ Linked Data: Blazegraph and Stardog
 
 Wikibase (usually installed using Docker)
 
+## Example workflow for a Jupyter notebook
+
+I have two Jupyter notebooks in my Documents folder and want to run the one called `python-turtle.ipynb`.  I open Terminal, then enter 
+
+```
+cd Documents
+```
+
+to move from my home folder to the Documents subfolder.  Then I enter
+
+```
+ls *.ipynb
+```
+
+to list all of the files with the `.ipynb` extension.  I see that the notebook I want is there.
+
+<img src="../images-6-mac/find-jupyter-notebook.png" style="border:1px solid black">
+
+I get some text in the console window and my browser automatically opens to localhost port 8888:
+
+<img src="../images-6-mac/jupyter-notebook-directory.png" style="border:1px solid black">
+
+I click on the notebook I want to run and it opens in another tab:
+
+<img src="../images-6-mac/jupyter-notebook-page.png" style="border:1px solid black">
+
+When I'm done with it, I need to save it using the save button.  I can then close the tab.  Howerver, I also need to shut down the localhost server.  In the case of Jupyter notebooks, I can do that by clicking on the Quit button on the Files tab.
+
+<img src="../images-6-mac/jupyter-shutdown.png" style="border:1px solid black">
+
+I get a message in the browser saying that the server is stopped and that I can close the tab.  When I look at my Terminal window, I see some messages related to the shutdown.
+
+If I forget to shut down the server from the browser, I can still shut it down using the shell.  If I hold the `Control` key and press `C`, I'll see a question in the shell asking if I want to shut down the server.
+
+**Note: Closing the Terminal (shell) window does NOT stop the server.**
+
 ## Example workflow for Blazegraph
 
 Assuming that Blazegraph has already been installed using Docker, open Terminal and enter
@@ -381,9 +417,11 @@ in the browser, I get an error:
 
 <img src="../images-6-mac/blazegraph-browser.png" style="border:1px solid black">
 
-because the server isn't running any more.
+because the server isn't running any more.  There are more detailed instructions about the inital setup and running of Blazegraph using Docker [here](https://heardlibrary.github.io/digital-scholarship/lod/install/#using-docker-to-create-an-instance-of-blazegraph-on-your-local-computer)
 
-Although the commands illustrated here are ideosyncratic to this particular installation of Blazegraph, the workflow is similar for many applications of this type:
+## General comments
+
+Although the commands illustrated here are ideosyncratic to the particular cases of Jupyter notebooks and Blazegraph, the workflow is similar for many applications of this type:
 
 1. Open a Terminal window.
 2. Execute a command line command to start the server.
@@ -392,4 +430,6 @@ Although the commands illustrated here are ideosyncratic to this particular inst
 5. Execute a command line command to stop the server.
 6. Close the brower.
 
-Understanding what's going on here is important because just closing the browser doesn't stop the server.  It will continue running in the background on your computer until the next time you shut the computer down.  That may slow down other applications and failing to shut down the server properly could cause data loss.  
+Sometimes parts of this procedure will happen automatically (such as starting a server after double-clicking on an icon for OpenRefine, or automatically opening the correct browser page when running a Jupyter notebook), but in general, these steps always happen in a server-based application. 
+
+Understanding what's going on here is important because often just closing the browser or the terminal window doesn't stop the server.  It will continue running in the background on your computer until the next time you shut the computer down.  That may slow down other applications and failing to shut down the server properly could cause data loss.  
