@@ -439,7 +439,7 @@ PREFIX schema: <https://schema.org/>
 CONSTRUCT {
   ?president a foaf:Person.
   ?president wdt:P39 wd:Q11696.
-  ?president rdfs:label ?nameTagged.
+  ?president rdfs:label ?nameEn.
   ?president schema:name ?name.
   ?president foaf:familyName ?lastName.
   ?president foaf:firstName ?firstName.
@@ -454,6 +454,7 @@ WHERE {
   ?president rdfs:label ?nameTagged.
   FILTER (langMatches(lang(?nameTagged),"en"))
   BIND (str(?nameTagged) AS ?name)
+  BIND (STRLANG(?name,"en") AS ?nameEn)
   
   # pull out only the last names
   ?president wdt:P734 ?surname.
@@ -476,6 +477,30 @@ WHERE {
 - There aren't really rules for how terms can be used, so I chose to use `dcterms:created` for the birth dates.  That's kind of a non-standard use for a very well-known term.
 
 This example illustrates how the work done by the many people who support Wikidata can be leveraged to create a Linked Data dataset using pretty much any vocabulary we choose.
+
+## Acquiring triples from an endpoint
+
+The Wikidata query examples above can be pasted directly into the [Wikidata Query Service](https://query.wikidata.org/) query box.  The resulting triples will show up in tabular form in the box at the bottom of the page.  
+
+This method is find for testing queries. But one major deficiency of those results is that language tagging and xsd: datatyping are not shown in the results.  Also, the results can be downloaded, but the downloaded formats are not valid serializations of RDF triples.
+
+To get clean RDF triples, we need to use a client that can carry out HTTP calls and return the results in a usable form.  [Postman](https://www.getpostman.com/) is a relatively easy to use graphical application that can be used for this purpose.  
+
+Most SPARQL queries can be made using either HTTP GET or POST. (There is a limit to the size of GET queries, but it is rather large.)  In the case of Vanderbilt's SPARQL endpoint, POST queries cannot be made without authentication, so GET is the only option there.  The Wikidata endpoint allows either without authentication.  The disadvantage of GET queries is that they must be URL-encoded before sending, which adds an extra layer of complexity.  So for this example, we'll use POST to the Wikidata Query Service endpoint.  
+
+Here are the details required: 
+1. The query endpoint URL is `https://query.wikidata.org/sparql`
+2. The HTTP request type should be set to POST.
+3. On the Headers tab, set a key of `Content-Type` and a value of that key of `application/sparql-query`.  **This is required and the query will NOT work if this header isn't sent!**
+4. On the Headers tab, set a key of `Accept` and a value for that key of `application/sparql-results+xml` to get RDF/XML.
+5. On the Body tab, click the `raw` radio button.  Then in the box below, paste the query.
+6. Click the `Send` button.  
+
+In the box at the botton, you should see correctly serialized RDF/XML.  Notice that here the datatyping for the dateTime is correct and that the English language label was applied to the `rdfs:label` value, but not the various name values as specified in the CONSTRUCT query.
+
+For query with a few results, you can just click on the little copy icon (to the left of the magnifing lens icon at the top of the results pane) and paste into a text document, then save.  For larger queries, drop down the Send button and select `Send and Download`.  After the results have been received, you'll be propted for a save location and filename.
+
+The resulting RDF/XML file can be loaded into a SPARQL endpoint if desired.
 
 Lesson on the [Wikibase data model](../wikibase/)
 
