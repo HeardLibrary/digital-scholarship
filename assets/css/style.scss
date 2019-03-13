@@ -45,6 +45,9 @@ header {
 
     /* I think this is what actually controls the position of the repo button */
     .fork {
+        position: unset;
+        left: unset;
+        margin-left: unset;    
         float: right;  
     }
 #logo {
