@@ -36,7 +36,7 @@ def getWikidata(characterId):
     }'''
 
     # The endpoint defaults to returning XML, so the Accept: header is required
-    r = requests.get(endpointUrl, params={'query' : query}, headers={'Accept' : 'application/json'})
+    r = requests.get(endpointUrl, params={'query' : query}, headers={'Accept' : 'application/sparql-results+json'})
     data = r.json()
     statements = data['results']['bindings']
     return statements

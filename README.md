@@ -37,6 +37,7 @@ The repository structure is described below.
 │           └── scrape-sec.ipynb    : Jupyter notebook of code for only a single instance of each resource
 └── data                       : sample data
     ├── rdf                    : Resource Description Framework (RDF) examples
+    │   ├── presidents.rdf     : data about presidents retrieved from Wikidata via SPARQL CONSTRUCT
     │   ├── vandy              : sample dataset of people associated with Vanderbilt and their works
     │   │   ├── institution.csv     : source data table about insitutions
     │   │   ├── person.csv          : source data table about people

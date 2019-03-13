@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:wdt="http://www.wikidata.org/prop/direct/"
+	xmlns:wd="http://www.wikidata.org/entity/"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:schema="https://schema.org/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:hint="http://www.bigdata.com/queryHints#"
+	xmlns:bd="http://www.bigdata.com/rdf#"
+	xmlns:bds="http://www.bigdata.com/rdf/search#"
+	xmlns:psn="http://www.wikidata.org/prop/statement/value-normalized/"
+	xmlns:pqn="http://www.wikidata.org/prop/qualifier/value-normalized/"
+	xmlns:prn="http://www.wikidata.org/prop/reference/value-normalized/"
+	xmlns:mwapi="https://www.mediawiki.org/ontology#API/"
+	xmlns:gas="http://www.bigdata.com/rdf/gas#"
+	xmlns:wdtn="http://www.wikidata.org/prop/direct-normalized/"
+	xmlns:psv="http://www.wikidata.org/prop/statement/value/"
+	xmlns:ps="http://www.wikidata.org/prop/statement/"
+	xmlns:pqv="http://www.wikidata.org/prop/qualifier/value/"
+	xmlns:pq="http://www.wikidata.org/prop/qualifier/"
+	xmlns:prv="http://www.wikidata.org/prop/reference/value/"
+	xmlns:pr="http://www.wikidata.org/prop/reference/"
+	xmlns:wdno="http://www.wikidata.org/prop/novalue/"
+	xmlns:p="http://www.wikidata.org/prop/"
+	xmlns:wikibase="http://wikiba.se/ontology#"
+	xmlns:wds="http://www.wikidata.org/entity/statement/"
+	xmlns:wdv="http://www.wikidata.org/value/"
+	xmlns:wdref="http://www.wikidata.org/reference/"
+	xmlns:wdata="http://www.wikidata.org/wiki/Special:EntityData/"
+	xmlns:prov="http://www.w3.org/ns/prov#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:geo="http://www.opengis.net/ont/geosparql#"
+	xmlns:geof="http://www.opengis.net/def/geosparql/function/"
+	xmlns:mediawiki="https://www.mediawiki.org/ontology#"
+	xmlns:ontolex="http://www.w3.org/ns/lemon/ontolex#">
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q23">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">George Washington</rdfs:label>
+	<schema:name>George Washington</schema:name>
+	<foaf:familyName>Washington</foaf:familyName>
+	<foaf:firstName>George</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1732-02-22T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q91">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Abraham Lincoln</rdfs:label>
+	<schema:name>Abraham Lincoln</schema:name>
+	<foaf:familyName>Lincoln</foaf:familyName>
+	<foaf:firstName>Abraham</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1809-02-12T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q207">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">George W. Bush</rdfs:label>
+	<schema:name>George W. Bush</schema:name>
+	<foaf:familyName>Bush</foaf:familyName>
+	<foaf:firstName>George</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1946-07-06T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q8612">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Andrew Johnson</rdfs:label>
+	<schema:name>Andrew Johnson</schema:name>
+	<foaf:familyName>Johnson</foaf:familyName>
+	<foaf:firstName>Andrew</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1808-12-29T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q1124">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Bill Clinton</rdfs:label>
+	<schema:name>Bill Clinton</schema:name>
+	<foaf:familyName>Clinton</foaf:familyName>
+	<foaf:firstName>Bill</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1946-08-19T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q76">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Barack Obama</rdfs:label>
+	<schema:name>Barack Obama</schema:name>
+	<foaf:familyName>Obama</foaf:familyName>
+	<foaf:firstName>Barack</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1961-08-04T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q8007">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Franklin D. Roosevelt</rdfs:label>
+	<schema:name>Franklin D. Roosevelt</schema:name>
+	<foaf:familyName>Roosevelt</foaf:familyName>
+	<foaf:firstName>Franklin</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1882-01-30T00:00:00Z</dcterms:created>
+	<rdfs:label xml:lang="en">Franklin Delano Roosevelt</rdfs:label>
+	<schema:name>Franklin Delano Roosevelt</schema:name>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q207">
+	<foaf:firstName>Walker</foaf:firstName>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q9640">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Lyndon B. Johnson</rdfs:label>
+	<schema:name>Lyndon B. Johnson</schema:name>
+	<foaf:familyName>Johnson</foaf:familyName>
+	<foaf:firstName>Lyndon</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1908-08-27T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q9588">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Richard Nixon</rdfs:label>
+	<schema:name>Richard Nixon</schema:name>
+	<foaf:familyName>Nixon</foaf:familyName>
+	<foaf:firstName>Richard</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1913-01-09T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q9582">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Gerald Ford</rdfs:label>
+	<schema:name>Gerald Ford</schema:name>
+	<foaf:familyName>Ford</foaf:familyName>
+	<foaf:firstName>Gerald</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1913-07-14T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q9640">
+	<foaf:firstName>Baines</foaf:firstName>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q11613">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Harry S. Truman</rdfs:label>
+	<schema:name>Harry S. Truman</schema:name>
+	<foaf:familyName>Truman</foaf:familyName>
+	<foaf:firstName>Harry</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1884-05-08T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q9916">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Dwight D. Eisenhower</rdfs:label>
+	<schema:name>Dwight D. Eisenhower</schema:name>
+	<foaf:familyName>Eisenhower</foaf:familyName>
+	<foaf:firstName>Dwight</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1890-10-14T00:00:00Z</dcterms:created>
+	<foaf:firstName>David</foaf:firstName>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q9696">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">John F. Kennedy</rdfs:label>
+	<schema:name>John F. Kennedy</schema:name>
+	<foaf:familyName>Kennedy</foaf:familyName>
+	<foaf:firstName>John</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1917-05-29T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q11613">
+	<foaf:firstName>S.</foaf:firstName>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q11812">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Thomas Jefferson</rdfs:label>
+	<schema:name>Thomas Jefferson</schema:name>
+	<foaf:familyName>Jefferson</foaf:familyName>
+	<foaf:firstName>Thomas</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1743-04-13T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q9960">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Ronald Reagan</rdfs:label>
+	<schema:name>Ronald Reagan</schema:name>
+	<foaf:familyName>Reagan</foaf:familyName>
+	<foaf:firstName>Ronald</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1911-02-06T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q11806">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">John Adams</rdfs:label>
+	<schema:name>John Adams</schema:name>
+	<foaf:familyName>Adams</foaf:familyName>
+	<foaf:firstName>John</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1735-10-30T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q11820">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Martin Van Buren</rdfs:label>
+	<schema:name>Martin Van Buren</schema:name>
+	<foaf:familyName>Van Buren</foaf:familyName>
+	<foaf:firstName>Martin</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1782-12-05T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q11881">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">John Tyler</rdfs:label>
+	<schema:name>John Tyler</schema:name>
+	<foaf:familyName>Tyler</foaf:familyName>
+	<foaf:firstName>John</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1790-03-29T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q11869">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">William Henry Harrison</rdfs:label>
+	<schema:name>William Henry Harrison</schema:name>
+	<foaf:familyName>Harrison</foaf:familyName>
+	<foaf:firstName>William</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1773-02-09T00:00:00Z</dcterms:created>
+	<foaf:firstName>Henry</foaf:firstName>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q11817">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Andrew Jackson</rdfs:label>
+	<schema:name>Andrew Jackson</schema:name>
+	<foaf:familyName>Jackson</foaf:familyName>
+	<foaf:firstName>Andrew</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1767-03-15T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q11815">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">James Monroe</rdfs:label>
+	<schema:name>James Monroe</schema:name>
+	<foaf:familyName>Monroe</foaf:familyName>
+	<foaf:firstName>James</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1758-04-28T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q9960">
+	<foaf:firstName>Wilson</foaf:firstName>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q11813">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">James Madison</rdfs:label>
+	<schema:name>James Madison</schema:name>
+	<foaf:familyName>Madison</foaf:familyName>
+	<foaf:firstName>James</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1751-03-16T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q11816">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">John Quincy Adams</rdfs:label>
+	<schema:name>John Quincy Adams</schema:name>
+	<foaf:familyName>Adams</foaf:familyName>
+	<foaf:firstName>John</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1767-07-11T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q23505">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">George H. W. Bush</rdfs:label>
+	<schema:name>George H. W. Bush</schema:name>
+	<foaf:familyName>Bush</foaf:familyName>
+	<foaf:firstName>Herbert</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1924-06-12T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q34296">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Woodrow Wilson</rdfs:label>
+	<schema:name>Woodrow Wilson</schema:name>
+	<foaf:familyName>Wilson</foaf:familyName>
+	<foaf:firstName>Woodrow</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1856-12-28T00:00:00Z</dcterms:created>
+	<foaf:firstName>Thomas</foaf:firstName>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q12306">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Millard Fillmore</rdfs:label>
+	<schema:name>Millard Fillmore</schema:name>
+	<foaf:familyName>Fillmore</foaf:familyName>
+	<foaf:firstName>Millard</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1800-01-07T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q23505">
+	<foaf:firstName>George</foaf:firstName>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q22686">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Donald Trump</rdfs:label>
+	<schema:name>Donald Trump</schema:name>
+	<foaf:familyName>Trump</foaf:familyName>
+	<foaf:firstName>Donald</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1946-06-14T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q34836">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Ulysses S. Grant</rdfs:label>
+	<schema:name>Ulysses S. Grant</schema:name>
+	<foaf:familyName>Grant</foaf:familyName>
+	<foaf:firstName>S.</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1822-04-27T00:00:00Z</dcterms:created>
+	<foaf:firstName>Ulysses</foaf:firstName>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q35041">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">William McKinley</rdfs:label>
+	<schema:name>William McKinley</schema:name>
+	<foaf:familyName>McKinley</foaf:familyName>
+	<foaf:firstName>William</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1843-01-29T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q23505">
+	<foaf:firstName>Walker</foaf:firstName>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q12325">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">James Buchanan</rdfs:label>
+	<schema:name>James Buchanan</schema:name>
+	<foaf:familyName>Buchanan</foaf:familyName>
+	<foaf:firstName>James</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1791-04-23T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q35236">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Herbert Hoover</rdfs:label>
+	<schema:name>Herbert Hoover</schema:name>
+	<foaf:familyName>Hoover</foaf:familyName>
+	<foaf:firstName>Herbert</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1874-08-10T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q35171">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Grover Cleveland</rdfs:label>
+	<schema:name>Grover Cleveland</schema:name>
+	<foaf:familyName>Cleveland</foaf:familyName>
+	<foaf:firstName>Stephen</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1837-03-18T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q36023">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Calvin Coolidge</rdfs:label>
+	<schema:name>Calvin Coolidge</schema:name>
+	<foaf:familyName>Coolidge</foaf:familyName>
+	<foaf:firstName>John</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1872-07-04T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q35171">
+	<foaf:firstName>Grover</foaf:firstName>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q12312">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Franklin Pierce</rdfs:label>
+	<schema:name>Franklin Pierce</schema:name>
+	<foaf:familyName>Pierce</foaf:familyName>
+	<foaf:firstName>Franklin</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1804-11-23T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q34836">
+	<foaf:firstName>Hiram</foaf:firstName>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q33866">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Theodore Roosevelt</rdfs:label>
+	<schema:name>Theodore Roosevelt</schema:name>
+	<foaf:familyName>Roosevelt</foaf:familyName>
+	<foaf:firstName>Theodore</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1858-10-27T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q35498">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Chester A. Arthur</rdfs:label>
+	<schema:name>Chester A. Arthur</schema:name>
+	<foaf:familyName>Arthur</foaf:familyName>
+	<foaf:firstName>Alan</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1829-10-05T00:00:00Z</dcterms:created>
+	<foaf:firstName>Chester</foaf:firstName>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q35286">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Warren G. Harding</rdfs:label>
+	<schema:name>Warren G. Harding</schema:name>
+	<foaf:familyName>Harding</foaf:familyName>
+	<foaf:firstName>Gamaliel</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1865-11-02T00:00:00Z</dcterms:created>
+	<foaf:firstName>Warren</foaf:firstName>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q11896">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Zachary Taylor</rdfs:label>
+	<schema:name>Zachary Taylor</schema:name>
+	<foaf:familyName>Taylor</foaf:familyName>
+	<foaf:firstName>Zachary</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1784-11-24T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q35648">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">William Howard Taft</rdfs:label>
+	<schema:name>William Howard Taft</schema:name>
+	<foaf:familyName>Taft</foaf:familyName>
+	<foaf:firstName>Howard</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1857-09-15T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q23685">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Jimmy Carter</rdfs:label>
+	<schema:name>Jimmy Carter</schema:name>
+	<foaf:familyName>Carter</foaf:familyName>
+	<foaf:firstName>Jimmy</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1924-10-01T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q34597">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">James A. Garfield</rdfs:label>
+	<schema:name>James A. Garfield</schema:name>
+	<foaf:familyName>Garfield</foaf:familyName>
+	<foaf:firstName>James</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1831-11-19T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q35648">
+	<foaf:firstName>William</foaf:firstName>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q34597">
+	<foaf:firstName>Abram</foaf:firstName>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q11891">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">James K. Polk</rdfs:label>
+	<schema:name>James K. Polk</schema:name>
+	<foaf:familyName>Polk</foaf:familyName>
+	<foaf:firstName>James</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1795-11-02T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q35686">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Rutherford B. Hayes</rdfs:label>
+	<schema:name>Rutherford B. Hayes</schema:name>
+	<foaf:familyName>Hayes</foaf:familyName>
+	<foaf:firstName>Rutherford</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1822-10-04T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wikidata.org/entity/Q35678">
+	<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+	<wdt:P39 rdf:resource="http://www.wikidata.org/entity/Q11696"/>
+	<rdfs:label xml:lang="en">Benjamin Harrison</rdfs:label>
+	<schema:name>Benjamin Harrison</schema:name>
+	<foaf:familyName>Harrison</foaf:familyName>
+	<foaf:firstName>Benjamin</foaf:firstName>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1833-08-20T00:00:00Z</dcterms:created>
+</rdf:Description>
+
+</rdf:RDF>
