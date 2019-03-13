@@ -536,6 +536,92 @@ Copy the encoded text and paste it into the Value box for the `query` key. You'l
 
 6\. You can also download the results as explained in the POST example.
 
+## Harvesting data from Wikidata programatically
+
+In the examples above, we retrieved the results of CONSTRUCT queries "manually" using Postman in order to have discrete files of serialized RDF data to load into a triplestore.  Because most programming languages have mechanisms for making HTTP calls directly from a script, data from either a SELECT or CONSTRUCT query can be retrieved directly from a SPARQL endpoint by the script and used as a data source. 
+
+You can view an example of a [Python script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_b.py) that retrieves data from Wikidata about cartoon caracters and a similar [Python script with a graphical interface](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_c.py).  If you have Python 3 installed on your computer, you can run either of these scripts to see what they do.  The only library that needs to be installed is the Requests library (if you don't already have it).
+
+The heart of the script is in lines 25 through 42:
+
+```python
+def getWikidata(characterId):
+    endpointUrl = 'https://query.wikidata.org/sparql'
+    query = '''select distinct ?property ?value
+    where {
+      <''' + characterId + '''> ?propertyUri ?valueUri.
+      ?valueUri <http://www.w3.org/2000/01/rdf-schema#label> ?value.
+      ?genProp <http://wikiba.se/ontology#directClaim> ?propertyUri.
+      ?genProp <http://www.w3.org/2000/01/rdf-schema#label> ?property.
+      FILTER(substr(str(?propertyUri),1,36)="http://www.wikidata.org/prop/direct/")
+      FILTER(LANG(?property) = "en")
+      FILTER(LANG(?value) = "en")  
+    }'''
+
+    # The endpoint defaults to returning XML, so the Accept: header is required
+    r = requests.get(endpointUrl, params={'query' : query}, headers={'Accept' : 'application/sparql-results+json'})
+    data = r.json()
+    statements = data['results']['bindings']
+    return statements
+```
+
+The value of the `endpointUrl` variable is set to the Wikidata query service endpoint.  The value of the query string is hard-coded with the value of the Wikidata identifier (`characterId`) substituted in the appropriate place.  The line
+
+```python
+    r = requests.get(endpointUrl, params={'query' : query}, headers={'Accept' : 'application/sparql-results+json'})
+```
+
+is where the HTTP request is made -- you can see where the query parameter and Accept header is inserted, just as we did with Postman.  In this case, the requested content type to get JSON is `application/sparql-results+json`.  The resulting `data` come back as a JSON object that looks like this:
+
+```json
+{
+    "head": {
+        "vars": [
+            "property",
+            "value"
+        ]
+    },
+    "results": {
+        "bindings": [
+            {
+                "value": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "United States of America"
+                },
+                "property": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "country of citizenship"
+                }
+            },
+            {
+                "value": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Superman"
+                },
+                "property": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "present in work"
+                }
+            }
+        ]
+    }
+}
+```
+
+with many results omitted.  The line
+
+```python
+statements = data['results']['bindings']
+```
+
+pulls out the array of results and returns it so that the program can do what it wants with the data.
+
+If you don't count the lines required to set the value of the query variable, only a very few lines of code are required to access the vast universe of data that is available in Wikidata.  Of course, knowing how to construct the SPARQL SELECT query requires understanding the Wikidata data model, which is discussed in the following lesson.
+
 Lesson on the [Wikibase data model](../wikibase/)
 
 ----
