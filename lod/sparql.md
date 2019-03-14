@@ -366,21 +366,16 @@ In this example, we find sets of books that are connected to authors by the `dct
 
 In this case, DCMI and the creators of FOAF agreed that the two terms, `dcterms:creator` and `foaf:maker` are equivalent.  So in theory, a sufficiently smart computer could figure out that a triple containing one of those properties entails another triple using the other property.  But a generic triplestore and SPARQL endpoint doesn't automatically do that kind of reasoning, so by using SPARQL CONSTRUCT, we can "materialize" those entailed triples and manually insert them back into the dataset by loading the result of the CONSTRUCT query back into the triplestore.
 
-A very similar use case is dealing with the FOAF and schema.org terms.  There is no declared equivalency between a lot of the terms, but for example most people would agree that a [foaf:Person](http://xmlns.com/foaf/spec/#term_Person) is probably the same thing as a [schema:Person](https://schema.org/Person) (both allow the person to be alive, dead, or fictional).  We could design a CONSTRUCT query that converted several Dublin Core or FOAF terms to schema.org terms all at once:
+A very similar use case is dealing with the FOAF and schema.org terms.  Here is a CONSTRUCT query that converts FOAF terms to a schema.org term:
 
 ```sparql
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX schema: <https://schema.org/>
 
 CONSTRUCT {
-  ?person a schema:Person.
-  ?work schema:dateCreated ?date.
   ?thing schema:name ?name.
 }
 WHERE {
-  ?person a foaf:Person.
-  ?work dcterms:created ?date.
   ?thing foaf:firstName ?givenName.
   ?thing foaf:familyName ?surname.
   BIND( CONCAT(?givenName, " ", ?surname) as ?name)
