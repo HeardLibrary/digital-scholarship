@@ -1,0 +1,418 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix hint: <http://www.bigdata.com/queryHints#> .
+@prefix bd: <http://www.bigdata.com/rdf#> .
+@prefix bds: <http://www.bigdata.com/rdf/search#> .
+@prefix psn: <http://www.wikidata.org/prop/statement/value-normalized/> .
+@prefix pqn: <http://www.wikidata.org/prop/qualifier/value-normalized/> .
+@prefix prn: <http://www.wikidata.org/prop/reference/value-normalized/> .
+@prefix mwapi: <https://www.mediawiki.org/ontology#API/> .
+@prefix gas: <http://www.bigdata.com/rdf/gas#> .
+@prefix wdtn: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix psv: <http://www.wikidata.org/prop/statement/value/> .
+@prefix ps: <http://www.wikidata.org/prop/statement/> .
+@prefix pqv: <http://www.wikidata.org/prop/qualifier/value/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix prv: <http://www.wikidata.org/prop/reference/value/> .
+@prefix pr: <http://www.wikidata.org/prop/reference/> .
+@prefix wdno: <http://www.wikidata.org/prop/novalue/> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix wds: <http://www.wikidata.org/entity/statement/> .
+@prefix wdv: <http://www.wikidata.org/value/> .
+@prefix wdref: <http://www.wikidata.org/reference/> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix geof: <http://www.opengis.net/def/geosparql/function/> .
+@prefix mediawiki: <https://www.mediawiki.org/ontology#> .
+@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .
+
+wd:Q23 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "George Washington"@en ;
+	schema:name "George Washington" ;
+	foaf:familyName "Washington" ;
+	foaf:firstName "George" ;
+	dcterms:created "1732-02-22T00:00:00Z"^^xsd:dateTime .
+
+wd:Q76 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Barack Obama"@en ;
+	schema:name "Barack Obama" ;
+	foaf:familyName "Obama" ;
+	foaf:firstName "Barack" ;
+	dcterms:created "1961-08-04T00:00:00Z"^^xsd:dateTime .
+
+wd:Q91 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Abraham Lincoln"@en ;
+	schema:name "Abraham Lincoln" ;
+	foaf:familyName "Lincoln" ;
+	foaf:firstName "Abraham" ;
+	dcterms:created "1809-02-12T00:00:00Z"^^xsd:dateTime .
+
+wd:Q1124 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Bill Clinton"@en ;
+	schema:name "Bill Clinton" ;
+	foaf:familyName "Clinton" ;
+	foaf:firstName "Bill" ;
+	dcterms:created "1946-08-19T00:00:00Z"^^xsd:dateTime .
+
+wd:Q207 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "George W. Bush"@en ;
+	schema:name "George W. Bush" ;
+	foaf:familyName "Bush" ;
+	foaf:firstName "George" ;
+	dcterms:created "1946-07-06T00:00:00Z"^^xsd:dateTime ;
+	foaf:firstName "Walker" .
+
+wd:Q9582 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Gerald Ford"@en ;
+	schema:name "Gerald Ford" ;
+	foaf:familyName "Ford" ;
+	foaf:firstName "Gerald" ;
+	dcterms:created "1913-07-14T00:00:00Z"^^xsd:dateTime .
+
+wd:Q8007 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Franklin D. Roosevelt"@en ;
+	schema:name "Franklin D. Roosevelt" ;
+	foaf:familyName "Roosevelt" ;
+	foaf:firstName "Franklin" ;
+	dcterms:created "1882-01-30T00:00:00Z"^^xsd:dateTime ;
+	rdfs:label "Franklin Delano Roosevelt"@en ;
+	schema:name "Franklin Delano Roosevelt" .
+
+wd:Q8612 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Andrew Johnson"@en ;
+	schema:name "Andrew Johnson" ;
+	foaf:familyName "Johnson" ;
+	foaf:firstName "Andrew" ;
+	dcterms:created "1808-12-29T00:00:00Z"^^xsd:dateTime .
+
+wd:Q9588 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Richard Nixon"@en ;
+	schema:name "Richard Nixon" ;
+	foaf:familyName "Nixon" ;
+	foaf:firstName "Richard" ;
+	dcterms:created "1913-01-09T00:00:00Z"^^xsd:dateTime .
+
+wd:Q11613 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Harry S. Truman"@en ;
+	schema:name "Harry S. Truman" ;
+	foaf:familyName "Truman" ;
+	foaf:firstName "Harry" ;
+	dcterms:created "1884-05-08T00:00:00Z"^^xsd:dateTime .
+
+wd:Q9916 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Dwight D. Eisenhower"@en ;
+	schema:name "Dwight D. Eisenhower" ;
+	foaf:familyName "Eisenhower" ;
+	foaf:firstName "Dwight" ;
+	dcterms:created "1890-10-14T00:00:00Z"^^xsd:dateTime .
+
+wd:Q9696 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "John F. Kennedy"@en ;
+	schema:name "John F. Kennedy" ;
+	foaf:familyName "Kennedy" ;
+	foaf:firstName "John" ;
+	dcterms:created "1917-05-29T00:00:00Z"^^xsd:dateTime .
+
+wd:Q11613 foaf:firstName "S." .
+
+wd:Q9916 foaf:firstName "David" .
+
+wd:Q11813 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "James Madison"@en ;
+	schema:name "James Madison" ;
+	foaf:familyName "Madison" ;
+	foaf:firstName "James" ;
+	dcterms:created "1751-03-16T00:00:00Z"^^xsd:dateTime .
+
+wd:Q9640 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Lyndon B. Johnson"@en ;
+	schema:name "Lyndon B. Johnson" ;
+	foaf:familyName "Johnson" ;
+	foaf:firstName "Lyndon" ;
+	dcterms:created "1908-08-27T00:00:00Z"^^xsd:dateTime ;
+	foaf:firstName "Baines" .
+
+wd:Q9960 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Ronald Reagan"@en ;
+	schema:name "Ronald Reagan" ;
+	foaf:familyName "Reagan" ;
+	foaf:firstName "Ronald" ;
+	dcterms:created "1911-02-06T00:00:00Z"^^xsd:dateTime .
+
+wd:Q11891 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "James K. Polk"@en ;
+	schema:name "James K. Polk" ;
+	foaf:familyName "Polk" ;
+	foaf:firstName "James" ;
+	dcterms:created "1795-11-02T00:00:00Z"^^xsd:dateTime .
+
+wd:Q11816 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "John Quincy Adams"@en ;
+	schema:name "John Quincy Adams" ;
+	foaf:familyName "Adams" ;
+	foaf:firstName "John" ;
+	dcterms:created "1767-07-11T00:00:00Z"^^xsd:dateTime .
+
+wd:Q9960 foaf:firstName "Wilson" .
+
+wd:Q11806 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "John Adams"@en ;
+	schema:name "John Adams" ;
+	foaf:familyName "Adams" ;
+	foaf:firstName "John" ;
+	dcterms:created "1735-10-30T00:00:00Z"^^xsd:dateTime .
+
+wd:Q11812 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Thomas Jefferson"@en ;
+	schema:name "Thomas Jefferson" ;
+	foaf:familyName "Jefferson" ;
+	foaf:firstName "Thomas" ;
+	dcterms:created "1743-04-13T00:00:00Z"^^xsd:dateTime .
+
+wd:Q11815 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "James Monroe"@en ;
+	schema:name "James Monroe" ;
+	foaf:familyName "Monroe" ;
+	foaf:firstName "James" ;
+	dcterms:created "1758-04-28T00:00:00Z"^^xsd:dateTime .
+
+wd:Q11869 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "William Henry Harrison"@en ;
+	schema:name "William Henry Harrison" ;
+	foaf:familyName "Harrison" ;
+	foaf:firstName "Henry" ;
+	dcterms:created "1773-02-09T00:00:00Z"^^xsd:dateTime .
+
+wd:Q12325 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "James Buchanan"@en ;
+	schema:name "James Buchanan" ;
+	foaf:familyName "Buchanan" ;
+	foaf:firstName "James" ;
+	dcterms:created "1791-04-23T00:00:00Z"^^xsd:dateTime .
+
+wd:Q11817 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Andrew Jackson"@en ;
+	schema:name "Andrew Jackson" ;
+	foaf:familyName "Jackson" ;
+	foaf:firstName "Andrew" ;
+	dcterms:created "1767-03-15T00:00:00Z"^^xsd:dateTime .
+
+wd:Q11869 foaf:firstName "William" .
+
+wd:Q23685 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Jimmy Carter"@en ;
+	schema:name "Jimmy Carter" ;
+	foaf:familyName "Carter" ;
+	foaf:firstName "Jimmy" ;
+	dcterms:created "1924-10-01T00:00:00Z"^^xsd:dateTime .
+
+wd:Q11820 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Martin Van Buren"@en ;
+	schema:name "Martin Van Buren" ;
+	foaf:familyName "Van Buren" ;
+	foaf:firstName "Martin" ;
+	dcterms:created "1782-12-05T00:00:00Z"^^xsd:dateTime .
+
+wd:Q34296 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Woodrow Wilson"@en ;
+	schema:name "Woodrow Wilson" ;
+	foaf:familyName "Wilson" ;
+	foaf:firstName "Thomas" ;
+	dcterms:created "1856-12-28T00:00:00Z"^^xsd:dateTime ;
+	foaf:firstName "Woodrow" .
+
+wd:Q11881 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "John Tyler"@en ;
+	schema:name "John Tyler" ;
+	foaf:familyName "Tyler" ;
+	foaf:firstName "John" ;
+	dcterms:created "1790-03-29T00:00:00Z"^^xsd:dateTime .
+
+wd:Q35041 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "William McKinley"@en ;
+	schema:name "William McKinley" ;
+	foaf:familyName "McKinley" ;
+	foaf:firstName "William" ;
+	dcterms:created "1843-01-29T00:00:00Z"^^xsd:dateTime .
+
+wd:Q11896 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Zachary Taylor"@en ;
+	schema:name "Zachary Taylor" ;
+	foaf:familyName "Taylor" ;
+	foaf:firstName "Zachary" ;
+	dcterms:created "1784-11-24T00:00:00Z"^^xsd:dateTime .
+
+wd:Q12306 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Millard Fillmore"@en ;
+	schema:name "Millard Fillmore" ;
+	foaf:familyName "Fillmore" ;
+	foaf:firstName "Millard" ;
+	dcterms:created "1800-01-07T00:00:00Z"^^xsd:dateTime .
+
+wd:Q22686 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Donald Trump"@en ;
+	schema:name "Donald Trump" ;
+	foaf:familyName "Trump" ;
+	foaf:firstName "Donald" ;
+	dcterms:created "1946-06-14T00:00:00Z"^^xsd:dateTime .
+
+wd:Q23505 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "George H. W. Bush"@en ;
+	schema:name "George H. W. Bush" ;
+	foaf:familyName "Bush" ;
+	foaf:firstName "Herbert" ;
+	dcterms:created "1924-06-12T00:00:00Z"^^xsd:dateTime ;
+	foaf:firstName "George" .
+
+wd:Q34597 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "James A. Garfield"@en ;
+	schema:name "James A. Garfield" ;
+	foaf:familyName "Garfield" ;
+	foaf:firstName "James" ;
+	dcterms:created "1831-11-19T00:00:00Z"^^xsd:dateTime .
+
+wd:Q23505 foaf:firstName "Walker" .
+
+wd:Q35678 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Benjamin Harrison"@en ;
+	schema:name "Benjamin Harrison" ;
+	foaf:familyName "Harrison" ;
+	foaf:firstName "Benjamin" ;
+	dcterms:created "1833-08-20T00:00:00Z"^^xsd:dateTime .
+
+wd:Q35236 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Herbert Hoover"@en ;
+	schema:name "Herbert Hoover" ;
+	foaf:familyName "Hoover" ;
+	foaf:firstName "Herbert" ;
+	dcterms:created "1874-08-10T00:00:00Z"^^xsd:dateTime .
+
+wd:Q35286 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Warren G. Harding"@en ;
+	schema:name "Warren G. Harding" ;
+	foaf:familyName "Harding" ;
+	foaf:firstName "Warren" ;
+	dcterms:created "1865-11-02T00:00:00Z"^^xsd:dateTime .
+
+wd:Q35686 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Rutherford B. Hayes"@en ;
+	schema:name "Rutherford B. Hayes" ;
+	foaf:familyName "Hayes" ;
+	foaf:firstName "Rutherford" ;
+	dcterms:created "1822-10-04T00:00:00Z"^^xsd:dateTime .
+
+wd:Q34836 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Ulysses S. Grant"@en ;
+	schema:name "Ulysses S. Grant" ;
+	foaf:familyName "Grant" ;
+	foaf:firstName "Hiram" ;
+	dcterms:created "1822-04-27T00:00:00Z"^^xsd:dateTime .
+
+wd:Q35498 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Chester A. Arthur"@en ;
+	schema:name "Chester A. Arthur" ;
+	foaf:familyName "Arthur" ;
+	foaf:firstName "Alan" ;
+	dcterms:created "1829-10-05T00:00:00Z"^^xsd:dateTime .
+
+wd:Q34597 foaf:firstName "Abram" .
+
+wd:Q34836 foaf:firstName "S." , "Ulysses" .
+
+wd:Q35286 foaf:firstName "Gamaliel" .
+
+wd:Q36023 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Calvin Coolidge"@en ;
+	schema:name "Calvin Coolidge" ;
+	foaf:familyName "Coolidge" ;
+	foaf:firstName "John" ;
+	dcterms:created "1872-07-04T00:00:00Z"^^xsd:dateTime .
+
+wd:Q35498 foaf:firstName "Chester" .
+
+wd:Q35648 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "William Howard Taft"@en ;
+	schema:name "William Howard Taft" ;
+	foaf:familyName "Taft" ;
+	foaf:firstName "Howard" ;
+	dcterms:created "1857-09-15T00:00:00Z"^^xsd:dateTime ;
+	foaf:firstName "William" .
+
+wd:Q35171 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Grover Cleveland"@en ;
+	schema:name "Grover Cleveland" ;
+	foaf:familyName "Cleveland" ;
+	foaf:firstName "Stephen" ;
+	dcterms:created "1837-03-18T00:00:00Z"^^xsd:dateTime ;
+	foaf:firstName "Grover" .
+
+wd:Q33866 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Theodore Roosevelt"@en ;
+	schema:name "Theodore Roosevelt" ;
+	foaf:familyName "Roosevelt" ;
+	foaf:firstName "Theodore" ;
+	dcterms:created "1858-10-27T00:00:00Z"^^xsd:dateTime .
+
+wd:Q12312 a foaf:Person ;
+	wdt:P39 wd:Q11696 ;
+	rdfs:label "Franklin Pierce"@en ;
+	schema:name "Franklin Pierce" ;
+	foaf:familyName "Pierce" ;
+	foaf:firstName "Franklin" ;
+	dcterms:created "1804-11-23T00:00:00Z"^^xsd:dateTime .
