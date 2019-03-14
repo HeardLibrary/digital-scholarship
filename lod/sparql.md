@@ -476,7 +476,7 @@ WHERE {
 - Given names and surnames are items, not string labels (literals).  So to acquire the name strings themselves, we need to find the labels of the name items.
 - There aren't really rules for how terms can be used, so I chose to use `dcterms:created` for the birth dates.  That's kind of a non-standard use for a very well-known term.  It also has a different intended meaning that its somewhat ambiguous use in the `http://vandy` graph where the value given was the date the record was created (see the value for Shaul Kelner).
 
-You can look at the resulting data (retrieved on 2019-03-14) [as RDF/XML](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/presidents.rdf) or [as RDF/Turtle](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/presidents.rdf).
+You can look at the resulting data (retrieved on 2019-03-14) [as RDF/XML](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/presidents.rdf) or [as RDF/Turtle](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/presidents.ttl).
 
 This example illustrates how the work done by the many people who support Wikidata can be leveraged to create a Linked Data dataset using pretty much any vocabulary we choose.
 
