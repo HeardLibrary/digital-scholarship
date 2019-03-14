@@ -480,6 +480,10 @@ You can look at the resulting data (retrieved on 2019-03-14) [as RDF/XML](https:
 
 This example illustrates how the work done by the many people who support Wikidata can be leveraged to create a Linked Data dataset using pretty much any vocabulary we choose.
 
+# Retrieving SPARQL query data using HTTP
+
+The queries that we tested above are good training exercises, but how can we use SPARQL as a tool to help us actually acquire data for projects?  In addition to being a query language, SPARQL is also a protocol that works with HTTP to make it possible to submit queries and retrieve results using client software that can operate without human intervention.  The following sections will provide a few examples of how to do that in real life.
+
 ## Acquiring triples from an endpoint using POST
 
 The Wikidata query examples above can be pasted directly into the [Wikidata Query Service](https://query.wikidata.org/) query box.  The resulting triples will show up in tabular form in the box at the bottom of the page.  
