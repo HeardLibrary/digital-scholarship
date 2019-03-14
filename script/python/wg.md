@@ -33,12 +33,12 @@ Second cycle: **Fridays** from 12:10 to 2:00 PM (Intro: 12:10 to 1:00 PM, Worksh
 
 | Date | Session | Topic | Notes |
 |---|---|---|
-| Mar 15 | 1 | Getting started |  |
+| Mar 15 | 1 | Getting started | [intro](../) / [install Python](../install/) / [install Thonny](../thonny/) / [install editor](../editor/)  |
 | Mar 22 | 2 | Python scripting basics |  |
 | Mar 29 | 3 | Object-oriented Python |  |
 | Apr 5 | 4 | Using data structures |  |
-| Apr 12 | 5 | Input and output |  |
-| Apr 19 | 6 | How to hack |  |
+| Apr 12 | 5 | Input and output from files |  |
+| Apr 19 | 6 | Interacting with the Internet |  |
 
 # Python Resources
 
