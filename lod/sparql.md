@@ -476,6 +476,8 @@ WHERE {
 - Given names and surnames are items, not string labels (literals).  So to acquire the name strings themselves, we need to find the labels of the name items.
 - There aren't really rules for how terms can be used, so I chose to use `dcterms:created` for the birth dates.  That's kind of a non-standard use for a very well-known term.  It also has a different intended meaning that its somewhat ambiguous use in the `http://vandy` graph where the value given was the date the record was created (see the value for Shaul Kelner).
 
+You can look at the resulting data (retrieved on 2019-03-14) [as RDF/XML](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/presidents.rdf) or [as RDF/Turtle](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/presidents.rdf).
+
 This example illustrates how the work done by the many people who support Wikidata can be leveraged to create a Linked Data dataset using pretty much any vocabulary we choose.
 
 ## Acquiring triples from an endpoint using POST
@@ -542,7 +544,7 @@ In the examples above, we retrieved the results of CONSTRUCT queries "manually" 
 
 You can view an example of a [Python script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_b.py) that retrieves data from Wikidata about cartoon caracters and a similar [Python script with a graphical interface](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_c.py).  If you have Python 3 installed on your computer, you can run either of these scripts to see what they do.  The only library that needs to be installed is the Requests library (if you don't already have it).
 
-The heart of the script is in lines 25 through 42:
+The heart of the script is this function (lines 25 through 42 of the [first script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_b.py):
 
 ```python
 def getWikidata(characterId):
@@ -619,6 +621,10 @@ statements = data['results']['bindings']
 ```
 
 pulls out the array of results and returns it so that the program can do what it wants with the data.
+
+Here's what the [script with a graphical interface](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_c.py) looks like when it runs:
+
+<img src="../images/cartoon-checker.png" style="border:1px solid black">
 
 If you don't count the lines required to set the value of the query variable, only a very few lines of code are required to access the vast universe of data that is available in Wikidata.  Of course, knowing how to construct the SPARQL SELECT query requires understanding the Wikidata data model, which is discussed in the following lesson.
 
