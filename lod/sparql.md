@@ -445,10 +445,12 @@ WHERE {
   ?president wdt:P31 wd:Q5. #restricts to actual humans vs. fictional humans
   ?president wdt:P569 ?birthDate.
 
-  # find English labels (name) and drop the language tag
+  # find English labels (the person's name) and drop the language tag
   ?president rdfs:label ?nameTagged.
   FILTER (langMatches(lang(?nameTagged),"en"))
   BIND (str(?nameTagged) AS ?name)
+
+  # create a language-tagged value to use for rdfs:label
   BIND (STRLANG(?name,"en") AS ?nameEn)
   
   # pull out only the last names
@@ -483,7 +485,7 @@ The queries that we tested above are good training exercises, but how can we use
 
 The Wikidata query examples above can be pasted directly into the [Wikidata Query Service](https://query.wikidata.org/) query box.  The resulting triples will show up in tabular form in the box at the bottom of the page.  
 
-This method is find for testing queries. But one major deficiency of those results is that language tagging and xsd: datatyping are not shown in the results.  Also, the results can be downloaded, but the downloaded formats are not valid serializations of RDF triples.
+This method is fine for testing queries. But one major deficiency of those results is that language tagging and xsd: datatyping are not shown in the results.  Also, the results can be downloaded to a file, but the downloaded formats are not valid serializations of RDF triples.
 
 To get clean RDF triples, we need to use a client that can carry out HTTP calls and return the results in a usable form.  [Postman](https://www.getpostman.com/) is a relatively easy to use graphical application that can be used for this purpose.  
 
@@ -494,13 +496,17 @@ Here are the details required:
 <img src="../images/post-query1.png" style="border:1px solid black">
 
 1\. The query endpoint URL is `https://query.wikidata.org/sparql`
+
 2\. The HTTP request type should be set to POST.
+
 3\. On the Headers tab, set a key of `Content-Type` and a value of that key of `application/sparql-query`.  **This is required and the query will NOT work if this header isn't sent!**
+
 4\. On the Headers tab, set a key of `Accept` and a value for that key of `application/rdf+xml` to get RDF/XML.  To get RDF/Turtle (if supported by the endpoint), use a value of `text/turtle`.  To get JSON-LD, use a value of `application/ld+json`.
 
 <img src="../images/post-query2.png" style="border:1px solid black">
 
 5\. On the Body tab, click the `raw` radio button.  Then in the box below, paste the query.
+
 6\. Click the `Send` button.  
 
 In the box at the botton, you should see correctly serialized RDF/XML.  Notice that here the datatyping for the dateTime is correct and that the English language label was applied to the `rdfs:label` value, but not the various name values as specified in the CONSTRUCT query.
@@ -513,7 +519,7 @@ The resulting RDF/XML file can be loaded into a SPARQL endpoint if desired.
 
 ## Acquiring triples from an endpoint using GET
 
-An HTTP GET request is somewhat simpler than a POST request, since there is no text body to be sent to the server.  Instead, the query is sent as a part of a query string appended to the URL itself. The SPARQL protocol is more relaxed about the headers and will generally default to RDF/XML if none are sent.  The downside is that the query itself has to be URL encoded to make all of the non-alpanumeric characters "safe" to be included in a URL.  Here are the steps to do a GET request using Postman:
+An HTTP GET request is somewhat simpler than a POST request, since there is no text body to be sent to the server.  Instead, the query is sent as a part of a query string appended to the URL itself. The SPARQL protocol for GET is more relaxed than POST about the headers and will generally default to RDF/XML if no Accept header is sent.  The downside is that the query itself has to be URL encoded to make all of the non-alpanumeric characters "safe" to be included in a URL.  Here are the steps to do a GET request using Postman:
 
 1\. The query endpoint URL is `https://query.wikidata.org/sparql`
 
@@ -541,7 +547,7 @@ Copy the encoded text and paste it into the Value box for the `query` key. You'l
 
 In the examples above, we retrieved the results of CONSTRUCT queries "manually" using Postman in order to have discrete files of serialized RDF data to load into a triplestore.  Because most programming languages have mechanisms for making HTTP calls directly from a script, data from either a SELECT or CONSTRUCT query can be retrieved directly from a SPARQL endpoint by the script and used as a data source. 
 
-You can view an example of a [Python script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_b.py) that retrieves data from Wikidata about cartoon caracters and a similar [Python script with a graphical interface](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_c.py).  If you have Python 3 installed on your computer, you can run either of these scripts to see what they do.  The only library that needs to be installed is the Requests library (if you don't already have it).
+You can view an example of a [Python script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_b.py) that retrieves data from Wikidata about cartoon caracters and a similar [Python script with a graphical interface](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_c.py).  If you have Python 3 installed on your computer, you can run either of these scripts to see what they do.  The only library that needs to be installed using PIP is the Requests library (if you don't already have it).
 
 The heart of the script is this function (lines 25 through 42 of the [first script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_b.py):
 
@@ -566,7 +572,7 @@ def getWikidata(characterId):
     return statements
 ```
 
-The value of the `endpointUrl` variable is set to the Wikidata query service endpoint.  The value of the query string is hard-coded with the value of the Wikidata identifier (`characterId`) substituted in the appropriate place.  The line
+The value of the `endpointUrl` variable is set to the Wikidata query service endpoint URL.  The value of the query string variable is hard-coded with the value of the Wikidata identifier (`characterId`) substituted in the appropriate place.  The line
 
 ```python
     r = requests.get(endpointUrl, params={'query' : query}, headers={'Accept' : 'application/sparql-results+json'})
@@ -625,9 +631,9 @@ Here's what the [script with a graphical interface](https://github.com/HeardLibr
 
 <img src="../images/cartoon-checker.png" style="border:1px solid black">
 
-If you don't count the lines required to set the value of the query variable, only a very few lines of code are required to access the vast universe of data that is available in Wikidata.  Of course, knowing how to construct the SPARQL SELECT query requires understanding the Wikidata data model, which is discussed in the following lesson.
+If you don't count the lines required to assign the SPARQL query to the query variable, only a very few lines of code are required to access the vast universe of data that is available in Wikidata.  Of course, knowing how to construct the SPARQL SELECT query requires understanding the Wikidata data model, which is discussed in the following lesson.
 
 Lesson on the [Wikibase data model](../wikibase/)
 
 ----
-Revised 2019-03-13
+Revised 2019-03-14
