@@ -14,6 +14,10 @@ coming later
 
 coming later
 
+## Wikidata and Wikibase
+
+[page with some resources](wikidata/)
+
 ## Docker
 
 *Docker* is a system that allows you to containerize a deployed application along with all of its configuration settings and associated files.  When you deploy a Docker container image, it is ready to run.  If you mess up a container, you can destroy it and redeploy the image. 
