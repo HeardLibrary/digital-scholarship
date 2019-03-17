@@ -96,7 +96,7 @@ Sometimes when you install an application, it will also install "helper" applica
 
 There are several categories of applications that run in the background. One category is launchers.  Large, frequently used software packages like Office components may take a long time to load, so parts of the software may be loaded when the computer boots so that it won't take as long to launch the application when the user wants to use it. Another common kind of background application is an updater.  It may run periodically to check whether there is a new version of the application that needs to be downloaded and installed.  A final category is applications that run in the background to maintain communication with web services that are critical to the operation of a user's system.  A good example of this is the Dropbox application that monitors the Dropbox folder locally and online to make sure that any changes in either location is immediately synchronized with the other location.  
 
-<img src="../images-3-pc/open-with.jpg" style="border:1px solid black">
+<img src="../images-3-pc/system-tray.jpg" style="border:1px solid black">
 
 Often, these background applications have an icon in the system tray that show that they are running and allow you to monitor their status.  In the example above, the Dropbox icon is always visible and the Box icon is only visible when the up arrow to the left of the system tray is clicked.  You may have noticed the icons appearing in the system tray as the computer boots up.  That's an indication that these applications have started to run in the background.
 
