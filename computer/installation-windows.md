@@ -104,7 +104,11 @@ In the past, a proliferation of applications running in the background was one o
 
 <img src="../images-3-pc/settings-uninstall.jpg" style="border:1px solid black">
 
-Click on Apps, then the Startup item on the left bottom.  A list of applications that can run when the computer boots will appear on the right.  You can prevent any of these applications from launching at startup by turning their swith off.  The applications are rated by their impact on performance.  **Warning:** Be careful that you don't turn off any critical application.  For example, turning off Dropbox synchronization could be really bad if you depend on it to keep files synchronized among multiple computers, or if it serves as a first line system of backup.  
+Click on Apps, then the Startup item on the left bottom.  
+
+<img src="../images-3-pc/startup-apps.jpg" style="border:1px solid black">
+
+A list of applications that can run when the computer boots will appear on the right.  You can prevent any of these applications from launching at startup by turning their swith off.  The applications are rated by their impact on performance.  **Warning:** Be careful that you don't turn off any critical application.  For example, turning off Dropbox synchronization could be really bad if you depend on it to keep files synchronized among multiple computers, or if it serves as a first line system of backup.  
 
 # Uninstalling software
 
