@@ -40,7 +40,7 @@ Topics include:
 - Seeing what's running
 - Ways to install software
 
-[Go to Lesson 3: Installing software](installation)
+Go to Lesson 3: Installing software [for Mac](installation-mac/) or [for Windows](installation-windows/)
 
 ## Lesson 4: Connections
 
