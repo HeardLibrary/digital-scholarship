@@ -58,7 +58,11 @@ You may be wondering why we care about the connection between shortcuts and the 
 
 <img src="../images-3-pc/open-with.jpg" style="border:1px solid black">
 
-Similarly, if you right-click on a file and choose `Open with` and the application you want to use isn't there, you can select `Choose another app` followed by `Look for another app on this PC` to navigate to the executable.  If you check the `Always use this app to open ...` option, you can set the file association for that file type to the executable you choose.
+Similarly, if you right-click on a file and choose `Open with` and the application you want to use isn't there, you can select `Choose another app` followed by `Look for another app on this PC` to navigate to the executable.  
+
+<img src="../images-3-pc/always-use.jpg" style="border:1px solid black">
+
+If you check the `Always use this app to open ...` option, you can set the file association for that file type to the executable you choose.
 
 Another reason is that if there isn't a shortcut on your desktop for an application, you can navigate to its executable, then right-click on it and select `Create shortcut` and agree to have it put on your desktop.
 
