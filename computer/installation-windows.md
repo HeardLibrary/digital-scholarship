@@ -20,17 +20,17 @@ The situation today is much more complicated.  There is still at least one execu
 
 Bulk Rename Utility is an application that can be used to change the name of many files at once.  After it has been installed, the files associated with it are located in a directory not surprisingly called `Bulk Rename Utility` that is a subdirecctory of the `Program Files` directory. (Although there is no requirement that software be installed in any particular place, most installed software is either located in the `Program Files` directory, or the `Program Files (x86)` directory.)  
 
-<img src="../images-3-windows/simple-executable.jpg" style="border:1px solid black">
+<img src="../images-3-pc/simple-executable.jpg" style="border:1px solid black">
 
 We can see that there is one executable file in the `Bulk Rename Utility`, again not surprisingly named `Bulk Rename Utility.exe`.  This is the file that must be executed to make the application run, and if we double-click on it, the application will start up.  There are other files that contain documentation, configuration informtion, etc., but the overall number of files (11) are few because it isn't very complicated software.  
 
 Let's compare this with a more complacated application.  There is also a directory in `Program Files` called `RStudio` and it contains the files associated with the RStudio application.  However, if we look in that folder, there isn't any obvious executable file that can be used to start up the application.  
 
-<img src="../images-3-windows/complex-executable1.jpg" style="border:1px solid black">
+<img src="../images-3-pc/complex-executable1.jpg" style="border:1px solid black">
 
 In fact, there are 5 folders containing 1608 files.  We can avoid using trial and error to find the primary executable file by knowing that if it isn't in the main directory, it is often kept in a subdirectory called `bin` (for "binary", other possible names are "program", or "application").  
 
-<img src="../images-3-windows/complex-executable2.jpg" style="border:1px solid black">
+<img src="../images-3-pc/complex-executable2.jpg" style="border:1px solid black">
 
 If we look in the `bin` subdirectory, we can see that there is a file there called `rstudio.exe`.  If we double-click on it, the RStudio application will launch. 
 
@@ -46,17 +46,17 @@ It is generally dangerous to edit the registry, so we won't talk about how find 
 
 Because most users would not like to (or be unable to) find the executable file that is used to launch an application, Windows has a feature called "shortcuts" that can be used to indirectly launch an application.  During installation, users might be asked whether they would like to put a shortcut on the desktop, in the Start menu, or on the task bar.  There is no limit to the number of places a shortcut can be placed -- all shortcuts point to the same executable file.
 
-<img src="../images-3-windows/shortcut.jpg" style="border:1px solid black">
+<img src="../images-3-pc/shortcut.jpg" style="border:1px solid black">
 
 You can recognize a shortcut by the little arrow in the lower left corner of its icon.  Creating or deleting shortcuts have no effect on the application so simply deleting a desktop icon does nothing to get rid of the software.
 
-<img src="../images-3-windows/shortcut-properties.jpg" style="border:1px solid black">
+<img src="../images-3-pc/shortcut-properties.jpg" style="border:1px solid black">
 
 If you right-click on a shortcut and select `Properties`, the `Target:` field in the `Shortcut` tab will tell you the location of the executable file that starts up the application.  This is an easier way to find out where the executable file is than searching around blindly in the `Program Files` directory.  
 
 You may be wondering why we care about the connection between shortcuts and the executable files they launch.  One reason is that if a file isn't correctly associated with the application that we want to open it with (see [lesson 1]() for more on this), Windows may not know that the application is the right type for using with that file.  In that case, when setting the default application, you may need to navigate to the executable file to tell Windows to use that application.  
 
-<img src="../images-3-windows/open-with.jpg" style="border:1px solid black">
+<img src="../images-3-pc/open-with.jpg" style="border:1px solid black">
 
 Similarly, if you right-click on a file and choose `Open with` and the application you want to use isn't there, you can select `Choose another app` followed by `Look for another app on this PC` to navigate to the executable.  If you check the `Always use this app to open ...` option, you can set the file association for that file type to the executable you choose.
 
@@ -92,13 +92,13 @@ Sometimes when you install an application, it will also install "helper" applica
 
 There are several categories of applications that run in the background. One category is launchers.  Large, frequently used software packages like Office components may take a long time to load, so parts of the software may be loaded when the computer boots so that it won't take as long to launch the application when the user wants to use it. Another common kind of background application is an updater.  It may run periodically to check whether there is a new version of the application that needs to be downloaded and installed.  A final category is applications that run in the background to maintain communication with web services that are critical to the operation of a user's system.  A good example of this is the Dropbox application that monitors the Dropbox folder locally and online to make sure that any changes in either location is immediately synchronized with the other location.  
 
-<img src="../images-3-windows/open-with.jpg" style="border:1px solid black">
+<img src="../images-3-pc/open-with.jpg" style="border:1px solid black">
 
 Often, these background applications have an icon in the system tray that show that they are running and allow you to monitor their status.  In the example above, the Dropbox icon is always visible and the Box icon is only visible when the up arrow to the left of the system tray is clicked.  You may have noticed the icons appearing in the system tray as the computer boots up.  That's an indication that these applications have started to run in the background.
 
 In the past, a proliferation of applications running in the background was one of the main reasons why computers ran slower as they got older and more applications of this sort continued to accumulate.  Now most computers have enough memory that this isn't as much of a problem.  Nevertheless, you might want to check to see what applications are being launched automatically when your computer boots.  From the Start menu, select the Settings gear icon.
 
-<img src="../images-3-windows/settings-uninstall.jpg" style="border:1px solid black">
+<img src="../images-3-pc/settings-uninstall.jpg" style="border:1px solid black">
 
 Click on Apps, then the Startup item on the left bottom.  A list of applications that can run when the computer boots will appear on the right.  You can prevent any of these applications from launching at startup by turning their swith off.  The applications are rated by their impact on performance.  **Warning:** Be careful that you don't turn off any critical application.  For example, turning off Dropbox synchronization could be really bad if you depend on it to keep files synchronized among multiple computers, or if it serves as a first line system of backup.  
 
@@ -108,11 +108,11 @@ By this point, you probably understand that installed software on Windows can be
 
 However, in Windows 10 there is a built in system for uninstalling installed applications.  From the Start menu, select the Settings gear icon.
 
-<img src="../images-3-windows/settings-uninstall.jpg" style="border:1px solid black">
+<img src="../images-3-pc/settings-uninstall.jpg" style="border:1px solid black">
 
 Click on Apps.  It may take a while for the list of applications to populate.
 
-<img src="../images-3-windows/uninstall-app.jpg" style="border:1px solid black">
+<img src="../images-3-pc/uninstall-app.jpg" style="border:1px solid black">
 
 Click on the application that you want to uninstall, then on the `Uninstall` button.  Follow the dialog until the application has been uninstalled. The application should then be removed from the application list.
 
