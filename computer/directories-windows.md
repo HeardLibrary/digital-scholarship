@@ -105,11 +105,11 @@ There is also a set of buttons in the lower right of the window that allows you 
 
 The navigation pane is extremely useful for navigating around in the directory tree.  Near the top of the navigation pane is `This PC`, which is sort of the imaginary root of every file storage thing in the directory tree.  Located under it hierarchically are the "imaginary" places: Desktop, Documents, Downloads, Pictures, etc. that actually are located within the user's home directory.  Below them is the actual hard drive of the computer.  It might have various names, but can be recognized by its labeling as `(C:)`.  
 
-<img src="../images-2-pc/nav-pane.jpg" style="border:1px solid black">
+<img src="../images-2-pc/expand-tree-view.jpg" style="border:1px solid black">
 
 Any of these items can be expanded or collapsed by clicking on the arrow to the left of the folder icon.  The arrow points to the right for collapsed directories and points down for expanded directories.  At any point in the process of expanding the dirctory tree, you can click on a folder and its contents will be displayed on the pane to the right and the hierarchy will be displayed in the path bar below the ribbon.  If you checked the `Expand to open folder` option in the Navigation pane options, then double-clicking on a folder at the right will also automatically expand it in the navigation pane on the left.  
 
-After you have gone down into deeper subdirectories of the directory tree, you can go back up the tree in two ways.  You can click the back button at the upper left and it will return you to previous directories you have viewed.  You can also jump to any higher level in the path by single-clicking on a folder in the path bar.
+After you have gone down into deeper subdirectories of the directory tree, you can go back up the tree in two ways.  You can click the back button (left-facing arrow at the upper left) and it will return you to previous directories you have viewed.  You can also jump to any higher level in the path by single-clicking on a folder in the path bar.
 
 ***********
 
