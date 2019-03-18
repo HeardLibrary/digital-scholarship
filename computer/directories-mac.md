@@ -138,4 +138,56 @@ The expanded `Save as...` dialog box allows you to navigate in a manner nearly i
 
 # Copying and moving files
 
+A very important aspect of working with files in Finder is understanding the effect of drag-and-drop.  In some cases, dragging and droping a file or folder causes it to be moved to the new location (moving), while in other cases, it causes a copy of the file to be created in the nwe location (copying).  Whether drag-and-drop results in copying or moving depends primarily on the place where the file is dropped relative to its starting location.
+
+<img src="../images-2-mac/move.png" style="border:1px solid black">
+
+In the example above, I'm dragging and dropping a file from the `Documents` directory to a subdirectory of `Documents` called `output`.  Both directories are located on my hard drive (called `macOS` by default), so Finder assumes that I want to move the file.  
+
+<img src="../images-2-mac/move-result.png" style="border:1px solid black">
+
+After I drop the file, I see that it has been moved to the new folder and is no longer in the old one.
+
+<img src="../images-2-mac/copy.png" style="border:1px solid black">
+
+In the second example, I'm dragging and dropping a file from my Documents folder to an external drive that I've connected to my system, called `oldbuffalo1`.  There are two ways I can see that Finder considers this to be a different drive rather than just a folder within my `macOS` drive.  To the left of the drive name, I see a little hard drive icon instead of a folder icon.  To the right of the drive name, I see an `eject` symbol that I should use when I want to remove the drive from the system.  
+
+This time, when I drag and drop, I see that a green circle with a plus sign inside it appears under the icon when I hover over the drive where I want to drop the file.  That means that the file I'm dragging will be added to the other drive as a copy.
+
+<img src="../images-2-mac/copy-result.png" style="border:1px solid black">
+
+Once I've dropped the file, I can see that Finder did indeed do a copy operation because the original file is still where it was before I did the drag and drop.
+
+The plus sign appears regardless of the display style you've chosen for Finder.  
+
+The bottom line is that if you are ever unsure about whether you are copying or moving a file, look to see whether there is a green plus sign.
+
+## Dropbox and Box
+
+<img src="../images-2-mac/box-copy.png" style="border:1px solid black">
+
+A very confusing thing happens when I compare what happens when I drag and drop to a Dropbox folder and a Box folder.  Both are very similar cloud storage systems.  When I drag and drop to a Box folder, I see the plus sign (indicating that I'm performing a copy), but when I drag and drop to a Dropbox folder, I don't see the plus sign (indicating that I'm performing a move).  
+
+<img src="../images-2-mac/box-as-drive.png" style="border:1px solid black">
+
+I can get to the bottom of this apparent contradiction by scrolling down my Finder sidebar to the Locations section.  I see that Box is listed there (with an eject symbol), but Dropbox is not.  This tells me that the two systems are set up to operate in different ways.  Box folders are considered to live in a sort of virtual external drive, while Dropbox folders are just considered to be a sort of magical "regular" folder located on my hard drive.  
+
+<img src="../images-2-mac/boxes-in-home.png" style="border:1px solid black">
+
+I can understand the true situation by clicking on my home folder.  I see that actually both the root Box folder and the root Dropbox folder are subdirectories of my home folder.  The difference between them is a feature of the application that keeps them synched with the server in the cloud - the operating system just more-or-less considers them to be regular directories.  Locating them in the user directory makes sense because different users of a computer might have different Box/Dropbox accounts and putting them in the user directory allows the operating system to distinguish between the accounts.
+
+## Alternatives to drag and drop
+
+Dragging and dropping files is OK for moving single files, but selecting and moving/copying a particular set of files (or a large number of files) can be a bit unnerving.  Most people have probably had the experience of dropping files in the wrong place and struggling with how to undo the damage, particularly if a bunch if copied files get mixed in with a bunch of other files.  (A quick answer to the problem is to hold the `Command` key and press the `Z` key, which nearly always will undo the last action you've taken.)  The other issue we will deal with here is what to do if you actually want to copy (NOT move) files within a drive.
+
+The best way to handle this situation is to select the files you want to copy, then copy and paste them.  You can select files by clicking and dragging, but you can get better control using shift-click or command-click.  To select a range of files in a list, click on the first file in the list, then hold down on the `shift` key and click on the final file in the list.  To select particular files, click on the first one, then hold down on the `command` key and click on each of the other files to select them (or click a second time to de-select them).  You can also hold on the `command` key, then press on the `A` key to select all of the files in a directory.  
+
+<img src="../images-2-mac/copy-itmes.png" style="border:1px solid black">
+
+
+Once you have selected the set of files you want to copy, right-click on one of the files and select `Copy x Items` (where `x` is the number of items).  Alternatively, you can select `Copy x Items` from the Edit menu.
+
+Then click on or in the directory where you want the files to be copied to, then right-click and select `Paste x Items` (or select `Paste x Items` from the Edit menu).  The files you selected should be copied (not moved) to the new folder.
+
+What if you actual want to move the selected files to the new location instead of copying them?  Select and copy the files you want to move as described above, then click in the folder where you want them to go.  Hold down on the `command` and `option` keys at the same time, then press the `V` key.  (On a PC external keyboard, press the `command` key that looks like a window and the `alt` key at the same time, then press the `V` key.)
 
