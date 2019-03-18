@@ -77,51 +77,41 @@ c:\users\user1\file6
 
 When you open a File Explorer window, its exact appearance is going to depend on how you've used it in the past, since it usually remembers how you had it set up the last time you used it to look at a particular directory.  There are certain modifications that you can do to make File Explorer easier to use based on how you like to organize things.  
 
-![explorer with navigation and ribbon](../images-2-pc/windows-explorer.jpg)
+<img src="../images-2-pc/file-explorer.jpg" style="border:1px solid black">
 
 ## Navigation pane
 
 There are two parts of the File Explorer window that you can choose to display or not.  The *ribbon* is at the top of the window.  The Home and View tabs are the most useful ones.  The Home tab allows you to perform tasks such as creating new folders and deleting files.  The View tab has many useful features and we will focus on it.
 
-The first item in the View tab is a dropdown that controls whether 
+<img src="../images-2-pc/nav-pane-options.jpg" style="border:1px solid black">
 
-Its most useful features are the back button, which allows you to go back to previous directory that you viewed, and the set of four buttons that contol how the files are displayed (as icons, list, columns, or gallery).  The *sidebar* allows you to quickly jump to folders that you frequently use.  
+The first item in the View tab is a dropdown that controls whether the second part (the *navigation pane*) is visible or not, and how it works.  You should check the `Navigation pane` checkbox if it isn't already checked.  Also check the `Expand to open folder` checkbox.  
 
-You can control whether the toolbar and sidebar are visible or not by going to the Finder View menu and toggling `show toolbar`/`hide toolbar` option.  Unless you are really hard up for screen space, I recommend leaving them visible.  (You can also show or hide just the sidebar, but toggling the toolbar shows or hides both).  
+The second set of items (`Preview pane` and `Details pane`) open and close panes at the right of the window that provides a preview of the contents or gives details of the selected file, respectively.  
 
-Once the sidebar is visible, there are two ways you can control what "favorite" folders are visible.  To control which of the "special" folders are visible, click on a Finder window (or the Finder icon in the dock), then from the Finder menu, select `Preferences".  Click on the Sidebar tab.
+The third set of items allows you to select how you want to view the files.  The two most useful view styles are `Details` and the various sizes of icons.  
 
-<img src="../images-2-mac/sidebar-preferences.png" style="border:1px solid black">
+<img src="../images-2-pc/large-icons.jpg" style="border:1px solid black">
 
-Uncheck the boxes of any items you don't want to see, and check any that you think you might use frequently.  For these exercises, make sure that your home folder is checked (the icon that looks like a little house) as well as the Location that has your computer name (in this case, `erebus's MacBook Pro`).  When you are done, close the window by clicking on the red dot.  **Note: you can always go to any of the special folders by dropping down the Finder `Go` menu, then selecting the folder you want.**
+The *Large icons* option is mostly useful for directories that contain images, since it presents reasonably sized thumbnails of images in the folder.  It's probably the easiest way to find a particular image from a large collection.  
 
-<img src="../images-2-mac/add-favorite.png" style="border:1px solid black">
+<img src="../images-2-pc/details.jpg" style="border:1px solid black">
 
-You can also add favorite "regular" folders to the sidebar.  Click and drag the folder over to the sidebar until a line shows up in the position where you want the folder to be, then drop it.  **Note: be careful that you see the line indicating where the folder will be inserted between other folders on the list.  If you hold the folder *over* a folder in the list, you'll actually move the folder you were dragging *into* the folder on the list.**  If you add a folder to the favorites list, it is also still in its original location in the directory tree.
+The *Details* option is probably the most useful of the remaining views. This view displays columns of metadata about the files, including the time when it was last modified and the file size.  You can sort by any of the columns, which is particularly useful for finding the most recently modified, or the oldest files.  
 
-To remove a "regular" folder from the sidebar, just click and drag it somewhere out of the sidebar so that an X shows up next to its icon.  Drop it and it will be removed.  (If you drop it from the sidebar into a directory that is being displayed, it won't be moved there.) 
+There is also a set of buttons in the lower right of the window that allows you to switch between displying item info and just displaying the icons.  It's best to just leave it selected to display item info and control the view style using the view ribbon options.
 
-## Finder display modes
+<img src="../images-2-pc/nav-pane.jpg" style="border:1px solid black">
 
-If you don't have very many files on your computer, it doesn't matter much what display mode you chose to use.  
+The navigation pane is extremely useful for navigating around in the directory tree.  Near the top of the navigation pane is `This PC`, which is sort of the imaginary root of every file storage thing in the directory tree.  Located under it hierarchically are the "imaginary" places: Desktop, Documents, Downloads, Pictures, etc. that actually are located within the user's home directory.  Below them is the actual hard drive of the computer.  It might have various names, but can be recognized by its labeling as `(C:)`.  
 
-The classic Mac viewing system is *icon view*.  The icon view is most useful when looking for images because you can see tiny thumbnails.  I find icon view the most annoying because it takes so many clicks to navigate.  When you double-click on a folder, you enter that nested folder.  To back out of that deeper level, you have to use the back button.  It is very easy to get lost if you are deep into the directory tree, but there is a feature that can help you.  
+<img src="../images-2-pc/nav-pane.jpg" style="border:1px solid black">
 
-<img src="../images-2-mac/icon-view-and-path-bar.png" style="border:1px solid black">
+Any of these items can be expanded or collapsed by clicking on the arrow to the left of the folder icon.  The arrow points to the right for collapsed directories and points down for expanded directories.  At any point in the process of expanding the dirctory tree, you can click on a folder and its contents will be displayed on the pane to the right and the hierarchy will be displayed in the path bar below the ribbon.  If you checked the `Expand to open folder` option in the Navigation pane options, then double-clicking on a folder at the right will also automatically expand it in the navigation pane on the left.  
 
-In the Finder View menu, there is an option for `Show Path Bar`.  When you enable the path bar, you will see a little list of your path, from the highest level to the folder you are in.  This option is available in any display mode.
+After you have gone down into deeper subdirectories of the directory tree, you can go back up the tree in two ways.  You can click the back button at the upper left and it will return you to previous directories you have viewed.  You can also jump to any higher level in the path by single-clicking on a folder in the path bar.
 
-The *gallery view* is mostly useful if you need to sort through images.
-
-If you have a lot of files and many nested levels of directories, then you probably will either want to use the *column* or *list* view.  
-
-<img src="../images-2-mac/column-view.png" style="border:1px solid black">
-
-The *column view* is nice because it makes it easy to tell your level in the file hierarchy. Because each level is shown in a different column, it is easy to jump up several level in the hierarchy with a single mouse click.  You can also scroll up and down at each level to see what's in the various levels without changing what's selected. The column view also has a nice preview feature that for certain file types can show you what's in the file without you having to open it.  The most annoying feature of the column view is that it shortens long file names and there is no way to adjust the column width to make the full names show up.  This can be a problem if you have a lot of files with long names that are similar.
-
-<img src="../images-2-mac/list-view.png" style="border:1px solid black">
-
-You can avoid some of these problems with the *list view*. In the list view, you can always see the full file name -- if necessary, you can click and drag the column divisions at the top of the window to make the column wide enough to see the whole name.  You can navigate to deeper layers in the file hierarchy by clicking on the little triangles at the left of the folder names to expand that folder.  Each level in the hierarchy is indented to the right of the previous level.  An advantage over the column view is that you can see deeper into several folders at once by expanding each of them. The disadvantage of this viewing option is that it requires a lot of vertical space on your computer. If you have a lot of files or folders in a folder, you may not be able to see other parts of the directory tree without doing a lot of scrolling up and down the page, particularly if you have a wide screen that is not very tall.  Another disadvantage of this view is that there is no file preview.  However, the view does show you detailed metadata about the files and folders, such as when they were last modified, and their size.  This is the only view that allows you to see these metadata, and you can quickly sort what's visible on the screen by clicking on the column header for the characteristic that you want to sort by.  For example, you can easily tell which files were most recently modified by clicking on the Date Modified column header.
+***********
 
 ## Exploring the entire directory tree
 
