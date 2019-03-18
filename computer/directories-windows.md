@@ -75,15 +75,17 @@ c:\users\user1\file6
 
 # Making File Explorer work the way you want
 
-When you open a File Explorer window, its exact appearance is going to depend on how you've used it in the past, since it usually remembers how you had it set up the last time you used it to look at a particular directory.  There are certain modifications that you can do to make Finder easier to use based on how you like to organize things.  
+When you open a File Explorer window, its exact appearance is going to depend on how you've used it in the past, since it usually remembers how you had it set up the last time you used it to look at a particular directory.  There are certain modifications that you can do to make File Explorer easier to use based on how you like to organize things.  
 
-*************
+![explorer with navigation and ribbon](../images-2-pc/windows-explorer.jpg)
 
-![finder with sidebar and toolbar](../images-2-mac/finder-with-tool-sidebar.png)
+## Navigation pane
 
-## Sidebar and toolbar
+There are two parts of the File Explorer window that you can choose to display or not.  The *ribbon* is at the top of the window.  The Home and View tabs are the most useful ones.  The Home tab allows you to perform tasks such as creating new folders and deleting files.  The View tab has many useful features and we will focus on it.
 
-There are two parts of the Finder window that you can choose to display or not.  The *toolbar* is at the top of the window.  Its most useful features are the back button, which allows you to go back to previous directory that you viewed, and the set of four buttons that contol how the files are displayed (as icons, list, columns, or gallery).  The *sidebar* allows you to quickly jump to folders that you frequently use.  
+The first item in the View tab is a dropdown that controls whether 
+
+Its most useful features are the back button, which allows you to go back to previous directory that you viewed, and the set of four buttons that contol how the files are displayed (as icons, list, columns, or gallery).  The *sidebar* allows you to quickly jump to folders that you frequently use.  
 
 You can control whether the toolbar and sidebar are visible or not by going to the Finder View menu and toggling `show toolbar`/`hide toolbar` option.  Unless you are really hard up for screen space, I recommend leaving them visible.  (You can also show or hide just the sidebar, but toggling the toolbar shows or hides both).  
 
