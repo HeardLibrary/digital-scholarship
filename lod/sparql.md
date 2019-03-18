@@ -344,7 +344,7 @@ WHERE {
 }
 ```
 
-The CONSTRUCT query can have PREFIX definitions in a prolog and can be restricted to particular graphs by FROM statements just as in the case of SELECT queries.
+The CONSTRUCT query can have PREFIX definitions in a prolog and can be restricted to particular graphs using FROM statements just as in the case of SELECT queries.
 
 Here is an example that can be tested at the [Vanderbilt SPARQL endpoint](https://sparql.vanderbilt.edu/):
 
@@ -364,9 +364,9 @@ WHERE {
 
 In this example, we find sets of books that are connected to authors by the `dcterms:creator` property and create a new graph that contains triples where those authors are connected to their books by a different property: `foaf:maker`.  Each binding of an author and a book is used to construct one triple connecting that author and book using the new property.
 
-In this case, DCMI and the creators of FOAF agreed that the two terms, `dcterms:creator` and `foaf:maker` are equivalent.  So in theory, a sufficiently smart computer could figure out that a triple containing one of those properties entails another triple using the other property.  But a generic triplestore and SPARQL endpoint doesn't automatically do that kind of reasoning, so by using SPARQL CONSTRUCT, we can "materialize" those entailed triples and manually insert them back into the dataset by loading the result of the CONSTRUCT query back into the triplestore.
+In this case, [DCMI](http://dublincore.org/) and the creators of [FOAF](http://xmlns.com/foaf/spec/) agreed that the two terms, `dcterms:creator` and `foaf:maker` are equivalent.  So in theory, a sufficiently smart computer could figure out that a triple containing one of those properties entails another triple using the other property.  But a generic triplestore and SPARQL endpoint doesn't automatically do that kind of reasoning, so by using SPARQL CONSTRUCT, we can "materialize" those entailed triples and manually insert them back into the dataset by loading the result of the CONSTRUCT query back into the triplestore.
 
-A very similar use case is dealing with the FOAF and schema.org terms.  Here is a CONSTRUCT query that converts FOAF terms to a schema.org term:
+A very similar use case involves FOAF and schema.org terms.  Here is a CONSTRUCT query that converts FOAF terms to a schema.org term:
 
 ```sparql
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
@@ -382,7 +382,7 @@ WHERE {
 }
 ```
 
-Notice the trick used to create an entire schema.org name from separate given and surnames.  The graph pattern as it is shown requires that a thing have both a first and last name in order for the combined name to be constructed. 
+Notice the trick used to create an entire schema.org name from separate given- and surnames.  The graph pattern as it is shown requires that a thing have both a first and last name in order for the combined name to be constructed. 
 
 ## Getting a triple dump from an endpoint
 
@@ -417,11 +417,11 @@ In this example, the values of the `?person` variable are constrained to be peop
 
 ## Refactoring data from Wikidata
 
-Although the Wikidata data model (essentially the same as the generic Wikibase data model) can be expressed as RDF, it has some significant differences from standard Linked Data practices.  In particular, all entities are "items" and don't have `rdf:type` assignments.  Nearly all properties are ideosyncratic to Wikidata, so with the notable exception of `rdfs:label`, virtually none of the "standard" Linked Data properties (Dublin Core, FOAF, schema.org, etc.) are used.
+Although the Wikidata data model can be expressed as RDF, it has some significant differences from standard Linked Data practices.  In particular, all entities are "items" and don't have `rdf:type` assignments.  Nearly all properties are ideosyncratic to Wikidata, so with the notable exception of `rdfs:label`, virtually none of the "standard" Linked Data properties (Dublin Core, FOAF, schema.org, etc.) are used.  (Note: the Wikidata data model is essentially the same as the data model used by the generic Wikibase platform.)
 
 Another challenge is that since Wikidata is by design very multilingual, acquiring every label will often result in more labels than are needed.  So filtering labels for particular languages can be helpful.
 
-If we want to harvest data from Wikidata but express it in more standard terms, we can use CONSTRUCT queries.  Here is an example:
+If we want to harvest data from Wikidata but express it in more standard terms, we can use CONSTRUCT queries.  Here is an example that can be run at the [Wikidata query service](https://query.wikidata.org/):
 
 ```sparql
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -468,9 +468,9 @@ WHERE {
 ```
 
 **Notes:**
-- We assert `rdf:type` of `foaf:Person` to all of the presidents due the screening we did by requiring them to be real people.
+- We assert `rdf:type` of `foaf:Person` to all of the presidents due the screening we did by requiring them to be presidents.  FOAF [doesn't actually require the to be real people](http://xmlns.com/foaf/spec/#term_Person).
 - There isn't really a well-known property for "position held" or controlled vocabulary that includes "presidents of the United States", so that property and value were just passed through to the new graph as-is.
-- Given names and surnames are items, not string labels (literals).  So to acquire the name strings themselves, we need to find the labels of the name items.
+- In Wikidata, given names and surnames are items, not string labels (literals).  So to acquire the name strings themselves, we need to find the labels of the name items.
 - There aren't really rules for how terms can be used, so I chose to use `dcterms:created` for the birth dates.  That's kind of a non-standard use for a very well-known term.  It also has a different intended meaning that its somewhat ambiguous use in the `http://vandy` graph where the value given was the date the record was created (see the value for Shaul Kelner).
 
 You can look at the resulting data (retrieved on 2019-03-14) [as RDF/XML](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/presidents.rdf) or [as RDF/Turtle](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/presidents.ttl).
@@ -519,7 +519,7 @@ The resulting RDF/XML file can be loaded into a SPARQL endpoint if desired.
 
 ## Acquiring triples from an endpoint using GET
 
-An HTTP GET request is somewhat simpler than a POST request, since there is no text body to be sent to the server.  Instead, the query is sent as a part of a query string appended to the URL itself. The SPARQL protocol for GET is more relaxed than POST about the headers and will generally default to RDF/XML if no Accept header is sent.  The downside is that the query itself has to be URL encoded to make all of the non-alpanumeric characters "safe" to be included in a URL.  Here are the steps to do a GET request using Postman:
+An HTTP GET request is somewhat simpler than a POST request, since there is no text body to be sent to the server.  Instead, the query is sent as a part of a query string appended to the URL itself. The SPARQL protocol for GET is more relaxed than POST about the headers and will generally default to RDF/XML if no Accept header is sent.  The downside is that the query itself has to be URL encoded to make all of the non-alphanumeric characters "safe" to be included in a URL.  Here are the steps to do a GET request using Postman:
 
 1\. The query endpoint URL is `https://query.wikidata.org/sparql`
 
@@ -636,4 +636,4 @@ If you don't count the lines required to assign the SPARQL query to the query va
 Lesson on the [Wikibase data model](../wikibase/)
 
 ----
-Revised 2019-03-14
+Revised 2019-03-18
