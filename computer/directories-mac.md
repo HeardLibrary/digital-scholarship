@@ -126,4 +126,16 @@ Now for contrast, click on the Documents favorite in the sidebar.  You will go d
 
 # Save file dialog
 
+As a relatively new Mac user, I was somewhat horrified to discover the large number of users who seem to primarly save documents to their desktop instead of in some organized place in the directory tree.  I think part of the reason for that is that they weren't aware of the features available in the `Save as...` (or `Save...`) file dialog.  Fortunately, that dialog has many of the same features as Finder, so understanding how to navigate Finder will also help you do understand how to use the `Save as...` dialog effectively.
+
+<img src="../images-2-mac/unexpanded-save-as.png" style="border:1px solid black">
+
+By default, the `Save as...` dialog is in its abbreviated form.  Dropping down the `Where` list will let you choose any location that normally appears on your Finder sidebar.  But to navigate to other locations, you need to click on the small down arrow to the right of the `Where` dropdown. 
+
+<img src="../images-2-mac/expanded-save-as.png" style="border:1px solid black">
+
+The expanded `Save as...` dialog box allows you to navigate in a manner nearly identical to Finder.  To save space, the display style options are in a dropdown.  You can also create a new folder in the current directory if you want to develop the directory tree in a way that makes sense for storing the file.  You can also drop down the `Where` option to jump to a higher position in the directory tree.  
+
 # Copying and moving files
+
+
