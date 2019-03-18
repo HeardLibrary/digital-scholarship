@@ -192,7 +192,7 @@ To select a *range* of files in a list, click on the first file in the list, the
 
 Once you have selected the set of files you want to copy, right-click on one of the files and select `Copy x Items` (where `x` is the number of items).  Alternatively, you can select `Copy x Items` from the Edit menu.
 
-To **copy** the files, click on or in the directory where you want the files to be copied to, then right-click and select `Paste x Items` (or select `Paste x Items` from the Edit menu).  The files you selected should be copied (not moved) to the new folder.
+To **copy** the files, click on or in the directory where you want the files to be copied to, then right-click and select `Paste x Items` (or select `Paste x Items` from the Edit menu).  The files you selected should be copied (not moved) to the new folder.  The sortcut for this action is holding on the `command` key, then pressing the `V` key.
 
 To **move** the selected files to the new location instead of copying them, select and copy the files you want to move as described above, then click in the folder where you want them to go.  Hold down on the `command` and `option` keys at the same time, then press the `V` key.  (On a PC external keyboard, press the `command` key that looks like a window and the `alt` key at the same time, then press the `V` key.)
 
