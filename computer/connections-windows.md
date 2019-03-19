@@ -86,7 +86,7 @@ Once the firmware update is finished, any downloaded files on the computer aren'
 
 # Reinstalling a printer
 
-**Note:** These instructions are intended to help solve problems related to printers directly attached to a computer or through a home network.  Printers connected through the Vanderbilt network are more complicate and you'll probaby need help with them.
+**Note:** These instructions are intended to help solve problems related to printers attached directly to a computer or through a home network.  Printers connected through the Vanderbilt network are more complicate and you'll probaby need help with them.
 
 If all goes well when you first connect a printer, plug and play will install the drivers and create a printer connection automatically.  However, sometimes a computer refuses to connect to a printer that is turned on and otherwise ready to go.  It is unlikely that you'll ever be able to figure out what the problem is, but fortunately, you can just create a new connection to the computer.
 
@@ -102,6 +102,8 @@ Click on the `Printers` item in the list at the left.  On the right you'll see a
 
 Click on the `Remove device` button that shows up below the printer name.  Don't worry -- we aren't actually doing anything to the device.  You also don't need to physically "remove" or unplug the printer.  
 
+<img src="../images-4-pc/add-printer-option.png" style="border:1px solid black">
+
 After the printer has disappeared, click on the `Add a printer or scanner` plus (`+`) button.  
 
 <img src="../images-4-pc/searching.png" style="border:1px solid black">
@@ -114,16 +116,15 @@ The computer has found the printer (ET0021B73840FD) again.
 
 <img src="../images-4-pc/add-device.png" style="border:1px solid black">
 
-Click on `Add device`.
-
-<img src="../images-4-pc/add-printer-options.png" style="border:1px solid black">
-
+Click on the printer name, then click on the `Add device` button.
 
 <img src="../images-4-pc/printer-ready.png" style="border:1px solid black">
 
 After the computer has recreated the printer connection, it will appear on the list of available printers -- this time without any "Offline" message.
 
 # Using multiple monitors
+
+There are two typical situations where a computer is connected to multiple displays.  One is where a laptop is "docked" to a larger external monitor.  The other is when the computer is connected to a projection system, such as an LCD projector.  The instructions here will show you how to make the displays work the way you want.
 
 <img src="../images-4-pc/right-click-desktop.jpg" style="border:1px solid black">
 
@@ -135,7 +136,14 @@ If necessary, click on `Display` in the left column. You'll see a diagram of you
 
 <img src="../images-4-pc/display2.png" style="border:1px solid black">
 
-Scroll down 
+Scroll down the screen until you get to the `Scale and layout` and `Multiple dosplays` section.  The settings in these two sections apply to whichever of the monitors was most recently selected by clicking on it (it will appear blue in the display layout).  
+
+In the `Scale and layout` section, you can control whether the monitor is oriented as landscape or portrait.  In some cases, users prefer to rotate a monitor 90 degrees to have a screen that is higher than it is wide.  For that configuration, you would change the orientation to Portrait.
+
+The `Multiple displays` section controls whether the same material is shown on both monitors () or if the display extends from one to the other ("Extend these displays").  Extending the displays is usually the best choice for an external monitor connected to a laptop.  Mirroring the displays is usually the best choice if the laptop is connected to a projection system (allowing the user to see on the laptop what is being displayed on the prjector).  
+
+Check the `Make this my main display` checkbox when the display is selected where you want the system tray and main menus to reside.
+
 
 ----
-Revised 2019-03-18
+Revised 2019-03-19
