@@ -111,89 +111,87 @@ Any of these items can be expanded or collapsed by clicking on the arrow to the 
 
 After you have gone down into deeper subdirectories of the directory tree, you can go back up the tree in two ways.  You can click the back button (left-facing arrow at the upper left) and it will return you to previous directories you have viewed.  You can also jump to any higher level in the path by single-clicking on a folder in the path bar.
 
-***********
-
 ## Exploring the entire directory tree
 
-<img src="../images-2-mac/finder-entire-directory-tree.png" style="border:1px solid black">
+<img src="../images-2-pc/navigate-to-documents.png" style="border:1px solid black">
 
-If you included your computer in the sidebar, click on it and select columns view.  If your computer isn't in the sidebar, drop down the Finder `Go` menu and select `Computer`. Starting on the level of your whole computer, you can dive down into the directory, starting with the root directory in your hard drive (probably named `macOS`), to the `users` directory, then to your home folder, and finally to your `Documents` folder.
+In File Explorer, make sure that the navigation pane is enabled and that you are using Details view.  Starting with `This PC`, dive deep into the directory tree.  Expand `This PC` if necessary, then the root directory your hard drive (probably named something but labeled as `C:`), to the `users` directory, then to your home folder, and finally to your `Documents` folder.
 
-<img src="../images-2-mac/documents-level.png" style="border:1px solid black">
+<img src="../images-2-pc/direct-to-documents.png" style="border:1px solid black">
 
-Now for contrast, click on the Documents favorite in the sidebar.  You will go directly to your Documents directory.  Although if you've enabled the Show Path Bar, you'll know where you are in the directory tree, and you can easily jump to a higher level than the one you chose from the sidebar Favorites by simply double-clicking on the higher level in the path bar.  This feature is useful if you start exploring at a low level in the directory tree but later realize that you need to jump up to a higher level.
+You should be able to see your path to the Documents folder in the Path box under the ribbon.
+
+Now for contrast, click on the Documents folder directly under `This PC`.  This will take you directly to your Documents directory.  You should see the same files that you saw when you navigated to your Documents directory through the C: drive.  If you look at the Path box, you'll see that Windows is continuing the charade of pretending that your Documents folder is directly connected to your computer separately from the directory tree.
 
 # Save file dialog
 
-As a relatively new Mac user, I was somewhat horrified to discover the large number of users who seem to mostly save documents to their desktop instead of in some organized place in the directory tree.  I think part of the reason for that is that they weren't aware of the features available in the `Save as...` (or `Save...`) dialog from the `File` menu.  Fortunately, that dialog has many of the same features as Finder, so understanding how to navigate Finder will also help you do understand how to use the `Save as...` dialog effectively.
+Novice computer users often don't start off having very many files on their computers.  So they tend to save all of their files on the Desktop or in the Documents folder.  However, after accumulating more files, it becomes important to save them in a more organized manner that probably involves creating some hierarchical directories.  
 
-<img src="../images-2-mac/unexpanded-save-as.png" style="border:1px solid black">
+The Save as... dialog has many of the same features as File Explorer, so understanding how to navigate File Explorer will also help you do understand how to use the `Save as...` dialog effectively.
 
-By default, the `Save as...` dialog is in its abbreviated form.  Dropping down the `Where` list will let you choose any location that normally appears on your Finder sidebar.  But to navigate to other locations, you need to click on the small down arrow to the right of the `Where` dropdown. 
+<img src="../images-2-pc/save-as.png" style="border:1px solid black">
 
-<img src="../images-2-mac/expanded-save-as.png" style="border:1px solid black">
+The `Save as...` dialog box allows you to navigate in a manner nearly identical to File Explorer.  To save space, the display style options are in a dropdown.  
 
-The expanded `Save as...` dialog box allows you to navigate in a manner nearly identical to Finder.  To save space, the display style options are in a dropdown.  You can create a new folder in the current directory if you want to develop the directory tree in a way that makes sense for storing the file.  You can also drop down the `Where` option to jump to a higher position in the directory tree.  
+<img src="../images-2-pc/save-as-view-options.png" style="border:1px solid black">
+
+You can create a new folder in the current directory by clicking on the `New folder` option in the upper left if you want to develop the directory tree in a way that makes sense for storing the file.  You can also click on the up arrow to the left of the path to move a level higher in the directory tree, or click on the path itself to move directly to a higher level.  
 
 # Copying and moving files
 
-A very important aspect of working with files in Finder is understanding the effect of drag-and-drop.  In some cases, dragging and droping a file or folder causes it to be moved to the new location (moving), while in other cases, it causes a copy of the file to be created in the nwe location (copying).  Whether drag-and-drop results in copying or moving depends primarily on the place where the file is dropped relative to its starting location.
+When used with the File explorer navigation pane, *click and drag* is an efficient way to move files around.  First, expand the directory tree in the navigation pane until you can click on the folder containing the file(s) you want to move.  Click on the folder.  Now scroll the navigation pane and expand the directory tree until you can see the folder where you want the file to go.  Just drag the file from the pane on the right to the folder in the navigation pane where you want it to go, and drop the file.
 
-<img src="../images-2-mac/move.png" style="border:1px solid black">
+A very important aspect of working with files in File Explorer is understanding the effect of drag-and-drop.  In some cases, dragging and droping a file or folder causes it to be moved to the new location (moving), while in other cases, it causes a copy of the file to be created in the nwe location (copying).  Whether drag-and-drop results in copying or moving depends primarily on the place where the file is dropped relative to its starting location.
 
-In the example above, I'm dragging and dropping a file from the `Documents` directory to a subdirectory of `Documents` called `output`.  Both directories are located on my hard drive (called `macOS` by default), so Finder assumes that I want to *move* the file.  
+<img src="../images-2-pc/drag-to-move.jpg" style="border:1px solid black">
 
-<img src="../images-2-mac/move-result.png" style="border:1px solid black">
+In the example above, I'm dragging and dropping a file from the `Documents` directory to a subdirectory of `Documents`.  Both directories are located on my hard drive C:, so File Explorer assumes that I want to *move* the file. There are two ways that I can know that the file will be moved rather than copied: under the icon that I'm dragging an arrow appears as well as the words "Move to".
+
+<img src="../images-2-pc/moved-file-is-missing.png" style="border:1px solid black">
 
 After I drop the file, I see that it has been moved to the new folder and is no longer in the old one.
 
-<img src="../images-2-mac/copy.png" style="border:1px solid black">
+<img src="../images-2-pc/drag-to-copy.jpg" style="border:1px solid black">
 
-In the second example, I'm dragging and dropping a file from my Documents folder to an external drive that I've connected to my system, called `oldbuffalo1`.  There are two ways I can see that Finder considers this to be a different drive rather than just a folder within my `macOS` drive.  To the left of the drive name, I see a little hard drive icon instead of a folder icon.  To the right of the drive name, I see an `eject` symbol that I should use when I want to remove the drive from the system.  Because I'm moving a file from one drive to another, Finder assumes that I want to *copy* the file.
+In the second example, I'm dragging and dropping a file from my Documents folder to an external drive that I've connected to my system, called `auxillary SSD`.  I can see that Finder considers this to be a different drive rather than just a folder within my `C:` drive.  To the left of the drive name, I see a little hard drive icon instead of a folder icon.  To the right of the drive name, I see the `H:` drive letter.  Because I'm moving a file from one drive to another, File Explorer assumes that I want to *copy* the file.
 
-This time, when I drag and drop, I see that a green circle with a plus sign inside it appears under the icon when I hover over the drive where I want to drop the file.  That means that the file I'm dragging will be added to the other drive as a copy.
+This time, when I drag and drop, I see a plus (`+`) sign under the icon that I'm dragging and also the words "Copy to".  That means that the file I'm dragging will be **added** to the other drive as a copy, not moved.
 
-<img src="../images-2-mac/copy-result.png" style="border:1px solid black">
+<img src="../images-2-pc/moved-file-still-there.png" style="border:1px solid black">
 
-Once I've dropped the file, I can see that Finder did indeed do a copy operation because the original file is still where it was before I did the drag and drop.
+Once I've dropped the file, I can see that Finder did indeed do a copy operation because the original file is still where it was before I did the drag and drop. 
 
-The plus sign appears regardless of the display style you've chosen for Finder.  
-
-The bottom line is that if you are ever unsure about whether you are copying or moving a file, **look to see whether there is a green plus sign**.
+The bottom line is that if you are ever unsure about whether you are copying or moving a file, **look to see whether there is an arrow or a plus sign under the icon** and notice whether it says "Move to" or "Copy to".
 
 ## Dropbox and Box
 
 Dropbox and Box are two common and similar systems used to synch local files on a computer with an analogous directory tree in the cloud.  You can use either system entirely by uploading and downloading files using a web interface, but it is far more convenient to set up folders in the cloud to by synched directly with directories on your local computer.  This section assumes that you have enabled this kind of synch to your local computer.
 
-<img src="../images-2-mac/box-copy.png" style="border:1px solid black">
+<img src="../images-2-pc/dropbox-and-box.png" style="border:1px solid black">
 
-A very confusing thing happens when I compare what happens when I drag and drop to a Dropbox folder and a Box folder.  When I drag and drop to a Box folder, I see the plus sign (indicating that I'm performing a copy), but when I drag and drop to a Dropbox folder, I don't see the plus sign (indicating that I'm performing a move).  
+When you install Dropbox or Box so that it will synch with your local computer, you will see the root folders for those services under the "Quick access" item in the navigation pane.  However, the actual folder will be somewhere else.  You can specify a location other than the default by right-clicking on their icons in the system tray at the lower right of the screen and accessing the settings or preferences.  On the computer above, the folders were set up as first-level directories under the C: drive.  
 
-<img src="../images-2-mac/box-as-drive.png" style="border:1px solid black">
-
-I can get to the bottom of this apparent contradiction by scrolling down my Finder sidebar to the Locations section.  I see that Box is listed there (with an eject symbol), but Dropbox is not.  This tells me that the two systems are set up to operate in different ways.  Box folders are considered to live in a sort of virtual external drive, while Dropbox folders are just considered to be a sort of magical "regular" folder located on my hard drive.  
-
-<img src="../images-2-mac/boxes-in-home.png" style="border:1px solid black">
-
-I can understand the true situation by clicking on my home folder.  I see that actually both the root Box folder and the root Dropbox folder are subdirectories of my home folder.  The difference between them is some feature of the way that the synch application is set up to keep those folders synched with the server in the cloud - the operating system just considers them to be regular directories, more or less.  Locating them in the user directory makes sense because different users of a computer might have different Box/Dropbox accounts and putting them in the user directory allows the operating system to distinguish between the different user accounts.
+Moving files into and out of subdirectories of the Box or Dropbox folders works just like moving files in and out of any other directories.  However, the software associated with the services will automatically mirror those actions in the parallel directory trees in the cloud.  The synch process does not happen instantaneously.  Depending on how big the files are and how many were moved, it could take seconds or even minutes for the synch process to complete.  You can hover over, or right click on the icons in the system try to see the status of the synch.
 
 ## Alternatives to drag and drop
 
-Dragging and dropping files is OK for moving single files, but selecting and moving/copying a particular set of files (or a large number of files) can be a bit unnerving.  Most people have probably had the experience of dropping files in the wrong place and struggling with how to undo the damage, particularly if a bunch if copied files get mixed in with a bunch of other files.  (A quick answer to the problem is to hold the `Command` key and press the `Z` key, which nearly always will undo the last action you've taken.)  The other issue we will deal with here is what to do if you actually want to copy (NOT move) files within a drive, or move (NOT copy) files between drives.
+Dragging and dropping files is OK for moving single files, but selecting and moving/copying a particular set of files (or a large number of files) can be a bit unnerving.  Most people have probably had the experience of dropping files in the wrong place and struggling with how to undo the damage, particularly if a bunch if copied files get mixed in with a bunch of other files.  (A quick answer to the problem is to hold the `Ctrl` key and press the `Z` key, which nearly always will undo the last action you've taken.)  The other issue we will deal with here is what to do if you actually want to copy (NOT move) files within a drive, or move (NOT copy) files between drives.
 
-The best way to handle this situation is to select the files you want to copy, then copy and paste them.  You can select files by clicking and dragging, but you can get better control using shift-click or command-click.  
+The best way to handle this situation is to select the files you want to move, either copy or cut them, then paste them where you want them to go.  Whether the files are copied or moved depends on whether you copy or cut them.
 
-To select a *range* of files in a list, click on the first file in the list, then hold down on the `shift` key and click on the final file in the list.  To select *particular* files, click on the first one, then hold down on the `command` key and click on each of the other files to select them (or click a second time to de-select them).  You can also hold on the `command` key, then press on the `A` key to select *all* of the files in a directory.  
+You can select files by clicking and dragging, but you can get better control using shift-click or command-click.  
 
-<img src="../images-2-mac/copy-items.png" style="border:1px solid black">
+To select a *range* of files in a list, click on the first file in the list, then hold down on the `shift` key and click on the final file in the list.  To select *particular* files, click on the first one, then hold down on the `Ctrl` key and click on each of the other files to select them (or click a second time to de-select them).  You can also hold on the `Ctrl` key, then press on the `A` key to select *all* of the files in a directory.  
 
-Once you have selected the set of files you want to copy, right-click on one of the files and select `Copy x Items` (where `x` is the number of items).  Alternatively, you can select `Copy x Items` from the Edit menu.
+<img src="../images-2-pc/copy-items.jpg" style="border:1px solid black">
 
-To **copy** the files, click on or in the directory where you want the files to be copied to, then right-click and select `Paste x Items` (or select `Paste x Items` from the Edit menu).  The files you selected should be copied (not moved) to the new folder. The sortcut for this action is holding on the `command` key, then pressing the `V` key.
+Once you have selected the set of files you want to **copy**, right-click on one of the files and select `Copy`.  Alternatively, you can select `Copy` from the Home ribbon.  The sortcut for this action is holding on the `Ctrl` key, then pressing the `C` key.
 
-To **move** the selected files to the new location instead of copying them, select and copy the files you want to move as described above, then click in the folder where you want them to go.  Hold down on the `command` and `option` keys at the same time, then press the `V` key.  (On a PC external keyboard, press the `command` key that looks like a window and the `alt` key at the same time, then press the `V` key.)
+Alternatively, if you want to **move** the files instead of copying them, right-click on one of the files and select `Cut`.  Alternatively, you can select `Cut` from the Home ribbon.  The sortcut for this action is holding on the `Ctrl` key, then pressing the `X` key.
 
-Note: using the copy and paste method distinguishes between moving and copying **solely based on how you do the paste**.  It does not depend on whether the operation is done within or between drives.  
+Regardless of whether you chose copy or cut, click on or in the directory where you want the files to go, then right-click and select `Paste` (or select `Paste` from the Edit menu).  The sortcut for this action is holding on the `Ctrl` key, then pressing the `V` key.
+
+Note: using the copy/cut and paste method distinguishes between moving and copying **solely based on whether you choose copy or cut**.  It does not depend on whether the operation is done within or between drives.  
 
 [go on to Lesson 3: Installing software](../installation-windows/)
 
