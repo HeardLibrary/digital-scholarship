@@ -30,6 +30,15 @@ This is the Windows version of this page.  [Click for the Mac version of this pa
 
 <img src="../images-4-pc/printer-ready.png" style="border:1px solid black">
 
+# Using multiple monitors
+
+<img src="../images-4-pc/right-click-display.jpg" style="border:1px solid black">
+
+Right-click on the desktop.  Select `Display Settings`.
+
+<img src="../images-4-pc/display1.png" style="border:1px solid black">
+
+<img src="../images-4-pc/display1.png" style="border:1px solid black">
 
 ----
 Revised 2019-03-18
