@@ -122,6 +122,14 @@ Click on the printer name, then click on the `Add device` button.
 
 After the computer has recreated the printer connection, it will appear on the list of available printers -- this time without any "Offline" message.
 
+# Removable storage
+
+## Flash drives and external hard drives
+
+## Controlling the drive letter
+
+## Safely remove hardware/dismount drive
+
 # Using multiple monitors
 
 There are two typical situations where a computer is connected to multiple displays.  One is where a laptop is "docked" to a larger external monitor.  The other is when the computer is connected to a projection system, such as an LCD projector.  The instructions here will show you how to make the displays work the way you want.
