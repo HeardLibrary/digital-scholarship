@@ -125,13 +125,17 @@ After the computer has recreated the printer connection, it will appear on the l
 
 # Using multiple monitors
 
-<img src="../images-4-pc/right-click-display.jpg" style="border:1px solid black">
+<img src="../images-4-pc/right-click-desktop.jpg" style="border:1px solid black">
 
 Right-click on the desktop.  Select `Display Settings`.
 
 <img src="../images-4-pc/display1.png" style="border:1px solid black">
 
-<img src="../images-4-pc/display1.png" style="border:1px solid black">
+If necessary, click on `Display` in the left column. You'll see a diagram of your displays on the right.  In this example, display 1 is the built-in laptop display and display 2 is a large external monitor.  You can drag the two displays around until they match the physical configuration of the displays on your desk.  For example, if the external monitor is to the left of the laptop, drag display 2 to the left of display 1.  If the displays are different sizes, you can also move them up and down so that the tops or bottoms line up.  
+
+<img src="../images-4-pc/display2.png" style="border:1px solid black">
+
+Scroll down 
 
 ----
 Revised 2019-03-18
