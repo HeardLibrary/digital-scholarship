@@ -53,7 +53,7 @@ Topics include:
 - External drives
 - Additional monitors
 
-[Go to Lesson 4: Connections](connections)
+Go to Lesson 4: Connections[for Mac](connections-mac/) or [for Windows](connections-windows/)
 
 ## Lesson 5: Backup
 
@@ -64,7 +64,7 @@ Topics include:
 - External drives
 - Network servers
 
-[Go to Lesson 5: Backup](backup)
+Go to Lesson 5: Backup[for Mac](backup-mac/) or [for Windows](backup-windows/)
 
 ## Lesson 6: Command line
 
