@@ -28,8 +28,9 @@ Go to Lesson 1: Files [for Mac](files-mac/) or [for Windows](files-windows/)
 
 Topics include:
 - The directory tree
-- The cloud
-- Downloads
+- File Explorer
+- Copying vs. moving files
+- Cloud services for files
 
 Go to Lesson 2: Directories [for Mac](directories-mac/) or [for Windows](directories-windows/)
 
