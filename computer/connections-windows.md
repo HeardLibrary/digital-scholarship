@@ -32,7 +32,7 @@ Recently, USB-C has been developed as an "everything" port that can connect to e
 
 <img src="../images-4-pc/usb-c-to-hdmi.jpg" style="border:1px solid black">
 
-Since many external monitors (including LCD projectors) may not have any means to connect to a laptop that has only USB-C ports, an inexpensive converter can be purchased to allow the laptop to connect.
+Since many external monitors (including LCD projectors) may not have any means to connect to a laptop that has only USB-C ports, an inexpensive converter can be purchased to allow the laptop to connect via an HDMI cable.
 
 ## USB ports
 
@@ -50,7 +50,7 @@ Very recently, USB-C has been introduced.  It is also backwards compatable with 
 
 <img src="../images-4-pc/usb-c-to-usb-3.jpg" style="border:1px solid black">
 
-For users with very new computers that have only USB-C ports, relatively inexpensive converters are available that will allow older devices to be plugged into the new ports.
+For users with very new computers that have only USB-C ports, relatively inexpensive converters are available that will allow older devices with type A cords to be plugged into the new ports.
 
 ## Other connectors
 
@@ -78,25 +78,49 @@ If the device is new and the OS is old, it's possible that the OS will use a mor
 
 There may also be driver updates that fix bugs or patch security risks.  In some cases, the OS is able to learn that a newer driver is available and inform the user about it.  If that happens, it is usually a good idea to install the new driver.  
 
-Drivers are software that resides on the computer.  The device itself may have software that it uses to communicate with the computer.  This software is often called *firmware".  
+Drivers are software that resides on the computer.  But the device itself probably has its own software that it uses to communicate with the computer.  That software is often called *firmware*.  Sometimes there will be an update to a device's firmware that is intended to solve bugs or security problems.  Such firmware updates are usually downloaded from the Internet through the computer, but since the change needs to be made on the device, the new updated software has to be transferred from the computer to the device through a cable or WiFi.  
+
+During the firmware update, erasable programable memory in the device (similar to the memory on a flash drive) has to be rewritten by transferring the new software from the computer to the device.  It's important that this process doesn't get interrupted since a disruption might cause the device to become non-functional.  A firmware update is something like a "brain transplant" for the device -- disrupting something during the "transplant" could cause the device to only have half a brain.
+
+Once the firmware update is finished, any downloaded files on the computer aren't needed any more and can be deleted.
 
 # Reinstalling a printer
 
+**Note:** These instructions are intended to help solve problems related to printers directly attached to a computer or through a home network.  Printers connected through the Vanderbilt network are more complicate and you'll probaby need help with them.
+
+If all goes well when you first connect a printer, plug and play will install the drivers and create a printer connection automatically.  However, sometimes a computer refuses to connect to a printer that is turned on and otherwise ready to go.  It is unlikely that you'll ever be able to figure out what the problem is, but fortunately, you can just create a new connection to the computer.
+
 <img src="../images-4-pc/devices-option.png" style="border:1px solid black">
+
+Click on the Start menu, then the gear icon (Settings). This will take you to the Settings screen.  Click on the`Devices` item.  
 
 <img src="../images-4-pc/printer-options.png" style="border:1px solid black">
 
+Click on the `Printers` item in the list at the left.  On the right you'll see a list of all of the printers that have connections.  The offending printer (ET0021B73840FD) says it's offline, even though it's turned on, connected and running.  Click on the printer name.
+
 <img src="../images-4-pc/remove-printer.png" style="border:1px solid black">
+
+Click on the `Remove device` button that shows up below the printer name.  Don't worry -- we aren't actually doing anything to the device.  You also don't need to physically "remove" or unplug the printer.  After the printer has disappeared, click on the `Add a printer or scanner` plus (`+`) button.  The computer will search for computers connected (directly or through the local network) for any printers.  In the example, the computer has found the printer (ET0021B73840FD) again.  Click on `Add device`.
 
 <img src="../images-4-pc/add-printer-options.png" style="border:1px solid black">
 
+one
+
 <img src="../images-4-pc/add-device.png" style="border:1px solid black">
+
+two
 
 <img src="../images-4-pc/searching.png" style="border:1px solid black">
 
+three
+
 <img src="../images-4-pc/found-printer.png" style="border:1px solid black">
 
+four
+
 <img src="../images-4-pc/add-device.png" style="border:1px solid black">
+
+five
 
 <img src="../images-4-pc/printer-ready.png" style="border:1px solid black">
 
