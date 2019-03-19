@@ -32,7 +32,7 @@ In fact, there are 5 folders containing 1608 files.  We can avoid using trial an
 
 <img src="../images-3-pc/complex-executable2.jpg" style="border:1px solid black">
 
-If we look in the `bin` subdirectory, we can see that there is a file there called `rstudio.exe`.  If we double-click on it, the RStudio application will launch. 
+If we look in the `bin` subdirectory, we can see that there is a file there called `rstudio.exe`.  If we double-click on it, the RStudio application will launch.
 
 There are also a number of files that have the file extension `.dll`.  These also contain executable code that can be called by the main application or other related applications, but they can't be run by themselves.
 
@@ -80,7 +80,7 @@ Once the installation is finished, the actual installer file is no longer needed
 
 ## Java applications
 
-In some cases, the application that you are installing is not run directly by the operating system, but instead is run by a Java virtual machine (VM).  A Java VM is a program that runs on the Windows system, but can itself run code that is platform-independent.  Typically that code is part of a file with a `.jar` file extension. 
+In some cases, the application that you are installing is not run directly by the operating system, but instead is run by a Java virtual machine (VM).  A Java VM is a program that runs on the Windows system, but can itself run code that is platform-independent.  Typically that code is part of a file with a `.jar` file extension.
 
 The software that creates the VM is called the Java Runtime Environment (or JRE).  It is software that is downloaded and installed like any other software and the `.jar` file extension is then associated with it so that when you double-click on a file with that extension, it will automatically run in a Java VM.  Because Java is so common, someone may have already installed JRE on your computer when it was set up.  If you get a new computer, programs that you are used to running may fail to run because no one has yet installed JRE on it.  You can find the latest version of JRE [here](https://www.oracle.com/technetwork/java/javase/downloads/index.html).  Note that there are several flavors of Java available -- you probably just need the generic JRE.  The Java Development Kit (JDK) is for developers and the Server JRE is not needed by most typical users.
 
@@ -88,7 +88,7 @@ It is also possible that the program that you are using has an installer and cre
 
 ## Applications that run on a localhost server
 
-There are an increasing number of applications that involve setting up a web server on your local computer, then interact with it using a web browser.  These kind of applications are discussed in detail in [lesson 6](../command-windows/). 
+There are an increasing number of applications that involve setting up a web server on your local computer, then interact with it using a web browser.  These kind of applications are discussed in detail in [lesson 6](../command-windows/).
 
 # Software that runs in the background
 
@@ -124,3 +124,8 @@ Click on Apps.  It may take a while for the list of applications to populate.
 
 Click on the application that you want to uninstall, then on the `Uninstall` button.  Follow the dialog until the application has been uninstalled. The application should then be removed from the application list.
 
+
+[go on to Lesson 4: Connections](../connections-windows/)
+
+----
+Revised 2019-03-18
