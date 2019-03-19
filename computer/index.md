@@ -28,7 +28,7 @@ Go to Lesson 1: Files [for Mac](files-mac/) or [for Windows](files-windows/)
 
 Topics include:
 - The directory tree
-- File Explorer
+- File Explorer (Windows)/Finder (Mac)
 - Copying vs. moving files
 - Cloud services for files
 
@@ -38,8 +38,9 @@ Go to Lesson 2: Directories [for Mac](directories-mac/) or [for Windows](directo
 
 Topics include:
 - Parts of installed applications
-- Seeing what's running
+- Application shortcuts (Windows)
 - Ways to install software
+- Uninstalling software
 
 Go to Lesson 3: Installing software [for Mac](installation-mac/) or [for Windows](installation-windows/)
 
