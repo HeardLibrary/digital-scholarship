@@ -100,29 +100,28 @@ Click on the `Printers` item in the list at the left.  On the right you'll see a
 
 <img src="../images-4-pc/remove-printer.png" style="border:1px solid black">
 
-Click on the `Remove device` button that shows up below the printer name.  Don't worry -- we aren't actually doing anything to the device.  You also don't need to physically "remove" or unplug the printer.  After the printer has disappeared, click on the `Add a printer or scanner` plus (`+`) button.  The computer will search for computers connected (directly or through the local network) for any printers.  In the example, the computer has found the printer (ET0021B73840FD) again.  Click on `Add device`.
+Click on the `Remove device` button that shows up below the printer name.  Don't worry -- we aren't actually doing anything to the device.  You also don't need to physically "remove" or unplug the printer.  
 
-<img src="../images-4-pc/add-printer-options.png" style="border:1px solid black">
-
-one
-
-<img src="../images-4-pc/add-device.png" style="border:1px solid black">
-
-two
+After the printer has disappeared, click on the `Add a printer or scanner` plus (`+`) button.  
 
 <img src="../images-4-pc/searching.png" style="border:1px solid black">
 
-three
+The computer will search for computers connected (directly or through the local network) for any printers.  
 
 <img src="../images-4-pc/found-printer.png" style="border:1px solid black">
 
-four
+The computer has found the printer (ET0021B73840FD) again.  
 
 <img src="../images-4-pc/add-device.png" style="border:1px solid black">
 
-five
+Click on `Add device`.
+
+<img src="../images-4-pc/add-printer-options.png" style="border:1px solid black">
+
 
 <img src="../images-4-pc/printer-ready.png" style="border:1px solid black">
+
+After the computer has recreated the printer connection, it will appear on the list of available printers -- this time without any "Offline" message.
 
 # Using multiple monitors
 
