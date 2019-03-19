@@ -131,7 +131,9 @@ The Save as... dialog has many of the same features as File Explorer, so underst
 
 <img src="../images-2-pc/save-as.png" style="border:1px solid black">
 
-The `Save as...` dialog box allows you to navigate in a manner nearly identical to File Explorer.  To save space, the display view options are in a dropdown rather than a ribbon.  
+The `Save as...` dialog box allows you to navigate in a manner nearly identical to File Explorer.  
+
+To save space, the display view options are in a dropdown rather than a ribbon.  
 
 <img src="../images-2-pc/save-as-view-options.jpg" style="border:1px solid black">
 
@@ -181,14 +183,16 @@ Dragging and dropping files is OK for moving single files, but selecting and mov
 
 The other issue we will deal with here is what to do if you actually want to copy (NOT move) files within a drive, or move (NOT copy) files between drives.
 
-The best way to handle this situation is a three-step process that is easier to control: select the files you want to move, either copy or cut them, then paste them where you want them to go.  Whether the files are copied or moved depends on whether you copy or cut them.
+The best way to handle this situation is a **three-step process** that is easier to control: select the files you want to move, either copy or cut them, then paste them where you want them to go.  Whether the files are copied or moved depends on whether you copy or cut them.
 
 **Selection methods**
+
 You can select files by clicking and dragging, but you can get better control using shift-click or command-click.  
 
 To select a *range* of files in a list, click on the first file in the list, then hold down on the `shift` key and click on the final file in the list.  To select *particular* files, click on the first one, then hold down on the `Ctrl` key and click on each of the other files to select them (or click a second time to de-select them).  You can also hold on the `Ctrl` key, then press on the `A` key to select *all* of the files in a directory.  
 
 **Copy/Cut**
+
 <img src="../images-2-pc/copy-items.jpg" style="border:1px solid black">
 
 Once you have selected the set of files you want to **copy**, right-click on one of the files and select `Copy`.  Alternatively, you can select `Copy` from the Home ribbon.  The sortcut for this action is holding on the `Ctrl` key, then pressing the `C` key.
@@ -196,9 +200,11 @@ Once you have selected the set of files you want to **copy**, right-click on one
 Alternatively, if you want to **move** the files instead of copying them, right-click on one of the files and select `Cut`.  Alternatively, you can select `Cut` from the Home ribbon.  The sortcut for this action is holding on the `Ctrl` key, then pressing the `X` key.
 
 **Paste**
+
 Regardless of whether you chose copy or cut, click on or in the directory where you want the files to go, then right-click and select `Paste` (or select `Paste` from the Edit menu).  The sortcut for this action is holding on the `Ctrl` key, then pressing the `V` key.
 
 **Note:**
+
 Using the copy/cut and paste method distinguishes between moving and copying **solely based on whether you choose copy or cut**.  It does not depend on whether the operation is done within or between drives.  
 
 [go on to Lesson 3: Installing software](../installation-windows/)
