@@ -785,5 +785,7 @@ for statement in statements:
    - The results of the search show up in a scrolled text box.  
    - Can you figure out how to add a drop-down list to select the character to be looked up in Wikidata from among those that matched in the search?
 
+[next lesson on practical problem solving](../hack/)
+
 
 Revised 2019-02-11

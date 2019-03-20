@@ -50,7 +50,7 @@ Notice that the triple pattern contains *variables* (beginning with question mar
 
 ```sparql
 {
-?a dcterms:creator ?b.
+  ?a dcterms:creator ?b.
 }
 ```
 
@@ -59,7 +59,7 @@ We could have also listed the full URI if we use the angle bracket notation of T
 
 ```sparql
 {
-?document <http://purl.org/dc/terms/creator> ?person.
+  ?document <http://purl.org/dc/terms/creator> ?person.
 }
 ```
 
@@ -68,8 +68,8 @@ Here's what the graph pattern would be for the second example:
 
 ```sparql
 {
-?document dcterms:creator ?person.
-?document dcterms:title "Let My People Go"@en.
+  ?document dcterms:creator ?person.
+  ?document dcterms:title "Let My People Go"@en.
 }
 ```
 
@@ -85,8 +85,8 @@ A common triple pattern used in graph patterms is to say that a resource must be
 
 ```sparql
 {
-?resource a foaf:Document.
-?resource rdfs:label ?articleLabel. 
+  ?resource a foaf:Document.
+  ?resource rdfs:label ?articleLabel. 
 }
 ```
 
@@ -122,8 +122,8 @@ There are many conditions that can be used to limit the graph pattern.  FILTER s
 
 ```sparql
 {
-?person foaf:givenName ?firstName.
-FILTER (?firstName != "Steve")
+  ?person foaf:givenName ?firstName.
+  FILTER (?firstName != "Steve")
 }
 ```
 
@@ -131,8 +131,8 @@ would exclude people whose first names were "Steve".  In this example:
 
 ```sparql
 {
-?book dcterms:created ?year.
-FILTER (?year < "1928")
+  ?book dcterms:created ?year.
+  FILTER (?year < "1928")
 }
 ```
 
@@ -142,8 +142,8 @@ Here's a filter that restricts the pattern to titles that have English language 
 
 ```sparql
 {
-?book dcterms:title ?name.
-FILTER (langMatches(lang(?name)),"en")
+  ?book dcterms:title ?name.
+  FILTER (langMatches(lang(?name)),"en")
 }
 ```
 
@@ -178,8 +178,8 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT ?book
 WHERE
 {
-?book dcterms:created ?year.
-FILTER (?year < "1928")
+  ?book dcterms:created ?year.
+  FILTER (?year < "1928")
 }
 ```
 
@@ -188,8 +188,8 @@ For compactness, the query could also be written as:
 ```sparql
 PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT ?book WHERE {
-?book dcterms:created ?year.
-FILTER (?year < "1928")
+  ?book dcterms:created ?year.
+  FILTER (?year < "1928")
 }
 ```
 
@@ -198,8 +198,8 @@ The result of a SELECT query is all of the bindings that satisfy the graph patte
 ```sparql
 PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT DISTINCT ?book WHERE {
-?book dcterms:created ?year.
-FILTER (?year < "1928")
+  ?book dcterms:created ?year.
+  FILTER (?year < "1928")
 }
 ```
 
@@ -208,8 +208,8 @@ The SELECT clause can be used to return more than one bound variable.
 ```sparql
 PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT DISTINCT ?author ?year WHERE {
-?book dcterms:created ?year.
-?book dcterms:creator ?author.
+  ?book dcterms:created ?year.
+  ?book dcterms:creator ?author.
 }
 ```
 
@@ -218,8 +218,8 @@ The query above would provide a list of authors and the years in which they crea
 ```sparql
 PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT DISTINCT * WHERE {
-?book dcterms:created ?year.
-?book dcterms:creator ?author.
+  ?book dcterms:created ?year.
+  ?book dcterms:creator ?author.
 }
 ```
 
@@ -227,7 +227,7 @@ Using `*` is a good trick to list triples:
 
 ```sparql
 SELECT DISTINCT * WHERE {
-?subject ?predicate ?object.
+  ?subject ?predicate ?object.
 }
 LIMIT 10
 ```
@@ -245,8 +245,8 @@ FROM <http://vanderbilt.edu/orcid>
 FROM <http://vanderbilt.edu/wikidata>
 FROM <http://vanderbilt.edu/doi>
 WHERE {
-?book dcterms:created ?year.
-?book dcterms:creator ?author.
+  ?book dcterms:created ?year.
+  ?book dcterms:creator ?author.
 }
 ```
 
@@ -254,7 +254,7 @@ The dataset used in the query would consist of only the three graphs: `http://va
 
 FROM clauses can be used in any kind of SPARQL query.
 
-# Sample queries
+## Sample SELECT queries
 
 The following queries can be carried out using the Linked Data Working Group's SPARQL endpoint (<https://sparql.vanderbilt.edu/>).  They are based on the 66 triples included in the graph that we've been using in the examples.  It's a named graph with the URI `http://vandy` (no trailing slash!).  So to exclude other triples in the database, we use an appropriate FROM clause.  The first example includes abbreviations for all of the namespaces included in the graph.  Many will not be needed in particular queries, but it doesn't hurt to just include them all as you hack.
 
@@ -277,7 +277,7 @@ SELECT DISTINCT *
 FROM <http://vandy>
 WHERE {
   ?subject ?predicate ?oboject.
-  }
+}
   ```
 **List URIs and names of all articles** (query by class)
 
@@ -285,8 +285,8 @@ WHERE {
 SELECT DISTINCT ?article ?title
 FROM <http://vandy>
 WHERE {
-?article a foaf:Document.
-?article rdfs:label ?title.
+  ?article a foaf:Document.
+  ?article rdfs:label ?title.
 }
 ```
 
@@ -296,10 +296,10 @@ WHERE {
 SELECT DISTINCT ?title ?date
 FROM <http://vandy>
 WHERE {
-?article a foaf:Document.
-?article rdfs:label ?title.
-?article dcterms:created ?date.
-FILTER (?year < "2014")
+  ?article a foaf:Document.
+  ?article rdfs:label ?title.
+  ?article dcterms:created ?date.
+  FILTER (?year < "2014")
 }
 ```
 
@@ -309,10 +309,10 @@ FILTER (?year < "2014")
 SELECT DISTINCT ?title
 FROM <http://vandy>
 WHERE {
-?article a foaf:Document.
-?article rdfs:label ?title.
-?article dcterms:creator ?person.
-?person foaf:familyName "Hillyer"
+  ?article a foaf:Document.
+  ?article rdfs:label ?title.
+  ?article dcterms:creator ?person.
+  ?person foaf:familyName "Hillyer"
 }
 ```
 
@@ -322,14 +322,318 @@ WHERE {
 SELECT DISTINCT ?startingPage
 FROM <http://vandy>
 WHERE {
-?university grid:cityName "Nashville".
-?person madsrdf:hasAffiliation ?university.
-?article dcterms:creator ?person.
-?article bibo:pageStart ?startingPage.
+  ?university grid:cityName "Nashville".
+  ?person madsrdf:hasAffiliation ?university.
+  ?article dcterms:creator ?person.
+  ?article bibo:pageStart ?startingPage.
 }
 ```
 
-[Wikibase data model](../wikibase/)
+# CONSTRUCT SPARQL queries
+
+The CONSTRUCT SPARQL query form is similar to the SELECT form because both use graph patterns to bind to variables parts of triples that fulfill the graph pattern.  In the SELECT form, those variables (or things related to them, like counts) are simply reported.  However, in the CONSTRUCT query form the bound variables are used to actually create new triples based on patterns specified in the CONSTRUCT clause.
+
+A CONSTRUCT query has the general form
+
+```
+CONSTRUCT {
+  graph to be constructed
+} 
+WHERE {
+  graph pattern to be satisfied
+}
+```
+
+The CONSTRUCT query can have PREFIX definitions in a prolog and can be restricted to particular graphs using FROM statements just as in the case of SELECT queries.
+
+Here is an example that can be tested at the [Vanderbilt SPARQL endpoint](https://sparql.vanderbilt.edu/):
+
+```sparql
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+CONSTRUCT {
+  ?book foaf:maker ?author.
+}
+
+FROM <http://vandy>
+WHERE {
+  ?book dcterms:creator ?author.
+}
+```
+
+In this example, we find sets of books that are connected to authors by the `dcterms:creator` property and create a new graph that contains triples where those authors are connected to their books by a different property: `foaf:maker`.  Each binding of an author and a book is used to construct one triple connecting that author and book using the new property.
+
+In this case, [DCMI](http://dublincore.org/) and the creators of [FOAF](http://xmlns.com/foaf/spec/) agreed that the two terms, `dcterms:creator` and `foaf:maker` are equivalent.  So in theory, a sufficiently smart computer could figure out that a triple containing one of those properties entails another triple using the other property.  But a generic triplestore and SPARQL endpoint doesn't automatically do that kind of reasoning, so by using SPARQL CONSTRUCT, we can "materialize" those entailed triples and manually insert them back into the dataset by loading the result of the CONSTRUCT query back into the triplestore.
+
+A very similar use case involves FOAF and schema.org terms.  Here is a CONSTRUCT query that converts FOAF terms to a schema.org term:
+
+```sparql
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX schema: <https://schema.org/>
+
+CONSTRUCT {
+  ?thing schema:name ?name.
+}
+WHERE {
+  ?thing foaf:firstName ?givenName.
+  ?thing foaf:familyName ?surname.
+  BIND( CONCAT(?givenName, " ", ?surname) as ?name)
+}
+```
+
+Notice the trick used to create an entire schema.org name from separate given- and surnames.  The graph pattern as it is shown requires that a thing have both a first and last name in order for the combined name to be constructed. 
+
+## Getting a triple dump from an endpoint
+
+SPARQL CONSTRUCT can be used to pull all of a particular category of triples from a triplestore based on the restrictions given in the graph pattern or the FROM statement.  Here's an example that downloads one particular graph from a triplestore (this one can also be tested at the [Vanderbilt SPARQL endpoint](https://sparql.vanderbilt.edu/)):
+
+```sparql
+CONSTRUCT {
+  ?subject ?predicate ?object.
+}
+FROM <http://vandy>
+WHERE {
+  ?subject ?predicate ?object.
+}
+```
+
+Notice that the graph pattern places no restriction on the triples -- they are only restricted by the FROM clause, which says that the triples have to be from the `http://vandy` graph.  
+
+Here is a construct query that retrieves all of the statements about "Shaul Kelner" and can be performed at the Vanderbilt endpoint:
+
+```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  ?person ?predicate ?object.
+}
+WHERE {
+  ?person rdfs:label "Shaul Kelner".
+  ?person ?predicate ?object.
+}
+```
+
+In this example, the values of the `?person` variable are constrained to be people labeled as "Shaul Kelner".  The other two variables can have any value.  It is not restricted to the `http://vandy` graph, and picks up a lot more triples that came from other graphs in the triplestore. 
+
+## Refactoring data from Wikidata
+
+Although the Wikidata data model can be expressed as RDF, it has some significant differences from standard Linked Data practices.  In particular, all entities are "items" and don't have `rdf:type` assignments.  Nearly all properties are ideosyncratic to Wikidata, so with the notable exception of `rdfs:label`, virtually none of the "standard" Linked Data properties (Dublin Core, FOAF, schema.org, etc.) are used.  (Note: the Wikidata data model is essentially the same as the data model used by the generic Wikibase platform.)
+
+Another challenge is that since Wikidata is by design very multilingual, acquiring every label will often result in more labels than are needed.  So filtering labels for particular languages can be helpful.
+
+If we want to harvest data from Wikidata but express it in more standard terms, we can use CONSTRUCT queries.  Here is an example that can be run at the [Wikidata query service](https://query.wikidata.org/):
+
+```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX schema: <https://schema.org/>
+
+CONSTRUCT {
+  ?president a foaf:Person.
+  ?president wdt:P39 wd:Q11696.
+  ?president rdfs:label ?nameEn.
+  ?president schema:name ?name.
+  ?president foaf:familyName ?lastName.
+  ?president foaf:firstName ?firstName.
+  ?president dcterms:created ?birthDate.
+}
+WHERE {
+  ?president wdt:P39 wd:Q11696. #position held = President of the United States of America
+  ?president wdt:P31 wd:Q5. #restricts to actual humans vs. fictional humans
+  ?president wdt:P569 ?birthDate.
+
+  # find English labels (the person's name) and drop the language tag
+  ?president rdfs:label ?nameTagged.
+  FILTER (langMatches(lang(?nameTagged),"en"))
+  BIND (str(?nameTagged) AS ?name)
+
+  # create a language-tagged value to use for rdfs:label
+  BIND (STRLANG(?name,"en") AS ?nameEn)
+  
+  # pull out only the last names
+  ?president wdt:P734 ?surname.
+  ?surname rdfs:label ?lastNameTagged.
+  FILTER (langMatches(lang(?lastNameTagged),"en"))
+  BIND (str(?lastNameTagged) AS ?lastName)
+
+  # pull out only the first names
+  ?president wdt:P735 ?givenname.
+  ?givenname rdfs:label ?firstNameTagged.
+  FILTER (langMatches(lang(?firstNameTagged),"en"))
+  BIND (str(?firstNameTagged) AS ?firstName)
+}
+```
+
+**Notes:**
+- We assert `rdf:type` of `foaf:Person` to all of the presidents due the screening we did by requiring them to be presidents.  FOAF [doesn't actually require the to be real people](http://xmlns.com/foaf/spec/#term_Person).
+- There isn't really a well-known property for "position held" or controlled vocabulary that includes "presidents of the United States", so that property and value were just passed through to the new graph as-is.
+- In Wikidata, given names and surnames are items, not string labels (literals).  So to acquire the name strings themselves, we need to find the labels of the name items.
+- There aren't really rules for how terms can be used, so I chose to use `dcterms:created` for the birth dates.  That's kind of a non-standard use for a very well-known term.  It also has a different intended meaning that its somewhat ambiguous use in the `http://vandy` graph where the value given was the date the record was created (see the value for Shaul Kelner).
+
+You can look at the resulting data (retrieved on 2019-03-14) [as RDF/XML](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/presidents.rdf) or [as RDF/Turtle](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/presidents.ttl).
+
+This example illustrates how the work done by the many people who support Wikidata can be leveraged to create a Linked Data dataset using pretty much any vocabulary we choose.
+
+# Retrieving SPARQL query data using HTTP
+
+The queries that we tested above are good training exercises, but how can we use SPARQL as a tool to help us actually acquire data for projects?  In addition to being a query language, SPARQL is also a protocol that works with HTTP to make it possible to submit queries and retrieve results using client software that can operate without human intervention.  The following sections will provide a few examples of how to do that in real life.
+
+## Acquiring triples from an endpoint using POST
+
+The Wikidata query examples above can be pasted directly into the [Wikidata Query Service](https://query.wikidata.org/) query box.  The resulting triples will show up in tabular form in the box at the bottom of the page.  
+
+This method is fine for testing queries. But one major deficiency of those results is that language tagging and xsd: datatyping are not shown in the results.  Also, the results can be downloaded to a file, but the downloaded formats are not valid serializations of RDF triples.
+
+To get clean RDF triples, we need to use a client that can carry out HTTP calls and return the results in a usable form.  [Postman](https://www.getpostman.com/) is a relatively easy to use graphical application that can be used for this purpose.  
+
+Most SPARQL queries can be made using either HTTP GET or POST. (There is a limit to the size of GET queries, but it is rather large.)  In the case of Vanderbilt's SPARQL endpoint, POST queries cannot be made without authentication, so GET is the only option there.  The Wikidata endpoint allows either without authentication.  The disadvantage of GET queries is that they must be URL-encoded before sending, which adds an extra layer of complexity.  So for this example, we'll use POST to the Wikidata Query Service endpoint.  
+
+Here are the details required: 
+
+<img src="../images/post-query1.png" style="border:1px solid black">
+
+1\. The query endpoint URL is `https://query.wikidata.org/sparql`
+
+2\. The HTTP request type should be set to POST.
+
+3\. On the Headers tab, set a key of `Content-Type` and a value of that key of `application/sparql-query`.  **This is required and the query will NOT work if this header isn't sent!**
+
+4\. On the Headers tab, set a key of `Accept` and a value for that key of `application/rdf+xml` to get RDF/XML.  To get RDF/Turtle (if supported by the endpoint), use a value of `text/turtle`.  To get JSON-LD, use a value of `application/ld+json`.
+
+<img src="../images/post-query2.png" style="border:1px solid black">
+
+5\. On the Body tab, click the `raw` radio button.  Then in the box below, paste the query.
+
+6\. Click the `Send` button.  
+
+In the box at the botton, you should see correctly serialized RDF/XML.  Notice that here the datatyping for the dateTime is correct and that the English language label was applied to the `rdfs:label` value, but not the various name values as specified in the CONSTRUCT query.
+
+<img src="../images/post-query3.png" style="border:1px solid black">
+
+For query with a few results, you can just click on the little copy icon (to the left of the magnifing lens icon at the top of the results pane) and paste into a text document, then save.  For larger queries, drop down the Send button and select `Send and Download`.  After the results have been received, you'll be propted for a save location and filename.
+
+The resulting RDF/XML file can be loaded into a SPARQL endpoint if desired.
+
+## Acquiring triples from an endpoint using GET
+
+An HTTP GET request is somewhat simpler than a POST request, since there is no text body to be sent to the server.  Instead, the query is sent as a part of a query string appended to the URL itself. The SPARQL protocol for GET is more relaxed than POST about the headers and will generally default to RDF/XML if no Accept header is sent.  The downside is that the query itself has to be URL encoded to make all of the non-alphanumeric characters "safe" to be included in a URL.  Here are the steps to do a GET request using Postman:
+
+1\. The query endpoint URL is `https://query.wikidata.org/sparql`
+
+2\. The HTTP request type should be set to GET.
+
+3\. Click on the Params tab, and set a key of `query`.
+
+4\. Go to a URL encoding website.  I usually use [this one](https://meyerweb.com/eric/tools/dencoder/).  
+
+<img src="../images/url-encode.png" style="border:1px solid black">
+
+Paste the query into the box, then click the `Encode` button.  
+
+<img src="../images/url-encoded.png" style="border:1px solid black">
+
+Copy the encoded text and paste it into the Value box for the `query` key. You'll see the entire icky URL in the URL box above. 
+
+<img src="../images/get-query1.png" style="border:1px solid black">
+
+5\. If you don't care about the serialization of the results, just click the `Send` button.  Otherwise, set an Accept header as described in step 4 above.
+
+6\. You can also download the results as explained in the POST example.
+
+## Harvesting data from Wikidata programatically
+
+In the examples above, we retrieved the results of CONSTRUCT queries "manually" using Postman in order to have discrete files of serialized RDF data to load into a triplestore.  Because most programming languages have mechanisms for making HTTP calls directly from a script, data from either a SELECT or CONSTRUCT query can be retrieved directly from a SPARQL endpoint by the script and used as a data source. 
+
+You can view an example of a [Python script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_b.py) that retrieves data from Wikidata about cartoon caracters and a similar [Python script with a graphical interface](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_c.py).  If you have Python 3 installed on your computer, you can run either of these scripts to see what they do.  The only library that needs to be installed using PIP is the Requests library (if you don't already have it).
+
+The heart of the script is this function (lines 25 through 42 of the [first script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_b.py):
+
+```python
+def getWikidata(characterId):
+    endpointUrl = 'https://query.wikidata.org/sparql'
+    query = '''select distinct ?property ?value
+    where {
+      <''' + characterId + '''> ?propertyUri ?valueUri.
+      ?valueUri <http://www.w3.org/2000/01/rdf-schema#label> ?value.
+      ?genProp <http://wikiba.se/ontology#directClaim> ?propertyUri.
+      ?genProp <http://www.w3.org/2000/01/rdf-schema#label> ?property.
+      FILTER(substr(str(?propertyUri),1,36)="http://www.wikidata.org/prop/direct/")
+      FILTER(LANG(?property) = "en")
+      FILTER(LANG(?value) = "en")  
+    }'''
+
+    # The endpoint defaults to returning XML, so the Accept: header is required
+    r = requests.get(endpointUrl, params={'query' : query}, headers={'Accept' : 'application/sparql-results+json'})
+    data = r.json()
+    statements = data['results']['bindings']
+    return statements
+```
+
+The value of the `endpointUrl` variable is set to the Wikidata query service endpoint URL.  The value of the query string variable is hard-coded with the value of the Wikidata identifier (`characterId`) substituted in the appropriate place.  The line
+
+```python
+    r = requests.get(endpointUrl, params={'query' : query}, headers={'Accept' : 'application/sparql-results+json'})
+```
+
+is where the HTTP request is made -- you can see where the query parameter and Accept header is inserted, just as we did with Postman.  In this case, the requested content type to get JSON is `application/sparql-results+json`.  The resulting `data` come back as a JSON object that looks like this:
+
+```json
+{
+    "head": {
+        "vars": [
+            "property",
+            "value"
+        ]
+    },
+    "results": {
+        "bindings": [
+            {
+                "value": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "United States of America"
+                },
+                "property": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "country of citizenship"
+                }
+            },
+            {
+                "value": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Superman"
+                },
+                "property": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "present in work"
+                }
+            }
+        ]
+    }
+}
+```
+
+with many results omitted.  The line
+
+```python
+statements = data['results']['bindings']
+```
+
+pulls out the array of results and returns it so that the program can do what it wants with the data.
+
+Here's what the [script with a graphical interface](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_c.py) looks like when it runs:
+
+<img src="../images/cartoon-checker.png" style="border:1px solid black">
+
+If you don't count the lines required to assign the SPARQL query to the query variable, only a very few lines of code are required to access the vast universe of data that is available in Wikidata.  Of course, knowing how to construct the SPARQL SELECT query requires understanding the Wikidata data model, which is discussed in the following lesson.
+
+Lesson on the [Wikibase data model](../wikibase/)
 
 ----
-Revised 2019-02-08
+Revised 2019-03-18

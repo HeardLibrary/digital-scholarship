@@ -22,25 +22,27 @@ Topics include:
 - Files and programs
 - File associations and extensions
 
-[Go to Lesson 1: Files](files)
+Go to Lesson 1: Files [for Mac](files-mac/) or [for Windows](files-windows/)
 
 ## Lesson 2: Directories
 
 Topics include:
 - The directory tree
-- The cloud
-- Downloads
+- File Explorer (Windows)/Finder (Mac)
+- Copying vs. moving files
+- Cloud services for files
 
-[Go to Lesson 2: Directories](directories)
+Go to Lesson 2: Directories [for Mac](directories-mac/) or [for Windows](directories-windows/)
 
 ## Lesson 3: Installing software
 
 Topics include:
 - Parts of installed applications
-- Seeing what's running
+- Application shortcuts (Windows)
 - Ways to install software
+- Uninstalling software
 
-[Go to Lesson 3: Installing software](installation)
+Go to Lesson 3: Installing software [for Mac](installation-mac/) or [for Windows](installation-windows/)
 
 ## Lesson 4: Connections
 
@@ -51,7 +53,7 @@ Topics include:
 - External drives
 - Additional monitors
 
-[Go to Lesson 4: Connections](connections)
+Go to Lesson 4: Connections [for Mac](connections-mac/) or [for Windows](connections-windows/)
 
 ## Lesson 5: Backup
 
@@ -62,7 +64,7 @@ Topics include:
 - External drives
 - Network servers
 
-[Go to Lesson 5: Backup](backup)
+Go to Lesson 5: Backup [for Mac](backup-mac/) or [for Windows](backup-windows/)
 
 ## Lesson 6: Command line
 
@@ -73,4 +75,7 @@ Topics include:
 - The system path
 - Localhost web servers
 
-[Go to Lesson 6: Command line](command)
+Go to Lesson 6: Command line [for Mac (Unix shell)](command-unix) or [for Windows (DOS)](command-windows)
+
+----
+Revised 2019-02-27

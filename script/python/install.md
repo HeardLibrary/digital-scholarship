@@ -75,7 +75,7 @@ At the end of the installation, you will be given an option to delete the Instal
 
 2\. When you enter the Terminal window, you should see a line with the your computer name, a tilde (`~`) followed by your username, and finally a "$" character.  This is the system prompt.  It means that you can issue any kind of command line command that the Mac operating system will understand.  
 
-*Note: The Mac operating system is build on the Linux operating system.  So the commands that you give in this window are sometimes called "bash commands" (a type of Linux commands).  Hence you see "bash" listed in the header of the terminal window.*
+*Note: The Mac operating system is build on the Linux operating system.  So the commands that you give in this window are sometimes called "bash commands" (a type of Linux command).  Hence you see "bash" listed in the header of the terminal window.*
 
 Enter `python3`.  You should get a message, followed by `>>>`.  These three greater-than characters are the Python prompt.  When you see them instead of the system prompt, it means that the Python shell is running and you need to give commands that Python understands, not generic Linux commands.  
 

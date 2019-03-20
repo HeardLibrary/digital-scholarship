@@ -17,8 +17,9 @@
   <body>
 
       <header>
-        <h1>{{ site.title | default: site.github.repository_name }}</h1>
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
+        <p>{{ site.title | default: site.github.repository_name }}</p>
+        <!--<h1>{{ site.title | default: site.github.repository_name }}</h1>-->
+        <!--<p>{{ site.description | default: site.github.project_tagline }}</p>-->
       </header>
 
       <div id="banner">
@@ -33,7 +34,7 @@
               <li><a href="{{ site.github.tar_url }}" class="button">TAR</a></li>
             </ul>
           </div>
-        {% endif %}
+        {% endif %}    
 
         <ol class="breadcrumb">
             <li><a href="{{ site.baseurl }}/">Home</a></li>
@@ -54,6 +55,7 @@
                     {% endif %}
                 {% endfor %}
             {% endfor %}
+
         </ol>    
 
       </div><!-- end banner -->

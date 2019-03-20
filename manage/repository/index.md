@@ -25,6 +25,16 @@ If you would like to publish a dataset but cannot find an appropriate subject-ba
 
 [Go to the Figshare website](http://figshare.com/)
 
+## ICPSR
+
+The [Inter-University Consortium for Political and Social Research (ICPSR)](https://www.icpsr.umich.edu/icpsrweb/) archives data from any source.  It has the world's largest collection of Social Science data.  
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VsU5dlnSPv8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Data can be deposited for free, although there is a fee for curated deposits.
+
+For more information about ICPSR, visit [this research guide](https://researchguides.library.vanderbilt.edu/icpsr).
+
 ## Open Science Framework (OSF)
 
 <iframe src="https://widgets.figshare.com/articles/7173068/embed?show_title=1" width="568" height="426" frameborder="0"></iframe>

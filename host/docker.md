@@ -135,5 +135,7 @@ If you really want to get rid of everything and start over, see [these instructi
 
 [Example using Docker Compose to install the components of Wikibase locally](../../lod/install/#using-docker-compose-to-create-an-instance-of-wikibase-on-your-local-computer)
 
+[Docker Machine](../dockermachine/)
+
 ----
 Revised 2019-01-29

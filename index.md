@@ -30,7 +30,7 @@ In addition to the resources on this site, you can browse the Digital Scholarshi
 
 [Data visualization](vis/)
 
-[Digital privacy](privacy/)
+[Digital privacy and security](privacy/)
 
 [Document markup](markup/)
 
