@@ -124,11 +124,55 @@ After the computer has recreated the printer connection, it will appear on the l
 
 # Removable storage
 
+Addition file storage can be added to a computer by connecting a *flash drive* or *external hard drive* via a USB port.  
+
 ## Flash drives and external hard drives
+
+Flash drives are also known as *thumb drives*, *memory sticks*, *jump drives*, and *USB drives*.  They consist of re-writable electronically eraseable programable memory (EEPROM; also known as *flash memory*) in a small package that can be plugged into a USB port.  They are relatively inexpensive and over time their capacity has increased, with sizes of 128 GB (gigabyte) or more currently common.
+
+External hard drives originally contained spinning magnetic disk media, powered directly through the USB port.  Recently, it has become more common for them to be replaced by solid state drives (SSD), which use the same kind of memory as flash drives.  Solid state drives are faster, require less power, and are less easily damaged by being dropped or struck.  They are, however, about twice as expensive as magnetic media drives.  External SSD drives are now commonly found in sizes of 500 GB and spinning disk drives of 4 TB (terabytes or about 4000 GB) or more.
 
 ## Controlling the drive letter
 
+On a Windows computer, removable storage devices are assigned a drive letter just like fixed drives.  By default, they are assigned the next available letter. For example, if a computer has a hard drive C: and an optical drive (DVD writer) D:, a flash drive might be assigned the drive letter E: when it's plugged in.  Generally the same drive letter will be assigned the next time the removable media is attached, unless that letter has already been assigned to a different device.
+
+Some applications, backup systems, or scripts may depend on removable media having a stable drive letter.  This can be a problem if the drive letter has changed. In Windows 10, it is possible to change the default drive letter assigned to removable media.  
+
+<img src="../images-4-pc/create-format-option.jpg" style="border:1px solid black">
+
+In the search box, begin typing `Create and format hard disk partitions` and select it when it appears.
+
+<img src="../images-4-pc/disk-management.png" style="border:1px solid black">
+
+In this example, the flash drive has been assigned the letter D:.  
+
+<img src="../images-4-pc/change-drive-letters.jpg" style="border:1px solid black">
+
+Right click on the drive in the list at the top and select `Change Drive Letter and Paths...`.
+
+<img src="../images-4-pc/change-button.png" style="border:1px solid black">
+
+Click on the `Change` button.
+
+<img src="../images-4-pc/change-dropdown.jpg" style="border:1px solid black">
+
+Drop down the list of letters, select the one you want to use, and click `OK`.  Reply `OK` to the warning, then close the window.
+
 ## Safely remove hardware/dismount drive
+
+When you are finished with removable media, you shouldn't just pull the device from the USB port.  
+
+<img src="../images-4-pc/safely-remove.png" style="border:1px solid black">
+
+In the system tray, select the `Safely Remove Hardware and Eject Media` icon (looks like a little flash drive).  
+
+<img src="../images-4-pc/eject-disk.jpg" style="border:1px solid black">
+
+Select the device you want to eject.  
+
+<img src="../images-4-pc/safe-to-remove.jpg" style="border:1px solid black">
+
+You'll then get a message telling you that its safe to unplug the device.
 
 # Using multiple monitors
 
