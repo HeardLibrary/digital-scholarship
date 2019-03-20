@@ -130,7 +130,7 @@ Addition file storage can be added to a computer by connecting a *flash drive* o
 
 Flash drives are also known as *thumb drives*, *memory sticks*, *jump drives*, and *USB drives*.  They consist of re-writable electronically eraseable programable memory (EEPROM; also known as *flash memory*) in a small package that can be plugged into a USB port.  They are relatively inexpensive and over time their capacity has increased, with sizes of 128 GB (gigabyte) or more currently common.
 
-External hard drives originally contained spinning magnetic disk media, powered directly through the USB port.  Recently, it has become more common for them to be replaced by solid state drives (SSD), which use the same kind of memory as flash drives.  Solid state drives are faster, require less power, and are less easily damaged by being dropped or struck.  They are, however, about twice as expensive as magnetic media drives.  External SSD drives are now commonly found in sizes of 500 GB and spinning disk drives of 4 TB (terabytes or about 4000 GB) or more.
+External hard drives originally contained spinning magnetic disk media, powered directly through the USB port.  Recently, it has become more common for them to be replaced by solid state drives (SSD), which use the same kind of memory as flash drives.  Solid state drives are faster, require less power, and are less easily damaged by being dropped or struck.  They are, however, at least twice as expensive as magnetic media drives of the same size.  External SSD drives are now commonly found in sizes of 500 GB and spinning disk drives of 4 TB (terabytes or about 4000 GB) or more.
 
 ## Controlling the drive letter
 
@@ -152,7 +152,7 @@ Right click on the drive in the list at the top and select `Change Drive Letter 
 
 <img src="../images-4-pc/change-button.png" style="border:1px solid black">
 
-Click on the `Change` button.
+Click on the `Change...` button.
 
 <img src="../images-4-pc/change-dropdown.jpg" style="border:1px solid black">
 
@@ -164,7 +164,7 @@ When you are finished with removable media, you shouldn't just pull the device f
 
 <img src="../images-4-pc/safely-remove.png" style="border:1px solid black">
 
-In the system tray, select the `Safely Remove Hardware and Eject Media` icon (looks like a little flash drive).  
+In the system tray at the lower right of your screen, select the `Safely Remove Hardware and Eject Media` icon (looks like a little flash drive).  
 
 <img src="../images-4-pc/eject-disk.jpg" style="border:1px solid black">
 
@@ -196,6 +196,7 @@ The `Multiple displays` section controls whether the same material is shown on b
 
 Check the `Make this my main display` checkbox when the display is selected where you want the system tray and main menus to reside.
 
+[go on to Lesson 5: Backing up](../backup-windows/)
 
 ----
-Revised 2019-03-19
+Revised 2019-03-20
