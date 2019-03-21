@@ -283,33 +283,35 @@ Because all of the paths are crammed together and separated by semicolons, it ca
 
 **Note:** if you aren't comfortable making this modification, ask for help from a more advanced user.
 
-1\. Open Finder and navigate to your home folder.
+1\. In the search box, enter `control panel`, then click on the item when it's found.
 
-2\. The file you need is hidden by default.  To make it visible, hold on the `command` and `shift` keys, then press the period (`.`) key.  
+<img src="../images-5-pc/control-panel.png" style="border:1px solid black">
 
-3\.  Look through the files until you find a grayed out one called `.bash_profile`.  
+2\. *Note: the appearance of this window may vary depending on the state of the `View by:` dropdown.  If necessary, change the value of the dropdown to `small icons`.*  Click on the `System` option. 
 
-<img src="../images-6-mac/bash-profile.png" style="border:1px solid black">
+<img src="../images-5-pc/system-choices.png" style="border:1px solid black">
 
-For safe keeping, right click on it and select `Duplicate`. Then change its name by removing the initial dot.
+3\.  Click on the `Advanced system settings` option at the left of the window.
 
-4\. Right-click on the file again and select `Open With > TextEdit.app`.
+<img src="../images-5-pc/system-properties.png" style="border:1px solid black">
 
-5\. Add a line to the end of the existing file in this form:
+4\. In the `System properties` window that pops up, click on `Environment variables...`
 
-```
-export PATH=$PATH:newfilepath
-```
+<img src="../images-5-pc/environmental-variables.png" style="border:1px solid black">
 
-where `newfilepath` is the additional file path where the system should look to find programs.  Here is an example:
+5\. In the `Environmental variables` dialog box, go to the bottom pane and scroll down to `Path`.  Click to select it, then click on the `Edit...` button below the pane.
 
-```
-export PATH=$PATH:~/Library/Python/3.7/bin
-```
+<img src="../images-5-pc/edit-environmental-variable.png" style="border:1px solid black">
 
-Including the `$PATH:` part means to take the existing path and add the new path to it.  This should be relatively harmless because even if your new path doesn't work, the existing paths will still be included in the system PATH variable.  
+6\. In the popup dialog window, click on the `New` button. 
 
-6\. Save the file and close the TextEdit application.
+<img src="../images-5-pc/save-new-path.jpg" style="border:1px solid black">
+
+7\. Type the path to the directory where the executable file is located, then click OK.
+
+8\. Click OK in the previous dialog boxes until they all go away.  Close the System window by clicking on its `X` in the upper right.
+
+After you have completed these steps, try re-executing the application that did not previously run.
 
 # Localhost web servers
 
