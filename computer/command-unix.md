@@ -441,3 +441,6 @@ Although the commands illustrated here are ideosyncratic to the particular cases
 Sometimes parts of this procedure will happen automatically (such as starting a server after double-clicking on an icon for OpenRefine, or automatically opening the correct browser page when running a Jupyter notebook), but in general, these steps always happen in a server-based application. 
 
 Understanding what's going on here is important because often just closing the browser or the terminal window doesn't stop the server.  It will continue running in the background on your computer until the next time you shut the computer down.  That may slow down other applications and failing to shut down the server properly could cause data loss.  
+
+----
+Revised 2019-03-21

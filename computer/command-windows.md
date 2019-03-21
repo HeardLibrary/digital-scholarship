@@ -349,7 +349,7 @@ Linked Data: **Blazegraph** and **Stardog**
 
 ## Example workflow for a Jupyter notebook
 
-I have two Jupyter notebooks in my Documents folder and want to run the one called `python-turtle.ipynb`.  I open Terminal, then enter 
+I have two Jupyter notebooks in my Documents folder and want to run the one called `python-turtle.ipynb`.  I open Command Prompt, then enter 
 
 ```
 cd Documents
@@ -358,12 +358,12 @@ cd Documents
 to move from my home folder to the Documents subfolder.  Then I enter
 
 ```
-ls *.ipynb
+dir *.ipynb
 ```
 
 to list all of the files with the `.ipynb` extension.  I see that the notebook I want is there.
 
-<img src="../images-6-mac/find-jupyter-notebook.png" style="border:1px solid black">
+<img src="../images-5-pc/turtle-notebook-listing.png" style="border:1px solid black">
 
 Then I enter
 
@@ -383,15 +383,17 @@ When I'm done with it, I need to save it using the save button.  I can then clos
 
 <img src="../images-6-mac/jupyter-shutdown.png" style="border:1px solid black">
 
-I get a message in the browser saying that the server is stopped and that I can close the tab.  When I look at my Terminal window, I see some messages related to the shutdown.
+I get a message in the browser saying that the server is stopped and that I can close the tab.  When I look at my Command Prompt window, I see some messages related to the shutdown.
 
 If I forget to shut down the server from the browser, I can still shut it down using the shell.  If I hold the `Control` key and press `C`, I'll see a question in the shell asking if I want to shut down the server.
 
-**Note: Just closing the Terminal (shell) window does NOT stop the server.**
+**Note: Just closing the Command Prompt window does NOT stop the server.**
 
 ## Example workflow for Blazegraph
 
-Assuming that Blazegraph has already been installed using Docker, I open Terminal and enter
+Note: console screenshots show the Mac Terminal application, but the behavior in Windows Command Prompt should be identical.
+
+Assuming that Blazegraph has already been installed using Docker, I open Command Prompt and enter
 
 ```
 docker restart blazegraph
@@ -435,7 +437,7 @@ because the server isn't running any more.  There are more detailed instructions
 
 Although the commands illustrated here are ideosyncratic to the particular cases of Jupyter notebooks and Blazegraph, the workflow is similar for many applications of this type:
 
-1. Open a Terminal window.
+1. Open a Command Prompt window.
 2. Execute a command line command to start the server.
 3. Enter an appropriate localhost URL in the browser URL bar.
 4. Work
@@ -444,7 +446,7 @@ Although the commands illustrated here are ideosyncratic to the particular cases
 
 Sometimes parts of this procedure will happen automatically (such as starting a server after double-clicking on an icon for OpenRefine, or automatically opening the correct browser page when running a Jupyter notebook), but in general, these steps always happen in a server-based application. 
 
-Understanding what's going on here is important because often just closing the browser or the terminal window doesn't stop the server.  It will continue running in the background on your computer until the next time you shut the computer down.  That may slow down other applications and failing to shut down the server properly could cause data loss.  
+Understanding what's going on here is important because often just closing the browser or the console window doesn't stop the server.  It will continue running in the background on your computer until the next time you shut the computer down.  That may slow down other applications and failing to shut down the server properly could cause data loss.  
 
-
-
+----
+Revised 2019-03-21
