@@ -8,6 +8,8 @@ breadcrumb: Command Line (Unix)
 
 This is the Mac version of this page, which covers the Unix Shell.  [Click for the Windows version of this page](../command-windows/)
 
+[go back to Lesson 5: Backup](../backup-windows/)
+
 Note: this lesson assumes that you have completed and understand lessons [1 (files)](../files-mac/) and [2 (directories)](../directories-mac/). 
 
 ## What is the command line and do I need to use it?
