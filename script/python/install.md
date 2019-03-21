@@ -117,7 +117,7 @@ Click Close.
 
 ## Starting Python on Windows
 
-1\. To run Python in the simplest way (using the shell), you will need to use the console/command line.  On Windows, the application for doing this is called "Command Prompt".  The easiest way to get to the command prompt is to start typing "command" in the search box next to the start button.  When Command Prompt shows up in the results, click on it to open a Command Prompt window.  
+1\. To run Python in the simplest way (using the shell), you will need to use the console/command line.  In Windows, the application for doing this is called "Command Prompt".  The easiest way to get to the command prompt is to start typing "command" in the search box next to the start button.  When Command Prompt shows up in the results, click on it to open a Command Prompt window.  
 
 <img src="../images/install5pc.png" style="border:1px solid black">
 
