@@ -67,7 +67,7 @@ A better system would be to make sure that the files that you actually change ov
 
 ## Physical risks
 
-One final thing to take into consideration is the risk of catastrophic destruction to the media itself.  For example, if your backup media are stored in the same building as the system that is being backed up, both could be lost in a fire, flood, or tornado.  You should also consider that any media (including DVDs and hard drives) could be degraded over time.  So for critical data, it's good to have more than one backup copy stored offsite from the system that's being backed up.  
+One final thing to take into consideration is the risk of catastrophic destruction to the media itself.  For example, if your backup media are stored in the same building as the system that is being backed up, both could be lost in a fire, flood, or tornado.  You should also consider that any media (including DVDs and hard drives) could be degraded over time.  So for critical data, it's good to have more than one backup copy, with one copy stored offsite from the system that's being backed up.  
 
 Cloud storage systems provide good protection against this hazard, although they introduce their own hazards. For example, if a computer or phone that's linked to a Dropbox account is stolen, a malicious thief could delete all of the files in the account using the device.  A disgruntled or incompetent collaborator or employee who has access to a shared account could also delete all of the files.
 
@@ -102,6 +102,8 @@ At the left side of the screen, there are several links that can be used to chan
 The requirement that the backup device be connected to your system is one drawback of the File History system.  There are a number of commercial products that provide alternatives.  
 
 One product is Clickfree, an external hard drive that automatically launches a backup program when it is plugged into the USB port.  You control the backup interval by how often you plug it in.  An advantage of the system is that you can disconnect the drive and store it in a safe, fireproof box, or offsite to protect against physical damage or infection by a bitlocker virus.  A disadvantage is that it requires you to remember to plug it in regularly.
+
+<img src="../images-5-pc/external-drive-dock.jpg" style="border:1px solid black">
 
 Another possible alternative is to attach a regular non-USB hard drive (magnetic media or solid state)  using an external drive dock that connects by USB.  If you have several large-capacity drives salvaged from old desktop systems, you can store a number of full backups on a single drive by simply dragging and dropping the entire folder to be backed up.  The drives can be undocked and stored in a safe location away from the computer. This shares the same disadvantage of the Clickfree in that you need to remember to plug in the drive and do the copy.
 
