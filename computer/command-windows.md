@@ -74,14 +74,13 @@ dir \users
 dir c:%HOMEPATH%
 ``` 
 
-Notice that the path in the last command contains the absolute (but abbreviated) path to your home directory.  (Note: `%HOMEPATH%` is the *environmental variable* for your home directory.  It doesn't include the drive letter.)
+Notice that you get the same result if you include the directory letter or not.  If no drive letter is given, it assumes the path is on the current drive (the most recent one to be designated).  You can designate a different drive by simply entering the drive letter, followed by a colon.  Scroll down the navigation pane of File Explorer to see if you have any drives other than C: attached.  If so, try changing to that other drive and back to the C: drive.
+
+Also notice that the path in the last command contains the absolute (but abbreviated) path to your home directory.  (Note: `%HOMEPATH%` is the *environmental variable* for your home directory.  It doesn't include the drive letter, so if you want to specify the drive letter, you must write it.)
 
 **Note: the path to a directory can optionally include a trailing slash.**  So `c:\users` is the same as `c:\users\`.
 
-***********************************************
-EDITS START HERE
-
-If a path begins directly with a directory name rather than a slash, then that directory is assumed to be a child directory of the current working directory.  Assuming that you are still in your home directory, enter
+If a path begins directly with a directory name rather than a slash (or a drive letter and a slash), then that directory is assumed to be a child directory of the current working directory.  Assuming that you are still in your home directory, enter
 
 ```
 dir Documents
@@ -90,16 +89,16 @@ dir Documents
 You should see a listing of the files in the Documents directory that is a child directory of your home directory (currently your working directory).  Now try these commands:
 
 ```
-ls documents
-ls /Documents
+dir documents
+dir \Documents
 ```
 
 The first command shows that paths in the shell are not case sensitive.  The second command should generate an error, because its path is absolute and there probably isn't any folder named "Documents" that is a child of your root directory.
 
-You can include multiple levels in a relative path.  On my computer, I have a subdirectory of my Documents directory called `corp-b` and I could reference it from my home directory as
+You can include multiple levels in a relative path.  On my computer, I have a subdirectory of my Documents directory called `Arduino` and I could reference it from my home directory as
 
 ```
-ls Documents/corp-b
+dir Documents/Arduina
 ```
 
 **Special relative path prefixes**
@@ -107,21 +106,24 @@ ls Documents/corp-b
 There are two special prefixes that are sometimes useful.  A single dot represents the current working directory and two consecutive dots represents the parent directory of the current working directory.  Try these:
 
 ```
-ls
-ls .
-ls /users
-ls ..
+dir
+dir .
+dir \Users
+dir ..
 ```
 
-The first command should produce the same result as giving the `ls` command without any path.  The second command should list the parent directory of your home folder (`users`).  These prefixes can be combined with other directory names to make more complicated paths.  For example:
+The first command should produce the same result as giving the `dir` command without any path.  The second command should list the parent directory of your home folder (`users`).  You may have noticed in directory listings that `.` and `..` are included in the directory listing.
+
+These prefixes can be combined with other directory names to make more complicated paths.  For example:
 
 ```
-ls ./Downloads
-ls ../Guest
+ls .\Downloads
+ls ..\Public
 ```
 
 You can use multiple `..` symbols to go up more than one parent level.
 
+****************************************
 ## Wild cards
 
 If you want the path expression to apply to only certain files in a directory, you can specify them using wild cards.  For example, if you only want to list Python scripts, you can say
