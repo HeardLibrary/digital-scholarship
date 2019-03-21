@@ -328,6 +328,8 @@ Python would take up a lot more space on your computer if it included every know
 
 If you have installed Python by installing Anaconda, Anaconda has already installed many of the typical modules used in the STEM and data science world.
 
+<img src="../images/package-directory.png" style="border:1px solid black">
+
 ## What are packages?
 
 Sometimes related modules are grouped together into *packages*.  From the standpoint of file structure, a package is a folder that holds several Python text files (with `.py` file extensions).  You can see an example of a package called `functions` [here](https://github.com/HeardLibrary/digital-scholarship/tree/master/code/pylesson/functions).  The function package contains two modules: the useless `simple_math` module that you used before, and another one called `simple_string` that contains two silly little functions that can be viewed [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/functions/simple_string.py).  
@@ -359,6 +361,7 @@ The subtraction function subtracts the second argument from the first and the co
 7
 DonaldDuck
 ```
+<img src="../images/module-structure.png" style="border:1px solid black">
 
 The system of specifying the function by connecting the package, module, and function by dots:
 
