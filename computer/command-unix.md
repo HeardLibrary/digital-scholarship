@@ -196,13 +196,13 @@ This goes to the parent of the current web page and moves to the Windows files p
 
 **Saving a list of files to a file**
 
-You can easily create a text file containing a list of files using *piping*.  Piping redirects the output of a shell command to a file instead of to a screen.  Try this:
+You can easily create a text file containing a list of files using *output redirection*.  Redirection sends the output of a shell command to a file instead of to a screen.  Try this:
 
 ```
 ls ../Guest/*.* > Documents/files.txt
 ```
 
-This command lists the files (but not directories) in the Guest directory and pipes the listing to a file called `files.txt` located in the Documents subdirectory of the current working directory.  If you ran this command, you can open your Documents folder and open the `files.txt` file in a text editor.
+This command lists the files (but not directories) in the Guest directory and redirects the listing to a file called `files.txt` located in the Documents subdirectory of the current working directory.  If you ran this command, you can open your Documents folder and open the `files.txt` file in a text editor.
 
 Note that if the file already exists, it will be overwritten with the new output.  If there is no output, the file will still be created -- it will just be empty.
 
@@ -224,7 +224,7 @@ When you run a program at the command line, you can specify some things about ho
 pico Documents/diagram.txt
 ```
 
-pico will open the text file `diagram.txt` in the `Documents` subfolder of the current working directory.  
+pico will open the text file `diagram.txt` from the `Documents` subfolder of the current working directory.  
 
 Putting the path to a file upon which the program should operate (called the *argument*) after the program command is a general pattern.  For example, if you have Python 3 installed on your computer, you can run the script `myProg.py` in the Downloads folder by giving this command:
 
@@ -234,7 +234,7 @@ python3 ~/Downloads/myProg.py
 
 **Flags**
 
-The behavior of a program can be controlled by adding *flags* (also known as options or switches) between the command and the argument. Flags usually begin with either a single dash or two dashes.  Often flags with two dashes are unabbreviated and flags with a single dash are abbreviated.  
+The behavior of a program can be controlled by adding *flags* (also known as options) between the command and the argument. Flags usually begin with either a single dash or two dashes.  Often flags with two dashes are unabbreviated and flags with a single dash are abbreviated.  
 
 A typical flag is `--help`.  You can use it to get help with a program (including finding out what all the flags are that you can use with it!).  Try this:
 

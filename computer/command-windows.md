@@ -98,7 +98,7 @@ The first command shows that paths in the shell are not case sensitive.  The sec
 You can include multiple levels in a relative path.  On my computer, I have a subdirectory of my Documents directory called `Arduino` and I could reference it from my home directory as
 
 ```
-dir Documents/Arduina
+dir Documents/Arduino
 ```
 
 **Special relative path prefixes**
@@ -117,65 +117,64 @@ The first command should produce the same result as giving the `dir` command wit
 These prefixes can be combined with other directory names to make more complicated paths.  For example:
 
 ```
-ls .\Downloads
-ls ..\Public
+dir .\Downloads
+dir ..\Public
 ```
 
 You can use multiple `..` symbols to go up more than one parent level.
 
-****************************************
 ## Wild cards
 
 If you want the path expression to apply to only certain files in a directory, you can specify them using wild cards.  For example, if you only want to list Python scripts, you can say
 
 ```
-ls *.py
+dir *.py
 ```
 
-If you only want to list files in the Shared folder whose name is `myfile`, but which can have any extension, you can say
+If you only want to list files in the Shared folder whose name is `duck`, but which can have any extension, you can say
 
 ```
-ls ../Shared/myfile.*
+dir ..\..\temp\duck.*
 ```
 
-`*.*` means every file.  You can use it if you want to include every file, but not directories.  For example:
+`*.*` means every file.  You can use it if you want to include every file (including directories).  For example:
 
 ```
-ls ~/*.*
+dir *.*
 ```
 
 ## Repeating a previous shell command
 
-If you want to repeat an earlier command, you can use the up arrow key to move back to earlier commands and the down arrow key to move forward to later commands.  The command doesn't actually get executed until you press the `return` (or `Enter`) key.
+If you want to repeat an earlier command, you can use the up arrow key to move back to earlier commands and the down arrow key to move forward to later commands.  The command doesn't actually get executed until you press the `Enter` (or `return`) key.
 
 ## Changing the working directory
 
-In all of the previous examples, the list command was executed from the home directory as the current working directory and any relative paths were relative to the home directory.  You can change the current working directory (i.e. move around within the directory tree) using the *change directory* (`cd`) command.  The `cd` command is followed by either a relative or absolute path.  Recall that you can use `pdw` to see where you are in the directory tree.  Try these:
+In all of the previous examples, the list command was executed from the home directory as the current working directory and any relative paths were relative to the home directory.  You can change the current working directory (i.e. move around within the directory tree) using the *change directory* (`cd`) command.  
+
+We saw earlier how issuing the `cd` command by itself would print the path to the current working directory.   When the `cd` command is followed by either a relative or absolute path, it changes the current working directory.  You can see where you are in the directory tree by looking at the path that is shown as part of the prompt.  Try these:
 
 ```
-cd /
-pwd
-cd ~
-pwd
+cd \
+cd %HOMEPATH%
 cd Documents
-pwd
 cd ..
-pwd
 cd ..
-pwd
-cd ~/Downloads
-pdw
 ```
 
 **Other shell commands**
 
-There are many other shell commands beyond the few we have used here.  For a complete lesson, see the [Software Carpentry lesson on the Unix Shell](https://swcarpentry.github.io/shell-novice/)
+There are many other shell commands beyond the few we have used here.  For a complete list, see the [Windows Commands web page](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
 
 # Applications of the command line
 
+The general rules that we have learned about absolute and relative paths for Windows also apply to Unix-style paths. Unix style paths are important because they are the basis of Internet URLs and are used in HTML. There are two primary differences between Unix-style paths and Windows paths:
+
+- The direction of the slash is reversed in Unix-style paths. Forward slashes (`/`) are used instead of backslashes (`\`) to separate the parts of the path.
+- Unix style paths do not include a drive letter.  The root directory is simply `/`.
+
 **HTML**
 
-If you ever need to write HTML, you should note that references to images and pages use unix-style paths.  So for example, an image tag might have this path
+If you ever need to write HTML, you should note that references to images and pages use Unix-style paths.  So for example, an image tag might have this path
 
 ```
 <img src="imagefolder/part1/cats.jpg> alt="My cat">
@@ -187,79 +186,89 @@ The cat picture would be located in a directory two levels below the directory w
 <a href="../files-windows/">Go to the Windows file page</a>
 ```
 
-This goes to the parent of the current web page and moves to the Windows files page.
+This goes to the parent of the current web page and moves to the `files-windows` page.  Note that the dot system is also used in Unix-style commands.
 
 **Saving a list of files to a file**
 
-You can easily create a text file containing a list of files using *piping*.  Piping redirects the output of a shell command to a file instead of to a screen.  Try this:
+You can easily create a text file containing a list of files using *output redirection*.  Redirection sends the output of a command to a file instead of to a screen.  Try this:
 
 ```
-ls ../Guest/*.* > Documents/files.txt
+dir /b ..\Public\*.* > Documents/files.txt
 ```
 
-This command lists the files (but not directories) in the Guest directory and pipes the listing to a file called `files.txt` located in the Documents subdirectory of the current working directory.  If you ran this command, you can open your Documents folder and open the `files.txt` file in a text editor.
+**Note:** The `/b` in the command is called a *switch* and will be discussed later.
+
+This command lists the files in the public directory and redirects the listing to a file called `files.txt` located in the Documents subdirectory of the current working directory.  If you ran this command, you can open your Documents folder and open the `files.txt` file in a text editor.  Notice that adding `/b` following the command creates a brief directory listing that includes only the file names.
 
 Note that if the file already exists, it will be overwritten with the new output.  If there is no output, the file will still be created -- it will just be empty.
 
-## Running a program using the shell
+## Running a program using the command line
 
 You are probably used to launching software by double-clicking on an icon in Finder or Launchpad.  Applications can also be launched by executing them at the command line.  In some cases, the application will run and communicate with you through the terminal window.  In other cases, the application will open a new window on your desktop.  
 
-A text editor called `pico` comes pre-installed with Linux.  To run a program like pico, you enter its name at the command line
+A text editor called Notepad with a graphical graphical user interface (GUI) comes pre-installed with Windows.  To run a program like notepad from the command line, you just enter its name.
 
 ```
-pico
+notepad
 ```
 
-To quit pico, hold on the `Control` or `Ctrl` key, then press the `X` key.  (This is not a general behavior.  Some programs are quit by pressing `Control` and `C`, `Control` and `Z`, or some other key combination. Generally the `Command` key is not used in the shell.)
+**Note:**  When Notepad is run, a seperate window with the GUI opens up.  When some other applications (for example Python and Docker) are running, the continue to use the console window.  Those applications often change the prompt so that you know you aren't issuing generic Command Prompt commands.  To exit an application that runs directly in the console, often you hold on the `Control` or `Ctrl` key, then press the `C` key.  This isn't always the way to quit -- ome programs are quit by pressing `Control` and `X`, `Control` and `Z`, or some other key combination. 
 
-When you run a program at the command line, you can specify some things about how the program should work by following its name with other characters.  For example, you can tell pico what text file you want to edit by following its name with the path of the file.  (If you only put a filename without a path, it will look for the file in the current working directory.)  Here's an example:
+When you run a program at the command line, you can specify some things about how the program should work by following its name with other characters.  For example, you can tell Notepad what text file you want to edit by following its name with the path of the file.  (If you only put a filename without a path, it will look for the file in the current working directory.)  Here's an example:
 
 ```
-pico Documents/diagram.txt
+notepad Documents\diagram.txt
 ```
 
-pico will open the text file `diagram.txt` in the `Documents` subfolder of the current working directory.  
+pico will open the text file `diagram.txt` from the `Documents` subfolder of the current working directory.  
 
 Putting the path to a file upon which the program should operate (called the *argument*) after the program command is a general pattern.  For example, if you have Python 3 installed on your computer, you can run the script `myProg.py` in the Downloads folder by giving this command:
 
 ```
-python3 ~/Downloads/myProg.py
+python Downloads\myProg.py
 ```
 
-**Flags**
+**Flags and switches**
 
-The behavior of a program can be controlled by adding *flags* (also known as options or switches) between the command and the argument. Flags usually begin with either a single dash or two dashes.  Often flags with two dashes are unabbreviated and flags with a single dash are abbreviated.  
+The behavior of a program can be controlled by adding *flags* between the command and the argument. Flags begin with either a single dash or two dashes.  Often flags with two dashes are unabbreviated and flags with a single dash are abbreviated.  
 
-A typical flag is `--help`.  You can use it to get help with a program (including finding out what all the flags are that you can use with it!).  Try this:
+A typical flag is `--help`.  You can use it to get help with a program (including finding out what all the flags are that you can use with it!).  For example:
 
 ```
-pico --help
-pico -h
+python --help
+python -h
 ```
 
 Sometimes the flags have their own arguments separated from them by a space.  Here's an example:
 
 ```
-pico -o ~/Documents diagram.txt
+docker --config \apps\cf ps
 ```
 
 Let's break it down:
-1. `pico` is the command that runs the program
-2. `-o` is the flag that sets the operating directory. It's an `o` (oh), not a `0` (zero).
-3. `~/Documents` is the argument for the operating directory flag.  It's the directory to be used by default.
-4. `diagram.txt` is the file to be opened.  Since `~/Documents` has been set as the operating dirctory, pico will look for `diagram.txt` there.
+1. `docker` is the command that runs the Docker application
+2. `--config` is a flag that indicates the location of the configuration file
+3. `\apps\cf` is the argument for the config flag.  It's the path to the directory containing the configuration file.
+4. `ps` is the argument for the Docker application.  It indicates that the Docker program should list available containers.
 
-You may have noticed that the syntax that we've been using is similar to the shell commands.  That's because at their hearts, shell commands are really just programs.  So they can have switches and arguments just as described for other programs.
+Notice that if flags have arguments, they come immediately after the flag, while arguments for the main command come at the end of the line.
+
+Flags are a common feature of the Windows command line and the Linux shell.  So if you are a current or former Mac or Linux user, they should be familiar.  Windows has another way to control the behavior of an application that is NOT found in the Linux command line: *switches*.  Switches behave an a similar manner to flags, but their syntax is different.  
+
+In the Windows shell, switches are generally a single letter and are preceeded with a forward slash.  We saw the "bare listing" switch `/b` in an example above.  The behaviors of switches and flags are similar. You can follow a command by multiple switches separated by spaces. Switches can also have arguments, but their use is somewhat inconsistent.  Sometimes switch arguments come immediately after the switch with no space and sometimes they are separated by a space.  Sometimes switches come before the argument of the main command and sometimes they come after it. 
+
+Because of the inconsistent use of switches, you need to look at the documentation to see the exact syntax for how switches are used for a particular command. For many Windows commands, you can get help by following the command with `/?`. 
+
+You may have noticed that the syntax for running programs is similar to the shell commands.  That's because at their hearts, shell commands are really just programs.  
 
 ## The system path
 
-One of the really annoying and insidious problems that you can encounter is to try to run a program and to get the error `Command not found`.  This error happens when the shell doesn't know where to look to find the program you are trying to run.
+One of the really annoying and insidious problems that you can encounter is to try to run program X and to get the error `X is not recognized as an internal or external command, operable program or batch file`.  This error happens when the shell doesn't know where to look to find the program you are trying to run.
 
-When the shell tries to run a program, it first looks in the current working directory.  So one solution to this problem is to just navigate to the directory where the program was installed or saved, then execute the command to run it from that directory.  Another somewhat annoying way to solve the problem is to write out the full path of the command instead of just typing it.  For example, if the program `doSomething` is in the `/Applications` directory, you could give this command:
+When the shell tries to run a program, it first looks in the current working directory.  So one solution to this problem is to just navigate to the directory where the program was installed or saved, then execute the command to run it from that directory.  Another somewhat annoying way to solve the problem is to write out the full path of the command instead of just typing it.  For example, if the program `doSomething` is in the `\Applications` directory, you could give this command:
 
 ```
-/Applications/doSomething
+\Applications\doSomething
 ```
 
 However, you'd often like to be able to run a program from any working directory.  In that case, you need to add the location of the program to the system PATH variable.  The system PATH is a list of paths where the shell will look if it can't find the program in the current working directory.  If an application is well-designed, during the installation process, the installer will either add the necessary path to the PATH variable, or ask you if you want it to add the path to the PATH variable (you should say "yes").  However, some sloppier installers don't do this.
@@ -267,12 +276,10 @@ However, you'd often like to be able to run a program from any working directory
 You can see the paths of all directories currently in the system PATH variable by entering this command:
 
 ```
-echo "$PATH"
+PATH
 ```
 
-Because all of the paths are crammed together and separated by colons, it can be a bit difficult to pick apart all of the paths.  But if you look carefully and don't see the path of the place where your program is installed, you may need to add it to the system PATH.
-
-The following method will work for recent versions of Mac OSX.  There are actually several ways to modify the system PATH variable on a Mac -- you can find others by Googling.
+Because all of the paths are crammed together and separated by semicolons, it can be a bit difficult to pick apart all of the paths.  But if you look carefully and don't see the path of the place where your program is installed, you may need to add it to the system PATH.
 
 **Note:** if you aren't comfortable making this modification, ask for help from a more advanced user.
 
