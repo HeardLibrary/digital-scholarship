@@ -8,7 +8,7 @@ breadcrumb: Command Line (Windows)
 
 This is the Windows version of this page.  [Click for the Mac version of this page, which covers the Unix shell.](../command-unix/)
 
-[go back to Lesson 5: Backup](../backup-mac/)
+[go back to Lesson 5: Backup](../backup-windows/)
 
 Note: this lesson assumes that you have completed and understand lessons [1 (files)](../files-windows/) and [2 (directories)](../directories-windows/). 
 

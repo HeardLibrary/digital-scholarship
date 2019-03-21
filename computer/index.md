@@ -50,8 +50,8 @@ Topics include:
 - Physical ports on your computer
 - Device drivers
 - Printers
-- External drives
-- Additional monitors
+- Removable storage
+- Multiple monitors
 
 Go to Lesson 4: Connections [for Mac](connections-mac/) or [for Windows](connections-windows/)
 
@@ -59,20 +59,18 @@ Go to Lesson 4: Connections [for Mac](connections-mac/) or [for Windows](connect
 
 Topics include:
 - Risks
-- Strategies
-- Cloud services
-- External drives
-- Network servers
+- OS-dependent tools
+- Suggested strategies
 
 Go to Lesson 5: Backup [for Mac](backup-mac/) or [for Windows](backup-windows/)
 
 ## Lesson 6: Command line
 
 Topics include:
-- The terminal
-- Navigating through directories
-- Running software
-- The system path
+- The console (Terminal in Mac, Command Prompt in Windows)
+- File paths and navigating through directories
+- Running programs
+- The system PATH variagle
 - Localhost web servers
 
 Go to Lesson 6: Command line [for Mac (Unix shell)](command-unix) or [for Windows (DOS)](command-windows)
