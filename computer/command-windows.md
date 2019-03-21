@@ -46,7 +46,7 @@ For your first command, enter
 cd
 ```
 
-On the line below the command, you should see the path leading from the root directory to the current directory in which you are working.  Because the shell isn't a graphical system, its easy to get disoriented about "where you are" and the `cd` command is a good way to re-locate yourself.  The result of the `cd` command should show your unabbreviated path starting at the drive and root directory `C:\`.
+On the line below the command, you should see the path leading from the root directory to the current directory in which you are working.  Because the shell isn't a graphical system, you can get disoriented about "where you are" and the `cd` command is a way to re-locate yourself.  The result of the `cd` command should show your unabbreviated path starting at the drive and root directory `C:\`.  Since the system prompt generally includes the path, you are reminded where you are after each time a command is completed.
 
 Another useful command is the list directory command:
 
@@ -80,9 +80,9 @@ Notice that you get the same result if you include the directory letter or not. 
 
 Also notice that the path in the last command contains the absolute (but abbreviated) path to your home directory.  (Note: `%HOMEPATH%` is the *environmental variable* for your home directory.  It doesn't include the drive letter, so if you want to specify the drive letter, you must write it.)
 
-**Note: the path to a directory can optionally include a trailing slash.**  So `c:\users` is the same as `c:\users\`.
+**Note: the path to a directory can optionally include a trailing backslash.**  So `c:\users` is the same as `c:\users\`.
 
-If a path begins directly with a directory name rather than a slash (or a drive letter and a slash), then that directory is assumed to be a child directory of the current working directory.  Assuming that you are still in your home directory, enter
+If a path begins directly with a directory name rather than a drive letter and a backslash or backslash alone, then that directory is assumed to be a child directory of the current working directory.  Assuming that you are still in your home directory, enter
 
 ```
 dir Documents
@@ -114,7 +114,7 @@ dir \Users
 dir ..
 ```
 
-The first command should produce the same result as giving the `dir` command without any path.  The second command should list the parent directory of your home folder (`users`).  You may have noticed in directory listings that `.` and `..` are included in the directory listing.
+The first command should produce the same result as giving the `dir` command without any path.  The second command should list the parent directory of your home folder (`Users`).  You may have noticed in directory listings that `.` and `..` are included in the directory listing.
 
 These prefixes can be combined with other directory names to make more complicated paths.  For example:
 
@@ -153,7 +153,7 @@ If you want to repeat an earlier command, you can use the up arrow key to move b
 
 In all of the previous examples, the list command was executed from the home directory as the current working directory and any relative paths were relative to the home directory.  You can change the current working directory (i.e. move around within the directory tree) using the *change directory* (`cd`) command.  
 
-We saw earlier how issuing the `cd` command by itself would print the path to the current working directory.   When the `cd` command is followed by either a relative or absolute path, it changes the current working directory.  You can see where you are in the directory tree by looking at the path that is shown as part of the prompt.  Try these:
+We saw earlier how issuing the `cd` command by itself would print the path to the current working directory.   When the `cd` command is followed by either a relative or absolute path, it changes the current working directory to the directory described by that path.  You can see where you are in the directory tree by looking at the path that is shown as part of the prompt.  Try these:
 
 ```
 cd \
@@ -169,10 +169,10 @@ There are many other shell commands beyond the few we have used here.  For a com
 
 # Applications of the command line
 
-The general rules that we have learned about absolute and relative paths for Windows also apply to Unix-style paths. Unix style paths are important because they are the basis of Internet URLs and are used in HTML. There are two primary differences between Unix-style paths and Windows paths:
+The general rules that we have learned about absolute and relative paths for Windows also apply to Unix-style paths. Unix-style paths are important because they are the basis of Internet URLs and are used in HTML. There are two primary differences between Unix-style paths and Windows paths:
 
 - The direction of the slash is reversed in Unix-style paths. Forward slashes (`/`) are used instead of backslashes (`\`) to separate the parts of the path.
-- Unix style paths do not include a drive letter.  The root directory is simply `/`.
+- Unix-style paths do not include a drive letter.  The root directory is simply `/`.
 
 **HTML**
 
@@ -206,7 +206,7 @@ Note that if the file already exists, it will be overwritten with the new output
 
 ## Running a program using the command line
 
-You are probably used to launching software by double-clicking on an icon in Finder or Launchpad.  Applications can also be launched by executing them at the command line.  In some cases, the application will run and communicate with you through the terminal window.  In other cases, the application will open a new window on your desktop.  
+You are probably used to launching software by double-clicking on an icon in File Explorer or on your desktop.  Applications can also be launched by executing them at the command line.  In some cases, the application will run and communicate with you through the terminal window.  In other cases, the application will open a new window on your desktop.  
 
 A text editor called Notepad with a graphical graphical user interface (GUI) comes pre-installed with Windows.  To run a program like notepad from the command line, you just enter its name.
 
@@ -214,7 +214,7 @@ A text editor called Notepad with a graphical graphical user interface (GUI) com
 notepad
 ```
 
-**Note:**  When Notepad is run, a seperate window with the GUI opens up.  When some other applications (for example Python and Docker) are running, the continue to use the console window.  Those applications often change the prompt so that you know you aren't issuing generic Command Prompt commands.  To exit an application that runs directly in the console, often you hold on the `Control` or `Ctrl` key, then press the `C` key.  This isn't always the way to quit -- ome programs are quit by pressing `Control` and `X`, `Control` and `Z`, or some other key combination. 
+**Note:**  When Notepad is run, a seperate window with the GUI opens up.  When some other applications (for example Python) are running, they continue to use the console window.  Those applications often change the prompt so that you know you aren't issuing generic Command Prompt commands.  To exit an application that runs directly in the console, often you hold on the `Control` or `Ctrl` key, then press the `C` key.  This isn't always the way to quit -- some programs are quit by pressing `Control` and `X`, `Control` and `Z`, or some other key combination. 
 
 When you run a program at the command line, you can specify some things about how the program should work by following its name with other characters.  For example, you can tell Notepad what text file you want to edit by following its name with the path of the file.  (If you only put a filename without a path, it will look for the file in the current working directory.)  Here's an example:
 
@@ -229,6 +229,8 @@ Putting the path to a file upon which the program should operate (called the *ar
 ```
 python Downloads\myProg.py
 ```
+
+Arguments aren't always file paths.  Sometimes they are used to pass other kinds of information to the application when it starts running.
 
 **Flags and switches**
 
@@ -249,7 +251,7 @@ docker --config \apps\cf ps
 
 Let's break it down:
 1. `docker` is the command that runs the Docker application
-2. `--config` is a flag that indicates the location of the configuration file
+2. `--config` is a flag that specifies the location of the configuration file
 3. `\apps\cf` is the argument for the config flag.  It's the path to the directory containing the configuration file.
 4. `ps` is the argument for the Docker application.  It indicates that the Docker program should list available containers.
 
@@ -257,9 +259,9 @@ Notice that if flags have arguments, they come immediately after the flag, while
 
 Flags are a common feature of the Windows command line and the Linux shell.  So if you are a current or former Mac or Linux user, they should be familiar.  Windows has another way to control the behavior of an application that is NOT found in the Linux command line: *switches*.  Switches behave an a similar manner to flags, but their syntax is different.  
 
-In the Windows shell, switches are generally a single letter and are preceeded with a forward slash.  We saw the "bare listing" switch `/b` in an example above.  The behaviors of switches and flags are similar. You can follow a command by multiple switches separated by spaces. Switches can also have arguments, but their use is somewhat inconsistent.  Sometimes switch arguments come immediately after the switch with no space and sometimes they are separated by a space.  Sometimes switches come before the argument of the main command and sometimes they come after it. 
+In the Windows shell, switches are generally a single letter and are preceeded with a forward slash.  We saw the "bare listing" switch `/b` in an `dir` command example above.  The behaviors of switches and flags are similar. You can follow a command by multiple switches separated by spaces. Switches can also have arguments, but their use is somewhat inconsistent.  Sometimes switch arguments come immediately after the switch with no space and sometimes they are separated by a space.  Sometimes switches come before the argument of the main command and sometimes they come after it. 
 
-Because of the inconsistent use of switches, you need to look at the documentation to see the exact syntax for how switches are used for a particular command. For many Windows commands, you can get help by following the command with `/?`. 
+Because of the inconsistent use of switches, you need to look at the documentation to see the exact syntax for how switches are used for a particular command. For many Windows commands, you can get help by following the command with `/?`.  You can also usually find the syntax easily by doing a web search.
 
 You may have noticed that the syntax for running programs is similar to the shell commands.  That's because at their hearts, shell commands are really just programs.  
 
@@ -351,7 +353,7 @@ Linked Data: **Blazegraph** and **Stardog**
 
 ## Example workflow for a Jupyter notebook
 
-I have two Jupyter notebooks in my Documents folder and want to run the one called `python-turtle.ipynb`.  I open Command Prompt, then enter 
+I have a Jupyter notebook in my Documents folder that I want to run called `python-turtle.ipynb`.  I open Command Prompt, then enter 
 
 ```
 cd Documents
