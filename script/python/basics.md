@@ -6,6 +6,8 @@ breadcrumb: Basics
 
 Note: this is the second lesson in a beginner's introduction to Python.  For the whole schedule, see the [Vanderbilt Python Working Group homepage](../wg/)
 
+**General note:** Since these examples are really simple, we advise using the Thonny IDE so that you can cut, paste, then click the green run button to quickly test them out.  
+
 # Basics of Python Structure
 
 *Warning: Pretty much everything on this page is an oversimplification.  But you can learn the details when you need to know them.*
@@ -32,7 +34,7 @@ For names of modules and packages, we recommend separating words with underscore
 
 # String, number, and boolean object types
 
-A *string* is a sequence of characters, such as a word or sentnece. 
+A *string* is a sequence of characters, such as a word or sentence. 
 
 There are a variety of *number types* in Python.  Two types are *integers* (numbers with no decimal point) and *floating point* numbers (numbers with a decimal point).
 
@@ -104,7 +106,7 @@ In the third example above, the variable `tooMany` will contain a boolean (True 
 
 The fourth example above may seem strange, because no number can be equal to itself plus 1.  But the statment actual is saying "take the number that's in `studentCount`, add one to it, and put the answer back in `studentCount`.
 
-## Examples to try
+**Try this**
 
 Try re-running the following scripts with different values of `numberWidgets`.
 
@@ -176,7 +178,7 @@ max()
 len()
 ```
 
-## Build-in function examples
+**Try this**
 
 Try the following script with different values for the numbers:
 
@@ -242,7 +244,13 @@ print(answer)
 
 Notice that in this example, the arguments that are put into the function when it is called (`num1,num2`) have different names than the placeholder parameters used to define the function (`firstNumber, secondNumber`).  It would also be fine to use the same names in both places, since the parameter variables are local to the function and what happens to variables outside the function has no effect on their value.  The values that the parameters take when the function is run depends only on the values that are passed into the function as arguments.  
 
+**Try this**
+
+Modify the previous example to multipy three numbers.
+
 # Modules and Packages
+
+This section is informational.  It isn't important for you to try the examples unless you are curious about how things work.  Most people will be able to get by just by reading this section.
 
 ## Using a function from a module
 We can reuse useful functions that we have created without actually including the function code in the file with our script.  We do that by placing the functions in a separate file, then importing the code from that file into our script.  The file containing the importable functions is called a *module*.
@@ -421,10 +429,12 @@ Notes:
 3. As with code blocks in functions, the code block here is demarcated by indentation (of the standard four spaces).  In this example, there is only one line in the indented code block, but there could be many.
 4. The `print 'That is all!'` statement is not included in the code block, so it will be executed regardless of the condition.
 
-Questions:
-1. Predict what would happen if `name = 'Mickey Mouse'`
-2. Predict what would happen if `name = 'Minnie Mouse'`
-3. Predict what would happen if `name = 'Micky Mouse'`
+**Try this**
+
+For each of the following, predict what would happen, then try it by pasting in the text in place of `name = 'Fred Flintstone'`:
+1. `name = 'Mickey Mouse'`
+2. `name = 'Minnie Mouse'`
+3. `name = 'Micky Mouse'`
 
 We don't have to evaluate the condition separately.  We can evaluate it right in the `if` statement.  Here is a simplification of the code:
 
@@ -457,9 +467,9 @@ print('That is all?')
 
 Notice that both of the conditional code blocks are indented by the same amount.  That helps make it clear that they are two options.
 
-Questions:
-1. Predict what would happen if `name = 'Mickey Mouse'`
-2. Predict what would happen if `name = 'Minnie Mouse'`
+For each of the following, predict what would happen, then try it by pasting in the text in place of `name = 'Fred Flintstone'`:
+1. `name = 'Mickey Mouse'`
+2. `name = 'Minnie Mouse'`
 
 ## if ... elif ... else ...
 
@@ -482,6 +492,10 @@ else:
     print('You are not a Disney character')
 print("That's all folks!")
 ```
+
+**Try this**
+
+1.
 
 # Challenge problems
 
