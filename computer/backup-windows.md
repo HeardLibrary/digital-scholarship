@@ -105,7 +105,11 @@ One product is Clickfree, an external hard drive that automatically launches a b
 
 <img src="../images-5-pc/external-drive-dock.jpg" style="border:1px solid black">
 
-Another possible alternative is to attach a regular non-USB hard drive (magnetic media or solid state)  using an external drive dock that connects by USB.  If you have several large-capacity drives salvaged from old desktop systems, you can store a number of full backups on a single drive by simply dragging and dropping the entire folder to be backed up.  The drives can be undocked and stored in a safe location away from the computer. This shares the same disadvantage of the Clickfree in that you need to remember to plug in the drive and do the copy.
+Another possible alternative is to attach a regular non-USB hard drive (magnetic media or solid state)  using an external drive dock that connects by USB (see image above).  If you have several large-capacity drives salvaged from old desktop systems, you can store a number of full backups on a single drive by simply dragging and dropping the entire folder to be backed up.  The drives can be undocked and stored in a safe location away from the computer. 
+
+For perspective, the system above has been used to make weekly full backups of all of my work files on Fridays for 8 months without erasing any previous backups.  The drive is removed from the system and stored until the next week.  After that amound of time, about 50 GB of the available 950 GB available on the drive has been used.  At that rate, the drive will be filled in about 12 years.
+
+This system shares the same disadvantage of the Clickfree in that you need to remember to plug in the drive and do the copy.
 
 # Some suggestions
 
