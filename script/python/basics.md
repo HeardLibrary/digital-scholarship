@@ -328,7 +328,7 @@ Python would take up a lot more space on your computer if it included every know
 
 If you have installed Python by installing Anaconda, Anaconda has already installed many of the typical modules used in the STEM and data science world.
 
-<img src="../images/package-directory.png" style="border:1px solid black">
+<img src="../images/file-structure.png" style="border:1px solid black">
 
 ## What are packages?
 
