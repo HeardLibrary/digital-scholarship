@@ -572,7 +572,7 @@ The variable `zero` is being used here as a *flag*.  A flag is a way to keep tra
 
 # Challenge problems
 
-Answers in next weeks lesson.
+Answers in next week's lesson.
 
 1. **Disney checker**  The Disney character-testing program is dumb because the user has to re-run the program to check each character.  It would be much better to have a graphical interface where the user enters the name in a text box, then clicks a button to see whether the name is of a Disney character.  Use the code [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/gui/python/simple_form.py) to create the graphical interface, then hack the GIU code by inserting the code from the previous example into the `doSomethingButtonClick()` function.  The best way to grab the code from the website is to click the Raw button, then highlight all the text, copy, then paste into your editor.  In the function, instead of printing the value of `firstInputBox.get()`, assign it to the variable name, then use the rest of the example code above as the remainder of the function.  Notice that the `if` code blocks will have to be indented 8 spaces, since the function itself is already indented 4 spaces.  **Embelishments:** Make the labels on the form and button appropriate for your app.  Get rid of the unnecessary second text box.
 
