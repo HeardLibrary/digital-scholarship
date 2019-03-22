@@ -544,6 +544,7 @@ print(now)
 There is also a *method* that determines the day of the week as a number (0=Monday, 1=Tuesday, etc.).  It's `date.today().weekday()`.  (More about methods next lesson.)
 
 A. Modify the example above to print the day of the week number.
+
 B. If chicken tenders are served in the cafeteria on Thursdays, write a program that will output `yes` if it's chicken tenders day and 'no' for any other day.
 
 2\. Write a function that calculates the area of a circle.  The user should be able to pass the diameter as an argument and the function should return the area.  Use the function in a script where the user is prompted to enter the diameter and the answer is identified as the area.  Here are some things you need to know:
@@ -554,8 +555,11 @@ B. If chicken tenders are served in the cafeteria on Thursdays, write a program 
 
 3\. Math
 A. Have the user input two numbers. Set the value of a variable called `zero` to have a boolean value of `True` if they entered a `0` character for the second number and `False` if they didn't.  The section on [conditional execution](#conditional-execution) has a similar example.
-B. Convert the two numbers to a floating point number using the `float()` function.   
+
+B. Convert the two numbers to a floating point number using the `float()` function.  
+
 C. Calculate the first number multiplied by the second number.
+
 D. Calculate the first number divided by the second number.  Since dividing by zero generates an error, only do this calculation if the value of isZero is not `True`.  You can do it like this:
 
 ```python
