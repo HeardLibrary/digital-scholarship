@@ -554,6 +554,7 @@ B. If chicken tenders are served in the cafeteria on Thursdays, write a program 
 - If you forget the formula for area of a circle, Google it.  Pay attention to the difference between radius and diameter.  You can use `3.14159` as a value for pi.
 
 3\. Math
+
 A. Have the user input two numbers. Set the value of a variable called `zero` to have a boolean value of `True` if they entered a `0` character for the second number and `False` if they didn't.  The section on [conditional execution](#conditional-execution) has a similar example.
 
 B. Convert the two numbers to a floating point number using the `float()` function.  
