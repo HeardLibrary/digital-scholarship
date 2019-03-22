@@ -408,9 +408,20 @@ In code examples, you will see all kinds of variations on these themes.  Just re
 
 Python has a function that can be used to allow a user to enter text, then assign that text to a string variable.  
 
-```
+```python
 name = input("What's your name? ")
 print('Hello ' + name + '! How are you?')
+```
+
+The type of the variable will be string, so you need to change the type using a function if you intend for it to be something other than a string.
+
+```python
+# import the math module  
+import math  
+
+integer = int(input("What's the number? "))
+print('The square root is:')
+print(math.sqrt(integer))
 ```
 
 # Conditional execution
@@ -440,15 +451,28 @@ Notes:
 
 **Try this**
 
-For each of the following, predict what would happen, then try it by pasting in the text in place of `name = 'Fred Flintstone'`:
-1. `name = 'Mickey Mouse'`
-2. `name = 'Minnie Mouse'`
-3. `name = 'Micky Mouse'`
+Here's a modification of the previous example that uses the input() function:
+
+```python
+name = input('What is the name of the character? ')
+isMicky = name == 'Mickey Mouse'
+print(name)
+print(isMicky)
+
+if isMicky:
+    print('You are a Disney character')
+print('That is all!')
+```
+
+For each of the following, predict what would happen if it were entered in the program. Then try it.
+1. `Mickey Mouse`
+2. `Minnie Mouse`
+3. `Micky Mouse`
 
 We don't have to evaluate the condition separately.  We can evaluate it right in the `if` statement.  Here is a simplification of the code:
 
 ```python
-name = 'Fred Flintstone'
+name = input('What is the name of the character? ')
 print(name)
 
 if name == 'Mickey Mouse':
@@ -463,7 +487,7 @@ It's behavior will be the same except for printing the value of the condition.
 You can create a structure where one code block is executed if the condition is true and a different block is executed if the condition is false.  Here is an example:
 
 ```python
-name = 'Fred Flintstone'
+name = input('What is the name of the character? ')
 print(name)
 
 if name == 'Mickey Mouse':
@@ -476,16 +500,16 @@ print('That is all?')
 
 Notice that both of the conditional code blocks are indented by the same amount.  That helps make it clear that they are two options.
 
-For each of the following, predict what would happen, then try it by pasting in the text in place of `name = 'Fred Flintstone'`:
-1. `name = 'Mickey Mouse'`
-2. `name = 'Minnie Mouse'`
+For each of the following, predict what would happen if the value would be entered, then try it:
+1. `Mickey Mouse`
+2. `Minnie Mouse`
 
 ## if ... elif ... else ...
 
 You can check for multiple conditions by following an initial `if` statement by additional conditions.  If none of the additional conditions are satisfied, the `else` code block will be satisfied.  Here is an example:
 
 ```python
-name = 'Fred Flintstone'
+name = input('What is the name of the character? ')
 print(name)
 
 if name == 'Mickey Mouse':
@@ -504,11 +528,48 @@ print("That's all folks!")
 
 **Try this**
 
-1.
+Answers are at [the bottom of the page](#try-this-answers)
+
+1\. Yale University has an awesome website known as "Is it chicken tenders day?".  The website is at <http://www.isitchickentendersday.com/> and you can read about it [here](https://yaledailynews.com/blog/2011/09/08/is-it-chicken-tenders-day-question-answered-in-new-website/).  
+
+Python has a module called `datetime` that includes various functions.  For example, you can get today's date like this:
+
+```python
+from datetime import date
+
+now = date.today()
+print(now)
+```
+
+There is also a *method* that determines the day of the week as a number (0=Monday, 1=Tuesday, etc.).  It's `date.today().weekday()`.  (More about methods next lesson.)
+
+A. Modify the example above to print the day of the week number.
+B. If chicken tenders are served in the cafeteria on Thursdays, write a program that will output `yes` if it's chicken tenders day and 'no' for any other day.
+
+2\. Write a function that calculates the area of a circle.  The user should be able to pass the diameter as an argument and the function should return the area.  Use the function in a script where the user is prompted to enter the diameter and the answer is identified as the area.  Here are some things you need to know:
+
+- The function to convert a string to a floating point number is `float()` and it takes a string as its only argument.  You'll need it to convert the string from the input function to a number.
+- Exponentiation in Python is done using two asterisks.  So 4 squared would be `4**2` and x cubed would be `x**3`.
+- If you forget the formula for area of a circle, Google it.  Pay attention to the difference between radius and diameter.  You can use `3.14159` as a value for pi.
+
+3\. Math
+A. Have the user input two numbers. Set the value of a variable called `zero` to have a boolean value of `True` if they entered a `0` character for the second number and `False` if they didn't.  
+B. Convert the two numbers to a floating point number using the `float()` function.  Remember that you'll need to import the math module to use this function. See the [section about the `input()` function](#keyboard-input) for a similar example.  
+C. Calculate the first number multiplied by the second number.
+D. Calculate the first number divided by the second number.  Since dividing by zero generates an error, only do this calculation if the value of isZero is not `True`.  You can do it like this:
+
+```python
+if not zero:
+    (do something here)
+```
+
+The variable `zero` is being used here as a *flag*.  A flag is a way to keep track of the state of something in your script so that you can make a decision based on it at a later time.
 
 # Challenge problems
 
-1. **Disney checker**  The Disney character-testing program is stupid because the user has to modify the value of the variable `name` in line 1 in order to get the program to do the test.  It would be much better to have a graphical interface where the user enters the name in a text box, then clicks a button to see whether the name is of a Disney character.  Use the code [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/gui/python/simple_form.py) to create the graphical interface, then hack the GIU code by inserting the code from the previous example into the `doSomethingButtonClick()` function.  The best way to grab the code from the website is to click the Raw button, then highlight all the text, copy, then paste into your editor.  In the function, instead of printing the value of `firstInputBox.get()`, assign it to the variable name, then use the rest of the example code above as the remainder of the function.  Notice that the `if` code blocks will have to be indented 8 spaces, since the function itself is already indented 4 spaces.  **Embelishments:** Make the labels on the form and button appropriate for your app.  Get rid of the unnecessary second text box.
+Answers in next weeks lesson.
+
+1. **Disney checker**  The Disney character-testing program is dumb because the user has to re-run the program to check each character.  It would be much better to have a graphical interface where the user enters the name in a text box, then clicks a button to see whether the name is of a Disney character.  Use the code [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/gui/python/simple_form.py) to create the graphical interface, then hack the GIU code by inserting the code from the previous example into the `doSomethingButtonClick()` function.  The best way to grab the code from the website is to click the Raw button, then highlight all the text, copy, then paste into your editor.  In the function, instead of printing the value of `firstInputBox.get()`, assign it to the variable name, then use the rest of the example code above as the remainder of the function.  Notice that the `if` code blocks will have to be indented 8 spaces, since the function itself is already indented 4 spaces.  **Embelishments:** Make the labels on the form and button appropriate for your app.  Get rid of the unnecessary second text box.
 
 2. **Webpage checker**  Starting with the code [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/api/python/http_request.py), add a condition to check for an HTTP status code of 200.  If the status code is 200 ("OK"), then print a message saying that the web page is working.  If the status code is something else, tell the user that the web page isn't working and print the status code.  **Embelishments:** Check for other common response codes, like 301, 302, 303, 403, and 404.  You can see the meanings of the codes [on Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).  You can also try to create a GUI version using the code mentioned in problem 1.  Put the URL in the text box and label the button "Check web page".
 
@@ -528,6 +589,45 @@ print("That's all folks!")
 Print a single string formed by concatenating adjective strings in front of the string "latte".  You can use whatever adjectives you think would work best for marketing, but at a minimum, you should be able to produce "regular non-fat plain latte", "decaf skinny vanilla latte", and "dark fat pumpkin spice latte" (substitute a different adjective for "fat" if you can think of a better euphamism).  If "no" is selected for water, then provide some kind of error message.  **Embelishments:** Create a GUI version using the code mentioned in problem 1.  You'll have to add extra text boxes.  Create an option for a randomly generated latte using the `random.choice()` function.  Add an extra button to the GUI labeled "Surprise me" that generates the random latte.
 
 [next lesson on object-oriented programming in Python](../object/)
+
+# Try this Answers
+
+1\. 
+```python
+from datetime import date
+
+now = date.today().weekday()
+if now ==3:
+    print('yes')
+else:
+    print('no')
+```
+
+2\.
+```python
+def area(diameter):
+    radius = diameter/2.0
+    area = 3.14159 * radius ** 2
+    return area
+
+d = float(input('What is the diameter? '))
+print('The area of your circle is:')
+print(area(d))
+```
+
+3\. 
+```python
+firstString = input('first number: ')
+secondString = input('second number: ')
+zero = secondString=='0'
+
+firstNumber = float(firstString)
+secondNumber = float(secondString)
+
+print(firstNumber*secondNumber)
+if not zero:
+    print(firstNumber/secondNumber)
+```
 
 ----
 Revised 2019-01-19
