@@ -554,7 +554,7 @@ B. If chicken tenders are served in the cafeteria on Thursdays, write a program 
 
 3\. Math
 A. Have the user input two numbers. Set the value of a variable called `zero` to have a boolean value of `True` if they entered a `0` character for the second number and `False` if they didn't.  
-B. Convert the two numbers to a floating point number using the `float()` function.  Remember that you'll need to import the math module to use this function. See the [section about the `input()` function](#keyboard-input) for a similar example.  
+B. Convert the two numbers to a floating point number using the `float()` function.  See the [section about the `input()` function](#keyboard-input) for a similar example that converts to an integer (using `int()`) instead of a floating point number.  
 C. Calculate the first number multiplied by the second number.
 D. Calculate the first number divided by the second number.  Since dividing by zero generates an error, only do this calculation if the value of isZero is not `True`.  You can do it like this:
 
