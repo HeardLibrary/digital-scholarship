@@ -144,7 +144,7 @@ A window will appear for each monitor.  If both displays are mirroring the same 
 
 One of the windows will have an `Arrangement` tab.  Click on that tab.
 
-<img src="../images-4-mac/display-arrangment.png" style="border:1px solid black">
+<img src="../images-4-mac/display-arrangement.png" style="border:1px solid black">
 
 The `Mirror displays` checkbox controls whether the same material is shown on both monitors (checked) or if the display extends from one to the other (unchecked).  Extending the displays is usually the best choice for an external monitor connected to a laptop.  Mirroring the displays is usually the best choice if the laptop is connected to a projection system (allowing the user to see on the laptop what is being displayed on the prjector).  
 If the checkbox is unchecked, you will see a schematic of your monitors.  Drag them around until their configuration on the screen matches their physical arrangement on your desk.  

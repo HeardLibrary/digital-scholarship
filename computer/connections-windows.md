@@ -192,9 +192,9 @@ Scroll down the screen until you get to the `Scale and layout` and `Multiple dis
 
 In the `Scale and layout` section, you can control whether the monitor is oriented as landscape or portrait.  In some cases, users prefer to rotate a monitor 90 degrees to have a screen that is higher than it is wide.  For that configuration, you would change the orientation to Portrait.
 
-The `Multiple displays` section controls whether the same material is shown on both monitors () or if the display extends from one to the other ("Extend these displays").  Extending the displays is usually the best choice for an external monitor connected to a laptop.  Mirroring the displays is usually the best choice if the laptop is connected to a projection system (allowing the user to see on the laptop what is being displayed on the projector).  
+The `Multiple displays` section controls whether the same material is shown on both monitors ("Duplicate these displays") or if the display extends from one to the other ("Extend these displays").  Extending the displays is usually the best choice for an external monitor connected to a laptop.  Duplicating the displays is usually the best choice if the laptop is connected to a projection system (allowing the user to see on the laptop what is being displayed on the projector).  
 
-Check the `Make this my main display` checkbox when the display is selected where you want the system tray and main menus to reside.
+Check the `Make this my main display` checkbox when the display is selected. The main display is the display where you want the system tray and main menus to reside.
 
 [go on to Lesson 5: Backing up](../backup-windows/)
 
