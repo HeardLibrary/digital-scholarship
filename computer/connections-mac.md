@@ -134,23 +134,22 @@ Once the drive has been ejected, you can physically unplug it from the USB port.
 
 There are two typical situations where a computer is connected to multiple displays.  One is where a laptop is "docked" to a larger external monitor.  The other is when the computer is connected to a projection system, such as an LCD projector.  The instructions here will show you how to make the displays work the way you want.
 
-<img src="../images-4-pc/right-click-desktop.jpg" style="border:1px solid black">
+<img src="../images-4-mac/prefs-display.png" style="border:1px solid black">
 
-Right-click on the desktop.  Select `Display Settings`.
+From the apple menu at the upper left, select `System Preferences...`.  Click on `Displays`.
 
-<img src="../images-4-pc/display1.png" style="border:1px solid black">
+<img src="../images-4-mac/display-window.png" style="border:1px solid black">
 
-If necessary, click on `Display` in the left column. You'll see a diagram of your displays on the right.  In this example, display 1 is the built-in laptop display and display 2 is a large external monitor.  You can drag the two displays around until they match the physical configuration of the displays on your desk.  For example, if the external monitor is to the left of the laptop, drag display 2 to the left of display 1.  If the displays are different sizes, you can also move them up and down so that the tops or bottoms line up.  
+A window will appear for each monitor.  If both displays are mirroring the same desktop, they will appear together in each display.  If the external monitor is extending the desktop, each window will appear on the display they represent.  Using the `Rotation` dropdown for each monitor, you can control whether the monitor is oriented as landscape or portrait.  In some cases, users prefer to rotate a monitor 90 degrees to have a screen that is higher than it is wide.  For that configuration, you would change the orientation to Portrait.
 
-<img src="../images-4-pc/display2.png" style="border:1px solid black">
+One of the windows will have an `Arrangement` tab.  Click on that tab.
 
-Scroll down the screen until you get to the `Scale and layout` and `Multiple dosplays` section.  The settings in these two sections apply to whichever of the monitors was most recently selected by clicking on it (it will appear blue in the display layout).  
+<img src="../images-4-mac/display-arrangment.png" style="border:1px solid black">
 
-In the `Scale and layout` section, you can control whether the monitor is oriented as landscape or portrait.  In some cases, users prefer to rotate a monitor 90 degrees to have a screen that is higher than it is wide.  For that configuration, you would change the orientation to Portrait.
+The `Mirror displays` checkbox controls whether the same material is shown on both monitors (checked) or if the display extends from one to the other (unchecked).  Extending the displays is usually the best choice for an external monitor connected to a laptop.  Mirroring the displays is usually the best choice if the laptop is connected to a projection system (allowing the user to see on the laptop what is being displayed on the prjector).  
+If the checkbox is unchecked, you will see a schematic of your monitors.  Drag them around until their configuration on the screen matches their physical arrangement on your desk.  
 
-The `Multiple displays` section controls whether the same material is shown on both monitors () or if the display extends from one to the other ("Extend these displays").  Extending the displays is usually the best choice for an external monitor connected to a laptop.  Mirroring the displays is usually the best choice if the laptop is connected to a projection system (allowing the user to see on the laptop what is being displayed on the prjector).  
-
-Check the `Make this my main display` checkbox when the display is selected where you want the system tray and main menus to reside.
+To determine which monitor is the primary monitor, drag the white menu bar on the schematic to the monitor you wish to make primary.
 
 [go on to Lesson 5: Backing up](../backup-mac/)
 
