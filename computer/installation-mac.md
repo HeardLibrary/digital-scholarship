@@ -128,6 +128,17 @@ Click to select your user account, then click on the `Login Items` tab.  If you 
 
 Uninstalling software on a Mac is remarkably uncomplicated.  All you have to do is drag the application's `.app` package folder into the Trash.  Performing this uninstall actually does more than just delete the package folder -- it also undoes some of the system settings (such as file extension associations) that were done when the application was installed.
 
+# What is Launchpad?
+
+Launchpad is a convenient way to find any available application that is installed on your computer.  It includes applications that are in both of the Application directories (the global directory in the root of the drive and the directory in your user folder).  The icons in Launchpad will run the application using a single click, which is a bit easier than finding the application in one of the Applications folders and double-clicking.  
+
+<img src="../images-3-mac/launchpad.png" style="border:1px solid black">
+
+You can access Launchpad by clicking on its icon in the dock at the lower left of your screen.  You can also open it by pinching a thumb and three fingers together on the trackpad.  Launchpad will close when you click anywhere on the Launchpad screen, or if you spread a thumb and three fingers apart on the trackpad.
+
+You can organize applications by dragging them around on the window.  You can collect related applications by dropping one of the apps on top of another.  There is no simple way to remove an application from Launchpad -- when an application is uninstalled, it will automatically disappear from Launchpad. 
+
+If you want an alphabetical listing of installed applications, right click on the Launchpad icon in the dock, then click on the application you want to run.
 
 [go on to Lesson 4: Connections](../connections-mac/)
 
