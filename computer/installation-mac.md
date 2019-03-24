@@ -10,87 +10,87 @@ This is the Mac version of this page.  [Click for the Windows version of this pa
 
 [go back to Lesson 2: Directories](../directories-mac/)
 
-# NOTE: This page has not yet been edited to make it correct for Macs !!!!
-
 # What is an installed application?
 
 In the olden days, a computer program would often consist of a single file containing executable code.  All you had to do to run the program was to copy that file somewhere on your hard drive and run it.
 
 The situation today is much more complicated.  There is still at least one executable file associated with each application, but there are nearly always many other files associated with that one that are necessary for that application to run.  So installing an application requires not only copying an executable file to your hard drive, but also copying all of the other files and making necessary changes to the computer's configuration in order for the executable file to run properly.  This whole process is called *installing* the application.
 
+<img src="../images-3-mac/applications-folder.png" style="border:1px solid black">
+
+## Where do applications live in a Mac?
+
+As a practical matter, nearly all applications are located in one of two directories on a Mac.  One Applications folder is in the root directory of the drive (`/Applications/`) and another is within a user's directory (`~/Applications/`).  Applications that are in the first-level directory are available to all users of the computer and applications that are in the Applications directory in the user's directory are only available to that particular user.  
+
+Most applications are installed into the directory that's available to all users, although sometimes during the installation process you'll be asked if you want the application to be available only to you or to all users.
+
+If you look at an Applications directory using Finder, you will see a bunch of what appears to be normal file icons.  If you have made file extensions visible, you'll see that they have the extension `.app`.
+
+<img src="../images-3-mac/arduino.png" style="border:1px solid black">
+
 ## Files associated with an application
 
-Bulk Rename Utility is an application that can be used to change the name of many files at once.  After it has been installed, the files associated with it are located in a directory not surprisingly called `Bulk Rename Utility` that is a subdirecctory of the `Program Files` directory. (Although there is no requirement that software be installed in any particular place, most installed software is either located in the `Program Files` directory, or the `Program Files (x86)` directory.)  
+The items with `.app` extensions are not regular files.  They are actually a special type of directory called a `package`.  In Finder, the normal behavior if you double-click on a file is to open that file using the application associated with that file type, while double-clicking on a folder opens that directory.  Double-clicking on an application package does not open the directory -- it launches the application.  If we want to see what's in the package directory, we need to right-click on it, then select `Show Package Contents`.
 
-<img src="../images-3-pc/simple-executable.jpg" style="border:1px solid black">
+In the screenshot above, I've opened the package for the `Arduino` app so that we can see some of the files and directories inside it.  Within the package is usually a single directory called `Contents`.  Within the Contents directory are a number of files and directories.  Opening `Get Info` for the Contents directory shows that it contains 5342 files and directories.  So the idea that the package is a single file is clearly an illusion.
 
-We can see that there is one executable file in the `Bulk Rename Utility`, again not surprisingly named `Bulk Rename Utility.exe`.  This is the file that must be executed to make the application run, and if we double-click on it, the application will start up.  There are other files that contain documentation, configuration informtion, etc., but the overall number of files (11) are few because it isn't very complicated software.  
+Usually there is one directory within Contents called `MacOS`, which contains the actual executable code the makes the application run.  There is also often one called `Resources` that contains things like information about how to display application information in different languages, icons, etc.  There can be other folders containing spash screen images, other associated applications, lists, licenses, etc.
 
-Let's compare this with a more complacated application.  There is also a directory in `Program Files` called `RStudio` and it contains the files associated with the RStudio application.  However, if we look in that folder, there isn't any obvious executable file that can be used to start up the application.  
-
-<img src="../images-3-pc/complex-executable1.jpg" style="border:1px solid black">
-
-In fact, there are 5 folders containing 1608 files.  We can avoid using trial and error to find the primary executable file by knowing that if it isn't in the main directory, it is often kept in a subdirectory called `bin` (for "binary", other possible names are "program", or "application").  
-
-<img src="../images-3-pc/complex-executable2.jpg" style="border:1px solid black">
-
-If we look in the `bin` subdirectory, we can see that there is a file there called `rstudio.exe`.  If we double-click on it, the RStudio application will launch.
-
-There are also a number of files that have the file extension `.dll`.  These also contain executable code that can be called by the main application or other related applications, but they can't be run by themselves.
-
-## The registry
-
-Windows maintains a centralized catalog of configuration information for the operating system in general and for all of the applications that are installed on the computer.  This catalog is called the *registry*.  When an application is installed, it may add entries to the registry, or modify existing entries.  
-
-It is generally dangerous to edit the registry, so we won't talk about how find and edit it.  But the point is that the process of installing software can make changes to the computer beyond just copying files to it.  
-
-## Shortcuts
-
-Because most users would not like to (or be unable to) find the executable file that is used to launch an application, Windows has a feature called "shortcuts" that can be used to indirectly launch an application.  During installation, users might be asked whether they would like to put a shortcut on the desktop, in the Start menu, or on the task bar.  There is no limit to the number of places a shortcut can be placed -- all shortcuts point to the same executable file.
-
-<img src="../images-3-pc/shortcut.jpg" style="border:1px solid black">
-
-You can recognize a shortcut by the little arrow in the lower left corner of its icon.  Creating or deleting shortcuts have no effect on the application so simply deleting a desktop icon does nothing to get rid of the software.
-
-<img src="../images-3-pc/shortcut-properties.jpg" style="border:1px solid black">
-
-If you right-click on a shortcut and select `Properties`, the `Target:` field in the `Shortcut` tab will tell you the location of the executable file that starts up the application.  This is an easier way to find out where the executable file is than searching around blindly in the `Program Files` directory.  
-
-You may be wondering why we care about the connection between shortcuts and the executable files they launch.  One reason is that if a file isn't correctly associated with the application that we want to open it with (see [lesson 1]() for more on this), Windows may not know that the application is the right type for using with that file.  In that case, when setting the default application, you may need to navigate to the executable file to tell Windows to use that application.  
-
-<img src="../images-3-pc/open-with.jpg" style="border:1px solid black">
-
-Similarly, if you right-click on a file and choose `Open with` and the application you want to use isn't there, you can select `Choose another app` followed by `Look for another app on this PC` to navigate to the executable.  
-
-<img src="../images-3-pc/always-use.jpg" style="border:1px solid black">
-
-If you check the `Always use this app to open ...` option, you can set the file association for that file type to the executable you choose.
-
-Another reason is that if there isn't a shortcut on your desktop for an application, you can navigate to its executable, then right-click on it and select `Create shortcut` and agree to have it put on your desktop.
+It is unlikely that you will ever need to modify, move, or delete any of these files since doing so would probably "break" the application.  That's why your computer makes it difficult for you to see into the package and gives the illusion that the package is just a normal file.
 
 # Installing applications
 
-Given the complexity of installed applications in Windows, the process of installing an application is also complicated.  Fortunately, applications generally come with an installer program that automates the process.  **Note:** if the user account you usually use on your computer is not an administrator account, you might not be allowed to install applications on your computer.  See [lesson 1](../files-windows/) for more about user accounts.
+Because the application package is more complicated than a simple file, the installation process can be more complicated than downloading a single file or simply moving a file from one directory to another.  Installing an application also involves making changes associated with the operating system (OS), such as telling the OS where the application is located, making associations between file extensions and the application, and possibly setting environmental variables associated with the application.
 
-When you go to a website to download an appliction, the file that is downloaded is often one that has an `.msi` file extention (which stands for MicroSoft Installer).  If it doesn't have an `.msi` extension, then it usually has a `.exe` extension and a filename that includes "setup" or "installer" (for example: "GitHubDesktopSetup.exe" and "SWCarpentryInstaller.exe").
+When an application is downloaded from the Internet, it is not usually directly in the form of a package with an `.app`.  Rather, it is in the form of a file that requires an action on the part of the user to initiate the installation.  That file is usually downloaded into the Downloads directory within the user's folder.  Once the installation is finished, the file in the Downloads directory can be safely deleted without having any effect on the installed application.  Sometimes at the end of the installation process, an installer will give the user an option to delete the installer, but often the user needs to delete the installer manually using Finder.
 
-Because both `.msi` and `.exe` executable files can potentially contain viruses, you should always use caution when running them and only do the installation if you trust the source of the software.  You should only run installers that are from the official site of the organization producing the software and that website should support secure HTTP (https:// URLs).  
+<img src="../images-3-mac/installer-warning.png" style="border:1px solid black">
 
-Generally, the installation process is fairly straightforward with perhaps a few questions about where to put files and whether you want to create shortcuts.  If the installer asks whether you want to add the path to your system PATH variable, you generally will want to answer "yes".
+Because running any executable program runs the risk of introducing malware into the computer, you should always use caution when running them and only do the installation if you trust the source of the software.  Installers that are from the App Store have been checked by Apple and should be safe to install. Apps that are not from the App Store should be from the official site of the organization producing the software and that website should support secure HTTP `https://` URLs.  
 
-Once the installation is finished, the actual installer file is no longer needed and can be deleted from wherever it was saved (often your `Downloads` directory).  Deleting the installer will have no effect on the application itself.
+The installation process always requires some sort of security action on the part of the user, such as using Touch ID (if the computer has it) or entering the computer password (as shown above).
+
+## Types of installations
+
+**.pkg installer files**
+
+<img src="../images-3-mac/package-installer.png" style="border:1px solid black">
+
+Sometimes the downloaded file is in the form of an *installer* file.  On Macs, **installer** files usually have the extension `.pkg` (not to be confused with application **packages**, which usually have the extension `.app`).  Installers are executable files that you can launch by double-clicking on their icon (which may look like a little package).  When the `.pkg` executable is run, it usually opens a window that runs the user through a dialog that may involve some choices about the installation.  The screenshot above shows the dialog for installing Skype for Business. 
+
+**.dmg disk image files**
+
+Another common form for downloaded applications is as a file with a `.dmg` file extension.  `.dmg` stands for "disk image" and the file behaves as if it were a removable drive.  You can open the `.dmg` file directly by double-clicking on it in the downloads bar at the bottom of the browser, or you can use Finder to go to the Downloads folder and double-click on it there.
+
+<img src="../images-3-mac/drag-to-applications.png" style="border:1px solid black">
+
+It is common when `.dmg` files are opened for the window to prompt you to drag the application icon into the Applications folder (as shown above).  In some cases, there isn't that kind of graphical prompting and you need use Finder to drag and drop the app package from the Downloads folder to the Applications folder. 
+
+**.zip archive files**
+
+Sometimes when you click the `Download` button to download an app from the Internet, a `.zip` archive gets downloaded to your Downloads directory.  `.zip` files are a way to bundle and compress other files.  Macs are able to "unzip" `.zip` files automatically when you click on them.
+
+<img src="../images-3-mac/zip-expansion.png" style="border:1px solid black">
+
+In the screenshot above, the downloaded file was `Cyberduck-6.6.2.28219.zip`.  Clicking on it extracted the application package, which is called `Cyberduck`.  The application can be run from anywhere, so I can double-click on it right in the Downloads directory. The first time, I'll get the security warning:
+
+<img src="../images-3-mac/opening-warning.png" style="border:1px solid black">
+
+which I won't see again if I click the Open button.  The Downloads directory isn't a particularly great place for the application to live, so it's better if I use Finder to move it from Downloads to the Applications folder.  After that, I don't need the `.zip` archive any more and I can delete it from the Downloads folder.  
 
 ## Java applications
 
-In some cases, the application that you are installing is not run directly by the operating system, but instead is run by a Java virtual machine (VM).  A Java VM is a program that runs on the Windows system, but can itself run code that is platform-independent.  Typically that code is part of a file with a `.jar` file extension.
+In some cases, the application that you are installing is not run directly by the operating system, but instead is run by a Java virtual machine (VM).  A Java VM is a program that runs as a Mac application, but can itself run code that is platform-independent.  Typically that code is part of a file with a `.jar` file extension. 
+
+This kind of application is not particularly common, but since Java scripts are platform-independent, they were favored in the past by developers who don't want to have to develop and maintain separate applications for different operating systems. So they are still sometimes found. 
 
 The software that creates the VM is called the Java Runtime Environment (or JRE).  It is software that is downloaded and installed like any other software and the `.jar` file extension is then associated with it so that when you double-click on a file with that extension, it will automatically run in a Java VM.  Because Java is so common, someone may have already installed JRE on your computer when it was set up.  If you get a new computer, programs that you are used to running may fail to run because no one has yet installed JRE on it.  You can find the latest version of JRE [here](https://www.oracle.com/technetwork/java/javase/downloads/index.html).  Note that there are several flavors of Java available -- you probably just need the generic JRE.  The Java Development Kit (JDK) is for developers and the Server JRE is not needed by most typical users.
-
-It is also possible that the program that you are using has an installer and creates a shortcut icon that runs a `.jar` file.  You may not even know that the application is running in a Java VM unless it fails and produces an error message telling you that you don't have JRE.  
+ 
+Because Java applications were widely used in other devices like printers and DVD players, Java has been a target for security threats.  So if you end up running Java scripts, you should keep your Java JRE up to date.
 
 ## Applications that run on a localhost server
 
-There are an increasing number of applications that involve setting up a web server on your local computer, then interact with it using a web browser.  These kind of applications are discussed in detail in [lesson 6](../command-windows/).
+There are an increasing number of applications that involve setting up a web server on your local computer, then interact with it using a web browser.  These kind of applications are discussed in detail in [lesson 6](../command-unix/).
 
 # Software that runs in the background
 
