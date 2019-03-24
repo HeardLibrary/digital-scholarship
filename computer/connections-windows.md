@@ -42,11 +42,11 @@ Since the 1990's USB (universal serial bus) connectors have been replacing the w
 
 USB cords can have many different connectors.  The most common type for plugging into computers is the "type A" connector and it has been present on most computers since the 1990s.  
 
-Over the years, USB technology has improved, with each of the versions 1.0, 2.0, and 3.0 greatly increasing the transmission speed from the previous version.  Fortunately, the versions are backwards compatable, so a USB 1.0 device can be plugged into a USB 2.0 or 3.0 port and a USB 2.0 device can be plugged into a USB 3.0 port as long as the connector type is the same.  The faster devices can also generally be plugged into an older port, although their performance will be limited by the speed supported by the older version.
+Over the years, USB technology has improved, with each of the versions 1.0, 2.0, and 3.0 greatly increasing the transmission speed from the previous version.  Fortunately, the versions are backwards compatible, so a USB 1.0 device can be plugged into a USB 2.0 or 3.0 port and a USB 2.0 device can be plugged into a USB 3.0 port as long as the connector type is the same.  The faster devices can also generally be plugged into an older port, although their performance will be limited by the speed supported by the older version.
 
 <img src="../images-4-pc/ports4.jpg" style="border:1px solid black">
 
-Very recently, USB-C has been introduced.  It is also backwards compatable with versions 1.0 through 3.0, but it uses the "type C" connector, so many devices cannot be plugged directly into a USB-C port.  One nice feature of the type C connector is that unlike the old type A connector, the type C connector can be inserted either way.
+Very recently, USB-C has been introduced.  It is also backwards compatible with versions 1.0 through 3.0, but it uses the "type C" connector, so many devices cannot be plugged directly into a USB-C port.  One nice feature of the type C connector is that unlike the old type A connector, the type C connector can be inserted either way.
 
 <img src="../images-4-pc/usb-c-to-usb-3.jpg" style="border:1px solid black">
 
@@ -86,7 +86,7 @@ Once the firmware update is finished, any downloaded files on the computer aren'
 
 # Reinstalling a printer
 
-**Note:** These instructions are intended to help solve problems related to printers attached directly to a computer or through a home network.  Printers connected through the Vanderbilt network are more complicate and you'll probaby need help with them.
+**Note:** These instructions are intended to help solve problems related to printers attached directly to a computer or through a home network.  Printers connected through the Vanderbilt network are more complicated and you'll probably need help with them.
 
 If all goes well when you first connect a printer, plug and play will install the drivers and create a printer connection automatically.  However, sometimes a computer refuses to connect to a printer that is turned on and otherwise ready to go.  It is unlikely that you'll ever be able to figure out what the problem is, but fortunately, you can just create a new connection to the computer.
 
@@ -128,7 +128,7 @@ Addition file storage can be added to a computer by connecting a *flash drive* o
 
 ## Flash drives and external hard drives
 
-Flash drives are also known as *thumb drives*, *memory sticks*, *jump drives*, and *USB drives*.  They consist of re-writable electronically eraseable programable memory (EEPROM; also known as *flash memory*) in a small package that can be plugged into a USB port.  They are relatively inexpensive and over time their capacity has increased, with sizes of 128 GB (gigabyte) or more currently common.
+Flash drives are also known as *thumb drives*, *memory sticks*, *jump drives*, or *USB drives*.  They consist of re-writable electronically erasable programable memory (EEPROM; also known as *flash memory*) in a small package that can be plugged into a USB port.  They are relatively inexpensive and over time their capacity has increased, with sizes of 128 GB (gigabyte) or more currently common.
 
 External hard drives originally contained spinning magnetic disk media, powered directly through the USB port.  Recently, it has become more common for them to be replaced by solid state drives (SSD), which use the same kind of memory as flash drives.  Solid state drives are faster, require less power, and are less easily damaged by being dropped or struck.  They are, however, at least twice as expensive as magnetic media drives of the same size.  External SSD drives are now commonly found in sizes of 500 GB and spinning disk drives of 4 TB (terabytes or about 4000 GB) or more.
 
@@ -188,15 +188,15 @@ If necessary, click on `Display` in the left column. You'll see a diagram of you
 
 <img src="../images-4-pc/display2.png" style="border:1px solid black">
 
-Scroll down the screen until you get to the `Scale and layout` and `Multiple dosplays` section.  The settings in these two sections apply to whichever of the monitors was most recently selected by clicking on it (it will appear blue in the display layout).  
+Scroll down the screen until you get to the `Scale and layout` and `Multiple displays` section.  The settings in these two sections apply to whichever of the monitors was most recently selected by clicking on it (it will appear blue in the display layout).  
 
 In the `Scale and layout` section, you can control whether the monitor is oriented as landscape or portrait.  In some cases, users prefer to rotate a monitor 90 degrees to have a screen that is higher than it is wide.  For that configuration, you would change the orientation to Portrait.
 
-The `Multiple displays` section controls whether the same material is shown on both monitors () or if the display extends from one to the other ("Extend these displays").  Extending the displays is usually the best choice for an external monitor connected to a laptop.  Mirroring the displays is usually the best choice if the laptop is connected to a projection system (allowing the user to see on the laptop what is being displayed on the prjector).  
+The `Multiple displays` section controls whether the same material is shown on both monitors () or if the display extends from one to the other ("Extend these displays").  Extending the displays is usually the best choice for an external monitor connected to a laptop.  Mirroring the displays is usually the best choice if the laptop is connected to a projection system (allowing the user to see on the laptop what is being displayed on the projector).  
 
 Check the `Make this my main display` checkbox when the display is selected where you want the system tray and main menus to reside.
 
 [go on to Lesson 5: Backing up](../backup-windows/)
 
 ----
-Revised 2019-03-20
+Revised 2019-03-24

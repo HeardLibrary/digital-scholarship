@@ -143,4 +143,4 @@ If you want an alphabetical listing of installed applications, right click on th
 [go on to Lesson 4: Connections](../connections-mac/)
 
 ----
-Revised 2019-03-21
+Revised 2019-03-24
