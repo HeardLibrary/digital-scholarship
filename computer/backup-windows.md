@@ -43,7 +43,7 @@ A solution to this problem is *version control*.  In version control, you create
 gis-project-2019-03-04.xlsx
 ```
 
-With a system like this, you would not lose more than a day's worth of work if you made the mistake of saving a bad version with a big deletion or other kind of mess-up related to the working file.  Because of the format used for the date, when the files are sorted, they are ordered from oldest to newest, and it's extremely easy to see what the state of the file was at any particular time.  If the system were also combined with a cloud service, you would also be protected against hazards like a hard-drive crash or loss of your computer.  With the free Dropbox account, you can restore a previous version of a file within 30 days of the change, so if you were a victim of a bitlocker virus, you could recover the files as long as you discovered the attach 
+With a system like this, you would not lose more than a day's worth of work if you made the mistake of saving a bad version with a big deletion or other kind of mess-up related to the working file.  Because of the format used for the date, when the files are sorted, they are ordered from oldest to newest, and it's extremely easy to see what the state of the file was at any particular time.  If the system were also combined with a cloud service, you would also be protected against hazards like a hard-drive crash or loss of your computer.  With the free Dropbox account, you can restore a previous version of a file within 30 days of the change, so if you were a victim of a bitlocker virus, you could recover the files as long as you discovered the attach
 
 There are much more sophisticated version control systems than this.  [This page](../../manage/control/) has links to more information on the topic of version control.
 
@@ -85,13 +85,13 @@ On the Settings page, select `Update & Security`.
 
 <img src="../images-5-pc/backup-option.png" style="border:1px solid black">
 
-Connect your removable media if you aren't using a drive connected through the network. 
+Connect your removable media if you aren't using a drive connected through the network.
 
 Click on the plus (`+`) button to the left of `Add a drive`.  When the drive shows up, click on its name.
 
 The process of archiving all of the files for the first time may take quite a bit of time.  When it's finished a slider labeled `Automatically back up my files` will appear.  By default, File History will back up the files once an hour.  If the drive is a removable drive, it obviously will need to be attached in order for the scheduled backup to take place.  For that reason, a network drive may be desirable for this purpose.  
 
-To use different settings than the defaults, click on the `More Options` link under the drive list.  Click on the `See advanced settings` link.  A new window will open. 
+To use different settings than the defaults, click on the `More Options` link under the drive list.  Click on the `See advanced settings` link.  A new window will open.
 
 <img src="../images-5-pc/file-history-settings.png" style="border:1px solid black">
 
@@ -105,9 +105,9 @@ One product is Clickfree, an external hard drive that automatically launches a b
 
 <img src="../images-5-pc/external-drive-dock.jpg" style="border:1px solid black">
 
-Another possible alternative is to attach a regular non-USB hard drive (magnetic media or solid state)  using an external drive dock that connects by USB (see image above).  If you have several large-capacity drives salvaged from old desktop systems, you can store a number of full backups on a single drive by simply dragging and dropping the entire folder to be backed up.  The drives can be undocked and stored in a safe location away from the computer. 
+Another possible alternative is to attach a regular non-USB hard drive (magnetic media or solid state)  using an external drive dock that connects by USB (see image above).  If you have several large-capacity drives salvaged from old desktop systems, you can store a number of full backups on a single drive by simply dragging and dropping the entire folder to be backed up.  The drives can be undocked and stored in a safe location away from the computer.
 
-For perspective, the system above has been used to make weekly full backups of all of my work files on Fridays for 8 months without erasing any previous backups.  The drive is removed from the system and stored until the next week.  After that amound of time, about 50 GB of the available 950 GB available on the drive has been used.  At that rate, the drive will be filled in about 12 years.
+For perspective, the system above has been used to make weekly full backups of all of my work files on Fridays for 8 months without erasing any previous backups.  The drive is removed from the system and stored until the next week.  After that amount of time, about 50 GB of the available 950 GB available on the drive has been used.  At that rate, the drive will be filled in about 12 years.
 
 This system shares the same disadvantage of the Clickfree in that you need to remember to plug in the drive and do the copy.
 
@@ -125,4 +125,3 @@ Having three copies of your data, including copies offsite, should protect you a
 
 ----
 Revised 2019-03-21
-

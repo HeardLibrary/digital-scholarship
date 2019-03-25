@@ -43,7 +43,7 @@ A solution to this problem is *version control*.  In version control, you create
 gis-project-2019-03-04.xlsx
 ```
 
-With a system like this, you would not lose more than a day's worth of work if you made the mistake of saving a bad version with a big deletion or other kind of mess-up related to the working file.  Because of the format used for the date, when the files are sorted, they are ordered from oldest to newest, and it's extremely easy to see what the state of the file was at any particular time.  If the system were also combined with a cloud service, you would also be protected against hazards like a hard-drive crash or loss of your computer.  With the free Dropbox account, you can restore a previous version of a file within 30 days of the change, so if you were a victim of a bitlocker virus, you could recover the files as long as you discovered the attach 
+With a system like this, you would not lose more than a day's worth of work if you made the mistake of saving a bad version with a big deletion or other kind of mess-up related to the working file.  Because of the format used for the date, when the files are sorted, they are ordered from oldest to newest, and it's extremely easy to see what the state of the file was at any particular time.  If the system were also combined with a cloud service, you would also be protected against hazards like a hard-drive crash or loss of your computer.  With the free Dropbox account, you can restore a previous version of a file within 30 days of the change, so if you were a victim of a bitlocker virus, you could recover the files as long as you discovered the attach
 
 There are much more sophisticated version control systems than this.  [This page](../../manage/control/) has links to more information on the topic of version control.
 
@@ -75,29 +75,65 @@ Cloud storage systems provide good protection against this hazard, although they
 Under construction beyond this point
 ****************
 
-# Time Capsule backup
+# Time Machine backup
 
+**Note:** for details about Time Machine, see [this page](https://support.apple.com/en-us/HT201250).  
 
+Macs have a built-in backup system called *Time Machine*.  In order to use Time Machine, you must have an external storage device such as a network drive or removable drive.  When you connect a removable drive to your computer, you might be asked if you want to use it with Time Machine.  If not, then you can manually initiate setting up a drive for use with Time Machine.
 
-## Alternatives to Time Capsule
+## What does Time Machine do?
 
+The first time that Time Machine runs, it does a full backup.  However, after that, it does incremental backups.  It has a relatively sophisticated system for managing the backups that provides a higher degree of protection for more recent work.  It makes a backup every hour for the past day, every day for the past month, and every week for as far back in time as space is available.
 
+Another important feature of Time Machine is that it provides some degree of protection even when the computer hasn't recently been connected to removable storage (important if you aren't using a network drive that's connected all the time).  When Time Machine is not able to connect to the storage drive, it will make local copies (called *local snapshots*) on the computer's hard drive until the next time it's connected to the removable storage.  When the removable storage device is connected again, the local snapshots are moved from the hard drive to the external storage.  There are two important limitations of the local snapshots.  One is that the number of local snapshots that are kept depends on how full your hard drive is.  Once the hard drive is more than 80% full, older backups start to be deleted.  The second limitation is that the local snapshots only protect you against deletions or corrupted files -- they do not protect you against physical risks like theft, drive crashes, or physical destruction of the computer and drive.  So it is still important to regularly connect the external storage device if it isn't connected all the time.  (See [this post](https://www.howtogeek.com/276196/you-can-use-time-machine-even-if-your-backup-drive-isnt-plugged-in/) for more about local snapshots.)
+
+## Setting up Time machine
+
+<img src="../images-5-mac/prefs-time-machine.png" style="border:1px solid black">
+
+From the apple menu in the upper left of the screen, select `System Preferences...`.  Click on the `Time Machine` icon.
+
+<img src="../images-5-mac/time-machine-setup.png" style="border:1px solid black">
+
+Click on the `Select Backup Disk...` button and select your external storage from the list.  When selecting the disk, you have the option to encrypt the backups.  This is more secure, but if you don't remember the password, you won't be able to access the backups.  
+
+<img src="../images-5-mac/icon-in-menu-bar.png" style="border:1px solid black">
+
+If you check the `Show Time Machine in menu bar`, an icon will appear in the menu bar in the upper right of the screen.
+
+<img src="../images-5-mac/time-machine-options.png" style="border:1px solid black">
+
+Clicking the `Options...` button brings up a dialog that allows you to control what parts of the drive to back up by excluding some directories.  For example, if you figure that you will reinstall all of the applications by downloading them from the Internet, you can exclude the `/Applications/` folder and the size of the backup may be significantly smaller.
+
+<img src="../images-5-mac/exclude-folders.png" style="border:1px solid black">
+
+Compare this screenshot with the previous one.  By excluding the Applications folder, the backup size was decreased from 55 to 36 GB.  
+
+One complaint about Time Machine is that when backups are done infrequently, they take a long time to run and the application does not give an indication of its progress.  So be patient if it seems like nothing is happening.  If you back up frequently, or have your computer connected to the external storage all the time, this is less likely to be a problem.
+
+## Restoring Files
+
+If you need to recover from a disaster, you can use Time Machine to recover some or all of your files.  Time Machine has an option to restore the entire Mac OS and all files for the ultimate disaster recovery (NOTE: it erases the entire hard drive in the process!), or you can restore only the files.  (See [this page](https://support.apple.com/en-us/HT203981) for more information.)  You can also step back in time to any particular point where a snapshot exists and recover individual files (described on [this page](https://support.apple.com/en-us/HT209152)).
+
+## Alternatives to Time Machine
+
+If there are only a few files on your computer that need to be backed up, there are other options besides Time Machine.  For instance your computer may be a clone of a standard disk image with only a few data files that differ from the clone or you may have some directories already backed up using a cloud service like Dropbox or Github.  In that case, you can essentially create full backups by just dragging and dropping a folder or folders to a dated folder on an external drive.
 
 <img src="../images-5-pc/external-drive-dock.jpg" style="border:1px solid black">
 
-An alternative is to attach a regular non-USB hard drive (magnetic media or solid state)  using an external drive dock that connects by USB (see image above).  If you have several large-capacity drives salvaged from old desktop systems, you can store a number of full backups on a single drive by simply dragging and dropping the entire folder to be backed up.  The drives can be undocked and stored in a safe location away from the computer. 
+An inexpensive storage alternative is to attach a regular non-USB hard drive (magnetic media or solid state) using an external drive dock that connects by USB (see image above).  If you have several large-capacity drives salvaged from old desktop systems, you can store a number of full backups on a single drive.  The drives can be undocked and stored in a safe location away from the computer.
 
-For perspective, the system above has been used to make weekly full backups of all of my work files on Fridays for 8 months without erasing any previous backups.  The drive is removed from the system and stored until the next week.  After that amound of time, about 50 GB of the available 950 GB available on the drive has been used.  At that rate, the drive will be filled in about 12 years.
+For perspective, the system above has been used to make weekly full backups of all of my work files on Fridays for 8 months without erasing any previous backups.  The drive is removed from the system and stored until the next week.  After that amount of time, about 50 GB of the available 950 GB available on the drive has been used.  At that rate, the drive will be filled in about 12 years.
 
-This system has the same disadvantage as Time Capsule with a removable drive in that you need to remember to plug in the drive and do the backup.
+This system has the same disadvantage as Time Machine using a removable drive in that you need to remember to plug in the drive and do the backup.
 
 # Some suggestions
 
 For individual files that are being edited, use the dated-version system with cloud storage (Box or Dropbox), or use a private repository in [Github](../../manage/control/github/). When the file revision is complete, a final copy can be stored in a permanent location and most or all of the dated versions can be deleted.
 
-*For most of the files you edit, keep them within your user directory and use File History to make regular copies to a network server (if one is available).  Use a frequent update interval (some time less than a day).
+Keep most of the files you edit within your user directory and use Time Machine to make regular backups to a network server (if one is available).  If your cloud storage directory (e.g. Dropbox) is located within your user directory, it will be backed frequently in two ways.  
 
-Once a week, use a removable drive to do a full backup of your user directory, and store the drive offsite or in a safe location.  If your backup drive is large and the size of your user directory is relatively small, you should be able to save a number of past versions of your user directory.*
+Once a week, use a removable drive to do a full backup of your user directory via drag and drop, and store the drive offsite or in a safe location.  If your backup drive is large and the size of your user directory is relatively small, you should be able to save a number of past versions of your user directory.
 
 Having three copies of your data, including copies offsite, should protect you against most risks.  Not only will it make restoring your data easier after a disaster, it also will position you for setting up a new, upgraded computer at some point in the future.
 
