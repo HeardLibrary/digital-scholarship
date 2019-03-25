@@ -93,7 +93,7 @@ From the apple menu in the upper left of the screen, select `System Preferences.
 
 <img src="../images-5-mac/time-machine-setup.png" style="border:1px solid black">
 
-Click on the `Select Backup Disk...` button and select your external storage from the list.  When selecting the disk, you have the option to encrypt the backups.  This is more secure, but if you don't remember the password, you won't be able to access the backups.  
+Click on the `Select Backup Disk...` button and select your external storage from the list.  When selecting the disk, you have the option to encrypt the backups.  This is more secure, but if you don't remember the password, you won't be able to access the backups.  Note: there are some limitations related to using an external storage device for both Time Machine and other file storage.  You may need to partition the drive depending on how you want to use the parts of the drive that aren't used by Time Machine.  See [this page](https://www.howtogeek.com/212445/how-to-use-a-time-machine-drive-for-both-file-storage-and-backups/) for more details.
 
 <img src="../images-5-mac/icon-in-menu-bar.png" style="border:1px solid black">
 
