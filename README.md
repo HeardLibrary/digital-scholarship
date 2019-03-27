@@ -30,11 +30,13 @@ The repository structure is described below.
 │   │   ├── README.md          : description of included code
 │   │   └── python             : Python versions
 │   │       └── simple_form.py      : simple script that generates two text boxes and a button
-│   └── scrape                 : example code for scraping a website
-│       ├── README.md          : description of included code
-│       └── python             : Python versions
-│           ├── scrape-sec.py       : code to perform the scrape, including loops
-│           └── scrape-sec.ipynb    : Jupyter notebook of code for only a single instance of each resource
+│   ├── scrape                 : example code for scraping a website
+│   │   ├── README.md          : description of included code
+│   │   └── python             : Python versions
+│   │       ├── scrape-sec.py       : code to perform the scrape, including loops
+│   │       └── scrape-sec.ipynb    : Jupyter notebook of code for only a single instance of each resource
+│   ├── viz                    : data visualization resources
+│   └── wikibase               : preliminary work on setting up a bot
 └── data                       : sample data
     ├── rdf                    : Resource Description Framework (RDF) examples
     │   ├── presidents.rdf     : data about presidents retrieved from Wikidata via SPARQL CONSTRUCT
