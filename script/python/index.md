@@ -24,7 +24,7 @@ Version 2 of Python has been in wide use for many years.  So although it is no l
 
 Anaconda is an umbrella system for data science that includes many of the most important tools used in data science.  It includes both the Python and R programming languages, most of the common Python libraries used in science and engineering (including NumPy, SciPy, Matplotlib, and pandas), and many commonly used R packages.  Anaconda also includes the popular Jupyter notebook system (see below), RStudio, the Spyder Python development environment, and has its own custom package management system.  The Anaconda Navigator provides access to the system through a desktop GUI. 
 
-If you want to start off with many major data science tools at once, you should consider [installing Anaconda](https://docs.anaconda.com/anaconda/install/).  However, since Anaconda includes so much stuff, it can eventually sprawl to gigabytes in size.  So if you are new to Python, you might start with a simpler Python distribution and upgrade to Anaconda later. 
+If you want to start off with many major data science tools at once, you should consider [installing Anaconda](https://docs.anaconda.com/anaconda/install/).  However, since Anaconda includes so much stuff, it can eventually sprawl to gigabytes in size.  So if you are new to Python, you might start with a simpler Python distribution and upgrade to Anaconda later. (Note: if you upgrade to Anaconda, it reinstalls Python and may use a slightly earlier version than what is currently provided as the latest version at python.org.)
 
 # Ways to write and run Python
 
