@@ -1,1 +1,4 @@
 .DS_Store
+/code/wikibase/apicache-py3/*
+/code/wikibase/pywikibot.lwp
+/code/wikibase/throttle.ctrl
