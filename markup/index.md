@@ -18,7 +18,7 @@ There are several commonly used markup languages.  In some cases, the markup lan
 
 # LaTeX
 
-![](resource/latex.png)
+<img src="resource/latex.png" style="border:1px solid black">
 
 LaTeX is a markup system generating print quality output with an emphasis on rendering math expressions.
 
@@ -26,7 +26,7 @@ There are several LaTeX editors the provide an editing pane and a WYSIWYG previe
 
 [TeXworks](http://www.tug.org/texworks/) is a free application for editing LaTeX offline.  It features markup and preview. [MiKTeX](https://miktex.org/) is a processor that includes TeXworks as its front end.
 
-![](resource/detexify.png)
+<img src="resource/detexify.png" style="border:1px solid black">
 
 [Detexify](http://detexify.kirelabs.org/classify.html) is a tool that allows you to hand-draw symbols, then choose from its best attempt to match your drawing with known symbols encoded as LaTeX.  The code you choose can be copied and pasted into your LaTeX editor.
 
