@@ -4,8 +4,6 @@
 from pywikibot import family
 import pywikibot, json, csv, sys
 
-
-
 """
     Notes:
     We need to remove the built in throttling because we 
@@ -36,8 +34,6 @@ def wait(self, seconds):
 
 pywikibot.throttle.Throttle.wait = wait
 
-
-
 # # if len(sys.argv) == 1:
 # #     raise ValueError('Missing input CSV file')
 
@@ -47,16 +43,6 @@ pywikibot.throttle.Throttle.wait = wait
 # # csv_reader = csv.DictReader(csv_file)
 
 # # If you changed the name of the site to something else make sure to change it here
-# repo = site.data_repository()
-# item = pywikibot.ItemPage(repo, u"Q11")
-# #dictionary = item.get()
-# #print(dictionary)
-# #print(dictionary.keys())
-# #print(item)
-# claim = pywikibot.Claim(repo, u'P4')
-# target = pywikibot.ItemPage(repo, u"Q3")
-# claim.setTarget(target)
-# item.addClaim(claim, summary=u'Adding claim')
     
 site = pywikibot.Site('ldwg', 'ldwg')
 site.login()
@@ -66,5 +52,20 @@ repo = site.data_repository()
 some_labels = {"en": "Clifford B. Anderson"}
 new_item = pywikibot.ItemPage(repo)
 new_item.editLabels(labels=some_labels, summary="Setting labels")
+
+claim = pywikibot.Claim(repo, u'P4') # employer
+target = pywikibot.ItemPage(repo, u"Q3") # Vanderbilt University
+claim.setTarget(target)
+new_item.addClaim(claim, summary=u'Adding employer claim')
+    
+claim = pywikibot.Claim(repo, u'P6') # instance of
+target = pywikibot.ItemPage(repo, u"Q5") # human
+claim.setTarget(target)
+new_item.addClaim(claim, summary=u'Adding type claim')
+
+#P39 position held
+#P101 field of work
+#P106 occupation
+#P463 member of
 
 print(new_item.getID())
