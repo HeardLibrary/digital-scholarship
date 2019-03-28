@@ -4,14 +4,7 @@
 from pywikibot import family
 import pywikibot, json, csv, sys
 
-site = pywikibot.Site('ldwg', 'ldwg')
-site.login()
 
-def create_item(site, label_dict):
-    new_item = pywikibot.ItemPage(site)
-    new_item.editLabels(labels=label_dict, summary="Setting labels")
-    # Add description here or in another function
-    return new_item.getID()
 
 """
     Notes:
@@ -65,7 +58,13 @@ pywikibot.throttle.Throttle.wait = wait
 # claim.setTarget(target)
 # item.addClaim(claim, summary=u'Adding claim')
     
+site = pywikibot.Site('ldwg', 'ldwg')
+site.login()
+
+repo = site.data_repository()
 
 some_labels = {"en": "Clifford B. Anderson"}
-new_item_id = create_item(site, some_labels)
-print(new_item_id)
+new_item = pywikibot.ItemPage(repo)
+new_item.editLabels(labels=some_labels, summary="Setting labels")
+
+print(new_item.getID())
