@@ -7,11 +7,9 @@ Note: this is the fourth lesson in a beginner's introduction to Python.  For the
 
 [previous lesson on object-oriented programming in Python](../object/)
 
-Answers for last week's challenge problems:
+Answers for last week's challenge problem:
 
-1. [abusing Robert Frost poetry](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge2/frost_abuse.py)
-
-2. [latte maker with scrolling text box](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge2/latte_maker.py)
+[latte maker with scrolling text box](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge2/latte_maker.py)
 
 # Using Data Structures
 
