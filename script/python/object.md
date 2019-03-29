@@ -331,7 +331,7 @@ In this example, as the Entry is instantiated, it's containing frame is passed a
 
 Copy the latte maker code from the Github Raw file and paste it into your editor.  Try running it, then click the X to close the GUI.  In line 33, change the default input box value from `soy` to `skim`.  The marketing department does not like `fat` as the adjective for whole milk.  Change line 79 so that the whole milk adjective is `healthy`.  Also change the text of the surpriseMeButton to something other than `Surprise me!` in line 57.  Try running the program to see how your changes affect the GUI.
 
-**Homework problem**
+# Homework problem
 
 **Abusing Robert Frost** Now that "Stopping by Woods on a Snowy Evening" is in the public domain, we can use it in any creative way we want.  Modify the [poetry.py](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/poetry.py) code to do the following:
 

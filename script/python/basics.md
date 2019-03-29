@@ -526,7 +526,7 @@ else:
 print("That's all folks!")
 ```
 
-**Homework problems**
+# Homework problems
 
 Answers are at [the bottom of the page](#try-this-answers)
 
