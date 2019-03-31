@@ -18,6 +18,8 @@ At Vanderbilt, the [Digital Scholarship and Scholarly Communications Office](htt
 
 [Installing Blazegraph and Wikibase using Docker](../lod/install/)
 
+[The Wikibase data model (also applies to Wikidata)](../lod/wikibase/)
+
 [visit the Linked Data Working Group website](https://heardlibrary.github.io/linked-data/)
 
 [Linked Data WG SPARQL endpoint](https://sparql.vanderbilt.edu/)
