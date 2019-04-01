@@ -188,7 +188,7 @@ If a property that you want to assign to the items that you are creating with yo
 
 <img src="../images/partner-property.png" style="border:1px solid black">
 
-Here's an example of a property that I could use to link Mickey Mouse to Minnie Mouse.  
+Above is an example of a property that I could use to link Mickey Mouse to Minnie Mouse.  
 
 <img src="../images/partner-property-created.png" style="border:1px solid black">
 
@@ -202,7 +202,7 @@ The reason that you are using the bot is because you want to create a lot of ite
 
 If I want to add another universe, such as Marvel, I need to go to `Special pages` then `Create a new item` in the Wikibase section. 
 
-<img src="../images/create-new-item.png" style="border:1px solid black">
+<img src="../images/marvel-universe.png" style="border:1px solid black">
 
 After I enter the information and click `Create` I'll see the page for the new item and can get the item's Q identifier (Q3340 in this case) to use in the column in the spreadsheet.
 
@@ -307,9 +307,24 @@ If I return to the Wikibase GUI interface and begin typing "spider" in the searc
 
 <img src="../images/spidey-entry.png" style="border:1px solid black">
 
-Clicking on the entry takes me to the new page. If I click on the `All entered languages` linke I'll see the Spanish label.
+Clicking on the entry takes me to the new page. 
 
 <img src="../images/spidey-spanish.png" style="border:1px solid black">
+
+If I click on the `All entered languages` link I'll see the Spanish label.
+
+# Final notes
+
+The process for creating a bot here is the same as the process for Wikidata bots.  However, there are many additional considerations to be considered before creating a bot to edit Wikidata:
+
+- Social conventions for bot use
+- Registering the bot
+- Taking care that you don't create duplicate items
+- Testing to prevent creating bad claims
+
+In this example, we did not make any attempt to support our claims with references -- an important consideration in Wikidata.  
+
+For more information about programming bots to edit Wikidata/Wikibase using Pywikibot, see the [Pywikibot manual](https://www.mediawiki.org/wiki/Manual:Pywikibot/Wikidata).
 
 
 ----
