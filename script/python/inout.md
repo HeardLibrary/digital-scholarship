@@ -395,7 +395,7 @@ writeCsv('test.csv', data)
 
 ## Reading into dictionaries
 
-In the examples above, the CSV reader input each row of the file as a list.  It's alos possible to read the data in as a sequence of dictionaries, using the column headers as keys.  Here's an example that reads in the cartoons.csv file that was written in a previous example.
+In the examples above, the CSV reader input each row of the file as a list.  It's also possible to read the data in as a sequence of dictionaries, using the column headers as keys.  Here's an example that reads in the cartoons.csv file that was written in a previous example.
 
 *Note:* If you want to go for the big time, download [this file](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoons.csv) by right clicking on the Raw button and saving the file in the directory where you are running the script.
 
