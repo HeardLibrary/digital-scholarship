@@ -58,6 +58,10 @@ We do not currently have web pages on using Jupyter notebooks, but there is a lo
 
 To set up a Jupyter notebook on your computer, go to the [Project Jupyter homepage](https://jupyter.org/).  If you are affiliated with Vanderbilt, you can use the ACCRE JupyterHub without installing Jupyter notebooks on your own computer. [Sign in to Jupyter at ACCRE](https://jupyter.accre.vanderbilt.edu/hub/login) and select Vanderbilt University as the identity provider.
 
+# Python in Geographic Information Systems (GIS)
+
+[Some resources on using Python in GIS](../../geo/gis/python/)
+
 # For more information
 
 If you are new to Python, an excellent starting-off point is [Python For Beginners](https://www.python.org/about/gettingstarted/), part of the official Python website.  It contains links to a massive number of other resources, including tutorials, videos, books, lists of editors and IDEs, and code examples.
@@ -95,4 +99,4 @@ These series have not been vetted in any way - check them out at your own risk.
 [OSP - Python Beginner Series for Absolute Beginners](https://www.youtube.com/playlist?list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg) kjdElectronics - (58K subscribers)
 
 ----
-Revised 2019-01-13
+Revised 2019-04-04

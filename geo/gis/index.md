@@ -10,5 +10,10 @@ The [Digital Scholarship and Scholarly Communications Office](https://www.librar
 
 [visit the Research Guide for GIS](http://researchguides.library.vanderbilt.edu/content.php?pid=45375&sid=3244601)
 
+[resources for using Python in GIS](python/)
+
 
 [Click here to join our GIS Working Group](wg/)
+
+----
+Revised 2019-04-04

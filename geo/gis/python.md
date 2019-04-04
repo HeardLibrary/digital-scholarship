@@ -32,3 +32,6 @@ A PowerPoint presentation on the subject is [here](../resource/gis-python.pdf)
 [Great intro site](https://anitagraser.com/pyqgis-101-introduction-to-qgis-python-programming-for-non-programmers/)
 
 
+----
+Revised 2019-04-04
+

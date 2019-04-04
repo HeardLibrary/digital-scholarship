@@ -29,3 +29,6 @@ Notes from Spring 2019 Data Visualization Working Group series by the [Vanderbil
 Other presentations
 
 [Introduction to Data Visualization using Python and R - Steve Baskauf (9 MB, download in .pptx format) March 29, 2019](resource/vis-workshop.pptx)
+
+----
+Revised 2019-04-04
