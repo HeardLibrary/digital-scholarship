@@ -31,6 +31,8 @@ A *slice* of the list can be referenced using the following notation: `basket[1:
 
 To determin the count of items in a list, use the `len()` function.  In this example, it would be `len(basket)`, which would have a value of 5.  
 
+**Try this**
+
 Predict what would happen, then run the following code:
 
 ```python
@@ -84,7 +86,11 @@ You can also delete an item using its index number:
 del basket[3]
 ```
 
-Two lists can be combined using the `+` operator.  Predict what would happen, then run this code:
+Two lists can be combined using the `+` operator.  
+
+**Try this**
+
+Predict what would happen, then run this code:
 
 ```python
 basket = ['apple', 'orange', 'banana', 'lemon', 'lime']
@@ -120,6 +126,8 @@ data = [[3, 5, 7, 9], [4, 11, -1, 5], [-99, 0, 45, 0]]
 ```
 
 To reference a list of lists, first reference the outer list position, then the inner position.  For example, to refer to the first item in the third list, use `data[2][0]`.
+
+**Try this**
 
 Predict what would happen, then try:
 
@@ -191,7 +199,7 @@ Notice that escaped characters count as a single character even if we write them
 
 ## Useful string methods
 
-Try these methods:
+Here are some of the most important methods for strings:
 
 ```
 .split()  split a string into a list based on a separator. Splits by any whitespace if no argument.
@@ -204,7 +212,9 @@ Try these methods:
 
 To do more sophisticated things, you'll need to learn to use regular expressions (beyond the scope of this lesson!).
 
-Examples to try:
+**Try this**
+
+Predict what will happen, then run the code.
 
 ```python
 play = 'the taming of the shrew'
@@ -282,6 +292,32 @@ Notice several things:
 1. Because the number of items in the list `len(basket)` (5) is one more than the index of the last item in the list `basket[4]`, the range covers the entire list, since ranges must end one number greater than the range you want.
 2. I had to add 1 to the `fruitNumber` as it iterated because Python counts starting from zero and I wanted to start from one.
 3. I had to use the `str()` function each time I wanted to concatenate one of the integer numbers to other strings.
+
+**Try this**
+
+Answers are [at the bottom of the page](#loops-answers)
+
+1\. Here is a list of countries, their GDPs based on purchasing power parity, and their populations:
+
+economicData = [['Qatar', 357338000, 2569804], ['United States', 20412870000, 322179605], ['Egypt', 1292750000, 95688681], ['Haiti', 20794000, 10847334]]
+
+A. Print the list of data for Egypt.
+
+B. Print the population of Qatar.
+
+C. Print the names of the countries using a `for` loop.
+
+D. Print the GDP per capita (GDP PPP divided by population) using a `for` loop that iterates over a range.
+
+2\. Here is a list of the days of the week:
+
+```python
+days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+```
+
+A. Using the list of days, print `Monday` and `Friday`.
+
+B. Using the list days and a `for` loop that iterates over a range, print the weekdays (Monday through Friday).
 
 # Dictionaries
 
@@ -402,6 +438,53 @@ The code after the `makeDeck()` function shows how the `choice()` function and t
    3\. a. Print the words of "Stopping by Woods on a Snowy Evening" in reverse order.  You can get the poem as a string [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/poetry.py). You will need to iterate using an index rather than iterating the words directly. 
     
    b. Concatenate all of the words with spaces between them.  Can you put line breaks and stansas in what you think are the right places?
+
+## Loops answers
+
+1\.A. 
+
+```python
+economicData = [['Qatar', 357338000, 2569804], ['United States', 20412870000, 322179605], ['Egypt', 1292750000, 95688681], ['Haiti', 20794000, 10847334]]
+print(economicData[2])
+```
+
+B. 
+```python
+economicData = [['Qatar', 357338000, 2569804], ['United States', 20412870000, 322179605], ['Egypt', 1292750000, 95688681], ['Haiti', 20794000, 10847334]]
+print(economicData[0][2])
+```
+
+C. 
+
+```python
+economicData = [['Qatar', 357338000, 2569804], ['United States', 20412870000, 322179605], ['Egypt', 1292750000, 95688681], ['Haiti', 20794000, 10847334]]
+for country in economicData:
+    print(country[0])
+```
+
+D. 
+
+```python
+economicData = [['Qatar', 357338000, 2569804], ['United States', 20412870000, 322179605], ['Egypt', 1292750000, 95688681], ['Haiti', 20794000, 10847334]]
+for country in economicData:
+    print(country[0], country[1]/country[2])
+```
+
+2\. A.
+
+```python
+days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+print(days[1])
+print(days[5])
+```
+
+B. 
+
+```python
+days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+for day in range(1,6):
+    print(days[day])
+```
    
 [next lesson on input and output](../inout/)
 
