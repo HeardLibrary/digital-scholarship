@@ -370,7 +370,7 @@ B. Use a `for` loop to iterate through the list of items.  For each item, print 
 
 C. Let the user enter the name of an item.  Iterate through the list of items and check each one to see if it matches the name entered by the user.  If so, print the price.
 
-D. Set a flag named `matched` equal to `False` at the start of the script.  If there is a match, set the value of `matched` equal to `True`.  If at the end of the loop there was no match, print a message saying so.
+D. Set a flag named `matched` equal to `False` before the loop.  If there is a match, set the value of `matched` equal to `True`.  If at the end of the loop there was no match, print a message saying so.
 
 ## Lists of dictionaries
 
@@ -514,6 +514,7 @@ A.
 ```python
 itemName = {'s049': 'widget', 'm486': 'poiuyt', 'z010': 'thingamabob', 'x428': 'foobar'}
 itemPrice = {'s049': 1.98, 'm486': 14.99, 'z010': 0.49, 'x428': 250.00}
+
 print(itemName['z010'], itemPrice['z010'])
 ```
 
@@ -523,8 +524,39 @@ B.
 itemList = ['s049', 'm486', 'z010', 'x428']
 itemName = {'s049': 'widget', 'm486': 'poiuyt', 'z010': 'thingamabob', 'x428': 'foobar'}
 itemPrice = {'s049': 1.98, 'm486': 14.99, 'z010': 0.49, 'x428': 250.00}
+
 for item in itemList:
     print(itemName[item], itemPrice[item])
+```
+
+C.
+
+```python
+itemList = ['s049', 'm486', 'z010', 'x428']
+itemName = {'s049': 'widget', 'm486': 'poiuyt', 'z010': 'thingamabob', 'x428': 'foobar'}
+itemPrice = {'s049': 1.98, 'm486': 14.99, 'z010': 0.49, 'x428': 250.00}
+
+choice = input('What is the item? ')
+for item in itemList:
+    if itemName[item]==choice:
+        print('It costs ', itemPrice[item])
+```
+
+D.
+
+```python
+itemList = ['s049', 'm486', 'z010', 'x428']
+itemName = {'s049': 'widget', 'm486': 'poiuyt', 'z010': 'thingamabob', 'x428': 'foobar'}
+itemPrice = {'s049': 1.98, 'm486': 14.99, 'z010': 0.49, 'x428': 250.00}
+
+choice = input('What is the item? ')
+matched = False
+for item in itemList:
+    if itemName[item] == choice:
+        print('It costs ', itemPrice[item])
+        matched = True
+if not matched:
+    print('That item is not in stock')
 ```
 
 [next lesson on input and output](../inout/)
