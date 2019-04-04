@@ -272,7 +272,7 @@ Ranges are often used to index list items when we want to iterate through a list
 
 ```python
 basket = ['apple', 'orange', 'banana', 'lemon', 'lime']
-print('Here's a list of the fruit in the basket:")
+print("Here's a list of the fruit in the basket:")
 for fruitNumber in range(0, len(basket)):
     print(str(fruitNumber+1) + ' ' + basket[fruitNumber])
 print('You can see that there are ' + str(len(basket)) + ' fruits in the basket.')
