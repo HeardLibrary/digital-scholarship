@@ -299,7 +299,9 @@ Answers are [at the bottom of the page](#loops-answers)
 
 1\. Here is a list of countries, their GDPs based on purchasing power parity, and their populations:
 
+```python
 economicData = [['Qatar', 357338000, 2569804], ['United States', 20412870000, 322179605], ['Egypt', 1292750000, 95688681], ['Haiti', 20794000, 10847334]]
+```
 
 A. Print the list of data for Egypt.
 
