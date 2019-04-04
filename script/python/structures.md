@@ -353,6 +353,25 @@ print("That's all folks!")
 
 Note: an error is known as an *exception*, so that's why the keyword for the block after `try` is `except`.
 
+**Try this**
+
+Answers are [at the bottom of the page](#dictionary-answers)
+
+Here are data on prices of items with the catalog number as the key.
+
+```python
+itemList = ['s049', 'm486', 'z010', 'x428']
+itemName = {'s049': 'widget', 'm486': 'poiuyt', 'z010': 'thingamabob', 'x428': 'foobar'}
+itemPrice = {'s049': 1.98, 'm486': 14.99, 'z010': 0.49, 'x428': 250.00}
+```
+A. Using the dictionaries, print the name and price of a thingamabob.
+
+B. Use a `for` loop to iterate through the list of items.  For each item, print its name and price.
+
+C. Let the user enter the name of an item.  Iterate through the list of items and check each one to see if it matches the name entered by the user.  If so, print the price.
+
+D. Set a flag named `matched` equal to `False` at the start of the script.  If there is a match, set the value of `matched` equal to `True`.  If at the end of the loop there was no match, print a message saying so.
+
 ## Lists of dictionaries
 
 Just as we could make lists of lists, we can make lists of dictionaries.  This could be useful if we want to keep track of more than two things that are linked.  In the previous example, we just wanted to link the character to the company.  But we might want to keep track of more than that. 
@@ -487,7 +506,27 @@ days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satur
 for day in range(1,6):
     print(days[day])
 ```
-   
+
+## Dictionary answers
+
+A.
+
+```python
+itemName = {'s049': 'widget', 'm486': 'poiuyt', 'z010': 'thingamabob', 'x428': 'foobar'}
+itemPrice = {'s049': 1.98, 'm486': 14.99, 'z010': 0.49, 'x428': 250.00}
+print(itemName['z010'], itemPrice['z010'])
+```
+
+B.
+
+```python
+itemList = ['s049', 'm486', 'z010', 'x428']
+itemName = {'s049': 'widget', 'm486': 'poiuyt', 'z010': 'thingamabob', 'x428': 'foobar'}
+itemPrice = {'s049': 1.98, 'm486': 14.99, 'z010': 0.49, 'x428': 250.00}
+for item in itemList:
+    print(itemName[item], itemPrice[item])
+```
+
 [next lesson on input and output](../inout/)
 
 ----
