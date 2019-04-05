@@ -417,12 +417,37 @@ for character in characters:
 if not(found):
     print("I don't know that character.")
 ```
+Notice how we need to pay careful attention to indentation levels when code gets complicated with loops and nested `if` statements.  How did we solve the problem of the case where no character matches?
 
-Questions: How did we solve the problem of the case where no character matches?
+# Homework
+
+The answers are [at the end](#homework-answers)
+
+1\. It is probably better in a circumstance like the last example to create a function for part of the code.  That makes the code more readable because you only have to think about small bits of the code at a time.  Re-write the code so that the section with all of the `if` statements is moved into a function called `checkGender` that prints the answer (if appropriate) and returns the `found` variable.  Make sure that you pass all of the variables into the function that it needs (i.e. `character`, `characterName`, and `found`).
+
+2\. In a [famous story](http://wbilljohnson.com/journal/math/gauss.htm), the young mathematician Karl Gauss's teacher assigned him the task of adding all of the numbers from 1 to 100, with the intention of keeping him busy for a while.  It didn't work because in a few moments, Gauss calculated the answer, 5050, using some clever thinking.  However, if Gauss were in school now, he could just write a Python script to do the calculation.  Write a script using `range()` to add all the numbers from 1 up to any number that you choose.  *Note: if you use the `input()` function to get the person's number, you'll need to use the `int()` function to turn the entered string into an integer number.*
+
+3\. The game Yatzee involves rolling five dice and trying to get "poker hands" like three of a kind, a straight, etc.  You can simulate the rolling of a die using a function from the `random` module:
+
+```python
+import random as r
+randomNumber = r.randrange(1, 7)
+print(randomNumber)
+```
+
+A. Simulate the rolling of five dice as follows:
+- create an empty list
+- run a `for` loop five times
+- each loop, generate a random number and append it to the list
+- print the list.
+
+B. Put the code you just wrote into a function called `throwDice`.  The function takes the number of dice to roll as a parameter and returns the list of numbers representing the dice rolls.  (In this problem, the number of dice will always be 5, but you should make the function general.)  In the main script, ask the users how many times to roll the dice and create a loop that rolls and prints each roll.
+
+C. Create a function called `isYatzee`.  That function should take the list of dice rolls as a parameter and return `True` or `False` depending on whether the throw was a Yatzee (all 5 dice the same) or not.  Modify your main script so that the dice throw is only printed if it's a Yatzee.  Generally, how many times do you need to roll before you start getting Yatzees?  
 
 # Challenge problems
 
-1. **Dealing cards** Here is some code that generates a deck of cards as a list:
+1\. **Dealing cards** Here is some code that generates a deck of cards as a list:
 
 ```python
 import random
@@ -450,15 +475,15 @@ print(newDeck)
 
 The code after the `makeDeck()` function shows how the `choice()` function and the `.shuffle()` method can be used to randomize the cards in the deck.
 
-   a. Use this function to write a script that "deals" a five card poker hand by printing five random cards from the deck.  Note that after each card is printed, it has to be removed from the deck so that when the next card is printed, there isn't any chance that you'll get the same one a second time.
+a. Use this function to write a script that "deals" a five card poker hand by printing five random cards from the deck.  Note that after each card is printed, it has to be removed from the deck so that when the next card is printed, there isn't any chance that you'll get the same one a second time.
 
-   b. Instead of just printing the five cards, use `.append()` to add them to another list called `hand`.  Print the whole hand list.
+b. Instead of just printing the five cards, use `.append()` to add them to another list called `hand`.  Print the whole hand list.
 
-   2\. In a [famous story](http://wbilljohnson.com/journal/math/gauss.htm), the young mathematician Karl Gauss's teacher assigned him the task of adding all of the numbers from 1 to 100, with the intention of keeping him busy for a while.  It didn't work because in a few moments, Gauss calculated the answer, 5050, using some clever thinking.  However, if Gauss were in school now, he could just write a Python script to do the calculation.  Write a script using `range()` to add all the numbers from 1 up to any number that you choose.  *Note: if you use the `input()` function to get the person's number, you'll need to use the `int()` function to turn the entered string into an integer number.*
+c. Can you figure out how to check for any kind of poker hands?  How about a flush?
 
-   3\. a. Print the words of "Stopping by Woods on a Snowy Evening" in reverse order.  You can get the poem as a string [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/poetry.py). You will need to iterate using an index rather than iterating the words directly. 
+2\. a. Print the words of "Stopping by Woods on a Snowy Evening" in reverse order.  You can get the poem as a string [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/poetry.py). You will need to iterate using an index rather than iterating the words directly. 
     
-   b. Concatenate all of the words with spaces between them.  Can you put line breaks and stansas in what you think are the right places?
+b. Concatenate all of the words with spaces between them.  Can you put line breaks and stansas in what you think are the right places?
 
 ## Loops answers
 
@@ -559,7 +584,106 @@ if not matched:
     print('That item is not in stock')
 ```
 
-[next lesson on input and output](../inout/)
+## Homework answers
+
+1\
+
+```python
+def checkGender(character, characterName, foundIt):
+    if character['name'] == characterName:
+        foundIt = True
+        if character['gender'] == 'male':
+            answer = 'He works'
+        elif character['gender'] == 'female':
+            answer = 'She works'
+        else:
+            answer = 'They work'
+        answer = answer + ' for ' + character['company'] + '.'
+        print(answer)
+    return foundIt
+
+# main script
+characters = [{'name':'Mickey Mouse', 'company':'Disney', 'gender': 'male'}, {'name':'Daisy Duck', 'company':'Disney', 'gender': 'female'}, {'name':'Daffy Duck', 'company':'Warner Brothers', 'gender': 'male'},  {'name':'Fred Flintstone', 'company':'Hanna Barbera', 'gender': 'male'}, {'name':'WALL-E', 'company':'Pixar', 'gender': 'neutral'}, {'name':'Fiona', 'company':'DreamWorks', 'gender': 'female'}]
+
+name = input("What's the character's name? ")
+found = False
+for char in characters:
+    found = checkGender(char, name, found)
+if not(found):
+    print("I don't know that character.")
+```
+
+Notice that I did not have to use the same variable names in the main script as the name that those variables have in the function (`char` in the script is `character` in the function, etc. )
+
+2\.
+
+```python
+enteredString = input("What's the upper number? ")
+myNumber = int(enteredString)
+sum = 0
+for number in range(1, myNumber + 1): # don't forget to add one to the upper range
+    sum += number # this does the same thing as
+    # sum = sum + number
+print(sum)
+```
+
+3\.A.
+
+```python
+import random as r
+throw = []
+for roll in range(0,5):
+    die = r.randrange(1, 7)
+    throw.append(die)
+print(throw)
+```
+
+B. 
+
+```python
+import random as r
+
+def throwDice(numberDice):
+    throw = []
+    for roll in range(0, numberDice):
+        die = r.randrange(1, 7)
+        throw.append(die)
+    return throw
+
+# main script
+rolls = int(input("How many times to roll? ")) # don't forget to turn the input string into a number
+for roll in range(0,rolls):
+    print(throwDice(5))
+```
+C. 
+
+```python
+import random as r
+
+def throwDice(numberDice):
+    throw = []
+    for roll in range(0, numberDice):
+        die = r.randrange(1, 7)
+        throw.append(die)
+    return throw
+
+# There are a number of ways to create the following function. This is only one.
+def isYatzee(throw):
+    allSame = True
+    for die in throw:
+        if die != throw[0]:  # check each die against the first die
+            allSame = False  # if any die is different, they aren't all the same
+    return allSame           # allSame only remains True if no die is different
+
+# main script
+rolls = int(input("How many times to roll? ")) # don't forget to turn the input string into a number
+for roll in range(0,rolls):
+    throw = throwDice(5)
+    if isYatzee(throw):
+        print(throw)
+```
+
+[next lesson on file input and output](../inout/)
 
 ----
 Revised 2019-04-04
