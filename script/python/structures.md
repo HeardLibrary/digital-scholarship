@@ -139,6 +139,8 @@ print(data[1])
 print(len(data[1]))
 ```
 
+**Note:** the `numpy` module extends Python's capabilities by adding actual array objects that can be addressed in the notation that's more typical in other programming languages (like `data[2,0]`). For more details, see [this Software Carpentries lesson](https://swcarpentry.github.io/python-novice-inflammation/01-numpy/index.html).
+
 # String manipulations
 
 ## Escape sequences
