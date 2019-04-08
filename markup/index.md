@@ -72,4 +72,7 @@ XQuery is a powerful functional programming language that can operate on XML.  F
 
 # JSON
 
-JSON is an increasingly popular way to transmit data in a structured way.  It is probably the most common way that data are provided to software and web pages via APIs.   
+JSON is an increasingly popular way to transmit data in a structured way.  It is probably the most common way that data are provided to software and web pages via APIs.  
+
+----
+Revised 2019-05-08
