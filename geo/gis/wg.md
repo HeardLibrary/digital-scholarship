@@ -39,6 +39,3 @@ Our group meets on most Wednesdays from 12:10 to 2:00 PM (again instruction is f
 | Mar. 6 | No meeting (spring break week)  
 | Mar. 20 |No meeting |  
 | Mar. 27 | R in GIS |  
-| Apr. 03 |Geospatial Data and Python|  
-| Apr. 10 |Web Mapping|  
-| Apr. 17 |Story Maps and Cartography 101|  
