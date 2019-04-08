@@ -174,7 +174,9 @@ WHERE {
   }
   ```
 
-  Note that we had to include the `wikibase:reference` link to the generic property entity in order to get the label.
+Note that we had to include the `wikibase:reference` link to the generic property entity in order to get the label.
 
+
+[go to the page on building a bot to load data into Wikidata](../../host/wikidata/bot/)
 ----
 Revised 2019-02-07

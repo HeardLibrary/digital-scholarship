@@ -16,6 +16,20 @@ Because the marked-up documents reside in simple text files, it is relatively ea
 
 There are several commonly used markup languages.  In some cases, the markup languages themselves have been expanded to more specific purposes.  The sections below link to additional information about some common markup systems.
 
+# LaTeX
+
+<img src="resource/latex.png" style="border:1px solid black">
+
+LaTeX is a markup system generating print quality output with an emphasis on rendering math expressions.
+
+There are several LaTeX editors the provide an editing pane and a WYSIWYG preview pane.  A popular online editor is [Overleaf](https://www.overleaf.com/).  With a free account, you can save documents in the cloud and collaborate with others.  The output is rendered as a PDF that can be downloaded to your local computer.
+
+[TeXworks](http://www.tug.org/texworks/) is a free application for editing LaTeX offline.  It features markup and preview. [MiKTeX](https://miktex.org/) is a processor that includes TeXworks as its front end.
+
+<img src="resource/detexify.png" style="border:1px solid black">
+
+[Detexify](http://detexify.kirelabs.org/classify.html) is a tool that allows you to hand-draw symbols, then choose from its best attempt to match your drawing with known symbols encoded as LaTeX.  The code you choose can be copied and pasted into your LaTeX editor.
+
 # Markdown
 
 Markdown is increasingly popular as a lightweight way to include formatting in text documents.  It is the markup system used by the popular GitHub repository system.

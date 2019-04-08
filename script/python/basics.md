@@ -526,7 +526,7 @@ else:
 print("That's all folks!")
 ```
 
-**Try this**
+# Homework problems
 
 Answers are at [the bottom of the page](#try-this-answers)
 
@@ -561,7 +561,7 @@ B. Convert the two numbers to a floating point number using the `float()` functi
 
 C. Calculate the first number multiplied by the second number.
 
-D. Calculate the first number divided by the second number.  Since dividing by zero generates an error, only do this calculation if the value of isZero is not `True`.  You can do it like this:
+D. Calculate the first number divided by the second number.  Since dividing by zero generates an error, only do this calculation if the value of `zero` is not `True`.  You can do it like this:
 
 ```python
 if not zero:
@@ -597,7 +597,7 @@ Print a single string formed by concatenating adjective strings in front of the 
 
 [next lesson on object-oriented programming in Python](../object/)
 
-# Try this Answers
+# Homework problems answers
 
 1\. 
 ```python

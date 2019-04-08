@@ -145,14 +145,23 @@ genericDuck = Duck()
 # print some stuff about the ducks
 print('secondDuck company: ' + secondDuck.company)
 print('thirdDuck company: ' + thirdDuck.company)
-print('My name is ' + firstDuck.name + ' Duck. My friend ' + secondDuck.name + ' hates ' + secondDuck.name)
+print('My name is ' + firstDuck.name + ' Duck. My friend ' + secondDuck.name + ' hates ' + secondDuck.nemesis)
 
 ```
-Why is the value of `thirdDuck.company` not what we want? Use the printDuck() function to explore.  What does the printDuck() function produce for `genericDuck`?
 
-There is one more common way to specify attribute values when an object is instantiated. In that method, attribute key/value pairs are included inside the parentheses.  The key/value pairs can be listed in any order and often if an attribute is omitted, it's assigned a default value.
+**Try this**
+
+Why is the value of `thirdDuck.company` not what we want? Delet the `print` statements in lines 20-22. Replace them with 
+
+```python
+printDuck(firstDuck)
+```
+
+Replace `firstDuck` with the other duck names.  What does the printDuck() function produce for `genericDuck`?
 
 **Third Duck creation example (pass attributes as key/value pairs):**
+
+There is one more common way to specify attribute values when an object is instantiated. In that method, attribute key/value pairs are included inside the parentheses.  The key/value pairs can be listed in any order and often if an attribute is omitted, it's assigned a default value.
 
 ```python
 # define Duck class (don't worry about how this part works)
@@ -190,7 +199,9 @@ print('My name is ' + firstDuck.name + ' Duck. My friend ' + secondDuck.name + '
 
 ```
 
-Why is the result here different from the last example?  Use the printDuck() function to explore the attributes of the ducks.
+**Try this**
+
+Why is the result here different from the last example?  Use the printDuck() function to explore the attributes of the ducks as you did last time.
 
 Python code in the wild will include examples of setting attributes in all three of these ways (directly by assignment, by passing values at instantiation, and by passing key/value pairs at instantiation).
 
@@ -274,8 +285,8 @@ print('Number of words:')
 print(len(stupidPoem.words()))
 
 moreStupidPoem = stupidPoem
+moreStupidPoem.title = 'Enjoying the odor of the woods'
 moreStupidPoem.abuse('woods', 'swamp')
-moreStupidPoem.title = 'Enjoying the odor of the swamp'
 
 print()
 print(moreStupidPoem.title)
@@ -289,6 +300,9 @@ Note that a method can be applied in the same line as the instantiation.  For ex
 ```python
 modifiedPoem = Poem().abuse('I', 'we')
 ```
+**Try this**
+
+In line 49, there is an equals sign, but in line 50 there isn't.  What is different about what's going on in those two lines?  Predict what would happen to the title of the poem if lines 49 and 50 were switched?  Predict, then switch them and run the program again.
 
 # Examining the GUI code
 
@@ -313,9 +327,35 @@ fourthInputBox = ttk.Entry(mainframe, width = 60, textvariable = StringVar())
 
 In this example, as the Entry is instantiated, it's containing frame is passed as an argument, the `width` attribute is passed as a key/value pair where the value is an integer, and the `textvariable` attribute is passed as a key/value pair where the value is an instantiated `StringVar` object.
 
-## Adding scrolled text to the GUI code
+**Try this**
 
-One of the deficiencies of the Latte Maker app (and all of the other programs in which we've used the GUI code) is that it allows input through the GUI, but only prints output to the Python shell console.  It would be nice to have the output right on the app.  Tkinter has a `ScrolledText` object that can be added to a frame to output text in a scrolling text box.  It's in its own module, so you need to add
+Copy the latte maker code from the Github Raw file and paste it into your editor.  Try running it, then click the X to close the GUI.  In line 33, change the default input box value from `soy` to `skim`.  The marketing department does not like `fat` as the adjective for whole milk.  Change line 79 so that the whole milk adjective is `healthy`.  Also change the text of the surpriseMeButton to something other than `Surprise me!` in line 57.  Try running the program to see how your changes affect the GUI.
+
+# Homework problem
+
+**Abusing Robert Frost** Now that "Stopping by Woods on a Snowy Evening" is in the public domain, we can use it in any creative way we want.  Modify the [poetry.py](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/poetry.py) code to do the following:
+
+   a. Create a `Poem` instance and assign `frostText` to its `text` attribute. 
+
+   b. Assign "Stopping by woods on a snowy evening" to the `title` attribute of your poem.  
+
+   c. Abuse the poem by changing "horse" to "dragon".
+
+   d. Further abuse the poem by changing "woods" to "lava flows".
+
+   e. Print the title and text of the revised poem.
+
+# Challenge problem
+
+Answer in next week's lesson
+
+**Adding scrolled text to the GUI code**
+
+One of the deficiencies of the Latte Maker app (and all of the other programs in which we've used the GUI code) is that it allows input through the GUI, but only prints output to the Python shell console.  It would be nice to have the output right on the app.  
+
+Add a scrolling text object to the bottom of the [GUI Latte Maker answer](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge1/latte_maker2.py) from last week.  
+
+Tkinter has a `ScrolledText` object that can be added to a frame to output text in a scrolling text box.  It's in its own module, so you need to add
 
 ```python
 import tkinter.scrolledtext as tkst
@@ -333,7 +373,6 @@ Here's an example with appropriate replacement values:
 scrollingTextBox = tkst.ScrolledText(master = mainframe, width  = 50, height = 10)
 ```
 
-
 Use the `grid` method of the `ScrolledText` class to place the scrolling text box in the appropriate position on the grid.  Leave the padx and pady values as they are.  For the Latte Maker, use column 4 and row 17 (the "Surprise me!" button is in row 16).
 
 ```python
@@ -346,29 +385,35 @@ The `insert` method of the `ScrolledText` class adds new text to the box.  To pu
 insert(END, {text string to insert})
 ```
 
+When you create the scrolling text object, use the insert method to insert the initial text: `Order record:\n\n`.  
+
 The final method, `see` needs to be applied after adding text in order to get the text to automatically scroll up so that the text at the end is visible.
 
 ```python
 see(END)
 ```
 
-# Challenge problems
-
-1. **Abusing Robert Frost** Now that "Stopping by Woods on a Snowy Evening" is in the public domain, we can use it in any creative way we want.  Modify the ([poetry.py](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/poetry.py)) code to do the following:
-
-   a. Create a `Poem` instance and assign `frostText` to its `text` attribute. 
-
-   b. Assign "Stopping by woods on a snowy evening" to the `title` attribute of your poem.  
-
-   c. Abuse the poem by changing "horse" to "dragon".
-
-   d. Further abuse the poem by changing "woods" to "lava flows".
-
-   e. Print the title and text of the revised poem.
-
- 2. **Scrolling Text Latte Maker** Add a scrolling text object to the bottom of the [GUI Latte Maker answer](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge1/latte_maker2.py) from last week.  When you create the scrolling text object, insert the initial text: 'Order record:\n\n'.  Replace the print statements in lines 103 and 111 with the `insert` and `see` methods applied to your `ScrolledText` object.
+Replace the print statements in lines 103 and 111 with the `insert` and `see` methods applied to your `ScrolledText` object.
 
 [next lesson on data structures in Python](../structures/)
 
+# Homework Answer
+
+Here's a [link](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge2/frost_abuse.py) to all of the code.
+
+```python
+
+# The first part of the script is the same as lines 1-32 in the example
+
+myPoem = Poem()
+myPoem.text = frostText
+myPoem.title = 'Stopping by woods on a snowy evening'
+myPoem.abuse('horse', 'dragon')
+myPoem.abuse('woods', 'lava flows')
+print(myPoem.title)
+print()
+print(myPoem.text)
+```
+
 ----
-Revised 2019-01-27
+Revised 2019-03-28

@@ -25,3 +25,10 @@ Notes from Spring 2019 Data Visualization Working Group series by the [Vanderbil
 [Data visualization with Python: numpy and pandas (Session 4, Feb 27) - Will French](https://github.com/frenchwr/data_viz_wg)
 
 [Data visualization with R (Session 5, Mar 13) - Kate Brady](https://github.com/kbrady/data_viz_working_group_r_talk)
+
+Other presentations
+
+[Introduction to Data Visualization using Python and R - Steve Baskauf (9 MB, download in .pptx format) March 29, 2019](resource/vis-workshop.pptx)
+
+----
+Revised 2019-04-04

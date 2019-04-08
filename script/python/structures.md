@@ -7,11 +7,9 @@ Note: this is the fourth lesson in a beginner's introduction to Python.  For the
 
 [previous lesson on object-oriented programming in Python](../object/)
 
-Answers for last week's challenge problems:
+Answers for last week's challenge problem:
 
-1. [abusing Robert Frost poetry](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge2/frost_abuse.py)
-
-2. [latte maker with scrolling text box](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge2/latte_maker.py)
+[latte maker with scrolling text box](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge2/latte_maker.py)
 
 # Using Data Structures
 
@@ -32,6 +30,8 @@ To reference a particular item, write the variable name followed by square brack
 A *slice* of the list can be referenced using the following notation: `basket[1:4]`.  **Important note: in Python, when ranges are specified, for some reason, the last number in the range is one greater than the actual position in the range.**  So in this example, items 1 through 3 will be included. Since counting in Python is zero based, that means that the slice will contain the second through fourth items.
 
 To determin the count of items in a list, use the `len()` function.  In this example, it would be `len(basket)`, which would have a value of 5.  
+
+**Try this**
 
 Predict what would happen, then run the following code:
 
@@ -86,7 +86,11 @@ You can also delete an item using its index number:
 del basket[3]
 ```
 
-Two lists can be combined using the `+` operator.  Predict what would happen, then run this code:
+Two lists can be combined using the `+` operator.  
+
+**Try this**
+
+Predict what would happen, then run this code:
 
 ```python
 basket = ['apple', 'orange', 'banana', 'lemon', 'lime']
@@ -123,6 +127,8 @@ data = [[3, 5, 7, 9], [4, 11, -1, 5], [-99, 0, 45, 0]]
 
 To reference a list of lists, first reference the outer list position, then the inner position.  For example, to refer to the first item in the third list, use `data[2][0]`.
 
+**Try this**
+
 Predict what would happen, then try:
 
 ```python
@@ -132,6 +138,8 @@ print(len(data))
 print(data[1])
 print(len(data[1]))
 ```
+
+**Note:** the `numpy` module extends Python's capabilities by adding actual array objects that can be addressed in the notation that's more typical in other programming languages (like `data[2,0]`). For more details, see [this Software Carpentries lesson](https://swcarpentry.github.io/python-novice-inflammation/01-numpy/index.html).
 
 # String manipulations
 
@@ -193,7 +201,7 @@ Notice that escaped characters count as a single character even if we write them
 
 ## Useful string methods
 
-Try these methods:
+Here are some of the most important methods for strings:
 
 ```
 .split()  split a string into a list based on a separator. Splits by any whitespace if no argument.
@@ -206,7 +214,9 @@ Try these methods:
 
 To do more sophisticated things, you'll need to learn to use regular expressions (beyond the scope of this lesson!).
 
-Examples to try:
+**Try this**
+
+Predict what will happen, then run the code.
 
 ```python
 play = 'the taming of the shrew'
@@ -274,7 +284,7 @@ Ranges are often used to index list items when we want to iterate through a list
 
 ```python
 basket = ['apple', 'orange', 'banana', 'lemon', 'lime']
-print('Here's a list of the fruit in the basket:")
+print("Here's a list of the fruit in the basket:")
 for fruitNumber in range(0, len(basket)):
     print(str(fruitNumber+1) + ' ' + basket[fruitNumber])
 print('You can see that there are ' + str(len(basket)) + ' fruits in the basket.')
@@ -284,6 +294,34 @@ Notice several things:
 1. Because the number of items in the list `len(basket)` (5) is one more than the index of the last item in the list `basket[4]`, the range covers the entire list, since ranges must end one number greater than the range you want.
 2. I had to add 1 to the `fruitNumber` as it iterated because Python counts starting from zero and I wanted to start from one.
 3. I had to use the `str()` function each time I wanted to concatenate one of the integer numbers to other strings.
+
+**Try this**
+
+Answers are [at the bottom of the page](#loops-answers)
+
+1\. Here is a list of countries, their GDPs based on purchasing power parity, and their populations:
+
+```python
+economicData = [['Qatar', 357338000, 2569804], ['United States', 20412870000, 322179605], ['Egypt', 1292750000, 95688681], ['Haiti', 20794000, 10847334]]
+```
+
+A. Print the list of data for Egypt.
+
+B. Print the population of Qatar.
+
+C. Print the names of the countries using a `for` loop.
+
+D. Print the GDP per capita (GDP PPP divided by population) using a `for` loop that iterates over a range.
+
+2\. Here is a list of the days of the week:
+
+```python
+days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+```
+
+A. Using the list of days, print `Monday` and `Friday`.
+
+B. Using the list days and a `for` loop that iterates over a range, print the weekdays (Monday through Friday).
 
 # Dictionaries
 
@@ -316,6 +354,25 @@ print("That's all folks!")
 ```
 
 Note: an error is known as an *exception*, so that's why the keyword for the block after `try` is `except`.
+
+**Try this**
+
+Answers are [at the bottom of the page](#dictionary-answers)
+
+Here are data on prices of items with the catalog number as the key.
+
+```python
+itemList = ['s049', 'm486', 'z010', 'x428']
+itemName = {'s049': 'widget', 'm486': 'poiuyt', 'z010': 'thingamabob', 'x428': 'foobar'}
+itemPrice = {'s049': 1.98, 'm486': 14.99, 'z010': 0.49, 'x428': 250.00}
+```
+A. Using the dictionaries, print the name and price of a thingamabob.
+
+B. Use a `for` loop to iterate through the list of items.  For each item, print its name and price.
+
+C. Let the user enter the name of an item.  Iterate through the list of items and check each one to see if it matches the name entered by the user.  If so, print the price.
+
+D. Set a flag named `matched` equal to `False` before the loop.  If there is a match, set the value of `matched` equal to `True`.  If at the end of the loop there was no match, print a message saying so.
 
 ## Lists of dictionaries
 
@@ -362,12 +419,37 @@ for character in characters:
 if not(found):
     print("I don't know that character.")
 ```
+Notice how we need to pay careful attention to indentation levels when code gets complicated with loops and nested `if` statements.  How did we solve the problem of the case where no character matches?
 
-Questions: How did we solve the problem of the case where no character matches?
+# Homework
+
+The answers are [at the end](#homework-answers)
+
+1\. It is probably better in a circumstance like the last example to create a function for part of the code.  That makes the code more readable because you only have to think about small bits of the code at a time.  Re-write the code so that the section with all of the `if` statements is moved into a function called `checkGender` that prints the answer (if appropriate) and returns the `found` variable.  Make sure that you pass all of the variables into the function that it needs (i.e. `character`, `characterName`, and `found`).
+
+2\. In a [famous story](http://wbilljohnson.com/journal/math/gauss.htm), the young mathematician Karl Gauss's teacher assigned him the task of adding all of the numbers from 1 to 100, with the intention of keeping him busy for a while.  It didn't work because in a few moments, Gauss calculated the answer, 5050, using some clever thinking.  However, if Gauss were in school now, he could just write a Python script to do the calculation.  Write a script using `range()` to add all the numbers from 1 up to any number that you choose.  *Note: if you use the `input()` function to get the person's number, you'll need to use the `int()` function to turn the entered string into an integer number.*
+
+3\. The game Yatzee involves rolling five dice and trying to get "poker hands" like three of a kind, a straight, etc.  You can simulate the rolling of a die using a function from the `random` module:
+
+```python
+import random as r
+randomNumber = r.randrange(1, 7)
+print(randomNumber)
+```
+
+A. Simulate the rolling of five dice as follows:
+- create an empty list
+- run a `for` loop five times
+- each loop, generate a random number and append it to the list
+- print the list.
+
+B. Put the code you just wrote into a function called `throwDice`.  The function takes the number of dice to roll as a parameter and returns the list of numbers representing the dice rolls.  (In this problem, the number of dice will always be 5, but you should make the function general.)  In the main script, ask the users how many times to roll the dice and create a loop that rolls and prints each roll.
+
+C. Create a function called `isYatzee`.  That function should take the list of dice rolls as a parameter and return `True` or `False` depending on whether the throw was a Yatzee (all 5 dice the same) or not.  Modify your main script so that the dice throw is only printed if it's a Yatzee.  Generally, how many times do you need to roll before you start getting Yatzees?  
 
 # Challenge problems
 
-1. **Dealing cards** Here is some code that generates a deck of cards as a list:
+1\. **Dealing cards** Here is some code that generates a deck of cards as a list:
 
 ```python
 import random
@@ -395,17 +477,215 @@ print(newDeck)
 
 The code after the `makeDeck()` function shows how the `choice()` function and the `.shuffle()` method can be used to randomize the cards in the deck.
 
-   a. Use this function to write a script that "deals" a five card poker hand by printing five random cards from the deck.  Note that after each card is printed, it has to be removed from the deck so that when the next card is printed, there isn't any chance that you'll get the same one a second time.
+a. Use this function to write a script that "deals" a five card poker hand by printing five random cards from the deck.  Note that after each card is printed, it has to be removed from the deck so that when the next card is printed, there isn't any chance that you'll get the same one a second time.
 
-   b. Instead of just printing the five cards, use `.append()` to add them to another list called `hand`.  Print the whole hand list.
+b. Instead of just printing the five cards, use `.append()` to add them to another list called `hand`.  Print the whole hand list.
 
-   2\. In a [famous story](http://wbilljohnson.com/journal/math/gauss.htm), the young mathematician Karl Gauss's teacher assigned him the task of adding all of the numbers from 1 to 100, with the intention of keeping him busy for a while.  It didn't work because in a few moments, Gauss calculated the answer, 5050, using some clever thinking.  However, if Gauss were in school now, he could just write a Python script to do the calculation.  Write a script using `range()` to add all the numbers from 1 up to any number that you choose.  *Note: if you use the `input()` function to get the person's number, you'll need to use the `int()` function to turn the entered string into an integer number.*
+c. Can you figure out how to check for any kind of poker hands?  How about a flush?
 
-   3\. a. Print the words of "Stopping by Woods on a Snowy Evening" in reverse order.  You can get the poem as a string [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/poetry.py). You will need to iterate using an index rather than iterating the words directly. 
+2\. a. Print the words of "Stopping by Woods on a Snowy Evening" in reverse order.  You can get the poem as a string [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/poetry.py). You will need to iterate using an index rather than iterating the words directly. 
     
-   b. Concatenate all of the words with spaces between them.  Can you put line breaks and stansas in what you think are the right places?
-   
-[next lesson on input and output](../inout/)
+b. Concatenate all of the words with spaces between them.  Can you put line breaks and stansas in what you think are the right places?
+
+## Loops answers
+
+1\.A. 
+
+```python
+economicData = [['Qatar', 357338000, 2569804], ['United States', 20412870000, 322179605], ['Egypt', 1292750000, 95688681], ['Haiti', 20794000, 10847334]]
+print(economicData[2])
+```
+
+B. 
+```python
+economicData = [['Qatar', 357338000, 2569804], ['United States', 20412870000, 322179605], ['Egypt', 1292750000, 95688681], ['Haiti', 20794000, 10847334]]
+print(economicData[0][2])
+```
+
+C. 
+
+```python
+economicData = [['Qatar', 357338000, 2569804], ['United States', 20412870000, 322179605], ['Egypt', 1292750000, 95688681], ['Haiti', 20794000, 10847334]]
+for country in economicData:
+    print(country[0])
+```
+
+D. 
+
+```python
+economicData = [['Qatar', 357338000, 2569804], ['United States', 20412870000, 322179605], ['Egypt', 1292750000, 95688681], ['Haiti', 20794000, 10847334]]
+for country in economicData:
+    print(country[0], country[1]/country[2])
+```
+
+2\. A.
+
+```python
+days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+print(days[1])
+print(days[5])
+```
+
+B. 
+
+```python
+days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+for day in range(1,6):
+    print(days[day])
+```
+
+## Dictionary answers
+
+A.
+
+```python
+itemName = {'s049': 'widget', 'm486': 'poiuyt', 'z010': 'thingamabob', 'x428': 'foobar'}
+itemPrice = {'s049': 1.98, 'm486': 14.99, 'z010': 0.49, 'x428': 250.00}
+
+print(itemName['z010'], itemPrice['z010'])
+```
+
+B.
+
+```python
+itemList = ['s049', 'm486', 'z010', 'x428']
+itemName = {'s049': 'widget', 'm486': 'poiuyt', 'z010': 'thingamabob', 'x428': 'foobar'}
+itemPrice = {'s049': 1.98, 'm486': 14.99, 'z010': 0.49, 'x428': 250.00}
+
+for item in itemList:
+    print(itemName[item], itemPrice[item])
+```
+
+C.
+
+```python
+itemList = ['s049', 'm486', 'z010', 'x428']
+itemName = {'s049': 'widget', 'm486': 'poiuyt', 'z010': 'thingamabob', 'x428': 'foobar'}
+itemPrice = {'s049': 1.98, 'm486': 14.99, 'z010': 0.49, 'x428': 250.00}
+
+choice = input('What is the item? ')
+for item in itemList:
+    if itemName[item]==choice:
+        print('It costs ', itemPrice[item])
+```
+
+D.
+
+```python
+itemList = ['s049', 'm486', 'z010', 'x428']
+itemName = {'s049': 'widget', 'm486': 'poiuyt', 'z010': 'thingamabob', 'x428': 'foobar'}
+itemPrice = {'s049': 1.98, 'm486': 14.99, 'z010': 0.49, 'x428': 250.00}
+
+choice = input('What is the item? ')
+matched = False
+for item in itemList:
+    if itemName[item] == choice:
+        print('It costs ', itemPrice[item])
+        matched = True
+if not matched:
+    print('That item is not in stock')
+```
+
+## Homework answers
+
+1\
+
+```python
+def checkGender(character, characterName, foundIt):
+    if character['name'] == characterName:
+        foundIt = True
+        if character['gender'] == 'male':
+            answer = 'He works'
+        elif character['gender'] == 'female':
+            answer = 'She works'
+        else:
+            answer = 'They work'
+        answer = answer + ' for ' + character['company'] + '.'
+        print(answer)
+    return foundIt
+
+# main script
+characters = [{'name':'Mickey Mouse', 'company':'Disney', 'gender': 'male'}, {'name':'Daisy Duck', 'company':'Disney', 'gender': 'female'}, {'name':'Daffy Duck', 'company':'Warner Brothers', 'gender': 'male'},  {'name':'Fred Flintstone', 'company':'Hanna Barbera', 'gender': 'male'}, {'name':'WALL-E', 'company':'Pixar', 'gender': 'neutral'}, {'name':'Fiona', 'company':'DreamWorks', 'gender': 'female'}]
+
+name = input("What's the character's name? ")
+found = False
+for char in characters:
+    found = checkGender(char, name, found)
+if not(found):
+    print("I don't know that character.")
+```
+
+Notice that I did not have to use the same variable names in the main script as the name that those variables have in the function (`char` in the script is `character` in the function, etc. )
+
+2\.
+
+```python
+enteredString = input("What's the upper number? ")
+myNumber = int(enteredString)
+sum = 0
+for number in range(1, myNumber + 1): # don't forget to add one to the upper range
+    sum += number # this does the same thing as
+    # sum = sum + number
+print(sum)
+```
+
+3\.A.
+
+```python
+import random as r
+throw = []
+for roll in range(0,5):
+    die = r.randrange(1, 7)
+    throw.append(die)
+print(throw)
+```
+
+B. 
+
+```python
+import random as r
+
+def throwDice(numberDice):
+    throw = []
+    for roll in range(0, numberDice):
+        die = r.randrange(1, 7)
+        throw.append(die)
+    return throw
+
+# main script
+rolls = int(input("How many times to roll? ")) # don't forget to turn the input string into a number
+for roll in range(0,rolls):
+    print(throwDice(5))
+```
+C. 
+
+```python
+import random as r
+
+def throwDice(numberDice):
+    throw = []
+    for roll in range(0, numberDice):
+        die = r.randrange(1, 7)
+        throw.append(die)
+    return throw
+
+# There are a number of ways to create the following function. This is only one.
+def isYatzee(throw):
+    allSame = True
+    for die in throw:
+        if die != throw[0]:  # check each die against the first die
+            allSame = False  # if any die is different, they aren't all the same
+    return allSame           # allSame only remains True if no die is different
+
+# main script
+rolls = int(input("How many times to roll? ")) # don't forget to turn the input string into a number
+for roll in range(0,rolls):
+    throw = throwDice(5)
+    if isYatzee(throw):
+        print(throw)
+```
+
+[next lesson on file input and output](../inout/)
 
 ----
-Revised 2019-02-04
+Revised 2019-04-04

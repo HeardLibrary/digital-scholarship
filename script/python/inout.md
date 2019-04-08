@@ -1,7 +1,7 @@
 ---
 permalink: /script/python/inout/
-title: Input and output
-breadcrumb: Input/Output
+title: File input and output
+breadcrumb: Files
 ---
 
 Note: this is the fifth lesson in a beginner's introduction to Python.  For the whole schedule, see the [Vanderbilt Python Working Group homepage](../wg/)
@@ -16,11 +16,11 @@ b\. [Create hand list](https://github.com/HeardLibrary/digital-scholarship/blob/
 
 2\. [Add 100 numbers](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge3/add_numbers.py)
 
-3\.a. [Reverse Frost poem words](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge3/reverse_frost_words.py)
+2\.a. [Reverse Frost poem words](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge3/reverse_frost_words.py)
 
 b\. [Reverse entire Frost poem](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge3/reverse_frost_poem.py)
 
-# Input and Output
+# File Input and Output
 
 Although you can have a lot of fun playihg around with Python by just hard-coding information within the script, the ability to let Python work hard for you depends a lot on having ways to get large amounts of information in and out of the script.  We have already seen a simple way to get data into a script from a user: the `input()` function.  The `input()` function stops the execution of the program and waits for the user to enter some information.  We have also seen an example of a simple way to get data out of a script: the `print()` function, which displays something on the screen in the Shell window.  Here's an example of how we can use the two functions:
 
@@ -395,7 +395,7 @@ writeCsv('test.csv', data)
 
 ## Reading into dictionaries
 
-In the examples above, the CSV reader input each row of the file as a list.  It's alos possible to read the data in as a sequence of dictionaries, using the column headers as keys.  Here's an example that reads in the cartoons.csv file that was written in a previous example.
+In the examples above, the CSV reader input each row of the file as a list.  It's also possible to read the data in as a sequence of dictionaries, using the column headers as keys.  Here's an example that reads in the cartoons.csv file that was written in a previous example.
 
 *Note:* If you want to go for the big time, download [this file](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoons.csv) by right clicking on the Raw button and saving the file in the directory where you are running the script.
 
