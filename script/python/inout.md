@@ -52,11 +52,11 @@ fileObject.close()
 Notes:
 - The arguments of the open() function are strings and can be replaced with variables rather than literals if you want.
 - In the second argument, "wt", the "w" stands for "write" and the "t" stands for "text".
-- The last argument specifies the character encoding.  It can be omitted, since the default encoding in Python3 is UTF-8, but the situation is more clear if you include it.
+- The last argument specifies the character encoding.  It can be omitted, since the default encoding in Python 3 is UTF-8, but the situation is more clear if you include it.
 - The file write isn't necessarily completed untill you close the file with the `close()` function. 
 - Because the file name in the first argument doesn't specify any path, it will default to the directory from which the script is being run.
 
-If you run this script, you won't see anything in the Shell.  But if you go to the directory from which you ran the script, you should see the `datafile.txt` file.  You can open it withe a text editor and see that it includes the text that was in the `someText` variable.
+If you run this script, you won't see anything in the Shell.  But if you go to the directory from which you ran the script, you should see the `datafile.txt` file.  (If you run it using an IDE, the file should be in the directory where you saved the script.)  You can open file you wrote with a text editor and see that it includes the text that was in the `someText` variable.
 
 There are several other options for doing the writing to the file besides the `.write()` method. Our old friend the `print()` function can actually print to a file with the appropriate arguments.  It puts a space between each argument and puts a newline character at the end of the arguments.  Compare the output file in these two examples:
 
@@ -417,7 +417,7 @@ print(cartoon[1]['name'] + ' works for ' + cartoon[1]['company'] + '. Its enemy 
 ```
 
 Notes:
-- If you run the script, you'll see that the type of the rows is *ordered dictionary*.  This is a more complicated data structure than the ordanary unordered dictionaries we saw in the last lesson.  However, you can use them in the same way as regular dictionaries.
+- If you run the script, you'll see that the type of the rows is *ordered dictionary*.  This is a more complicated data structure than the ordinary unordered dictionaries we saw in the last lesson.  However, you can use them in the same way as regular dictionaries.
 - Since the ordered dictionaries are put into a list, we refer to a value first by its row number, then by its key, which is the header for its column: `cartoon[rowNumber][keyString]`
 - It's possible to override the column headers (the first row) and use different keys for the columns.  See [this page](https://docs.python.org/3/library/csv.html#module-contents) for details.
 - There is also a dictionary writer that converts dictionaries to CSV files.  However, this is less likely to be useful, so we won't go into it.  See the [CSV module documentation](https://docs.python.org/3/library/csv.html#module-contents) for details.
@@ -452,290 +452,36 @@ if not find:
 
 Notice that by comparing the lower case versions of both the name in the dictionary and the name input by the user, we've made the search case-insensitive.  We also error trap the situation where either the character or its nemesis isn't known.
 
-# Requests library for the web
+# Homework
 
-If we have data on our local computer in the form of a file, we can avoid hard-coding a large amount of information in our script, or having to do a lot of data entry when the script is run.  However, sometimes the information is already available online, so it would be nice to be able to make use of that information without requiring the user to download it.
+1\. **Reading an AWS credentials file**
 
-There are features for using HTTP (Hypertext Transfer Protocol) in the Python standard library, but the best methods are part of the `requests` module.  (You may need to use PIP to install `requests` or in Thonny use "Manage packages..." under the Tools menu.)  Here is a simple example that makes an HTTP request and prints the response code using the `.status_code` method:
-
-```python
-import requests
-
-r = requests.get('http://bioimages.vanderbilt.edu/baskauf/24319.rdf')
-print('HTTP status code: ', r.status_code)
-```
-
-Note: The `requests.get()` method creates a requests "Response" instance.
-
-The `.text` method returns the body of the HTTP request.  The body is a single string containing the content of the delivered file.  
-
-The requests module is a great way to access data stored on GitHub. For example, here's some data on schools in Nashville: <https://github.com/HeardLibrary/digital-scholarship/blob/master/data/gis/wg/Metro_Nashville_Schools.csv>. This URL dereferences to the GitHub page for the data.  If we want to retrieve the data itself, we need the Raw file.  In the past, we downloade Raw data by right-clicking on the Raw button and selecting "Save link as...".  We can acquire the URL of the Raw data by right-clicking and selecting "Copy link address".  In this example, we get <https://github.com/HeardLibrary/digital-scholarship/raw/master/data/gis/wg/Metro_Nashville_Schools.csv>.  With the URL from the Raw file, we can retrieve the file contents as a string.  Here's an example:
-
-```python
-import requests
-
-r = requests.get('https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/gis/wg/Metro_Nashville_Schools.csv')
-print(r.text)
-```
-
-## Reading from CSV files from the web
-
-If the file that we are retrieving from the web is a CSV file (as was the case for the Nashville school data), we can use the same methods from the `csv` module as we did when loading data from a file locally.  
-
-When we open a file object, it's an iterable object and we can turn it into a reader or DictReader object.  However, the string that we get from the requests `.text` method is a string, which is not iterable.  However, as we saw at the end of the section on loading text from a file, we can turn a string containing newlines into a list using the `.split()` method, with '\n' as the argument.  Since a list is iterable, it can be passed into either the `.reader()` or `.DictReader()` methods.  Here is some code that reads in the Nashville school data and uses the `.reader()` function to create a list of lists serving as a table of the school data:
-
-```python
-import requests
-import csv
-
-r = requests.get('https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/gis/wg/Metro_Nashville_Schools.csv')
-fileText = r.text.split('\n')
-if fileText[len(fileText)-1] == '':
-    fileText = fileText[0:len(fileText)-1]
-fileRows = csv.reader(fileText)
-schoolData = []
-for row in fileRows:
-    schoolData.append(row)
-
-# print the IDs and names of all of the schools
-print(schoolData[0][2] + '\t' + schoolData[0][3])
-for school in range(1, len(schoolData)):
-    print(schoolData[school][2] + '\t' + schoolData[school][3])
-```
-
-Notes:
-- After the string is turned into a list, but before that list is turned into a .reader() object, there is a check to see if the file contained a final newline at the end of the last row of data in the CSV.  If so, the .split() method will create a final empty string in the list, which will result in an empty final list in the list of lists.  So the `if` statement removes the final empty string (if it's there) before creating the .reader() object.
-- As the first `for` loop iterates through the .reader() object, it appends the row list to the schoolData list of lists.
-- The school ID  is in the third column (column 2 counting from 0) of the table and the school name is in the fourth column, so the final `for` loop prints the IDs and names of all of the schools in the table.  
-
-If we replace the `.reader()` class with the `.DictReader()` class, we can create a list of dictionaries instead. Instantiating the dictionary reader is not sensitive to a trailing final newline, so we can leave off the `if` statement checking for it.
-
-```python
-import requests
-import csv
-
-r = requests.get('https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/gis/wg/Metro_Nashville_Schools.csv')
-fileText = r.text.split('\n')
-fileRows = csv.DictReader(fileText)
-schoolData = []
-for row in fileRows:
-    schoolData.append(row)
-
-# use the dictionary to look up a school ID
-schoolName = input("What's the name of the school? ")
-found = False
-for school in schoolData:
-    if school['School Name'] == schoolName:
-        print('The ID number for that school is: ' + school['School ID'])
-        found = True
-if not found:
-    print("I couldn't find that school.")
-```
-
-# JSON
-
-Currently, Javascript Object Notation (JSON) is one of the most popular was to transmit data between applications.  Most application programming interfaces (APIs) that are available online provide data in the form of JSON -- sometimes exclusively.  
-
-## JSON background
-
-Here are some basics about JSON.
-
-A basic unit of JSON is a *key:value pair*.  for example:
+The Amazon Web Services (AWS) command line client needs to know the user's access key and access secret (something like a password) in order to perform secure communications with online services.  The credentials file (named `credentials` and stored in a subdirectory of the user directory called `.aws`) looks like this:
 
 ```
-"name":"Steve"
-"fingers":10
+[default]
+aws_access_key_id=AKIAYXHJJLTLYSK3
+aws_secret_access_key=f1+UDwKg6huwH+7u
 ```
 
-The key (technically called a "name" in JSON) must be a string in quotes.  The value can be a string (in double quotes), a number (not in double quotes), or other things.  In JSON, double quotes must be used to enclose quotes -- single quotes aren't allowed.
+Save this text in a file called `credentials` and put it in the directory from which you've been running your scripts.
 
-A *JSON object* is an unordered list of key:value pairs, separated by commas and enclosed in curly brackets:
+A. Write a program to open the file, read in the lines, and assign the second and third lines to variables.
+B. Use the `.split('=')` method to assign access key and secret to two different variables.
+C. Write a "password-checking" script that asks the user to enter their username and password.  Check the username against the access key and the password against the secret and make appropriate messages if they log in successfully or not.
 
-```json
-{"name":"Steve", "fingers":10, "street":"Keri Drive"}
-```
+2\. **Nashville Schools info** Download these [Nashville schools data](https://github.com/HeardLibrary/digital-scholarship/raw/master/data/gis/wg/Metro_Nashville_Schools.csv) from GitHub.  (Right-click on the `Raw` button, then click on `Save link as...`.  Save the file in the directory from which you have been running your scripts.) Use the `readDict(filename)` function to read in the file as a list of dictionaries.  **Note that the keys for the dictionary are the column headers, including the spaces, capitalization, etc.  So you may want to copy and past from the column headers in GitHub to make sure you have them correctly.**
 
-A *JSON array* is an ordered list of values, separated by commas and enclosed in square brackets.  As in key:value pairs, array values can be strings (in double quotes), numbers (not in double quotes), or other things:
+A. **Search by school name** Let the user enter the name of the school they want, then iterate through the list of school dictionaries until there is a match with the school name value (key=`School Name`). When the school is found, provide some information about the school that you think might be useful, such as the school level and zip code.
 
-```json
-["Steve", "Steven", "Esteban"]
-```
+B. **Case-insensitive school search** Modify your script so that it doesn't matter whether the user capitalizes correctly or not.  You will want to use the `.lower()` method on both the string that the user inputs and the string from the CSV file with which it's being compared.
 
-The "other things" allowed as values in key:value pairs or arrays can be JSON objects or arrays.  Thus JSON can have complicated nested structures, such as arrays within objects, objects within arrays, arrays within arrays, objects within objexts, or more complicated combinations.  For example:
+C. **Partial string school search** Modify the script in B so that the user doesn't have to enter the entire school name.  Use the `substring in string` boolean expression.  For example `'he' in 'hello'` evaluates to `True`, but `'hi' in 'hello'` evaluates to `False`.  Since only part of the name will be entered, print the whole school name as part of your output.  What happens if you enter part of a name that is found in many schools (such as `hill`)?
 
-```json
-{"name":["Steve", "Steven", "Esteban"], "fingers":10, "street":"Keri Drive"}
-```
+# Challenge Problems
+1\. Modify the school search program from the homework to calculate the percentage of students in that school that fall into particular categories.  You'll need to add up the total number of students in all grades, which means that you probably will want to read in the school table as a list of lists, rather than a list of dictionaries (using `csv.reader()` rather than `csv.DictReader()`).  You can also iterate through the columns to list the name of the category (from row 0, the header row) and the value for that category (from the row with the matching name).
 
-In this example, nesting an array as a value with a JSON object shows that the name key can have the multiple values within the array.  
-
-Whitespace is not important in JSON.  The following three JSON structures are exactly the same:
-
-```json
-{"name":["Steve","Steven","Esteban"], "fingers":10, "street":"Keri Drive"}
-```
-```json
-{"name":["Steve","Steven","Esteban"],
- "fingers":10, 
- "street":"Keri Drive"}
-```
-```json
-{
-  "name":
-         [
-         "Steve",
-         "Steven",
-         "Esteban"
-         ],
-  "fingers":10, 
-  "street":"Keri Drive"
-}
-```
-
-Whitespace can be used to make the JSON more readable to humans, but consuming software sees the alternatives as the same.
-
-For the details of JSON, see [this page](https://www.json.org/).
-
-## JSON and Python
-
-As you read the previous section, you may have noticed that JSON is very similar to data structures that we have used in Python (with the exception that JSON requires double quotes and Python allows either double or single quotes).  A "JSON object" is very similar to a Python dictionary.  A "JSON array" is very similar to a Python list. In the same way that JSON objects can be nested within arrays or arrays nested within objects, Python dictionaries can be nested within lists or lists nested within dictionaries.  So pretty much any JSON data structure can be translated into a complex Python data object.  
-
-There is a Python library, appropriately called the json module, that will convert a JSON string into a Python data object and vice versa.  Here is an example of how it can be used:
-
-```python
-import json
-
-jsonString = '''{
-  "name":
-         [
-         "Steve",
-         "Steven",
-         "Esteban"
-         ],
-  "fingers":10, 
-  "street":"Keri Drive"
-}'''
-
-data = json.loads(jsonString)
-
-print(data)
-print(data['name'])
-print(data['fingers'])
-print(data['name'][1])
-```
-
-Notes:
-- Notice how the triple single-quote was used to create a multi-line string that includes the newlines as part of the string.  Since newlines and spaces are ignored whitespace, the `.loads()` method has no problem with them and the multi-line string is easier for us to read.
-- In the dictionary that results from the `.loads()` method, we can refer to values by the key string.
-- Since the value of the `name` key is a list, we have to include an index number in second set of square brackets to refer to the value that we want.
-
-The json module has a `.dumps()` method that works in the reverse direction: it turns a data structure composed of dictionaries and lists into a JSON string that can be saved in a file or used in some other way.
-
-## JSON from APIs
-
-Since a lot of APIs on the web provide JSON through HTTP, the `requests` module has a method `.json()` that will directly turn JSON text from the body of an HTTP response into a Python data structure.  Essentially, it is like combining the requests module `.text()` method with the json module `.loads()` method in a single step.  
-
-The [Global Biodiversity Information Facility (GBIF)](https://www.gbif.org/) allows users to search its records of over a billion organism occurrences via its API.  Usually, an API has a web page that explains how to make the HTTP request.  The directions for searching occurrence records are on [this page](https://www.gbif.org/developer/occurrence#search).  The search URL is constructed by concatenating the root endpoint URI (`http://api.gbif.org/v1`) with the search subpath (`/occurrence/search`) followed by a question mark, then the query string.  It's typical to query APIs this way (combining a complete endpoint URL with a query string, separated by a question mark).  
-
-Usually, the values in query strings must be "URL-encoded" so that characters that aren't "safe" in the URL are escaped.  In our example, we are searching for occurrences recorded by "William A. Haber", so the spaces between the names muse be escaped with `+`.  
-
-The requests module will automatically encode query string values of passed parameters and concatenate them with ampersands, the appropriate format when there are multiple parameters in the query string. The keys and values are included in the `.get()` method as a dictionary of keys and values to be encoded.  Here's an example:
-
-```python
-r = requests.get('http://api.gbif.org/v1/occurrence/search', params={'recordedBy' : 'William A. Haber'})
-```
-
-You can see the URL that requests generates by printing the `.url` attribute of the response instance:
-
-```python
-print(r.url)
-```
-
-After URL-encoding, the entire URL for the query is:
-
-```
-http://api.gbif.org/v1/occurrence/search?recordedBy=William+A.+Haber
-```
-
-If you put this URL directly into a browser URL bar, you can see the raw JSON response from the API.  
-
-Here's the basic structure of the results JSON:
-
-```json
-{
-"offset":0,
-"limit":20,
-"endOfRecords":false,
-"count":2770,
-"results":[
-    lots of results go in here
-        ],
-"facets":[]
-}
-```
-
-The value of the `results` key is an array that contains a list of result objects separated by commas.  Each of the reult objects has a long list of key:value pairs whose values are what we really are interested in.  Here's some code that will fetch the JSON, turn it into a Python structure, pull out the results, and show us the first (index of 0) dictionary in the list of results:
-
-```python
-url = 'http://api.gbif.org/v1/occurrence/search'
-r = requests.get(url, params={'recordedBy' : 'William A. Haber'})
-data = r.json()
-
-print(data['results'][0])
-```
-
-To see more useful output, replace the print statement with this code
-
-```python
-resultsList = data['results']
-for result in resultsList:
-        print(result['species'] + ', date: ' + result['eventDate'])
-        print('Observed at: ' + result['locality'] + ', ' + result['country'] + '\n')
-```
-
-In this example, the API does not require any authentication.  Authentication is nearly always required to write to an API using an HTTP POST request and in a lot of cases it's also required for a read-only GET request as well.  This is to prevent abuse of the API.  
-
-Sometimes an API will offer results in several possible formats, such as JSON or XML.  In such cases, one may need to send an `Accept:` header with the desired Internet Media Type (MIME type).  The MIME type for JSON is `application/json` and for XML is `text/xml`.  The request headers are sent as a dictionary, like this: 
-
-```python
-r = requests.get(uri, headers={'Accept' : 'application/json'})
-```
-
-**API etiquette:**
-
-1. Do not try to scrape the entire contents of the API.  This is considered bad form.  If the site has open data, it will often provide a compressed dump of the entire dataset that you can download rather than making a massive API call.
-
-2. Do not try to download a massive amount of data.  Usually the API will place a limit on the number of results that can be retrieved in a single call.  To retrive many results, there is usually a paging feature where you can retrive a certain number of results (like 20 or 100) in each request.  The pages are numbered so you can request them sequentially.
-
-3. Do not hit the API repeatedly in a short period of time.  This is actually pretty easy to do with a script that can execute hundreds of operations per second.  Use the `.wait()` method from the time module to space your calls out.
-
-
-
-# TkInter graphical interface
- 
- Although Python isn't the greatest platform for building applications with graphical user interfaces (GUIs), it does include the tkinter module creating GUIs.  In a number of previous lessons, we've played around with using tkinter to create GUI versions of the scripts we wrote.  Here we'll present a brief overview since it's a significant possible method of user input and output.
-
- The primary object of tkinter is an instance of the `Tk` class.  A `Tk` instance is usually the main *window* of an application.  The various items in the window (buttons, text boxes, dropdown lists, etc.) are called *widgets*.  Within the main window, widgets are organized in *frames*. 
-
- As with everything else in Python, widgets are objects.  So they are usually created by assigning an instance of their class to a variable.  Since a window is likely to have more than one button or more than one text box, the different instances can be disginguished by their different variable names.  
-
- Just instantiating a widget does not make it appear in the window.  The widgets are placed into a frame in one of two ways.  They can be *packed*, which basically means they are stuck into the frame in the order in which they are packed, or they can be assigned to a position in a *grid*.  The grid positions are referenced by their row and column and are relative.  Column 5 is to the right of column 3, but there doesn't have to be any column 0, 1, or 2, nor does there need to be a column 4.  The widths and heights of the columns and rows are determined by the size of the largest widget in that position.  A particular frame must either be populated by packing or by a grid -- you can't mix the two.
-
- Each widget has a number of attributes and methods.  Some attributes are standard across widgets, such as `.width`, and can be assigned when the widget is instantiated by including them as arguments.  However, generally you need to read the documentation about each particular widget to know how to set it up.  The documentation can be complex, so it is often helpful to find an example to see how the widget is used in actual practice. 
-
- Note that the TkInter interface is event-driven.  That means that while the program is running, it waits for an action on the part of the user (such as clicking a button) before executing code.  That requires associating functions with particular objects so that the function is triggered when something happens to the object.  The details of this are beyond the scope of this tutorial, so having an example template is helpful.
-
- The documentation for TkInter is at [this page](https://docs.python.org/3/library/tkinter.html)
-
-# Challenge problems
-
-1. A. **Nashville Schools info** Load the [Nashville schools data](https://github.com/HeardLibrary/digital-scholarship/raw/master/data/gis/wg/Metro_Nashville_Schools.csv) directly from GitHub so that the user doesn't have to download the file.  Let the user enter the school name, then when the school is found, provide some information about the school that you think might be interesting, such as the percentage of students in that school that fall into particular categories. 
-
-   B. **Case-insensitive school search** Modify your script so that it doesn't matter whether the user capitalizes correctly or not.  You will want to use the `.lower()` method on both the string that the user inputs and the string from the CSV file with which it's being compared.
-
-   C. **Partial string school search** Modify the script in B so that the user doesn't have to enter the entire school name.  Use the `substring in string` boolean expression.  For example `'he' in 'hello'` evaluates to `True`, but `'hi' in 'hello'` evaluates to `False`.
-
-2. A.  **Advanced cartoon checker** Use the [cartoons.csv](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoons.csv) file to create a script that allows the user to input all or part of the name of a cartoon character, then tell the user the company that created the character, and the character's nemesis.  You can decide whether you want to access the CSV file from a downloaded local file, or to retrieve it from GitHub when the script runs.
+2\. A.  **Advanced cartoon checker** Use the [cartoons.csv](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoons.csv) file to create a script that allows the user to input all or part of the name of a cartoon character, then tell the user the company that created the character, and the character's nemesis.  You can decide whether you want to access the CSV file from a downloaded local file, or to retrieve it from GitHub when the script runs.
  
     **Program features**
     - Notice that the nemesis for most characters hasn't been entered or isn't known.  So you should handle that.
@@ -785,7 +531,49 @@ for statement in statements:
    - The results of the search show up in a scrolled text box.  
    - Can you figure out how to add a drop-down list to select the character to be looked up in Wikidata from among those that matched in the search?
 
-[next lesson on practical problem solving](../hack/)
+## Homework answers
+
+1\. A. 
+
+```python
+import csv
+
+def readDict(filename):
+    fileObject = open(filename, 'r', newline='', encoding='utf-8')
+    dictObject = csv.DictReader(fileObject)
+    array = []
+    for row in dictObject:
+        array.append(row)
+    fileObject.close()
+    return array
+
+schoolData = readDict('Metro_Nashville_Schools.csv')
+mySchool = input('What school do you want to know about? ')
+for school in schoolData:
+    if school['School Name']==mySchool:
+        print('Level:', school['School Level'])
+        print('Zip code:', school['Zip Code'])
+```
+
+B. Note: the import statement and readDict() function definition are the same as in part A.  Only the code after the function is shown.
+
+```python
+schoolData = readDict('Metro_Nashville_Schools.csv')
+mySchool = input('What school do you want to know about? ')
+
+for school in schoolData:
+    if school['School Name'].lower()==mySchool.lower():
+        print('Level:', school['School Level'])
+        print('Zip code:', school['Zip Code'])
+```
+
+C. Import and function definition omitted
+
+```python
+
+```
+
+[next lesson on data from the Internet](../internet/)
 
 
-Revised 2019-02-11
+Revised 2019-04-11
