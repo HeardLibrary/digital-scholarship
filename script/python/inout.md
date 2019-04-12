@@ -474,11 +474,11 @@ B. Use the `.split('=')` method to assign access key and secret to two different
 
 C. Write a "password-checking" script that asks the user to enter their username and password.  Check the username against the access key and the password against the secret and make appropriate messages if they log in successfully or not.
 
-2\. **Nashville Schools info** Download these [Nashville schools data](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/gis/wg/Metro_Nashville_Schools.csv) from GitHub.  (Right-click on the `Raw` button, then click on `Save link as...`.  Save the file in the directory from which you have been running your scripts.) Use the `readDict(filename)` function to read in the file as a list of dictionaries.  **Note that the keys for the dictionary are the column headers, including the spaces, capitalization, etc.  So you may want to copy and past from the column headers in GitHub to make sure you have them correctly.**
+2\. **Nashville Schools info** Download these [Nashville schools data](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/gis/wg/Metro_Nashville_Schools.csv) from GitHub.  (Right-click on the `Raw` button, then click on `Save link as...`.  Save the file in the directory from which you have been running your scripts.) Use the `readDict(filename)` function from the code in the previous section to read in the file as a list of dictionaries.  Also, don't forget to import the CSV module.  **Note that the keys for the dictionary are the column headers, including the spaces, capitalization, etc.  So you may want to copy and past from the column headers in GitHub to make sure you have them correctly.**
 
-A. **Search by school name** Let the user enter the name of the school they want, then iterate through the list of school dictionaries until there is a match with the school name value (key=`School Name`). When the school is found, provide some information about the school that you think might be useful, such as the school level and zip code.
+A. **Search by school name** Let the user enter the name of the school they want, then loop through the list of school dictionaries until there is a match with the school name value (key=`School Name`). When the school is found, provide some information about the school that you think might be useful, such as the school level and zip code.
 
-B. **Case-insensitive school search** Modify your script so that it doesn't matter whether the user capitalizes correctly or not.  You will want to use the `.lower()` method on both the string that the user inputs and the string from the CSV file with which it's being compared.
+B. **Case-insensitive school search** Modify your script so that it doesn't matter whether the user capitalizes correctly or not.  You will want to use the `.lower()` method on both the string from the CSV file and the string that the user inputs with which the string from the file is being compared.
 
 C. **Partial string school search** Modify the script in B so that the user doesn't have to enter the entire school name.  Use the `substring in string` boolean expression.  For example `'he' in 'hello'` evaluates to `True`, but `'hi' in 'hello'` evaluates to `False`.  Since only part of the name will be entered, print the whole school name as part of your output.  What happens if you enter part of a name that is found in many schools (such as `hill`)?
 
@@ -537,7 +537,7 @@ for statement in statements:
 
 ## Homework answers
 
-1\. A. Note that in this application it does not matter whether there is a trailing newline at the end of the file since we are explicitly referencing list items 1 and 2.
+1\. A. Note that in this application it does not matter whether there is a trailing newline at the end of the file since we are explicitly referencing list items 1 and 2.  So the code doesn't do anything to get rid of a trailing newline if there is one.
 
 ```python
 with open('credentials', 'rt', encoding='utf-8') as fileObject:
@@ -555,11 +555,11 @@ B. For clarity, the processing of the input strings has been done in steps here:
 with open('credentials', 'rt', encoding='utf-8') as fileObject:
     lineList = fileObject.read().split('\n')
 
-userString = lineList[1]
-pwdString = lineList[2]
+userString = lineList[1]  # get the second line
+pwdString = lineList[2]   # get the third line
 userList = userString.split('=')
 pwdList = pwdString.split('=')
-username = userList[1]
+username = userList[1]   # get the second item in the list created by .split(), i.e. what's after the equals sign
 password = pwdList[1]
 print(username)
 print(password)
@@ -623,7 +623,7 @@ for school in schoolData:
         print('Zip code:', school['Zip Code'])
 ```
 
-B. Note: the import statement and readDict() function definition are the same as in part A.  Only the code after the function is shown.
+B. Note: the import statement and `readDict()` function definition are the same as in part A.  Only the code after the function is shown here.
 
 ```python
 schoolData = readDict('Metro_Nashville_Schools.csv')
@@ -635,7 +635,7 @@ for school in schoolData:
         print('Zip code:', school['Zip Code'])
 ```
 
-C. Import and function definition omitted
+C. Import and function definition omitted here
 
 ```python
 schoolData = readDict('Metro_Nashville_Schools.csv')
@@ -648,6 +648,8 @@ for school in schoolData:
         print('Zip code:', school['Zip Code'])
         print()
 ```
+
+I put in an empty print statement to separate output from multiple school hits.
 
 [next lesson on data from the Internet](../internet/)
 
