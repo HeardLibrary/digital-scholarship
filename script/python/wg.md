@@ -37,7 +37,7 @@ Second cycle: **Fridays** from 12:10 to 2:00 PM (Intro: 12:10 to 1:00 PM, Worksh
 | Mar 22 | 2 | Python scripting basics | [lesson webpage](../basics/) |
 | Mar 29 | 3 | Object-oriented Python | [lesson webpage](../object/) |
 | Apr 5 | 4 | Using data structures | [lesson webpage](../structures/) |
-| Apr 12 | 5 | Input and output from files |  |
+| Apr 12 | 5 | Input and output from files | [lesson webpage](../inout/)  |
 | Apr 19 | 6 | Interacting with the Internet |  |
 
 # Python Resources
