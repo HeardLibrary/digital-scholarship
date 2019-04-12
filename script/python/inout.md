@@ -454,6 +454,8 @@ Notice that by comparing the lower case versions of both the name in the diction
 
 # Homework
 
+The answers are [at the end](#homework-answers)
+
 1\. **Reading an AWS credentials file**
 
 The Amazon Web Services (AWS) command line client needs to know the user's access key and access secret (something like a password) in order to perform secure communications with online services.  The credentials file (named `credentials` and stored in a subdirectory of the user directory called `.aws`) looks like this:
@@ -467,10 +469,12 @@ aws_secret_access_key=f1+UDwKg6huwH+7u
 Save this text in a file called `credentials` and put it in the directory from which you've been running your scripts.
 
 A. Write a program to open the file, read in the lines, and assign the second and third lines to variables.
+
 B. Use the `.split('=')` method to assign access key and secret to two different variables.
+
 C. Write a "password-checking" script that asks the user to enter their username and password.  Check the username against the access key and the password against the secret and make appropriate messages if they log in successfully or not.
 
-2\. **Nashville Schools info** Download these [Nashville schools data](https://github.com/HeardLibrary/digital-scholarship/raw/master/data/gis/wg/Metro_Nashville_Schools.csv) from GitHub.  (Right-click on the `Raw` button, then click on `Save link as...`.  Save the file in the directory from which you have been running your scripts.) Use the `readDict(filename)` function to read in the file as a list of dictionaries.  **Note that the keys for the dictionary are the column headers, including the spaces, capitalization, etc.  So you may want to copy and past from the column headers in GitHub to make sure you have them correctly.**
+2\. **Nashville Schools info** Download these [Nashville schools data](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/gis/wg/Metro_Nashville_Schools.csv) from GitHub.  (Right-click on the `Raw` button, then click on `Save link as...`.  Save the file in the directory from which you have been running your scripts.) Use the `readDict(filename)` function to read in the file as a list of dictionaries.  **Note that the keys for the dictionary are the column headers, including the spaces, capitalization, etc.  So you may want to copy and past from the column headers in GitHub to make sure you have them correctly.**
 
 A. **Search by school name** Let the user enter the name of the school they want, then iterate through the list of school dictionaries until there is a match with the school name value (key=`School Name`). When the school is found, provide some information about the school that you think might be useful, such as the school level and zip code.
 
@@ -533,7 +537,71 @@ for statement in statements:
 
 ## Homework answers
 
-1\. A. 
+1\. A. Note that in this application it does not matter whether there is a trailing newline at the end of the file since we are explicitly referencing list items 1 and 2.
+
+```python
+with open('credentials', 'rt', encoding='utf-8') as fileObject:
+    lineList = fileObject.read().split('\n')
+
+userString = lineList[1]
+pwdString = lineList[2]
+print(userString)
+print(pwdString)
+```
+
+B. For clarity, the processing of the input strings has been done in steps here:
+
+```python
+with open('credentials', 'rt', encoding='utf-8') as fileObject:
+    lineList = fileObject.read().split('\n')
+
+userString = lineList[1]
+pwdString = lineList[2]
+userList = userString.split('=')
+pwdList = pwdString.split('=')
+username = userList[1]
+password = pwdList[1]
+print(username)
+print(password)
+```
+
+However, one could put all of the steps into one assignment if desired:
+
+```python
+with open('credentials', 'rt', encoding='utf-8') as fileObject:
+    lineList = fileObject.read().split('\n')
+
+username = lineList[1].split('=')[1]
+password = lineList[2].split('=')[1]
+print(username)
+print(password)
+```
+
+The code is more compact, but it's less apparent what the processing steps are.
+
+c. 
+
+```python
+with open('credentials', 'rt', encoding='utf-8') as fileObject:
+    lineList = fileObject.read().split('\n')
+
+username = lineList[1].split('=')[1]
+password = lineList[2].split('=')[1]
+
+user = input('Enter your username: ')
+if user != username:
+    print('Unknown user')
+else:
+    pwd = input('Enter your password: ')
+    if pwd == password:
+        print('Validated!')
+    else:
+        print('Incorrect password')
+```
+
+Obviously this leaves a lot to be desired as a validation system, since you could just hack the script to print out the username and password.  Also, for security reasons it would be better to have the entered characters not show up on the screen when the user types them.  But this is a beginner class, after all!
+
+2\. A. 
 
 ```python
 import csv
@@ -570,10 +638,17 @@ for school in schoolData:
 C. Import and function definition omitted
 
 ```python
+schoolData = readDict('Metro_Nashville_Schools.csv')
+mySchool = input('What school do you want to know about? ')
 
+for school in schoolData:
+    if mySchool.lower() in school['School Name'].lower():
+        print('School:', school['School Name'])
+        print('Level:', school['School Level'])
+        print('Zip code:', school['Zip Code'])
+        print()
 ```
 
 [next lesson on data from the Internet](../internet/)
 
-
-Revised 2019-04-11
+Revised 2019-04-12
