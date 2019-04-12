@@ -485,55 +485,14 @@ C. **Partial string school search** Modify the script in B so that the user does
 # Challenge Problems
 1\. Modify the school search program from the homework to calculate the percentage of students in that school that fall into particular categories.  You'll need to add up the total number of students in all grades, which means that you probably will want to read in the school table as a list of lists, rather than a list of dictionaries (using `csv.reader()` rather than `csv.DictReader()`).  You can also iterate through the columns to list the name of the category (from row 0, the header row) and the value for that category (from the row with the matching name).
 
-2\. A.  **Advanced cartoon checker** Use the [cartoons.csv](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoons.csv) file to create a script that allows the user to input all or part of the name of a cartoon character, then tell the user the company that created the character, and the character's nemesis.  You can decide whether you want to access the CSV file from a downloaded local file, or to retrieve it from GitHub when the script runs.
+2\. **Advanced cartoon checker** Use the [cartoons.csv](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoons.csv) file to create a script that allows the user to input all or part of the name of a cartoon character, then tell the user the company that created the character, and the character's nemesis.  You will have to download the cartoons.csv file into the directory from which you run the script.
  
-    **Program features**
-    - Notice that the nemesis for most characters hasn't been entered or isn't known.  So you should handle that.
-    - In order to allow the user to enter part of the character's name, use the `substring in string` boolean expression.  For example `'he' in 'hello'` evaluates to `True`, but `'hi' in 'hello'` evaluates to `False`.
-    - In order to make the search case insensitive, apply the `.lower()` method to both the string that the user entered and the character name in the CSV file.
-    - Handle gracefully the case where there are no matches.
-    - Also handle the case where there is more than one match.
-
-   B. **Cartoon checker with Wikidata search** The following script shows how to query the Wikidata API to learn more about items in its database.  
-
-```python
-import requests   # best library to manage HTTP transactions
-
-endpointUrl = 'https://query.wikidata.org/sparql'
-query = '''select distinct ?property ?value
-where {
-  <''' + 'http://www.wikidata.org/entity/Q3723661' + '''> ?propertyUri ?valueUri.
-  ?valueUri <http://www.w3.org/2000/01/rdf-schema#label> ?value.
-  ?genProp <http://wikiba.se/ontology#directClaim> ?propertyUri.
-  ?genProp <http://www.w3.org/2000/01/rdf-schema#label> ?property.
-  FILTER(substr(str(?propertyUri),1,36)="http://www.wikidata.org/prop/direct/")
-  FILTER(LANG(?property) = "en")
-  FILTER(LANG(?value) = "en")  
-}'''
-
-# The endpoint defaults to returning XML, so the Accept: header is required
-r = requests.get(endpointUrl, params={'query' : query}, headers={'Accept' : 'application/json'})
-
-# delete the next two lines after you see how it works
-print(r.url)
-print(r.text)
-
-data = r.json()
-statements = data['results']['bindings']
-for statement in statements:
-    print(statement['property']['value'] + ': ' + statement['value']['value'])
-```
-
-   Notice that the cartoons.csv data file has a column containing the Wikidata identifier for each character.  Combine the script in part A with this script to follow up the character search with a retrieval of other information about the character from Wikidata.  You can accomplish this by replacing the hard-coded `'http://www.wikidata.org/entity/Q3723661'` string in the query with a variable. Note that you will have to decide what to do in cases where there are no matches to the user input, or when there are multiple matches.
-
-   C. **Cartoon checker with Wikidata search and GUI** Combine your answer in B with code from previous challenge problems that use a TkInter GUI.
-
-   **Program features**
-   - The user enters the character name in a text box.
-   - The user clicks a button to run the check.
-   - The user clicks another button to get more information about the character from Wikidata.
-   - The results of the search show up in a scrolled text box.  
-   - Can you figure out how to add a drop-down list to select the character to be looked up in Wikidata from among those that matched in the search?
+**Program features**
+- Notice that the nemesis for most characters hasn't been entered or isn't known.  So you should handle that.
+- In order to allow the user to enter part of the character's name, use the `substring in string` boolean expression.  For example `'he' in 'hello'` evaluates to `True`, but `'hi' in 'hello'` evaluates to `False`.
+- In order to make the search case insensitive, apply the `.lower()` method to both the string that the user entered and the character name in the CSV file.
+- Handle gracefully the case where there are no matches.
+- Also handle the case where there is more than one match.
 
 ## Homework answers
 

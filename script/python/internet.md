@@ -10,6 +10,10 @@ Note: this is the sixth lesson in a beginner's introduction to Python.  For the 
 
 Answers for last week's challenge problems:
 
+1\. [Print school data](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/schools_a.py)
+
+2\. [Advanced cartoon checker](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_a.py)
+
 # Requests library for the Internet
 
 If we have data on our local computer in the form of a file, we can avoid hard-coding a large amount of information in our script, or having to do a lot of data entry when the script is run.  However, sometimes the information is already available online, so it would be nice to be able to make use of that information without requiring the user to download it.
