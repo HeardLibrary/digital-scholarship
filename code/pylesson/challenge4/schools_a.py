@@ -1,12 +1,7 @@
-import requests
 import csv
 
-r = requests.get('https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/gis/wg/Metro_Nashville_Schools.csv')
-fileText = r.text.split('\n')
-# take care of case where there is a trailing newline at the end of the file
-if fileText[len(fileText)-1] == '':
-    fileText = fileText[0:len(fileText)-1]
-fileRows = csv.reader(fileText)
+fileObject = open('Metro_Nashville_Schools.csv', 'r', newline='', encoding='utf-8')
+fileRows = csv.reader(fileObject)
 schoolData = []
 for row in fileRows:
     schoolData.append(row)
@@ -15,7 +10,7 @@ inputSchoolName = input("What's the name of the school? ")
 
 found = False
 for school in range(1, len(schoolData)):
-    if inputSchoolName == schoolData[school][3]: # column 3 has the school name
+    if inputSchoolName.lower() in schoolData[school][3].lower(): # column 3 has the school name
         found = True
         # this section adds up the students in all of the grades
         totalEnrollment = 0
@@ -33,6 +28,7 @@ for school in range(1, len(schoolData)):
                 numerator = float(schoolData[school][category])
                 # find fraction, get the percent, and round to 1 decimal place
                 value = round(numerator/totalEnrollment*100, 1)
-                print(schoolData[0][category] + ': ' + str(value) + '%')    
+                print(schoolData[0][category] + ': ' + str(value) + '%')
+        print() # put this here to separate multiple school results
 if not found:
     print("Didn't find that school")
