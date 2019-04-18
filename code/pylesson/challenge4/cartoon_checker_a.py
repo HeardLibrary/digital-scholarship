@@ -1,6 +1,4 @@
 import csv
-import requests
-
 
 fileObject = open('cartoons.csv', 'r', newline='', encoding='utf-8')
 readerObject = csv.DictReader(fileObject)
