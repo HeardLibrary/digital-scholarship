@@ -4,25 +4,9 @@ title: Practical problem solving
 breadcrumb: Hacking
 ---
 
-Note: this is the sixth and final lesson in a beginner's introduction to Python.  For the whole schedule, see the [Vanderbilt Python Working Group homepage](../wg/)
+Note: this is an addendum lesson to a beginner's introduction to Python.  For the whole schedule, see the [Vanderbilt Python Working Group homepage](../wg/)
 
-[prevous lesson on input and output](../inout/)
-
-Answers for last week's challenge problems:
-
-1\.a. [Print school data](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/schools_a.py)
-
-  b. [School data, case insensitive](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/schools_b.py)
-
-  c. [School data, partial search string](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/schools_c.py)
-
-2\.a. [Advanced cartoon checker](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_a.py)
-
-  b. [Cartoon checker with Wikidata search](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_b.py)
-
-  c. [Super cartoon checker with Wikidata search and GUI ](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_c.py)
-
-[Link to the Google Forms feeback](https://docs.google.com/forms/d/e/1FAIpQLSdeYmnsHTH8iyz6eWPF5PXBY98BUE0hfsTIgPJ3I3PXXjexRw/viewform?usp=sf_link)
+[prevous lesson on data from the Internet](../internet/)
 
 # How to Hack (a.k.a. practical problem solving)
 
@@ -58,45 +42,5 @@ I will also confess to actually having paper books for reference.  I am often to
 
 Finally, I should mention that there are good online courses that you can pay to take.  I generally do not want to spend the time or money on them, but if you feel that you need a strong background in an entire area of programming, they might be an option for you.  However, they may be geared towards people trying to upskill to a coding career, and might be more comprehensive than is necessary for someone who simply wants to use Python to solve a particular problem.
 
-# Example: Understanding API authorization
-
-In trying to use several APIs, I was struggling with understanding how the OAuth2 authorization protocol worked in Python.  
-
-After reading and being confused by many web pages, I found two blog posts that helped me discover the information I needed. [The first post](https://medium.com/google-cloud/understanding-oauth2-and-building-a-basic-authorization-server-of-your-own-a-beginners-guide-cf7451a16f66) had easy-to-understand diagrams with step-by-step explanations for each diagram.  [The second post](https://aaronparecki.com/oauth-2-simplified/) had example HTTP requests that corresponded to each of the diagrams in the first post, and had a very clear explanation (with pictures) of the circumstances under which you'd use each kind of OAuth2 authentication.  By comparing the two blog posts, I was able to understand that the simplest "[Application access](https://aaronparecki.com/oauth-2-simplified/#others)", a.k.a. "client credentials" authentication was what I needed and I could ignore the more complicated authentication systems designed for mobile apps and websites.
-
-After reading a number of Stack Overflow questions, it was clear to me that among the various Python packages that could do OAuth2 authentication, the "Requests-OAuthlib" library was the most commonly used.  It also had a pretty good [readthedocs instruction page](https://requests-oauthlib.readthedocs.io/en/latest/) with actual Python code examples.  After comparison of its examples with the two blog posts, it became clear to me that the "[Backend Application Flow](https://requests-oauthlib.readthedocs.io/en/latest/oauth2_workflow.html#backend-application-flow)" example was actually the same as "Application access" and "client credentials" systems.  So I was able to hack their example code to retrieve data from the Twitter API using a Twitter ID and secret that I had acquired from Twitter.  Here's the code I ended up with:
-
-**Code to get an access token**
-
-```Python
-from oauthlib.oauth2 import BackendApplicationClient
-from requests_oauthlib import OAuth2Session
-
-clientKey = 'client key goes here'
-clientSecret = 'client secret goes here'
-requestTokenUrl = 'https://api.twitter.com/oauth2/token'
-
-clientObject = BackendApplicationClient(client_id=clientKey)
-oauth = OAuth2Session(client=clientObject)
-accessToken = oauth.fetch_token(token_url=requestTokenUrl, client_id=clientKey, client_secret=clientSecret)
-# access token should be cached/saved and used repeatedly rather than making many requests fo a new token
-print(accessToken)
-```
-
-**Code to retrieve Tweets from a user's timeline**
-
-```Python 
-import requests   # best library to manage HTTP transactions
-
-bearerAccessToken = 'access token from first program goes here'
-# GET statuses / user_timeline Returns a collection of the most recent Tweets posted by the indicated by the screen_name or user_id parameters.
-resourceUrl = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
-paramDict = {'screen_name' : 'put twitter handle here', 'count' : '3', 'exclude_replies' : 'true', 'include_rts' : 'false'}
-r = requests.get(resourceUrl, headers={'Authorization' : 'Bearer '+ bearerAccessToken}, params = paramDict)
-data = r.json()
-print(data)
-```
-
-This took a lot of time and effort to achieve, and it required basic understanding about JSON, HTTP, dictionaries, and the requests module.  But with some digging and sorting out the helpful information from the giant mass of confusing information, I was able to solve the problem.  And now I have some basic code that I can reuse any time I need to retrieve data from an API that uses OAuth2 authentication.  
-
-Revised 2019-02-18
+-----
+Revised 2019-04-18

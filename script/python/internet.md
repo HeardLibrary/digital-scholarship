@@ -272,30 +272,29 @@ r = requests.get(uri, headers={'Accept' : 'application/json'})
 3. Do not hit the API repeatedly in a short period of time.  This is actually pretty easy to do with a script that can execute hundreds of operations per second.  Use the `.wait()` method from the time module to space your calls out.
 
 
+# Homework
 
-# TkInter graphical interface
- 
- Although Python isn't the greatest platform for building applications with graphical user interfaces (GUIs), it does include the tkinter module creating GUIs.  In a number of previous lessons, we've played around with using tkinter to create GUI versions of the scripts we wrote.  Here we'll present a brief overview since it's a significant possible method of user input and output.
+The answers are [at the end](#homework_answers).
 
- The primary object of tkinter is an instance of the `Tk` class.  A `Tk` instance is usually the main *window* of an application.  The various items in the window (buttons, text boxes, dropdown lists, etc.) are called *widgets*.  Within the main window, widgets are organized in *frames*. 
+1. **Nashville Schools info from the Internet** Begin with the [answer to Homework #2.C.](./inout/#homework_answers) from last week.  (You also need to include the `import` statement and `readDict()` function from the answer to #2.A.)  
 
- As with everything else in Python, widgets are objects.  So they are usually created by assigning an instance of their class to a variable.  Since a window is likely to have more than one button or more than one text box, the different instances can be disginguished by their different variable names.  
+We are going to modify the `readDict()` function so that it gets its data from the Internet instead of a file on your computer.   The argument for the function will be the URL for the file instead of the file name, so you can change the parameter in the function definition from `filename` to `url`.  You will need to change the first two lines in function from a file open command to:
 
- Just instantiating a widget does not make it appear in the window.  The widgets are placed into a frame in one of two ways.  They can be *packed*, which basically means they are stuck into the frame in the order in which they are packed, or they can be assigned to a position in a *grid*.  The grid positions are referenced by their row and column and are relative.  Column 5 is to the right of column 3, but there doesn't have to be any column 0, 1, or 2, nor does there need to be a column 4.  The widths and heights of the columns and rows are determined by the size of the largest widget in that position.  A particular frame must either be populated by packing or by a grid -- you can't mix the two.
+```
+r = requests.get(url)
+lineList = r.text.split('\n')
+dictObject = csv.DictReader(lineList)
+```
 
- Each widget has a number of attributes and methods.  Some attributes are standard across widgets, such as `.width`, and can be assigned when the widget is instantiated by including them as arguments.  However, generally you need to read the documentation about each particular widget to know how to set it up.  The documentation can be complex, so it is often helpful to find an example to see how the widget is used in actual practice. 
+Don't forget to import the `requests` module at the top of your code.
 
- Note that the TkInter interface is event-driven.  That means that while the program is running, it waits for an action on the part of the user (such as clicking a button) before executing code.  That requires associating functions with particular objects so that the function is triggered when something happens to the object.  The details of this are beyond the scope of this tutorial, so having an example template is helpful.
+Since the iterable object you are applying the `.DictReader()` method to is a list and not a file object, you also need to get rid of the line in the function that closes the file object. 
 
- The documentation for TkInter is at [this page](https://docs.python.org/3/library/tkinter.html)
+Now you can load the [Nashville schools data](https://github.com/HeardLibrary/digital-scholarship/raw/master/data/gis/wg/Metro_Nashville_Schools.csv) directly from GitHub so that the user doesn't have to download the file.  Insert its URL: <https://github.com/HeardLibrary/digital-scholarship/raw/master/data/gis/wg/Metro_Nashville_Schools.csv> as the argument of the `readDict()` function when you call it in the main script (instead of `Metro_Nashville_Schools.csv`).  The rest of the script should work the same way as it did when you were getting the data from a local file. 
+
+If you did challenge problem #1 last week, you can use that code as a starting point instead of the answer to homework #2.C.
 
 # Challenge problems
-
-1. A. **Nashville Schools info** Load the [Nashville schools data](https://github.com/HeardLibrary/digital-scholarship/raw/master/data/gis/wg/Metro_Nashville_Schools.csv) directly from GitHub so that the user doesn't have to download the file.  Let the user enter the school name, then when the school is found, provide some information about the school that you think might be interesting, such as the percentage of students in that school that fall into particular categories. 
-
-   B. **Case-insensitive school search** Modify your script so that it doesn't matter whether the user capitalizes correctly or not.  You will want to use the `.lower()` method on both the string that the user inputs and the string from the CSV file with which it's being compared.
-
-   C. **Partial string school search** Modify the script in B so that the user doesn't have to enter the entire school name.  Use the `substring in string` boolean expression.  For example `'he' in 'hello'` evaluates to `True`, but `'hi' in 'hello'` evaluates to `False`.
 
 2. A.  **Advanced cartoon checker** Use the [cartoons.csv](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoons.csv) file to create a script that allows the user to input all or part of the name of a cartoon character, then tell the user the company that created the character, and the character's nemesis.  You can decide whether you want to access the CSV file from a downloaded local file, or to retrieve it from GitHub when the script runs.
  
@@ -338,7 +337,12 @@ for statement in statements:
 
    Notice that the cartoons.csv data file has a column containing the Wikidata identifier for each character.  Combine the script in part A with this script to follow up the character search with a retrieval of other information about the character from Wikidata.  You can accomplish this by replacing the hard-coded `'http://www.wikidata.org/entity/Q3723661'` string in the query with a variable. Note that you will have to decide what to do in cases where there are no matches to the user input, or when there are multiple matches.
 
-   C. **Cartoon checker with Wikidata search and GUI** Combine your answer in B with code from previous challenge problems that use a TkInter GUI.
+   Answer for [Cartoon checker with Wikidata search](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_b.py)
+
+   C. **Super cartoon checker with Wikidata search and GUI** Combine your answer in B with code from previous challenge problems that use a TkInter GUI.  See [this page](../tkinter/) for details about TkInter.
+
+  Answer for [Super cartoon checker with Wikidata search and GUI ](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_c.py)
+
 
    **Program features**
    - The user enters the character name in a text box.
@@ -347,7 +351,36 @@ for statement in statements:
    - The results of the search show up in a scrolled text box.  
    - Can you figure out how to add a drop-down list to select the character to be looked up in Wikidata from among those that matched in the search?
 
+## Homework answers
+
+1\. **Nashville Schools info from the Internet**
+
+```python
+import csv
+import requests
+
+def readDict(url):
+    r = requests.get(url)
+    lineList = r.text.split('\n')
+    dictObject = csv.DictReader(lineList)
+    array = []
+    for row in dictObject:
+        array.append(row)
+    return array
+
+schoolData = readDict('https://github.com/HeardLibrary/digital-scholarship/raw/master/data/gis/wg/Metro_Nashville_Schools.csv')
+mySchool = input('What school do you want to know about? ')
+
+for school in schoolData:
+    if mySchool.lower() in school['School Name'].lower():
+        print('School:', school['School Name'])
+        print('Level:', school['School Level'])
+        print('Zip code:', school['Zip Code'])
+        print()
+```
+
+
 [some notes about practical problem solving with Python](../hack/)
 
-
-Revised 2019-04-11
+----
+Revised 2019-04-18
