@@ -276,7 +276,7 @@ r = requests.get(uri, headers={'Accept' : 'application/json'})
 
 The answers are [at the end](#homework_answers).
 
-1. **Nashville Schools info from the Internet** Begin with the [answer to Homework #2.C.](./inout/#homework_answers) from last week.  (You also need to include the `import` statement and `readDict()` function from the answer to #2.A.)  
+1\. **Nashville Schools info from the Internet** Begin with the [answer to Homework #2.C.](./inout/#homework_answers) from last week.  (You also need to include the `import` statement and `readDict()` function from the answer to #2.A.)  
 
 We are going to modify the `readDict()` function so that it gets its data from the Internet instead of a file on your computer.   The argument for the function will be the URL for the file instead of the file name, so you can change the parameter in the function definition from `filename` to `url`.  You will need to change the first two lines in function from a file open command to:
 
@@ -294,18 +294,82 @@ Now you can load the [Nashville schools data](https://github.com/HeardLibrary/di
 
 If you did challenge problem #1 last week, you can use that code as a starting point instead of the answer to homework #2.C.
 
+2\. **Where is the International Space Station now?**  There is a very simple API that will tell you the current latitude and longitude of the ISS.  The endpoint URL is:
+
+```
+http://api.open-notify.org/iss-now.json
+```
+
+There is no authentication required and JSON is returned by default, so you don't need to specify that as a request header. Here's the code you need to get the JSON:
+
+```python
+import requests
+
+url = 'http://api.open-notify.org/iss-now.json'
+r = requests.get(url)
+data = r.json()
+```
+
+The form of the JSON stored in the `data` variable is like this:
+
+```json
+{
+'timestamp': 1555613804, 
+'iss_position': {
+    'latitude': '-48.2676', 
+    'longitude': '103.0617'
+    }, 
+'message': 'success'
+}
+```
+
+As you can see, the latitude and longitude that we want are key:value pairs that are nested as second-level values of the `iss_position` key.  So to refer to the latitude value, we would need to say:
+
+```python
+latitude = data['iss_position']['latitude']
+```
+
+Here's the assignment:
+
+- make the API call to the endpoint and assign the latitude and longitude values (which will be strings) to appropriate variables.  
+- Create a string that is the Google Maps URL for showing the position.  The form of the URL is:
+
+```
+http://www.google.com/maps/place/{latitude},{longitude}/@{latitude},{longitude},{zoom}z
+```
+
+where {latitude} is the string for the lattitude as a decimal number as a string, {longitude} is the string for the longitude as a decimal number as a string, and {zoom} is an integer number as a string representing the zoom level.  A zoom level of 4 is good to show the position on the global level.  Here's an example:
+
+```
+http://www.google.com/maps/place/-28.2692,15.5214/@-28.2692,15.5214,4z
+```
+
+The `webbrowser` module has methods that can open web pages on your default browser.  Import it at the top of your script.
+
+You can then use this line of code to open the URL that you created in your script:
+
+```python
+webbrowser.open_new_tab(googleMapUrl)
+```
+
+This API is discussed in a nice tutorial [here](https://www.dataquest.io/blog/python-api-tutorial/).
+
 # Challenge problems
 
-2. A.  **Advanced cartoon checker** Use the [cartoons.csv](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoons.csv) file to create a script that allows the user to input all or part of the name of a cartoon character, then tell the user the company that created the character, and the character's nemesis.  You can decide whether you want to access the CSV file from a downloaded local file, or to retrieve it from GitHub when the script runs.
+1\. **Retrieving Tweets from the Twitter API**  The Twitter API requires authentication to retrieve data.  The Authentication method is called A
+
+2\. A.  **Advanced cartoon checker** Start with the [answer to last week's challenge problem 2](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_a.py).  Modify lines 5 and 6 so that you get the file from the cartoons.csv file online at GitHub instead of from the file downloaded on your local computer.  Don't forget to 
+
+Use the [cartoons.csv](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoons.csv) file to create a script that allows the user to input all or part of the name of a cartoon character, then tell the user the company that created the character, and the character's nemesis.  You can decide whether you want to access the CSV file from a downloaded local file, or to retrieve it from GitHub when the script runs.
  
-    **Program features**
+**Program features**
     - Notice that the nemesis for most characters hasn't been entered or isn't known.  So you should handle that.
     - In order to allow the user to enter part of the character's name, use the `substring in string` boolean expression.  For example `'he' in 'hello'` evaluates to `True`, but `'hi' in 'hello'` evaluates to `False`.
     - In order to make the search case insensitive, apply the `.lower()` method to both the string that the user entered and the character name in the CSV file.
     - Handle gracefully the case where there are no matches.
     - Also handle the case where there is more than one match.
 
-   B. **Cartoon checker with Wikidata search** The following script shows how to query the Wikidata API to learn more about items in its database.  
+B. **Cartoon checker with Wikidata search** The following script shows how to query the Wikidata API to learn more about items in its database.  
 
 ```python
 import requests   # best library to manage HTTP transactions
@@ -335,16 +399,15 @@ for statement in statements:
     print(statement['property']['value'] + ': ' + statement['value']['value'])
 ```
 
-   Notice that the cartoons.csv data file has a column containing the Wikidata identifier for each character.  Combine the script in part A with this script to follow up the character search with a retrieval of other information about the character from Wikidata.  You can accomplish this by replacing the hard-coded `'http://www.wikidata.org/entity/Q3723661'` string in the query with a variable. Note that you will have to decide what to do in cases where there are no matches to the user input, or when there are multiple matches.
+Notice that the cartoons.csv data file has a column containing the Wikidata identifier for each character.  Combine the script in part A with this script to follow up the character search with a retrieval of other information about the character from Wikidata.  You can accomplish this by replacing the hard-coded `'http://www.wikidata.org/entity/Q3723661'` string in the query with a variable. Note that you will have to decide what to do in cases where there are no matches to the user input, or when there are multiple matches.
 
-   Answer for [Cartoon checker with Wikidata search](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_b.py)
+Answer for [Cartoon checker with Wikidata search](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_b.py)
 
-   C. **Super cartoon checker with Wikidata search and GUI** Combine your answer in B with code from previous challenge problems that use a TkInter GUI.  See [this page](../tkinter/) for details about TkInter.
+C. **Super cartoon checker with Wikidata search and GUI** Combine your answer in B with code from previous challenge problems that use a TkInter GUI.  See [this page](../tkinter/) for details about TkInter.
+Answer for [Super cartoon checker with Wikidata search and GUI ](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_c.py)
 
-  Answer for [Super cartoon checker with Wikidata search and GUI ](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_c.py)
 
-
-   **Program features**
+**Program features**
    - The user enters the character name in a text box.
    - The user clicks a button to run the check.
    - The user clicks another button to get more information about the character from Wikidata.
@@ -379,6 +442,22 @@ for school in schoolData:
         print()
 ```
 
+2\. **Where is the International Space Station now?** 
+
+```python
+import requests
+import webbrowser
+
+url = 'http://api.open-notify.org/iss-now.json'
+r = requests.get(url)
+data = r.json()
+latitude = data['iss_position']['latitude']
+longitude = data['iss_position']['longitude']
+zoom = '4'
+googleMapUrl = 'http://www.google.com/maps/place/'+latitude+','+longitude+'/@'+latitude+','+longitude+','+zoom+'z'
+print(googleMapUrl)  # not necessary to print this, but useful for debugging
+webbrowser.open_new_tab(googleMapUrl)
+```
 
 [some notes about practical problem solving with Python](../hack/)
 
