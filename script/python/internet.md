@@ -358,16 +358,11 @@ This API is discussed in a nice tutorial [here](https://www.dataquest.io/blog/py
 
 1\. **Retrieving Tweets from the Twitter API**  The Twitter API requires authentication to retrieve data.  The Authentication method is called A
 
-2\. A.  **Advanced cartoon checker** Start with the [answer to last week's challenge problem 2](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_a.py).  Modify lines 5 and 6 so that you get the file from the cartoons.csv file online at GitHub instead of from the file downloaded on your local computer.  Don't forget to 
+2\. A.  **Advanced cartoon checker (Internet)** Start with the [answer to last week's challenge problem 2](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_a.py).  Modify lines 3 and 4 so that you get the file from the cartoons.csv file online at GitHub instead of from the file downloaded on your local computer.  You can see an example in the answer to homework #2. Don't forget to get rid of the close method in line 8, since you don't need it.  The URL to retrieve the raw CSV file is:
 
-Use the [cartoons.csv](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoons.csv) file to create a script that allows the user to input all or part of the name of a cartoon character, then tell the user the company that created the character, and the character's nemesis.  You can decide whether you want to access the CSV file from a downloaded local file, or to retrieve it from GitHub when the script runs.
- 
-**Program features**
-    - Notice that the nemesis for most characters hasn't been entered or isn't known.  So you should handle that.
-    - In order to allow the user to enter part of the character's name, use the `substring in string` boolean expression.  For example `'he' in 'hello'` evaluates to `True`, but `'hi' in 'hello'` evaluates to `False`.
-    - In order to make the search case insensitive, apply the `.lower()` method to both the string that the user entered and the character name in the CSV file.
-    - Handle gracefully the case where there are no matches.
-    - Also handle the case where there is more than one match.
+```
+https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoons.csv
+```
 
 B. **Cartoon checker with Wikidata search** The following script shows how to query the Wikidata API to learn more about items in its database.  
 
