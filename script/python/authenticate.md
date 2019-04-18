@@ -8,6 +8,36 @@ Note: this is an addendum lesson to a beginner's introduction to Python.  For th
 
 [prevous lesson on data from the Internet](../internet/)
 
+# Get a Twitter developer account
+
+![](../twitter/accept.png)
+
+Accept the user agreement.
+
+![](../twitter/dropdown.png)
+
+Go to the menu in the upper right and select `Apps`.
+
+![](../twitter/createApp.png)
+
+Click on the `Create an app` button.
+
+![](../twitter/describe.png)
+
+Fill in the App name and description.  The name has to be unique, so include your Twitter handle in it.  For the description, you can say that it is a classroom project to learn how to use an API in Python.  For the Website URL, you can use your website or the Python Working Group web page.  Do not enable Sign in with Twitter.  Leave the rest of the stuff blank except for the required "Tell us how this app will be used" box.  Again, you can explain that it is a class project to learn how to use an API.  Your explanation has to be at least 100 characters.
+
+Read the next popup, then click `Create`.
+
+![](../twitter/clickkeys.png)
+
+Click on the Keys and tokens tab.
+
+![](../twitter/keys.png)
+
+Copy your API key and API secret key from the next screen.  You will need them for the next part of the exercise.  Don't use the ones in this picture because they have been revoked and new keys have been regenerated.
+
+**Note:** When the class is over, I'm going to boot you off the team.  You will be able to continue to use the App you've created, but won't be able to create a new one without applying for your own developer account.
+
 # Example: Understanding API authorization
 
 In trying to use several APIs, I was struggling with understanding how the OAuth2 authorization protocol worked in Python.  

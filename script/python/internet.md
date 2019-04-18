@@ -356,13 +356,14 @@ This API is discussed in a nice tutorial [here](https://www.dataquest.io/blog/py
 
 # Challenge problems
 
-1\. **Retrieving Tweets from the Twitter API**  The Twitter API requires authentication to retrieve data.  The Authentication method is called A
+1\. **Retrieving Tweets from the Twitter API**  The Twitter API requires authentication to retrieve data.  In order to generate the access token that you need in order to use the API, you need to have a Twitter developer account.  If you are in a Python class at Vanderbilt, your teacher will give you a temporary one during the class.  See [this page](../authenticate/) for information on setting up your account and getting the API keys you need to proceed with this exercise.
 
 2\. A.  **Advanced cartoon checker (Internet)** Start with the [answer to last week's challenge problem 2](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_a.py).  Modify lines 3 and 4 so that you get the file from the cartoons.csv file online at GitHub instead of from the file downloaded on your local computer.  You can see an example in the answer to homework #2. Don't forget to get rid of the close method in line 8, since you don't need it.  The URL to retrieve the raw CSV file is:
 
 ```
 https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoons.csv
 ```
+Answer for [Advanced cartoon checker (Internet)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/cartoon_checker_a1.py)
 
 B. **Cartoon checker with Wikidata search** The following script shows how to query the Wikidata API to learn more about items in its database.  
 
