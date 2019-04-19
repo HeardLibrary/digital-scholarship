@@ -123,13 +123,78 @@ resourceUrl = 'https://api.twitter.com/1.1/statuses/user_timeline.json'
 paramDict = {'screen_name' : 'put twitter handle here', 'count' : '3', 'exclude_replies' : 'true', 'include_rts' : 'false'}
 r = requests.get(resourceUrl, headers={'Authorization' : 'Bearer '+ bearerAccessToken}, params = paramDict)
 data = r.json()
-print(data)
+for tweet in data:
+    print('Tweet: ' + tweet['text'])
+    print('On: ' + tweet['created_at'])
+    print('By: ' + tweet['user']['name'])
+    print()
 ```
 
 **Notes:**
 - The access token needs to be inserted in the third line, either by direct hard-coding, or be reading it from a file.
 - The Twitter handle (i.e. "screen name") needs to be inserted in the appropriate spot of the parameters dictionary.  The example shows it being hard-coded, but it would be better to insert it as a variable so that you can ask the user for it. 
 _ There are several other parameters in the dictionary.  You can read about them on the [API reference page](https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html).  The number of tweets to be retrieved in the example is 3.
+
+## Response JSON
+
+The script example above only makes use of a small amount of the data that is sent back from the API.  You can see the full JSON by replacing the for loop in the example with `print(data)`, although it's a bit hard to look at.  It's easier to look at the example JSON at the bottom of the [reference page](https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html), although it's so long and complicated that it is difficult to parse out.  Here's a snippet that leaves a lot out:
+
+```json
+[ 
+    {
+        "created_at": "Mon Apr 03 16:09:50 +0000 2017",
+        "id": 848930551989915648,
+        "id_str": "848930551989915648",
+        "text": "RT @TwitterMktg: Starting today, businesses can request and share locations when engaging with people in Direct Messages. https://t.co/rpYn…",
+        "truncated": false,
+        ...
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 6253282,
+            "id_str": "6253282",
+            "name": "Twitter API",
+            "screen_name": "twitterapi",
+            "location": "San Francisco, CA",
+            ...
+            "notifications": false,
+            "translator_type": "regular"
+            },
+        "geo": null,
+        "coordinates": null,
+        ...
+        "favorite_count": 0,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        another tweet
+    },
+    {
+        another tweet
+    }
+]
+```
+
+You can see that the outermost structure in the JSON is a list of tweet dictionaries.  In the code we iterate through that list, although you could refer directly to a tweet dictionary like this:
+
+```python
+data[1]
+```
+
+Within each tweet dictionary, there are a bunch of key:value pairs.  In the code, we refer to the tweet text by its key `text`.  The text of the first tweet could therefore be referenced like this:
+
+```python
+data[1]['text']
+```
+
+The user data is nested one layer deeper, as another dictionary that is the value of the `user` key.  So to refer to the user's name, we could do this:
+
+```python
+data[1]['user']['name']
+```
+
+Obviously, an important part of using the output of an API is understanding the structure of the JSON that gets returned.  A good API will return lots of complex data, and there is no standard structure for JSON, so you need to sort through it with a good code editor to pick out the bits you need.
 
 # For more information
 
