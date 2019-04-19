@@ -10,9 +10,11 @@ Note: this is an addendum lesson to a beginner's introduction to Python.  For th
 
 # Get a Twitter developer account
 
+Click on the link in your invitation email.
+
 ![](../twitter/accept.png)
 
-Accept the user agreement.
+Scroll all the way through, then accept the user agreement.  **Note:** if the checkbox for accepting is grayed out, use a different browser.  Chrome seems to work.
 
 ![](../twitter/dropdown.png)
 
@@ -40,7 +42,7 @@ Copy your API key and API secret key from the next screen.  You will need them f
 
 # Understanding API authorization
 
-If an API is read-only and contains only publicly available data, there is little damage that a client (computer software interacting with the API) can do other than hitting the API at two fast of a rate.  However, if an API provides access to private data, or allows a client to write to the API, then an authorization system is necessary.
+If an API is read-only and contains only publicly available data, there is little damage that a *client* (computer software interacting with the API) can do other than hitting the API at too fast of a rate.  However, if an API provides access to private data, or allows a client to write to the API, then an authorization system is necessary.
 
 There are two commonly-used standards for authorizing an application to interact with an API.  [OAuth 1](https://tools.ietf.org/html/rfc5849) is an older system that dates back to 2007 and is still used by many APIs.  [OAuth 2](https://hueniverse.com/introducing-oauth-2-0-b5681da60ce2) is a newer system (started in 2010) that is simpler than OAuth 1 and works better on mobile devices. In this example we will use OAuth 2.
 
@@ -60,7 +62,7 @@ The simplest method of getting an access token is called *client credentials* or
 
 <img src="../twitter/client-credentials.png" style="border:1px solid black">
 
-The diagram above shows how the client credentails method works.  The client sends the API key (identifier) and API secret key (secret) to the authentication server using an HTTP POST request (step 1) and the server sends back the access token (step 2).  The access token can be used for many API calls (steps 3 and 4) without interacting again with the authentication server.  Twitter access tokens do not expire.  They are only invalidated if the user revokes the application using the developer dashboard, or if Twitter suspends the application because of misuse of the API.  
+The diagram above shows how the client credentails method works.  The client sends the API key (identifier) and API secret key (secret) to the authentication server using an HTTP POST request (step 1) and the server sends back the access token (step 2).  The access token can be used for many API calls (steps 3 and 4) without interacting again with the authentication server.  Twitter access tokens do not expire.  They are only invalidated if the user revokes the application using the developer dashboard (e.g. clicking the "regenerate" button for the app), or if Twitter suspends the application because of misuse of the API.  
 
 There are a variety of Python packages that automate this process.  The "Requests-OAuthlib" library (not the same as the "requests" module) is the most commonly used.  It has a pretty good [readthedocs instruction page](https://requests-oauthlib.readthedocs.io/en/latest/) with actual Python code examples.  In the Requests-OAuthlib documentation, the "[Backend Application Flow](https://requests-oauthlib.readthedocs.io/en/latest/oauth2_workflow.html#backend-application-flow)" is the same as the "Application access" and "client credentials" systems. 
 
@@ -89,7 +91,7 @@ print(accessToken)
 
 # Accessing the Twitter API using the access token
 
-Once you have the access token, it is a relatively simple matter to use the `requests` module to get JSON from the API in a manner very similar to the way you would retrieve data from an API that does not require authorization.  The only difference is that you need to include an Authorization request header that has the value 
+Once you have the access token, it is a relatively simple matter to use the `requests` module to get JSON from the API in a manner very similar to the way you would retrieve data from an API that does not require authorization.  (See [the last lesson](../internet/#json_from_apis) for more info on that.)  The only difference is that you need to include an Authorization request header that has the value 
 
 ```
 Bearer {accessToken}
@@ -112,6 +114,8 @@ is composed of three pieces:
 - the generic resource URL: `statuses/user_timeline`
 - the extension for the specific JSON resource: `.json`
 
+Each resource type has its own generic resource URL that's shown at the top of its API reference page.
+
 **Code to retrieve Tweets from a user's timeline**
 
 ```Python 
@@ -133,11 +137,11 @@ for tweet in data:
 **Notes:**
 - The access token needs to be inserted in the third line, either by direct hard-coding, or be reading it from a file.
 - The Twitter handle (i.e. "screen name") needs to be inserted in the appropriate spot of the parameters dictionary.  The example shows it being hard-coded, but it would be better to insert it as a variable so that you can ask the user for it. 
-_ There are several other parameters in the dictionary.  You can read about them on the [API reference page](https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html).  The number of tweets to be retrieved in the example is 3.
+- There are several other parameters in the dictionary.  You can read about them on the [API reference page](https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html).  In the example, the number of tweets to be retrieved is set at 3.
 
 ## Response JSON
 
-The script example above only makes use of a small amount of the data that is sent back from the API.  You can see the full JSON by replacing the for loop in the example with `print(data)`, although it's a bit hard to look at.  It's easier to look at the example JSON at the bottom of the [reference page](https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html), although it's so long and complicated that it is difficult to parse out.  Here's a snippet that leaves a lot out:
+The script example above only makes use of a small amount of the data that is sent back from the API.  You can see the full JSON by replacing the for loop in the example with `print(data)`, although it's a bit hard to look at.  It's easier to look at the example JSON at the bottom of the [reference page](https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html), although it's so long and complicated that it is difficult to parse out.  Here's a snippet that leaves a lot out so that you can see the overall structure:
 
 ```json
 [ 
@@ -201,4 +205,4 @@ Obviously, an important part of using the output of an API is understanding the 
  The following two blog posts are recommended reading if you want to learn more details about all of the ways OAUTH2 can be used. [The first post](https://medium.com/google-cloud/understanding-oauth2-and-building-a-basic-authorization-server-of-your-own-a-beginners-guide-cf7451a16f66) has easy-to-understand diagrams with step-by-step explanations for each diagram.  [The second post](https://aaronparecki.com/oauth-2-simplified/) has example HTTP requests that corresponded to each of the diagrams in the first post, and had a very clear explanation (with pictures) of the circumstances under which you'd use each kind of OAuth2 authentication.  
 
 -----
-Revised 2019-04-18
+Revised 2019-04-19

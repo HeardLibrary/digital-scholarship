@@ -44,7 +44,7 @@ print(r.text)
 
 If the file that we are retrieving from the web is a CSV file (as was the case for the Nashville school data), we can use the same methods from the `csv` module as we did when loading data from a file locally.  
 
-When we open a file object, it's an iterable object and we can turn it into a reader or DictReader object.  However, the string that we get from the requests `.text` method is a string, which is not iterable.  However, as we saw at the end of the section on loading text from a file, we can turn a string containing newlines into a list using the `.split()` method, with '\n' as the argument.  Since a list is iterable, it can be passed into either the `.reader()` or `.DictReader()` methods.  Here is some code that reads in the Nashville school data and uses the `.reader()` function to create a list of lists serving as a table of the school data:
+When we open a file object, it's an iterable object and we can turn it into a reader or DictReader object.  However, the string that we get from the requests `.text` method is a string, which is not iterable.  However, as we saw at the end of the section on loading text from a file, we can turn a string containing newlines into a list using the `.split()` method, with `\n` as the argument.  Since a list is iterable, it can be passed into either the `.reader()` or `.DictReader()` methods.  Here is some code that reads in the Nashville school data and uses the `.reader()` function to create a list of lists serving as a table of the school data:
 
 ```python
 import requests
@@ -312,7 +312,7 @@ data = r.json()
 
 The form of the JSON stored in the `data` variable is like this:
 
-```json
+```
 {
 'timestamp': 1555613804, 
 'iss_position': {
@@ -463,4 +463,4 @@ webbrowser.open_new_tab(googleMapUrl)
 [some notes about practical problem solving with Python](../hack/)
 
 ----
-Revised 2019-04-18
+Revised 2019-04-19
