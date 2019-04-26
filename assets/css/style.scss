@@ -7,7 +7,7 @@
 
 .wrapper {
     width: unset;
-    margin:0 50px 0 230px;
+    margin:0 25px 0 230px;
     position:relative;
 }  
 
@@ -88,7 +88,9 @@ nav {
     top: 75px;
     /* top: 170px; */
     text-align: left;
-    margin-left: 25px;      
+    margin-left: 25px;
+    position: fixed;
+    left: 25px;
 }
 
 footer {
