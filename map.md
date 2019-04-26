@@ -17,7 +17,7 @@ breadcrumb: Map
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Planning resources](../manage/planning/)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Repositories](../manage/repository/)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Version control](../manage/control/)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Data visualization](../vis/)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[Data visualization](../viz/)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Digital security](../secure/)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Geospatial data](../geo/)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Linked Open Data (LOD)](../lod/)<br/>

@@ -28,7 +28,7 @@ In addition to the resources on this site, you can browse the Digital Scholarshi
 
 [Data management](manage/)
 
-[Data visualization](vis/)
+[Data visualization](viz/)
 
 [Digital privacy and security](privacy/)
 
