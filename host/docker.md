@@ -112,7 +112,7 @@ docker container stop shortName
 docker restart shortName
 
 # to list all Docker containers:
-cocker container ls -all
+docker container ls -all
 # leave the "-all" off to see only containers that are currently running
 
 # to remove a container using the ID shown in the previous command:
