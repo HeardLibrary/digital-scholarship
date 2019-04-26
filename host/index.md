@@ -28,9 +28,11 @@ coming later
 
 [Tutorial on installing and testing Docker](docker/)
 
+[Notes from a workshop by Nick Stayer on building and running a Dockerfile](http://nickstrayer.me/docker_for_biostatisticians/) (2019-04-26)
+
 [Introduction to Docker Compose](dockercompose/)
 
 [Introduction to Docker Machine](dockermachine/)
 
 ----
-Revised 2019-02-26
+Revised 2019-04-26
