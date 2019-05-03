@@ -28,7 +28,7 @@ First cycle: **Fridays** from 1:10 to 2:00 PM
 | Sep 27 | 4 | Lists and loops | [lesson webpage](../structures/) |
 | Oct 4 | 5 | Dictionaries and JSON | [lesson webpage](../json/) |
 | Oct 11 | 6 | Input and output from files | [lesson webpage](../inout/) |
-| Oct 18 | 7 | Interacting with the Internet | [lesson webpage](../hack/) |
+| Oct 18 | 7 | Interacting with the Internet | [lesson webpage](../internet/) |
 
 # Python Resources
 
