@@ -438,7 +438,7 @@ for day in range(1,6):
 
 ## Homework answers
 
-1\
+1\.
 
 ```python
 def checkGender(character, characterName, foundIt):
