@@ -250,20 +250,12 @@ Modify the previous example to multipy three numbers.
 
 # Modules and Packages
 
-This section is informational.  It isn't important for you to try the examples unless you are curious about how things work.  Most people will be able to get by just by reading this section.
-
 ## Using a function from a module
-We can reuse useful functions that we have created without actually including the function code in the file with our script.  We do that by placing the functions in a separate file, then importing the code from that file into our script.  The file containing the importable functions is called a *module*.
+We can make use of functions that have previously been created without actually including the function code in the file with our script.  The functions are stored in a separate file, and their code is imported from that file into our script.  The file containing the importable functions is called a *module*.
 
-An example of a module is [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/functions/simple_math.py).  The four functions in this module aren't really that useful.  When we know how to write more complicated code, we can create more useful modules.  
+Here is an example where we use two functions from a module called `simple_math`.  One of the functions we are going to use is called `addition`.  The `addition` function is a fairly useless one where we pass two numbers in as arguments and the function returns their sum.  The other function, `multiplication`, operates similarly.
 
-There are two ways to get this library onto your computer:  
-
-1. Right click on the Raw button and select "Save link as...".  Save the file to the directory you are running Python from (probably your home directory).
-
-2. Click the Raw button. Open a new file in your code editor or IDE.  Copy and paste all of the text from the browser to the code editor.  Save the file as `simple_math.py` in the directory from which you are running Python (probably your home directory).  
-
-To use one of the functions, we have to import the module.  Save the following code in the directory where you saved the simple_math.py file:
+In order to let Python know that we are getting the function from a different file, we have to give the name of the module in an `import` statement.
 
 ```python
 import simple_math
@@ -297,9 +289,9 @@ print(product)
 
 ## How does Python know where to find modules?
 
-In this example, Python was able to find the module because it was in the same directory as the script that called it.  However, it would be really annoying to have to always put the module file in the directory where the script lives.  
+When we use an import statement in our code, the first place Python looks for the module file is in the same directory where the code is located.  However, it would be really annoying to have to always put a module file in the directory where the script lives.  
 
-If a module is called and Python doesn't find it in the same directory as the calling script, it will look in other standard places that have been specified when Python was installed.  Python actually comes with a lot of pre-made modules, called the *standard library*.  You don't have to do anything to get those modules, all you have to do is to retrieve them in your code as an import statement.
+If a module is called and Python doesn't find it in the same directory as the calling script, it will look in other standard places that have been specified when Python was installed.  Python actually comes with a lot of pre-made modules, called the *standard library*.  You don't have to do anything to get those modules, all you have to do is to retrieve them into your code using an import statement.
 
 Here is a fun example using the standard `random` module:
 
@@ -336,19 +328,13 @@ Python would take up a lot more space on your computer if it included every know
 
 If you have installed Python by installing Anaconda, Anaconda has already installed many of the typical modules used in the STEM and data science world.
 
-<img src="../images/file-structure.png" style="border:1px solid black">
+<img src="../images/module-structure.png" style="border:1px solid black">
 
 ## What are packages?
 
-Sometimes related modules are grouped together into *packages*.  From the standpoint of file structure, a package is a folder that holds several Python text files (with `.py` file extensions).  You can see an example of a package called `functions` [here](https://github.com/HeardLibrary/digital-scholarship/tree/master/code/pylesson/functions).  The function package contains two modules: the useless `simple_math` module that you used before, and another one called `simple_string` that contains two silly little functions that can be viewed [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/functions/simple_string.py).  
+Sometimes related modules are grouped together into *packages*.  In the diagram above, you can see an example of a package called `functions`.  The functions package contains two modules: the useless `simple_math` module that you saw before, and another one called `simple_string` that contains two functions: one that join strings and another that finds their length.  
 
-If you want to try using this package, you will need to download the `functions` folder to your computer's hard drive.  The easiest way to do that is to go to [this web page](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/functions.zip), click the download button, open the .zip file, and copy the `functions` folder to the folder from which you've been running Python (probably your user folder).  After you've finished the download, it should look something like this:
-
-<img src="../images/package-directory.png">
-
-Notice that there is a third file in the directory called `__init__.py`.  That file actually doesn't have any contents - its presence is simply a signal to Python that the directory is a package.
-
-Now create this script in the directory where you placed the `functions` folder:
+Here is a script that shows how the functions could be used:
 
 ```python
 import functions.simple_math
@@ -363,26 +349,17 @@ combinedString = functions.simple_string.concatenation(firstName, lastName)
 print(combinedString)
 ```
 
-The subtraction function subtracts the second argument from the first and the concatenation function joins the two string arguments together.  If you run the script, you should get the following result:
+The subtraction function subtracts the second argument from the first and the concatenation function joins the two string arguments together.  If you run the script, you would get the following result:
 
 ```
 7
 DonaldDuck
 ```
-<img src="../images/module-structure.png" style="border:1px solid black">
 
-The system of specifying the function by connecting the package, module, and function by dots:
+The hierarchical system of specifying the function from a package involves separating the package, module, and function by dots:
 
 ```text
 package.module.function()
-```
-
-reflects the hierarchy of function within module file and module file within package directory:
-
-```text
-package directory
-module file
-function code
 ```
 
 We can simplify the function names several ways:
@@ -403,6 +380,10 @@ print(combinedString)
 In line 1, we simply imported the `simple_math` module by specifying that it was in the `function` package.  If we had wanted, we could have shortened the module name using an `as` clause.  In line 2, we directly specified the module by giving its "path" expressed using the dot notation.  
 
 In code examples, you will see all kinds of variations on these themes.  Just remember that functions live within modules, and modules live within packages.
+
+**Making your own modules and packages**
+
+If you are interested in the mechanics of making your own modules and packages, see [this page](../module/).
 
 # Keyboard input
 
@@ -637,4 +618,4 @@ if not zero:
 ```
 
 ----
-Revised 2019-01-19
+Revised 2019-05-02
