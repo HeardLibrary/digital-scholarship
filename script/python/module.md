@@ -4,7 +4,7 @@ title: Creating modules and packages
 breadcrumb: Modules
 ---
 
-Note: this is an auxillary lesson in a beginner's introduction to Python.  It's associated with the section on [modules and packages](../basics/#modules_and_packages). For the whole schedule, see the [Vanderbilt Python Working Group homepage](../wg/)
+Note: this is an auxillary lesson in a beginner's introduction to Python.  It's associated with the section on [modules and packages](../basics/#modules-and-packages). For the whole schedule, see the [Vanderbilt Python Working Group homepage](../wg/)
 
 
 # Creating Your Own Modules and Packages
@@ -106,7 +106,7 @@ module file
 function code
 ```
 
-[Return to the main lesson](../basics/#keyboard_input)
+[Return to the main lesson](../basics/#keyboard-input)
 
 ----
 Revised 2019-05-02
