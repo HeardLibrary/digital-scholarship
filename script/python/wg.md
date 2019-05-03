@@ -27,8 +27,8 @@ First cycle: **Fridays** from 1:10 to 2:00 PM
 | Sep 20 | 3 | Object-oriented Python | [lesson webpage](../object/) |
 | Sep 27 | 4 | Lists and loops | [lesson webpage](../structures/) |
 | Oct 4 | 5 | Dictionaries and JSON | [lesson webpage](../json/) |
-| Oct 11 | 6 | Input and output | [lesson webpage](../inout/) |
-| Oct 18 | 7 | Practical problem solving | [lesson webpage](../hack/) |
+| Oct 11 | 6 | Input and output from files | [lesson webpage](../inout/) |
+| Oct 18 | 7 | Interacting with the Internet | [lesson webpage](../hack/) |
 
 # Python Resources
 
