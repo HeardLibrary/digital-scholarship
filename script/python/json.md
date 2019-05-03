@@ -9,7 +9,9 @@ Note: this is the fifth lesson in a beginner's introduction to Python.  For the 
 
 # Dictionaries
 
-A dictionary is a structure that is essentially a list of key:value pairs.  Dictionaries are enclosed by curly braces.  Here's an example:
+In the previous lesson, we learned about one important Python data structure: lists.  In this lesson, we will begin by looking at a second important data structure: dictionaries.
+
+A *dictionary* is a structure that is essentially a list of key:value pairs.  Dictionaries are enclosed by curly braces.  Here's an example:
 
 ```python
 company = {'Mickey Mouse':'Disney', 'Donald Duck':'Disney', 'Daffy Duck':'Warner Brothers', 'Fred Flintstone':'Hanna Barbera'}
@@ -105,6 +107,168 @@ if not(found):
 ```
 Notice how we need to pay careful attention to indentation levels when code gets complicated with loops and nested `if` statements.  How did we solve the problem of the case where no character matches?
 
+# JSON
+
+Currently, *Javascript Object Notation* (JSON) is one of the most popular was to transmit data between applications.  Most *application programming interfaces* (APIs) that are available online provide data in the form of JSON -- sometimes exclusively.  
+
+## JSON background
+
+Here are some basics about JSON.
+
+A basic unit of JSON is a *key:value pair*.  for example:
+
+```
+"name":"Steve"
+"fingers":10
+```
+
+The key (technically called a "name" in JSON) must be a string in double quotes.  The value can be a string (in double quotes), a number (not in double quotes), or other things.  In JSON, double quotes must be used to enclose quotes -- single quotes aren't allowed.
+
+A *JSON object* is an unordered list of key:value pairs, separated by commas and enclosed in curly brackets:
+
+```json
+{"name":"Steve", "fingers":10, "street":"Keri Drive"}
+```
+
+A *JSON array* is an ordered list of values, separated by commas and enclosed in square brackets.  As in key:value pairs, array values can be strings (in double quotes), numbers (not in double quotes), or other things:
+
+```json
+["Steve", "Steven", "Esteban"]
+```
+
+The "other things" allowed as values in key:value pairs or arrays can be JSON objects or arrays.  Thus JSON can have complicated nested structures, such as arrays within objects, objects within arrays, arrays within arrays, objects within objexts, or more complicated combinations.  For example:
+
+```json
+{"name":["Steve", "Steven", "Esteban"], "fingers":10, "street":"Keri Drive"}
+```
+
+In this example, nesting an array as a value with a JSON object shows that the name key can have the multiple values within the array.  
+
+Whitespace is not important in JSON.  The following three JSON structures are exactly the same:
+
+```json
+{"name":["Steve","Steven","Esteban"], "fingers":10, "street":"Keri Drive"}
+```
+```json
+{"name":["Steve","Steven","Esteban"],
+ "fingers":10, 
+ "street":"Keri Drive"}
+```
+```json
+{
+  "name":
+         [
+         "Steve",
+         "Steven",
+         "Esteban"
+         ],
+  "fingers":10, 
+  "street":"Keri Drive"
+}
+```
+
+Whitespace can be used to make the JSON more readable to humans, but consuming software sees the alternatives as the same.
+
+For the details of JSON, see [this page](https://www.json.org/).
+
+## JSON and Python
+
+As you read the previous section, you may have noticed that JSON is very similar to the Python data structures that we have used (with the exception that JSON requires double quotes and Python allows either double or single quotes).  A "JSON object" is very similar to a Python dictionary.  A "JSON array" is very similar to a Python list. In the same way that JSON objects can be nested within arrays or arrays nested within objects, Python dictionaries can be nested within lists or lists nested within dictionaries.  So pretty much any JSON data structure can be translated into a complex Python data object.  
+
+There is a Python library, appropriately called the `json` module, that will convert a JSON string into a Python data object and vice versa.  Here is an example of how it can be used:
+
+```python
+import json
+
+jsonString = '''{
+  "name":
+         [
+         "Steve",
+         "Steven",
+         "Esteban"
+         ],
+  "fingers":10, 
+  "street":"Keri Drive"
+}'''
+
+data = json.loads(jsonString)
+
+print(data)
+print(data['name'])
+print(data['fingers'])
+print(data['name'][1])
+```
+
+Notes:
+- Notice how the triple single-quote was used to create a multi-line string that includes the newlines as part of the string.  Since newlines and spaces are ignored whitespace in JSON, the `.loads()` method has no problem with them and the multi-line string is easier for us to read.
+- In the dictionary that results from the `.loads()` method, we can refer to values by the key string.
+- Since the value of the `name` key is a list, we have to include an index number in second set of square brackets to refer to the value that we want.
+
+The json module has a `.dumps()` method that works in the reverse direction: it turns a data structure composed of dictionaries and lists into a JSON string that can be saved in a file or used in some other way.
+
+**Try this**
+
+Answers are [at the bottom of the page](#json-answers)
+
+1\. Here is some JSON about acetylsalicylic acid:
+
+```json
+{"id": 2157, "formula": "C_{9}H_{8}O_{4}", "molecularWeight": 180.1574, "commonName": "Aspirin"}
+```
+
+In Python, we can assign this JSON to a string like this:
+
+```python
+string = '{"id": 2157, "formula": "C_{9}H_{8}O_{4}", "molecularWeight": 180.1574, "commonName": "Aspirin"}'
+```
+
+Write a script to turn the JSON string into a Python data structure (a dictionary), then print the formula. Don't forget to import the json module.
+
+2\. JSON is returned from a search of the Royal Society of Chemistry API (https://api.rsc.org/).  The results JSON tells us the identifier of compound(s) that meet the requirements of the search.  We want to insert the identifier in the following URL to get data about the compund(s):
+
+`https://api.rsc.org/compounds/v1/records/{id}/details`
+
+where the identifier is substituted in place of `{id}` in the URL. Here's the JSON:
+
+```json
+{"results": [2157], "limitedToMaxAllowed": "False"}
+```
+
+We can reformat the JSON to make its structure more clear:
+
+```json
+{
+    "results": [
+        2157
+        ], 
+    "limitedToMaxAllowed": "False"
+}
+```
+
+We can turn this JSON string into a Python data structure with this code:
+
+```python
+import json
+
+jsonString = '''{
+    "results": [
+        2157
+        ], 
+    "limitedToMaxAllowed": "False"
+}'''
+
+dataStructure = json.loads(jsonString)
+print(dataStructure)
+```
+
+A. What type of Python object is the value of `dataStructure['results']` ?
+
+B. How can we refer to the number `2157` as a subcomponent of `datastructure`?
+
+C. In this example, what type of Python object is the number `2157` ? 
+
+D. How could we make it be a string and insert it into the URL string?
+
 # Homework
 
 The answers are [at the end](#homework-answers)
@@ -163,6 +327,45 @@ for item in itemList:
         matched = True
 if not matched:
     print('That item is not in stock')
+```
+
+## JSON answers
+
+1\. 
+
+```python
+import json
+string = '{"id": 2157, "formula": "C_{9}H_{8}O_{4}", "molecularWeight": 180.1574, "commonName": "Aspirin"}'
+dataStructure = json.loads(string)
+print(dataStructure['formula'])
+```
+
+2\. A. You can find out by adding the line:
+
+```python
+print(type(dataStructure['results']))
+```
+
+You will find that it's a list.  That's because the number is in square brackets - it's a list that has only a single member.
+
+B. `dataStructure['results'][0]` The number is the first (and only) item in the list, so refer to it by the index 0.
+
+C. You can find out by adding the line:
+
+```python
+print(type(dataStructure['results'][0]))
+```
+
+You will find that it's an int (integer number).  In order to make it a string, you need to use the `str()` function:
+
+```
+str(dataStructure['results'][0])
+```
+
+Here's an expression for the URL with the results inserted:
+
+```python
+url = 'https://api.rsc.org/compounds/v1/records/'+ str(dataStructure['results'][0]) +'/details'
 ```
 
 ## Homework answers
