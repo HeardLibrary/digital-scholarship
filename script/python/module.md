@@ -90,7 +90,6 @@ The subtraction function subtracts the second argument from the first and the co
 7
 DonaldDuck
 ```
-<img src="../images/module-structure.png" style="border:1px solid black">
 
 The system of specifying the function by connecting the package, module, and function by dots:
 
