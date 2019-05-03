@@ -16,33 +16,23 @@ The group meets weekly throughout the semester.  Each session is composed of two
 
 The Working Group meets in the Eskind Training Room (Room 010 in the basement of the Eskind Biomedical Library).  To get there, walk past the circulation desk and veer to the left.  Take the elevators or stair down one floor, then turn right when you come out.
 
-## Schedule - Spring 2019
+## Schedule - Fall 2019
 
-First cycle: **Tuesdays** from 12:10 to 2:00 PM (Intro: 12:10 to 1:00 PM, Workshop: 1:00 to 2:00 PM)
-
-| Date | Session | Topic | Notes |
-|---|---|---|
-| Jan 15 | 1 | Getting started | [intro](../) / [install Python](../install/) / [install Thonny](../thonny/) / [install editor](../editor/) |
-| Jan 22 | 2 | Python scripting basics | [lesson webpage](../basics/) |
-| Jan 29 | 3 | Object-oriented Python | [lesson webpage](../object/) |
-| Feb 5 | 4 | Using data structures | [lesson webpage](../structures/) |
-| Feb 12 | 5 | Input and output | [lesson webpage](../inout/) |
-| Feb 19 | 6 | Practical problem solving | [lesson webpage](../hack/) |
-
-Second cycle: **Fridays** from 12:10 to 2:00 PM (Intro: 12:10 to 1:00 PM, Workshop: 1:00 to 2:00 PM)
+First cycle: **Fridays** from 1:10 to 2:00 PM
 
 | Date | Session | Topic | Notes |
 |---|---|---|
-| Mar 15 | 1 | Getting started | [intro](../) / [install Python](../install/) / [install Thonny](../thonny/) / [install editor](../editor/)  |
-| Mar 22 | 2 | Python scripting basics | [lesson webpage](../basics/) |
-| Mar 29 | 3 | Object-oriented Python | [lesson webpage](../object/) |
-| Apr 5 | 4 | Using data structures | [lesson webpage](../structures/) |
-| Apr 12 | 5 | Input and output from files | [lesson webpage](../inout/)  |
-| Apr 19 | 6 | Interacting with the Internet | [lesson webpage](../internet/)|
+| Sep 6 | 1 | Getting started | [intro](../) / [install Python](../install/) / [install Thonny](../thonny/) / [install editor](../editor/) |
+| Sep 13 | 2 | Python scripting basics | [lesson webpage](../basics/) |
+| Sep 20 | 3 | Object-oriented Python | [lesson webpage](../object/) |
+| Sep 27 | 4 | Lists and loops | [lesson webpage](../structures/) |
+| Oct 4 | 5 | Dictionaries and JSON | [lesson webpage](../json/) |
+| Oct 11 | 6 | Input and output | [lesson webpage](../inout/) |
+| Oct 18 | 7 | Practical problem solving | [lesson webpage](../hack/) |
 
 # Python Resources
 
 Here's a [page of Python resources](../)
 
 ----
-Revised 2019-05-02
+Revised 2019-05-03

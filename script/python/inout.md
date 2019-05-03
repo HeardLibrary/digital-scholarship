@@ -4,7 +4,7 @@ title: File input and output
 breadcrumb: Files
 ---
 
-Note: this is the fifth lesson in a beginner's introduction to Python.  For the whole schedule, see the [Vanderbilt Python Working Group homepage](../wg/)
+Note: this is the sixth lesson in a beginner's introduction to Python.  For the whole schedule, see the [Vanderbilt Python Working Group homepage](../wg/)
 
 [prevous lesson on data structures](../structures/)
 
