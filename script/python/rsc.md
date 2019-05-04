@@ -6,6 +6,8 @@ breadcrumb: API project
 
 # Royal Society of Chemistry API project
 
+There is a solution for this exercise [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/rsc.py).  It's divided into the parts below and you can look at it if you get stuck.
+
 ## Preliminaries
 
 Go to the RSC Developers Portal <https://developer.rsc.org/home> and register to get an account.  The account is free for up to 1000 API calls per month.
@@ -145,3 +147,6 @@ for item in results:
 
 Then each `item` iterator is the key for the dictionary item and `results[item]` is the value for the dictionary item.
 - When everything is working the way you want, you can delete or comment out all of the unnecessary intermediate print statements.
+
+----
+Revised 2019-05-04

@@ -6,6 +6,8 @@ breadcrumb: NOBCChE
 
 # NOBCChE Lesson
 
+[Click to go the the Royal Society of Chemistry API project page](../rsc/)
+
 | Part | Topic | Notes |
 |---|---|---|
 | 1 | Getting started | [intro](../) / [install Python](../install/) / [install Thonny](../thonny/) / [install editor](../editor/)  |
