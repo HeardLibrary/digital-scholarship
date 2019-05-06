@@ -37,7 +37,7 @@ breadcrumb: Map
 &nbsp;&nbsp;&nbsp;&nbsp;[Digital publishing and curatation](../pubs/)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Document markup](../markup/)<br/>
 
-<strong>[Scripting/programming languages](../script/)</strong><br/>
+<strong>Scripting/programming languages</strong> [homepage](../script/)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;XQuery<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Resources page](../script/xquery/)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Working Group website](https://heardlibrary.github.io/xquery-working-group/)<br/>
@@ -57,7 +57,7 @@ breadcrumb: Map
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Resources page](../script/r/)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Working Group website](https://commodore-r-group.github.io/)<br/>
 <br/>
-<strong>[Understanding my computer](../computer/)</strong><br/>
+<strong>Understanding my computer</strong> [homepage](../computer/)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Files](../computer/files/)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Directories](../computer/directories/)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Installing software](../computer/installation/)<br/>
