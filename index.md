@@ -22,7 +22,7 @@ In addition to the resources on this site, you can browse the Digital Scholarshi
 
 [Data cleaning and code organization](clean/) - Open Refine is a powerful tool for manipulating and cleaning data.  If you want to script and document data cleaning or other kinds of data pipelines you can use Jupyter notebooks (for Python or R) or R Markdown (for R).
 
-[Data management](manage/) - There are many tools available to help you manage your data throughout the research life cycle, including data management planning, version control, and deposit of data and publications in a repository.  
+[Data management](manage/) - There are many tools available to help you manage your data throughout the research life cycle, including data management planning, version control, and deposit of data and publications in a repository, such as Vanderbilt's Institutional Repository.  
 
 [Data visualization](viz/) - Tableau Public is a commonly used tool for visualizing data on the fly.  There are also powerful visualization libraries that can be used with R and Python.
 
