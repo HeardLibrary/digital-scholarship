@@ -28,6 +28,15 @@ breadcrumb: Map
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Installing Blazegraph and Wikibase using Docker](../lod/install/)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Wikibase data model](../lod/wikibase/)<br/>
 <br/>
+<strong>Scholarly Communications</strong><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[Application hosting and management](../host/)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Wikidata resources](../host/wikidata/)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Installing Docker](../host/docker/)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Docker Compose](../host/dockercompose/)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Docker Machine](../host/dockermachine/)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[Digital publishing and curatation](../pubs/)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[Document markup](../markup/)<br/>
+
 <strong>[Scripting/programming languages](../script/)</strong><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;XQuery<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Resources page](../script/xquery/)<br/>
@@ -48,15 +57,6 @@ breadcrumb: Map
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Resources page](../script/r/)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Working Group website](https://commodore-r-group.github.io/)<br/>
 <br/>
-<strong>Scholarly Communications</strong><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Application hosting and management](../host/)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Wikidata resources](../host/wikidata/)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Installing Docker](../host/docker/)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Docker Compose](../host/dockercompose/)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Docker Machine](../host/dockermachine/)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Digital publishing and curatation](../pubs/)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;[Document markup](../markup/)<br/>
-
 <strong>[Understanding my computer](../computer/)</strong><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Files](../computer/files/)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Directories](../computer/directories/)<br/>
