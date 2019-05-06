@@ -6,6 +6,7 @@ breadcrumb: Privacy
 
 # Digital Privacy and Security
 
+
 ## Passwords and password managers
 
 under construction
@@ -70,6 +71,15 @@ under construction
 
 [malware handout in PDF form](virus-malware-handout.pdf) (2019-03-14) http://bit.ly/2F53VGr
 
+# For more information
+
+There are many other important topics you can research, including: file and hard drive encryption and the [Tails safe and anonymous operating system](https://tails.boum.org/).
+
+The [Library Freedom Project](https://libraryfreedomproject.org/) has resources for [online provacy basics](https://libraryfreedomproject.org/resources/onlineprivacybasics/) and a [mobile privacy crash course](https://libraryfreedomproject.org/mobileprivacytoolkit/).
+
+The [CryptoParty](https://www.cryptoparty.in/) movement organizes digital privacy events around the world. Their [CryptoParty handbook](https://www.cryptoparty.in/learn/handbook) contains a lot of useful information.  
+
+[Security in a Box](https://securityinabox.org/en/) has links to many useful tools.
 
 ----
 Revised 2019-05-06
