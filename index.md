@@ -12,15 +12,11 @@ In addition to the resources on this site, you can browse the Digital Scholarshi
 
 # Ways to navigate
 
-## FAQ
+## Alphabetical topic list
 
-[Frequently asked questions - Beginner](beginner)
+[Go to the topic list](topics/)
 
-[Frequently asked questions - Intermediate](intermediate)
-
-[Frequently asked questions - Advanced](advanced)
-
-## By Topic
+## By topic tree
 
 [Application hosting and management](host/)
 
@@ -31,6 +27,8 @@ In addition to the resources on this site, you can browse the Digital Scholarshi
 [Data visualization](viz/)
 
 [Digital privacy and security](privacy/)
+
+[Digital publishing and curation](pubs/)
 
 [Document markup](markup/)
 

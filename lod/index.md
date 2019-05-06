@@ -8,7 +8,7 @@ breadcrumb: LOD
 
 Linked Data is a graph-based data representation that enables sharing and linking data among providers. Linked Open Data makes those data freely available.
 
-At Vanderbilt, the [Digital Scholarship and Scholarly Communications Office](https://www.library.vanderbilt.edu/scholarly/) sponsors a Linked Data Working Group that explores issues related to Linked Data.
+At Vanderbilt, the [Digital Scholarship and Communications Office](https://www.library.vanderbilt.edu/scholarly/) is sponsoring a Wikidata working group in the fall of 2019.  This group will be concerned with Linked Data issues as well as broader topics related to Wikidata and Wikibase (the software that underlies Wikidata).
 
 [Beginner's lesson on graphs, URIs, and triples](../lod/graphs/)
 
@@ -24,3 +24,5 @@ At Vanderbilt, the [Digital Scholarship and Scholarly Communications Office](htt
 
 [Linked Data WG SPARQL endpoint](https://sparql.vanderbilt.edu/)
 
+----
+Revised 2019-05-06
