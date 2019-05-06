@@ -14,6 +14,10 @@ coming later
 
 coming later
 
+## DigitalOcean
+
+coming later
+
 ## Wikidata and Wikibase
 
 [page with some resources](wikidata/)
