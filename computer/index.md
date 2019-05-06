@@ -70,10 +70,10 @@ Topics include:
 - The console (Terminal in Mac, Command Prompt in Windows)
 - File paths and navigating through directories
 - Running programs
-- The system PATH variagle
+- The system PATH variable
 - Localhost web servers
 
 Go to Lesson 6: Command line [for Mac (Unix shell)](command-unix) or [for Windows (DOS)](command-windows)
 
 ----
-Revised 2019-02-27
+Revised 2019-05-06
