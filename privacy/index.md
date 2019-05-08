@@ -6,6 +6,7 @@ breadcrumb: Privacy
 
 # Digital Privacy and Security
 
+Understanding digital privacy and safeguarding your personal data against unwanted appropriation and distribution are key skills in the new digital world. While the Office of Digital Scholarship and Scholarly Communications generally advocates for openness, we believe that sharing information should emerge from deliberate choice rather than the tacit interventions of third-parties. Indeed, some forms of scholarly communication can only take place over secure channels because the data being exchanged is politically or personally sensitive, or becaue it might harm the interests of others. For these reasons, the the Office of Digital Scholarship and Scholarly Communications regularly teaches patrons how to protect their personal data online as well as how to exchange information securely with scholars around the world. 
 
 ## Passwords and password managers
 
