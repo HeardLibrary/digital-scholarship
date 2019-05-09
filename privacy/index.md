@@ -9,7 +9,11 @@ breadcrumb: Privacy
 
 ## Passwords and password managers
 
-under construction
+Passwords that are long and consist of various kinds of characters are hard to hack, and passwords that are shorter and consist of only alphabetic characters are easier to figure out.  It's a good idea for passwords to be at least 8 characters long and consist of a combination of upper- and lower-case letters, numbers, and special symbols (although some accounts place limits on the symbols that can be used).  It is a terrible idea to use passwords that consist of your name (or parts of it), your username, "password", sequences of numbers like "12345", etc.  Passwords that are essentially random are the best, but can be difficult to remember, especially if they are not reused.
+
+It's a really bad idea to reuse passwords between online accounts, since if one account gets hacked, your reused password can be used to gain access to the other accounts.  Because secure passwords are by their nature hard to remember, you might consider using a password manager app on your phone.  One good option that is free is LastPass.  It syncs data across platforms and is available for [iOS devices](https://itunes.apple.com/us/developer/logmein-inc/id299616804) and PC (https://www.microsoft.com/en-us/p/lastpass/9wzdncrfj3qk).  
+
+One thing to consider carefully if you use a password manager is what you will do if you lose your phone.  First, you need to make sure that you have an alternate way to access your passwords without the missing phone.  Second, you need to make sure that your phone is secure in the event that a nefarious finder or thief cannot get into it and use the password manager to access all of your accounts.
 
 ## Secure messaging
 
@@ -27,9 +31,31 @@ By default, the Tor browser uses [DuckDuckGo](https://duckduckgo.com/), a search
 
 For [more information](https://www.torproject.org/about/history/) and to [download the Tor browser](https://www.torproject.org/download/) visit the [Tor project website]((https://www.torproject.org/) ).  
 
-## Privacy on your smartphone
+## Privacy on your iPhone
 
-under construction
+These suggestions apply most directly to iPhones, but some of them apply to smartphones in general.
+
+1. Use two-factor authentication! If you’re running iOS 12 or later, go ahead and sign up for TFA on websites you visit. Those sites will send you a confirmation text when you sign in, and your iPhone will automatically copy that confirmation code into your web browser, making 2FA a breeze.
+
+2. Don’t re-use passwords! Go to Settings > Passwords & Accounts > Website & App Passwords. You’ll see all the passwords your iPhone has saved to your Keychain. Any password with an exclamation mark in a triangle next to it is used on more than one site. You should make these unique! Tap to change that password.
+
+3.	Use strong passwords! When you use your iPhone to generate a password for a website, top the “Use Strong Password” to make a better password. iOS will automatically save it in your keychain, so you don’t have to remember it. Stronger passwords means that if a website gets their database hacked, you’ll be safer.
+
+4.	Use Safari! By default, it will stop advertisers from tracking you around the web, slow down Facebook and Google, and stop websites from requesting your device’s unique digital signature.
+
+5.	Audit and block apps that have access to your camera, microphone, and location! Go to Settings > Privacy to see a list of these things, then tap on a category to see which of you apps have access. For apps that don’t really need access to, say, your location or your microphone, cut them off!
+
+6.	Search using DuckDuckGo! Their business model doesn’t rely on collecting data about you, and so they don’t. Go to Settings > Safari > Search Engine and tap on DuckDuckGo. Their results are just as good as Google.
+
+7.	Be ready to turn off Touch ID and Face ID! Thanks to the Fifth Amendment, law enforcement can’t compel you to give up your passcode. But they can compel you to unlock your phone using Touch ID or Face ID. Go to Settings > Emergency SOS and turn on “Call with Side Button.” Now, when you press your iPhone’s side button five times, only your passcode will open your phone. 
+
+8.	Delete lockscreen widgets that display person info! Swipe to the right and see what widgets you have available who picks up your phone. If there are any that display personal info (like your calendar), scroll down to tap “Edit” and remove them. Similarly, go to Settings > Touch ID & Passcode and look for “Allow Access When Locked.” Disable any feature you don’t want strangers to access.
+
+9.	Don’t show strangers your messages! Go to Settings > Notifications > Messages > Show Previews, then select “When Unlocked.” Otherwise, incoming messages are readable on your lock screen to anyone holding your phone.
+
+10.	Enable Find My iPhone? Go to Settings > Apple ID > iCloud > Find My iPhone. Enable this if you’d like the ability to wipe your phone remotely, if it gets stolen. Disable this if you’re more worried about Apple knowing where your phone is.
+
+Thanks to Derek Bruff who created this as a [handout](../privacy-on-your-smartphone.pdf) for our digital privacy event based on suggestions from [Fast Company](https://www.fastcompany.com/90254589/use-these-9-critical-iphone-privacy-and-security-settings-right-now) and [Life Hacker](https://lifehacker.com/the-privacy-enthusiasts-guide-to-using-an-iphone-1792386831).  
 
 ## Avoiding malware and viruses on your computer
 
@@ -82,4 +108,4 @@ The [CryptoParty](https://www.cryptoparty.in/) movement organizes digital privac
 [Security in a Box](https://securityinabox.org/en/) has links to many useful tools.
 
 ----
-Revised 2019-05-06
+Revised 2019-05-09
