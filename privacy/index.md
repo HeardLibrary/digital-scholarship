@@ -90,7 +90,7 @@ Thanks to Derek Bruff who created this as a [handout](../privacy-on-your-smartph
 
 *If you are affiliated with Vanderbilt:*
 - faculty and staff should get help from their local IT support personnel
-- students should contact the VIUT help desk
+- students should contact the [VIUT help desk](https://it.vanderbilt.edu/helpdesk/)
 
 *If you are not at Vanderbilt:*
 - check with your IT department for work computers
