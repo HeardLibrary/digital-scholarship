@@ -6,6 +6,7 @@ breadcrumb: Privacy
 
 # Digital Privacy and Security
 
+Understanding digital privacy and safeguarding your personal data against unwanted appropriation and distribution are key skills in the new digital world. While the Office of Digital Scholarship and Scholarly Communications generally advocates for openness, we believe that sharing information should emerge from deliberate choice rather than the tacit interventions of third-parties. Indeed, some forms of scholarly communication can only take place over secure channels because the data being exchanged is politically or personally sensitive, or becaue it might harm the interests of others. For these reasons, the the Office of Digital Scholarship and Scholarly Communications regularly teaches patrons how to protect their personal data online as well as how to exchange information securely with scholars around the world.
 
 ## Passwords and password managers
 
@@ -47,7 +48,7 @@ These suggestions apply most directly to iPhones, but some of them apply to smar
 
 6.	Search using DuckDuckGo! Their business model doesn’t rely on collecting data about you, and so they don’t. Go to Settings > Safari > Search Engine and tap on DuckDuckGo. Their results are just as good as Google.
 
-7.	Be ready to turn off Touch ID and Face ID! Thanks to the Fifth Amendment, law enforcement can’t compel you to give up your passcode. But they can compel you to unlock your phone using Touch ID or Face ID. Go to Settings > Emergency SOS and turn on “Call with Side Button.” Now, when you press your iPhone’s side button five times, only your passcode will open your phone. 
+7.	Be ready to turn off Touch ID and Face ID! Thanks to the Fifth Amendment, law enforcement can’t compel you to give up your passcode. But they can compel you to unlock your phone using Touch ID or Face ID. Go to Settings > Emergency SOS and turn on “Call with Side Button.” Now, when you press your iPhone’s side button five times, only your passcode will open your phone.
 
 8.	Delete lockscreen widgets that display person info! Swipe to the right and see what widgets you have available who picks up your phone. If there are any that display personal info (like your calendar), scroll down to tap “Edit” and remove them. Similarly, go to Settings > Touch ID & Passcode and look for “Allow Access When Locked.” Disable any feature you don’t want strangers to access.
 
@@ -63,7 +64,7 @@ Thanks to Derek Bruff who created this as a [handout](../privacy-on-your-smartph
 
 2. Use extreme caution when installing software.  Macs make it difficult to download software from unapproved developers.  On PCs, software from commercial vendors is relatively save.  On both platforms, do not install software unless you trust the developers and have retrieved the software from a reliable download site.  Some "free software" websites that provide legitimate software are nevertheless designed to trick you into clicking on the wrong thing and downloading legal adware that you didn't intend to install.
 
-3. Don't click on links in emails.  It is very easy to impersonate a sender and to make an email look like it came from your bank or some other trusted sender (a phishing scam).  It's better to log in to banks and commercial websites via a bookmark or by typing in the URL.  If you do click on emails in links, always mouse over the link and make sure that the URL shown is the actual website you want to go to.  At Vanderbilt, Outlook scans links in emails to block unsafe sites.  However, this system makes it difficult to know the actual URL of the link. 
+3. Don't click on links in emails.  It is very easy to impersonate a sender and to make an email look like it came from your bank or some other trusted sender (a phishing scam).  It's better to log in to banks and commercial websites via a bookmark or by typing in the URL.  If you do click on emails in links, always mouse over the link and make sure that the URL shown is the actual website you want to go to.  At Vanderbilt, Outlook scans links in emails to block unsafe sites.  However, this system makes it difficult to know the actual URL of the link.
 
 4. Back up your computer.  The best protection against ransomware (which makes your data unavailable by encrypting it) is to back up your computer to the cloud or removable media.  This will protect you against hard drive crashes as well!
 
@@ -92,7 +93,7 @@ Thanks to Derek Bruff who created this as a [handout](../privacy-on-your-smartph
 - students should contact the VIUT help desk
 
 *If you are not at Vanderbilt:*
-- check with your IT department for work computers 
+- check with your IT department for work computers
 - check with a reliable vendor for personal computers
 
 [malware handout in PDF form](virus-malware-handout.pdf) (2019-03-14) http://bit.ly/2F53VGr
