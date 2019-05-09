@@ -6,7 +6,7 @@ breadcrumb: Privacy
 
 # Digital Privacy and Security
 
-Understanding digital privacy and safeguarding your personal data against unwanted appropriation and distribution are key skills in the new digital world. While the Office of Digital Scholarship and Scholarly Communications generally advocates for openness, we believe that sharing information should emerge from deliberate choice rather than the tacit interventions of third-parties. Indeed, some forms of scholarly communication can only take place over secure channels because the data being exchanged is politically or personally sensitive, or becaue it might harm the interests of others. For these reasons, the the Office of Digital Scholarship and Scholarly Communications regularly teaches patrons how to protect their personal data online as well as how to exchange information securely with scholars around the world.
+Understanding digital privacy and safeguarding your personal data against unwanted appropriation and distribution are key skills in the new digital world. While the Office of Digital Scholarship and Scholarly Communications generally advocates for openness, we believe that sharing information should emerge from deliberate choice rather than the tacit interventions of third-parties. Indeed, some forms of scholarly communication can only take place over secure channels because the data being exchanged is politically or personally sensitive, or becaue it might harm the interests of others. For these reasons, the the Office of Digital Scholarship and Communications regularly teaches patrons how to protect their personal data online as well as how to exchange information securely with scholars around the world.
 
 ## Passwords and password managers
 
@@ -102,7 +102,7 @@ Thanks to Derek Bruff who created this as a [handout](../privacy-on-your-smartph
 
 There are many other important topics you can research, including: file and hard drive encryption and the [Tails safe and anonymous operating system](https://tails.boum.org/).
 
-The [Library Freedom Project](https://libraryfreedomproject.org/) has resources for [online provacy basics](https://libraryfreedomproject.org/resources/onlineprivacybasics/) and a [mobile privacy crash course](https://libraryfreedomproject.org/mobileprivacytoolkit/).
+The [Library Freedom Project](https://libraryfreedomproject.org/) has resources for [online privacy basics](https://libraryfreedomproject.org/resources/onlineprivacybasics/) and a [mobile privacy crash course](https://libraryfreedomproject.org/mobileprivacytoolkit/).
 
 The [CryptoParty](https://www.cryptoparty.in/) movement organizes digital privacy events around the world. Their [CryptoParty handbook](https://www.cryptoparty.in/learn/handbook) contains a lot of useful information.  
 
