@@ -8,7 +8,7 @@ breadcrumb: GitHub
 
 The following pages provide information for developing basic skills with GitHub.  The first four pages should be studied in order.  The last two are optional extensions.
 
-[Introduction to Git and Github](intro/)
+[Introduction to Git and GitHub](intro/)
 
 [Branching and the Shared Repository model](branch/)
 
@@ -21,4 +21,4 @@ The following pages provide information for developing basic skills with GitHub.
 [Managing a website with GitHub Pages](pages/)
 
 ----
-Revised 2019-02-18
+Revised 2019-05-17
