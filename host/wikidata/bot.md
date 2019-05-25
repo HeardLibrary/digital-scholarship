@@ -6,7 +6,7 @@ breadcrumb: bot
 
 # Building A Bot to Interact with Wikidata or Wikibase
 
-![robot cartoon](../images/robot.png)
+[![robot graphic](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Wikidata_Bots.png/210px-Wikidata_Bots.png)](https://commons.wikimedia.org/wiki/File:Wikidata_Bots.png)
 
 ## What is a bot?
 
