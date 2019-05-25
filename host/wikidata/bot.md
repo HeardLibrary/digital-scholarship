@@ -1,94 +1,58 @@
 ---
 permalink: /host/wikidata/bot/
-title: Building a bot to inteact with Wikibase
+title: Building a bot to inteact with Wikidata or Wikibase
 breadcrumb: bot
 ---
 
-# Building A Bot to Interact with Wikibase
+# Building A Bot to Interact with Wikidata or Wikibase
 
-[Wikibase](http://wikiba.se/) is the underlying system upon which [Wikidata](https://www.wikidata.org/) is built.  If you are already familiar with Wikidata, Wikibase is essentially a blank copy of Wikidata into which you can enter your own items and properties.  Wikidata and Wikibase share the same [data model](../../lod/wikibase/), so Wikibase provides a means to test tools and data structures that might eventually find their way to Wikidata.
+![robot cartoon](../images/robot.png)
 
-Because Wikibase is so empty, it would take a lot of work to enter any meaningful amount of data by hand using the wiki GUI interface. Therefore, it is likely that Wikibase users will want to use tools to automate the process.  Unfortunately, Quickstatements, one of the most useful tools for populating Wikidata with data from spreadsheets, does not work in the [Docker image](https://hub.docker.com/r/wikibase/wikibase) of Wikibase that is easiest to install (as of 2019-03-31, see [this](https://stuff.coffeecode.net/2018/wikibase-workshop-swib18.html#_quickstatements) for more information).  
+## What is a bot?
+
+The term "bot" conjures up an image of a cool robot that can do your bidding.  Unfortunately, a bot is more mundane than that. A bot is simply a computer program that can interact with Wikidata or Wikibase through the Internet using [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol).  The program can be written in any language that can communicate via HTTP, including Javascript and Python.  In this lesson, we will use Python, but the principles will be similar in other languages.
+
+## What is the difference between Wikidata and Wikibase?
+
+[Wikidata](https://www.wikidata.org/) is a giant database and knowledge graph that anyone can edit. It is an underlying data source for the more well-known Wikipedia, but its data is used much more broadly than only in Wikipedia.  It is a relatively simple matter to make manual edits in Wikidata, but data can also be edited via a bot.  Because it would be really easy to make a lot of unintentional errors with a poorly tested bot, Wikidata provides a test instance (sandbox) at <https://test.wikidata.org/>.  It is perfectly acceptable to test your bot's code there without danger of damaging anything real.  We will use the test instance of Wikidata to try to make a working bot.  Once you have experience getting a bot to work in the test instance, you can put it to work in the real Wikidata instance.
+
+[Wikibase](http://wikiba.se/) is the underlying system upon which [Wikidata](https://www.wikidata.org/) is built.  Wikibase is essentially a blank copy of Wikidata into which you can enter your own items and properties.  Wikidata and Wikibase share the same [data model](../../../lod/wikibase/), so Wikibase provides a means to test tools and data structures that might eventually find their way to Wikidata.
+
+Wikibase can be set up on your local computer and accessed using a `localhost:` address.  It can also be installed in the cloud using a web service, then accessed through the Internet.
+
+Because Wikibase is so empty, it would take a lot of work to enter any meaningful amount of data by hand using the wiki GUI interface. Therefore, it is likely that Wikibase users will want to use tools to automate the process.  Unfortunately, Quickstatements, one of the most useful tools for populating Wikidata with data from spreadsheets, does not work in the [Docker image](https://hub.docker.com/r/wikibase/wikibase) of Wikibase that is easiest to install (as of 2019-03-31, see [this](https://stuff.coffeecode.net/2018/wikibase-workshop-swib18.html#_quickstatements) for more information).  For that reason Wikibase users are likely to be interested in entering data into it using a bot.
+
+## What do you need?
 
 In order to successfully complete this exercise, you should meet the following requirements:
 
-- Have access to an instance of Wikibase, either as a localhost installation on your own computer (see [these instructions](../../lod/install/#using-docker-compose-to-create-an-instance-of-wikibase-on-your-local-computer) to set one up), or as a remote instance running by [Docker machine](../../host/dockermachine/) on a remote service like Amazon Web Services (AWS).
-- Have Python 3 installed on your computer. (See [these instructions]() if you don't.)
+- The first part of the excercise uses only the Wikidata test instance, which is available to anyone.  To do the second part of the exercise, you will need to have access to an instance of Wikibase, either as a localhost installation on your own computer (see [these instructions](../../../lod/install/#using-docker-compose-to-create-an-instance-of-wikibase-on-your-local-computer) to set one up), or as a remote instance running by [Docker machine](../../dockermachine/) on a remote service like Amazon Web Services (AWS).
+- Have Python 3 installed on your computer. (See [these instructions](../../../script/python/install/) if you don't.)
 - Have access to a spreadsheet program that can edit CSV files.  [Libre Office](https://www.libreoffice.org/) or [Open Office](https://www.openoffice.org/) is recommended, but Microsoft Excel is probably OK if you have it.  (Microsoft Excel has the bad habit of sometimes messing up CSV files, but that usually doesn't happen if the CSV is uncomplicated and contains only Latin characters and no dates.)
-- Have a basic understanding of the Wikibase/Wikidata [data model](../../lod/wikibase/).  At a minimum, you should understand what items and properties are.
-- Have played around with the Wikidata graphical interface for editing items.  Practice on the [Wikidata Sandbox](https://www.wikidata.org/wiki/Q4115189) if you haven't already done this.
-- Understand what a file path is.  If you don't, read the Directories section [here for Mac](../../computer/directories-mac/) or [here for Windows](../../computer/directories-windows/).
-- Know how to run a program using the command line.  If you don't read [this page for Mac](../../computer/command-unix/) or [this page for Windows](../..//computer/command-windows/).  
+- Have a basic understanding of the Wikibase/Wikidata [data model](../../../lod/wikibase/).  At a minimum, you should understand what items and properties are.
+- Have played around with the Wikidata graphical interface for editing items.  Practice on the [test instance](https://test.wikidata.org/) or [Wikidata Sandbox](https://www.wikidata.org/wiki/Q4115189) if you haven't already done this.
+- Understand what a file path is.  If you don't, read the Directories section [here for Mac](../../../computer/directories-mac/) or [here for Windows](../../../computer/directories-windows/).
+- Know how to run a program using the command line.  If you don't read [this page for Mac](../../../computer/command-unix/) or [this page for Windows](../../../computer/command-windows/).  
 
 # Set up the bot
 
-The configuration for a bot is generic for all MediaWiki wikis, so it is more generic than is required for Wikibase.  MediaWikis are often created with versions in different languages, but since a Wikibase instance is designed to handle all languages in the same instance, the language-specific aspects of configuration does not make sense.  
+Note: these instructions explain how to create a bot to interact directly with the Wikidata/Wikibase API using Python.  Another alternative is to use the Pywikibot Python library.  For more information about that option, see [this page](../pywikibot/).
 
-The common practice for Wikibase seems to be to have a short string for the instance name and to use that same string as the "language" for that instance.  In the examples, the string "ldwg" is used for both the name and language.  You can change it to something else, but that isn't necessary because the bot's behavior will be the same regardless of the string you use.
+## Downloading the basic bot script and credentials file
 
-If you do decide to change the string to something other than "ldwg" you will need to be careful to go through both the `ldwg_family.py` and `user-config.py` files and change every place where "ldwg" occurs to the other string that you have chosen.  Then change the name of the `ldwg_family.py` file itself to your chosen string plus `_family.py`.  The only real reason to change the name is if you plan to run bots on two instances of Wikibase (e.g. both a remote instance and a localhost instance).
+Before downloading the script, you should decide on the directory from which you plan to run the script.  Since you will be running it from the command line, and since by default Terminal (Mac) and Command Prompt (Windows) open in your home folder, the simplest thing is to save the script and its assocated credentials file in your home directory.  You are welcome to put them anywhere else on your hard drive as long as you know how to navigate to that location via the command line.
 
-## Configure the bot environment
+Open [this page](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikibase/api/write-statements.py) in a new tab in your browser.  Right-click on the `Raw` button in the upper right of the screen and select `Save Link As...`.  Navigate to the directory where you want to put the script and save the file there.  Now go to [this page](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikibase/api/credentials.txt) and download the example credential file in the same directory where you saved the script.  
 
-1\. Download [this .zip file](https://github.com/HeardLibrary/digital-scholarship/raw/master/code/wikibase/wikibot.zip).
-
-2\. Unzip the file and copy the `wikibase` folder to a place on your hard drive where you can find it.  Your user folder is a good place.
-
-3\. In Finder (Mac) or File Explorer (Windows), navigate to the place where you put the `wikibase` folder, then open the `families` folder within it.  Open the file called `ldwg_family.py` using a text editor.  Notepad is fine for Windows and TextEdit is fine for Mac if you don't have a favorite.  (Don't use Word to open the file.)  Line 14 should look like this:
-
-```python
-        self.langs         = { 'ldwg': '18.205.159.211:8181', }
-```
-
-Inside the second set of single quotes, replace the IP address at the left of `:8181` with the IP address of your Wikibase instance. If you are using a local instalation of Wikibase on your own computer, the line will be: 
-
-```python
-        self.langs         = { 'ldwg': 'localhost:8181', }
-```
-
-Save the file and close it.
-
-4\. Open a console window on your computer (`Command Prompt` on Windows and `Terminal` on Mac).  By default you should be in your user folder.  Use the `cd` command to change to the directory where you put the `wikibase` folder, then into the `wikibase` directory itself. When you are in the `wikibase` directory, print the path of the working directory.  That's `pwd` on Mac and `cd` (with nothing after it) on Windows.  Copy this path.  You can leave the console window open because you'll need to come back to it again later.
-
-5\. Navigate to the `wikibase` folder and open the file called `user-config.py` using your text editor.  Line 20 should look like this:
-
-```python
-register_families_folder('/Users/baskausj/wikibase/families/')
-```
-
-Inside the single quotes, replace the part in front of `/families/` with the path you copied.  Line 40 should look like this:
-
-```python
-password_file = "/Users/baskausj/wikibase/password.py"
-```
-
-Inside the single quotes, replace the part in front of `/password.py` with the path you copied. 
-
-**Note for Windows users only:** Every slash on both lines 20 and 40 (`/` or `\`) must be replaced with double backslashes (`\\`).  So the path will look something like this:
-
-```python
-register_families_folder('C:\\Users\\steve-bootcamp\\wikibase\\families\\')
-```
-
-6\. Line 35 of the file should look like this:
-
-```python
-family_files['ldwg'] = 'http://18.205.159.211:8181/'
-```
-
-In line 35, inside the single quotes after the equals sign, replace the part of the URL in front of `:8181/` with the URL of your Wikibase instance.  If you are using a local instalation of Wikibase on your own computer, the line will probably be:
-
-```python
-family_files['ldwg'] = 'http://localhost:8181/'
-```
-
-Leave the `user-config.py` file open in the editor because you'll have to make more changes later.
+Using a text editor (like TextEdit on Mac, Notepad on Windows, or your favorite text editor that is NOT Microsoft Word), open the `credentials.txt` file that you just downloaded. Leave the file open as you go to the next step.
 
 ## Create your bot
 
+The instructions here show how to create a bot on a Wikibase instance, but they are exactly the same for the [Wikidata test instance](https://test.wikidata.org/).  Since we will start by making an edit on the Wikidata test instance, log in and set up a bot there first.  You can come back here and repeat the setup process for a Wikibase instance later if you do the second part of the exercise.  Login credentials go across the Wikimedia universe, so if you have an account for Wikipedia, Wikimedia Commons, or Wikidata, you can use it to log into the Wikidata test instance as well.
+
 <img src="../images/login-link.png" style="border:1px solid black">
 
-1\. Go to the URL of your Wikibase instance (ending with port 8181).  In the upper right, click on the login link.  If you've set up a local copy on your computer, the default administrator account is `admin` with password `adminpass`.  If you've been issued a username and password, use them.  You can also create your own account by clicking on the button under `Don't have an account?`.
+1\. Go to either the [Wikidata test instance](https://test.wikidata.org/) or the URL of your Wikibase instance (ending with port 8181), depending on the part of the exercise you are working on.  In the upper right, click on the login link.  If you've set up a local copy of Wikibase on your computer, the default administrator account is `admin` with password `adminpass`.  If you've been issued a username and password, use them.  You can also create your own account by clicking on the button under `Don't have an account?` (unless account creation has been disabled for the Wikibase instance you are using).
 
 <img src="../images/special-pages-link.png" style="border:1px solid black">
 
@@ -108,53 +72,102 @@ Leave the `user-config.py` file open in the editor because you'll have to make m
 
 <img src="../images/bot-pwd.png" style="border:1px solid black">
 
-6\. A password will be created for your bot.  Copy and paste the information from this page into some document and save it in a safe place because there is no way to recover this information once you leave the page.
+6\. A password will be created for your bot.  As the text indicates, there are actually two versions of the username and password.  In this instance, it doesn't matter which one you use.  
 
-## Complete the configuration
+In the credentials file that you left open before, copy and paste your bot's username in place of `User@bot` in the credentials file.  Copy and paste your bot's password in place of the example one in the credentials file.  Make sure that you don't have any trailing spaces after the username and password, or between the equals sign and the text you pasted in.  Save this file.  There is no way to recover this information once you leave the page, so it might be good to save another copy of the file under a different file name in case you accidentlly write over or delete this one.
 
-1\. Return to the `user-config.py` that you left open in the text editor.  Line 47 should look like this:
+# Using the bot to write to the Wikidata test instance
 
-```python
-usernames['ldwg']['*'] = u'Admin'
-```
+## Background
 
-Change the username in the last set of single quotes from `Admin` to your username.  In the example, it would be:
+Any program can read data from Wikidata/Wikibase without authorization, since reading has no effect on the database itself.  However, to write to Wikidata/Wikibase using a program requires authorization in order to create a record of the user making the change.  
 
-```python
-usernames['ldwg']['*'] = u'Baskauf'
-```
+The authorization process and the process of writing the data are handled by a Python library called `requests`.  The requests library is the best way in Python to communicate with a server using HTTP.  Although the requests library is very widely used, it is not part of the Python standard library.  So if you have not used it before, you will encounter an error the first time you run the bot script - something like "No module named 'requests'". If you get this error, you will need to [use PIP, Python's package manager to install the requests library](../../../script/python/examples/).
 
-Save the file and close it.
+If you don't care how the bot works, you can skip the rest of this section.
 
-2\. Open the file `password.py`. It should look like this:
+The authorization process involves three steps.  The steps seem unnecessarily complicated when Python is used, but since authorization is a general process that can also be done via a webpage, there are extra steps in the process that are taken to prevent nasty shenanigans that are possible via a web interface.  In the bot code, each of the three steps is handled by a separate function that is called by the script.
+
+At the start of the script (line 16), we establish a requests session:
 
 ```
-("botUsername", "botPassword")
+session = requests.Session()
 ```
 
-On the `Bot password created` page, there were two username/password options.  We will use the second one.  Put your username in the first set of quotes, and the last password option in the second set of quotes.  In the example, that would be
+You may have previously used requests to make HTTP GET or POST requests using a command like
 
 ```
-("Baskauf", "bot@4q88mq0hi0t53dnpu43ggh...")
+r = requests.get('http://bioimages.vanderbilt.edu/baskauf/24319.rdf')
 ```
 
-Save the file.
+Commands like that create a new HTTP sesson with the server each time the command is given. If we instead create an explicit requests session and reuse it in subsequent commands, then our connection with the server persists across the commands - the server "remembers" previous interactions when new commands are issued.
 
-## Loading the pywikibot package
+The first function, `getLoginToken()` (lines 43-53) uses an HTTP GET call to signal to the API that we want to perform a secure login.  The API responds by sending us a token (string of random characters) to be used in the login.  
 
-If you have not used a bot before, your Python 3 instance will not have the necessary modules to run the bot.  Return to the console window that you left open.  Run the PIP package manager to install the `pywikibot` package using this command for Windows:
+The second function, `logIn()` (lines 57-71) uses HTTP POST to send the login token, username, and password as data to the API.  Although the API does send a response, nothing in that response is actually needed to continue the authorization process.  Since the session persists, the API "knows" that the session has been authenticated.
+
+The third function, `getCsrfToken()` (lines 77-88) uses HTTP GET to retrieve a "cross-site request forgery" (CSRF) token.  CSRF is a kind of attack that is carried out when web forms are used.  It isn't particularly relevant to us since we are using Python, but it's built in to Wikidata's security system, so we need to have a CSRF token that we will send to the API with each of our requests to make an edit.  If our script makes multiple edits, we can reuse the same CSRF token many times.  However, each time we restart the script, the login process is repeated and we get a different CSRF token.  
+
+Once we have the CSRF token, we can use the `writeStatement()` function to create a statement about an entity in Wikidata or Wikibase.
+
+## Figuring out what statement we want to create
+
+Since this lesson assumes that you already have some experience with editing Wikidata, it assumes that you already know about entities and properties. Entities have identifiers starting with "Q", like `Q2`.  In the real Wikidata, [the universe](https://www.wikidata.org/wiki/Q1) has the identifier `Q1`.  In the Wikidata test instance, [the universe](https://test.wikidata.org/wiki/Q188427) has the identifier `Q188427`.  Clearly, you cannot assume that there is any relationship between the identifiers assigned to an entity in the real Wikidata and the test Wikidata instance.  The same is true for properties.  An important property in Wikidata is `P31` ([instance of](https://www.wikidata.org/wiki/Property:P31)), which is used to indicate what kind of thing the entity is.  In the Wikidata test instance, `instance of` is the property `P82`.  
+The example bot script is set up in lines 129-131 to create the statement
 
 ```
-pip install pywikibot
+Q188427 P82 Q1917
 ```
 
-or this command for Mac:
+that is, "the universe is an instance of a cat".  Before you run the script, you need to go to the Wikibase test instance and check whether someone else who has run this script has already asserted that the univers is a cat.  If so, you should manually delete the statement by clicking on the `edit` link, then selecting `remove`.  Alternatively, you can change the script to assert something different about the universe.  Whatever the case, you should make sure that whatever statement you plan to create does not already exist, then use a text editor to edit lines 129-131 so that the subject, property, and object (`sub`, `prop`, and `obj`) have the appropriate values.
+
+## Running the script
+
+To run the script, open a console window (Terminal on Mac or Command Prompt on Windows) and navigate to the directory where you saved the bot script and credentials file.  On a Mac, issue the command
 
 ```
-pip3 install pywikibot
+python3 write-statements.py
 ```
 
-Leave the console window open
+On a PC, issue the command
+
+```
+python write-statements.py
+```
+
+You should get feedback as the script proceeds through each step of the authentication process.  If you get errors, check to make sure that your credentials file is in the same directory as the script and that it contains you username and password with no extra spaces or extraneous characters.  
+
+If your attempt to write the statement was a success, the console output should show text something like this:
+
+```
+Write confirmation:  {'pageinfo': {'lastrevid': 506758}, 'success': 1, ...
+```
+
+You can check to see that the change actually happened by refreshing [the universe page](https://test.wikidata.org/wiki/Q188427) on the test instance to see if you statement is there. Click on the `View history` tab at the top of the page and you should see the record of your claim creation.  
+
+## Doing other stuff
+
+Most of the bot script is taken up with the authentication process.  Only the `writeStatement()` function is actually handling the write to Wikidata.  Once you have convinced yourself that the bot script actually works, you will probably want to modify it to do other things.  
+
+Bots can interact with the API through "actions".  The action we are using here is called `wbcreateclaim` - you can see that in line 94 of the script where we specify the action within the dictionary that we pass into the requests session's .post method.  requests handles POSTing those data to the API.  
+
+To learn about all of the actions that can be carried out with the API, go to the [MediaWiki API help page](https://test.wikidata.org/w/api.php).  You will see a long list of actions.  The actions that are relevant to Wikidata all begin with "wb".  If you click on `wbcreateclaim`, you will be taken to the [action's documentation page](https://test.wikidata.org/w/api.php?action=help&modules=wbcreateclaim).  The documention page shows the parameters that need to be sent as data in the POST request.  The example format is a bit cryptic, but by comparing what is listed on the page with the bot script, you should be able to figure out how to hack the bot script to do other actions.  
+
+One of the highly useful features for testing is the `open in sandbox` feature that can be accessed by clicking on the link following an example.  (**Important note:** There are separate sandboxes for the test instance and the real Wikidata instance.  Before you perform actions in the sandbox, double-check in the browser URL bar that the URL of the page you are on begins with "https://test.wikidata.org" and NOT "https://www.wikidata.org".  If it is set to the latter, you will be editing the real wikidata - something you probably don't want to be doing.)  The [API sandbox page for wbcreateclaim](https://test.wikidata.org/wiki/Special:ApiSandbox#action=wbcreateclaim&entity=Q42&property=P9003&snaktype=value&value=%7B%22entity-type%22:%22item%22,%22numeric-id%22:1%7D) allows you to execute the `wbcreateclaim` API action directly without using a script.  Click on the `action=wbcreateclaim` link in the upper left of the page and edit the boxes and dropdowns to the values you want.  Click on `Auto-fill the token` to avoid the whole authentication mess.  When everything is set the way you want, click the `Make request` button.
+
+After the request has been made, the Results screen will give you two useful things.  If you select JSON from the `Show request data as:` drop down, the `Request JSON` box will show you an example what needs to be put into the dictionary that you pass into the request session's .post method.  Below that you will see the JSON that gets returned to the bot from the API.  In the case of `wbcreateclaim`, the JSON doesn't tell you anything that you don't already know, but if you perform an action like wbeditentity to create a new entity, the response JSON will tell you the ID of the entity that it creates (an important thing to know!).  
+
+By playing around with the API sandbox, you should be able to figure out how to hack the basic bot script example to perform other useful actions on the Wikidata test instance.  
+
+# Making edits to the real Wikidata
+
+There are no fundamental differences between how you make edits on the Wikibase test instance and the real Wikidata.  To switch to editing the real Wikidata, all you need to do is to set up a bot account in the real Wikidata, then change the credentials file to the Wikidata API endpoint URL (`https://www.wikidata.org`) and your real Wikidata bot username and password.
+
+As with all Wikimedia platforms, users are not particularly restricted from doing anything.  However, if you do bad things, the community will discover those bad things and revert them.  If you continue to do bad things, you may get blocked.  It is considered good form to inform the community about your bot and what you are using it for.  Before embarking on creating and using a bot on the real Wikidata, you should read the [Wikidata:Bots](https://www.wikidata.org/wiki/Wikidata:Bots) page, which explains the Wikidata policy on bots and the social conventions related to bot use.
+
+# Adding data to a Wikibase instance
+
+under construction
 
 # Preparing the data to be added
 
