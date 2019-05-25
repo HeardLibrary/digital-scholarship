@@ -31,8 +31,7 @@ In order to successfully complete this exercise, you should meet the following r
 - Have access to a spreadsheet program that can edit CSV files.  [Libre Office](https://www.libreoffice.org/) or [Open Office](https://www.openoffice.org/) is recommended, but Microsoft Excel is probably OK if you have it.  (Microsoft Excel has the bad habit of sometimes messing up CSV files, but that usually doesn't happen if the CSV is uncomplicated and contains only Latin characters and no dates.)
 - Have a basic understanding of the Wikibase/Wikidata [data model](../../../lod/wikibase/).  At a minimum, you should understand what items and properties are.
 - Have played around with the Wikidata graphical interface for editing items.  Practice on the [test instance](https://test.wikidata.org/) or [Wikidata Sandbox](https://www.wikidata.org/wiki/Q4115189) if you haven't already done this.
-- Understand what a file path is.  If you don't, read the Directories section [here for Mac](../../../computer/directories-mac/) or [here for Windows](../../../computer/directories-windows/).
-- Know how to run a program using the command line.  If you don't read [this page for Mac](../../../computer/command-unix/) or [this page for Windows](../../../computer/command-windows/).  
+- Know how to run a program using the command line.  If you don't, read [this page for Mac](../../../computer/command-unix/) or [this page for Windows](../../../computer/command-windows/).  
 
 # Set up the bot
 
@@ -40,7 +39,7 @@ Note: these instructions explain how to create a bot to interact directly with t
 
 ## Downloading the basic bot script and credentials file
 
-Before downloading the script, you should decide on the directory from which you plan to run the script.  Since you will be running it from the command line, and since by default Terminal (Mac) and Command Prompt (Windows) open in your home folder, the simplest thing is to save the script and its assocated credentials file in your home directory.  You are welcome to put them anywhere else on your hard drive as long as you know how to navigate to that location via the command line.
+Before downloading the script, you should decide on the directory from which you plan to run the script.  Since you will be running it from the command line, and since by default Terminal (Mac) and Command Prompt (Windows) open in your home directory, the simplest thing is to save the script and its assocated credentials file in your home directory.  You are welcome to put them anywhere else on your hard drive as long as you know how to navigate to that location via the command line.
 
 Open [this page](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikibase/api/write-statements.py) in a new tab in your browser.  Right-click on the `Raw` button in the upper right of the screen and select `Save Link As...`.  Navigate to the directory where you want to put the script and save the file there.  Now go to [this page](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikibase/api/credentials.txt) and download the example credential file in the same directory where you saved the script.  
 
@@ -68,19 +67,19 @@ The instructions here show how to create a bot on a Wikibase instance, but they 
 
 <img src="../images/bot-grants.png" style="border:1px solid black">
 
-5\. Check the boxes for permissions to give to your bot.  For a practice Wikibase instance, you can check all of the boxes.  For a real bot to edit something like Wikidata, you would need to read up on the options before choosing.  Click on the `Create` button. 
+5\. Check the boxes for permissions to give to your bot.  For the Wikidata test instance or a practice Wikibase instance, you can check all of the boxes.  For a real bot to edit something like Wikidata, you would need to read up on the options before choosing.  Click on the `Create` button. 
 
 <img src="../images/bot-pwd.png" style="border:1px solid black">
 
-6\. A password will be created for your bot.  As the text indicates, there are actually two versions of the username and password.  In this instance, it doesn't matter which one you use.  
+6\. A password will be created for your bot.  As the text indicates, there are actually two versions of the username and password.  For this exercise, it doesn't matter which one you use.  
 
-In the credentials file that you left open before, copy and paste your bot's username in place of `User@bot` in the credentials file.  Copy and paste your bot's password in place of the example one in the credentials file.  Make sure that you don't have any trailing spaces after the username and password, or between the equals sign and the text you pasted in.  Save this file.  There is no way to recover this information once you leave the page, so it might be good to save another copy of the file under a different file name in case you accidentlly write over or delete this one.
+In the credentials file that you left open before, copy and paste your bot's username in place of `User@bot` in the credentials file.  Copy and paste your bot's password in place of the example password in the credentials file.  Make sure that you don't have any trailing spaces after the username and password, or between the equals sign and the text you pasted in.  Save this file.  There is no way to recover this information once you leave the page, so it might be good to save another copy of the file under a different file name in case you accidentlly write over or delete this one.
 
 # Using the bot to write to the Wikidata test instance
 
 ## Background
 
-Any program can read data from Wikidata/Wikibase without authorization, since reading has no effect on the database itself.  However, to write to Wikidata/Wikibase using a program requires authorization in order to create a record of the user making the change.  
+Any program can read data from Wikidata/Wikibase without authorization, since reading has no effect on the database itself.  However, to write to Wikidata/Wikibase using a program requires authorization in order to create a record associating the change with the user making it.  
 
 The authorization process and the process of writing the data are handled by a Python library called `requests`.  The requests library is the best way in Python to communicate with a server using HTTP.  Although the requests library is very widely used, it is not part of the Python standard library.  So if you have not used it before, you will encounter an error the first time you run the bot script - something like "No module named 'requests'". If you get this error, you will need to [use PIP, Python's package manager to install the requests library](../../../script/python/examples/).
 
@@ -106,20 +105,20 @@ The first function, `getLoginToken()` (lines 43-53) uses an HTTP GET call to sig
 
 The second function, `logIn()` (lines 57-71) uses HTTP POST to send the login token, username, and password as data to the API.  Although the API does send a response, nothing in that response is actually needed to continue the authorization process.  Since the session persists, the API "knows" that the session has been authenticated.
 
-The third function, `getCsrfToken()` (lines 77-88) uses HTTP GET to retrieve a "cross-site request forgery" (CSRF) token.  CSRF is a kind of attack that is carried out when web forms are used.  It isn't particularly relevant to us since we are using Python, but it's built in to Wikidata's security system, so we need to have a CSRF token that we will send to the API with each of our requests to make an edit.  If our script makes multiple edits, we can reuse the same CSRF token many times.  However, each time we restart the script, the login process is repeated and we get a different CSRF token.  
+The third function, `getCsrfToken()` (lines 77-88) uses HTTP GET to retrieve a "cross-site request forgery" (CSRF) token.  CSRF is a kind of attack that is carried out when web forms are used.  It isn't particularly relevant to us since we are using Python, but it's built into Wikidata's security system, so we need to have a CSRF token that we will send to the API with each of our requests to make an edit.  If our script makes multiple edits, we can reuse the same CSRF token many times.  However, each time we restart the script, the login process is repeated and we get a different CSRF token.  
 
-Once we have the CSRF token, we can use the `writeStatement()` function to create a statement about an entity in Wikidata or Wikibase.
+Once we have the CSRF token, we can use the `writeStatement()` function to create a statement (referred to as a *claim* in the Wikidata world) about an entity in Wikidata or Wikibase.
 
 ## Figuring out what statement we want to create
 
-Since this lesson assumes that you already have some experience with editing Wikidata, it assumes that you already know about entities and properties. Entities have identifiers starting with "Q", like `Q2`.  In the real Wikidata, [the universe](https://www.wikidata.org/wiki/Q1) has the identifier `Q1`.  In the Wikidata test instance, [the universe](https://test.wikidata.org/wiki/Q188427) has the identifier `Q188427`.  Clearly, you cannot assume that there is any relationship between the identifiers assigned to an entity in the real Wikidata and the test Wikidata instance.  The same is true for properties.  An important property in Wikidata is `P31` ([instance of](https://www.wikidata.org/wiki/Property:P31)), which is used to indicate what kind of thing the entity is.  In the Wikidata test instance, `instance of` is the property `P82`.  
+Since this lesson assumes that you already have some experience with editing Wikidata, it assumes that you already know about entities and properties. Entities have identifiers starting with "Q", like `Q2`.  In the real Wikidata, [the universe](https://www.wikidata.org/wiki/Q1) has the identifier `Q1`.  In the Wikidata test instance, [the universe](https://test.wikidata.org/wiki/Q188427) has the identifier `Q188427`.  Clearly, you cannot assume that there is any relationship between the identifiers assigned to an entity in the real Wikidata and the test Wikidata instance.  The same is true for properties.  An important property in Wikidata is `P31` ([instance of](https://www.wikidata.org/wiki/Property:P31)), which is used to indicate what kind of thing the entity is.  In the Wikidata test instance, [instance of](https://test.wikidata.org/wiki/Property:P82) is the property `P82`.  
 The example bot script is set up in lines 129-131 to create the statement
 
 ```
 Q188427 P82 Q1917
 ```
 
-that is, "the universe is an instance of a cat".  Before you run the script, you need to go to the Wikibase test instance and check whether someone else who has run this script has already asserted that the univers is a cat.  If so, you should manually delete the statement by clicking on the `edit` link, then selecting `remove`.  Alternatively, you can change the script to assert something different about the universe.  Whatever the case, you should make sure that whatever statement you plan to create does not already exist, then use a text editor to edit lines 129-131 so that the subject, property, and object (`sub`, `prop`, and `obj`) have the appropriate values.
+that is, "the universe is an instance of a cat".  Before you run the script, you need to go to the Wikibase test instance and check whether someone else who has run this script has already asserted that the universe is a cat.  If so, you should manually delete the statement by clicking on the `edit` link, then selecting `remove`.  Alternatively, you can change the script to assert something different about the universe.  Whatever the case, you should make sure that whatever statement you plan to create does not already exist, then use a text editor to edit lines 129-131 so that the subject, property, and object (`sub`, `prop`, and `obj`) have the appropriate values for the statement you want to make.
 
 ## Running the script
 
@@ -149,13 +148,13 @@ You can check to see that the change actually happened by refreshing [the univer
 
 Most of the bot script is taken up with the authentication process.  Only the `writeStatement()` function is actually handling the write to Wikidata.  Once you have convinced yourself that the bot script actually works, you will probably want to modify it to do other things.  
 
-Bots can interact with the API through "actions".  The action we are using here is called `wbcreateclaim` - you can see that in line 94 of the script where we specify the action within the dictionary that we pass into the requests session's .post method.  requests handles POSTing those data to the API.  
+Bots can interact with the API through "actions".  The action we are using here is called `wbcreateclaim` - you can see that action in line 94 of the script where we specify the it within the dictionary that we pass into the requests session's `.post()` method.    
 
 To learn about all of the actions that can be carried out with the API, go to the [MediaWiki API help page](https://test.wikidata.org/w/api.php).  You will see a long list of actions.  The actions that are relevant to Wikidata all begin with "wb".  If you click on `wbcreateclaim`, you will be taken to the [action's documentation page](https://test.wikidata.org/w/api.php?action=help&modules=wbcreateclaim).  The documention page shows the parameters that need to be sent as data in the POST request.  The example format is a bit cryptic, but by comparing what is listed on the page with the bot script, you should be able to figure out how to hack the bot script to do other actions.  
 
 One of the highly useful features for testing is the `open in sandbox` feature that can be accessed by clicking on the link following an example.  (**Important note:** There are separate sandboxes for the test instance and the real Wikidata instance.  Before you perform actions in the sandbox, double-check in the browser URL bar that the URL of the page you are on begins with "https://test.wikidata.org" and NOT "https://www.wikidata.org".  If it is set to the latter, you will be editing the real wikidata - something you probably don't want to be doing.)  The [API sandbox page for wbcreateclaim](https://test.wikidata.org/wiki/Special:ApiSandbox#action=wbcreateclaim&entity=Q42&property=P9003&snaktype=value&value=%7B%22entity-type%22:%22item%22,%22numeric-id%22:1%7D) allows you to execute the `wbcreateclaim` API action directly without using a script.  Click on the `action=wbcreateclaim` link in the upper left of the page and edit the boxes and dropdowns to the values you want.  Click on `Auto-fill the token` to avoid the whole authentication mess.  When everything is set the way you want, click the `Make request` button.
 
-After the request has been made, the Results screen will give you two useful things.  If you select JSON from the `Show request data as:` drop down, the `Request JSON` box will show you an example what needs to be put into the dictionary that you pass into the request session's .post method.  Below that you will see the JSON that gets returned to the bot from the API.  In the case of `wbcreateclaim`, the JSON doesn't tell you anything that you don't already know, but if you perform an action like wbeditentity to create a new entity, the response JSON will tell you the ID of the entity that it creates (an important thing to know!).  
+After the request has been made, the Results screen will give you two useful things.  If you select JSON from the `Show request data as:` drop down, the `Request JSON` box will show you an example what needs to be put into the dictionary that you pass into the request session's `.post()` method.  Below that, you will see the JSON that gets returned to the bot from the API.  In the case of `wbcreateclaim`, the JSON doesn't tell you anything that you don't already know, but if you perform some other actions, it may be useful.  For example, if you use `wbeditentity` to create a new entity, the response JSON will tell you the ID of the entity that it creates (an important thing to know!).  
 
 By playing around with the API sandbox, you should be able to figure out how to hack the basic bot script example to perform other useful actions on the Wikidata test instance.  
 
@@ -341,4 +340,4 @@ For more information about programming bots to edit Wikidata/Wikibase using Pywi
 
 
 ----
-Revised 2019-03-31
+Revised 2019-05-25
