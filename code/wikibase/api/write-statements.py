@@ -1,10 +1,10 @@
+# Freely available under a CC0 license. Steve Baskauf 2019-05-25
 # See https://www.wikidata.org/w/api.php for MediaWiki API help
 # For general information about MediaWiki tokens, see https://www.mediawiki.org/wiki/API:Tokens
 # Tor testing new API functions, use the Wikidata test instance sandbox:
 # https://test.wikidata.org/wiki/Special:ApiSandbox
 # This is what I used to figure out what was going on and to see example query parameters.  You can safely write to
 # https://test.wikidata.org without having to worry about messing up the real WikiData.
-
 # Note: writing directly like this to a Wikibase API on AWS is approximately 60 times faster than pywikibot with built-in throttling
 
 import requests
