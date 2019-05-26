@@ -170,7 +170,6 @@ sourceCsvFile = 'cartoons.csv'
 listOfItems = readDict(sourceCsvFile)
 
 for item in listOfItems:
-    # print(item)
     labelList = [
         {'language': 'en', 'string': item['enLabel']}, 
         {'language': 'es', 'string': item['esLabel']}
