@@ -174,7 +174,9 @@ If you don't have access to an online instance of Wikibase, you can install a lo
 
 # Preparing the data to be added
 
-Using your spreadsheet program, open the file `cartoons.csv`.  
+Go to [this page](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikibase/cartoons.csv) and download the file `cartoons.csv` into the same directory where you downloaded the first bot script.
+
+Using your spreadsheet program, open the file.  
 
 <img src="../images/csv-file.png" style="border:1px solid black">
 
@@ -188,7 +190,7 @@ The column header for a property should consist only of the property identifier 
 
 <img src="../images/instance-of.png" style="border:1px solid black">
 
-Clicking on the P6 link takes us to the page for the `instance of` property.  An important thing to notice is that the Data type of the property is item.  **The value used in the table must match the Data type of the property!** Since P6 requires an item, all of the values in the P6 column are item identifiers (starting with `Q`): `Q3058`. 
+Clicking on the P6 link takes us to the page for the `instance of` property.  An important thing to notice is that the Data type of the property is item.  **The value used in the table must match the Data type of the property!** Since P6 requires an item, all of the values in the P6 column are item identifiers (starting with `Q`): `Q3058`. As the script is currently written, only items can be give as values of properties. However, the script could be easily modified to allow string values or other types of values.  More on this in the comments at the end.
 
 <img src="../images/search-box.png" style="border:1px solid black">
 
@@ -226,9 +228,11 @@ After I enter the information and click `Create` I'll see the page for the new i
 
 # Editing the bot
 
-The bot itself is actually a Python 3 script called `load_csv_wikibot.py` in the `wikibase` directory.  Before you run the script, you need to edit a few lines.  Open the script in your text editor.
+First you need to download the bot script from [this page](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikibase/api/load_csv.py) as you did the first bot script. Save it in the same directory as the other files.
 
-1\. The first thing to edit is the properties list on line 19.  In the example script that goes with the example spreadsheet, it looks like this:
+Before you run the script, you need to edit a few lines of the script.  Open the script in your text editor and find the main script at about line 158.
+
+1\. The first thing to edit is the properties list on line 166.  In the script that you downloaded has a properties list that corresponds to the property columns in the example spreadsheet:
 
 ```python
 propList = ['P6', 'P9']
@@ -236,44 +240,45 @@ propList = ['P6', 'P9']
 
 You should edit the list so that all of the property columns in your spreadsheet are listed with the correct property identifiers, enclosed in single quotes and separated by commas.  The order does not matter.
 
-2\. The second thing to edit is the name of the CSV file in line 22.  The example has:
+2\. The second thing to edit is the name of the CSV file in line 169:
 
 ```python
 sourceCsvFile = 'cartoons.csv'
 ```
+The script has the name of the CSV file you downloaded.  If you are using that file, you don't need to change anything.
 
 If the file is in the same directory as the script, you only need to include the file name (with extension).  If it's somewhere else, you need to include the path, using the syntax appropriate for your operating system.
 
-3\. Line 33 assigns a dictionary to the variable `some_labels`.  Since the example has two languages, there are two key:value pairs separated by columns. In each pair, the key is the standard ISO 639-1 two-letter language code for the language.  The value should contain the column header for that label inside the single quotes in the square brackets.  
+3\. Lines 173 to 176 associate labels and descriptions in various languages with the columns in the spreadsheet that contain them.  Since the example has two columns with labels in different languages, there are two dictionaries in the `labelList` list. The value of `string` for a particular language should contain the column header for that label inside the single quotes in the square brackets of `item[]`, like this:  
 
 ```python
-    some_labels = {"en": item['enLabel'], "es": item['esLabel']}
+    {'language': 'en', 'string': item['enLabel']}
 ```
 
-If you only have one language label, delete the second key:value pair and the comma separating the two pairs.
+If you only have one language label, delete the second dictionary and the comma separating the two dictionaries.
 
-4\. Line 38 has a similar dictionary for item descriptions:
+4\. Lines 177 to 179 has a similar list for item descriptions:
 
 ```python
-    some_descriptions = {'en': item['enDescription']}
+    {'language': 'en', 'string': item['enDescription']}
 ```
 
-In the example, there is only a description in one language, but you can add additional key:value pairs using the same formatting as in the labels dictionary.
+In the example CSV table, there is only a description in one language, but you can add additional dictionaries for descriptions in other languages using the same structure as in the labels dictionary.
 
 5\. Once you have edited the bot script to match your spreadsheet, save and close the file.
 
 # Running the bot
 
-Return to the console window that you left open.  Double-check that you are still in the `wikidata` directory, then issue the command to run the bot.  In Windows, that's:
+In your console window, navigate to the directory where the bot script was saved, then issue the command to run the bot.  In Windows, that's:
 
 ```
-python load_csv_wikibot.py
+python load_csv.py
 ```
 
 and on Mac it's:
 
 ```
-python3 load_csv_wikibot.py
+python3 load_csv.py
 ```
 
 <img src="../images/new-csv.png" style="border:1px solid black">
@@ -285,35 +290,20 @@ I changed the spreadsheet to create some new cartoon characters using the new it
 Here's the console output that I got when I ran the bot script:
 
 ```
-C:\Users\steve-bootcamp\wikibase>python load_csv_wikibot.py
-Logging in to ldwg:ldwg as Baskauf
-OrderedDict([('enLabel', 'Elmer Fudd'), ('enDescription', 'fictional hunter in Looney Tunes cartoons'), ('esLabel', 'Elmer Gruñón'), ('P6', 'Q3058'), ('P9', 'Q3076')])
-Sleeping for 9.4 seconds, 2019-03-31 22:14:31
+erebuss-MacBook-Pro-3:~ baskausj$ python load_csv.py
+
 created item: Elmer Fudd
-Sleeping for 9.8 seconds, 2019-03-31 22:14:40
-added description: fictional hunter in Looney Tunes cartoons
-Sleeping for 9.7 seconds, 2019-03-31 22:14:51
+assigned ID: Q3341
 added claim for: P6
-Sleeping for 9.7 seconds, 2019-03-31 22:15:01
 added claim for: P9
-Q3341 Elmer Fudd
 
-OrderedDict([('enLabel', 'Spider-Man'), ('enDescription', 'cartoon superhero of comic books and films'), ('esLabel', 'Hombre Araña'), ('P6', 'Q3058'), ('P9', 'Q3340')])
-Sleeping for 9.8 seconds, 2019-03-31 22:15:10
 created item: Spider-Man
-Sleeping for 9.8 seconds, 2019-03-31 22:15:20
-added description: cartoon superhero of comic books and films
-Sleeping for 9.8 seconds, 2019-03-31 22:15:30
+assigned ID: Q3342
 added claim for: P6
-Sleeping for 9.8 seconds, 2019-03-31 22:15:40
 added claim for: P9
-Q3342 Spider-Man
 
-
-C:\Users\steve-bootcamp\wikibase>
+erebuss-MacBook-Pro-3:~ baskausj$
 ```
-
-Notice that there was a significant delay between the assignment of each property value (around 10 s).  This is because pywikibot has a feature called *throttling* that limits the rate at which requests for new claims can be made.  The throttling delay may lengthen if multiple users are trying to create new items and add claims at the same time.
 
 ## Results
 
@@ -329,19 +319,31 @@ Clicking on the entry takes me to the new page.
 
 If I click on the `All entered languages` link I'll see the Spanish label.
 
-# Final notes
+## Some notes on the load_csv.py script
 
-The process for creating a bot here is the same as the process for Wikidata bots.  However, there are many additional considerations to be considered before creating a bot to edit Wikidata:
+Several parts of this second script were modified from the first script we used.  This script has a function called `authenticate()`, which includes all three of the authentication steps into a single function.  The `writeStatement()` function is the same as in the previous script. It is called after the creation of the new items to create the claims about the items.  
 
-- Social conventions for bot use
-- Registering the bot
-- Taking care that you don't create duplicate items
-- Testing to prevent creating bad claims
+The key new feature of this script is the `createEntity()` function.  Lines 141 to 149 are very similar to lines in the `writeStatement()` function.  The main difference is that the data that are passed to the API as a string (the value of the `data` key) are much more complicated that what is passed as the value of the `value` key in the `writeStatement()` function.  That's because the label and description information has to be constructed into a somewhat complicated JSON string.  The function allows an indefinite number of labels and descriptions, which complicates the code a bit.  In line 156, the Q identifier for the newly-created item is pulled from the response JSON so that it can be returned and later used to specify the subject of the statements that are created later in lines 186 to 193.  
 
-In this example, we did not make any attempt to support our claims with references -- an important consideration in Wikidata.  
+As noted earlier, the scripts only allow creating claims whose properties have values that are items.  Properties can have other types of values.  The simplest of those is string values.  The examples at the bottom of the [wbcreateclaim API help page](https://test.wikidata.org/w/api.php?action=help&modules=wbcreateclaim) shows that we only need to change line 95 from 
 
-For more information about programming bots to edit Wikidata/Wikibase using Pywikibot, see the [Pywikibot manual](https://www.mediawiki.org/wiki/Manual:Pywikibot/Wikidata).
+```python
+'value':'{"entity-type":"item","numeric-id":' + strippedQNumber+ '}'
+```
 
+to
+
+```python
+'value':'"' + stringValue + '"'
+```
+
+in order to provide a string value for a property. (However, one should first examine the property to ensure that a string is a valid value for it.)
+
+We should also note that, we did not make any attempt to support our claims with references -- an important consideration in Wikidata. However, delving into that level of complexity requires that you first study the [Wikibase data model](https://www.mediawiki.org/wiki/Wikibase/DataModel), which is beyond the scope of this lesson.
+
+## Acknowledgements
+
+Thanks to [Asaf Bartov](https://wikimediafoundation.org/profile/asaf-bartov/) and [Andrew Lih](https://en.wikipedia.org/wiki/Andrew_Lih) whose presentations and answers to my questions at the LD4P conference cleared up the confusion that was keeping me from getting this to work. sjb
 
 ----
 Revised 2019-05-25
