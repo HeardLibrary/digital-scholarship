@@ -168,6 +168,8 @@ There are no fundamental differences between how you make edits on the Wikibase 
 
 As with all Wikimedia platforms, users are not particularly restricted from doing anything.  However, if you do bad things, the community will discover those bad things and revert them.  If you continue to do bad things, you may get blocked.  It is considered good form to inform the community about your bot and what you are using it for.  Before embarking on creating and using a bot on the real Wikidata, you should read the [Wikidata:Bots](https://www.wikidata.org/wiki/Wikidata:Bots) page, which explains the Wikidata policy on bots and the social conventions related to bot use.
 
+This example makes only a single edit.  As soon as your bot starts making multiple edits to the real Wikidata, you must throttle it using the [Maxlag parameter](https://www.mediawiki.org/wiki/Manual:Maxlag_parameter). See the end of the lesson for more about this.
+
 # Adding data to a Wikibase instance
 
 In the second part of this lesson, we will work with a modification of the bot script that will allow us to interact with the API to batch-create a number of items using data from a spreadsheet.  As we create each item, we will assign it one or more labels and one or more descriptions.  We will then assign several properties to the newly created item.  
@@ -350,6 +352,8 @@ in order to provide a string value for a property. (However, one should first ex
 This example script has only very minimal error-handling.  A production bot would need much more extensive error-handling routines and would need to be tested carefully to make sure that it handles any kind of error that could create havoc.
 
 We should also note that, we did not make any attempt to support our claims with references -- an important consideration in Wikidata. However, delving into that level of complexity requires that you first study the [Wikibase data model](https://www.mediawiki.org/wiki/Wikibase/DataModel), which is beyond the scope of this lesson.
+
+A final important consideration when writing to the real Wikidata is *throttling*.  It is a rude and bad practice to hit any public API at such a high rate of speed that it disrupts the function of the API and impedes other users of the API.  This example script does NOT include any kind of delay between write operations.  Before using any modification of the script to write to the real Wikidata, you should read the [API Etiquette page](https://www.mediawiki.org/wiki/API:Etiquette) and must learn how to use the [Maxlag parameter](https://www.mediawiki.org/wiki/Manual:Maxlag_parameter).
 
 **Acknowledgements**
 
