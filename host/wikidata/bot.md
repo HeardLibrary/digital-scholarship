@@ -8,11 +8,13 @@ breadcrumb: bot
 
 [![robot graphic](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Wikidata_Bots.png/210px-Wikidata_Bots.png)](https://commons.wikimedia.org/wiki/File:Wikidata_Bots.png)
 
-## What is a bot?
+## Preliminaries
+
+**What is a bot?**
 
 The term "bot" conjures up an image of a cool robot that can do your bidding.  Unfortunately, a bot is more mundane than that. A bot is simply a computer program that can interact with Wikidata or Wikibase through the Internet using [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol).  The program can be written in any language that can communicate via HTTP, including Javascript and Python.  In this lesson, we will use Python, but the principles will be similar in other languages.
 
-## What is the difference between Wikidata and Wikibase?
+**What is the difference between Wikidata and Wikibase?**
 
 [Wikidata](https://www.wikidata.org/) is a giant database and knowledge graph that anyone can edit. It is an underlying data source for the more well-known Wikipedia, but its data is used much more broadly than only in Wikipedia.  It is a relatively simple matter to make manual edits in Wikidata, but data can also be edited via a bot.  Because it would be really easy to make a lot of unintentional errors with a poorly tested bot, Wikidata provides a test instance (sandbox) at <https://test.wikidata.org/>.  It is perfectly acceptable to test your bot's code there without danger of damaging anything real.  We will use the test instance of Wikidata to try to make a working bot.  Once you have experience getting a bot to work in the test instance, you can put it to work in the real Wikidata instance.
 
@@ -22,7 +24,7 @@ Wikibase can be set up on your local computer and accessed using a `localhost:` 
 
 Because Wikibase is so empty, it would take a lot of work to enter any meaningful amount of data by hand using the wiki GUI interface. Therefore, it is likely that Wikibase users will want to use tools to automate the process.  Unfortunately, Quickstatements, one of the most useful tools for populating Wikidata with data from spreadsheets, does not work in the [Docker image](https://hub.docker.com/r/wikibase/wikibase) of Wikibase that is easiest to install (as of 2019-03-31, see [this](https://stuff.coffeecode.net/2018/wikibase-workshop-swib18.html#_quickstatements) for more information).  For that reason Wikibase users are likely to be interested in entering data into it using a bot.
 
-## What do you need?
+**What do you need?**
 
 In order to successfully complete this exercise, you should meet the following requirements:
 
@@ -33,11 +35,11 @@ In order to successfully complete this exercise, you should meet the following r
 - Have played around with the Wikidata graphical interface for editing items.  Practice on the [test instance](https://test.wikidata.org/) or [Wikidata Sandbox](https://www.wikidata.org/wiki/Q4115189) if you haven't already done this.
 - Know how to run a program using the command line.  If you don't, read [this page for Mac](../../../computer/command-unix/) or [this page for Windows](../../../computer/command-windows/).  
 
-# Set up the bot
+## Set up the bot
 
 Note: these instructions explain how to create a bot to interact directly with the Wikidata/Wikibase API using Python.  Another alternative is to use the Pywikibot Python library.  For more information about that option, see [this page](../pywikibot/).
 
-## Downloading the basic bot script and credentials file
+**Downloading the basic bot script and credentials file**
 
 Before downloading the script, you should decide on the directory from which you plan to run the script.  Since you will be running it from the command line, and since by default Terminal (Mac) and Command Prompt (Windows) open in your home directory, the simplest thing is to save the script and its assocated credentials file in your home directory.  You are welcome to put them anywhere else on your hard drive as long as you know how to navigate to that location via the command line.
 
@@ -45,7 +47,7 @@ Open [this page](https://github.com/HeardLibrary/digital-scholarship/blob/master
 
 Using a text editor (like TextEdit on Mac, Notepad on Windows, or your favorite text editor that is NOT Microsoft Word), open the `credentials.txt` file that you just downloaded. Leave the file open as you go to the next step.
 
-## Create your bot
+**Create your bot**
 
 The instructions here show how to create a bot on a Wikibase instance, but they are exactly the same for the [Wikidata test instance](https://test.wikidata.org/).  Since we will start by making an edit on the Wikidata test instance, log in and set up a bot there first.  You can come back here and repeat the setup process for a Wikibase instance later if you do the second part of the exercise.  Login credentials go across the Wikimedia universe, so if you have an account for Wikipedia, Wikimedia Commons, or Wikidata, you can use it to log into the Wikidata test instance as well.
 
@@ -75,11 +77,13 @@ The instructions here show how to create a bot on a Wikibase instance, but they 
 
 In the credentials file that you left open before, copy and paste your bot's username in place of `User@bot` in the credentials file.  Copy and paste your bot's password in place of the example password in the credentials file.  Make sure that you don't have any trailing spaces after the username and password, or between the equals sign and the text you pasted in.  Save this file.  There is no way to recover this information once you leave the page, so it might be good to save another copy of the file under a different file name in case you accidentlly write over or delete this one.
 
-# Using the bot to write to the Wikidata test instance
+# Use the bot to write to the Wikidata test instance
 
 ## Background
 
 Any program can read data from Wikidata/Wikibase without authorization, since reading has no effect on the database itself.  However, to write to Wikidata/Wikibase using a program requires authorization in order to create a record associating the change with the user making it.  
+
+**How authorization works**
 
 The authorization process and the process of writing the data are handled by a Python library called `requests`.  The requests library is the best way in Python to communicate with a server using HTTP.  Although the requests library is very widely used, it is not part of the Python standard library.  So if you have not used it before, you will encounter an error the first time you run the bot script - something like "No module named 'requests'". If you get this error, you will need to [use PIP, Python's package manager to install the requests library](../../../script/python/examples/).
 
@@ -109,7 +113,7 @@ The third function, `getCsrfToken()` (lines 77-88) uses HTTP GET to retrieve a "
 
 Once we have the CSRF token, we can use the `writeStatement()` function to create a statement (referred to as a *claim* in the Wikidata world) about an item in Wikidata or Wikibase.
 
-## Figuring out what statement we want to create
+**Figuring out what statement we want to create**
 
 Since this lesson assumes that you already have some experience with editing Wikidata, it assumes that you already know about items and properties. Items have identifiers starting with "Q", like `Q2`.  In the real Wikidata, [the universe](https://www.wikidata.org/wiki/Q1) has the identifier `Q1`.  In the Wikidata test instance, [the universe](https://test.wikidata.org/wiki/Q188427) has the identifier `Q188427`.  Clearly, you cannot assume that there is any relationship between the identifiers assigned to an item in the real Wikidata and the test Wikidata instance.  The same is true for properties.  An important property in Wikidata is `P31` ([instance of](https://www.wikidata.org/wiki/Property:P31)), which is used to indicate what kind of thing the item is.  In the Wikidata test instance, [instance of](https://test.wikidata.org/wiki/Property:P82) is the property `P82`.  
 The example bot script is set up in lines 129-131 to create the statement
@@ -144,7 +148,7 @@ Write confirmation:  {'pageinfo': {'lastrevid': 506758}, 'success': 1, ...
 
 You can check to see that the change actually happened by refreshing [the universe page](https://test.wikidata.org/wiki/Q188427) on the test instance to see if you statement is there. Click on the `View history` tab at the top of the page and you should see the record of your claim creation.  
 
-## Doing other stuff
+## Modifying the script
 
 Most of the bot script is taken up with the authentication process.  Only the `writeStatement()` function is actually handling the write to Wikidata.  Once you have convinced yourself that the bot script actually works, you will probably want to modify it to do other things.  
 
@@ -158,7 +162,7 @@ After the request has been made, the Results screen will give you two useful thi
 
 By playing around with the API sandbox, you should be able to figure out how to hack the basic bot script example to perform other useful actions on the Wikidata test instance.  
 
-# Making edits to the real Wikidata
+## Making edits to the real Wikidata
 
 There are no fundamental differences between how you make edits on the Wikibase test instance and the real Wikidata.  To switch to editing the real Wikidata, all you need to do is to set up a bot account in the real Wikidata, then change the credentials file to the Wikidata API endpoint URL (`https://www.wikidata.org`) and your real Wikidata bot username and password.
 
@@ -170,9 +174,13 @@ In the second part of this lesson, we will work with a modification of the bot s
 
 As we noted in the beginning, this kind of task is well suited to Wikibase. For one thing, Wikibase does not come with any items included - it is up to the users to add them.  Since it isn't obvious at this point in time how Quickstatements can be used for batch creation of items with Wikibase, using a script of this kind is a good alternative. A reason why doing this kind of batch loading is more suitable for Wikibase than Wikidata is that before creating items in Wikidata, you should determine whether the items already exist.  If they already exist, you should not create duplicate items and that would require a more sophisticated bot than this.  Presumably in your own Wikibase instance you would know whether the items you were creating were new or not.  
 
-If you don't have access to an online instance of Wikibase, you can install a local instance on your own computer using [these instructions](../../../lod/install/#using-docker-compose-to-create-an-instance-of-wikibase-on-your-local-computer).  After you have access to an instance, go back to the [instructions for creating a bot](#create-your-bot) and generate a bot username and password there as you did for the Wikidata test instance. Then change the credentials.txt file to username and password, and change the value of `endpointUrl` to the URL of your Wikibase instance.  If you are running it locally on your own computer, the URL will probably be `http://localhost:8181`.
+## Preliminaries
 
-# Preparing the data to be added
+**Accessing Wikibase**
+
+If you don't have access to an online instance of Wikibase, you can install a local instance on your own computer using [these instructions](../../../lod/install/#using-docker-compose-to-create-an-instance-of-wikibase-on-your-local-computer).  After you have access to an instance, go back to the [instructions for creating a bot](#set-up-the-bot) and generate a bot username and password there as you did for the Wikidata test instance. Then change the credentials.txt file to username and password, and change the value of `endpointUrl` to the URL of your Wikibase instance.  If you are running it locally on your own computer, the URL will probably be `http://localhost:8181`.
+
+**Preparing the data to be added**
 
 Go to [this page](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikibase/cartoons.csv) and download the file `cartoons.csv` into the same directory where you downloaded the first bot script.
 
@@ -200,7 +208,7 @@ Q3058 is "cartoon character" and we can see its entry by starting to type "carto
 
 Wnen we click on the entry we want, its page will come up.  You can find the page for any Q identifier by changing the end of its URL to the appropriate identifier.
 
-## Adding properties
+**Adding properties**
 
 If a property that you want to assign to the items that you are creating with your bot doesn't exist, you will need to create the property by going to `Special pages`, then `Create a new property` in the Wikibase section. 
 
@@ -212,7 +220,7 @@ Above is an example of a property that I could use to link Mickey Mouse to Minni
 
 When I click `Create`, I see the page for the newly created property.
 
-## Adding items
+**Adding items**
 
 The reason that you are using the bot is because you want to create a lot of items.  However, you may want to manually create items to be used as the values of properties.  For example, in the spreadsheet, property P9 is "part of universe" and is used to connect a cartoon character to its "universe" (Disney = Q3070, Looney Tunes = Q3076, etc.).  If I want to add another universe, such as Marvel, I need to go to `Special pages` then `Create a new item` in the Wikibase section.  
 
@@ -226,7 +234,7 @@ After I enter the information and click `Create` I'll see the page for the new i
 
 **Note: be sure that you remember to save your spreadsheet in CSV format before moving on to the next section!**  If it was opened as a CSV, it should be saved in that format by default.
 
-# Editing the bot
+**Editing the bot**
 
 First you need to download the bot script from [this page](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikibase/api/load_csv.py) as you did the first bot script. Save it in the same directory as the other files.
 
@@ -249,7 +257,7 @@ The script has the name of the CSV file you downloaded.  If you are using that f
 
 If the file is in the same directory as the script, you only need to include the file name (with extension).  If it's somewhere else, you need to include the path, using the syntax appropriate for your operating system.
 
-3\. Lines 173 to 176 associate labels and descriptions in various languages with the columns in the spreadsheet that contain them.  Since the example has two columns with labels in different languages, there are two dictionaries in the `labelList` list. The value of `string` for a particular language should contain the column header for that label inside the single quotes in the square brackets of `item[]`, like this:  
+3\. Lines 173 to 176 associate labels in various languages with the columns in the spreadsheet that contain them.  Since the example has two columns with labels in different languages, there are two dictionaries in the `labelList` list. The value of `string` for a particular language should contain the column header for that label inside the single quotes in the square brackets of `item[]`, like this:  
 
 ```python
     {'language': 'en', 'string': item['enLabel']}
@@ -267,7 +275,7 @@ In the example CSV table, there is only a description in one language, but you c
 
 5\. Once you have edited the bot script to match your spreadsheet, save and close the file.
 
-# Running the bot
+## Running the bot
 
 In your console window, navigate to the directory where the bot script was saved, then issue the command to run the bot.  In Windows, that's:
 
@@ -285,7 +293,7 @@ python3 load_csv.py
 
 I changed the spreadsheet to create some new cartoon characters using the new item value that I created (Q3340 = Marvel universe).  
 
-## Console output
+**Console output**
 
 Here's the console output that I got when I ran the bot script:
 
@@ -305,7 +313,7 @@ added claim for: P9
 erebuss-MacBook-Pro-3:~ baskausj$
 ```
 
-## Results
+**Results**
 
 <img src="../images/spidey-search.png" style="border:1px solid black">
 
@@ -341,9 +349,9 @@ in order to provide a string value for a property. (However, one should first ex
 
 We should also note that, we did not make any attempt to support our claims with references -- an important consideration in Wikidata. However, delving into that level of complexity requires that you first study the [Wikibase data model](https://www.mediawiki.org/wiki/Wikibase/DataModel), which is beyond the scope of this lesson.
 
-## Acknowledgements
+**Acknowledgements**
 
 Thanks to [Asaf Bartov](https://wikimediafoundation.org/profile/asaf-bartov/) and [Andrew Lih](https://en.wikipedia.org/wiki/Andrew_Lih) whose presentations and answers to my questions at the LD4P conference cleared up the confusion that was keeping me from getting this to work. sjb
 
 ----
-Revised 2019-05-25
+Revised 2019-05-26
