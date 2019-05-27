@@ -56,13 +56,6 @@ function redrawLabels(isoLanguage) {
 }
 
 function setStatusOptions(isoLanguage) {
-	if (isoLanguage=='en') {languageTag='en';}
-	if (isoLanguage=='pt') {languageTag='pt';}
-	if (isoLanguage=='de') {languageTag='de';}
-	if (isoLanguage=='es') {languageTag='es';}
-	if (isoLanguage=='zh-hans') {languageTag='zh-hans';}
-	if (isoLanguage=='zh-hant') {languageTag='zh-hant';}
-
 	// start the status dropdown over with "Select/Selecionar/Wählen" as the first option
 	$("#box1 option:gt(0)").remove();
 	if (isoLanguage=='en') {$("#box1 option").text("(Select)");}
