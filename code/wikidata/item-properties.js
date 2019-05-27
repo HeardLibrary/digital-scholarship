@@ -1,12 +1,3 @@
-// Important note: There is a certain amount of sloppiness that is tolerated by the fact that the jQuery functions
-// that handle the XML returned from AJAX strips off the language tags that the SPARQL endpoint sends in the query
-// results.  This means that handling the results is easier if the language tags aren't desired (which they usually 
-// arent).  However, if they were desired, they would have to be generated and attached to the literals.  Also,
-// if a version of this program were created where the queries requested application/sparql-results+json instead of 
-// XML one would need to pay attention to whether the results included language tags or not.  The current (2016-11) 
-// Heard Library SPARQL endpoint only supports XML results, but in the future cleaner code might result if the 
-// program were converted to using JSON results.
-
 var isoLanguage = 'en';
 
 // If the URL has a search string, then set the initial language alternative to something other than English
@@ -28,39 +19,39 @@ if (localID.length>1)
 function redrawLabels(isoLanguage) {
 	if (isoLanguage=='en') {
 	$("#boxLabel0").text("Language");
-	$("#boxLabel1").text("Status");
-	document.getElementById("pageHeader").innerHTML = "Occurrence Status picklist demo page";
-	document.title = "Occurrence status";
+	$("#boxLabel1").text("Character");
+	document.getElementById("pageHeader").innerHTML = "Wikidata superheroes picklist demo page";
+	document.title = "Wikidata superheroes";
 	}
 	if (isoLanguage=='pt') {
 	$("#boxLabel0").text("Língua");
-	$("#boxLabel1").text("Status");
-	document.getElementById("pageHeader").innerHTML = "Página de demonstração de opções de ocorrência";
-	document.title = "Status da ocorrência";
+	$("#boxLabel1").text("Personagem");
+	document.getElementById("pageHeader").innerHTML = "Página de demonstração do picklist dos super-heróis do Wikidata";
+	document.title = "Super-heróis do Wikidata";
 	}
 	if (isoLanguage=='de') {
 	$("#boxLabel0").text("Sprache");
-	$("#boxLabel1").text("Status");
-	document.getElementById("pageHeader").innerHTML = "Auftreten Status Auswahlliste Demo Seite";
-	document.title = "Auftretensstatus";
+	$("#boxLabel1").text("Charakter");
+	document.getElementById("pageHeader").innerHTML = "Wikidata Superhelden Auswahlliste Demo-Seite";
+	document.title = "Wikidata Superhelden";
 	}
 	if (isoLanguage=='es') {
 	$("#boxLabel0").text("Idioma");
-	$("#boxLabel1").text("Estado");
-	document.getElementById("pageHeader").innerHTML = "Página de demostración de selección de estado de ocurrencia";
-	document.title = "Estado de ocurrencia";
+	$("#boxLabel1").text("Personaje");
+	document.getElementById("pageHeader").innerHTML = "Página de demostración de lista de superhéroes de Wikidata";
+	document.title = "Superhéroes de Wikidata";
 	}
 	if (isoLanguage=='zh-hans') {
 	$("#boxLabel0").text("语言");
-	$("#boxLabel1").text("状态");
-	document.getElementById("pageHeader").innerHTML = "发生状态选择列表演示页面";
-	document.title = "发生状态";
+	$("#boxLabel1").text("字符");
+	document.getElementById("pageHeader").innerHTML = "维基数据超级英雄选项列表演示页面";
+	document.title = "维基数据超级英雄";
 	}
 	if (isoLanguage=='zh-hant') {
 	$("#boxLabel0").text("語言");
-	$("#boxLabel1").text("狀態");
-	document.getElementById("pageHeader").innerHTML = "發生狀態選擇列表演示頁面";
-	document.title = "發生狀態";
+	$("#boxLabel1").text("字符");
+	document.getElementById("pageHeader").innerHTML = "維基數據超級英雄選項列表演示頁面";
+	document.title = "維基數據超級英雄";
 	}
 }
 
@@ -81,53 +72,37 @@ function setStatusOptions(isoLanguage) {
 	if (isoLanguage=='zh-hans') {$("#box1 option").text("(选择)");}
 	if (isoLanguage=='zh-hant') {$("#box1 option").text("(選擇)");}
 
-	// create URI-encoded query string
-        var string = 'PREFIX skos: <http://www.w3.org/2004/02/skos/core#>'
-                    +'SELECT DISTINCT ?label ?def ?term WHERE {'
-                    +'?term <http://www.w3.org/2000/01/rdf-schema#isDefinedBy>'
-                    +'<http://rs.tdwg.org/cv/status/>.'
-                    +'?term skos:prefLabel ?label.'
-                    +'?term skos:definition ?def.'
-                    +"FILTER (lang(?label)='"+isoLanguage+"')"
-                    +"FILTER (lang(?def)='"+isoLanguage+"')"
+	// create URI-encoded query string to get superhero names and IRIs
+		var string = 'PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>'
+					+'PREFIX wd: <http://www.wikidata.org/entity/>'
+					+'PREFIX wdt: <http://www.wikidata.org/prop/direct/>'
+                    +'SELECT DISTINCT ?name ?iri WHERE {'
+                    +'?iri wdt:P106 wd:Q188784.'
+                    +'?iri wdt:P1080 wd:Q931597.'
+                    +'?iri rdfs:label ?name.'
+                    +"FILTER(lang(?name)='"+isoLanguage+"')"
                     +'}'
-                    +'ORDER BY ASC(?label)';
-	var encodedQuery = encodeURIComponent(string);
+                    +'ORDER BY ASC(?name)';
+		var encodedQuery = encodeURIComponent(string);
 
         // send query to endpoint
         $.ajax({
             type: 'GET',
-            url: 'https://sparql.vanderbilt.edu/sparql?query=' + encodedQuery,
+            url: 'https://query.wikidata.org/sparql?query=' + encodedQuery,
             headers: {
-                Accept: 'application/sparql-results+xml'
+                Accept: 'application/sparql-results+json'
             },
-            success: parseXml
+            success: function(returnedJson) {
+				for (i = 0; i < returnedJson.results.bindings.length; i++) {
+					label = returnedJson.results.bindings[i].name.value
+					iri = returnedJson.results.bindings[i].iri.value
+					// add the new information to the dropdown list
+					$("#box1").append("<option value='"+iri+"'>"+label+'</option>');
+				}
+			}
         });
 
 	}
-
-// converts nodes of an XML object to text. See http://tech.pro/tutorial/877/xml-parsing-with-jquery
-// and http://stackoverflow.com/questions/4191386/jquery-how-to-find-an-element-based-on-a-data-attribute-value
-
-function parseXml(xml) {
-    // done searching, so hide the spinner icon
-    $('#searchSpinner').hide();
-    //step through each "result" element
-    $(xml).find("result").each(function() {
-
-        // pull the "binding" element that has the name attribute of "label"
-        $(this).find("binding[name='label']").each(function() {
-            label=$(this).find("literal").text();
-        });
-        
-	// pull the "binding" element that has the name attribute of "term"
-	$(this).find("binding[name='term']").each(function() {
-	    value=$(this).find("uri").text();
-	});
-	// add the new information to the dropdown list
-        $("#box1").append("<option value='"+value+"'>"+label+'</option>');
-    });
-}
 
 $(document).ready(function(){
 		
@@ -141,14 +116,50 @@ $(document).ready(function(){
 			var isoLanguage= $("#box0").val();
 			redrawLabels(isoLanguage)
 			setStatusOptions(isoLanguage);
+			$("#div1").html('');
+			$('#searchSpinner').hide();
 	});
 
-	// fires when there is a change in the province dropdown
+	// fires when there is a change in the character dropdown
 	$("#box1").change(function(){
-			var selection = $("#box1").val();
-			$("#div1").text(selection);
-	});
+		var iri = $("#box1").val();
+		var isoLanguage= $("#box0").val();
+		// create URI-encoded query string to get superhero names and IRIs
+		var string = 'PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>'
+					+'PREFIX wd: <http://www.wikidata.org/entity/>'
+					+'PREFIX wdt: <http://www.wikidata.org/prop/direct/>'
+					+'SELECT DISTINCT ?property ?value WHERE {'
+					+ '<' + iri + '> ?propertyUri ?valueUri.'
+					+'?valueUri rdfs:label ?value.'
+					+'?genProp <http://wikiba.se/ontology#directClaim> ?propertyUri.'
+					+'?genProp rdfs:label ?property.'
+					+'FILTER(substr(str(?propertyUri),1,36)="http://www.wikidata.org/prop/direct/")'
+					+'FILTER(LANG(?property) = "'+isoLanguage+'")'
+					+'FILTER(LANG(?value) = "'+isoLanguage+'")'
+					+'}'
+					+'ORDER BY ASC(?property)';
+		var encodedQuery = encodeURIComponent(string);
 
+		// send query to endpoint
+		$.ajax({
+			type: 'GET',
+			url: 'https://query.wikidata.org/sparql?query=' + encodedQuery,
+			headers: {
+				Accept: 'application/sparql-results+json'
+			},
+			success: function(returnedJson) {
+				text = ''
+				for (i = 0; i < returnedJson.results.bindings.length; i++) {
+					property = returnedJson.results.bindings[i].property.value
+					value = returnedJson.results.bindings[i].value.value
+					text = text + property + ': ' + value + '<br/>'
+					$("#div1").html(text);
+				$('#searchSpinner').hide();
+				}
+			}
+		});
+	});
+	
 	// Main routine: execute SPARQL queries to get values and add them to the select options
 	setStatusOptions(isoLanguage);
 
