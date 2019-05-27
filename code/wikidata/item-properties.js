@@ -71,7 +71,7 @@ function setStatusOptions(isoLanguage) {
 					+'PREFIX wdt: <http://www.wikidata.org/prop/direct/>'
                     +'SELECT DISTINCT ?name ?iri WHERE {'
                     +'?iri wdt:P106 wd:Q188784.'
-                    +'?iri wdt:P1080 wd:Q931597.'
+					+'?iri wdt:P1080 wd:Q931597.'
                     +'?iri rdfs:label ?name.'
                     +"FILTER(lang(?name)='"+isoLanguage+"')"
                     +'}'
