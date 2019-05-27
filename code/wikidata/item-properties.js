@@ -67,11 +67,11 @@ function setStatusOptions(isoLanguage) {
 
 	// create URI-encoded query string to get superhero names and IRIs
 		var string = 'PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>'
-					+'PREFIX wd: <http://www.wikidata.org/entity/>'
-					+'PREFIX wdt: <http://www.wikidata.org/prop/direct/>'
+                    +'PREFIX wd: <http://www.wikidata.org/entity/>'
+                    +'PREFIX wdt: <http://www.wikidata.org/prop/direct/>'
                     +'SELECT DISTINCT ?name ?iri WHERE {'
                     +'?iri wdt:P106 wd:Q188784.'
-					+'?iri wdt:P1080 wd:Q931597.'
+                    +'?iri wdt:P1080 wd:Q931597.'
                     +'?iri rdfs:label ?name.'
                     +"FILTER(lang(?name)='"+isoLanguage+"')"
                     +'}'
@@ -119,18 +119,18 @@ $(document).ready(function(){
 		var isoLanguage= $("#box0").val();
 		// create URI-encoded query string to get superhero names and IRIs
 		var string = 'PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>'
-					+'PREFIX wd: <http://www.wikidata.org/entity/>'
-					+'PREFIX wdt: <http://www.wikidata.org/prop/direct/>'
-					+'SELECT DISTINCT ?property ?value WHERE {'
-					+ '<' + iri + '> ?propertyUri ?valueUri.'
-					+'?valueUri rdfs:label ?value.'
-					+'?genProp <http://wikiba.se/ontology#directClaim> ?propertyUri.'
-					+'?genProp rdfs:label ?property.'
-					+'FILTER(substr(str(?propertyUri),1,36)="http://www.wikidata.org/prop/direct/")'
-					+'FILTER(LANG(?property) = "'+isoLanguage+'")'
-					+'FILTER(LANG(?value) = "'+isoLanguage+'")'
-					+'}'
-					+'ORDER BY ASC(?property)';
+                    +'PREFIX wd: <http://www.wikidata.org/entity/>'
+                    +'PREFIX wdt: <http://www.wikidata.org/prop/direct/>'
+                    +'SELECT DISTINCT ?property ?value WHERE {'
+                    + '<' + iri + '> ?propertyUri ?valueUri.'
+                    +'?valueUri rdfs:label ?value.'
+                    +'?genProp <http://wikiba.se/ontology#directClaim> ?propertyUri.'
+                    +'?genProp rdfs:label ?property.'
+                    +'FILTER(substr(str(?propertyUri),1,36)="http://www.wikidata.org/prop/direct/")'
+                    +'FILTER(LANG(?property) = "'+isoLanguage+'")'
+                    +'FILTER(LANG(?value) = "'+isoLanguage+'")'
+                    +'}'
+                    +'ORDER BY ASC(?property)';
 		var encodedQuery = encodeURIComponent(string);
 
 		// send query to endpoint
