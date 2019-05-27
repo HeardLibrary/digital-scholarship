@@ -6,7 +6,7 @@ breadcrumb: Internet
 
 Note: this is the seventh lesson in a beginner's introduction to Python.  For the whole schedule, see the [Vanderbilt Python Working Group homepage](../wg/)
 
-[prevous lesson on data structures](../inout/)
+[prevous lesson on file input and output](../inout/)
 
 Answers for last week's challenge problems:
 

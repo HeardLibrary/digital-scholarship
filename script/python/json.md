@@ -372,7 +372,7 @@ url = 'https://api.rsc.org/compounds/v1/records/'+ str(dataStructure['results'][
 
 1\
 
-[next lesson on file input and output](../inout/)
+[next lesson on file dictionaries and JSON](../json/)
 
 ----
 Revised 2019-05-03

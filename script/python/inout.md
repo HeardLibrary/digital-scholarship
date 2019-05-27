@@ -6,7 +6,7 @@ breadcrumb: Files
 
 Note: this is the sixth lesson in a beginner's introduction to Python.  For the whole schedule, see the [Vanderbilt Python Working Group homepage](../wg/)
 
-[prevous lesson on data structures](../structures/)
+[prevous lesson on dictionaries and JSON](../json/)
 
 Answers for last week's challenge problems:
 
