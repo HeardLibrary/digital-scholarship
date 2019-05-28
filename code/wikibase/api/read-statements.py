@@ -25,6 +25,6 @@ for property, values in claims.items():
                 # print the string value if the value is a literal
                 print('value: ', value['mainsnak']['datavalue']['value'])
             except:
-                # print the while snak if the value is something else
+                # print the whole snak if the value is something else
                 print('value: ', value['mainsnak'])
     print()
