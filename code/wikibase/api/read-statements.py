@@ -2,9 +2,10 @@
 
 import requests
 
-endpointUrl = 'https://test.wikidata.org'
-print('You can try this with the "Universe", which is Q188427.')
-print('Check out https://test.wikidata.org/wiki/Q188427 to see the GUI.')
+# endpointUrl = 'https://test.wikidata.org' # use for the Wikidata test instance
+endpointUrl = 'https://www.wikidata.org'
+print('You can try this with the "Pleasant View", which is Q2800895.')
+print('Check out https://www.wikidata.org/wiki/Q2800895 to see the GUI.')
 entity = input("What's the Q number (including the 'Q')? ")
 resourceUrl = '/w/api.php?action=wbgetclaims&format=json&entity='+entity
 uri = endpointUrl + resourceUrl
@@ -16,5 +17,14 @@ print()
 for property, values in claims.items():
     print('property: ', property)
     for value in values:
-        print('value: ', value['mainsnak']['datavalue']['value']['id'])
+        try:
+            # print Q ID if the value is an item
+            print('value: ', value['mainsnak']['datavalue']['value']['id'])
+        except:
+            try:
+                # print the string value if the value is a literal
+                print('value: ', value['mainsnak']['datavalue']['value'])
+            except:
+                # print the while snak if the value is something else
+                print('value: ', value['mainsnak'])
     print()
