@@ -14,7 +14,7 @@ CONSTRUCT {
 WHERE {
   {wd:''' + item + ''' ?p1 ?o.}
   UNION
-  {?s ?p2 wd:''' + item + '''}
+  {?s ?p2 wd:''' + item + '''.}
 }
 '''
 print(query)
