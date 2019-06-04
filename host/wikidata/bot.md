@@ -20,7 +20,7 @@ The term "bot" conjures up an image of a cool robot that can do your bidding.  U
 
 [Wikibase](http://wikiba.se/) is the underlying software application upon which [Wikidata](https://www.wikidata.org/) is built.  Wikibase is essentially a blank copy of Wikidata into which you can enter your own items and properties.  Wikidata and Wikibase share the same [data model](../../../lod/wikibase/), so Wikibase provides a means to test tools and data structures that might eventually find their way to Wikidata.
 
-Wikibase can be set up on your local computer and accessed using a `localhost:` address.  It can also be installed in the cloud using a web service, then accessed through the Internet.
+Wikibase can be [set up on your local computer](https://heardlibrary.github.io/digital-scholarship/lod/install/#using-docker-compose-to-create-an-instance-of-wikibase-on-your-local-computer) and accessed using a `localhost:` address.  It can also be installed in the cloud using a web service, then accessed through the Internet.
 
 Because Wikibase is so empty, it would take a lot of work to enter any meaningful amount of data by hand using the [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) grapical interface (GUI). Therefore, it is likely that Wikibase users will want to use software tools to automate the process.  Unfortunately, [Quickstatements](https://www.wikidata.org/wiki/Help:QuickStatements), one of the most useful tools for populating Wikidata with data from spreadsheets, does not work in the [Docker image](https://hub.docker.com/r/wikibase/wikibase) of Wikibase that is easiest to install (as of 2019-03-31; see [this](https://stuff.coffeecode.net/2018/wikibase-workshop-swib18.html#_quickstatements) for more information).  For that reason Wikibase users are likely to be interested in entering data into it using a bot.
 
@@ -360,4 +360,4 @@ A final important consideration when writing to the real Wikidata is *throttling
 Thanks to [Asaf Bartov](https://wikimediafoundation.org/profile/asaf-bartov/) and [Andrew Lih](https://en.wikipedia.org/wiki/Andrew_Lih) whose presentations and answers to my questions at the [2019 LD4P conference](http://bit.ly/ld4conference) cleared up the confusion that was keeping me from getting this to work. sjb
 
 ----
-Revised 2019-05-26
+Revised 2019-06-04
