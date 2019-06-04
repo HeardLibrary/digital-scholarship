@@ -20,11 +20,14 @@ Knowledge of Linked Data required to do SPARQL queries
 
 Knowledge of Docker is required to set up your own Wikibase instance
 
-[Getting started with Docker](../../host/) (see link above for instructions for setting up Wikibase)
+[Getting started with Docker](../#docker)
 
+[Setting up an instance of Wikibase on your local computer](../../lod/install/#using-docker-compose-to-create-an-instance-of-wikibase-on-your-local-computer)
+
+[Information on Docker Machine](../dockermachine/) (useful if you want to try to install Wikibase on a cloud service like AWS)
 
 [Create a bot to load data into Wikibase](bot/)
 
 
 ----
-Revised 2019-03-15
+Revised 2019-06-04
