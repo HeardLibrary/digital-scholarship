@@ -24,6 +24,8 @@ Knowledge of Docker is required to set up your own Wikibase instance
 
 [Setting up an instance of Wikibase on your local computer](../../lod/install/#using-docker-compose-to-create-an-instance-of-wikibase-on-your-local-computer)
 
+[The Wikibase data model](../../lod/wikibase/)
+
 [Information on Docker Machine](../dockermachine/) (useful if you want to try to install Wikibase on a cloud service like AWS)
 
 [Create a bot to load data into Wikibase](bot/)
