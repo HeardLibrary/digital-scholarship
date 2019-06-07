@@ -176,6 +176,9 @@ WHERE {
 
 Note that we had to include the `wikibase:reference` link to the generic property entity in order to get the label.
 
+# Example installation: Access to Biological Collections Data
+
+In this example, the schema for the Access to Biological Collections Data (ABCD) standard has been loaded into a Wikibase instance.  You can view the data from the [main MediaWiki page](https://wiki.bgbm.org/bdidata/index.php/BDI_Data:Main_Page) or use the [Query Service GUI interface](https://wiki.bgbm.org/bdidata/query/).  Note: the Wikidata namespaces have been mapped to different IRIs - see the [useful queries page](https://wiki.bgbm.org/bdidata/index.php/BDI_Data:Useful_Queries) for the specific prefixes. The data can also be accessed programatically through the endpoint <https://wiki.bgbm.org/proxy/wdqs/bigdata/namespace/bdi/sparql>.
 
 [go to the page on building a bot to load data into Wikidata](../../host/wikidata/bot/)
 ----
