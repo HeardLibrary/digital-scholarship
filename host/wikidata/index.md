@@ -12,6 +12,8 @@ No skills required to play around
 
 [Wikidata Query Service](https://query.wikidata.org/) (click on file folder for sample queries)
 
+[Wikidata notability policy](https://www.wikidata.org/wiki/Wikidata:Notability)
+
 
 Knowledge of Linked Data required to do SPARQL queries
 
