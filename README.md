@@ -36,7 +36,19 @@ The repository structure is described below.
 │   │       ├── scrape-sec.py       : code to perform the scrape, including loops
 │   │       └── scrape-sec.ipynb    : Jupyter notebook of code for only a single instance of each resource
 │   ├── viz                    : data visualization resources
-│   └── wikibase               : preliminary work on setting up a bot
+│   ├── wikibase               : interact with Wikibase using Pywikibot, or generic MediaWiki API
+│   │   ├── api                : code for interacting with Wikibase using MediaWiki API
+│   │   │   ├── write-statements.py : generic Python code for writing to Wikibase using MediaWiki API
+│   │   │   ├── load_csv.py         : abbreviated Python code for writing CSV data to Wikibase using API
+│   │   │   └── credentials.txt     : credentials necessary for using MediaWiki API
+│   │   ├── families           : folder to hold Pywikibot family settings
+│   │   └── {various files}    : remaining files in this directory are for using Pywikibot
+│   └── wikidata               : preliminary work on setting up a bot
+│       ├── item-properties.html     : HTML page template for reading from Wikidata
+│       ├── item-properties.js       : Javascript to run HTML page to read from Wikidata
+│       ├── rdflib_wikidata.py       : Python script to use rdflib library to process Wikidata data 
+│       ├── requests_wikidata_json.py : Python script to retrieve JSON data using SPARQL 
+│       └── requests_wikidata_triples.py : Python script to retrieve RDF/Turtle triples using SPARQL
 └── data                       : sample data
     ├── rdf                    : Resource Description Framework (RDF) examples
     │   ├── presidents.rdf     : data about presidents retrieved from Wikidata via SPARQL CONSTRUCT
