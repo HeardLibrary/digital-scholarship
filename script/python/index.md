@@ -70,13 +70,15 @@ Some examples of code to play with are [here](examples)
 
 ## Python Working Group at Vanderbilt
 
-[Home page of the Python Working Group](wg) of the [Vanderbilt Libraries Digital Scholarship and Scholarly Communications Office](https://www.library.vanderbilt.edu/scholarly/)
+[Home page of the Python Working Group](wg) of the [Vanderbilt Libraries Digital Scholarship and Communications Office](https://www.library.vanderbilt.edu/scholarly/)
 
 ## Websites
 
 [Software Carpentry Programming with Python](http://swcarpentry.github.io/python-novice-inflammation/)
 
 [Software Carpentry Plotting and Programming in Python](http://swcarpentry.github.io/python-novice-inflammation/)
+
+[Library Carpentry Introduction to web scraping](https://librarycarpentry.org/lc-webscraping/)
 
 [Python IDEs and Code Editors (Guide)](https://realpython.com/python-ides-code-editors-guide/)
 
@@ -99,4 +101,4 @@ These series have not been vetted in any way - check them out at your own risk.
 [OSP - Python Beginner Series for Absolute Beginners](https://www.youtube.com/playlist?list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg) kjdElectronics - (58K subscribers)
 
 ----
-Revised 2019-04-04
+Revised 2019-07-18
