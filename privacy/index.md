@@ -108,5 +108,7 @@ The [CryptoParty](https://www.cryptoparty.in/) movement organizes digital privac
 
 [Security in a Box](https://securityinabox.org/en/) has links to many useful tools.
 
+[privy.sh link shortener](https://priv.sh/) provides a service that does not track clickthroughs (no cookies saved).
+
 ----
-Revised 2019-05-09
+Revised 2019-07-18
