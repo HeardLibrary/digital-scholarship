@@ -39,6 +39,7 @@ breadcrumb: Topics
 [Python in GIS](../geo/gis/python/)<br/>
 [Python lessons](../script/python/wg/)<br/>
 [Python resources](../script/python/)<br/>
+[Qualitative analysis](../qual/)<br/>
 [R resources](../script/r/)<br/>
 [remote sensing](../geo/rs/)<br/>
 [software, installing and managing (Mac)](../computer/installation-mac/)<br/>
