@@ -42,6 +42,8 @@ On February 22, 2013, the Office of Science and Technology Policy (OSTP) in the 
 
 In response, grant funding agencies in the United States, including the [National Institutes of Health (NIH)](http://grants.nih.gov/grants/policy/data_sharing/data_sharing_guidance.htm) and the [National Science Foundation (NSF)](http://www.nsf.gov/pubs/2015/nsf15052/nsf15052.pdf) now require grant applicants to submit data management plans, describing how research data will be managed during the course of a study and shared at the study's conclusion. 
 
+[Data Sharing Policies by Federal Agency (from the SPARC website)](http://researchsharing.sparcopen.org/compare?ids=5&compare=data)
+
 [Effective Practices for Data (NSF Dear Colleague Letter, 2019](https://www.nsf.gov/pubs/2019/nsf19069/nsf19069.jsp)
 
 ## Federal Data Strategy
