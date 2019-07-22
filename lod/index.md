@@ -24,5 +24,13 @@ At Vanderbilt, the [Digital Scholarship and Communications Office](https://www.l
 
 [Linked Data WG SPARQL endpoint](https://sparql.vanderbilt.edu/)
 
+## LD4 Conference on Linked Data resources (Boston, 2019)
+
+[Conference program](https://wiki.duraspace.org/display/LD4P2/2019+LD4+Conference+on+Linked+Data+in+Libraries)
+
+[Session videos](https://www.youtube.com/channel/UC6ohcLJ1I3yAFjpUaOlT_zA/videos)
+
+[Presentation slides and notes](https://drive.google.com/drive/folders/1hb2w8I9B2ftm_cncy8ipMBUlwRAa78TZ)
+
 ----
-Revised 2019-05-06
+Revised 2019-07-22
