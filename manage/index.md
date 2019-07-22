@@ -42,6 +42,8 @@ On February 22, 2013, the Office of Science and Technology Policy (OSTP) in the 
 
 In response, grant funding agencies in the United States, including the [National Institutes of Health (NIH)](http://grants.nih.gov/grants/policy/data_sharing/data_sharing_guidance.htm) and the [National Science Foundation (NSF)](http://www.nsf.gov/pubs/2015/nsf15052/nsf15052.pdf) now require grant applicants to submit data management plans, describing how research data will be managed during the course of a study and shared at the study's conclusion. 
 
+[Effective Practices for Data (NSF Dear Colleague Letter, 2019](https://www.nsf.gov/pubs/2019/nsf19069/nsf19069.jsp)
+
 ## Federal Data Strategy
 
 [Summary of the Federal Data Strategy](https://strategy.data.gov/)
@@ -61,4 +63,4 @@ While these findings are specific to cancer clinical trials, we can expect to se
 Piwowar HA, Day RS, Fridsma DB (2007) Sharing Detailed Research Data Is Associated with Increased Citation Rate. PLoS ONE 2(3): e308. <http://dx.doi.org/10.1371/journal.pone.0000308>
 
 ----
-Revised 2019-01-12
+Revised 2019-07-22
