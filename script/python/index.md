@@ -72,6 +72,12 @@ Some examples of code to play with are [here](examples)
 
 [Home page of the Python Working Group](wg) of the [Vanderbilt Libraries Digital Scholarship and Communications Office](https://www.library.vanderbilt.edu/scholarly/)
 
+## Books
+
+[Dive Into Python](http://histo.ucsf.edu/BMS270/diveintopython3-r802.pdf) (by Mark Pilgrim) - free online pdf (Python 3). Also availible in print. 
+
+[Programs, Information, and People text](https://www.programsinformationpeople.org/runestone/static/publicPIP/index.html) from a [course at University of Michigan School of Information](https://www.programsinformationpeople.org/runestone/).  Includes examples of using APIs and OAuth.
+
 ## Websites
 
 [Software Carpentry Programming with Python](http://swcarpentry.github.io/python-novice-inflammation/)
