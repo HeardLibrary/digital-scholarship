@@ -30,6 +30,10 @@ There are several LaTeX editors the provide an editing pane and a WYSIWYG previe
 
 [Detexify](http://detexify.kirelabs.org/classify.html) is a tool that allows you to hand-draw symbols, then choose from its best attempt to match your drawing with known symbols encoded as LaTeX.  The code you choose can be copied and pasted into your LaTeX editor.
 
+## LaTeX Resources
+
+A free online tutorial is available from [ShareLaTeX](https://learn.sharelatex.com/learn/Free_online_introduction_to_LaTeX_(part_1)).
+
 # Markdown
 
 Markdown is increasingly popular as a lightweight way to include formatting in text documents.  It is the markup system used by the popular GitHub repository system.
@@ -75,4 +79,4 @@ XQuery is a powerful functional programming language that can operate on XML.  F
 JSON is an increasingly popular way to transmit data in a structured way.  It is probably the most common way that data are provided to software and web pages via APIs.  
 
 ----
-Revised 2019-05-08
+Revised 2019-07-26
