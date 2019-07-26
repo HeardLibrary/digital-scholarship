@@ -12,6 +12,8 @@ AWS offers [many services](https://aws.amazon.com/) for deploying applications i
 
 To get started, AWS offers [a number of tutorials](https://aws.amazon.com/getting-started/tutorials/).
 
+[Placeholder link to blog post on Authentication with AWS static websites](https://douglasduhaime.com/posts/s3-lambda-auth.html)
+
 ## DigitalOcean
 
 [DigitalOcean](https://www.digitalocean.com/) provides a number of cloud computing resources. Droplets are virtual machines in which you can deploy code in the cloud.  They also provide database and simple object storage services.  Although its services are less extensive than AWS, they may be simpler to use.
@@ -45,4 +47,4 @@ To get started, AWS offers [a number of tutorials](https://aws.amazon.com/gettin
 [Introduction to Docker Machine](dockermachine/)
 
 ----
-Revised 2019-05-06
+Revised 2019-07-26
