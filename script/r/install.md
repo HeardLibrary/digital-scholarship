@@ -10,6 +10,8 @@ breadcrumb: Install
 
 R can be downloaded from one of many Comprehensive R Archive Network (CRAN) sites.  The closest one to Vanderbilt is at UT Knoxville: - <http://mirrors.nics.utk.edu/cran/> .  From the UTK CRAN site homepage, click on the "Download R for \[OS\]" link that is appropriate for your operating system. 
 
+An alternative to downloading R and RStudio separately is to download [Anaconda](https://www.anaconda.com/). Anaconda is a comprehensive data science platform that installs and manages not only R and RStudio, but also downloads and installs Python and Jupyter notebooks along with all of the commonly used packages that go along with these programs.  So it does a lot in a single install, but it is also a bit intrusive and requires quite a bit of computing resources and drive space.  So it may not be appropriate for installation on old computers.  To install Anaconda go to [this page](https://www.anaconda.com/distribution/). 
+
 # Downloading and installing R and RStudio for Windows
 
 ## Downloading and installing R
@@ -54,7 +56,7 @@ as the answer.  Click the red dot in the upper left of the window to quit the co
 
 ## Downloading and installing RStudio
 
-Go to <https://www.rstudio.com/products/rstudio/download/> and click on the appropriate installer link for your computer's operating system.  This will initiate the download of an executable installation file to the default download directory for your browser.  After the download completes, click on the .dmg file to open it. Drag the RStudio icon into the Applications folder and close the window.  You should now be able to find RStudio in your Applications folder.  Run RStudio.  Allow the application to run.  In the left side of the window, you should see a Console pane similar to what you saw before.  Try adding 2+2 as you did above and you should get the same result.  
+Go to <https://www.rstudio.com/products/rstudio/download/> and scroll to the bottom of the page.  Click on the appropriate installer link for your computer's operating system.  This will initiate the download of an executable installation file to the default download directory for your browser.  After the download completes, click on the .dmg file to open it. Drag the RStudio icon into the Applications folder and close the window.  You should now be able to find RStudio in your Applications folder.  Run RStudio.  Allow the application to run.  In the left side of the window, you should see a Console pane similar to what you saw before.  Try adding 2+2 as you did above and you should get the same result.  
 
 ----
-Revised 2019-01-12
+Revised 2019-08-14
