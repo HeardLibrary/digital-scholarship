@@ -4,6 +4,8 @@ title: Where to go from here
 breadcrumb: Next steps
 ---
 
+go back to [Introduction to R data structures](../structures/)]
+
 # Where do I go from here?
 
 If you have completed all of the earlier lessons, you should now have the background to get started using R to solve practical problems.  There are many ways to use R, so the information below introduces only a subset of the most common topics: **data wrangling**, **data visualization**, and **statistical analysis**.  These topics aren't independent - data wrangling is often necessary before statistical analysis or data visualization, and data viz and statistics often go hand-in-hand when trying to make sense of a data set.
