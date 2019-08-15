@@ -14,6 +14,8 @@ The following links lead to a series of lessons designed to help you get started
 
 [3. Introduction to R data structures](structures)
 
+[4. Where do I go from here?](next)
+
 
 # R Resources
 
