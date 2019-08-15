@@ -4,7 +4,7 @@ title: Where to go from here
 breadcrumb: Next steps
 ---
 
-go back to [Introduction to R data structures](../structures/)]
+go back to [Introduction to R data structures](../structures/)
 
 # Where do I go from here?
 
@@ -12,13 +12,13 @@ If you have completed all of the earlier lessons, you should now have the backgr
 
 # Data wrangling with R
 
-*Data wrangling* (sometimes also known as *data munging*) refers to many possible processes that can be used to turn the data that you have into the form necessary to do what you want with it.  That can include extracting data from a raw source, cleaning the data, extracting a subset of the data, transforming the data, merging several datasets, and preparing data for archiving.  
+*Data wrangling* (sometimes also known as *data munging*) refers to many possible processes that can be used to turn the data that you have into the form necessary to do what you want.  That can include extracting data from a raw source, cleaning the data, extracting a subset of the data, transforming the data, merging several datasets, and preparing data for archiving.  
 
 This is clearly a huge topic, so this will just provide several starting points.
 
 ## Tidy data
 
-The buzzword "tidy" data was coined by Hadley Wickham and is described a a paper called [*Tidy Data* in the Journal of Statistical Software 59(10)](http://www.jstatsoft.org/v59/i10/paper).  The basic idea of Tidy Data can be summaried in four points:
+The buzzword "tidy" data was coined by Hadley Wickham and is described a a paper called [*Tidy Data*](http://www.jstatsoft.org/v59/i10/paper) in the Journal of Statistical Software 59(10).  The basic idea of Tidy Data can be summaried in four points:
 
 - Each type of observational unit forms a table
 - Each variable forms a column
@@ -31,7 +31,7 @@ Often messy ("untidy") data is in a more compact form.  Here's the typical way o
 
 ![](../images/t-test-table-format-for-excel.png)
 
-However, these data aren't "tidy" because each observation isn't in its own row and the independent variable factor values (male vs. female) isn't in a single column.  In contrast, the data in this form (using grouping variables):
+However, these data aren't "tidy" because each observation isn't in its own row, and the independent variable factor values (male vs. female) isn't in a single column.  In contrast, the data in this form (using grouping variables):
 
 ![](../images/t-test-table-grouping-variable.png)
 
@@ -49,11 +49,11 @@ The R package **plyr** contains functions for splitting and combining data frame
 
 ## Creating and documenting data pipelines
 
-If you have a consistent data source that requires wrangling the data by processing it with a fixed sequence of operations, you can use R to create a *data pipeline* where the output of one processing step feeds as input into the next processing step.  You can simply do this by creating an R script with the necessary steps, but there are two useful tools that allow you to document the steps in the same document from which you run the script.
+If you have a consistent data source that requires wrangling the data by processing it with a fixed sequence of operations, you can use R to create a *data pipeline* where the output of one processing step feeds as input into the next processing step.  You can do this by simply creating an R script with the necessary steps, but there are two useful tools that allow you to document the steps in the same document from which you run the script.
 
-**Jupyter notebook** [Jupyter notebooks](https://jupyter.org/) are a system where you can create code blocks that are documented with text and diagrams that explain what happens in each step of the process.  The code blocks can be executed one at a time and display intermediate results so that you can know that the processing is going as expected.  Jupyter notebooks can be installed separately, but are installed automatically as part of the [Anaconda package](https://www.anaconda.com/). 
+**Jupyter notebook** [Jupyter notebooks](https://jupyter.org/) is a system where you can create code blocks that are documented with text and diagrams that explain what happens in each step of the process.  The code blocks can be executed one at a time and display intermediate results so that you can know that the processing is going as expected.  Jupyter notebooks can be installed separately, but are installed automatically as part of the [Anaconda package](https://www.anaconda.com/). 
 
-**R Markdown** R Markdown is an extension of the well-known text markup language *Markdown*.  So R Markdown can be rendered by any application that will display or process Markdown.  For example, an R Markdown page uploaded to GitHub will render with the styling included in the Markdown and R Markdown documents can be rendered as PDFs.  However, an R Markdown script will also execute as code within RStudio.  
+**R Markdown** R Markdown is an extension of the well-known text markup language *Markdown*.  So R Markdown can be rendered by any application that will display or process Markdown.  For example, an R Markdown page uploaded to GitHub will render with the styling included in the Markdown and R Markdown documents can be rendered as PDFs with an application like Pandoc.  However, an R Markdown script will also execute as code within RStudio.  
 
 The actual R code is designated within the R Markdown using the usual triple backtick method for displaying any kind of code block in Markdown.  However, when loaded into RStudio, the R code blocks (known as *chunks*) can be run by clicking on the "play" button associated with each code block.  There is also an option to include the output (results) when rendering the document.  For more on R Markdown, see the ["R Markdown" chapter in *R for Data Science*](https://r4ds.had.co.nz/r-markdown.html).
 
@@ -76,7 +76,7 @@ Diagram from the [Introduction of *R for Data Science*](https://r4ds.had.co.nz/e
 
 Data visualization can be considered part of a larger process of data exploration that also includes data transformation and modeling. Since the process is iterative, being able to adjust the way that the data are visualized as the exploration progresses is important.  
 
-The "grammar of graphics" is a philosophical outlook on graphics introduced in 2010 by Hadley Wickham in his paper [*A Layered Grammar of Graphics*](http://vita.had.co.nz/papers/layered-grammar.pdf).  The systematic layered grammar of graphics allows the visualizer to control features of the plot such as the geometry of the plot (line, box, dot, etc.), the asthetics (marker type, color, etc.), and statistical transformation of the data (such as smoothing) in order to make features or characteristics of the data more apparent.  As the data exploration goes forward, based on what is learned, the layered features can be adjusted to change how the data are displayed.  
+The "grammar of graphics" is a philosophical outlook on graphics introduced in 2010 by Hadley Wickham in his paper [*A Layered Grammar of Graphics*](http://vita.had.co.nz/papers/layered-grammar.pdf).  The systematic layered grammar of graphics allows the visualizer to control features of the plot such as the geometry of the plot (line, box, dot, etc.), the asthetics (marker type, color, etc.), and statistical transformation of the data (such as smoothing) in order to make features or characteristics of the data more apparent.  As the data exploration goes forward, based on what is learned the layered features can be adjusted to change how the data are displayed.  
 
 The **ggplot2** package is based on the Grammar of Graphics philosophy and is described in the ["Data Visualization" chapter of *R for Data Science*](https://r4ds.had.co.nz/data-visualisation.html).  To get an high-altitude overview of how the syntax of the ggplot function affects the features of a plot, see the [Data Visualization with ggplot2 Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf) found on the [RStudio Cheatsheats web page](https://www.rstudio.com/resources/cheatsheets/).  
 
