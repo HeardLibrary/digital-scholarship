@@ -22,13 +22,13 @@ There are numerous data structures in R, but we will focus on the three most imp
 
 A *vector* is a one-dimensional data structure consisting of items of the same kind.  Vectors have a name that is used to refer to that particular instance of a vector.  The individual items in the vector can be referenced using their position in the vector, as shown in the diagram above.  Note: R is "one based", meaning that we start counting items at 1.  This is in contrast to Python, which is "zero based" (counting starts at 0).
 
-We can construct a vector by explicitly entering its values using the `c` (for "construct") function, like this:
+We can construct a vector by explicitly entering its values using the `c()` (for "construct") function, like this:
 
 ```
 animal <- c("frog", "spider", "worm", "bee")
 ```
 
-Notice that in R, the assignment operator is `<-`, designed to look like a leftward pointing arrow since the data on the right is passed into the variable on the left. (One can also use the more typical symbol `=` as the assignment operator in R, but `<-` is more typical.)
+Notice that in R, the assignment operator is `<-`, designed to look like a leftward pointing arrow since the data on the right is passed into the variable on the left. (One can also use the symbol `=` as the assignment operator, but `<-` is more typical.)
 
 ![](../images/create-vector.png)
 
@@ -36,15 +36,15 @@ The screenshot above shows what happens when we create a vector using RStudio, t
 
 ### Vector variants
 
-R has two additional data structures that are similar to vectors: matrices and arrays.  Both of these structures are similar to vectors in that they can only contain one kind of data.  A matrix has two dimentions and a vector can be turned into a matrix simply by assigning it two dimensions.  An array is similar, except that it can have any number of dimensions.  
+R has two additional data structures that are similar to vectors: *matrices* and *arrays*.  Both of these structures are similar to vectors in that they can only contain one kind of data.  A matrix has two dimentions and a vector can be turned into a matrix simply by assigning it two dimensions.  An array is similar, except that it can have any number of dimensions.  
 
-Matrices and arrays are important data structures in cases where certain mathematical operations need to be performed on very large data sets efficiently.  You can learn more about them in any R reference work.
+Matrices and arrays are important data structures in cases where certain mathematical operations need to be performed efficiently on very large data sets.  You can learn more about them in any R reference work.
 
 <img src="../images/list-diagram.png" style="border:1px solid black">
 
 ## Lists
 
-A *list* is also a one-dimentional data structure, like a vector.  However, the items in a list can be heterogeneous (different kinds of things).  In the diagram above, we see that the list consists of two strings (characters listed in quotes), one number (no quotes), and the vector `animal` that we created earlier (with its name not in quotes).  
+A *list* is also a one-dimentional data structure, like a vector.  However, the items in a list can be heterogeneous (different types of items).  In the diagram above, we see that the values in the list consist of two strings (characters listed in quotes), one number (no quotes), and the vector `animal` that we created earlier (with its name given without quotes).  
 
 I can create the list in the diagram using this command (assuming that I've already created the `animal` vector):
 
@@ -74,7 +74,7 @@ thing$curse
 
 ## Data frames
 
-Data frames are two dimensional data objects and are one of the most widely used types in R.  One can think of a data frame as a table with rows and columns, with the top row containing column headers that are names describing what's in the columns.  
+Data frames are two dimensional data objects and are one of the most widely used data types in R.  One can think of a data frame as a table with rows and columns, with the top row containing column headers that are names describing what's in the columns.  
 
 It is helpful to think of a data frame as a sort of combination of lists and vectors. The values in a particular column are like a vector, with the column header for that column containing the vector's name.  The set of columns is like a list whose items are vectors.
 
@@ -94,7 +94,7 @@ organismInfo <- data.frame(group, animal, numberLegs)
 
 By default, R will use the name of each vector as the name for the column in the data frame.
 
-![](../images/create-list.png)
+![](../images/create-data-frame.png)
 
 In the example screenshot above, I've chosen to save my script in a file called `organism-example.R`.  I loaded the script into the editor pane, highlighted all of the lines, then clicked **Run**.  As the script runs, each command is executed in the Console pane and each of the created data structures is listed in the **Environment** tab of the upper right pane.
 
