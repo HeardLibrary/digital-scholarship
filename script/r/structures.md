@@ -114,7 +114,7 @@ Because the columns of a data frame behave somewhat like list items, the notatio
 organismInfo$animal
 ```
 
-and items in that column can be referred to by their position:
+and items in that column can be referred to by their position from the top of the column:
 
 ```
 organismInfo$animal[4]
@@ -122,9 +122,9 @@ organismInfo$animal[4]
 
 ### Data types in data frames and tibbles
 
-When data are read into a data frame, what happens to them depends on the type of data.  Numeric data remain as numeric data, but string data (e.g. non-numeric data enclosed in quotes) are converted into a special data type called *factor* when they are loaded into the data frame.  This format is useful when the data are intended to be used in statistical tests, and given that R was originally statistics-heavy, this automatic conversion makes sense.  
+When data are read into a data frame, what happens to them depends on the type of data.  Numeric data remain as numeric data, but string data (e.g. non-numeric data enclosed in quotes) are converted into a special data type called *factor* when they are loaded into the data frame.  This format is useful when the data are intended to be used in statistical tests, and given that R was originally statistics-heavy, this automatic conversion makes some sense.  
 
-R keeps track of the unique values of factors, which are known as the *levels* present of the factor.  ("Level" comes from experimental design terminology - also related to R's heavy statistical orientation.) The factors are stored in a more efficient way than strings, which improves performance when crunching large data sets.  In the screen shot above, displaying the value of a particular cell containing text results in not only the value of the cell, but a listing of all of the levels present in that column.  Levels are not listed after displaying the contents of a cell containing a number.
+R keeps track of the unique values of factors, which are known as the *levels* of the factor that are present.  ("Level" comes from experimental design terminology - also related to R's heavy statistical orientation.) The factors are stored in a more efficient way than strings, which improves performance when crunching large data sets.  In the screen shot above, displaying the value of a particular cell containing text results in not only the value of the cell, but a listing of all of the levels present in that column.  Levels are not listed when displaying the contents of a cell containing a number.
 
 Factors are important when running statistical tests, since they are the means by which numeric data are assigned to groups ("grouping variables") as required by tests like t-test of means, ANOVA, and logistic regression.  
 
@@ -132,7 +132,7 @@ More recently, the use of R has expanded far beyond statistics, so automatically
 
 ### Methods for reading CSV data into data frames
 
-The method of loading data into a data frame by manually entering the items as part of the script is not effective for large data sets.  Large sets of tabular data are commonly saved as files in comma separated values (CSV) format.  All common spreadsheet applications (such as Microsoft Excel, OpenOffice Calc, and Libre Office Calc) provide a way to export spreadsheet data in CSV format, so that's the best way to get a dataset from a spreasheet into R. If a spreadsheet contains multiple sheets, each one must be saved as separate CSV files.  To save an Excel sheet in CSV format, go to Save As… and select "CSV (Comma delimited) (*.csv)" from the "Save as type:" dropdown. 
+The method of loading data into a data frame by manually entering the items as part of the script is not effective for large data sets.  Large sets of tabular data are commonly saved as files in comma separated values (CSV) format.  All common spreadsheet applications (such as Microsoft Excel, OpenOffice Calc, and Libre Office Calc) provide a way to export spreadsheet data in CSV format, so that's the best way to get a dataset from a spreasheet into R. If a spreadsheet contains multiple sheets, each one must be saved as a separate CSV file.  To save an Excel sheet in CSV format, go to Save As… and select "CSV (Comma delimited) (*.csv)" from the "Save as type:" dropdown. 
 
 There are two convenient ways to load CSV data into a data frame: loading it from a file on your local computer, and loading it through the Internet using a URL.  
 
@@ -140,17 +140,17 @@ There are two convenient ways to load CSV data into a data frame: loading it fro
 
 To load a CSV file from your local hard drive, we'll make use of an R function that initiates a "file open" dialog: `file.choose()`.  When the file open dialog is executed, a popup window lets you navigate to and select the file that you want to open.  **Important note:**  occasionally, the popup window is hidden behind the RStudio window.  So if you run the script and it seems to have gotten stuck, minimize the RStudio window and see if the file open dialog window was hiding underneath.
 
-The `file.choose()` function reads the CSV file into R, but it isn't in the correct form for R to use it.  The function `read.csv` is used to convert the CSV-formatted data into the data frame data structure.  So the file open function and the CSV conversion function can be put together into a combined function that both opens the file and converts the CSV:
+The `file.choose()` function reads the CSV file into R, but the data that has been read in isn't in the form of a data frame.  The function `read.csv` is used to convert CSV-formatted raw data into the data frame data structure.  So the file open function and the CSV conversion function can be put together into a combined function that both opens the file and converts the CSV:
 
 ```
 myDataFrame <- read.csv(file.choose())
 ```
 
-To practice using this function, save the file [t-test.csv](https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/t-test.csv) somewhere on your computer.  Right click on the link in the previous sentence, and select **Save Linke As...**.  Then paste the line in the example above into the Console pane of RStudio and press **Enter**.  The data frame `myDataFrame` should appear in the summary pane in the upper right and if you click on its name, you can see the table in a tab in the upper left.  
+To practice using this function, save the file [t-test.csv](https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/t-test.csv) somewhere on your computer.  Right click on the link in the previous sentence, and select **Save Linke As...**.  Then paste the line in the example above into the Console pane of RStudio and press **Enter**.  The data frame `myDataFrame` should appear in the summary pane in the upper right, and if you click on its name, you can see the table in a tab in the upper left pane.  
 
 **From a URL**
 
-Sometimes a teacher, colleague, or a website might make a file available directly via a URL.  So an alternative to getting the file from your computer's drive is to specify a URL that points to the file location at some place on the Internet.  One important consideration is that the URL must deliver the raw data file and not a web page.  You can see the distinction between the two by comparing:
+Sometimes a teacher, colleague, or a website might make a file available directly via a URL.  So an alternative to getting a CSV file from your computer's drive is to specify a URL that points to the file location at some place on the Internet.  One important consideration is that the URL must deliver the raw data file and not a web page.  You can see the distinction between the two by comparing:
 
 <https://gist.github.com/baskaufs/1a7a995c1b25d6e88b45>
 
@@ -160,15 +160,15 @@ with
 
 In the first case, the URL leads to a web page that displays the content of the CSV file formatted as an HTML table.  In the second case, the browser displays the actual characters that comprise the CSV file.  The second URL could be used to load the file as part of an R script, but the first URL would display an error. 
 
-Here is the command that would read data from that file into a data frame:
+Here is the command that would read data from the file URL into a data frame:
 
 ```
 myOtherDataFrame = read.csv(file="https://gist.githubusercontent.com/baskaufs/1a7a995c1b25d6e88b45/raw/4bb17ccc5c1e62c27627833a4f25380f27d30b35/t-test.csv")
 ```
 
-You can test this command by copying it and entering it into the Console pane of RStudio.  You should see the newly created data frame in the workspace summary pane as in the previous example.  
+You can test this command by copying it and entering it into the Console pane of RStudio.  You should see the newly created data frame in the workspace summary pane (upper right) as in the previous example.  
 
-If you have a GitHub account, creating a Gist is an easy way to make raw data available through a URL.  Create the gist in the editing environment, then after creating a public Gist click on the Raw button at the upper right of the screen.  Copy the URL from the browser's address box and paste it into the script between the quotes after the file= argument as shown in the example above.
+If you have a GitHub account, creating a Gist is an easy way to make raw data available publicly through a URL.  Create the gist in the editing environment, then after creating a public Gist click on the Raw button at the upper right of the screen.  Copy the URL from the browser's address box and paste it into the script between the quotes after the `file=` key as shown in the example above.
 
 ---
 
