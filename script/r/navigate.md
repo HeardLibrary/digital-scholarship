@@ -168,5 +168,9 @@ Here's the result:
 
 If you paste the script into the editor window, you can run the whole thing at once by highlighting all four lines, then clicking **Run**.  You can also save the file by clicking on the save icon above the editor text, or selecting **Save** from the **File** menu.  (The default for R scripts is to use the file extension `.R`, e.g. `demo-graph.R`.)  If you save the script, you can load it again later to use as a template for future modifications of the script.  In the screenshot above, the script has been saved, so you see "demo-graph.R" as the name in the tab instead of "Untitled1".
 
+---
+
+Continue to [Introduction to R data structures](../structures/)
+
 ----
 Revised 2019-08-14

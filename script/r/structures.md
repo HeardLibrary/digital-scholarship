@@ -1,0 +1,178 @@
+---
+permalink: /script/r/structures/
+title: Introduction to R data structures
+breadcrumb: Data structures
+---
+
+go back to [Navigating around in RStudio](../navigate/)]
+
+# Introduction to R data structures
+
+## The role of data structures in R
+
+Like most programming languages, R defines a number of different kinds of structures for storing data.  These structures can hold multiple data items in a manner similar to structures that might be called arrays or lists in other languages.  
+
+Data structures are particularly important in R because generally functions in R operate on entire data structures rather than on individual items within the structure.  In other words, if we want a function to act on every item in a data structure, we don't loop through the items in the structure - rather, we simply pass an appropriate data structure into the function and R automatically performs the functions action on all of the items in the structure.  For that reason, looping isn't as big a thing in R as it is in other programming languages such as Python.  
+
+There are numerous data structures in R, but we will focus on the three most important.  Many of the other data structures are variations on these main structures, so understanding these three will make it easier to understand the others.
+
+![](../images/vector-diagram.png)
+
+## Vectors
+
+A *vector* is a one-dimensional data structure consisting of items of the same kind.  Vectors have a name that is used to refer to that particular instance of a vector.  The individual items in the vector can be referenced using their position in the vector, as shown in the diagram above.  Note: R is "one based", meaning that we start counting items at 1.  This is in contrast to Python, which is "zero based" (counting starts at 0).
+
+We can construct a vector by explicitly entering its values using the `c` (for "construct") function, like this:
+
+```
+animal <- c("frog", "spider", "worm", "bee")
+```
+
+Notice that in R, the assignment operator is `<-`, designed to look like a leftward pointing arrow since the data on the right is passed into the variable on the left. (One can also use the more typical symbol `=` as the assignment operator in R, but `<-` is more typical.)
+
+![](../images/create-vector.png)
+
+The screenshot above shows what happens when we create a vector using RStudio, then display the third item in the vector.
+
+![](../images/list-diagram.png)
+
+### Vector variants
+
+R has two additional data structures that are similar to vectors: matrices and arrays.  Both of these structures are similar to vectors in that they can only contain one kind of data.  A matrix has two dimentions and a vector can be turned into a matrix simply by assigning it two dimensions.  An array is similar, except that it can have any number of dimensions.  
+
+Matrices and arrays are important data structures in cases where certain mathematical operations need to be performed on very large data sets efficiently.  You can learn more about them in any R reference work.
+
+## Lists
+
+A *list* is also a one-dimentional data structure, like a vector.  However, the items in a list can be heterogeneous (different kinds of things).  In the diagram above, we see that the list consists of two strings (characters listed in quotes), one number (no quotes), and the vector `animal` that we created earlier (with its name not in quotes).  
+
+I can create the list in the diagram using this command (assuming that I've already created the `animal` vector):
+
+```
+thing <- list(fruitKind="apple", euler=2.71828, vectorData=animal, curse="!@#$%")
+```
+
+Notice that as I add items to the list, I can assign also assign names to each item.  The items can be referenced by those names.  This allows an R list to behave like a dictionary in Python or a JSON object consisting of name:value pairs.  (Note: names can also be assigned to items in a vector, although that is often not particularly useful.)
+
+![](../images/create-list.png)
+
+The screenshot above shows what happens when I create the list in RStudio using the console.  After the list is created, it shows up in the workspace summary (**Environment** tab in upper right pane).  Because lists can be complicated, the items in the list aren't shown there.  If I want to see the details of the list, I can click on the list in the summary and a new tab will open in the upper left pane showing me what is contained in the list.
+
+As with vectors, you can refer to a particular item by its position in the list, like this:
+
+```
+thing[[2]]
+```
+
+Notice that when referring to an item in a list, you use two square brackets (vs. one square bracket for vectors).  You can also reference a list item by its name, for example:
+
+```
+thing$curse
+```
+
+![](../images/data-frame-diagram.png)
+
+## Data frames
+
+Data frames are two dimensional data objects and are one of the most widely used types in R.  One can think of a data frame as a table with rows and columns, with the top row containing column headers that are names describing what's in the columns.  
+
+It is helpful to think of a data frame as a sort of combination of lists and vectors. The values in a particular column are like a vector, with the column header for that column containing the vector's name.  The set of columns is like a list whose items are vectors.
+
+We can actually create a data frame by first constructing a vector for each column:
+
+```
+group <- c("reptile", "arachnid", "annelid", "insect")
+animal <- c("frog", "spider", "worm", "bee")
+numberLegs <- c(4,8,0,6)
+```
+
+then loading the vectors into the data frame:
+
+```
+organismInfo <- data.frame(group, animal, numberLegs)
+```
+
+By default, R will use the name of each vector as the name for the column in the data frame.
+
+![](../images/create-list.png)
+
+In the example screenshot above, I've chosen to save my script in a file called `organism-example.R`.  I loaded the script into the editor pane, highlighted all of the lines, then clicked **Run**.  As the script runs, each command is executed in the Console pane and each of the created data structures is listed in the **Environment** tab of the upper right pane.
+
+![](../images/view-data-frame.png)
+
+If I want to see what's actually in the data frame, I can click on the name of the data frame in the upper right pane and a tab will open in the upper left frame showing the data frame in table form.
+
+We can refer to a particular cell in the table by listing its row followed by its column in brackets, like this:
+
+```
+organismInfo[2,1]
+```
+
+Because the columns of a data frame behave somewhat like list items, the notation for referring to list items by name (dollar sign followed by name) can also be used to refer to columns in a data frame:
+
+```
+organismInfo$animal
+```
+
+and items in that column can be referred to by their position:
+
+```
+organismInfo$animal[4]
+```
+
+### Data types in data frames and tibbles
+
+When data are read into a data frame, what happens to them depends on the type of data.  Numeric data remain as numeric data, but string data (e.g. non-numeric data enclosed in quotes) are converted into a special data type called *factor* when they are loaded into the data frame.  This format is useful when the data are intended to be used in statistical tests, and given that R was originally statistics-heavy, this automatic conversion makes sense.  
+
+R keeps track of the unique values of factors, which are known as the *levels* present of the factor.  ("Level" comes from experimental design terminology - also related to R's heavy statistical orientation.) The factors are stored in a more efficient way than strings, which improves performance when crunching large data sets.  In the screen shot above, displaying the value of a particular cell containing text results in not only the value of the cell, but a listing of all of the levels present in that column.  Levels are not listed after displaying the contents of a cell containing a number.
+
+Factors are important when running statistical tests, since they are the means by which numeric data are assigned to groups ("grouping variables") as required by tests like t-test of means, ANOVA, and logistic regression.  
+
+More recently, the use of R has expanded far beyond statistics, so automatically trasforming data into a form that is optimal for statistics is no longer necessarily desirable in every case.  Another two-dimensional data structure, called a *tibble*, was developed to broaden the use of data frames.  When data are read into a tibble, there is never a conversion of data types (strings remain strings).  The rules for column names are also relaxed over traditional data frames.  For more information about tibbles, see [Chapter 10 of *R for Data Science*](https://r4ds.had.co.nz/tibbles.html) (Chapter 7 in the print version).  
+
+### Methods for reading CSV data into data frames
+
+The method of loading data into a data frame by manually entering the items as part of the script is not effective for large data sets.  Large sets of tabular data are commonly saved as files in comma separated values (CSV) format.  All common spreadsheet applications (such as Microsoft Excel, OpenOffice Calc, and Libre Office Calc) provide a way to export spreadsheet data in CSV format, so that's the best way to get a dataset from a spreasheet into R. If a spreadsheet contains multiple sheets, each one must be saved as separate CSV files.  To save an Excel sheet in CSV format, go to Save As… and select "CSV (Comma delimited) (*.csv)" from the "Save as type:" dropdown. 
+
+There are two convenient ways to load CSV data into a data frame: loading it from a file on your local computer, and loading it through the Internet using a URL.  
+
+**From your hard drive**
+
+To load a CSV file from your local hard drive, we'll make use of an R function that initiates a "file open" dialog: `file.choose()`.  When the file open dialog is executed, a popup window lets you navigate to and select the file that you want to open.  **Important note:**  occasionally, the popup window is hidden behind the RStudio window.  So if you run the script and it seems to have gotten stuck, minimize the RStudio window and see if the file open dialog window was hiding underneath.
+
+The `file.choose()` function reads the CSV file into R, but it isn't in the correct form for R to use it.  The function `read.csv` is used to convert the CSV-formatted data into the data frame data structure.  So the file open function and the CSV conversion function can be put together into a combined function that both opens the file and converts the CSV:
+
+```
+myDataFrame <- read.csv(file.choose())
+```
+
+To practice using this function, save the file [t-test.csv](https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/t-test.csv) somewhere on your computer.  Right click on the link in the previous sentence, and select **Save Linke As...**.  Then paste the line in the example above into the Console pane of RStudio and press **Enter**.  The data frame `myDataFrame` should appear in the summary pane in the upper right and if you click on its name, you can see the table in a tab in the upper left.  
+
+**From a URL**
+
+Sometimes a teacher, colleague, or a website might make a file available directly via a URL.  So an alternative to getting the file from your computer's drive is to specify a URL that points to the file location at some place on the Internet.  One important consideration is that the URL must deliver the raw data file and not a web page.  You can see the distinction between the two by comparing:
+
+<https://gist.github.com/baskaufs/1a7a995c1b25d6e88b45>
+
+with
+
+<https://gist.githubusercontent.com/baskaufs/1a7a995c1b25d6e88b45/raw/4bb17ccc5c1e62c27627833a4f25380f27d30b35/t-test.csv>
+
+In the first case, the URL leads to a web page that displays the content of the CSV file formatted as an HTML table.  In the second case, the browser displays the actual characters that comprise the CSV file.  The second URL could be used to load the file as part of an R script, but the first URL would display an error. 
+
+Here is the command that would read data from that file into a data frame:
+
+```
+myOtherDataFrame = read.csv(file="https://gist.githubusercontent.com/baskaufs/1a7a995c1b25d6e88b45/raw/4bb17ccc5c1e62c27627833a4f25380f27d30b35/t-test.csv")
+```
+
+You can test this command by copying it and entering it into the Console pane of RStudio.  You should see the newly created data frame in the workspace summary pane as in the previous example.  
+
+If you have a GitHub account, creating a Gist is an easy way to make raw data available through a URL.  Create the gist in the editing environment, then after creating a public Gist click on the Raw button at the upper right of the screen.  Copy the URL from the browser's address box and paste it into the script between the quotes after the file= argument as shown in the example above.
+
+---
+
+Continue to [Where to go from here](../next/)
+
+----
+Revised 2019-08-15

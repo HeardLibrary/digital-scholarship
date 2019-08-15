@@ -60,7 +60,7 @@ Go to <https://www.rstudio.com/products/rstudio/download/> and scroll to the bot
 
 ----
 
-Go to [Navigating around in RStudio](../navigate/)
+Continue to [Navigating around in RStudio](../navigate/)
 
 ----
 Revised 2019-08-14
