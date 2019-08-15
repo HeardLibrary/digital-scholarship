@@ -4,6 +4,8 @@ title: Navigating RStudio
 breadcrumb: Navigate
 ---
 
+Go back to [Installing R and R Studio](../install/)
+
 # Navigating around in RStudio
 
 RStudio provides a convenient way to create and run R scripts.  On this page we will explore some of the most important parts of the RStudio interface.
