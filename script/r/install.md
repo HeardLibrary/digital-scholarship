@@ -59,4 +59,8 @@ as the answer.  Click the red dot in the upper left of the window to quit the co
 Go to <https://www.rstudio.com/products/rstudio/download/> and scroll to the bottom of the page.  Click on the appropriate installer link for your computer's operating system.  This will initiate the download of an executable installation file to the default download directory for your browser.  After the download completes, click on the .dmg file to open it. Drag the RStudio icon into the Applications folder and close the window.  You should now be able to find RStudio in your Applications folder.  Run RStudio.  Allow the application to run.  In the left side of the window, you should see a Console pane similar to what you saw before.  Try adding 2+2 as you did above and you should get the same result.  
 
 ----
+
+Go to [Navigating around in RStudio](../navigate/)
+
+----
 Revised 2019-08-14

@@ -8,6 +8,8 @@ breadcrumb: R
 
 [Installing R and R Studio](install)
 
+[Navigating around in RStudio](navigate)
+
 [Software Carpentry Programming with R](http://swcarpentry.github.io/r-novice-inflammation/)
 
 [Software Carpentry R for Reproducable Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder/)
@@ -21,4 +23,4 @@ breadcrumb: R
 [Online R resources for Beginners](http://www.introductoryr.co.uk/R_Resources_for_Beginners.html) is a page of links to many other R online resources, including online books, video tutorials, and other websites.
 
 ----
-Revised 2019-01-12
+Revised 2019-08-14

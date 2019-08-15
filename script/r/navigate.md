@@ -113,7 +113,7 @@ We will now create a bar chart with error bars using the same data that we used 
 
 R has a number of relatively simple, built-in plotting functions that do not require installing any additional packages.  However, the ggplot2 system is very popular and widely used because it allows the user to control many features of the plot.  The down side of this level of control is that it tends to make the plotting function complicated. If you are interested in data visualization using R, we highly recommend the book *R for Data Science*, which is available [online](https://r4ds.had.co.nz/) for free (and has an awesome picture of a kākāpō on its cover!).  This book introduces the "grammar of graphics" philosophy that underpins the ggplot2 package.  
 
-If you have worked through the examples so far, the data that we want to plot is already loaded into the data frame called `heightsDframe` and you only need to issue the command to generate the graph.  If you have skipped down to this point, you will first need to load the data using this command:
+If you have worked through the examples so far, the data that we want to plot is already loaded into the workspace as a data frame called `heightsDframe` and you only need to issue the command to generate the graph.  If you have skipped down to this point, you will first need to load the data into the data frame using this command:
 
 ```
 heightsDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/t-test.csv")
@@ -141,13 +141,13 @@ The example shows uses "mean_cl_normal" to produce error bars for 95% confidence
 
 There are other options that can be used to change the width of the bars, whether the bars are outlined in black, etc. You can experiment with it and Google to find out more about how to embellish the plot.  
 
-You can also set the values of the axis labels to be something other than the defaults taken from the column headers by adding a labs() function to the command, as in this example:  
+You can also set the values of the axis labels to be something other than the defaults taken from the column headers by adding a `labs()` function to the command, as in this example:  
 
 ```
 ggplot(data=heightsDframe, aes(x=grouping, y=height, fill=grouping))+ stat_summary(fun.y = mean, geom = "bar") + stat_summary(fun.data = mean_cl_normal, geom = "errorbar", width = 0.3) + labs(x = "gender", y = "height (cm)")
 ```
 
-You can use the Export function to copy or save the plot.  If you chose the Save Plot as Image option, you can save the plot in a variety of image formats and also mess with the plot resolution.
+You can use the Export function (found immediately above the plot) to copy or save the plot.  If you chose the Save Plot as Image option, you can save the plot in a variety of image formats and also mess with the plot resolution.
 
 ## Scripting the plot
 
@@ -160,9 +160,11 @@ heightsDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/di
 ggplot(data=heightsDframe, aes(x=grouping, y=height, fill=grouping))+ stat_summary(fun.y = mean, geom = "bar") + stat_summary(fun.data = mean_cl_normal, geom = "errorbar", width = 0.3) + labs(x = "gender", y = "height (cm)")
 ```
 
+Here's the result:
+
 ![](../images/rstudio-scripted.png)
 
-If you paste the script into the editor window, you can run the whole thing at once by highlighting all four lines, then clicking **Run**.  You can also save the file by clicking on the save icon or selecting **Save** from the **File** menu.  (The default for R scripts is to use the file extension `.R`, e.g. `demo-graph.R`.)  If you save the script, you can load it again later to use as a template for future modifications of the script.
+If you paste the script into the editor window, you can run the whole thing at once by highlighting all four lines, then clicking **Run**.  You can also save the file by clicking on the save icon above the editor text, or selecting **Save** from the **File** menu.  (The default for R scripts is to use the file extension `.R`, e.g. `demo-graph.R`.)  If you save the script, you can load it again later to use as a template for future modifications of the script.  In the screenshot above, the script has been saved, so you see "demo-graph.R" as the name in the tab instead of "Untitled1".
 
 ----
 Revised 2019-08-14
