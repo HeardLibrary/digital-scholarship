@@ -96,7 +96,7 @@ By default, R will use the name of each vector as the name for the column in the
 
 ![](../images/create-data-frame.png)
 
-In the example screenshot above, I've chosen to save my script in a file called `organism-example.R`.  I loaded the script into the editor pane, highlighted all of the lines, then clicked **Run**.  As the script runs, each command is executed in the Console pane and each of the created data structures is listed in the **Environment** tab of the upper right pane.
+In the example screenshot above, I've chosen to save my script in a file called [organism-example.R](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/organism-example.R).  I loaded the script into the editor pane, highlighted all of the lines, then clicked **Run**.  As the script runs, each command is executed in the Console pane and each of the created data structures is listed in the **Environment** tab of the upper right pane.
 
 ![](../images/view-data-frame.png)
 
