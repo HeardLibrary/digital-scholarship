@@ -16,7 +16,7 @@ Data structures are particularly important in R because generally functions in R
 
 There are numerous data structures in R, but we will focus on the three most important.  Many of the other data structures are variations on these main structures, so understanding these three will make it easier to understand the others.
 
-![](../images/vector-diagram.png)
+<img src="../images/vector-diagram.png" style="border:1px solid black">
 
 ## Vectors
 
@@ -34,13 +34,13 @@ Notice that in R, the assignment operator is `<-`, designed to look like a leftw
 
 The screenshot above shows what happens when we create a vector using RStudio, then display the third item in the vector.
 
-![](../images/list-diagram.png)
-
 ### Vector variants
 
 R has two additional data structures that are similar to vectors: matrices and arrays.  Both of these structures are similar to vectors in that they can only contain one kind of data.  A matrix has two dimentions and a vector can be turned into a matrix simply by assigning it two dimensions.  An array is similar, except that it can have any number of dimensions.  
 
 Matrices and arrays are important data structures in cases where certain mathematical operations need to be performed on very large data sets efficiently.  You can learn more about them in any R reference work.
+
+<img src="../images/list-diagram.png" style="border:1px solid black">
 
 ## Lists
 
@@ -70,7 +70,7 @@ Notice that when referring to an item in a list, you use two square brackets (vs
 thing$curse
 ```
 
-![](../images/data-frame-diagram.png)
+<img src="../images/data-frame-diagram.png" style="border:1px solid black">
 
 ## Data frames
 
