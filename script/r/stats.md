@@ -43,7 +43,13 @@ In `height ~ grouping` of the second line of the script, `height` is the name of
 
 ## paired t-test
 
-A t-test of 
+A paired t-test differs from a t-test of means in that particular observations in one of the two groups is paired in some way with a particular observation in the other group.  For that reason, the layout of a data frame for a paired t-test is different than the layout for a t-test of means.  
+
+table here
+
+```
+t.test(Data$no_malonate, Data$malonate, paired=TRUE, conf.level=0.95)
+```
 
 ----
-Revised 2019-08-15
+Revised 2019-08-16
