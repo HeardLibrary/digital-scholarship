@@ -134,6 +134,12 @@ More recently, the use of R has expanded far beyond statistics, so automatically
 
 The method of loading data into a data frame by manually entering the items as part of the script is not effective for large data sets.  Large sets of tabular data are commonly saved as files in comma separated values (CSV) format.  All common spreadsheet applications (such as Microsoft Excel, OpenOffice Calc, and Libre Office Calc) provide a way to export spreadsheet data in CSV format, so that's the best way to get a dataset from a spreasheet into R. If a spreadsheet contains multiple sheets, each one must be saved as a separate CSV file.  To save an Excel sheet in CSV format, go to Save As… and select "CSV (Comma delimited) (*.csv)" from the "Save as type:" dropdown. 
 
+**Important note:** R can be much more picky about file names than other applications.  Here is some general advice about naming CSV files:
+
+1. Don't use really long file names.
+2. Don't use file names with spaces in them.  It's better to use underscores (`_`) or dashes (`-`) instead.
+3. Pay attention to whether you use upper or lower case letters in the file names.  Unless you are using a capitalization system like camelCase, it's a good idea to use only lower case letters.
+
 There are two convenient ways to load CSV data into a data frame: loading it from a file on your local computer, and loading it through the Internet using a URL.  
 
 **From your hard drive**
