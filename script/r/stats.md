@@ -86,6 +86,23 @@ Note that the order of the items in the observed vector have to correspond to th
 
 ## chi-squared contingency test
 
+Here is [a contingency table for data](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/r/contingency.csv) to test whether the sex of the second child in families is independent of the sex of the first child.  
+
+![](../images/contingency-table.png)
+
+In R, the data for a contingency test must be in the form of a data structure called a *matrix* Details of the matrix data structure are beyond the scope of this lesson - we will simply convert the data from a data frame into a matrix using a function.  Here is the script:
+
+```
+childrenDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/contingency.csv")
+childrenMatrix <- as.matrix(childrenDframe[,-1]) # convert data frame to matrix, removing first column
+chisq.test(childrenMatrix, correct=FALSE)      # don't do Yates' correction
+```
+
+The first column of the table is to help us keep the combinations straight, but is not needed by R.  So when we convert the data frame into a matrix in the second line of the script, the `-1` removes the first column before the conversion.  
+
+In the third line of the script, `correct=FALSE` turns of Yates' correction which can be used when contingency tests have very values.  
+
+
 
 ----
 Revised 2019-08-19
