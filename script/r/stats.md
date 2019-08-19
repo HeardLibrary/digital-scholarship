@@ -102,6 +102,12 @@ The first column of the table is to help us keep the combinations straight, but 
 
 In the third line of the script, `correct=FALSE` turns of Yates' correction which can be used when contingency tests have very values.  
 
+## ANOVA
+
+The setup of a data table to carry out an ANOVA in R uses grouping variables in the same manner as the t-test of means.  Please review the description of grouping variables and the warning about numeric values in groupin variables in the [section about running a t-test of means](#t-test-of-means).  
+
+### Single factor ANOVA
+
 
 
 ----
