@@ -26,7 +26,7 @@ A t-test of means assesses the difference between two levels of a single factor.
 
 ![](../images/t-test-table-grouping-variable.png)
 
-Data arranged in this manner is called ["tidy data"](https://heardlibrary.github.io/digital-scholarship/script/r/next/#tidy-data).  **Important note:** because of the difference between the way that R handles numeric and string data when it loads it into a data frame, it is important that any grouping variable that you use in the source CSV file contain non-numeric characters.  See [Data types in data frames and tibbles](https://heardlibrary.github.io/digital-scholarship/script/r/structures/#data-types-in-data-frames-and-tibbles) for details. 
+Data arranged in this manner is called ["tidy data"](https://heardlibrary.github.io/digital-scholarship/script/r/next/#tidy-data).  **Important note:** because of the difference between the way that R handles numeric and string data when it loads it into a data frame, it is important that the levels in any grouping variable that you use in the source CSV file contain non-numeric characters.  See [Data types in data frames and tibbles](https://heardlibrary.github.io/digital-scholarship/script/r/structures/#data-types-in-data-frames-and-tibbles) for details. 
 
 Here's the script to perform the t-test of means on [these data](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/r/t-test.csv):
 
@@ -51,13 +51,13 @@ In R, the pairing of observations is done by placing the observations of the two
 t.test(firstVector, secondVector, paired=TRUE)
 ```
 
-If we want to read in the values from a CSV file, we'll want to lay out the file differently from the way we laid out the data for the t-test of means:
+If we want to read in the values from a CSV file, we'll want to lay out the file differently from the way we laid out the data in the file for the t-test of means:
 
 ![](../images/paired-samples.png)
 
-The data for each group are located in a separate column since we will want to be able to refer the data in a column by name.  Recall from the [lesson on data structures](https://heardlibrary.github.io/digital-scholarship/script/r/structures/#data-frames) that a data frame is essetially a list of vectors, with each vector serving as a column.  So for the first and second vector we input into the `t-test()` function, we can insert a column from the table.
+The data for each group are located in a separate column since we will want to be able to refer to the group data by column name.  Recall from the [lesson on data structures](https://heardlibrary.github.io/digital-scholarship/script/r/structures/#data-frames) that a data frame is essentially a list of vectors, with each vector serving as a column.  So for the first and second vector we input into the `t-test()` function, we can insert a column from the table.
     
-This example file has a third column with a letter identifying each pair, but it isn't necessary for the test and R will simply ignore it. Here's how we can perform the test on [these data](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/r/paired-t.csv) comparing enzyme reaction rates in the presence and absence of malonate:
+This example file has a third column ("group") with a letter identifying each pair, but it isn't necessary for the test and R will simply ignore it. Here's how we can perform the test on [these data](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/r/paired-t.csv) comparing enzyme reaction rates in the presence and absence of malonate:
 
 ```
 malonateDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/paired-t.csv")
@@ -159,7 +159,7 @@ anova(model)  #run the ANOVA on the model
 
 As was the case with the t-test of means, in the `lm()` function, the name of the data column is the first argument of the function, followed by a tilde and the name of the grouping variable. 
 
-Since the format required for a single factor ANOVA with two categories is exactly the same as the format required for a t-test of means, the same file could be used for either test, and the resulting P-values should be the same.
+Since the format required for a single factor ANOVA with two categories is exactly the same as the format required for a t-test of means, the same file could be used for either test.  Since a single factor ANOVA with two levels is statistically equivalent to a t-test of means, the resulting P-values should come out the same.
 
 Unlike a t-test, which can only compare two groups, a single factor ANOVA can check for differences among three or more levels of a treatment.  For example, if you replace the following line for the first line in the script, the ANOVA will compare the effect of red, green, and blue light based on [these data](https://github.com/HeardLibrary/digital-scholarship/tree/master/data/r/color-anova-example.csv):
 
