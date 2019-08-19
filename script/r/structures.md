@@ -17,7 +17,7 @@ x <- c(1,2)  # the "arrow" points to the left to show the direction of the assig
 
 ## The role of data structures in R
 
-Like most programming languages, R defines a number of different kinds of structures for storing data.  These structures can hold multiple data items in a manner similar to structures that might be called arrays or lists in other languages.  
+Like most programming languages, R defines a number of different kinds of structures for storing data.  These structures can hold multiple data items in a manner similar to structures that might be called arrays or lists in other languages, and could represent a column in a spreadsheet, or data tables. 
 
 Data structures are particularly important in R because generally functions in R operate on entire data structures rather than on individual items within the structure.  In other words, if we want a function to act on every item in a data structure, we don't loop through the items in the structure - rather, we simply pass an appropriate data structure into the function and R automatically performs the functions action on all of the items in the structure.  For that reason, looping isn't as big a thing in R as it is in other programming languages such as Python.  
 
@@ -27,7 +27,7 @@ There are numerous data structures in R, but we will focus on the three most imp
 
 ## Vectors
 
-A *vector* is a one-dimensional data structure consisting of items of the same kind.  Vectors have a name that is used to refer to that particular instance of a vector.  The individual items in the vector can be referenced using their position in the vector, as shown in the diagram above.  Note: R is "one based", meaning that we start counting items at 1.  This is in contrast to Python, which is "zero based" (counting starts at 0).
+A *vector* is a one-dimensional data structure consisting of items of the same kind. This would be analogous to a column of data in a spreadsheet.  Vectors have a name that is used to refer to that particular instance of a vector.  The individual items in the vector can be referenced using their position in the vector, as shown in the diagram above.  Note: R is "one based", meaning that we start counting items at 1.  This is in contrast to Python, which is "zero based" (counting starts at 0).
 
 We can construct a vector by explicitly entering its values using the `c()` (for "construct") function, like this:
 
@@ -43,7 +43,7 @@ The screenshot above shows what happens when we create a vector using RStudio, t
 
 ### Vector variants
 
-R has two additional data structures that are similar to vectors: *matrices* and *arrays*.  Both of these structures are similar to vectors in that they can only contain one kind of data.  A matrix has two dimentions and a vector can be turned into a matrix simply by assigning it two dimensions.  An array is similar, except that it can have any number of dimensions.  
+R has two additional data structures that are similar to vectors: *matrices* and *arrays*.  Both of these structures are similar to vectors in that they can only contain one kind of data.  A matrix has two dimensions (analogous to multiple columns and rows of the same kind of data) and a vector can be turned into a matrix simply by assigning it two dimensions.  An array is similar, except that it can have any number of dimensions.  
 
 Matrices and arrays are important data structures in cases where certain mathematical operations need to be performed efficiently on very large data sets.  You can learn more about them in any R reference work.
 
@@ -59,7 +59,7 @@ I can create the list in the diagram using this command (assuming that I've alre
 thing <- list(fruitKind="apple", euler=2.71828, vectorData=animal, curse="!@#$%")
 ```
 
-Notice that as I add items to the list, I can assign also assign names to each item.  The items can be referenced by those names.  This allows an R list to behave like a dictionary in Python or a JSON object consisting of name:value pairs.  (Note: names can also be assigned to items in a vector, although that is often not particularly useful.)
+Notice that as I add items to the list, I can also assign names to each item.  The items can be referenced by those names.  This allows an R list to behave like a dictionary in Python or a JSON object consisting of name:value pairs.  (Note: names can also be assigned to items in a vector, although that is often not particularly useful.)
 
 ![](../images/create-list.png)
 
@@ -107,7 +107,7 @@ In the example screenshot above, I've chosen to save my script in a file called 
 
 ![](../images/view-data-frame.png)
 
-If I want to see what's actually in the data frame, I can click on the name of the data frame in the upper right pane and a tab will open in the upper left frame showing the data frame in table form.
+If I want to see what's actually in the data frame, I can click on the name of the data frame in the upper right pane "global environment" pane and a tab will open in the upper left editor pane showing the data frame in table form.
 
 We can refer to a particular cell in the table by listing its row followed by its column in brackets, like this:
 
@@ -139,7 +139,7 @@ More recently, the use of R has expanded far beyond statistics, so automatically
 
 ### Methods for reading CSV data into data frames
 
-The method of loading data into a data frame by manually entering the items as part of the script is not effective for large data sets.  Large sets of tabular data are commonly saved as files in comma separated values (CSV) format.  All common spreadsheet applications (such as Microsoft Excel, OpenOffice Calc, and Libre Office Calc) provide a way to export spreadsheet data in CSV format, so that's the best way to get a dataset from a spreasheet into R. If a spreadsheet contains multiple sheets, each one must be saved as a separate CSV file.  To save an Excel sheet in CSV format, go to Save As… and select "CSV (Comma delimited) (*.csv)" from the "Save as type:" dropdown. 
+The method of loading data into a data frame by manually entering the items as part of the script is not efficient for large data sets.  Large sets of tabular data are commonly saved as files in comma separated values (CSV) format.  All common spreadsheet applications (such as Microsoft Excel, OpenOffice Calc, and Libre Office Calc) provide a way to export spreadsheet data in CSV format, so that's the best way to get a dataset from a spreasheet into R. If a spreadsheet contains multiple sheets, each one must be saved as a separate CSV file.  **To save an Excel sheet in CSV format, go to Save As… and select "CSV (Comma delimited) (*.csv)" from the "Save as type:" dropdown.** 
 
 **Important note:** R can be much more picky about file names than other applications.  Here is some general advice about naming CSV files:
 
@@ -159,7 +159,7 @@ The `file.choose()` function reads the CSV file into R, but the data that has be
 myDataFrame <- read.csv(file.choose())
 ```
 
-To practice using this function, save the file [t-test.csv](https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/t-test.csv) somewhere on your computer.  Right click on the link in the previous sentence, and select **Save Linke As...**.  Then paste the line in the example above into the Console pane of RStudio and press **Enter**.  The data frame `myDataFrame` should appear in the summary pane in the upper right, and if you click on its name, you can see the table in a tab in the upper left pane.  
+To practice using this function, download and save the file [t-test.csv](https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/t-test.csv) somewhere on your computer.  To do that, right click on the link in the previous sentence, and select **Save Link As...**.  After you have downloaded the file, paste the line in the example above into the Console pane of RStudio and press **Enter**.  The data frame `myDataFrame` should appear in the summary pane in the upper right, and if you click on its name, you can see the table in a tab in the upper left pane.  
 
 **From a URL**
 

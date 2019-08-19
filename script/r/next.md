@@ -8,7 +8,7 @@ go back to [Introduction to R data structures](../structures/)
 
 # Where do I go from here?
 
-If you have completed all of the earlier lessons, you should now have the background to get started using R to solve practical problems.  There are many ways to use R, so the information below introduces only a subset of the most common topics: **data wrangling**, **data visualization**, and **statistical analysis**.  These topics aren't independent - data wrangling is often necessary before statistical analysis or data visualization, and data viz and statistics often go hand-in-hand when trying to make sense of a data set.
+If you have completed all of the earlier lessons, you should now have the background to get started using R to solve practical problems.  There are many ways to use R, so the information below introduces only a subset of the most common topics: **data wrangling**, **data visualization**, and **statistical analysis**.  These topics aren't independent - data wrangling is often necessary before statistical analysis or data visualization, and data visualization (data "viz") and statistics often go hand-in-hand when trying to make sense of a data set.
 
 # Data wrangling with R
 
@@ -49,16 +49,16 @@ The R package **plyr** contains functions for splitting and combining data frame
 
 ## Creating and documenting data pipelines
 
-If you have a consistent data source that requires wrangling the data by processing it with a fixed sequence of operations, you can use R to create a *data pipeline* where the output of one processing step feeds as input into the next processing step.  You can do this by simply creating an R script with the necessary steps, but there are two useful tools that allow you to document the steps in the same document from which you run the script.
+If you have a consistent data source that requires wrangling the data by processing it with a fixed sequence of operations, you can use R to create a *data pipeline* where the output of one processing step feeds as input into the next processing step.  You can do this by simply creating an R script with the necessary steps, but there are two useful tools that allow you to document the steps in the same file from which you run the script.
 
 **Jupyter notebook** [Jupyter notebooks](https://jupyter.org/) is a system where you can create code blocks that are documented with text and diagrams that explain what happens in each step of the process.  The code blocks can be executed one at a time and display intermediate results so that you can know that the processing is going as expected.  Jupyter notebooks can be installed separately, but are installed automatically as part of the [Anaconda package](https://www.anaconda.com/). 
 
-**R Markdown** R Markdown is an extension of the well-known text markup language *Markdown*.  So R Markdown can be rendered by any application that will display or process Markdown.  For example, an R Markdown page uploaded to GitHub will render with the styling included in the Markdown and R Markdown documents can be rendered as PDFs with an application like Pandoc.  However, an R Markdown script will also execute as code within RStudio.  
+**R Markdown** R Markdown is an extension of the well-known text markup language called *Markdown*.  So R Markdown can be rendered by any application that will display or process Markdown.  For example, an R Markdown page uploaded to GitHub will render with the styling included in the Markdown and R Markdown documents can be rendered as PDFs with an application like Pandoc.  However, an R Markdown script will also execute as code within RStudio.  
 
-The actual R code is designated within the R Markdown using the usual triple backtick method for displaying any kind of code block in Markdown.  However, when loaded into RStudio, the R code blocks (known as *chunks*) can be run by clicking on the "play" button associated with each code block.  There is also an option to include the output (results) when rendering the document.  For more on R Markdown, see the ["R Markdown" chapter in *R for Data Science*](https://r4ds.had.co.nz/r-markdown.html).
+The actual R code is designated within the R Markdown using the usual triple backtick (\`\`\`) method for displaying any kind of code block in Markdown.  However, when loaded into RStudio, the R code blocks (known as *chunks*) can be run by clicking on the "play" button associated with each code block.  There is also an option to include the output (results) when rendering the document.  For more on R Markdown, see the ["R Markdown" chapter in *R for Data Science*](https://r4ds.had.co.nz/r-markdown.html).
 
 
-# Data visualization ("viz") with R
+# Data visualization with R
 
 Graphics are a key part of R. There are several powerful packages that provide functions to create plots within R.
 
