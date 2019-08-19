@@ -8,7 +8,7 @@ breadcrumb: R
 
 The following links lead to a series of lessons designed to help you get started with R and RStudio.  They are designed to be studied sequentially.
 
-[1. Installing R and R Studio](install)
+[1. Installing R and RStudio](install)
 
 [2. Navigating around in RStudio](navigate)
 
