@@ -102,6 +102,43 @@ The first column of the table is to help us keep the combinations straight, but 
 
 In the third line of the script, `correct=FALSE` turns of Yates' correction which can be used when contingency tests have very values.  
 
+## Regression
+
+Using these [fake data](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/r/dog-tail.csv), we want to test whether there is a significant effect of treat size on the rate at which dogs wag their tail. 
+
+To perform a regression using R, we usd the *linear model* function `lm()`.  The first argument of the function contains the dependent variable (wag_rate), followed by a tildle and the independent variable (treat_size).  After running the model, we ask R to summarize the results:
+
+```
+dogtailDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/dog-tail.csv")
+model <- lm(wag_rate ~ treat_size, data=dogtailDframe)
+summary(model)
+```
+
+The results table looks like this:
+
+```
+Call:
+lm(formula = wag_rate ~ treat_size, data = dogtailDframe)
+
+Residuals:
+      1       2       3       4       5 
+-0.1834 -1.3108  1.3948  1.3911 -1.2917 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)   
+(Intercept)  -1.2045     1.3716  -0.878  0.44451   
+treat_size    1.4522     0.2416   6.011  0.00923 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.56 on 3 degrees of freedom
+Multiple R-squared:  0.9233,	Adjusted R-squared:  0.8978 
+F-statistic: 36.13 on 1 and 3 DF,  p-value: 0.009225
+```
+
+We can get the slope and intercept from the Coefficients section: the slope is in the Estimate column for `treat_size`.  The intercept is in the Estimate column for `(Intercept)`.  The last lines of the results provide the other two things we are likely to be interested in: the R-squared value and p-value.
+
+
 ## ANOVA
 
 The setup of a data table to carry out an ANOVA in R uses grouping variables in the same manner as the t-test of means.  Please review the description of grouping variables and the warning about numeric values in groupin variables in the [section about running a t-test of means](#t-test-of-means).  
@@ -163,8 +200,6 @@ ergDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digita
 model <- lm(response ~ block + color, data = ergDframe)
 anova(model)
 ```
-
-
 
 ----
 Revised 2019-08-19
