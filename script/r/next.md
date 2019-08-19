@@ -84,6 +84,8 @@ The **ggplot2** package is based on the Grammar of Graphics philosophy and is de
 
 There are many good resources available for learning how to carry out statistical tests using R.  
 
+If you are already familiar with basic statistical tests and want a jump start to doing those tests using R, [Basic Statistical Analysis Using the R Statistical Package](http://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R-Manual/index.html) by Heeren and Milton of the Boston University School of Public Health is a good place to start.
+
 [An R Companion for the Handbook of Biological Statistics](http://rcompanion.org/rcompanion/) is the code supplement for the online [Handbook of Biological Statistics](http://www.biostathandbook.com/) by John H. McDonald. An advantage of this resource is that the accompanying text is available full text online.  The examples include many of the most common parametric and non-parametric statistical tests, including some of the simpler multivariate tests.
 
 [R examples for The Analysis of Biological Data](http://whitlockschluter.zoology.ubc.ca/r-code) is a companion website for the very accessible Witlock and Schluter print text The Analysis of Biological Data. This book contains a lot of really fun and interesting examples.
@@ -93,4 +95,4 @@ The print book *R Cookbook* by Paul Teetor is a fairly comprehensive resource if
 To try out some simple R scripts for t-test of means, paired t-test, regression, and 2 factor ANOVA, visit [this page](../stats/).
 
 ----
-Revised 2019-08-15
+Revised 2019-08-19
