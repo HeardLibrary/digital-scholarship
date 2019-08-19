@@ -17,7 +17,7 @@ The following links lead to a series of lessons designed to help you get started
 [4. Where do I go from here?](next)
 
 
-# R Resources
+# Online R Resources
 
 [Software Carpentry Programming with R](http://swcarpentry.github.io/r-novice-inflammation/)
 
@@ -31,5 +31,9 @@ The following links lead to a series of lessons designed to help you get started
 
 [Online R resources for Beginners](http://www.introductoryr.co.uk/R_Resources_for_Beginners.html) is a page of links to many other R online resources, including online books, video tutorials, and other websites.
 
+## R Working Group at Vanderbilt
+
+[Home page of the R Working Group](https://heardlibrary.github.io/commodore-r-group/) of the Vanderbilt Libraries
+
 ----
-Revised 2019-08-15
+Revised 2019-08-19
