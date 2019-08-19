@@ -43,13 +43,25 @@ In `height ~ grouping` of the second line of the script, `height` is the name of
 
 ## paired t-test
 
-A paired t-test differs from a t-test of means in that particular observations in one of the two groups is paired in some way with a particular observation in the other group.  For that reason, the layout of a data frame for a paired t-test is different than the layout for a t-test of means.  
+A paired t-test differs from a t-test of means in that each particular observation in one of the two groups is paired in some way with a particular observation in the other group. 
 
-table here
+In R, the pairing of observations is done by placing the observations of the two groups in two vectors.  Because the items in the vectors are ordered, R knows to associate the first item in the first vector with the first item in the second vector, etc.  The general form of the function for paired t-test is:
 
 ```
-t.test(Data$no_malonate, Data$malonate, paired=TRUE, conf.level=0.95)
+t.test(firstVector, secondVector, paired=TRUE)
 ```
+
+If we want to read in the values from a CSV file, we'll want to lay out the file differently from the way we laid out the data for the t-test of means:
+
+![](../images/paired-samples.png)
+
+The data for particular groups are located in separate columns since we will want to be able to refer the data in a column by name.  This example has a third column with a letter identifying each pair, but we won't make use of it and R will simply ignore it. Here's how we can perform the test on [these data](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/r/t-test.csv) comparing enzyme reaction rates in the presence and absence of malonate:
+
+```
+malonateDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/paired-t.csv")
+t.test(malonateDframe$no_malonate, malonateDframe$malonate, paired=TRUE)
+```
+
 
 ----
-Revised 2019-08-16
+Revised 2019-08-19
