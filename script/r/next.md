@@ -70,15 +70,11 @@ Another more brief reference is Chapter 10 of *R Cookbook* by Paul Teetor (print
 
 ## Grammar of Graphics (ggplot)
 
-![](https://d33wubrfki0l68.cloudfront.net/795c039ba2520455d833b4034befc8cf360a70ba/558a5/diagrams/data-science-explore.png)
-
-Diagram from the [Introduction of *R for Data Science*](https://r4ds.had.co.nz/explore-intro.html) by Hadley Wickham & Garrett Grolemund [(CC BY-NC-ND)](https://creativecommons.org/licenses/by-nc-nd/3.0/us/)
-
-
 <figure>
   <img src="https://d33wubrfki0l68.cloudfront.net/795c039ba2520455d833b4034befc8cf360a70ba/558a5/diagrams/data-science-explore.png" alt="Diagram from the Introduction of R for Data Science by Hadley Wickham and Garrett Grolemund"/>
   <figcaption>Diagram from the <a href ="https://r4ds.had.co.nz/explore-intro.html">Introduction of <em>R for Data Science</em></a> by Hadley Wickham and Garrett Grolemund (<a href ="https://creativecommons.org/licenses/by-nc-nd/3.0/us/">CC BY-NC-ND</a>)</figcaption>
 </figure>
+
 
 Data visualization can be considered part of a larger process of data exploration that also includes data transformation and modeling. Since the process is iterative, being able to adjust the way that the data are visualized as the exploration progresses is important.  
 
