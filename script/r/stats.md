@@ -64,5 +64,28 @@ t.test(malonateDframe$no_malonate, malonateDframe$malonate, paired=TRUE)
 
 Notice that in this example, we referred to the data in a column using the `$` notation (e.g. `malonateDframe$no_malonate` for the data in the "no_malonate" column).  R treats the column data as it would a vector when it inputs it into the `t.test` function.
 
+## chi-squared goodness of fit test
+
+When running a chi-squared goodness of fit test using R, the actual frequencies (i.e. the observed frequencies) must be absolute (i.e. counts).  The expected frequencies must be relative (i.e. the probabilities or proportions expressed as decimal fractions).  This differs from the way the test is conducted in Excel where both the actual and expected frequencies must be absolute.  For example, an Excel example to calculate whether coin flips differ from the expected equal probability of heads and tails looks like this:
+
+![](../images/goodness-of-fit-excel-screenshot.png)
+
+while the setup in R would look like this:
+
+![](../images/goodness-of-fit-r-screenshot.png)
+
+To carry out the test, we need two vectors: one containing the observed values as counts and another containing the expected values as relative frequencies.  For the example above, here's how we would do the test:
+
+```
+observedFlips = c(46, 41)        # actual absolute: (heads, tails)
+expectedProb = c(0.5, 0.5)      # expected relative: (heads, tails)
+chisq.test(x = observedFlips, p = expectedProb)
+```
+
+Note that the order of the items in the observed vector have to correspond to the order in the expected vector.
+
+## chi-squared contingency test
+
+
 ----
 Revised 2019-08-19

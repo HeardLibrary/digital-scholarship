@@ -8,6 +8,13 @@ go back to [Navigating around in RStudio](../navigate/)]
 
 # Introduction to R data structures
 
+Note on comments: comments can be added to R scripts to make them more understandable.  A comment starts with the `#` character and R simply ignores everything on the line after it.  Here's an example:
+
+```
+# simple script to demonstrate assignment
+x <- c(1,2)  # the "arrow" points to the left to show the direction of the assignment
+```
+
 ## The role of data structures in R
 
 Like most programming languages, R defines a number of different kinds of structures for storing data.  These structures can hold multiple data items in a manner similar to structures that might be called arrays or lists in other languages.  
@@ -81,9 +88,9 @@ It is helpful to think of a data frame as a sort of combination of lists and vec
 We can actually create a data frame by first constructing a vector for each column:
 
 ```
-group <- c("reptile", "arachnid", "annelid", "insect")
+group <- c("reptile", "arachnid", "annelid", "insect")  # vector of strings
 animal <- c("frog", "spider", "worm", "bee")
-numberLegs <- c(4,8,0,6)
+numberLegs <- c(4,8,0,6)  # vector of numbers
 ```
 
 then loading the vectors into the data frame:
