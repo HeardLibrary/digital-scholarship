@@ -92,7 +92,7 @@ If you are already familiar with basic statistical tests and want a jump start t
 
 The print book *R Cookbook* by Paul Teetor is a fairly comprehensive resource if you want straightforward examples of how to calculate a wide range of statistics and statistical tests.  It includes random sampling and calculating probabilities (Chapter 8), calculating general statistics and comparisons (Chapter 9), linear regression and ANOVA (Chapter 11), principle components, bootstrapping, etc. (Chapter 13), and time series analysis (Chapter 14).
 
-To try out some simple R scripts for t-test of means, paired t-test, chi-squared goodness of fit, chi-squared contingency, regression, and 2 factor ANOVA, visit [this page](../stats/).
+To try out some simple R scripts for t-test of means, paired t-test, chi-squared goodness of fit, chi-squared contingency, regression, and ANOVA, visit [this page](../stats/).
 
 ----
 Revised 2019-08-19

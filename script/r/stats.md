@@ -136,7 +136,7 @@ Multiple R-squared:  0.9233,	Adjusted R-squared:  0.8978
 F-statistic: 36.13 on 1 and 3 DF,  p-value: 0.009225
 ```
 
-We can get the slope and intercept from the Coefficients section: the slope is in the Estimate column for `treat_size`.  The intercept is in the Estimate column for `(Intercept)`.  The last lines of the results provide the other two things we are likely to be interested in: the R-squared value and p-value.
+We can get the slope and intercept from the Coefficients section: the slope is in the Estimate column for `treat_size` (1.4522).  The intercept is in the Estimate column for `(Intercept)` (-1.2045).  The last lines of the results provide the other two things we are likely to be interested in: the R-squared value and p-value.
 
 
 ## ANOVA
