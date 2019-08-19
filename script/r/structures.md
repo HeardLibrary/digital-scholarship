@@ -35,7 +35,7 @@ We can construct a vector by explicitly entering its values using the `c()` (for
 animal <- c("frog", "spider", "worm", "bee")
 ```
 
-Notice that in R, the assignment operator is `<-`, designed to look like a leftward pointing arrow since the data on the right is passed into the variable on the left. (One can also use the symbol `=` as the assignment operator, but `<-` is more typical.)
+Notice that in R, the assignment operator is `<-`, designed to look like a leftward pointing arrow since the data on the right is passed into the variable on the left. (One can also use the symbol `=` as the assignment operator, but using `<-` is more typical.)
 
 ![](../images/create-vector.png)
 
@@ -51,7 +51,7 @@ Matrices and arrays are important data structures in cases where certain mathema
 
 ## Lists
 
-A *list* is also a one-dimentional data structure, like a vector.  However, the items in a list can be heterogeneous (different types of items).  In the diagram above, we see that the values in the list consist of two strings (characters listed in quotes), one number (no quotes), and the vector `animal` that we created earlier (with its name given without quotes).  
+A *list* is also a one-dimensional data structure, like a vector.  However, the items in a list can be heterogeneous (different types of items).  In the diagram above, we see that the values in the list consist of two strings (characters listed in quotes), one number (no quotes), and the vector `animal` that we created earlier (with its name given without quotes).  
 
 I can create the list in the diagram using this command (assuming that I've already created the `animal` vector):
 
@@ -145,7 +145,7 @@ The method of loading data into a data frame by manually entering the items as p
 
 1. Don't use really long file names.
 2. Don't use file names with spaces in them.  It's better to use underscores (`_`) or dashes (`-`) instead.
-3. Pay attention to whether you use upper or lower case letters in the file names.  Unless you are using a capitalization system like camelCase, it's a good idea to use only lower case letters.
+3. Pay attention to whether you use upper or lower case letters in the file names.  Unless you are using a systematic capitalization system like camelCase, it's a good idea to use only lower case letters.
 
 There are two convenient ways to load CSV data into a data frame: loading it from a file on your local computer, and loading it through the Internet using a URL.  
 
@@ -181,11 +181,11 @@ myOtherDataFrame = read.csv(file="https://gist.githubusercontent.com/baskaufs/1a
 
 You can test this command by copying it and entering it into the Console pane of RStudio.  You should see the newly created data frame in the workspace summary pane (upper right) as in the previous example.  
 
-If you have a GitHub account, creating a Gist is an easy way to make raw data available publicly through a URL.  Create the gist in the editing environment, then after creating a public Gist click on the Raw button at the upper right of the screen.  Copy the URL from the browser's address box and paste it into the script between the quotes after the `file=` key as shown in the example above.
+If you have a GitHub account, creating a Gist is an easy way to make raw data available publicly through a URL.  Create the gist in the editing environment, then after creating a public Gist, click on the Raw button at the upper right of the screen.  Copy the URL from the browser's address box and paste it into the script between the quotes after the `file=` key as shown in the example above.
 
 ---
 
 Continue to [Where to go from here](../next/)
 
 ----
-Revised 2019-08-15
+Revised 2019-08-19

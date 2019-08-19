@@ -31,7 +31,7 @@ Often messy ("untidy") data is in a more compact form.  Here's the typical way o
 
 ![](../images/t-test-table-format-for-excel.png)
 
-However, these data aren't "tidy" because each observation isn't in its own row, and the independent variable factor values (male vs. female) isn't in a single column.  In contrast, the data in this form (using grouping variables):
+However, these data aren't "tidy" because each observation isn't in its own row, and the independent variable factor values (male vs. female) aren't in a single column.  In contrast, the data in this form (using grouping variables):
 
 ![](../images/t-test-table-grouping-variable.png)
 
@@ -53,9 +53,9 @@ If you have a consistent data source that requires wrangling the data by process
 
 **Jupyter notebook** [Jupyter notebooks](https://jupyter.org/) is a system where you can create code blocks that are documented with text and diagrams that explain what happens in each step of the process.  The code blocks can be executed one at a time and display intermediate results so that you can know that the processing is going as expected.  Jupyter notebooks can be installed separately, but are installed automatically as part of the [Anaconda package](https://www.anaconda.com/). 
 
-**R Markdown** R Markdown is an extension of the well-known text markup language called *Markdown*.  So R Markdown can be rendered by any application that will display or process Markdown.  For example, an R Markdown page uploaded to GitHub will render with the styling included in the Markdown and R Markdown documents can be rendered as PDFs with an application like Pandoc.  However, an R Markdown script will also execute as code within RStudio.  
+**R Markdown** R Markdown is an extension of the well-known text markup language called *Markdown*.  (See this [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for a quickstart.  So R Markdown can be rendered by any application that will display or process Markdown.  For example, an R Markdown page uploaded to GitHub will render with the styling included in the Markdown and R Markdown documents can be rendered as PDFs with an application like Pandoc.  However, an R Markdown script will also execute as code within RStudio.  
 
-The actual R code is designated within the R Markdown using the usual triple backtick (\`\`\`) method for displaying any kind of code block in Markdown.  However, when loaded into RStudio, the R code blocks (known as *chunks*) can be run by clicking on the "play" button associated with each code block.  There is also an option to include the output (results) when rendering the document.  For more on R Markdown, see the ["R Markdown" chapter in *R for Data Science*](https://r4ds.had.co.nz/r-markdown.html).
+The actual R code is designated within the R Markdown using the [usual triple backtick (\`\`\`) method](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code-and-syntax-highlighting) for displaying any kind of code block in Markdown.  However, when loaded into RStudio, the R code blocks (known as *chunks*) can be run by clicking on the "play" button associated with each code block.  There is also an option to include the output (results) when rendering the document.  For more on R Markdown, see the ["R Markdown" chapter in *R for Data Science*](https://r4ds.had.co.nz/r-markdown.html).
 
 
 # Data visualization with R
@@ -73,6 +73,12 @@ Another more brief reference is Chapter 10 of *R Cookbook* by Paul Teetor (print
 ![](https://d33wubrfki0l68.cloudfront.net/795c039ba2520455d833b4034befc8cf360a70ba/558a5/diagrams/data-science-explore.png)
 
 Diagram from the [Introduction of *R for Data Science*](https://r4ds.had.co.nz/explore-intro.html) by Hadley Wickham & Garrett Grolemund [(CC BY-NC-ND)](https://creativecommons.org/licenses/by-nc-nd/3.0/us/)
+
+
+<figure>
+  <img src="https://d33wubrfki0l68.cloudfront.net/795c039ba2520455d833b4034befc8cf360a70ba/558a5/diagrams/data-science-explore.png" alt="Diagram from the Introduction of R for Data Science by Hadley Wickham and Garrett Grolemund"/>
+  <figcaption>Diagram from the <a href ="https://r4ds.had.co.nz/explore-intro.html">Introduction of <em>R for Data Science</em></a> by Hadley Wickham and Garrett Grolemund (<a href ="https://creativecommons.org/licenses/by-nc-nd/3.0/us/">CC BY-NC-ND</a>)</figcaption>
+</figure>
 
 Data visualization can be considered part of a larger process of data exploration that also includes data transformation and modeling. Since the process is iterative, being able to adjust the way that the data are visualized as the exploration progresses is important.  
 
