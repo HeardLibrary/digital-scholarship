@@ -110,7 +110,7 @@ Using these [fake data](https://github.com/HeardLibrary/digital-scholarship/blob
 
 To perform a regression using R, we usd the *linear model* function `lm()`.  The first argument of the function contains the dependent variable (wag_rate), followed by a tildle and the independent variable (treat_size).  After running the model, we ask R to summarize the results:
 
-```
+```text
 dogtailDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/dog-tail.csv")
 model <- lm(wag_rate ~ treat_size, data=dogtailDframe)
 summary(model)
@@ -151,7 +151,7 @@ The setup of a data table to carry out an ANOVA in R uses grouping variables in 
 
 The following example uses [data from an electroretinogram](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/r/red-green-anova-example.csv) to test whether there are differences in a cockroach eye's sensitivity to red and green light.  
 
-```
+```text
 ergDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/red-green-anova-example.csv")
 model <- lm(response ~ color, data = ergDframe)  # fit a linear model to the data
 anova(model)  #run the ANOVA on the model
@@ -171,7 +171,7 @@ ergDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digita
 
 The setup for a multi-factor ANOVA in R is similar to a single factor ANOVA except that there are two columns for grouping variables instead of one.  In this example (using [fake data](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/r/fake-soap-experiment.csv)), we are simultaneously examining the effect of soap and triclosan (an antimicrobial agent) on the bacteria found on hands after washing:
 
-```
+```text
 soapDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/fake-soap-experiment.csv")
 model <- lm(counts ~ soap + triclosan, data = soapDframe)
 anova(model)
@@ -197,7 +197,7 @@ Since this is a two factor ANOVA, there is a line in the ANOVA table for each of
 
 We can run an ANOVA test in the same way when one of the two factors is a block effect.  (Note: we are oversimplifying in this example, since when one of the effects is random we should be making modifications to the script.  But that's beyond the scope of this lesson.)  Here is the script to analyze the cockroach color data from before, but this time including the individual roach as a block:  
 
-```
+```text
 ergDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/color-anova-example.csv")
 model <- lm(response ~ block + color, data = ergDframe)
 anova(model)
