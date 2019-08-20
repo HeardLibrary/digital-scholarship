@@ -11,6 +11,7 @@
     position:relative;
 }
 
+/*
 pre {
     background-color: #E9E9E9; 
 }
@@ -19,6 +20,12 @@ code {
     font-family: "Courier New";
     background-color: #E9E9E9; 
     color: #000000;
+    text-shadow: unset;
+}
+*/
+
+code {
+    font-family: "Courier New";
     text-shadow: unset;
 }
 
