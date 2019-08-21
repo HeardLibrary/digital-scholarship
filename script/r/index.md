@@ -35,7 +35,7 @@ If you are already familiar with basic statistical tests and want a jump start t
 
 To try out some simple R scripts for t-test of means, paired t-test, chi-squared goodness of fit, chi-squared contingency, regression, and ANOVA, visit [this page](../stats/).
 
-## Resources at Vanderbilt
+# Resources at Vanderbilt
 
 [Home page of the R Working Group](https://heardlibrary.github.io/commodore-r-group/) of the Vanderbilt Libraries
 
