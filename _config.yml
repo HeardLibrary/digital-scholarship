@@ -4,3 +4,8 @@ description: Provided by the Vanderbilt Libraries Digital Scholarship and Commun
 url: "https://heardlibrary.github.io"
 baseurl: "/digital-scholarship"
 theme: jekyll-theme-leap-day
+# disables code block syntax highlighting
+markdown: kramdown
+kramdown:
+   syntax_highlighter_opts:
+      disable : true
