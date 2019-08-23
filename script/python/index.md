@@ -78,6 +78,8 @@ Some examples of code to play with are [here](examples)
 
 [Programs, Information, and People text](https://www.programsinformationpeople.org/runestone/static/publicPIP/index.html) from a [course at University of Michigan School of Information](https://www.programsinformationpeople.org/runestone/).  Includes examples of using APIs and OAuth.
 
+The Vanderbilt Science and Engineering Library has a number of books on programming in Python that are available for checkout.
+
 ## Websites
 
 [Software Carpentry Programming with Python](http://swcarpentry.github.io/python-novice-inflammation/)
