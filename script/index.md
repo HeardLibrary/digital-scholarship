@@ -32,6 +32,9 @@ R is a freely-available, open-source programming language that is widely used fo
 
 [R Working Group website](https://heardlibrary.github.io/commodore-r-group/)
 
+## Other tools
+
+Two commonly used tools that are used to facilitate programming are [Anaconda](anaconda/) and [Jupyter notebooks](jupyter/).  They are used with both Python and R.
 
 ----
-Revised 2019-08-19
+Revised 2019-08-26

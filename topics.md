@@ -6,6 +6,7 @@ breadcrumb: Topics
 
 # Alphabetical topic list
 
+[Anaconda distribution](../script/anaconda/)<br/>
 [backing up your computer (Mac)](../computer/backup-mac/)<br/>
 [backing up your computer (Windows)](../computer/backup-windows/)<br/>
 [command line introduction (Linux/Mac shell/Terminal)](../computer/command-unix/)<br/>
@@ -28,6 +29,7 @@ breadcrumb: Topics
 [GIS, using Python](../geo/gis/python/)<br/>
 [GitHub resources](../manage/control/github/)<br/>
 [Institutional Repository, Vanderbilt](https://ir.vanderbilt.edu/)<br/>
+[Jupyter notebooks](../script/jupyter/)<br/>
 [LaTeX](../markup/)<br/>
 [Linked Open Data (LOD)](../lod/)<br/>
 [localhost web server (Mac)](../computer/command-unix/#localhost-web-servers)<br/>
