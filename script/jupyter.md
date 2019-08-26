@@ -12,7 +12,7 @@ Jupyter notebooks are a system that facilitates *literate programming* - a parad
 
 Jupyter notebooks are excellent when code is relatively linear and the code blocks can be executed sequentially.  The result of a code block's execution is shown below the cell, so the user can verify that the script is behaving properly before moving on to the next block.
 
-Jupyter notebooks are less useful when the code involves a lot of functions or looping.  The cells can include function references or loops, but it is not possible for those structures to span multiple cells.  Thus Jupyter notebooks can't easily be used to track what's going on within an executed function or with each iteration of a loop.  In these cases, it's probably better to run the code in an integrated development environment (IDE) that allows for the creation of breakpoints and monitoring of the state of variables as the program runs.
+Jupyter notebooks are less useful when the code involves a lot of functions or looping.  The cells can include function references or loops, but it is not possible for those structures to span multiple cells.  Thus Jupyter notebooks can't easily be used to track what's going on within an executed function or with each iteration of a loop.  In these cases, it's probably better to run the code in an integrated development environment (IDE) that allows for the creation of breakpoints and monitoring of the state of variables as the program runs.  An example is the Spyder IDE for Python, included in the Anaconda distribution.
 
 ## Installing
 
@@ -36,7 +36,7 @@ Click on the `Launch` button under the Jupyter Notebook icon on the navigator sc
 
 <img src="../images/jupyter-tree-screen.png" style="border:1px solid black">
 
-When you launch Jupyter notebooks, two things happen: a local web server will start running on your computer, and your browser will open a new tab showing the Jupyter file tree.  **Important:** closing the browser tab will not shut down the server.  See the `Quitting` section below for how to gracefully shut down the Jupyter server.
+When you launch Jupyter notebooks, two things happen: a local web server will start running on your computer, and your browser will open a new tab showing the Jupyter file tree (see screenshot above).  **Important:** closing the browser tab will not shut down the server.  See the `Quitting` section below for how to gracefully shut down the Jupyter server.
 
 If you want to know more about `localhost` web servers, see [this lesson](https://heardlibrary.github.io/digital-scholarship/computer/command-windows/#localhost-web-servers), which illustrates using Jupyter notebooks as an example.   
 
@@ -56,13 +56,15 @@ There are many tutorials on the web for using Jupyter notebooks, so we won't rep
 
 When you are done with the notebook itself, save it by clicking on the save button (if desired) before closing the notebook's tab in the browser.  
 
+On the Jupyter tree tab, click on the Quit button to shut down the server.  You should see this:
+
 ![](../../computer/images-6-mac/jupyter-shutdown.png)
 
-On the Jupyter tree tab, click on the Quit button to shut down the server.  After you get the message saying that the server has stopped, you can close the tab.  You'll also see evidence in the console window that the server has shutdown and the console returns to the normal prompt.  
+After you get the message saying that the server has stopped, you can close the tab.  You'll also see evidence in the console window that the server has shutdown and the console returns to the normal prompt.  
 
-If you forget to shut down the server before closing the Jupyter tree tab, you can still kill the server from the console window.  With the window selected, hold on the `Ctrl` (or `Control`) key, then press the C key.  Enter `y` in response to the prompt and the shutdown should proceed.  When it's finished and the prompt returns, you can close the console window.  
+If you forget to shut down the server before closing the Jupyter tree tab, you can still kill the server from the console window.  With the console window selected, hold on the `Ctrl` (or `Control`) key, then press the `C` key.  Enter `y` in response to the prompt and the shutdown should proceed.  When the shutdown is finished and the prompt returns, you can close the console window.  
 
-If you forget to follow this procedure, nothing will probably be "broken" but you may have some data loss if you close things in the middle of editing a notebook.
+If you forget to follow this procedure, nothing will probably be "broken" but you may experience some data loss if you close things in the middle of editing a notebook.
 
 ----
 Revised 2019-08-26
