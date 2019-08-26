@@ -20,11 +20,13 @@ A final significant aspect of Python is that many people have created add-ons, c
 
 Version 2 of Python has been in wide use for many years.  So although it is no longer in development there is still a large amout of code out in the wild that is written in Python 2.  Since our focus is on helping new users who will primarily be using Python 3 in the future, our focus is on that version of the language.  Fortunately, most Python 3 code will also run as Python 2 (and vice versa) with minimal modification.
 
-## What is Anaconda?
+## The Anaconda option
 
-Anaconda is an umbrella system for data science that includes many of the most important tools used in data science.  It includes both the Python and R programming languages, most of the common Python libraries used in science and engineering (including NumPy, SciPy, Matplotlib, and pandas), and many commonly used R packages.  Anaconda also includes the popular Jupyter notebook system (see below), RStudio, the Spyder Python development environment, and has its own custom package management system.  The Anaconda Navigator provides access to the system through a desktop GUI. 
+Anaconda is an umbrella system for data science that includes many of the most important tools used in data science. Anaconda includes Python, several ways to use Python (Jupyter notebooks and the Spyder IDE), and it automatically installs many of the commonly used Python packages.  
 
 If you want to start off with many major data science tools at once, you should consider [installing Anaconda](https://docs.anaconda.com/anaconda/install/).  However, since Anaconda includes so much stuff, it can eventually sprawl to gigabytes in size.  So if you are new to Python, you might start with a simpler Python distribution and upgrade to Anaconda later. (Note: if you upgrade to Anaconda, it reinstalls Python and may use a slightly earlier version than what is currently provided as the latest version at python.org.)
+
+For more information about Anaconda, see [this page](../anaconda/)
 
 # Ways to write and run Python
 
