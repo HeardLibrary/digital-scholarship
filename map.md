@@ -56,6 +56,9 @@ breadcrumb: Map
 &nbsp;&nbsp;&nbsp;&nbsp;R<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Resources page](../script/r/)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Working Group website](https://commodore-r-group.github.io/)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[Anaconda](../script/anaconda/)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[Jupyter notebooks](../script/jupyter/)<br/>
+<br/>
 <br/>
 <strong>Understanding my computer</strong> [homepage](../computer/)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[Files](../computer/files/)<br/>
