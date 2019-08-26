@@ -4,8 +4,6 @@ title: Jupyter notebooks
 breadcrumb: Jupyter
 ---
 
-<img src="../images/conda-navigator.png" style="border:1px solid black">
-
 # Jupyter notebooks
 
 Jupyter notebooks are a system that facilitates *literate programming* - a paradigm that documents computer programs by interspersing explanation with executable code.  A Jupyter notebook alternates explanatory text and images with code cells that can be executed indivually or in a sequence.
@@ -65,8 +63,6 @@ On the Jupyter tree tab, click on the Quit button to shut down the server.  Afte
 If you forget to shut down the server before closing the Jupyter tree tab, you can still kill the server from the console window.  With the window selected, hold on the `Ctrl` (or `Control`) key, then press the C key.  Enter `y` in response to the prompt and the shutdown should proceed.  When it's finished and the prompt returns, you can close the console window.  
 
 If you forget to follow this procedure, nothing will probably be "broken" but you may have some data loss if you close things in the middle of editing a notebook.
-
-
 
 ----
 Revised 2019-08-26
