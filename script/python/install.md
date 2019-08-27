@@ -11,6 +11,8 @@ breadcrumb: Install
 
 There are [many flavors of Python](https://www.infoworld.com/article/3267976/python/anaconda-cpython-pypy-and-more-know-your-python-distributions.html) and there is no way we could describe how to install all of them.  In the instructions here, we will install the reference implementation of Python: CPython.  It is the default and most widely used flavor.  The version of Python we will be installing is version 3. (For information about the distinction between Python 2 and 3, see the [Python resources page](../#python-2-vs-python-3))
 
+If you are planning to use the [Anaconda distribution](https://heardlibrary.github.io/digital-scholarship/script/anaconda/), you don't need to do this installation - Python 3 will automatically be installed as part of the overall Anaconda installation.  Anaconda also gives you the opportunity to install VS Code, a full featured [code editor](../editor/) that you can use to write and debug Python.
+
 If you think that you are going to want to exclusively use the Integrated Development Environment called Thonny, then you can skip these instructions and the follow the [Thonny installation instructions](thonny) instead of these instructions. Thonny automatically installs a bundled implementation of CPython 3 as part of its installation.  However, if you want to also be able to run Python from the command line or edit scripts using a code editor, you should go ahead and install Python using these instructions. You can install stand-alone Python as described here and also install Thonny later if you wish.
 
 ## What's the console?

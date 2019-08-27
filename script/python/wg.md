@@ -24,7 +24,7 @@ First cycle: **Fridays** from 1:10 to 2:00 PM
 
 | Date | Session | Topic | Notes |
 |---|---|---|
-| Aug 30 | 1 | Getting started | [intro](../) / [install Python](../install/) / [install Thonny](../thonny/) / [install editor](../editor/) |
+| Aug 30 | 1 | Getting started | [intro](../) / [Anaconda](../../script/anaconda/) / [install Thonny](../thonny/) / [install Python](../install/) / [install editor](../editor/) / [code examples](../examples/) / [example notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)|
 | Sep 6 | 2 | Python scripting basics | [lesson webpage](../basics/) |
 | Sep 13 | 3 | Object-oriented Python | [lesson webpage](../object/) |
 | Sep 20 | 4 | Lists and loops | [lesson webpage](../structures/) |
