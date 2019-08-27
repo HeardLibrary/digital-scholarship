@@ -16,11 +16,11 @@ There are two ways to get the examples onto your computer from Github.  First, c
 
 ## Links to examples
 
-[Uses the "turtle" drawing tool to make a shape](https://github.com/baskaufs/msc/blob/master/python/turn_right.py).  The shape is drawn in a separate window that pops up.
+[Uses the "turtle" drawing tool to make a shape](https://github.com/baskaufs/msc/blob/master/python/turn_right.py).  The shape is drawn in a separate window that pops up. Try changing the numbers in the functions to see what happens.
 
 [Sets up a simple graphical interface with text boxes and a button](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/gui/python/simple_form.py).  You can change the text boxes and when you click the button, different things will be printed in the shell window.
 
-[A simple script to retrieve data from a URL](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/api/python/http_request.py) - This very small program checks whether a web page is working.  It returns a code of `200` if it's working.  You can uncomment line 5 (remove the `#` character) to see the raw text of the file that was retrieved.  **Note:** this script requires installation of the `requests` library if you don't already have it (i.e. if you aren't using Anaconda).  See the next section for info about installing packages.
+[A simple script to retrieve data from a URL](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/api/python/http_request.py) - This very small program checks whether a web page is working.  It returns a code of `200` if it's working.  You can uncomment line 5 (remove the `#` character) to see the raw text of the file that was retrieved.  Try changing the URL to some other web page to see what happens. **Note:** this script requires installation of the `requests` library if you don't already have it (i.e. if you aren't using Anaconda).  See the next section for info about installing packages.
 
 ## Retrieving libraries that aren't in the standard library
 
