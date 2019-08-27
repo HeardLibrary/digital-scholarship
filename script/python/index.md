@@ -68,6 +68,8 @@ If you are new to Python, an excellent starting-off point is [Python For Beginne
 
 Some examples of code to play with are [here](examples)
 
+Example Jupyter notebook to play with is [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)
+
 ## Python Working Group at Vanderbilt
 
 [Home page of the Python Working Group](wg) of the [Vanderbilt Libraries Digital Scholarship and Communications Office](https://www.library.vanderbilt.edu/scholarly/)

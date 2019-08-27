@@ -8,6 +8,8 @@ Note: this is the second lesson in a beginner's introduction to Python.  For the
 
 **General note:** Since these examples are really simple, we advise using the Thonny IDE so that you can cut, paste, then click the green run button to quickly test them out.  
 
+If you are interested in using Jupyter notebooks, the examples are available in [this notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/basics.ipynb).
+
 # Basics of Python Structure
 
 *Warning: Pretty much everything on this page is an oversimplification.  But you can learn the details when you need to know them.*

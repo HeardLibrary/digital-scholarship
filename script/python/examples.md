@@ -43,11 +43,11 @@ pip3 install bs4
 
 ## Week 1
 
-[A simple script to retrieve data from a URL](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/api/python/http_request.py) - requires the **requests** library; does not seem to work in Thonny even when the requests package is installed
+[A simple script to retrieve data from a URL](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/api/python/http_request.py) - requires installation of the **requests** library if you don't already have it
 
 [Uses the "turtle" drawing tool to make a shape](https://github.com/baskaufs/msc/blob/master/python/turn_right.py)
 
 [Sets up a simple graphical interface with text boxes and a button](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/gui/python/simple_form.py)
 
 ----
-Revised 2019-01-15
+Revised 2019-08-27

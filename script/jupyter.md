@@ -40,9 +40,20 @@ When you launch Jupyter notebooks, two things happen: a local web server will st
 
 If you want to know more about `localhost` web servers, see [this lesson](https://heardlibrary.github.io/digital-scholarship/computer/command-windows/#localhost-web-servers), which illustrates using Jupyter notebooks as an example.   
 
+## Downloading a notebook from GitHub
+
+Sometimes notebooks have been made avialable on GitHub.  An example notebook is [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb).  When it's working correctly, GitHub will render the notebook in the browser as it would appear when opened within Jupyter notebooks.  However, the code within the notebook will not actually run unless you open it as described in the following section.
+
+To be able to run and edit a notebook, you need to download it somewhere on your hard drive.
+
+<img src="../images/save-github-raw.png" style="border:1px solid black">
+
+From the web page for the notebook, right click on the `Raw` button, then select `Save Link As...`.  Navigate to the place where you want to save it.  In this example, we'll save it in the Downloads folder, since that's an easy place to find it.
+
+
 ## Opening a notebook
 
-If you've downloaded a notebook made by someone else, use the Jupyter file tree page to navigate to the place where it was saved.  Often this will default to the Downloads folder.  If your computer has file extensions turned on, you can identify Jupyter notebooks by the file extension `.ipynb`.  (See [this for Mac](https://heardlibrary.github.io/digital-scholarship/computer/files-mac/#unhiding-file-extensions) or [this for Windows](https://heardlibrary.github.io/digital-scholarship/computer/files-windows/#unhiding-file-extensions) for info on unhiding file extensions.)  Clicking on the link for the notebook will open it in another tab.  
+Once you've downloaded a notebook made by someone else, use the Jupyter file tree page to navigate to the place where it was saved, such as the Downloads folder.  If your computer has file extensions turned on, you can identify Jupyter notebooks by the file extension `.ipynb`.  (See [this for Mac](https://heardlibrary.github.io/digital-scholarship/computer/files-mac/#unhiding-file-extensions) or [this for Windows](https://heardlibrary.github.io/digital-scholarship/computer/files-windows/#unhiding-file-extensions) for info on unhiding file extensions.)  Clicking on the link for the notebook will open it in another tab.  
 
 If you want to start a new notebook, click on the `New` button, then select the type of notebook you want to start (e.g. Python 3).  
 
