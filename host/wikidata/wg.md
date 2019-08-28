@@ -37,7 +37,7 @@ The Working Group meets in Vanderbilt's Central Library on Mondays from 1:10 to 
 
 [Links to some Wikidata resources](../)
 
-Questions? [contact Digital Scholarship and Communications](mailto:disc@vanderbilt.edu)
+Questions? <a href="mailto:disc@vanderbilt.edu?subject=Wikidata WG">contact Digital Scholarship and Communications</a>
 
 ----
 Revised 2019-08-28
