@@ -8,7 +8,7 @@ breadcrumb: Working Group
 
 ## About the group
 
-The Python Working Group is a working group of the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/).  The group provides regular lessons for Python beginners and occasional special topics lessons.
+The Python Working Group is a working group of the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/).  The group provides regular lessons for Python beginners and occasional special topics lessons.  Currently, registration is not required - just show up.
 
 The beginners lessons generally cycle twice per semester.  See the schedule below for details.  You are also encouraged to work through the lessons on your own.  They contain practice exercises, with answers.  
 
@@ -63,4 +63,4 @@ Here's a [page of Python resources](../)
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2019-07-16
+Revised 2019-08-28
