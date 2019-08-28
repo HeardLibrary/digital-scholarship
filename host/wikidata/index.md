@@ -4,7 +4,7 @@ title: Wikidata and Wikibase
 breadcrumb: Wikidata
 ---
 
-# Some resources for getting stated with Wikidata and Wikibase
+# Getting stated with Wikidata
 
 No skills required to play around
 
@@ -19,6 +19,13 @@ Knowledge of Linked Data required to do SPARQL queries
 
 [Basic lessons on Linked Data](../../lod/)
 
+## Connecting with the community
+
+[Vanderbilt Wikidata Working Group](wg/)
+
+[LD4 Wikidata Affinity Group ](https://wiki.duraspace.org/display/LD4P2/LD4-Wikidata+Affinity+Group) - includes links to recordings of previous bi-weekly calls.
+
+# Getting started with Wikibase
 
 Knowledge of Docker is required to set up your own Wikibase instance
 
@@ -32,6 +39,5 @@ Knowledge of Docker is required to set up your own Wikibase instance
 
 [Create a bot to load data into Wikibase](bot/)
 
-
 ----
-Revised 2019-06-04
+Revised 2019-08-28
