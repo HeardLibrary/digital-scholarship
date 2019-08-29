@@ -44,7 +44,3 @@ In addition to the resources on this site, you can browse the Digital Scholarshi
 
 [Go to the site map](map/)
 
-# Site details
-
-<p>Questions? <a href="mailto:disc@vanderbilt.edu?subject=DiSC website">Contact us</a></p>
-<p>Site license: <a href="https://creativecommons.org/licenses/by/4.0/legalcode">CC BY 4.0</a>. <br/>Credit: "Vanderbilt Libraries <a href="https://www.library.vanderbilt.edu/scholarly/">Digital Scholarship and Communications</a> - <a href="https://www.library.vanderbilt.edu/">www.library.vanderbilt.edu</a>"</p>
