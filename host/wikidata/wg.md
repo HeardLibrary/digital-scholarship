@@ -12,6 +12,8 @@ A shortened link to this page is [vanderbi.lt/wikidata](http://vanderbi.lt/wikid
 
 The Wikidata Working Group is working group of the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/).  This new group is starting up for the first time in the fall of 2019.
 
+As a project this semester, we are going to upload Vanderbilt researcher information and publications to [Wikidata](https://www.wikidata.org/) so that it can be visualized using [Scholia](https://tools.wmflabs.org/scholia/).  All sessions are intended to be hands-on, so please bring a laptop.
+
 
 ## Venue and time
 
@@ -22,10 +24,10 @@ The Working Group meets in Vanderbilt's Central Library on Mondays from 1:10 to 
 | Date | Session | Topic | Notes |
 |---|---|---|
 | Sep 9 | 1 | Introduction to Wikdata | |
-| Sep 16 | 2 | Open Refine and identify project scope |  |
-| Sep 23 | 3 | Clean and reconcile data (hands on) |  |
-| Sep 30 | 4 | Build Wikidata schema and (hands on) |  |
-| Oct 7 | 5 | Upload data and visualize (hands on) | |
+| Sep 16 | 2 | Open Refine for bulk upload |  |
+| Sep 23 | 3 | Clean and reconcile data |  |
+| Sep 30 | 4 | Build Wikidata schema |  |
+| Oct 7 | 5 | Upload data and visualize with Scholia | |
 | Oct 14 | 6 | TBD | |
 | Oct 21 |   | **No session** (October break week)| |
 | Oct 28 | 7 | TBD | |
@@ -37,7 +39,5 @@ The Working Group meets in Vanderbilt's Central Library on Mondays from 1:10 to 
 
 [Links to some Wikidata resources](../)
 
-Questions? <a href="mailto:disc@vanderbilt.edu?subject=Wikidata WG">contact Digital Scholarship and Communications</a>
-
 ----
-Revised 2019-08-28
+Revised 2019-08-29
