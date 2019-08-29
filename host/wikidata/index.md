@@ -3,21 +3,23 @@ permalink: /host/wikidata/
 title: Wikidata and Wikibase
 breadcrumb: Wikidata
 ---
+# Wikidata
 
-# Getting stated with Wikidata
-
-No skills required to play around
+## Getting stated
 
 [Wikidata home page](https://www.wikidata.org/)
 
-[Wikidata Query Service](https://query.wikidata.org/) (click on file folder for sample queries)
-
 [Wikidata notability policy](https://www.wikidata.org/wiki/Wikidata:Notability)
 
+## Querying
 
-Knowledge of Linked Data required to do SPARQL queries
+[Wikidata Query Service](https://query.wikidata.org/) graphical interface (click on file folder for sample queries)
 
 [Basic lessons on Linked Data](../../lod/)
+
+## Applications
+
+[Scholia](https://tools.wmflabs.org/scholia/) - creates visualizations of researcher publications dynamically using SPARQL queries of Wikidata
 
 ## Connecting with the community
 
@@ -42,4 +44,4 @@ Knowledge of Docker is required to set up your own Wikibase instance
 [Create a bot to load data into Wikibase](bot/)
 
 ----
-Revised 2019-08-28
+Revised 2019-08-29
