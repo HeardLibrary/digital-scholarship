@@ -25,6 +25,8 @@ Knowledge of Linked Data required to do SPARQL queries
 
 [LD4 Wikidata Affinity Group ](https://wiki.duraspace.org/display/LD4P2/LD4-Wikidata+Affinity+Group) - includes links to recordings of previous bi-weekly calls.
 
+[2019 Wikidata and Wikibase vision and strategy papers](https://meta.wikimedia.org/wiki/Wikidata/Strategy/2019)
+
 # Getting started with Wikibase
 
 Knowledge of Docker is required to set up your own Wikibase instance
