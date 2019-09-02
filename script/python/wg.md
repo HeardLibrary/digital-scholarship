@@ -64,7 +64,18 @@ Second cycle: **Tuesdays** from 1:10 to 2:00 PM
 
 Here's a [page of Python resources](../)
 
+## Other sources of Python resources on Vanderbilt's campus
+
+Data Science Institute (DSI) <https://www.vanderbilt.edu/datascience/>
+
+Research IT <https://research.vanderbilt.edu/researchadministration/about/research-it/>
+
+Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
+
+Software Carpentries (cosponsored by DiSC, DSI, Research IT, ACCRE)  October 24-25, 2019  [See the DiSC workshops page](https://www.library.vanderbilt.edu/scholarly/workshops.php) for details.
+
+
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2019-08-28
+Revised 2019-09-02
