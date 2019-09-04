@@ -74,8 +74,21 @@ Research IT <https://research.vanderbilt.edu/researchadministration/about/resear
 
 Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 
-Software Carpentries (cosponsored by DiSC, DSI, Research IT, ACCRE)  October 24-25, 2019  [See the DiSC workshops page](https://www.library.vanderbilt.edu/scholarly/workshops.php) for details.
+## Software Carpentries (cosponsored by DiSC and Research IT)
 
+October 24-25, 2019.  9:00 AM to 4:30 PM. Engineering and Science Building Room 44
+
+Vanderbilt Software Carpentries, a two-day boot camp scheduled for October 24th and 25th, aims to help graduate students and other researchers get their work done in less time and with less pain by teaching basic research computing skills. This hands-on workshop will cover basic concepts and tools, including program design, version control, data management and task automation.  
+
+Learn basic research programming skills, including:
+
+- Intro to Unix
+- Intro to Git and Version Control
+- Intro to R
+
+[See this page](https://vanderbilt-data-science.github.io/2019-10-24-vanderbilt/) for details.  Cost: $30, which includes lunch.  
+
+--------------------
 
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
