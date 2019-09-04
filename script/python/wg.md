@@ -16,7 +16,7 @@ The beginners lessons generally cycle twice per semester.  See the schedule belo
 
 In the second half of the 2019 fall semester, the DiSC office is planning an intermediate-level series of lessons on APIs and web scraping using Python.  See the schedule below.
 
-In the fall 2019 semester, the DiSC office is also sponsoring a [working group on using Python in GIS](https://heardlibrary.github.io/digital-scholarship/geo/gis/wg/). 
+In the fall 2019 semester, the DiSC office is also sponsoring a [working group on using Python in GIS](https://sites.google.com/view/vugis/home). 
 
 ## Venue
 
@@ -78,4 +78,4 @@ Software Carpentries (cosponsored by DiSC, DSI, Research IT, ACCRE)  October 24-
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2019-09-02
+Revised 2019-09-04
