@@ -13,7 +13,7 @@ The [Digital Scholarship and Scholarly Communications Office](https://www.librar
 [resources for using Python in GIS](python/)
 
 
-[Click here to join our GIS Working Group](wg/)
+[Click here to join our GIS Working Group](https://sites.google.com/view/vugis/home)
 
 ----
-Revised 2019-04-04
+Revised 2019-09-04

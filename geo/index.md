@@ -12,8 +12,7 @@ The [Digital Scholarship and Scholarly Communications Office](https://www.librar
 
 [GIS homepage](gis/)
 
-[GIS Working Group](gis/wg/)
+[GIS Working Group](https://sites.google.com/view/vugis/home)
 
-[Remote Sensing homepage](rs/)
 
-[Remote Sensing Working Group](rs/wg/)
+
