@@ -24,17 +24,19 @@ The Working Group meets in the Eskind Training Room (Room 010 in the basement of
 
 ## Schedule of Beginners Lessons - Fall 2019
 
-First cycle: **Fridays** from 1:10 to 2:00 PM
+First cycle: 
+
+**Note** Due to demand greater than the capacity of the room, the Friday 1:10 to 2:00 PM session is closed unless you have already registered for it.  We've opened a second meeting time on Thursdays from 10:10 to 11:00 AM and it still has openings.  To register for the Thursday time, email [Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu).
 
 | Date | Session | Topic | Notes |
 |---|---|---|
-| Aug 30 | 1 | Getting started | [intro](../) / [Anaconda](../../anaconda/) / [install Thonny](../thonny/) / [install Python](../install/) / [install editor](../editor/) / [code examples](../examples/) / [example notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)|
-| Sep 6 | 2 | Python scripting basics | [lesson webpage](../basics/) |
-| Sep 13 | 3 | Object-oriented Python | [lesson webpage](../object/) |
-| Sep 20 | 4 | Lists and loops | [lesson webpage](../structures/) |
-| Sep 27 | 5 | Dictionaries and JSON | [lesson webpage](../json/) |
-| Oct 4 | 6 | Input and output from files | [lesson webpage](../inout/) |
-| Oct 11 | 7 | Interacting with the Internet | [lesson webpage](../internet/) |
+| Aug 29/30 | 1 | Getting started | [intro](../) / [Anaconda](../../anaconda/) / [install Thonny](../thonny/) / [install Python](../install/) / [install editor](../editor/) / [code examples](../examples/) / [example notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)|
+| Sep 5/6 | 2 | Python scripting basics | [lesson webpage](../basics/) |
+| Sep 12/13 | 3 | Object-oriented Python | [lesson webpage](../object/) |
+| Sep 19/20 | 4 | Lists and loops | [lesson webpage](../structures/) |
+| Sep 26/27 | 5 | Dictionaries and JSON | [lesson webpage](../json/) |
+| Oct 3/4 | 6 | Input and output from files | [lesson webpage](../inout/) |
+| Oct 10/11 | 7 | Interacting with the Internet | [lesson webpage](../internet/) |
 
 Second cycle: **Tuesdays** from 1:10 to 2:00 PM
 
