@@ -149,7 +149,7 @@ Notice in the last two examples that Python determines the type of a variable by
 
 # Functions
 
-It is a good idea to break code into small chuncks.  If a script is too long or complicated, it's hard to tell how it works.  A *function* is a way to break Python into reusable chuncks.  
+It is a good idea to break code into small chunks.  If a script is too long or complicated, it's hard to tell how it works.  A *function* is a way to break Python into reusable chuncks.  
 
 A function is like a processing machine.  You put stuff into it and different stuff comes out of it.  Think of a latte-making machine.  It might have three inputs: one for coffee beans, one for milk product, and one for water.  You put those three things in and a latte comes out.  The exact result will depend on what you put in.  Put in decaf beans, fat-free milk, and water and you get a skinny decaf latte.  Put in regular beans, soy milk, and water and you get a vegan regular latte.  Put in regular beans, full cream milk, and no water and you get an error.
 
@@ -211,7 +211,7 @@ def functionName(parameter1, parameter2):
 ```
 
 Notes:
-1. The inputs to the function are variables called *parameters*.  The parameters are used to do tings in the code block.  
+1. The inputs to the function are variables called *parameters*.  The parameters are used to do things in the code block.  
 2. The parameters and any other variables in the function are *local*.  That means that they can have the same name as objects outside the function without either the variables or the other objects having any effect on each other.
 3. In Python, code blocks are defined by consistent indentation.  The standard for Python is an indentation of four spaces.  If you are using a Python IDE or code editor, it should automatically indent four spaces for you (including when you press the tab key).  If you are using another kind of text editor, do NOT insert tab characters.
 4. The return statement indicates what the function should output.
