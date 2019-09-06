@@ -26,7 +26,7 @@ The Working Group meets in the Eskind Training Room (Room 010 in the basement of
 
 First cycle: 
 
-**Note** Due to demand greater than the capacity of the room, the Friday 1:10 to 2:00 PM session is closed unless you have already registered for it.  We've opened a second meeting time on Thursdays from 10:10 to 11:00 AM and it still has openings.  To register for the Thursday time, email [Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu).
+**Note** Both the Thursday and Friday sessions are full for this cycle.
 
 | Date | Session | Topic | Notes |
 |---|---|---|
