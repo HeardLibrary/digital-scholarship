@@ -86,7 +86,7 @@ Learn basic research programming skills, including:
 - Intro to Git and Version Control
 - Intro to R
 
-[See this page](https://vanderbilt-data-science.github.io/2019-10-24-vanderbilt/) for details.  Cost: $30, which includes lunch.  
+[See this page](https://vanderbilt-data-science.github.io/2019-10-24-vanderbilt/) for details.  
 
 --------------------
 
