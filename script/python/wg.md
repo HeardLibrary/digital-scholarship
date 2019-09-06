@@ -93,4 +93,4 @@ Learn basic research programming skills, including:
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2019-09-04
+Revised 2019-09-06
