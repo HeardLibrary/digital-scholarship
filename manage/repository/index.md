@@ -16,8 +16,15 @@ There are several useful tools for finding data repositories that serve your fie
 
 - The [list of Open Access Data Repositories from Simmons College](http://oad.simmons.edu/oadwiki/Data_repositories) is grouped by discipline.
 - The [Registry of Research Data Repositories (re3data)](http://www.re3data.org/) is a searchable listing of data repositories worldwide.  Use it to identify data repositories serving your discipline and their policies regarding open access and data citations.
+- *Scientific Data* [Recommended Data Repositories](https://www.nature.com/sdata/policies/repositories) list
 
 # Important Data Repositories
+
+## Dataverse (Harvard) 
+
+Harvard Dataverse is a repository for research data and code. "The Harvard Dataverse is open to all scientific data from all disciplines worldwide. It includes the world's largest collection of social science research data. It is hosting data for projects, archives, researchers, journals, organizations, and institutions."
+
+[Go to the Dataverse website](https://dataverse.harvard.edu/)
 
 ## Figshare
 
