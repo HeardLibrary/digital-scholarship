@@ -41,7 +41,7 @@ The R package **tidyr** contains functions that can be used to transform the for
 
 ## Transforming data
 
-The R package **dplyr** contains functions that make it easy to manipulate data in data frames.  Manipulations include filtering, re-ordering, summarizing, and creating new variables from existing ones.  For more on the dplyr package, see [the chapter on "Data Transformation with dplyr" in *R for Data Science*](https://r4ds.had.co.nz/transform.html), and the [Software Carpentry lesson on dplyr](http://swcarpentry.github.io/r-novice-gapminder/13-dplyr/index.html).
+The R package **dplyr** contains functions that make it easy to manipulate data in data frames.  Manipulations include filtering, re-ordering, summarizing, and creating new variables from existing ones.  For more on the dplyr package, see [the chapter on "Data Transformation with dplyr" in *R for Data Science*](https://r4ds.had.co.nz/transform.html), the [Software Carpentry lesson on dplyr](http://swcarpentry.github.io/r-novice-gapminder/13-dplyr/index.html), and the [RStudio cheat sheet on dplyr](https://www.rstudio.com/resources/cheatsheets/#dplyr).
 
 ## Splitting and combining data frames
 
@@ -80,7 +80,9 @@ Data visualization can be considered part of a larger process of data exploratio
 
 The "grammar of graphics" is a philosophical outlook on graphics introduced in 2010 by Hadley Wickham in his paper [*A Layered Grammar of Graphics*](http://vita.had.co.nz/papers/layered-grammar.pdf).  The systematic layered grammar of graphics allows the visualizer to control features of the plot such as the geometry of the plot (line, box, dot, etc.), the asthetics (marker type, color, etc.), and statistical transformation of the data (such as smoothing) in order to make features or characteristics of the data more apparent.  As the data exploration goes forward, based on what is learned the layered features can be adjusted to change how the data are displayed.  
 
-The **ggplot2** package is based on the Grammar of Graphics philosophy and is described in the ["Data Visualization" chapter of *R for Data Science*](https://r4ds.had.co.nz/data-visualisation.html).  To get an high-altitude overview of how the syntax of the ggplot function affects the features of a plot, see the [Data Visualization with ggplot2 Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf) found on the [RStudio Cheatsheats web page](https://www.rstudio.com/resources/cheatsheets/).  
+The **ggplot2** package is based on the Grammar of Graphics philosophy and is described in the ["Data Visualization" chapter of *R for Data Science*](https://r4ds.had.co.nz/data-visualisation.html).  For a high-level summary of ggplot, with pictures and examples, see the [Statistical Computing Service short cours by Michael Friendly](http://www.datavis.ca/courses/RGraphics/R-Graphics4.pdf). To get an high-altitude overview of how the syntax of the ggplot function affects the features of a plot, see the [Data Visualization with ggplot2 Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf) found on the [RStudio Cheatsheats web page](https://www.rstudio.com/resources/cheatsheets/).  
+
+ggplot itself can serve as the basis for more powerful visualization that are built upon it.  [Tree diagrams](https://joey711.github.io/phyloseq/plot_tree-examples.html) (e.g. phylogenetic trees) and [ordination plots](https://joey711.github.io/phyloseq/plot_ordination-examples.html) are two examples.
 
 # Statistical Analysis with R
 
@@ -97,4 +99,4 @@ The print book *R Cookbook* by Paul Teetor is a fairly comprehensive resource if
 To try out some simple R scripts for t-test of means, paired t-test, chi-squared goodness of fit, chi-squared contingency, regression, and ANOVA, visit [this page](../stats/).
 
 ----
-Revised 2019-08-19
+Revised 2019-09-08

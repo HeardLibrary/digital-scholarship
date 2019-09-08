@@ -33,6 +33,8 @@ The following links lead to a series of lessons designed to help you get started
 
 If you are already familiar with basic statistical tests and want a jump start to doing those tests using R, [Basic Statistical Analysis Using the R Statistical Package](http://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R-Manual/index.html) by Heeren and Milton of the Boston University School of Public Health is a good place to start.
 
+For summaries of how to perform a variety of tasks using the RStudio IDE, see the [RStudio cheat sheets](https://www.rstudio.com/resources/cheatsheets/).
+
 To try out some simple R scripts for t-test of means, paired t-test, chi-squared goodness of fit, chi-squared contingency, regression, and ANOVA, visit [this page](../stats/).
 
 # Resources at Vanderbilt
@@ -42,4 +44,4 @@ To try out some simple R scripts for t-test of means, paired t-test, chi-squared
 [R/RStudio research guide](https://researchguides.library.vanderbilt.edu/c.php?g=882675) with additional resources, maintained by Meredith Broadway (Business and Data Analyst Librarian)
 
 ----
-Revised 2019-08-21
+Revised 2019-09-08
