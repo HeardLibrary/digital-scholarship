@@ -72,9 +72,9 @@ Extensible Stylesheet Language Transformations (XSLT) is a language for transfor
 
 ## XQuery
 
-XQuery is a powerful functional programming language that can operate on XML.  For further information, follow the XQuery links on the [Scripting and Programming Languages page](../script/)
+XQuery is a powerful functional programming language that can operate on XML.  For further information, see the [XQuery resources page](../script/xquery/).
 
-[XQuery presentation (slides)](resource/xquery.pdf)
+[Homepage of the XQuery working group](https://heardlibrary.github.io/xquery-working-group/)
 
 # JSON
 
