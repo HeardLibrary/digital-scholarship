@@ -60,6 +60,8 @@ TEI is commonly used in the Digital Humanities to mark up text documents for pro
 
 [Introduction to TEI (slides)](resource/text-encoding-initiative.pdf)
 
+[Exploring Text Encoding Initiative (TEI) markup with XQuery](https://github.com/CliffordAnderson/XQuery4Humanists/blob/master/02-Exploring-TEI-with-XQuery.md) from [XQuery4Humanists](https://github.com/CliffordAnderson/XQuery4Humanists). 
+
 [Critical editions with TEI (slides)](resource/critical-editions-with-tei.pdf)
 
 ## XSLT
@@ -79,4 +81,4 @@ XQuery is a powerful functional programming language that can operate on XML.  F
 JSON is an increasingly popular way to transmit data in a structured way.  It is probably the most common way that data are provided to software and web pages via APIs.  
 
 ----
-Revised 2019-07-26
+Revised 2019-09-08
