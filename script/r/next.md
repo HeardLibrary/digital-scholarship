@@ -37,7 +37,7 @@ However, these data aren't "tidy" because each observation isn't in its own row,
 
 is "tidy" because the height observations are all in separate rows and the gender variable (male vs. female) is in a single column.  Many statistical tests in R (e.g. t-test of means and various forms of general linear models; GLM) require data to be in this format.  
 
-The R package **tidyr** contains functions that can be used to transform the format of data from messy to "tidy".  For more information, see [the chapter on "Tidy Data with tidyr" in *R for Data Science*](https://r4ds.had.co.nz/tidy-data.html), and the [Software Carpentry lesson on tidyr](http://swcarpentry.github.io/r-novice-gapminder/14-tidyr/index.html)
+The R package **tidyr** contains functions that can be used to transform the format of data from messy to "tidy".  For more information, see [the chapter on "Tidy Data with tidyr" in *R for Data Science*](https://r4ds.had.co.nz/tidy-data.html), and the [Software Carpentry lesson on tidyr](http://swcarpentry.github.io/r-novice-gapminder/14-tidyr/index.html).
 
 ## Transforming data
 
