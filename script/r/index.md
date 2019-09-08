@@ -25,6 +25,8 @@ The following links lead to a series of lessons designed to help you get started
 
 [R for Data Science](https://r4ds.had.co.nz/) This link is to the online version of Grolemund, G and H. Wickham, *R for Data Science*.  It is also available in print version from O'Reilly via a link on the website.  This is the book that is used in the Vanderbilt Libraries' [R Working Group](https://commodore-r-group.github.io/).
 
+[R Graphics Cookbook](https://r-graphics.org/) by Winston Chang provides many recipes for generating high-quality graphs quickly using R.
+
 [Online R resources for Beginners](http://www.introductoryr.co.uk/R_Resources_for_Beginners.html) is a page of links to many other R online resources, including online books, video tutorials, and other websites.
 
 [An R Companion for the Handbook of Biological Statistics](http://rcompanion.org/rcompanion/) is the code supplement for the online [Handbook of Biological Statistics](http://www.biostathandbook.com/) by John H. McDonald.  The examples include many of the most common parametric and non-parametric statistical tests, including some of the simpler multivariate tests.
