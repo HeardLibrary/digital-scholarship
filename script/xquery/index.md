@@ -10,9 +10,9 @@ Many of the linked resources on this page are from the [XQuery for Humanists wor
 
 ## Processor options and installation
 
-There are several XQuery processor options.  **BaseX** is popular because it is open source and is relatively easy to install and run as a stand-alone application. **eXist** is also open source but has a bigger learning curve because it is more complex and requires using a browser-based system to execute basic queries.  However, eXist also has powerful features for building web applications.  On can also run XQuery queries using the very full-featured **oXygen** XML editor.  However, oXygen is not open source and requires a paid subscription.  
+There are several XQuery processor options.  [**BaseX**](http://basex.org/) is popular because it is open source and is relatively easy to install and run as a stand-alone application. [**eXist**](http://exist-db.org/exist/apps/homepage/index.html) is also open source but has a bigger learning curve because it is more complex and requires using a browser-based system to execute basic queries.  However, eXist also has powerful features for building web applications.  On can also run XQuery queries using the very full-featured [**oXygen**](https://www.oxygenxml.com/) XML editor.  However, oXygen is not open source and requires a paid subscription.  
 
-Each of these processors will run queries that consist entirely of standard XQuery functions.  However, they also include special processor-specific functions that extend the functionality of XQuery, but that are non-standard.
+Each of these processors will run queries that consist entirely of standard XQuery functions.  However, they also include special processor-specific functions that extend the functionality of XQuery, but that are non-standard and therefore will not work in other processors.
 
 The [XQuery4Humanists site](https://github.com/CliffordAnderson/XQuery4Humanists/blob/master/README.md) provides some bare-bones instructions for getting started with the three XQuery processors listed above.  For more detailed instructions on installing BaseX, see the presentation below.
 
