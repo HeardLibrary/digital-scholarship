@@ -51,6 +51,8 @@ Enter part of the name of someone at Vanderbilt who might have created something
 
 [web page example](https://sparql-upload.s3.us-east-2.amazonaws.com/item-properties.html)
 
+[javascript](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikidata/item-properties.js)
+
 ## Scholia example for Antonis Rokas
 
 <https://tools.wmflabs.org/scholia/author/Q42352198>
