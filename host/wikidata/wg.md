@@ -23,7 +23,7 @@ The Working Group meets in Vanderbilt's Central Library on Mondays from 1:10 to 
 
 | Date | Session | Topic | Notes |
 |---|---|---|
-| Sep 9 | 1 | Introduction to Wikdata | |
+| Sep 9 | 1 | Introduction to Wikdata | [Notes](../intro/) |
 | Sep 16 | 2 | Open Refine for bulk upload |  |
 | Sep 23 | 3 | Clean and reconcile data |  |
 | Sep 30 | 4 | Build Wikidata schema |  |
