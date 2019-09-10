@@ -17,7 +17,7 @@ As a project this semester, we are going to upload Vanderbilt researcher informa
 
 ## Venue and time
 
-The Working Group meets in Vanderbilt's Central Library on Mondays from 1:10 to 2:00 PM.  The first meeting is on the 8th floor in Room 800FA.  All subsequent meetings will be held on the 6th floor in the Poetry Room (612A).
+The Working Group meets in Vanderbilt's Central Library on Mondays from 1:10 to 2:00 PM.  The first meeting is on the 8th floor in Room 800FA.  All subsequent meetings will be held on the 6th floor in the Vanderbilt Authors Room (418A).
 
 ## Schedule - Fall 2019
 
