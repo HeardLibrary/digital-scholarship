@@ -10,7 +10,7 @@ A shortened link to this page is [vanderbi.lt/py](http://vanderbi.lt/py).
 
 ## About the group
 
-The Python Working Group is a working group of the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/).  The group provides regular lessons for Python beginners and occasional special topics lessons.  Currently, registration is not required - just show up.
+The Python Working Group is a working group of the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/).  The group provides regular lessons for Python beginners and occasional special topics lessons.  Registration is required - go to [this form](https://docs.google.com/forms/d/e/1FAIpQLSfPgczgC0XquvLzCeXLpQc7Ojw9YdN0_uhd1Q8NAp1NWSt-MQ/viewform?usp=sf_link) to register for the second cycle.
 
 The beginners lessons generally cycle twice per semester.  See the schedule below for details.  You are also encouraged to work through the lessons on your own.  They contain practice exercises, with answers.  
 
@@ -38,7 +38,7 @@ First cycle:
 | Oct 3/4 | 6 | Input and output from files | [lesson webpage](../inout/) |
 | Oct 10/11 | 7 | Interacting with the Internet | [lesson webpage](../internet/) |
 
-Second cycle: **Tuesdays** from 1:10 to 2:00 PM
+Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  [Register here](https://docs.google.com/forms/d/e/1FAIpQLSfPgczgC0XquvLzCeXLpQc7Ojw9YdN0_uhd1Q8NAp1NWSt-MQ/viewform?usp=sf_link) 
 
 | Date | Session |
 |---|---|
