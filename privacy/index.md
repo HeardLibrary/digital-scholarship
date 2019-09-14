@@ -100,6 +100,8 @@ Thanks to Derek Bruff who created this as a [handout](../privacy-on-your-smartph
 
 # For more information
 
+For an informative and somewhat chilling report on how web browsers, phone apps, and smart speakers are tracking you, listen to [this July 2019 interview](https://www.npr.org/2019/07/31/746970018/how-tech-companies-track-your-every-move-sell-your-data) of Washington Post tech colomnist Geoffrey Fowler. See also his posts [I found your data. It's for sale](https://beta.washingtonpost.com/technology/2019/07/18/i-found-your-data-its-sale/), [Goodbye, Chrome: Google’s Web browser has become spy software](https://beta.washingtonpost.com/technology/2019/06/21/google-chrome-has-become-surveillance-software-its-time-switch/), [It’s the middle of the night. Do you know who your iPhone is talking to?](https://beta.washingtonpost.com/technology/2019/05/28/its-middle-night-do-you-know-who-your-iphone-is-talking/), and others on [his website](https://www.washingtonpost.com/people/geoffrey-a-fowler/).
+
 There are many other important topics you can research, including: file and hard drive encryption and the [Tails safe and anonymous operating system](https://tails.boum.org/).
 
 The [Library Freedom Project](https://libraryfreedomproject.org/) has resources for [online privacy basics](https://libraryfreedomproject.org/resources/onlineprivacybasics/) and a [mobile privacy crash course](https://libraryfreedomproject.org/mobileprivacytoolkit/).
@@ -111,4 +113,4 @@ The [CryptoParty](https://www.cryptoparty.in/) movement organizes digital privac
 [privy.sh link shortener](https://priv.sh/) provides a service that does not track clickthroughs (no cookies saved).
 
 ----
-Revised 2019-07-18
+Revised 2019-09-14
