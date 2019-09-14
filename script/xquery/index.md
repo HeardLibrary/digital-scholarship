@@ -40,5 +40,11 @@ The [XQuery4Humanists site](https://github.com/CliffordAnderson/XQuery4Humanists
 
 [Open Publication Distribution System (OPDS), OpenRefine, and IIIF](https://github.com/CliffordAnderson/XQuery4Humanists/blob/master/06-OPDS-OpenRefine-and-IIIF.md) from [XQuery4Humanists](https://github.com/CliffordAnderson/XQuery4Humanists). 
 
+## Text Mining at Scale presentations (fall 2019)
+ 
+[Session schedule](https://heardlibrary.github.io/xquery-working-group/schedule))
+
+[Session 2: XML and BaseX](text-mining/text-mining-at-scale-session-2.pdf)
+
 ----
-Revised 2019-09-08
+Revised 2019-09-14
