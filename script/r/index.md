@@ -31,7 +31,7 @@ The following links lead to a series of lessons designed to help you get started
 
 [An R Companion for the Handbook of Biological Statistics](http://rcompanion.org/rcompanion/) is the code supplement for the online [Handbook of Biological Statistics](http://www.biostathandbook.com/) by John H. McDonald.  The examples include many of the most common parametric and non-parametric statistical tests, including some of the simpler multivariate tests.
 
-[R examples for *The Analysis of Biological Data*](http://whitlockschluter.zoology.ubc.ca/r-code) is a companion website for the very accessible Witlock and Schluter print text *The Analysis of Biological Data*.  
+[R examples for *The Analysis of Biological Data*](http://whitlockschluter.zoology.ubc.ca/r-code) is a companion website for the very accessible Whitlock and Schluter print text *The Analysis of Biological Data*.  
 
 If you are already familiar with basic statistical tests and want a jump start to doing those tests using R, [Basic Statistical Analysis Using the R Statistical Package](http://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R-Manual/index.html) by Heeren and Milton of the Boston University School of Public Health is a good place to start.
 
