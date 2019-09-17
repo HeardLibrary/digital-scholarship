@@ -44,7 +44,9 @@ The [XQuery4Humanists site](https://github.com/CliffordAnderson/XQuery4Humanists
  
 [Session schedule](https://heardlibrary.github.io/xquery-working-group/schedule)
 
+[Session 1: Introduction](text-mining/text-mining-at-scale-session-1.pdf)
+
 [Session 2: XML and BaseX](text-mining/text-mining-at-scale-session-2.pdf)
 
 ----
-Revised 2019-09-14
+Revised 2019-09-16
