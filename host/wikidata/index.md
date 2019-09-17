@@ -27,6 +27,8 @@ breadcrumb: Wikidata
 
 [Merge two Items page](https://www.wikidata.org/wiki/Special:MergeItems) or use the Merge tool from the [Gadgets](https://www.wikidata.org/wiki/Special:Preferences#mw-prefsection-gadgets) page.
 
+[Recoin (Relative Completeness Indicator)](https://www.wikidata.org/wiki/Wikidata:Recoin) - script to extend entity pages with information about their relative completeness.
+
 [Scholia](https://tools.wmflabs.org/scholia/) - creates visualizations of researcher publications dynamically using SPARQL queries of Wikidata
 
 ## Connecting with the community
