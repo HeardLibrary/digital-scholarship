@@ -17,27 +17,27 @@ As a project this semester, we are going to upload Vanderbilt researcher informa
 
 ## Venue and time
 
-The Working Group meets in Vanderbilt's Central Library on Mondays from 1:10 to 2:00 PM.  The first meeting is on the 8th floor in Room 800FA.  All subsequent meetings will be held on the 6th floor in the Vanderbilt Authors Room (418A).
+The Working Group meets on Mondays from 1:10 to 2:00 PM.  Meetings on Sep 30 and beyond will be held on the 6th floor in the Eskind Library Conference Room (room 113).
 
 ## Schedule - Fall 2019
 
-| Date | Session | Topic | Notes |
+| Date | Location | Session | Topic | Notes |
 |---|---|---|
-| Sep 9 | 1 | Introduction to Wikdata | [Notes](../intro/) |
-| Sep 16 | 2 | Open Refine for bulk upload |  |
-| Sep 23 | 3 | Clean and reconcile data |  |
-| Sep 30 | 4 | Build Wikidata schema |  |
-| Oct 7 | 5 | Upload data and visualize with Scholia | |
-| Oct 14 | 6 | TBD | |
+| Sep 9 | Central 800FA | 1 | Introduction to Wikdata | [Notes](../intro/) |
+| Sep 16 | Central 800FA | 2 | Discuss properties and scope of project |  |
+| Sep 23 | N/A |  | **No session** |  |
+| Sep 30 | Eskind 113 | 3 | Build Wikidata schema for researchers |  |
+| Oct 7 | Eskind 113 | 4 | Upload data using OpenRefine | |
+| Oct 14 | Eskind 113 | 5 | TBD | |
 | Oct 21 |   | **No session** (October break week)| |
-| Oct 28 | 7 | TBD | |
-| Nov 4 | 8 | TBD | |
-| Nov 11 | 9 | TBD | |
-| Nov 18 | 10 | TBD | |
+| Oct 28 | Eskind 113 | 6 | TBD | |
+| Nov 4 | Eskind 113 | 7 | TBD | |
+| Nov 11 |  |  | probably no session (Wikiconference) | |
+| Nov 18 | Eskind 113 | 8 | TBD | |
 
 ## Resources
 
 [Links to some Wikidata resources](../)
 
 ----
-Revised 2019-08-29
+Revised 2019-09-17
