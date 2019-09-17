@@ -29,7 +29,7 @@ The Working Group meets on Mondays from 1:10 to 2:00 PM.  Meetings on Sep 30 and
 | Sep 30 | Eskind 113 | 3 | Build Wikidata schema for researchers |  |
 | Oct 7 | Eskind 113 | 4 | Upload data using OpenRefine | |
 | Oct 14 | Eskind 113 | 5 | TBD | |
-| Oct 21 |   | **No session** (October break week)| |
+| Oct 21 |  N/A | | **No session** (October break week)| |
 | Oct 28 | Eskind 113 | 6 | TBD | |
 | Nov 4 | Eskind 113 | 7 | TBD | |
 | Nov 11 |  |  | probably no session (Wikiconference) | |
