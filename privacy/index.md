@@ -16,6 +16,8 @@ It's a really bad idea to reuse passwords between online accounts, since if one 
 
 One thing to consider carefully if you use a password manager is what you will do if you lose your phone.  First, you need to make sure that you have an alternate way to access your passwords without the missing phone.  Second, you need to make sure that your phone is secure in the event that a nefarious finder or thief cannot get into it and use the password manager to access all of your accounts.
 
+With the advent of iOS 13, Apple is offering a "sign in with Apple" feature that has some advantages over Facebook and Google logins, and perhaps even over password managers.  For more information, see this [Wall Street Journal article](https://www.wsj.com/articles/sign-in-with-apple-is-way-better-than-passwordsif-you-can-find-it-11568552401?shareToken=st61abe1fb26df4a238ee4647d6f586219) (subscription required, free subscriptions for Vanderbilt people thanks to your friendly Libraries).  
+
 ## Secure messaging
 
 Depending on the app you use for messaging, your messages may or may not be encrypted or subject to being hacked or searched at a later time.  Perhaps the most recognized secure messaging app is [Signal](https://signal.org/), which is available for iPhone, Android, or desktop use.  Signal can be used to send messages as well as voice and video calls. Messages can also be set to disappear after a set interval.  It is free and open source.
