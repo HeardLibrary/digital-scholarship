@@ -10,5 +10,11 @@ breadcrumb: Pages websites
 
 stub page under development
 
+[using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/) to render Jekyll pages offline.  The command to invoke is
+
+```
+bundle exec jekyll serve --watch --incremental
+```
+
 ----
-Revised 2019-02-18
+Revised 2019-09-17
