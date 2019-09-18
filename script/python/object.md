@@ -239,6 +239,8 @@ boewulf.abuse('Grendel','my little yellow puppy')
 You can paste the following code ([poetry.py](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/poetry.py)) into your favorite editor or IDE to experiment with `Poem` objects.  Don't worry about how the `Poem` class is defined.  The code also includes assignment of the text of Robert Frost's poem "Stopping By Woods on a Snowy Evening" to the variable `frostText`.  You can use it in your experimenting.  The section of code following the instantiation of `stupidPoem` explores the attributes and methods that apply to `Poem` objects.  Run the code as-is and think about how it causes the output that you see.
 
 ```python
+import copy # import the copy module from the standard library
+
 # define Poem class (don't worry about how this part works)
 class Poem():
     def __init__(self):
@@ -286,11 +288,12 @@ print(stupidPoem.lines())
 print('Number of words:')
 print(len(stupidPoem.words()))
 
-moreStupidPoem = stupidPoem
+moreStupidPoem = copy.deepcopy(stupidPoem) # need to use deepcopy function to actually make a copy rather than a reference
 moreStupidPoem.title = 'Enjoying the odor of the woods'
 moreStupidPoem.abuse('woods', 'swamp')
 
 print()
+print(stupidPoem.title)
 print(moreStupidPoem.title)
 print()
 print(moreStupidPoem.text)
@@ -302,9 +305,18 @@ Note that a method can be applied in the same line as the instantiation.  For ex
 ```python
 modifiedPoem = Poem().abuse('I', 'we')
 ```
+
+**Technical note:** When you assign a user-defined object to another variable, by default Python simply creates a reference to source object.  In order to force Python to actually make a separate copy of the object, use the `deepcopy()` function from the `copy` module as shown in line 50.  If you want to see why this matters, change line 50 to
+
+```
+moreStupidPoem = stupidPoem
+```
+
+and try running the program again. 
+
 **Try this**
 
-In line 49, there is an equals sign, but in line 50 there isn't.  What is different about what's going on in those two lines?  Predict what would happen to the title of the poem if lines 49 and 50 were switched?  Predict, then switch them and run the program again.
+In line 51, there is an equals sign, but in line 52 there isn't.  What is different about what's going on in those two lines?  Predict what would happen to the title of the poem if lines 51 and 52 were switched?  Predict, then switch them and run the program again.
 
 # Examining the GUI code
 
@@ -418,4 +430,4 @@ print(myPoem.text)
 ```
 
 ----
-Revised 2019-03-28
+Revised 2019-09-18
