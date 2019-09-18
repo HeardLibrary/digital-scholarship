@@ -389,7 +389,7 @@ c. Can you figure out how to check for any kind of poker hands?  How about a flu
     
 b. Concatenate all of the words with spaces between them.  Can you put line breaks and stansas in what you think are the right places?
 
-## Loops answers
+## Iterating: Try This answers
 
 1\.A. 
 
