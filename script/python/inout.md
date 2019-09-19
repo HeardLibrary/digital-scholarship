@@ -10,7 +10,7 @@ Note: this is the sixth lesson in a beginner's introduction to Python.  For the 
 
 Answers for last week's challenge problem:
 
-
+[Look up data about schools from Wikidata](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge5/vandy-schools.py)
 
 # File Input and Output
 
