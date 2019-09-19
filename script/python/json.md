@@ -273,6 +273,8 @@ D. How could we make it be a string and insert it into the URL string?
 
 The answers are [at the end](#homework-answers)
 
+1\. It is probably better in a circumstance like the last example to create a function for part of the code.  That makes the code more readable because you only have to think about small bits of the code at a time.  Re-write the code so that the section with all of the `if` statements is moved into a function called `checkGender` that prints the answer (if appropriate) and returns the `found` variable.  Make sure that you pass all of the variables into the function that it needs (i.e. `character`, `characterName`, and `found`).
+
 
 # Challenge problems
 
@@ -370,9 +372,36 @@ url = 'https://api.rsc.org/compounds/v1/records/'+ str(dataStructure['results'][
 
 ## Homework answers
 
-1\
+1\.
+
+```python
+def checkGender(character, characterName, foundIt):
+    if character['name'] == characterName:
+        foundIt = True
+        if character['gender'] == 'male':
+            answer = 'He works'
+        elif character['gender'] == 'female':
+            answer = 'She works'
+        else:
+            answer = 'They work'
+        answer = answer + ' for ' + character['company'] + '.'
+        print(answer)
+    return foundIt
+
+# main script
+characters = [{'name':'Mickey Mouse', 'company':'Disney', 'gender': 'male'}, {'name':'Daisy Duck', 'company':'Disney', 'gender': 'female'}, {'name':'Daffy Duck', 'company':'Warner Brothers', 'gender': 'male'},  {'name':'Fred Flintstone', 'company':'Hanna Barbera', 'gender': 'male'}, {'name':'WALL-E', 'company':'Pixar', 'gender': 'neutral'}, {'name':'Fiona', 'company':'DreamWorks', 'gender': 'female'}]
+
+name = input("What's the character's name? ")
+found = False
+for char in characters:
+    found = checkGender(char, name, found)
+if not(found):
+    print("I don't know that character.")
+```
+
+Notice that I did not have to use the same variable names in the main script as the name that those variables have in the function (`char` in the script is `character` in the function, etc. )
 
 [next lesson on file dictionaries and JSON](../json/)
 
 ----
-Revised 2019-05-03
+Revised 2019-09-19

@@ -7,6 +7,8 @@ Note: this is the fourth lesson in a beginner's introduction to Python.  For the
 
 [previous lesson on object-oriented programming in Python](../object/)
 
+If you are interested in using Jupyter notebooks, the examples are available in [this notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/lists.ipynb).
+
 Answers for last week's challenge problem:
 
 [latte maker with scrolling text box](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge2/latte_maker.py)
@@ -107,6 +109,42 @@ lunchBag = ['sandwich', 'cookie']
 lunch = lunchBag + basket
 print(lunch)
 ```
+
+## Advanced topic: copying lists
+
+This is an optional section.  If you don't want to delve into this, you can skip it.  But if you skip this section, at least be aware that making copies of lists (i.e. assigning a list to a different variable) is a **gotcha** and does NOT work in the same way as making a copy of a simple object like a string or number.  
+
+As with user-defined objects, lists are complex objects composed of other objects.  As complex objects, assigning a list to another variable creates a reference from the new variable to the original one.  It does NOT make a separate copy.  
+
+To actually make a copy of a list, use the `deepcopy()` function from the `copy` module.  Try the following code and look carefully at the results:
+
+```
+import copy
+
+oldName = "fred"
+newName = oldName # make a copy of the old name by assigning it to a different variable
+oldName = "joe" # change the original name to something else
+print('old name:', oldName)
+print('new name:', newName)
+
+oldList = ['apple', 'banana', 'orange']
+linkedList = oldList
+linkedList[1] = 'durian'
+print()
+print('old list:', oldList)
+print('linked list:', linkedList)
+
+oldList = ['apple', 'banana', 'orange']
+copiedList = copy.deepcopy(oldList)
+copiedList[1] = 'durian'
+print()
+print('old list:', oldList)
+print('copied list:', copiedList)
+```
+
+Notice that when a list is assigned to a new variable, changes made using the new list variable affect the old list variable.  That doesn't happen with simple objects like strings.  But when a list is copied into a new variable using the `deepcopy()` function, changes made using the new list variable don't affect the old list variable.
+
+This will be true for all of the complex compound data structures that we will be working with from here on.
 
 ## Lists of lists
 
@@ -231,7 +269,7 @@ print('I wrote the modern version of "' + silly + '".')
 
 ```
 
-# Iterating using "for"
+# Iterating using `for`
 
 Python has several ways to control the flow through a script.  We've already seen how `if...else...` can be used to make choices.  Another very common task is to repeat some code multiple times.  For example, suppose we want to do something with every item in a list.  A list is *iterable*, meaning that you can step through the list and operate on each of the items in the sequence.  Here's an example:
 
@@ -327,11 +365,9 @@ B. Using the list days and a `for` loop that iterates over a range, print the we
 
 The answers are [at the end](#homework-answers)
 
-1\. It is probably better in a circumstance like the last example to create a function for part of the code.  That makes the code more readable because you only have to think about small bits of the code at a time.  Re-write the code so that the section with all of the `if` statements is moved into a function called `checkGender` that prints the answer (if appropriate) and returns the `found` variable.  Make sure that you pass all of the variables into the function that it needs (i.e. `character`, `characterName`, and `found`).
+1\. In a [famous story](http://wbilljohnson.com/journal/math/gauss.htm), the young mathematician Karl Gauss's teacher assigned him the task of adding all of the numbers from 1 to 100, with the intention of keeping him busy for a while.  It didn't work because in a few moments, Gauss calculated the answer, 5050, using some clever thinking.  However, if Gauss were in school now, he could just write a Python script to do the calculation.  Write a script using `range()` to add all the numbers from 1 up to any number that you choose.  *Note: if you use the `input()` function to get the person's number, you'll need to use the `int()` function to turn the entered string into an integer number.*
 
-2\. In a [famous story](http://wbilljohnson.com/journal/math/gauss.htm), the young mathematician Karl Gauss's teacher assigned him the task of adding all of the numbers from 1 to 100, with the intention of keeping him busy for a while.  It didn't work because in a few moments, Gauss calculated the answer, 5050, using some clever thinking.  However, if Gauss were in school now, he could just write a Python script to do the calculation.  Write a script using `range()` to add all the numbers from 1 up to any number that you choose.  *Note: if you use the `input()` function to get the person's number, you'll need to use the `int()` function to turn the entered string into an integer number.*
-
-3\. The game Yatzee involves rolling five dice and trying to get "poker hands" like three of a kind, a straight, etc.  You can simulate the rolling of a die using a function from the `random` module:
+2\. The game Yatzee involves rolling five dice and trying to get "poker hands" like three of a kind, a straight, etc.  You can simulate the rolling of a die using a function from the `random` module:
 
 ```python
 import random as r
@@ -441,35 +477,6 @@ for day in range(1,6):
 1\.
 
 ```python
-def checkGender(character, characterName, foundIt):
-    if character['name'] == characterName:
-        foundIt = True
-        if character['gender'] == 'male':
-            answer = 'He works'
-        elif character['gender'] == 'female':
-            answer = 'She works'
-        else:
-            answer = 'They work'
-        answer = answer + ' for ' + character['company'] + '.'
-        print(answer)
-    return foundIt
-
-# main script
-characters = [{'name':'Mickey Mouse', 'company':'Disney', 'gender': 'male'}, {'name':'Daisy Duck', 'company':'Disney', 'gender': 'female'}, {'name':'Daffy Duck', 'company':'Warner Brothers', 'gender': 'male'},  {'name':'Fred Flintstone', 'company':'Hanna Barbera', 'gender': 'male'}, {'name':'WALL-E', 'company':'Pixar', 'gender': 'neutral'}, {'name':'Fiona', 'company':'DreamWorks', 'gender': 'female'}]
-
-name = input("What's the character's name? ")
-found = False
-for char in characters:
-    found = checkGender(char, name, found)
-if not(found):
-    print("I don't know that character.")
-```
-
-Notice that I did not have to use the same variable names in the main script as the name that those variables have in the function (`char` in the script is `character` in the function, etc. )
-
-2\.
-
-```python
 enteredString = input("What's the upper number? ")
 myNumber = int(enteredString)
 sum = 0
@@ -479,7 +486,7 @@ for number in range(1, myNumber + 1): # don't forget to add one to the upper ran
 print(sum)
 ```
 
-3\.A.
+2\.A.
 
 ```python
 import random as r
@@ -538,4 +545,4 @@ for roll in range(0,rolls):
 [next lesson on dictionaries and JSON](../json/)
 
 ----
-Revised 2019-05-03
+Revised 2019-09-19
