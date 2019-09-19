@@ -128,15 +128,15 @@ print('old name:', oldName)
 print('new name:', newName)
 
 oldList = ['apple', 'banana', 'orange']
-linkedList = oldList
-linkedList[1] = 'durian'
+linkedList = oldList # assign the old list to a new list variable
+linkedList[1] = 'durian' # change an item on the new list
 print()
 print('old list:', oldList)
 print('linked list:', linkedList)
 
 oldList = ['apple', 'banana', 'orange']
-copiedList = copy.deepcopy(oldList)
-copiedList[1] = 'durian'
+copiedList = copy.deepcopy(oldList) # copy the old list to a new list variable
+copiedList[1] = 'durian' # change an item on the new list
 print()
 print('old list:', oldList)
 print('copied list:', copiedList)
