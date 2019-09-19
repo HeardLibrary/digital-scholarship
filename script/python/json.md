@@ -200,11 +200,11 @@ print(data['name'][1])
 ```
 
 Notes:
-- Notice how the triple single-quote was used to create a multi-line string that includes the newlines as part of the string.  Since newlines and spaces are ignored whitespace in JSON, the `.loads()` method has no problem with them and the multi-line string is easier for us to read.
-- In the dictionary that results from the `.loads()` method, we can refer to values by the key string.
+- Notice how the triple single-quote was used to create a multi-line string that includes the newlines as part of the string.  Since newlines and spaces are ignored whitespace in JSON, the `loads()` function has no problem with them and the multi-line string is easier for us to read.
+- In the dictionary that results from the `loads()` function, we can refer to values by the key string.
 - Since the value of the `name` key is a list, we have to include an index number in second set of square brackets to refer to the value that we want.
 
-The json module has a `.dumps()` method that works in the reverse direction: it turns a data structure composed of dictionaries and lists into a JSON string that can be saved in a file or used in some other way.
+The json module has a `dumps()` function that works in the reverse direction: it turns a data structure composed of dictionaries and lists into a JSON string that can be saved in a file or used in some other way.
 
 **Try this**
 
@@ -224,7 +224,7 @@ string = '{"id": 2157, "formula": "C_{9}H_{8}O_{4}", "molecularWeight": 180.1574
 
 Write a script to turn the JSON string into a Python data structure (a dictionary), then print the formula. Don't forget to import the json module.
 
-2\. JSON is returned from a search of the Royal Society of Chemistry API (https://api.rsc.org/).  The results JSON tells us the identifier of compound(s) that meet the requirements of the search.  We want to insert the identifier in the following URL to get data about the compund(s):
+2\. JSON is returned from a search of the Royal Society of Chemistry API (<https://api.rsc.org/>).  The results JSON tells us the identifier of compound(s) that meet the requirements of the search.  We want to insert the identifier in the following URL to get data about the compund(s):
 
 `https://api.rsc.org/compounds/v1/records/{id}/details`
 
@@ -273,8 +273,76 @@ D. How could we make it be a string and insert it into the URL string?
 
 The answers are [at the end](#homework-answers)
 
-1\. It is probably better in a circumstance like the last example to create a function for part of the code.  That makes the code more readable because you only have to think about small bits of the code at a time.  Re-write the code so that the section with all of the `if` statements is moved into a function called `checkGender` that prints the answer (if appropriate) and returns the `found` variable.  Make sure that you pass all of the variables into the function that it needs (i.e. `character`, `characterName`, and `found`).
+1\. Here is the last example in the *List of dictionaries* section:
 
+```python
+characters = [{'name':'Mickey Mouse', 'company':'Disney', 'gender': 'male'}, {'name':'Daisy Duck', 'company':'Disney', 'gender': 'female'}, {'name':'Daffy Duck', 'company':'Warner Brothers', 'gender': 'male'},  {'name':'Fred Flintstone', 'company':'Hanna Barbera', 'gender': 'male'}, {'name':'WALL-E', 'company':'Pixar', 'gender': 'neutral'}, {'name':'Fiona', 'company':'DreamWorks', 'gender': 'female'}]
+characterName = input("What's the character's name? ")
+found = False
+for character in characters:
+    if character['name'] == characterName:
+        found = True
+        if character['gender'] == 'male':
+            answer = 'He works'
+        elif character['gender'] == 'female':
+            answer = 'She works'
+        else:
+            answer = 'They work'
+        answer = answer + ' for ' + character['company'] + '.'
+        print(answer)
+if not(found):
+    print("I don't know that character.")
+```
+
+Because we have `if` inside of `if` inside of a `for` loop, the code is too complicated and requires paying careful attention to the indentation.  It is probably better in a circumstance like this to create a function for part of the code.  That makes the code more readable because you only have to think about small bits of the code at a time.  Re-write the code so that the section with all of the `if` statements is moved into a function called `checkGender` that prints the answer (if appropriate) and returns the `found` variable.  Make sure that you pass all of the variables into the function that it needs (i.e. `character`, `characterName`, and `found`).
+
+2\. Here is a JSON string that is simplified from a response from the Twitter API:
+
+```
+[
+    {
+        "created_at":"Wed Sep 18 19:50:41 +0000 2019",
+        "id":1174410433333039104,
+        "id_str":"1174410433333039104",
+        "text":"The \u201cdigital downloads\u201d tax makes an appearance! https:\/\/t.co\/Q8bBUXTt4g",
+        "truncated":false,
+        "retweeted":false,
+        "possibly_sensitive":false,
+        "lang":"en"
+    },
+    {
+        "created_at":"Wed Sep 18 19:28:44 +0000 2019",
+        "id":1174404907568263168,
+        "id_str":"1174404907568263168",
+        "text":"I couldn\u2019t feel my fingertips this morning it was so cold! https:\/\/t.co\/L55hKruAXk",
+        "truncated":false,
+        "retweeted":false,
+        "possibly_sensitive":false,
+        "lang":"en"
+    },    
+    {
+        "created_at":"Wed Sep 18 14:08:54 +0000 2019",
+        "id":1174324420380200962,
+        "id_str":"1174324420380200962",
+        "text":"RT @wnprwheelhouse: .@wnprharriet giving a shoutout to @wnpr's new newsletter! Do you like news? Sign up! https:\/\/t.co\/18hZuKmku9",
+        "truncated":false,
+        "retweeted":false,
+        "possibly_sensitive":false,
+        "lang":"en"
+    }
+]
+```
+
+A\. Create a multiline string (using triple single-quotes) from the JSON above and assign it to a variable.  Use the `json.loads()` function to turn the string into a Python data structure.  Print both the JSON string and the data structure.  
+- How does the use of double and single quotes change with the conversion to the data structure?  
+- The characters `\u201c` appear in the string, but not in the printout of the data structure.  Why?
+- The data structure that was created is complex.  What type of data structure is the outermost "layer" of the structure?  What type of data structure is the innermost (most nested) data structure?  How would you describe the overall complex data structure?
+
+B\. Add to your code from A. to iterate through the outer layer of the data structure and print each of the inner data structures.  What does each item represent?
+
+C\. Modify your code from B. to print the date and text of each tweet.  
+
+D\. Modify your code from C. to store the text of each tweet into a separate list.  Print the resulting list.
 
 # Challenge problems
 
@@ -399,9 +467,101 @@ if not(found):
     print("I don't know that character.")
 ```
 
-Notice that I did not have to use the same variable names in the main script as the name that those variables have in the function (`char` in the script is `character` in the function, etc. )
+Notice that I did not have to use the same variable names as arguments when I call the function in the main script as the name that those variables have in the function definition parameters (`char` in the function call is `character` in the function definition, etc. )
 
-[next lesson on file dictionaries and JSON](../json/)
+2\. A. 
+
+```
+import json
+
+jsonString = '''[
+    {
+        "created_at":"Wed Sep 18 19:50:41 +0000 2019",
+        "id":1174410433333039104,
+        "id_str":"1174410433333039104",
+        "text":"The \u201cdigital downloads\u201d tax makes an appearance! https:\/\/t.co\/Q8bBUXTt4g",
+        "truncated":false,
+        "retweeted":false,
+        "possibly_sensitive":false,
+        "lang":"en"
+    },
+    {
+        "created_at":"Wed Sep 18 19:28:44 +0000 2019",
+        "id":1174404907568263168,
+        "id_str":"1174404907568263168",
+        "text":"I couldn\u2019t feel my fingertips this morning it was so cold! https:\/\/t.co\/L55hKruAXk",
+        "truncated":false,
+        "retweeted":false,
+        "possibly_sensitive":false,
+        "lang":"en"
+    },    
+    {
+        "created_at":"Wed Sep 18 14:08:54 +0000 2019",
+        "id":1174324420380200962,
+        "id_str":"1174324420380200962",
+        "text":"RT @wnprwheelhouse: .@wnprharriet giving a shoutout to @wnpr's new newsletter! Do you like news? Sign up! https:\/\/t.co\/18hZuKmku9",
+        "truncated":false,
+        "retweeted":false,
+        "possibly_sensitive":false,
+        "lang":"en"
+    }
+]'''
+
+dataStructure = json.loads(jsonString)
+print(jsonString)
+print(dataStructure)
+```
+- How does the use of double and single quotes change with the conversion to the data structure? **The strings in the JSON string were all surrounded by double quotes.  In the printout of the data structure, they were changed to single quotes.** 
+- The characters `\u201c` appear in the string, but not in the printout of the data structure.  Why? **The string `\u201c` represents an escaped Unicode character.  When it is loaded into the data structure, it's turned into the actual character, which is a "left smart quote" (`“`).  It's printed out directly as the character.**
+- The data structure that was created is complex.  What type of data structure is the outermost "layer" of the structure?  **It's a list**. What type of data structure are the innermost (most nested) data structures? **They are dictionaries.**  How would you describe the overall complex data structure? **It's a list of dictionaries.**
+
+B. 
+```
+import json
+
+jsonString = '''[
+    (multiline string omitted here)
+]'''
+
+dataStructure = json.loads(jsonString)
+
+for tweet in dataStructure:
+    print(tweet)
+```
+
+Each item represents data about a tweet.
+
+C. 
+```
+import json
+
+jsonString = '''[
+    (multiline string omitted here)
+]'''
+
+dataStructure = json.loads(jsonString)
+
+for tweet in dataStructure:
+    print(tweet['created_at'], tweet['text'])
+```
+
+D. 
+```
+import json
+
+jsonString = '''[
+    (multiline string omitted here)
+]'''
+
+dataStructure = json.loads(jsonString)
+
+tweetList = []
+for tweet in dataStructure:
+    tweetList.append(tweet['text'])
+print(tweetList)
+```
+
+[next lesson on file input and output](../inout/)
 
 ----
 Revised 2019-09-19
