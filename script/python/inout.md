@@ -78,7 +78,7 @@ print(thirdLine, file=fileObject)
 fileObject.close()
 ```
 
-Note that you if you want to have newlines separating lines that you've output to a file with the `.write()` method, you can just add it to the end of the output string, like this:
+Note that if you want to have newlines separating lines that you've output to a file with the `.write()` method, you can just add it to the end of the output string, like this:
 
 ```python
 fileObject.write(firstLine + '\n')
