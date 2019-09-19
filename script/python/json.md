@@ -7,6 +7,16 @@ Note: this is the fifth lesson in a beginner's introduction to Python.  For the 
 
 [previous lesson on lists and loops](../structures/)
 
+Answers for last week's challenge problems:
+
+1\.a. [Print 5 cards](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge3/print_cards.py)
+
+b\. [Create hand list](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge3/make_hand.py)
+
+2\.a. [Reverse Frost poem words](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge3/reverse_frost_words.py)
+
+b\. [Reverse entire Frost poem](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge3/reverse_frost_poem.py)
+
 # Dictionaries
 
 In the previous lesson, we learned about one important Python data structure: lists.  In this lesson, we will begin by looking at a second important data structure: dictionaries.
@@ -344,8 +354,21 @@ C\. Modify your code from B. to print the date and text of each tweet.
 
 D\. Modify your code from C. to store the text of each tweet into a separate list.  Print the resulting list.
 
-# Challenge problems
+# Challenge problem
 
+Data about the schools and colleges of Vanderbilt University in JSON form are [here](https://raw.githubusercontent.com/HeardLibrary/linked-data/master/publications/wikidata/affiliation.json).  Write an application that will allow a user to find out what Wikidata knows about their school/college.  Here are the steps:
+
+1\. Paste the JSON into your script as a multiline script, then turn it into a Python data structure.
+
+2\. Present the user with a numbered list of the school names.
+
+3\. The user enters the number of their school.
+
+4\. Look up the `wikidataId` of the school they selected.
+
+5\. Concatenate the string `https://www.wikidata.org/wiki/` and the Wikidata ID into a single URL string in the variable `url`.
+
+6\. From the `webbrowser` module, use the `webbrowser.open_new_tab(url)` function to open the user's browser and load the corresponding Wikidata page for their school.
 
 ## Dictionary answers
 

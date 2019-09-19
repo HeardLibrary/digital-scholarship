@@ -8,17 +8,9 @@ Note: this is the sixth lesson in a beginner's introduction to Python.  For the 
 
 [prevous lesson on dictionaries and JSON](../json/)
 
-Answers for last week's challenge problems:
+Answers for last week's challenge problem:
 
-1\.a. [Print 5 cards](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge3/print_cards.py)
 
-b\. [Create hand list](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge3/make_hand.py)
-
-2\. [Add 100 numbers](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge3/add_numbers.py)
-
-2\.a. [Reverse Frost poem words](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge3/reverse_frost_words.py)
-
-b\. [Reverse entire Frost poem](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge3/reverse_frost_poem.py)
 
 # File Input and Output
 
