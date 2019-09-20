@@ -4,6 +4,8 @@ title: XQuery resources
 breadcrumb: XQuery
 ---
 
+The shortcut to this page is [vanderbi.lt/xquery](http://vanderbi.lt/xquery)
+
 # XQuery Resources
 
 Many of the linked resources on this page are from the [XQuery for Humanists workshop materials](https://github.com/CliffordAnderson/XQuery4Humanists) created by Clifford Anderson.  Individual linked pages are organized by topic below, but you can start at the [landing page](https://github.com/CliffordAnderson/XQuery4Humanists) to access them in the order they were presented at the workshop.
