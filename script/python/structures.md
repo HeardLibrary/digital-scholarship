@@ -9,6 +9,8 @@ Note: this is the fourth lesson in a beginner's introduction to Python.  For the
 
 If you are interested in using Jupyter notebooks, the examples are available in [this notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/lists.ipynb).
 
+The presentation for this lesson is [here](presentations/lesson4-structures.pdf)
+
 Answers for last week's challenge problem:
 
 [latte maker with scrolling text box](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge2/latte_maker.py)
@@ -545,4 +547,4 @@ for roll in range(0,rolls):
 [next lesson on dictionaries and JSON](../json/)
 
 ----
-Revised 2019-09-19
+Revised 2019-09-20

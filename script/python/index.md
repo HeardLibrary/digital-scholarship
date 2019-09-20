@@ -74,6 +74,8 @@ Example Jupyter notebook to play with is [here](https://github.com/HeardLibrary/
 
 [Home page of the Python Working Group](wg) of the [Vanderbilt Libraries Digital Scholarship and Communications Office](https://www.library.vanderbilt.edu/scholarly/)
 
+The introductory [presentation is here](presentations/lesson1-starting.pdf)
+
 ## Books
 
 [Dive Into Python](http://histo.ucsf.edu/BMS270/diveintopython3-r802.pdf) (by Mark Pilgrim) - free online pdf (Python 3). Also availible in print. 
@@ -111,4 +113,4 @@ These series have not been vetted in any way - check them out at your own risk.
 [OSP - Python Beginner Series for Absolute Beginners](https://www.youtube.com/playlist?list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg) kjdElectronics - (58K subscribers)
 
 ----
-Revised 2019-08-26
+Revised 2019-09-20

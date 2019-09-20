@@ -10,6 +10,8 @@ Note: this is the third lesson in a beginner's introduction to Python.  For the 
 
 If you are interested in using Jupyter notebooks, the examples are available in [this notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/object.ipynb).
 
+The presentation for this lesson is [here](presentations/lesson3-object.pdf)
+
 Answers for last week's challenge problems:
 1. [GUI Disney Checker](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge1/disney_checker.py)
 2. [basic text-based Webpage Checker](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge1/website_checker1.py) / [advanced text-based Webpage Checker](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge1/website_checker2.py) / [advanced GUI Webpage Checker](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge1/website_checker3.py)
@@ -430,4 +432,4 @@ print(myPoem.text)
 ```
 
 ----
-Revised 2019-09-18
+Revised 2019-09-20

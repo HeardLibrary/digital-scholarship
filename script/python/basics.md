@@ -6,9 +6,11 @@ breadcrumb: Basics
 
 Note: this is the second lesson in a beginner's introduction to Python.  For the whole schedule, see the [Vanderbilt Python Working Group homepage](../wg/)
 
-**General note:** Since these examples are really simple, we advise using the Thonny IDE so that you can cut, paste, then click the green run button to quickly test them out.  
+**General note:** Since these examples are really simple, we advise using the Thonny IDE so that you can cut, paste, then click the green run button to quickly test them out.  If you've installed Anaconda, the Spyder IDE can be used in the same way.
 
 If you are interested in using Jupyter notebooks, the examples are available in [this notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/basics.ipynb).
+
+The presentation for this lesson is [here](presentations/lesson2-basics.pdf)
 
 # Basics of Python Structure
 
@@ -620,4 +622,4 @@ if not zero:
 ```
 
 ----
-Revised 2019-05-02
+Revised 2019-09-20
