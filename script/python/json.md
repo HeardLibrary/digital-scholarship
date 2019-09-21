@@ -185,12 +185,15 @@ For the details of JSON, see [this page](https://www.json.org/).
 
 As you read the previous section, you may have noticed that JSON is very similar to the Python data structures that we have used (with the exception that JSON requires double quotes and Python allows either double or single quotes).  A "JSON object" is very similar to a Python dictionary.  A "JSON array" is very similar to a Python list. In the same way that JSON objects can be nested within arrays or arrays nested within objects, Python dictionaries can be nested within lists or lists nested within dictionaries.  So pretty much any JSON data structure can be translated into a complex Python data object.  
 
-There is a Python library, appropriately called the `json` module, that will convert a JSON string into a Python data object and vice versa.  Here is an example of how it can be used:
+There is a Python library, appropriately called the `json` module, that will convert a JSON string into a Python data object and vice versa.
+
+**Example: JSON array nested inside a object (Python list inside a dictionary)**
 
 ```python
 import json
 
-jsonString = '''{
+jsonString = '''
+{
   "name":
          [
          "Steve",
@@ -198,21 +201,91 @@ jsonString = '''{
          "Esteban"
          ],
   "fingers":10, 
-  "street":"Keri Drive"
-}'''
+  "street":"Penny Lane"
+}
+'''
 
 data = json.loads(jsonString)
 
 print(data)
+print()
 print(data['name'])
-print(data['fingers'])
+print()
 print(data['name'][1])
+print()
+print(data['fingers'])
 ```
 
 Notes:
 - Notice how the triple single-quote was used to create a multi-line string that includes the newlines as part of the string.  Since newlines and spaces are ignored whitespace in JSON, the `loads()` function has no problem with them and the multi-line string is easier for us to read.
 - In the dictionary that results from the `loads()` function, we can refer to values by the key string.
 - Since the value of the `name` key is a list, we have to include an index number in second set of square brackets to refer to the value that we want.
+
+**Example: JSON object nested inside an array (Python dictionary inside a list)**
+
+```python
+import json
+data = json.loads('''
+[
+    {
+        "created_at":"Wed Sep 18 19:50:41 +0000 2019",    
+        "text":"The \u201cdigital downloads\u201d tax makes an appearance!",
+        "lang":"en"
+    },
+    {
+        "created_at":"Wed Sep 18 19:28:44 +0000 2019",
+        "text":"¡No podía sentir las yemas de mis dedos esta mañana, hacía tanto frío",
+        "lang":"es"
+    },    
+    {
+        "created_at":"Wed Sep 18 14:08:54 +0000 2019",
+        "text":"RT @wnprwheelhouse: @wnprharriet кричать @wnpr !",
+        "lang":"ru"
+    }
+]
+''')
+print(data)
+print()
+print(data[1])
+print()
+print(data[1]['lang'])
+```
+
+Notes:
+- In this example, we applied the `json.loads()` function directly to the multi-line string and immediately assigned it to a variable.
+- Since the outer layer is the list, the first square bracket has a numeric index.
+- Since the value of item 1 in the list is a nested dictionary, we write the key for the value we want in the second square bracket.
+
+**Example: JSON object nested inside an object (Python dictionary inside a dictionary)**
+
+```python
+import json
+data = json.loads('''
+{
+    "in_reply_to_screen_name": null,
+    "user": 
+            {
+            "id": 6253282,
+            "id_str": "6253282",
+            "name": "Carmen Baskauf",
+            "screen_name": "cbaskauf",
+            "location": "Hartford, CT"
+            }
+        ,
+    "geo": null,
+    "coordinates": null
+}
+''')
+print(data)
+print()
+print(data['user'])
+print()
+print(data['user']['location'])
+```
+
+Notes:
+- The key in the first square bracket has as its value the nested dictionary containing information about the user.
+- The second square bracket contains the key of the desired value in the nested dictionary.
 
 The json module has a `dumps()` function that works in the reverse direction: it turns a data structure composed of dictionaries and lists into a JSON string that can be saved in a file or used in some other way.
 
