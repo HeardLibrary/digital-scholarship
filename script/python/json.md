@@ -7,6 +7,8 @@ Note: this is the fifth lesson in a beginner's introduction to Python.  For the 
 
 [previous lesson on lists and loops](../structures/)
 
+If you are interested in using Jupyter notebooks, the examples are available in [this notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/json.ipynb).
+
 The presentation for this lesson is [here](presentations/lesson5-json.pdf)
 
 Answers for last week's challenge problems:
