@@ -66,7 +66,7 @@ itemList = ['s049', 'm486', 'z010', 'x428']
 itemName = {'s049': 'widget', 'm486': 'poiuyt', 'z010': 'thingamabob', 'x428': 'foobar'}
 itemPrice = {'s049': 1.98, 'm486': 14.99, 'z010': 0.49, 'x428': 250.00}
 ```
-A. Using the dictionaries, print the name and price of a thingamabob.
+A. Using the dictionaries, print the name and price of the item with catalog number `z010`.
 
 B. Use a `for` loop to iterate through the list of items.  For each item, print its name and price.
 
