@@ -189,7 +189,7 @@ As you read the previous section, you may have noticed that JSON is very similar
 
 There is a Python library, appropriately called the `json` module, that will convert a JSON string into a Python data object and vice versa.
 
-**Example: JSON array nested inside a object (Python list inside a dictionary)**
+**First example: JSON array nested inside a object (Python list inside a dictionary)**
 
 ```python
 import json
@@ -223,7 +223,7 @@ Notes:
 - In the dictionary that results from the `loads()` function, we can refer to values by the key string.
 - Since the value of the `name` key is a list, we have to include an index number in second set of square brackets to refer to the value that we want.
 
-**Example: JSON object nested inside an array (Python dictionary inside a list)**
+**Second example: JSON object nested inside an array (Python dictionary inside a list)**
 
 ```python
 import json
@@ -258,7 +258,7 @@ Notes:
 - Since the outer layer is the list, the first square bracket has a numeric index.
 - Since the value of item 1 in the list is a nested dictionary, we write the key for the value we want in the second square bracket.
 
-**Example: JSON object nested inside an object (Python dictionary inside a dictionary)**
+**Third example: JSON object nested inside an object (Python dictionary inside a dictionary)**
 
 ```python
 import json
