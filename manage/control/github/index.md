@@ -4,6 +4,8 @@ title: GitHub
 breadcrumb: GitHub
 ---
 
+A short link to this page is [vanderbi.lt/github](http://vanderbi.lt/github)
+
 # GitHub resources
 
 The following pages provide information for developing basic skills with GitHub.  The first four pages should be studied in order.  The last two are optional extensions.
