@@ -38,7 +38,7 @@ First cycle:
 | Oct 3/4 | 6 | Input and output from files | [lesson webpage](../inout/) |
 | Oct 10/11 | 7 | Interacting with the Internet | [lesson webpage](../internet/) |
 
-Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  [Register here](https://docs.google.com/forms/d/e/1FAIpQLSfPgczgC0XquvLzCeXLpQc7Ojw9YdN0_uhd1Q8NAp1NWSt-MQ/viewform?usp=sf_link) 
+Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  This cycle is now fully enrolled.  Check again later for spring semester offerings. 
 
 | Date | Session |
 |---|---|
@@ -95,4 +95,4 @@ The event is free, but advance registration is required.
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2019-09-14
+Revised 2019-09-24
