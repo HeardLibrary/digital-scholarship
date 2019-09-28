@@ -52,5 +52,7 @@ The [XQuery4Humanists site](https://github.com/CliffordAnderson/XQuery4Humanists
 
 [Session 3: XPath](text-mining/text-mining-at-scale-session-3.pdf)
 
+[Session 4: XQuery](text-mining/text-mining-at-scale-session-4.pdf)
+
 ----
-Revised 2019-09-16
+Revised 2019-09-28
