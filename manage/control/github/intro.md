@@ -1,8 +1,10 @@
 ---
 permalink: /manage/control/github/intro/
-title: Introduction to Git and GitHub
+title: Introduction to GitHub
 breadcrumb: Intro
 ---
+
+[previous page: Ways to use GitHub](../ways/)
 
 # Introduction to Git and GitHub
 
