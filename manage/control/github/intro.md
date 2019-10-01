@@ -12,7 +12,7 @@ On this page, we'll talk about opening a GitHub account, creating a repo, and co
 
 ## Opening a GitHub account
 
-You can open a free GitHub account by going to <https://github.com/>. The process is relatively simple - for detailed instructions, see [this workshop handout](https://github.com/Ramona2020/learning-github/blob/master/Workshop%20I-III%20Handouts/Workshop-GitHubBasics.md).  With a GitHub account, you can create an unlimited number of public repositories.  You can also create private repositories, but they are limited to three collaborators.
+You can open a free GitHub account by going to <https://github.com/>. The process is relatively simple if you follow the signup instructions.  With a GitHub account, you can create an unlimited number of public repositories.  You can also create private repositories, but they are limited to three collaborators.
 
 There are a number of things you can explore in the settings, such as your profile picture, email address, etc. One setting of which you should be aware is the notifications.  Two common ways to communicate with collaborators in GitHub are through @mentions and watching repos.  If you want to receive email notifications through these two means, you should enable it here.  If you are getting an annoying number of emails, this is also where you can turn it off.
 
