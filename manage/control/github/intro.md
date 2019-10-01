@@ -6,7 +6,7 @@ breadcrumb: Intro
 
 [previous page: Ways to use GitHub](../ways/)
 
-# Introduction to Git and GitHub
+# Introduction to GitHub
 
 On this page, we'll talk about opening a GitHub account, creating a repo, and committing edits.
 

@@ -14,7 +14,9 @@ To register, go to [this form](https://forms.gle/q6pRAguF4EW3H3bV8)
 
 # GitHub resources
 
-The following pages provide information for developing basic skills with GitHub.  The first four pages should be studied in order.  The last two are optional extensions.
+The following pages provide information for developing basic skills with GitHub.  The first five pages should be studied in order.  The last two are optional extensions.
+
+[Ways to use GitHub](ways/)
 
 [Introduction to Git and GitHub](intro/)
 
