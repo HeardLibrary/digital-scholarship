@@ -18,7 +18,27 @@ The purpose of a branch is to allow for the development of documents independent
 
 <img src="../images-branch/branch-diagram.jpg" alt="branch" width="400"/>
 
-There are several possible fates of a branch.  A common fate is for a branch is for it to be merged back into the master.  This can happen when the revision is complete, or if the feature has been debugged and is ready to be deployed.  You might also decide that development of the branch is hopeless and just delete it and return to the master.  In some cases, a branch may remain as a separate entity from the master, with no intention of ever merging it (this is common when using GitHub Pages to manage a website).  
+There are several possible fates of a branch.  A common fate is for a branch is for it to be merged back into the master.  This can happen when the revision is complete, or if the feature has been debugged and is ready to be deployed.  You might also decide that development of the branch is hopeless and just delete it and return to the master.  In some cases, a branch may remain as a separate entity from the master, with no intention of ever merging it (this is common when using GitHub Pages to manage a website). 
+
+## Creating a new branch
+
+In this example, my friend has created a repository called `feline-cuisine` and has invited me to be a collaborator.  I have accepted and have cloned the repository to my local computer as shown previously.  
+
+When I click on the `Current Branch` tab of the desktop client, here's what I see:
+
+<img src="../images-branch/desktop-branches.png" style="border:1px solid black">
+
+Currently, there is only one branch (master) in the repo.
+
+I want to work on the project, but would prefer to develop my changes on a separate branch.  So I click on the `New Branch` button.  In the resulting popup, I give the branch a descriptive name.
+
+<img src="../images-branch/desktop-enter-branch-title.png" style="border:1px solid black">
+
+Then I click on the Create Branch button.  The desktop client automatically checks out the new branch and lists it as the current branch.  
+
+<img src="../images-branch/desktop-current-branch.png" style="border:1px solid black">
+
+Note that at this point the branch only exists on my local copy of the repository. If I want, I can click `Publish branch` and the new branch will be created in GitHub.  Alternatively, I can edit and make commits before pushing the branch.  
 
 ## Changing the branch
 
