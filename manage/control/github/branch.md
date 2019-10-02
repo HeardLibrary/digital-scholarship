@@ -40,13 +40,13 @@ Then I click on the Create Branch button.  The desktop client automatically chec
 
 Note that at this point the branch only exists on my local copy of the repository. If I want, I can click `Publish branch` and the new branch will be created in GitHub.  Alternatively, I can edit and make commits before pushing the branch.  
 
-## Changing the branch
+## Changing to a preexisting branch
 
-By dropping down the Current Repository list, you can switch to a different cloned repository. By default, the desktop client chooses the master branch of a newly cloned repo.  However, you can change from the master branch to another existing branch by dropping down the middle "Current Branch" menu at the top of the window.  GitHub desktop will remember what branch you were working on the next time you switch back to that repository.
+By default, the desktop client checks out the master branch of a newly cloned repo.  However, if that repo has more than one branch, you can change from the master branch to another branch by dropping down the middle "Current Branch" menu at the top of the window.  
 
 <img src="../images-clone/current-branch.png" style="border:1px solid black">
 
-When you select a branch in this dialog, you have checked out that branch.
+When you select a different branch in this dialog, the desktop client will check out that branch.
 
 Checking out a branch literally changes the files that are present on your local computer. For example, when I selected the master branch as my current branch, here's what several directories looked like:
 
@@ -60,23 +60,87 @@ then I'm checking out a different set of files.  Here's what the directories loo
 
 <img src="../images-clone/gh-pages-branch.png" style="border:1px solid black">
 
-Some files have disappeared, like the ones in the pylesson directory, and other files have appeared in the lod directory.  The content of the files themselves may also change.  So it's important before you start working on files that you are clear what branch you currently have checked out.  It is also important to make sure that you've saved the files that you were working on before you check out a different branch in the same repository.  It is possible to lose unsaved changes if you don't.
+Some files have disappeared, like the ones in the pylesson directory, and other files have appeared in the lod directory.  The content of the files themselves may also change if the state of the files is different in the two branches.  **Note:** Git only manages files, not directories.  When Git checks out a different branch, it doesn't delete directories, even if they don't contain any files in that branch.
 
-## The Shared Repository model
+So it's important before you start working on files that you are clear what branch you currently have checked out.  It is also important to make sure that you've saved the files that you were working on before you check out a different branch in the same repository.  It is possible to lose unsaved changes if you don't, although usually the desktop client is smart enough to give you some kind of warning first.
 
-The *[Shared Repository model](https://help.github.com/articles/about-collaborative-development-models/)*, is one of the two major ways that development is coordinated in a project.  
+If you switch the desktop client to another repo, it will remember what branch you were working on the next time you switch back to that repository.
+
+# The Shared Repository model
+
+The *[Shared Repository model](https://help.github.com/articles/about-collaborative-development-models/)* is one of the two major ways that development is coordinated in large projects that involve more than a few collaborators.  
 
 <img src="../images-ways/shared-repo-model.png" alt="shared repository model diagram"/>
 
-In the shared repository model, all collaborators have write access to the repo.  This model is common when teams are small, and especially when development is not open to the public.  The other model, *Fork and Pull*, is common in large, open source projects where features may be created by contributors who aren't on the core team, and therefore don't have write access to the repository.  This model will be discussed in more detail later.
+In the shared repository model, all collaborators have write access to the repo.  This model is common when teams are relatively small, and especially when development is not open to the public.  The other model, *Fork and Pull*, is common in large, open source projects where features may be created by contributors who aren't on the core team, and therefore don't have write access to the repository.  This model will be discussed in more detail later.
 
-## Deciding how to work
+## Workflow options
 
-Although Github is designed for collaboration, it can be a useful tool even if you are working on something by yourself.  It provides a way to track your editing progress by versioning and makes it possible to revert to an earlier version if you really mess something up.  It's also a way to access your work on different computers.  Things get more complicated when you are working with others because the probability of creating version conflicts is much greater.
+If you are working by yourself creating a new document, or if you are making trivial changes, you may opt to edit the **master branch** directly.  However, if you are on a team and making substantial changes, or if you are working by yourself and are concerned that the changes you are making may not work out, it's better to create a **separate branch** and work on that.  
 
-There are several ways you can work in your own repository or when collaborating in a shared repository.  If you are working by yourself creating a new document, or if you are making trivial changes, you may opt to edit the **master branch** directly.  However, if you are on a team and making substantial changes, or if you are working by yourself and are concerned that the changes you are making may not work out, it's better to create a **separate branch** and work on that.  Similarly, if changes are extensive and it will take a while to finish them, you will probably want to leave the master branch in a stable state until you've finished the changes in another branch.  You can then merge the other branch into the master branch all at once to create a new version of the master.  In any case, before you can edit an existing document, you will need to decide on a branching strategy.  When in doubt, it is usually best to work in a separate branch.
+The number of branches also can influence the probability of creating merge conflicts when edits are made to a version that isn't the most recent one. When there are few branches with many people working on them, merge conflicts are more likely.  If there are more branches with fewer people working on each one, merge conflicts of this sort are less likely to arise.  
 
-The number of branches also can influence the probability of creating merge conflicts when edits are made to a version that isn't the most recent one. When there are few branches with many people working on them, merge conflicts are more likely.  If there are more branches with fewer people working on each one, merge conflicts of this sort are less likely to arise.
+If changes are extensive and it will take a while to finish them, you will probably want to leave the master branch in a stable state until you've finished the changes in another branch.  You can then merge the other branch into the master branch all at once to create a new version of the master.  This approach is critical in a situation where the master branch is the source material for something in current operation.  For example, if the master is serving as a codebase from which an application is being built, you obviously would not want to leave it in a state where modifications are only partly finished, resulting in the application being broken.  Similarly, if a document is serving as a public record of some sort (for example documentation), you would also want to complete the entire set of modifications before releasing the new version of the document.  The point at which a coordinated set of edits are completed is called a *milestone*.  Later we'll see how milestones are formally integrated into the collaborative tools of GitHub.  
+
+## Tracking issues
+
+One way to model the workflow on a project is to associate each commit with the solution of a particular problem.  In this model, work begins by identifying each discrete problem that needs to be solved before achieving some particular milestone in the project (e.g. a release).  The GitHub web interface has a formal mechanism for tracking such problems -- its *issues tracker*.  For now we will use the issues tracker minimally, but later we will see how to integrate it more fully with the GitHub's other collaborative tools.  
+
+In looking at my alter ego Tomy the Cat's "Favorite foods" document, I can immeidately see two problems:
+
+<img src="../images-clone/document-with-problems.png" style="border:1px solid black">
+
+So I go to the issues tracker and create issues to document them.  Click on the Issues tab, then the `New issue` button.
+
+<img src="../images-clone/new-issue-button.png" style="border:1px solid black">
+
+I create a short, descriptive issue title, then describe the issue in more detail below.
+
+<img src="../images-clone/create-issue.png" style="border:1px solid black">
+
+I click the `Submit new issue` button, then create the another issue.  When I click on the `Issues` tab again, by default I see a list of the open issues.
+
+<img src="../images-clone/open-issues-list.png" style="border:1px solid black">
+
+## Fixing issues and making commits
+
+Since I know what needs to be done and have already created a working fork, I'm ready to address the issues.  I open the `favorites.md` Markdown file and start editing using my favorite text editor.  I decide to fix the sawdust problem first by deleting it from the list.  
+
+<img src="../images-clone/desktop-commit-message.png" style="border:1px solid black">
+
+After deleting the word and saving, I return to the desktop client and see that the sawdust line is in red and has a minus sign to the left, indicating that the line has been deleted since the last edit.  That completely solves the problem, so I'm ready to make a commit.  I create a brief commit message that summarizes what I've accomplished, then click the blue commit button at the bottom.  The change disappears from the `Changes` tab.
+
+<img src="../images-clone/desktop-history-tab.png" style="border:1px solid black">
+
+If I click on the `History` tab, I now see the commit in the history list.  That means that my changes have been saved in the local repository.  However, since the branch has not ever been pushed to GitHub, the changes are not in the cloud yet.  This would probably be a good time to push the changes by clicking on the `Publish branch` tab at the upper right.  Once I've done that, I can click on the `Code` tab of the GitHub web interface, then select the `steve-suggestions` branch.  If I look at the `favorites.md` document on that branch, "sawdust" will be missing.  It will still be there on the master branch.
+
+Since this commit fixes one of the issues I raised, I need to close it in the tracker.  
+
+<img src="../images-clone/comment-close-issue.png" style="border:1px solid black">
+
+I open Issue #2 and write a discriptive comment.  Then I click the `Close and comment` button.  That issue will disappear from the list of open issues in the tracker.  
+
+To close the other issue, I need to do something about all of the items being on the same line.  I decide to make it a bulleted list and edit the document accordingly.  After saving, the changes show up under the changes tab of the desktop client.
+
+<img src="../images-clone/desktop-commit-bullets.png" style="border:1px solid black">
+
+Again I write a descriptive commit message and make the commit.  Since I'm done working for now, I push the new commit to GitHub (`Push origin` tab at upper right), and close the corresponding issue in the online tracker.
+
+## Pull request and merge
+
+Since I've solved all of the problems I noticed, my changes need to be merged into the master branch.  To start that process, I need to create a *pull request* to initiate discussion about my changes.
+
+<img src="../images-clone/pull-request-button.png" style="border:1px solid black">
+
+If I click on the `Code` tab in the online repo.  I see a notification of my recently pushed branch, with an option to open a pull request.  If I don't see that notification, I can use the `Branch:` dropdown to change to my `steve-suggestions` branch, then click the `New pull request` button next to it.
+
+<img src="../images-clone/create-favorites-pull-request.png" style="border:1px solid black">
+
+The resulting page has a lot of useful information.  Importantly, there is a list of commits with their corresponding messages.  You can see why it's important to create commit messages that succinctly state what was accomplised with each commit.  Since I've edited Tomy's document, it would be appropriate for me to request that he review the pull request (see the `Reviewers` option in the upper right).  The full set of changes to the file are shown at the bottom of the page -- if I want to see what was done in each commit, I can click on the commit message in the list.  Notice that in the text of my comment, I can refer to an issue by putting its number after a hash mark.  After I click on the `Create pull request` button, Tomy will receive a notification about the review (by email if his settings allow). 
+
+<img src="../images-clone/completed-pull-request.png" style="border:1px solid black">
+
+I could merge the pull request myself, but our team has established the policy that merges should always be done by someone other than the creator of the pull request.  
 
 ## Branching and merging with pull requests
 
