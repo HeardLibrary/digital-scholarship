@@ -80,6 +80,12 @@ Commit your changes.  You'll then see the new commit in the history and as a cha
 
 Click on the `Push origin` button to push your changes from the desktop client to GitHub.
 
+## What happens next?
+
+If you are the only one doing the work and you only work on a single local computer, then it doesn't matter that much whether you pull from GitHub at the start of your next work session.  However, if someone (including you) made changes elsewhere, it is critical that you pull changes as the very first action you take the next time you begin work.  It is difficult at first to remember to do this, but it's an important habit to develop to prevent merge conflicts.  
+
+If you do encounter merge conflicts because you forgot to pull before working, or if a collaborator changed something while you were working, see [this page](../conflicts/) for information about how to resolve the conflict.
+
 [next page: branching](../branch/)
 
 ----
