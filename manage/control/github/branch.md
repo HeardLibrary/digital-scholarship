@@ -20,6 +20,28 @@ The purpose of a branch is to allow for the development of documents independent
 
 There are several possible fates of a branch.  A common fate is for a branch is for it to be merged back into the master.  This can happen when the revision is complete, or if the feature has been debugged and is ready to be deployed.  You might also decide that development of the branch is hopeless and just delete it and return to the master.  In some cases, a branch may remain as a separate entity from the master, with no intention of ever merging it (this is common when using GitHub Pages to manage a website).  
 
+## Changing the branch
+
+By dropping down the Current Repository list, you can switch to a different cloned repository. By default, the desktop client chooses the master branch of a newly cloned repo.  However, you can change from the master branch to another existing branch by dropping down the middle "Current Branch" menu at the top of the window.  GitHub desktop will remember what branch you were working on the next time you switch back to that repository.
+
+<img src="../images-clone/current-branch.png" style="border:1px solid black">
+
+When you select a branch in this dialog, you have checked out that branch.
+
+Checking out a branch literally changes the files that are present on your local computer. For example, when I selected the master branch as my current branch, here's what several directories looked like:
+
+<img src="../images-clone/master-branch-directory.png" style="border:1px solid black">
+
+You can see that the pylesson directory has a lot of files in it and the lod directory doesn't.  If I change to the "gh-pages" branch:
+
+<img src="../images-clone/change-to-gh-pages.png" style="border:1px solid black">
+
+then I'm checking out a different set of files.  Here's what the directories look like now:
+
+<img src="../images-clone/gh-pages-branch.png" style="border:1px solid black">
+
+Some files have disappeared, like the ones in the pylesson directory, and other files have appeared in the lod directory.  The content of the files themselves may also change.  So it's important before you start working on files that you are clear what branch you currently have checked out.  It is also important to make sure that you've saved the files that you were working on before you check out a different branch in the same repository.  It is possible to lose unsaved changes if you don't.
+
 ## The Shared Repository model
 
 The *[Shared Repository model](https://help.github.com/articles/about-collaborative-development-models/)*, is one of the two major ways that development is coordinated in a project.  In the shared repository model, all collaborators have write access to the repo.  This model is common when teams are small, and especially when development is not open to the public.  The other model, *Fork and Pull*, is common in large, open source projects where features may be created by contributors who aren't on the core team, and therefore don't have write access to the repository.  This model will be discussed in more detail later.
