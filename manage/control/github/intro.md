@@ -52,17 +52,19 @@ After you have created the repository (or clicked on a repository name in the re
 
 ## Commits
 
-In Git, a *branch* is a set of documents that change over time.  A *commit* is a point in the life of the repository where a set of changes to files in a branch are archived. You can imagine the situation like this:
-
 <img src="../images-intro/commits.jpg" alt="branch" width="300"/>
 
-The branch can have many changes over time as files are saved, perhaps on a local computer.  But those changes don't get archived on GitHub until a commit is made.  So you can think of a commit as a "frozen" record of the set of documents at a particular moment in time.
+In Git, a *branch* is a set of documents that change over time.  A *commit* happens at a point in the life of the repository where a set of changes to files in a branch are archived. You can imagine the situation as in the diagram above.  You can think of a commit as a "frozen" record of the set of documents at a particular moment in time.  The series of commits over time form the complete record of the lives of the files in a branch.  
+
+<img src="../images-ways/world-of-git.png" alt="github universe diagram"/>
+
+When editing a file on a local computer, creating commit is a two stage process: flagging a file to be "watched" by adding it to the staging area, then actually comitting the file to the local repository.  We will see how to do that in the next lesson.  However, using the web editing interface you can make direct commits to a branch in the online repository without any staging area being involved.  
 
 When you're editing a document in the online editor, you use the `Edit file` tab.  If you click on the `Preview changes` tab, you can see how your file has changed since the previous commit.  Text that's been removed is shown in red and new text is shown in green.  Each time you make a commit, you are required to enter a commit summary.  Optionally, you can also add more detailed comments.
 
-Although typing a commit summary is annoying, it is important because it makes it possible to get an overview of how the branch has changed over time.  That's crucial, because in the unhappy situation where you need to revert back to an earlier commit, it will be the easiest way to find where that commit is.
-
 <img src="../images-intro/make-commit.png" style="border:1px solid black">
+
+Although typing a commit summary is annoying, it is important because it makes it possible to get an overview of how the branch has changed over time.  That's crucial for two reasons. In the unhappy situation where you need to revert back to an earlier commit, it will be the easiest way to find where that commit is. The commit history also allows other collaborators to understand the series of changes you made in a branch when examining a pull request and deciding whether your branch is ready to merge with the master.
 
 Once you've made the commit, you'll see a summary of the file contents.  If you click on the `History` button, you can see the history of commits.
 
@@ -72,7 +74,7 @@ The commit history shows all of the commit summaries for commits that have affec
 
 <img src="../images-intro/commit-history.png" style="border:1px solid black">
 
-[next page: branching](../branch/)
+[next page: Cloning and the GitHub desktop client](../clone/)
 
 ----
 Revised 2019-02-18

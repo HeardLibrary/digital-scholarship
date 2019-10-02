@@ -4,7 +4,7 @@ title: Cloning and the GitHub desktop client
 breadcrumb: cloning
 ---
 
-[previous page: Introduction go GitHub](../intro/)
+[previous page: Introduction GitHub](../intro/)
 
 # Cloning a GitHub Repository to Your Local Computer
 
