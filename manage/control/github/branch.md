@@ -10,7 +10,7 @@ breadcrumb: branching
 
 ## Branches
 
-On the previous page, we defined a *branch* as a set of files that changes over time.  A repository can have several branches at the same time and each one is maintained with its own record of commits over time.  
+In the first lesson, we defined a *branch* as a set of files that changes over time.  A repository can have several branches at the same time and each one is maintained with its own record of commits over time.  
 
 The main branch of a repository is called the *master* branch.  In a very simple repository, the master branch may be the only one.  But more commonly, there are several branches that have been created by *branching* them off of the master.  ("Branch" is both a noun and a verb in Git.)  When you create a branch from the master (or some other branch), it begins with exactly the same files as its source.  It also carries the commit record of its "parent" branch as well.  
 
@@ -44,7 +44,11 @@ Some files have disappeared, like the ones in the pylesson directory, and other 
 
 ## The Shared Repository model
 
-The *[Shared Repository model](https://help.github.com/articles/about-collaborative-development-models/)*, is one of the two major ways that development is coordinated in a project.  In the shared repository model, all collaborators have write access to the repo.  This model is common when teams are small, and especially when development is not open to the public.  The other model, *Fork and Pull*, is common in large, open source projects where features may be created by contributors who aren't on the core team, and therefore don't have write access to the repository.  This model will be discussed in more detail later.
+The *[Shared Repository model](https://help.github.com/articles/about-collaborative-development-models/)*, is one of the two major ways that development is coordinated in a project.  
+
+<img src="../images-ways/shared-repo-model.png" alt="shared repository model diagram"/>
+
+In the shared repository model, all collaborators have write access to the repo.  This model is common when teams are small, and especially when development is not open to the public.  The other model, *Fork and Pull*, is common in large, open source projects where features may be created by contributors who aren't on the core team, and therefore don't have write access to the repository.  This model will be discussed in more detail later.
 
 ## Deciding how to work
 
