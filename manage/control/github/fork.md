@@ -4,7 +4,7 @@ title: Forking a repo and the Open Source model
 breadcrumb: forking
 ---
 
-[previous page: cloning](../clone/)
+[previous page: branching](../branch/)
 
 # Forking a Repo and the Open Source Model
 
@@ -70,4 +70,4 @@ In summary, the process of making pull requests to move changes into the organiz
 [next page: managing projects](../projects/)
 
 ----
-Revised 2019-02-18
+Revised 2019-10-02

@@ -20,9 +20,9 @@ The following pages provide information for developing basic skills with GitHub.
 
 [Introduction to Git and GitHub](intro/)
 
-[Branching and the Shared Repository model](branch/)
+[Cloning to your local computer and the GitHub desktop client](clone/)
 
-[Cloning a GitHub repository to your local computer](clone/)
+[Branching and the Shared Repository model](branch/)
 
 [Forking a repo and the Open Source model](fork/)
 
@@ -31,4 +31,4 @@ The following pages provide information for developing basic skills with GitHub.
 [Managing a website with GitHub Pages](pages/)
 
 ----
-Revised 2019-09-24
+Revised 2019-10-02

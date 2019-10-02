@@ -1,10 +1,10 @@
 ---
 permalink: /manage/control/github/clone/
-title: Cloning a GitHub repository to your local computer
+title: Cloning and the GitHub desktop client
 breadcrumb: cloning
 ---
 
-[previous page: branching](../branch/)
+[previous page: Introduction go GitHub](../intro/)
 
 # Cloning a GitHub Repository to Your Local Computer
 
@@ -134,7 +134,7 @@ and I can now commit the resolved file.
 
 This process is a real lifesaver because it simplifies the otherwise complicated process of reconciling and merging conflicting files.  However, it's important to note that it is not graceful and is somewhat aggressive in that it bypasses the pull request process that is designed to resolve conflicts through dialog and consensus.  That's a compelling reason to create branches followed by pull requests rather than just having several collaborators working on the same file in the master branch.
 
-[next page: forking](../fork/)
+[next page: branching](../branch/)
 
 ----
-Revised 2019-02-19
+Revised 2019-10-02

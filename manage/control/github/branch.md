@@ -4,7 +4,7 @@ title: Branching and the Shared Repository model
 breadcrumb: branching
 ---
 
-[previous page: introduction to GitHub](../intro/)
+[previous page: Cloning and the GitHub desktop client](../clone/)
 
 # Branching and the Shared Repository Model
 
@@ -83,7 +83,7 @@ This merges the modified, unconflicted branch into the patch branch.  You'll the
 In this example, the conflict arose because I had made edits directly to the master branch.  However, if a team is working on several working branches, it's possible that merging one of the branches into the master will generate a conflict later on when another working branch is ready to be merged.  Although these sorts of conflicts are nearly impossible to avoid altogether, they can be minimized if the features that are being worked on in one branch primarily involve different sets of files than features being developed in a different branch.
 
 
-[next page: cloning](../clone/)
+[next page: forking](../fork/)
 
 ----
-Revised 2019-02-18
+Revised 2019-10-02
