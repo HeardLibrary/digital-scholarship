@@ -88,41 +88,41 @@ One way to model the workflow on a project is to associate each commit with the 
 
 In looking at my alter ego Tomy the Cat's "Favorite foods" document, I can immeidately see two problems:
 
-<img src="../images-clone/document-with-problems.png" style="border:1px solid black">
+<img src="../images-branch/document-with-problems.png" style="border:1px solid black">
 
 So I go to the issues tracker and create issues to document them.  Click on the Issues tab, then the `New issue` button.
 
-<img src="../images-clone/new-issue-button.png" style="border:1px solid black">
+<img src="../images-branch/new-issue-button.png" style="border:1px solid black">
 
 I create a short, descriptive issue title, then describe the issue in more detail below.
 
-<img src="../images-clone/create-issue.png" style="border:1px solid black">
+<img src="../images-branch/create-issue.png" style="border:1px solid black">
 
 I click the `Submit new issue` button, then create the another issue.  When I click on the `Issues` tab again, by default I see a list of the open issues.
 
-<img src="../images-clone/open-issues-list.png" style="border:1px solid black">
+<img src="../images-branch/open-issues-list.png" style="border:1px solid black">
 
 ## Fixing issues and making commits
 
 Since I know what needs to be done and have already created a working fork, I'm ready to address the issues.  I open the `favorites.md` Markdown file and start editing using my favorite text editor.  I decide to fix the sawdust problem first by deleting it from the list.  
 
-<img src="../images-clone/desktop-commit-message.png" style="border:1px solid black">
+<img src="../images-branch/desktop-commit-message.png" style="border:1px solid black">
 
 After deleting the word and saving, I return to the desktop client and see that the sawdust line is in red and has a minus sign to the left, indicating that the line has been deleted since the last edit.  That completely solves the problem, so I'm ready to make a commit.  I create a brief commit message that summarizes what I've accomplished, then click the blue commit button at the bottom.  The change disappears from the `Changes` tab.
 
-<img src="../images-clone/desktop-history-tab.png" style="border:1px solid black">
+<img src="../images-branch/desktop-history-tab.png" style="border:1px solid black">
 
 If I click on the `History` tab, I now see the commit in the history list.  That means that my changes have been saved in the local repository.  However, since the branch has not ever been pushed to GitHub, the changes are not in the cloud yet.  This would probably be a good time to push the changes by clicking on the `Publish branch` tab at the upper right.  Once I've done that, I can click on the `Code` tab of the GitHub web interface, then select the `steve-suggestions` branch.  If I look at the `favorites.md` document on that branch, "sawdust" will be missing.  It will still be there on the master branch.
 
 Since this commit fixes one of the issues I raised, I need to close it in the tracker.  
 
-<img src="../images-clone/comment-close-issue.png" style="border:1px solid black">
+<img src="../images-branch/comment-close-issue.png" style="border:1px solid black">
 
 I open Issue #2 and write a discriptive comment.  Then I click the `Close and comment` button.  That issue will disappear from the list of open issues in the tracker.  
 
 To close the other issue, I need to do something about all of the items being on the same line.  I decide to make it a bulleted list and edit the document accordingly.  After saving, the changes show up under the changes tab of the desktop client.
 
-<img src="../images-clone/desktop-commit-bullets.png" style="border:1px solid black">
+<img src="../images-branch/desktop-commit-bullets.png" style="border:1px solid black">
 
 Again I write a descriptive commit message and make the commit.  Since I'm done working for now, I push the new commit to GitHub (`Push origin` tab at upper right), and close the corresponding issue in the online tracker.
 
@@ -130,15 +130,15 @@ Again I write a descriptive commit message and make the commit.  Since I'm done 
 
 Since I've solved all of the problems I noticed, my changes need to be merged into the master branch.  To start that process, I need to create a *pull request* to initiate discussion about my changes.
 
-<img src="../images-clone/pull-request-button.png" style="border:1px solid black">
+<img src="../images-branch/pull-request-button.png" style="border:1px solid black">
 
 If I click on the `Code` tab in the online repo.  I see a notification of my recently pushed branch, with an option to open a pull request.  If I don't see that notification, I can use the `Branch:` dropdown to change to my `steve-suggestions` branch, then click the `New pull request` button next to it.
 
-<img src="../images-clone/create-favorites-pull-request.png" style="border:1px solid black">
+<img src="../images-branch/create-favorites-pull-request.png" style="border:1px solid black">
 
 The resulting page has a lot of useful information.  Importantly, there is a list of commits with their corresponding messages.  You can see why it's important to create commit messages that succinctly state what was accomplised with each commit.  Since I've edited Tomy's document, it would be appropriate for me to request that he review the pull request (see the `Reviewers` option in the upper right).  The full set of changes to the file are shown at the bottom of the page -- if I want to see what was done in each commit, I can click on the commit message in the list.  Notice that in the text of my comment, I can refer to an issue by putting its number after a hash mark.  After I click on the `Create pull request` button, Tomy will receive a notification about the review (by email if his settings allow). 
 
-<img src="../images-clone/completed-pull-request.png" style="border:1px solid black">
+<img src="../images-branch/completed-pull-request.png" style="border:1px solid black">
 
 I could merge the pull request myself, but our team has established the policy that merges should always be done by someone other than the creator of the pull request.  
 
