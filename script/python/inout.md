@@ -378,10 +378,10 @@ The following script contains a reusable function called `writeCsv()`.  The firs
 ```python
 import csv
 
-def writeCsv(fileName, arrqy):
+def writeCsv(fileName, array):
     fileObject = open(fileName, 'w', newline='', encoding='utf-8')
     writerObject = csv.writer(fileObject)
-    for row in arrqy:
+    for row in array:
         writerObject.writerow(row)
     fileObject.close()
 
