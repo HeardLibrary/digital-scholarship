@@ -249,7 +249,7 @@ for row in readerObject:
 fileObject.close()
 ```
 
-Note that when using the CSV reader, you don't need to specify text (`t`) in the second parameter.  The [CSV Reader doc](https://docs.python.org/3/library/csv.html) also says that the file object should be opened with `newline=`. (This is related to how Python 3 handles the difference in newline characters in different operating systems.  See [this](https://docs.python.org/release/3.2/library/functions.html#open) for details.)
+Note that when using the CSV reader, you don't need to specify text (`t`) in the second parameter.  The [CSV Reader doc](https://docs.python.org/3/library/csv.html) also says that the file object should be opened with `newline=''`. (This is related to how Python 3 handles the difference in newline characters in different operating systems.  See [this](https://docs.python.org/release/3.2/library/functions.html#open) for details.)
 
 The output shows that the reader object itself isn't a thing that can be printed, but each of the rows we've iterated through in the reader object is just a familiar list.  So we can access and use them as we would use any other list.
 
@@ -315,7 +315,9 @@ studentInfoHeader = readCsv('students.csv', True)
 print(studentInfoHeader)
 ```
 
-Here's an example of how we can use some data from the web.  Go to [this page](https://github.com/jasonong/List-of-US-States/blob/master/states.csv), then right-click on the Raw button and select Save link as... Save the file in the directory from which you've been running your scripts.  In a new Python script, include the `import csv` line and the `readCsv()` function, followed by this code:
+Here's an example of how we can use some data from the web.  Go to [this page](https://github.com/jasonong/List-of-US-States/blob/master/states.csv), then right-click on the Raw button and select Save link as... Save the file in the directory from which you've been running your scripts.  **Note:** in some situations your browser will change the file extension from `.csv` to `.txt`. (Technical reason: GitHub reports a Content-Type of text/plain for every raw file, regardless of extension.)  So check after downloading to make sure the file actually has a `.csv` extension.  If not, change it from `.txt` to `.csv` before proceeding.
+
+In a new Python script, include the `import csv` line and the `readCsv()` function, followed by this code:
 
 ```python
 states = readCsv('states.csv', False)
