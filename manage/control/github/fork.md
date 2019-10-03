@@ -74,5 +74,9 @@ In summary, the process of making pull requests to move changes into the organiz
 
 [next page: GitHub Pages websites](../pages/)
 
+FYI, this is the forking page...
+
+<iframe src="https://giphy.com/embed/l3mZhWr9Eltm4c4xi" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/thegoodplace-season-1-episode-5-l3mZhWr9Eltm4c4xi">via GIPHY</a></p>
+
 ----
 Revised 2019-10-03
