@@ -10,6 +10,8 @@ Note: this is the sixth lesson in a beginner's introduction to Python.  For the 
 
 If you are interested in using Jupyter notebooks, the examples are available in [this notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/inout.ipynb).
 
+The presentation for this lesson is [here](presentations/lesson6-files.pdf)
+
 Answers for last week's challenge problem:
 
 [Look up data about schools from Wikidata](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge5/vandy-schools.py)
