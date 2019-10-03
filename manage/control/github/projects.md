@@ -20,7 +20,7 @@ Anyone can create an organization for free.  However, at this point in time, the
 
 Once you've set up the organization, you can add members, change their status (owner, member, outside collaborator), grant administrative privileges to repos, and establish teams. The ownership of the repository can be granted to other members in the event that the person who created the organization leaves it.  
 
-In a personal account, other users can be granted push access as collaborators, but personal accounts can't have teams.  An advantage of teams is that they can be @mention'ed as a team rather than individuals, and team members can have conversations that aren't limited to an issue, pull request, project, or repository.  Teams also are a way to control levels of access to particular repositories.  Members of the organization can request to join teams, and their requests can be approved by a team owner or maintainer.  So teams may be a good option for large projects if they are open, or part of a paid account.
+In a personal account, other users can be granted push access as collaborators, but personal accounts can't have teams.  An advantage of teams is that they can be notified (@mention'ed) as a team rather than individuals, and team members can have conversations that aren't limited to an issue, pull request, project, or repository.  Teams also are a way to control levels of access to particular repositories.  Members of the organization can request to join teams, and their requests can be approved by a team owner or maintainer.  So teams may be a good option for large projects if they are open, or part of a paid account.
 
 ## Tools for tracking progress
 
@@ -34,7 +34,9 @@ To create a new issue within a particular repo, click the issues tab.  You'll se
 
 <img src="../images-projects/issues-list.png" style="border:1px solid black">
 
-Enter a title for the issue and write text explaining the issue in the box.  You  can use the @mention system to make sure that relevant people are informed about the issue.  If you want to assign the issue to some particular team member, clicking on the Assignees item will give a dropdown list of collaborators.  
+Enter a title for the issue and write text explaining the issue in the box.  You  can use the *@mention system* to make sure that relevant people are informed about the issue.  In a comment on an issue or pull request, if you type the `@` symbol followed immediately by a user or team's GitHub username, a notification will be generated addressed to that user.  If the user has enabled email notifications, he or she will get an email containing the text of the comment and a link that will jump the user directly to the comment or pull request page.  
+
+If you want to assign the issue to some particular team member, clicking on the Assignees item will give a dropdown list of collaborators.  
 
 It's also a good thing to assign a *label* to the project.  Labels are like tags in other systems.  Assigning a label categorizes the issues so they can be searched.  It's also a very visual way to know the status and category of an issue and shows up in the issues list.
 
@@ -94,7 +96,11 @@ Using the issue tracker in this way makes it possible for project participants w
 
 It is also extremely easy for anyone who is annoyed with the amount of message traffic to simply unfollow the repository temporarily or permanently.
 
-# Milestones
+# A model of issues and milestones
+
+When GitHub is used to manage a project, there is a conceptual connnection between milestones (such as a new release of a codebase or document) and merges (preceded by pull requests) that move changes from a development branch to the master.  Similarly, there can be a conceptual connection between issues that have to be resolved to reach the milestone and commits that represent concrete steps taken to resolve each issue.
+
+## Milestones
 
 Milestones are a way to track the progress towards a goal.  They are composed of a set of issues or pull requests that must be completed before a goal is complete.  To see milestones or create a new one, click the Milestones tab on either the issues or pull requests page.  If you have any existing milestones, you'll see them listed with an indication of the progress towards completing them.  Progress is measured by the fraction of issues or pull requests that have been closed.
 

@@ -72,7 +72,7 @@ The *[Shared Repository model](https://help.github.com/articles/about-collaborat
 
 <img src="../images-ways/shared-repo-model.png" alt="shared repository model diagram"/>
 
-In the shared repository model, all collaborators have write access to the repo.  This model is common when teams are relatively small, and especially when development is not open to the public.  The other model, *Fork and Pull*, is common in large, open source projects where features may be created by contributors who aren't on the core team, and therefore don't have write access to the repository.  This model will be discussed in more detail later.
+In the shared repository model, all collaborators have write access to the repo.  This model is common when teams are relatively small, and especially when development is not open to the public.  The other model, [*Fork and Pull*](../fork/), is common in large, open source projects where features may be created by contributors who aren't on the core team, and therefore don't have write access to the repository.  This model will be discussed in more detail later.
 
 ## Workflow options
 
