@@ -126,7 +126,7 @@ To close the other issue, I need to do something about all of the items being on
 
 Again I write a descriptive commit message and make the commit.  Since I'm done working for now, I push the new commit to GitHub (`Push origin` tab at upper right), and close the corresponding issue in the online tracker.
 
-## Pull request and merge
+## Creating a pull request
 
 Since I've solved all of the problems I noticed, my changes need to be merged into the master branch.  To start that process, I need to create a *pull request* to initiate discussion about my changes.
 
@@ -141,6 +141,42 @@ The resulting page has a lot of useful information.  Importantly, there is a lis
 <img src="../images-branch/completed-pull-request.png" style="border:1px solid black">
 
 I could merge the pull request myself, but our team has established the policy that merges should always be done by someone other than the creator of the pull request.  
+
+## Review and merge
+
+Since my collaborator has his notifications settings set to receive notification emails, he receives two emails.  One notifies him that he has been requested to review and the other is a general summary notification of the pull request:
+
+<img src="../images-branch/pull-request-email2.png" style="border:1px solid black">
+
+When he clicks on the link in his email to go to the pull request, he sees the review request:
+
+<img src="../images-branch/pull-request-button.png" style="border:1px solid black">
+
+After he clicks the `Add your review` button, he's taken to the review screen where he writes his review and indicates his approval.
+
+<img src="../images-branch/review-screen.png" style="border:1px solid black">
+
+This generates a notification to me that he's reviewed the request and agrees.  After submitting his review, he's taken back to the pull request screen where his review has been added to the history of the request.  
+
+<img src="../images-branch/ready-to-merge.png" style="border:1px solid black">
+
+If he'd disallowed the merge, he could have closed the pull request without merging.  But instead he clicks the `Merge pull request` button. Confirmation is requested, and after confirming, the `steve-suggestion` branch is merged into the master branch.
+
+<img src="../images-branch/merge-success.png" style="border:1px solid black">
+
+The commits that were made in the `steve-suggestion` branch are now part of the master branch and will appear in its history.  The working branch is no longer needed and can be deleted from the online GitHub repo by clicking the `Delete branch` button.  However, this does NOT delete the branch from any local repositories on the desktop computer.  To delete the unneeded repo from it, go to the `Branch` menu on the desktop client and select `Delete...`.  
+
+<img src="../images-branch/delete-branch-desktop.png" style="border:1px solid black">
+
+If you hadn't already deleted the branch on GitHub, you could check the box to delete it at the same time. After deleting, the desktop client will automatically switch back to the master branch.  Checking the history tab, we see the commits from the working branch now incorporated into the history of the master.
+
+<img src="../images-branch/master-history-desktop.png" style="border:1px solid black">
+
+Here's how the finished product looks:
+
+<img src="../images-branch/final-doc.png" style="border:1px solid black">
+
+Notice that both of us are now shown as contributors to the doc.
 
 ## Branching and merging with pull requests
 
@@ -196,4 +232,4 @@ In this example, the conflict arose because I had made edits directly to the mas
 [next page: forking](../fork/)
 
 ----
-Revised 2019-10-02
+Revised 2019-10-03
