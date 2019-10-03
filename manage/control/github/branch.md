@@ -182,7 +182,7 @@ Notice that both of us are now shown as contributors to the doc.
 
 Usually, one would develop a document using a working branch on a local computer and manage commits using the desktop client.  However, it's possible to make minor edits using the online editor through a *patch branch*.  The process is similar to what was described above - to see details, go to [this page](../patch/).  That page also shows how to resolve a merge conflict using the online editor.  
 
-[next page: forking](../fork/)
+[next page: managing projects](../projects/)
 
 ----
 Revised 2019-10-03

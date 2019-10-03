@@ -4,7 +4,7 @@ title: Managing projects with GitHub
 breadcrumb: Manage Projects
 ---
 
-[previous page: forking](../fork/)
+[previous page: branching and the shared repository model](../branch/)
 
 # Managing Projects with GitHub
 
@@ -132,8 +132,7 @@ Cards can also be manually moved from one column to another and additional colum
 
 An additional feature that we won't discuss today is reviews.  One can request a review of a pull request.  A reviewer can make comments, approve a merge, and request changes. A repository can also be set up with rules about the conditions under which a branch can be merged, including a requirement for approval of a reviewer before the pull request can be merged. This can provide extra protection for master branches that serve a critical purposes, such as providing the code for a website.
 
-
-[next page: GitHub Pages websites](../pages/)
+[next page: forking and the Open Source model](../fork/)
 
 ----
-Revised 2019-02-19
+Revised 2019-10-03

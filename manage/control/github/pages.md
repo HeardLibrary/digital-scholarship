@@ -4,7 +4,7 @@ title: Managing a website with GitHub Pages
 breadcrumb: Pages websites
 ---
 
-[previous page: managing projects](../projects/)
+[previous page: forking and the Open Source model](../fork/)
 
 # Managing a website with GitHub Pages
 
@@ -17,4 +17,4 @@ bundle exec jekyll serve --watch --incremental
 ```
 
 ----
-Revised 2019-09-17
+Revised 2019-10-03

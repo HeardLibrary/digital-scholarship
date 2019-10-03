@@ -86,7 +86,7 @@ If you are the only one doing the work and you only work on a single local compu
 
 If you do encounter merge conflicts because you forgot to pull before working, or if a collaborator changed something while you were working, see [this page](../conflicts/) for information about how to resolve the conflict.
 
-[next page: branching](../branch/)
+[next page: branching and the shared repository model](../branch/)
 
 ----
-Revised 2019-10-02
+Revised 2019-10-03

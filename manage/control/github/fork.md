@@ -4,7 +4,7 @@ title: Forking a repo and the Open Source model
 breadcrumb: forking
 ---
 
-[previous page: branching](../branch/)
+[previous page: managing projects](../projects/)
 
 # Forking a Repo and the Open Source Model
 
@@ -66,8 +66,7 @@ Note that deleting the fork will have no effect on the original repository.  Cau
 
 In summary, the process of making pull requests to move changes into the organizational repository from a forked repository is very similar to pulling in changes from a fork within the same repository.  The main difference is that there are more options for selecting the repository and forks to be used both at the head and base of the merge.
 
-
-[next page: managing projects](../projects/)
+[next page: GitHub Pages websites](../pages/)
 
 ----
-Revised 2019-10-02
+Revised 2019-10-03
