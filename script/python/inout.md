@@ -8,6 +8,8 @@ Note: this is the sixth lesson in a beginner's introduction to Python.  For the 
 
 [prevous lesson on dictionaries and JSON](../json/)
 
+If you are interested in using Jupyter notebooks, the examples are available in [this notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/inout.ipynb).
+
 Answers for last week's challenge problem:
 
 [Look up data about schools from Wikidata](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge5/vandy-schools.py)
@@ -606,4 +608,4 @@ I put in an empty print statement to separate output from multiple school hits.
 
 [next lesson on data from the Internet](../internet/)
 
-Revised 2019-04-12
+Revised 2019-10-02
