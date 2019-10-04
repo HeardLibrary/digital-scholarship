@@ -98,11 +98,38 @@ It is also extremely easy for anyone who is annoyed with the amount of message t
 
 # A model of issues and milestones
 
-When GitHub is used to manage a project, there is a conceptual connnection between milestones (such as a new release of a codebase or document) and merges (preceded by pull requests) that move changes from a development branch to the master.  Similarly, there can be a conceptual connection between issues that have to be resolved to reach the milestone and commits that represent concrete steps taken to resolve each issue.
+When GitHub is used to manage a project, there is a conceptual connnection between milestones (such as a new release of a codebase or document) and merges (preceded by pull requests) that move changes from a development branch to the master.  Similarly, there can be a conceptual connection between issues that have to be resolved to reach the milestone and commits that represent concrete steps taken to resolve each issue. 
 
-## Milestones
+These connections can be illustrated with an editing example.  In this example, recommendations for how to use a metadata term are outdated and unclear and need revision ([see original text](https://github.com/baskaufs/demo/blob/78016a3f063b03525891a6ef28a5ddafb4af7b70/dcterms-type.md)). A review of the text identified a number of problems and an issue were created for each problem.  The issues were grouped under a milestone that represented completing the necessary revisions.
 
-Milestones are a way to track the progress towards a goal.  They are composed of a set of issues or pull requests that must be completed before a goal is complete.  To see milestones or create a new one, click the Milestones tab on either the issues or pull requests page.  If you have any existing milestones, you'll see them listed with an indication of the progress towards completing them.  Progress is measured by the fraction of issues or pull requests that have been closed.
+<img src="../images-projects/milestone.png" style="border:1px solid black">
+
+Each time an issue was resolved, a corresponding commit was made for the edits necessary to fix the problem.
+
+| Planning | Action |
+| --- | --- |
+| Issue: Dublin Core wiki doesn't exist any more, so URL is broken | Commit: Changed bad DCMI wiki URL to Internet Archive URL |
+| Issue: Recommendation for text as image is in both Usage and Notes | Commit: Removed redundant text recommendation from notes :
+| Issue: Unclosed left parenthesis makes text unclear | Commit: Removed orphaned text with left parenthesis |
+| Milestone: Fix term metadata for dcterms:type | Pull request: Edits to dcterms:type |
+
+As the issues were closed, they disappeared from the list of open issues in the milestone and the "fraction completed" bar for the milestone moved closer to the right side of the screen.
+
+<img src="../images-projects/half-complete-milestone.png" style="border:1px solid black">
+
+After all of the issues were closed, a pull request was created for the branch in which the edits were being made.
+
+<img src="../images-projects/pull-request.png" style="border:1px solid black">
+
+During the discussion of the pull request, the clear commit messages for each commit in the working branch makes it easy to review all of the changes that were included in the revision.  Clicking on any commit takes the reviewer to a summary of the changes made in that commit and the *rich diff* viewer makes it very easy for a reviwer to see what the changes were.
+
+<img src="../images-projects/rich-diff.png" style="border:1px solid black">
+
+Having a clear description of the sequence of changes made on the branch allows a team member who was not involved in making the revisions to assess whether the changes should be merged or if further work needs to be done. (View the [final revised text](https://github.com/baskaufs/demo/blob/master/dcterms-type.md).)
+
+## Woring with milestones
+
+To see milestones or create a new one, click the Milestones tab on either the issues or pull requests page.  If you have any existing milestones, you'll see them listed with an indication of the progress towards completing them.  Progress is measured by the fraction of issues or pull requests that have been closed.
 
 <img src="../images-projects/milestone-menu.png" style="border:1px solid black">
 
