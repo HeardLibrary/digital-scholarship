@@ -100,7 +100,7 @@ It is also extremely easy for anyone who is annoyed with the amount of message t
 
 When GitHub is used to manage a project, there is a conceptual connnection between milestones (such as a new release of a codebase or document) and merges (preceded by pull requests) that move changes from a development branch to the master.  Similarly, there can be a conceptual connection between issues that have to be resolved to reach the milestone and commits that represent concrete steps taken to resolve each issue. 
 
-These connections can be illustrated with an editing example.  In this example, recommendations for how to use a metadata term are outdated and unclear and need revision ([see original text](https://github.com/baskaufs/demo/blob/78016a3f063b03525891a6ef28a5ddafb4af7b70/dcterms-type.md)). A review of the text identified a number of problems and an issue were created for each problem.  The issues were grouped under a milestone that represented completing the necessary revisions.
+These connections can be illustrated with an editing example.  In this example, recommendations for how to use a metadata term were outdated, unclear, and need revision ([see original text](https://github.com/baskaufs/demo/blob/78016a3f063b03525891a6ef28a5ddafb4af7b70/dcterms-type.md)). A review of the text identified a number of problems and an issue were created for each problem.  The issues were grouped under a milestone that represented completing the necessary revisions.
 
 <img src="../images-projects/milestone.png" style="border:1px solid black">
 
@@ -109,11 +109,11 @@ Each time an issue was resolved, a corresponding commit was made for the edits n
 | Planning | Action |
 | --- | --- |
 | Issue: Dublin Core wiki doesn't exist any more, so URL is broken | Commit: Changed bad DCMI wiki URL to Internet Archive URL |
-| Issue: Recommendation for text as image is in both Usage and Notes | Commit: Removed redundant text recommendation from notes :
+| Issue: Recommendation for text as image is in both Usage and Notes | Commit: Removed redundant text recommendation from notes |
 | Issue: Unclosed left parenthesis makes text unclear | Commit: Removed orphaned text with left parenthesis |
 | Milestone: Fix term metadata for dcterms:type | Pull request: Edits to dcterms:type |
 
-As the issues were closed, they disappeared from the list of open issues in the milestone and the "fraction completed" bar for the milestone moved closer to the right side of the screen.
+As the issues were closed, they disappeared from the list of open issues in the milestone and the "fraction completed" bar for the milestone moved closer to the right side of the screen. When additional problems were discovered, they were added to the partially completed milestone.
 
 <img src="../images-projects/half-complete-milestone.png" style="border:1px solid black">
 
@@ -121,7 +121,7 @@ After all of the issues were closed, a pull request was created for the branch i
 
 <img src="../images-projects/pull-request.png" style="border:1px solid black">
 
-During the discussion of the pull request, the clear commit messages for each commit in the working branch makes it easy to review all of the changes that were included in the revision.  Clicking on any commit takes the reviewer to a summary of the changes made in that commit and the *rich diff* viewer makes it very easy for a reviwer to see what the changes were.
+During discussion of the pull request, the clear commit messages for each commit in the working branch makes it easy to review all of the changes that were included in the revision.  Clicking on any commit takes the reviewer to a summary of the changes made in that commit and the *rich diff* viewer makes it very easy for a reviwer to see what the changes were.
 
 <img src="../images-projects/rich-diff.png" style="border:1px solid black">
 
@@ -137,7 +137,7 @@ If you have created a new milestone, or want to add to an existing one, open the
 
 <img src="../images-projects/add-to-milestone.png" style="border:1px solid black">
 
-On the milestone summary page (reached from the Milestone tab on the issues or pull request page), there is all kinds of information about the issues in the milestone.  If you click and drag the left side of a selected issue, you can order the issues.  As issues are resolved, they disappear from the open list and the progress goes towards 100%.  Closed issues can still be viewed from the Closed tab. Clicking on an issue or pull request in the list will take you to its page. If a new issue is created from the milestone page, it will automatically be associated with that milestone.
+On the milestone summary page (reached from the Milestone tab on the issues or pull request page), there are all kinds of information about the issues in the milestone.  If you click and drag the left side of a selected issue, you can order the issues.  As issues are resolved, they disappear from the open list and the progress goes towards 100%.  Closed issues can still be viewed from the Closed tab. Clicking on an issue or pull request in the list will take you to its page. If a new issue is created from the milestone page, it will automatically be associated with that milestone.
 
 <img src="../images-projects/milestone-summary.png" style="border:1px solid black">
 
@@ -168,4 +168,4 @@ An additional feature that we won't discuss today is reviews.  One can request a
 [next page: forking and the Open Source model](../fork/)
 
 ----
-Revised 2019-10-03
+Revised 2019-10-04
