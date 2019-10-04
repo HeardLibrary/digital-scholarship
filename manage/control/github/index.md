@@ -26,11 +26,11 @@ The following pages provide information for developing basic skills with GitHub.
 
 [Branching and the Shared Repository model](branch/)
 
-[Forking a repo and the Open Source model](fork/)
-
 [Using GitHub to manage projects](projects/)
+
+[Forking a repo and the Open Source model](fork/)
 
 [Managing a website with GitHub Pages](pages/)
 
 ----
-Revised 2019-10-02
+Revised 2019-10-04
