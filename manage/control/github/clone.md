@@ -38,7 +38,7 @@ After you've finished the cloning process, in the left column of the client, you
 
 <img src="../images-clone/desktop-changed-files.png" style="border:1px solid black">
 
-**Command line comparison** 
+**Command line comparison**  Remember that you can skip this section if you don't care about the command line.
 
 The comparable procedure on the command line requires acquiring the URL to the GitHub repository.
 
