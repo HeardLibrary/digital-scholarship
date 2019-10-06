@@ -72,7 +72,7 @@ Another important use of GitHub is its *collaborative tools* such as its *issues
 
 # Command line Git
 
-**Note:** This is a technical topic. You can skip it if you aren't interested and will have no problems in subsequent lessons.  In future lessons, some sections of text will be marked **Command line**.  These sections will only be of interest to technical users and may also be safely skipped if you only want the general introduction.
+**Note:** This is a technical topic. You can skip it if you aren't interested and will have no problems in subsequent lessons.  In future lessons, some sections of text will be marked **Command line comparison**.  These sections will only be of interest to technical users and may also be safely skipped if you only want the general introduction.
 
 You may already have experience using command line Git or be interested in learning it.  If so, you may be wondering how command line Git relates to the GitHub desktop client that we will be using exclusively in these lessons.  
 

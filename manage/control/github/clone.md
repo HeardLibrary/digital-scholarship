@@ -38,6 +38,29 @@ After you've finished the cloning process, in the left column of the client, you
 
 <img src="../images-clone/desktop-changed-files.png" style="border:1px solid black">
 
+**Command line comparison** 
+
+The comparable procedure on the command line requires acquiring the URL to the GitHub repository.
+
+<img src="../images-clone/clone-url.png" style="border:1px solid black">
+
+After clicking the `Clone or download` button, copy the `https://` URL by clicking on the clipboard icon.  In the console, navigate to the directory that you want to be the parent directory of the directory for the local repository.  Type `git clone` followed by the URL you copied, then press `Enter`.  In the example above:
+
+```
+git clone https://github.com/baskaufs/junk.git
+```
+
+As a result, the subdirectory will be created along with the hidden `.git` directory and any files and directories that were in the cloned repository (in this example, only the `README.md` document).  Here's how it looks on a Windows system:
+
+<img src="../images-clone/command-line-clone.png" style="border:1px solid black">
+
+To see the commit history of the newly cloned repository, from within the repository's local directory, enter
+
+```
+git log
+```
+
+
 # Simple models for using GitHub
 
 The simplest way to use GitHub is simply as a way to archive the history of your own work on files in a project.
