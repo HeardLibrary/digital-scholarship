@@ -70,7 +70,21 @@ There are at least two other uses of GitHub.  One is to use the free website-bui
 
 Another important use of GitHub is its *collaborative tools* such as its *issues tracker*, *milestones*, and *project boards*.  These features allow users to track progress on a project in a manner similar to the commercial product [Trello](https://trello.com/).  Typically, the GitHub tools are used in conjunction with managing documents by one of the collaborative models described above.  However, the collaborative tools can also be used alone without any pushing or pulling of documents from a local computer.
 
+# Command line Git
+
+**Note:** This is a technical topic. You can skip it if you aren't interested and will have no problems in subsequent lessons.  In future lessons, some sections of text will be marked **Command line**.  These sections will only be of interest to technical users and may also be safely skipped if you only want the general introduction.
+
+You may already have experience using command line Git or be interested in learning it.  If so, you may be wondering how command line Git relates to the GitHub desktop client that we will be using exclusively in these lessons.  
+
+Both command line Git and the GitHub desktop client use a special hidden directory called `.git` to manage the repository housed in a particular directory in the local filesystem.  (If you have changed your system settings to make hidden directories visible, you can see this directory in each folder that is being managed by Git -- but don't edit or delete any of the files in it!) Since both the command line and desktop clients use the same protocol and files to track changes, in theory you could go back and forth between them when managing a particular repository.  However, experimentation has shown some differences between the two systems in treatment of files added for staging.  So it's probably better to stick with one system or the other, at least during a particular editing session.  
+
+Command line Git has many features and options that aren't present in the desktop client.  Command line Git is also the only way to correct some complicated problems that can arise.  So advanced users will probably eventually need to learn to use Git from the command line.  
+
+<img src="../images-ways/carpentries-vs-this.png" alt="comparison with Carpentries lessons"/>
+
+The [Software Carpentries lesson on Git](http://swcarpentry.github.io/git-novice/) is a good place to start learning about command line Git.  However, be aware that its lessons are very focused on examining and controlling what is going on within the repository on a single user's local drive, while these lessons are much more concerned with the interactions between the local repositories of multiple users and GitHub in the cloud. In our lessons, we will start by creating a repository on GitHub, then cloning it to your local drive.  In the Carpentries lessons, they begin by creating and working with a repository on the local drive and only get into interacting with GitHub after six lessons.  
+
 [next page: Introduction to GitHub](../intro/)
 
 ----
-Revised 2019-10-01
+Revised 2019-10-06
