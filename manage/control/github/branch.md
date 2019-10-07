@@ -40,6 +40,21 @@ Then I click on the Create Branch button.  The desktop client automatically chec
 
 Note that at this point the branch only exists on my local copy of the repository. If I want, I can click `Publish branch` and the new branch will be created in GitHub.  Alternatively, I can edit and make commits before pushing the branch.  
 
+**Command line comparison** 
+
+To create a new branch called `newbranchname`, enter
+
+```
+git branch newbranchname
+```
+
+To switch to the newly created branch, enter
+
+```
+git checkout newbranchname
+```
+
+
 ## Changing to a preexisting branch
 
 By default, the desktop client checks out the master branch of a newly cloned repo.  However, if that repo has more than one branch, you can change from the master branch to another branch by dropping down the middle "Current Branch" menu at the top of the window.  
@@ -66,6 +81,15 @@ So it's important before you start working on files that you are clear what bran
 
 If you switch the desktop client to another repo, it will remember what branch you were working on the next time you switch back to that repository.
 
+**Command line comparison** 
+
+Switching to a preexisting branch uses the same command as above:
+
+```
+git checkout existingbranchname
+```
+
+
 # The Shared Repository model
 
 The *[Shared Repository model](https://help.github.com/articles/about-collaborative-development-models/)* is one of the two major ways that development is coordinated in large projects that involve more than a few collaborators.  
@@ -86,7 +110,7 @@ If changes are extensive and it will take a while to finish them, you will proba
 
 One way to model the workflow on a project is to associate each commit with the solution of a particular problem.  In this model, work begins by identifying each discrete problem that needs to be solved before achieving some particular milestone in the project (e.g. a release).  The GitHub web interface has a formal mechanism for tracking such problems -- its *issues tracker*.  For now we will use the issues tracker minimally, but later we will see how to integrate it more fully with the GitHub's other collaborative tools.  
 
-In looking at my alter ego Tomy the Cat's "Favorite foods" document, I can immeidately see two problems:
+In looking at my alter ego Tomy the Cat's "Favorite foods" document, I can immediately see two problems:
 
 <img src="../images-branch/document-with-problems.png" style="border:1px solid black">
 
