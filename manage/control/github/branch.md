@@ -209,4 +209,4 @@ Usually, one would develop a document using a working branch on a local computer
 [next page: managing projects](../projects/)
 
 ----
-Revised 2019-10-03
+Revised 2019-10-07

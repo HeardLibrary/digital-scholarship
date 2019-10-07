@@ -8,7 +8,7 @@ breadcrumb: Manage Projects
 
 # Managing Projects with GitHub
 
-In addition to the tools that allow GitHub to carry out its core functions (commits, forking, branching, pull requests), GitHub has a number of other tools that make it possible for organizations to plan and track the work that they are doing on document-based projects. On this page we'll introduce several important ones.
+In addition to the tools that allow GitHub to carry out its core functions (commits, branching, pull requests, forking), GitHub has a number of other tools that make it possible for organizations to plan and track the work that they are doing on document-based projects. On this page we'll introduce several important ones.
 
 ## Collaboration infrastructure: organizations and teams
 
@@ -20,7 +20,7 @@ Anyone can create an organization for free.  However, at this point in time, the
 
 Once you've set up the organization, you can add members, change their status (owner, member, outside collaborator), grant administrative privileges to repos, and establish teams. The ownership of the repository can be granted to other members in the event that the person who created the organization leaves it.  
 
-In a personal account, other users can be granted push access as collaborators, but personal accounts can't have teams.  An advantage of teams is that they can be notified (@mention'ed) as a team rather than individuals, and team members can have conversations that aren't limited to an issue, pull request, project, or repository.  Teams also are a way to control levels of access to particular repositories.  Members of the organization can request to join teams, and their requests can be approved by a team owner or maintainer.  So teams may be a good option for large projects if they are open, or part of a paid account.
+In a personal account, other users can be granted push access as collaborators, but free personal accounts can't have teams.  That requires an enterprise account.  An advantage of teams is that they can be notified (@mention'ed) as a team rather than individuals, and team members can have conversations that aren't limited to an issue, pull request, project, or repository.  Teams also are a way to control levels of access to particular repositories.  Members of the organization can request to join teams, and their requests can be approved by a team owner or maintainer.  So teams may be a good option for large projects if they are using a paid account.
 
 ## Tools for tracking progress
 
@@ -36,7 +36,7 @@ To create a new issue within a particular repo, click the issues tab.  You'll se
 
 Enter a title for the issue and write text explaining the issue in the box.  You  can use the *@mention system* to make sure that relevant people are informed about the issue.  In a comment on an issue or pull request, if you type the `@` symbol followed immediately by a user or team's GitHub username, a notification will be generated addressed to that user.  If the user has enabled email notifications, he or she will get an email containing the text of the comment and a link that will jump the user directly to the comment or pull request page.  
 
-If you want to assign the issue to some particular team member, clicking on the Assignees item will give a dropdown list of collaborators.  
+If you want to assign the issue to some particular collaborator, clicking on the Assignees item will give a dropdown list of possibilities.  
 
 It's also a good thing to assign a *label* to the project.  Labels are like tags in other systems.  Assigning a label categorizes the issues so they can be searched.  It's also a very visual way to know the status and category of an issue and shows up in the issues list.
 
@@ -94,17 +94,17 @@ When the issue is closed (in this case after the meeting has occurred), the issu
 
 Using the issue tracker in this way makes it possible for project participants who are less involved in the activities to see at a glance what's currently going on with the project, simply by looking at the open issues on the tracker.
 
-It is also extremely easy for anyone who is annoyed with the amount of message traffic to simply unfollow the repository temporarily or permanently.
+It is also extremely easy for anyone who is annoyed with the amount of message traffic to simply unwatch the repository temporarily or permanently.
 
 # A model of issues and milestones
 
-When GitHub is used to manage a project, there is a conceptual connnection between milestones (such as a new release of a codebase or document) and merges (preceded by pull requests) that move changes from a development branch to the master.  Similarly, there can be a conceptual connection between issues that have to be resolved to reach the milestone and commits that represent concrete steps taken to resolve each issue. 
+When GitHub is used to manage a project, there is a conceptual connnection between milestones (such as a new release of a codebase or document) and merges (preceded by pull requests) that move changes from a development branch to the master.  Similarly, there can be a conceptual connection between issues that need to be resolved to reach the milestone and commits that represent concrete steps taken to resolve each issue. 
 
 These connections can be illustrated with an editing example.  In this example, recommendations for how to use a metadata term were outdated, unclear, and need revision ([see original text](https://github.com/baskaufs/demo/blob/78016a3f063b03525891a6ef28a5ddafb4af7b70/dcterms-type.md)). A review of the text identified a number of problems and an issue were created for each problem.  The issues were grouped under a milestone that represented completing the necessary revisions.
 
 <img src="../images-projects/milestone.png" style="border:1px solid black">
 
-Each time an issue was resolved, a corresponding commit was made for the edits necessary to fix the problem.
+(See [this page](https://github.com/baskaufs/demo/milestone/1?closed=1) to see the actual milestone for this example and its issues.)  Each time an issue was resolved, a corresponding commit was made for the edits necessary to fix the problem.
 
 | Planning | Action |
 | --- | --- |
@@ -159,13 +159,13 @@ When the pull request or issue is created, it automatically gets added to the co
 
 <img src="../images-projects/automatic-add-to-project.png" style="border:1px solid black">
 
-When a pull request is merged or an issue is closed, their card automatically moves to the "done" column.
+When a pull request is merged or an issue is closed, its card automatically moves to the "done" column.
 
 Cards can also be manually moved from one column to another and additional columns can be added.
 
-An additional feature that we won't discuss today is reviews.  One can request a review of a pull request.  A reviewer can make comments, approve a merge, and request changes. A repository can also be set up with rules about the conditions under which a branch can be merged, including a requirement for approval of a reviewer before the pull request can be merged. This can provide extra protection for master branches that serve a critical purposes, such as providing the code for a website.
+An additional feature is reviews.  One can request a review of a pull request.  A reviewer can make comments, approve a merge, or request changes. A repository can also be set up with rules about the conditions under which a branch can be merged, including a requirement for approval of a reviewer before the pull request can be merged. This can provide extra protection for master branches that serve a critical purposes, such as providing the source code for an application or web pages for a website.  See [this page](../branch/#creating-a-pull-request) for an example of a review request.
 
 [next page: forking and the Open Source model](../fork/)
 
 ----
-Revised 2019-10-04
+Revised 2019-10-07
