@@ -36,17 +36,17 @@ After he clicks on the repository name, he clicks on the `Fork` button at the up
 
 If he has has push access to multiple accounts, he may need to choose which account to put the fork in.
 
-The fork will now show up as a repository in his own account.  To prevent confusion, the name of forked repos has a note under it to remind the user that the repo is forked from somewhere else.
+The fork will now show up as a repository in his own account.  To prevent confusion, the a forked repo has a note under it to remind the user that the repo is forked from somewhere else.
 
 <img src="../images-fork/forked-repo-summary.png" style="border:1px solid black">
 
-At this point, the forked repo will show up on the list of repos that Tomy can clone in GitHub Desktop.  Now Tomy has edited the README.md page (either directly on GitHub using the online editor or on his laptop using Desktop, then pushed the changes up to GitHub).  
+At this point, the forked repo will show up on the list of repos that Tomy can clone in GitHub Desktop.  Now Tomy has edited the README.md page (either directly on GitHub using the online editor, or on his laptop using the Desktop Client followed by pushing the changes up to GitHub).  
 
 Here's what the forked repo page looks like now:
 
 <img src="../images-fork/changes-on-fork.png" style="border:1px solid black">
 
-Here's what the page looks like when we click on the `New pull request` button.  Notice that we have switched from the forked (head) repo to the organizational (base) repo.
+In order to make a pull reqest, we need to switch from the GitHub site of the forked (head) repo to the GitHub site of the organizational (base) repo.  Here's what the page looks like when we click on the `New pull request` button (on the organization's copy of the repo).  
 
 <img src="../images-fork/compare-changes.png" style="border:1px solid black">
 
@@ -78,9 +78,9 @@ In summary, the process of making pull requests to move changes into the organiz
 
 [next page: GitHub Pages websites](../pages/)
 
-FYI, this is a forking page...
+FYI for Good Place fans, this is a forking page...
 
 <iframe src="https://giphy.com/embed/l3mZhWr9Eltm4c4xi" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/thegoodplace-season-1-episode-5-l3mZhWr9Eltm4c4xi">via GIPHY</a></p>
 
 ----
-Revised 2019-10-03
+Revised 2019-10-07
