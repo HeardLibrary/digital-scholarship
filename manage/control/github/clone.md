@@ -54,6 +54,8 @@ As a result, the subdirectory will be created along with the hidden `.git` direc
 
 <img src="../images-clone/command-line-clone.png" style="border:1px solid black">
 
+During the cloning process, the local repository is associated with the particulary GitHub repository that was cloned, which is referred to as `origin`.
+
 To see the commit history of the newly cloned repository, from within the repository's local directory, enter
 
 ```
@@ -89,6 +91,32 @@ GitHub works reasonably well for some other types of files like CSV spreadsheets
 
 GitHub does NOT work well for managing documents written with proprietary software like Microsoft Word or Excel, at least when files created in those applications are saved in their native file formats (`.docx` and `.xlsx`).  You can commit and upload the files, but GitHub can't display them and they will be impossible to comprehend in the desktop client preview or on GitHub itself.
 
+**Command line comparison**  Remember that you can skip this section if you don't care about the command line.
+
+Updating a local repository from GitHub can be done in two steps.  
+
+```
+git fetch
+```
+
+updates information about the remote (GitHub) on your local computer. That includes the histories of all branches in the repositories and any objects necessary to reconstruct them at any point in the past.  It essentially downloads data about the state of the repo on GitHub, but does NOT actually affect any of the files in the current local working branch. 
+
+After doing the fetch, to see what differences there are between the state of the master branch on GitHub and the local repository, enter
+
+```
+git diff master origin/master
+```
+
+Recall that `origin` represents the remote repository on GitHub.  So we are comparing the difference between the master branch in the local repository (`master`) with the master branch in the corresponding repository on GitHub (`origin/master`).
+
+If you are OK with the changes that have been made on GitHub, you can merge them into your local repository by entering
+
+```
+git pull
+```
+
+If you are confident that you just need to update your local repository and don't need to compare it with what's on GitHub (for example if you were working in a different location and just want to update your copy at your current location), you can just `pull` without fetching first.
+
 ## Editing and committing
 
 To make an edit, navigate to the directory where you checked out the repo.  Open a file, make some edits, then save the file.  
@@ -97,11 +125,43 @@ If you click on the Changes tab at the upper left of the GitHub Desktop window, 
 
 <img src="../images-clone/file-changes.png" style="border:1px solid black">
 
+The blue checkboxes in the Changes list indicate which files you want Git to track.  If they are checked, their changes will be incorporated in the next commit.  If they are unchanged, their changes will be ignored until a future time when you check them.  
+
+<img src="../images-clone/staging.png" alt="staging diagram">
+
+Referring to our initial diagram of the GitHub world, checking a checkbox adds the file to the staging area.
+
 Commit your changes.  You'll then see the new commit in the history and as a change that's ready to push up to GitHub.
 
 <img src="../images-clone/make-commit.png" style="border:1px solid black">
 
 Click on the `Push origin` button to push your changes from the desktop client to GitHub.
+
+**Command line comparison**  Remember that you can skip this section if you don't care about the command line.
+
+With command line Git, files don't automatically get added to the staging area.  You add them explicitly using 
+
+```
+git add filename
+```
+
+where `filename` is the name of the file to be staged.  To see the changes that are staged to commit, enter
+
+```
+git status
+```
+
+To make commit the changes that are staged, use
+
+```
+git commit -m "The commit message goes here"
+```
+
+The changes are now part of the master branch in the local repository, but are not yet on GitHub.  To push the changes from the local repository to the master branch on GitHub (`origin`), issue the command
+
+```
+git push origin master
+```
 
 ## What happens next?
 
@@ -112,4 +172,4 @@ If you do encounter merge conflicts because you forgot to pull before working, o
 [next page: branching and the shared repository model](../branch/)
 
 ----
-Revised 2019-10-03
+Revised 2019-10-06
