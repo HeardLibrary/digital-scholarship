@@ -77,4 +77,4 @@ The commit history shows all of the commit summaries for commits that have affec
 [next page: Cloning and the GitHub desktop client](../clone/)
 
 ----
-Revised 2019-02-18
+Revised 2019-10-07

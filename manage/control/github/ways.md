@@ -40,7 +40,7 @@ The personal model can easily be expanded to a collaborative model where two or 
 
 <img src="../images-ways/simple-collab-model.png" alt="simple collaborative model diagram"/>
 
-In this model two people share a repository and each person pulls and pushes common files from the repository as they carry out work.  This works out quite well if both people never work on the same file at the same time, but if both collaborators edit the same file and try to push it to GitHub, a version conflict will arrise.  This is a very different situation from Google Docs where a change made by one collaborator appears simultaneously in a document with changes made by another collaborator.  
+In this model two people share a repository and each person pulls and pushes common files from the repository as they carry out work.  This works out quite well if both people never work on the same file at the same time, but if both collaborators edit the same file and try to push it to GitHub, a version conflict may arrise.  This is a very different situation from Google Docs where a change made by one collaborator appears simultaneously in a document with changes made by another collaborator.  
 
 Fortunately, there are ways to resolve these kinds of version conflicts, but if its likely that two people will be working on the same files, there is a better system.
 
@@ -62,7 +62,7 @@ The Shared Repository model works well for small teams that are in close communi
 
 <img src="../images-ways/open-source-model.png" alt="branch merging diagram"/>
 
-To deal with this situation, a more complicated model is needed. The diagram above is pretty complicated, so we won't worry about the details yet.  However, the main point is that potential contributors begin work by making their own copy of the entire organizational repository on their own personal GitHub accounts (as opposed to creating a fork directly in the organization's repo).  A complete copy of a repo in a different account is called a *fork* and making such a copy is called *forking* a repository.  The interactions that the contributor has with his or her fork are completely independent from what is going on in the organizational repository.  Sometimes people will fork a repository just to play around with it and then destroy the whole fork when they are finished.  But if the potential contributor has created some new feature that he or she thinks would be benificial to the organization, it's possible to make a pull request to pull a branch from the contributor's fork into the master in the organization's repo. If the request is merged, the creator of the changes becomes an official contributor to the organization's project.  
+To deal with this situation, a more complicated model is needed. The diagram above is pretty complicated, so we won't worry about the details yet.  However, the main point is that potential contributors begin work by making their own copy of the entire organizational repository on their own personal GitHub accounts (as opposed to creating a fork directly in the organization's repo).  A complete copy of a repo in a different account is called a *fork* and making such a copy is called *forking* a repository.  The interactions that the contributor has with his or her fork are completely independent from what is going on in the organizational repository.  Sometimes people will fork a repository just to play around with it and then destroy the whole fork when they are finished.  But if the potential contributor has created some new feature that he or she thinks would be beneficial to the organization, it's possible to make a pull request to pull a branch from the contributor's fork into the master in the organization's repo. If the request is merged, the creator of the changes becomes an official contributor to the organization's project.  
 
 ## Other uses of GitHub
 
@@ -76,7 +76,7 @@ Another important use of GitHub is its *collaborative tools* such as its *issues
 
 You may already have experience using command line Git or be interested in learning it.  If so, you may be wondering how command line Git relates to the GitHub desktop client that we will be using exclusively in these lessons.  
 
-Both command line Git and the GitHub desktop client use a special hidden directory called `.git` to manage the repository housed in a particular directory in the local filesystem.  (If you have changed your system settings to make hidden directories visible, you can see this directory in each folder that is being managed by Git -- but don't edit or delete any of the files in it!) Since both the command line and desktop clients use the same protocol and files to track changes, in theory you could go back and forth between them when managing a particular repository.  However, experimentation has shown some differences between the two systems in treatment of files added for staging.  So it's probably better to stick with one system or the other, at least during a particular editing session.  
+Both command line Git and the GitHub desktop client use a special hidden directory called `.git` to manage the repository housed in a particular directory in the local filesystem.  (If you have changed your system settings to make hidden directories visible, you can see this directory in each folder that is being managed by Git -- but don't edit or delete any of the files in it!) Since both the desktop client and the command line use the same protocol and files to track changes, in theory you could go back and forth between them when managing a particular repository.  However, experimentation has shown some differences between the two systems in treatment of files added for staging.  So it's probably better to stick with one system or the other, at least during a particular editing session.  
 
 Command line Git has many features and options that aren't present in the desktop client.  Command line Git is also the only way to correct some complicated problems that can arise.  So advanced users will probably eventually need to learn to use Git from the command line.  
 
@@ -87,4 +87,4 @@ The [Software Carpentries lesson on Git](http://swcarpentry.github.io/git-novice
 [next page: Introduction to GitHub](../intro/)
 
 ----
-Revised 2019-10-06
+Revised 2019-10-07
