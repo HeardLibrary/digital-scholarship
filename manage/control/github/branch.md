@@ -150,6 +150,8 @@ To close the other issue, I need to do something about all of the items being on
 
 Again I write a descriptive commit message and make the commit.  Since I'm done working for now, I push the new commit to GitHub (`Push origin` tab at upper right), and close the corresponding issue in the online tracker.
 
+<img src="../images-ways/shared-repo-merge.png" alt="merge"/>
+
 ## Creating a pull request
 
 Since I've solved all of the problems I noticed, my changes need to be merged into the master branch.  To start that process, I need to create a *pull request* to initiate discussion about my changes.
