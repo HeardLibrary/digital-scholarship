@@ -127,7 +127,7 @@ During discussion of the pull request, the clear commit messages for each commit
 
 Having a clear description of the sequence of changes made on the branch allows a team member who was not involved in making the revisions to assess whether the changes should be merged or if further work needs to be done. (View the [final revised text](https://github.com/baskaufs/demo/blob/master/dcterms-type.md).)
 
-## Woring with milestones
+## Working with milestones
 
 To see milestones or create a new one, click the Milestones tab on either the issues or pull requests page.  If you have any existing milestones, you'll see them listed with an indication of the progress towards completing them.  Progress is measured by the fraction of issues or pull requests that have been closed.
 
