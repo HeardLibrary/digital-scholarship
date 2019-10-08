@@ -20,7 +20,7 @@ Anyone can create an organization for free.  However, at this point in time, the
 
 Once you've set up the organization, you can add members, change their status (owner, member, outside collaborator), grant administrative privileges to repos, and establish teams. The ownership of the repository can be granted to other members in the event that the person who created the organization leaves it.  
 
-In a personal account, other users can be granted push access as collaborators, but free personal accounts can't have teams.  That requires an enterprise account.  An advantage of teams is that they can be notified (@mention'ed) as a team rather than individuals, and team members can have conversations that aren't limited to an issue, pull request, project, or repository.  Teams also are a way to control levels of access to particular repositories.  Members of the organization can request to join teams, and their requests can be approved by a team owner or maintainer.  So teams may be a good option for large projects if they are using a paid account.
+An advantage of teams is that they can be notified (@mention'ed) as a team rather than individuals, and team members can have conversations that aren't limited to an issue, pull request, project, or repository.  Teams also are a way to control levels of access to particular repositories.  Members of the organization can request to join teams, and their requests can be approved by a team owner or maintainer.  So teams may be a good option for large projects.
 
 ## Tools for tracking progress
 
