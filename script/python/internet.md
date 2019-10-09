@@ -139,23 +139,43 @@ Here's the basic structure of the results JSON:
 }
 ```
 
-The value of the `results` key is an array that contains a list of result objects separated by commas.  Each of the reult objects has a long list of key:value pairs whose values are what we really are interested in.  Here's some code that will fetch the JSON, turn it into a Python structure, pull out the results, and show us the first (index of 0) dictionary in the list of results:
+The value of the `results` key is an array that contains a list of result objects separated by commas.  Each of the reult objects has a long list of key:value pairs whose values are what we really are interested in.  Here's some code that will fetch the JSON, turn it into a Python structure, pull out the results, and show us the dictionaries in the list of results:
 
 ```python
 url = 'http://api.gbif.org/v1/occurrence/search'
 r = requests.get(url, params={'recordedBy' : 'William A. Haber'})
 data = r.json()
 
-print(data['results'][0])
+print(data)
 ```
+
+To turn the results into valid JSON so we can look at it in a code editor, use the `json.dumps()` function:
+
+```
+import json
+url = 'http://api.gbif.org/v1/occurrence/search'
+r = requests.get(url, params={'recordedBy' : 'William A. Haber'})
+data = r.json()
+
+print(json.dumps(data))
+```
+
+## Examining the structure of JSON from an API
+
+Just printing out a string dump of JSON is incomprehensible, making it difficult to pull the data we want from the resulting Python data structure.  However, VS Code will "prettify" JSON for you.  Copy the JSON string and paste it into a new VS Code document.  Save the document with a `.json` file extension so that VS Code will know what kind of file it is.  Highlight all of the text, right click, then select `Format Document`.
+
+## Pulling particular items from response JSON
 
 To see more useful output, replace the print statement with this code
 
 ```python
 resultsList = data['results']
 for result in resultsList:
+    try:
         print(result['species'] + ', date: ' + result['eventDate'])
         print('Observed at: ' + result['locality'] + ', ' + result['country'] + '\n')
+    except:
+        pass # do nothing if one of the keys isn't available (not a great solution)
 ```
 
 In this example, the API does not require any authentication.  Authentication is nearly always required to write to an API using an HTTP POST request and in a lot of cases it's also required for a read-only GET request as well.  This is to prevent abuse of the API.  
