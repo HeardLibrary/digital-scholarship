@@ -10,6 +10,8 @@ Note: this is the seventh lesson in a beginner's introduction to Python.  For th
 
 If you are interested in using Jupyter notebooks, the examples are available in [this notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/internet.ipynb).
 
+The presentation for this lesson is [here](presentations/lesson7-internet.pdf)
+
 Answers for last week's challenge problems:
 
 1\. [Print school data](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/schools_a.py)
