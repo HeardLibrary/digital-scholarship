@@ -142,6 +142,7 @@ Here's the basic structure of the results JSON:
 The value of the `results` key is an array that contains a list of result objects separated by commas.  Each of the reult objects has a long list of key:value pairs whose values are what we really are interested in.  Here's some code that will fetch the JSON, turn it into a Python structure, pull out the results, and show us the dictionaries in the list of results:
 
 ```python
+import requests
 url = 'http://api.gbif.org/v1/occurrence/search'
 r = requests.get(url, params={'recordedBy' : 'William A. Haber'})
 data = r.json()
@@ -151,7 +152,8 @@ print(data)
 
 To turn the results into valid JSON so we can look at it in a code editor, use the `json.dumps()` function:
 
-```
+```python
+import requests
 import json
 url = 'http://api.gbif.org/v1/occurrence/search'
 r = requests.get(url, params={'recordedBy' : 'William A. Haber'})
