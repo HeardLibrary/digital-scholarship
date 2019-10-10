@@ -40,15 +40,15 @@ First cycle:
 
 Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  This cycle is now fully enrolled.  Check again later for spring semester offerings. 
 
-| Date | Session |
-|---|---|
-| Oct 15 | 1 |
-| Oct 29 | 2 |
-| Nov 5 | 3 |
-| Nov 12 | 4 |
-| Nov 19 | 5 |
-| Dec 3 | 6 |
-| Dec 10 | 7 |
+| Date | Session | Topic | Notes |
+|---|---|---|
+| Oct 15 | 1 | Getting started | [intro](../) / [Anaconda](../../anaconda/) / [install Thonny](../thonny/) / [install Python](../install/) / [install editor](../editor/) / [code examples](../examples/) / [example notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)|
+| Oct 29 | 2 | Python scripting basics | [lesson webpage](../basics/) |
+| Nov 5 | 3 | Object-oriented Python | [lesson webpage](../object/) |
+| Nov 12 | 4 | Lists and loops | [lesson webpage](../structures/) |
+| Nov 19 | 5 | Dictionaries and JSON | [lesson webpage](../json/) |
+| Dec 3 | 6 | Input and output from files | [lesson webpage](../inout/) |
+| Dec 10 | 7 | Interacting with the Internet | [lesson webpage](../internet/) |
 
 ## Schedule of API/Web Scraping Lessons - Fall 2019
 
@@ -95,4 +95,4 @@ The event is free, but advance registration is required.
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2019-09-24
+Revised 2019-10-10
