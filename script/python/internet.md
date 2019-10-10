@@ -147,10 +147,10 @@ url = 'http://api.gbif.org/v1/occurrence/search'
 r = requests.get(url, params={'recordedBy' : 'William A. Haber'})
 data = r.json()
 
-print(data)
+print(data['results'][0])
 ```
 
-To turn the results into valid JSON so we can look at it in a code editor, use the `json.dumps()` function:
+To turn all of the results into valid JSON so we can look at it in a code editor, use the `json.dumps()` function:
 
 ```python
 import requests
