@@ -107,6 +107,7 @@ Usually, the values in query strings must be "URL-encoded" so that characters th
 The requests module will automatically encode query string values of passed parameters and concatenate them with ampersands, the appropriate format when there are multiple parameters in the query string. The keys and values are included in the `.get()` method as a dictionary of keys and values to be encoded.  Here's an example:
 
 ```python
+import requests
 r = requests.get('http://api.gbif.org/v1/occurrence/search', params={'recordedBy' : 'William A. Haber'})
 ```
 
