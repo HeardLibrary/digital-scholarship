@@ -29,7 +29,7 @@ There are features for using HTTP (Hypertext Transfer Protocol) in the Python st
 ```python
 import requests
 
-r = requests.get('http://bioimages.vanderbilt.edu/baskauf/24319.rdf')
+r = requests.get('http://bioimages.vanderbilt.edu/baskauf/24319.htm')
 print('HTTP status code: ', r.status_code)
 ```
 
