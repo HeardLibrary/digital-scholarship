@@ -8,6 +8,8 @@ Note: this is the seventh lesson in a beginner's introduction to Python.  For th
 
 [prevous lesson on file input and output](../inout/)
 
+If you are interested in using Jupyter notebooks, the examples are available in [this notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/internet.ipynb).
+
 Answers for last week's challenge problems:
 
 1\. [Print school data](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/challenge4/schools_a.py)
