@@ -8,6 +8,8 @@ Note: this is the seventh lesson in a beginner's introduction to Python.  For th
 
 [prevous lesson on file input and output](../inout/)
 
+[Brief evaluation survey](https://forms.gle/ZmVJKDbVMmvATfox5)
+
 If you are interested in using Jupyter notebooks, the examples are available in [this notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/internet.ipynb).
 
 The presentation for this lesson is [here](presentations/lesson7-internet.pdf)
