@@ -395,4 +395,4 @@ webbrowser.open_new_tab(googleMapUrl)
 [some notes about practical problem solving with Python](../hack/)
 
 ----
-Revised 2019-04-19
+Revised 2019-10-10
