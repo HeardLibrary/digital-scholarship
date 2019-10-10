@@ -164,7 +164,9 @@ print(json.dumps(data))
 
 ## Examining the structure of JSON from an API
 
-Just printing out a string dump of JSON is incomprehensible, making it difficult to pull the data we want from the resulting Python data structure.  However, VS Code will "prettify" JSON for you.  Copy the JSON string and paste it into a new VS Code document.  Save the document with a `.json` file extension so that VS Code will know what kind of file it is.  Highlight all of the text, right click, then select `Format Document`.
+Just printing out a string dump of JSON is incomprehensible, making it difficult to pull the data we want from the resulting Python data structure.  However, VS Code will "prettify" JSON for you.  Copy the JSON string and paste it into a new VS Code document.  Save the document with a `.json` file extension so that VS Code will know what kind of file it is.  Highlight all of the text, right click, then select `Format Document`.  
+
+Another option is to go to the online tool [JSON Editor Online](https://jsoneditoronline.org/).  In that editor, you can paste the raw JSON on the left side, then click the rightward arrow in the middle.  The pane on the right allows you to expand and collapse the various nested arrays and objects of the JSON.  This is a great way to understand how the JSON is organized hierarchically.
 
 ## Pulling particular items from response JSON
 
@@ -179,6 +181,8 @@ for result in resultsList:
     except:
         pass # do nothing if one of the keys isn't available (not a great solution)
 ```
+
+Compare the "prettified" JSON to the code to understand how the nested parts of the JSON were accessed.
 
 In this example, the API does not require any authentication.  Authentication is nearly always required to write to an API using an HTTP POST request and in a lot of cases it's also required for a read-only GET request as well.  This is to prevent abuse of the API.  
 
