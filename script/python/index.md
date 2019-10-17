@@ -106,6 +106,8 @@ The Vanderbilt Science and Engineering Library has a number of books on programm
 
 These series have not been vetted in any way - check them out at your own risk.
 
+[Python for Beginners](https://www.youtube.com/playlist?list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6) - Microsoft Developer (142k subscribers but not exclusively Python)
+
 [Python Tutorials for Absolute Beginners](https://www.youtube.com/playlist?list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg) - CS Dojo (747K subscribers)
 
 [Python Programming Beginner Tutorials](https://www.youtube.com/playlist?list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7) - Corey Schafer (202K subscribers)
@@ -113,4 +115,4 @@ These series have not been vetted in any way - check them out at your own risk.
 [OSP - Python Beginner Series for Absolute Beginners](https://www.youtube.com/playlist?list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg) kjdElectronics - (58K subscribers)
 
 ----
-Revised 2019-09-20
+Revised 2019-10-17
