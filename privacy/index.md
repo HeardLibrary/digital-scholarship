@@ -60,6 +60,8 @@ These suggestions apply most directly to iPhones, but some of them apply to smar
 
 Thanks to Derek Bruff who created this as a [handout](../privacy-on-your-smartphone.pdf) for our digital privacy event based on suggestions from [Fast Company](https://www.fastcompany.com/90254589/use-these-9-critical-iphone-privacy-and-security-settings-right-now) and [Life Hacker](https://lifehacker.com/the-privacy-enthusiasts-guide-to-using-an-iphone-1792386831).  
 
+For information on "geofencing" (using location services on your phone to identify you and your habits) and how to prevent it, see [this Wall Street Journal article](https://www.wsj.com/articles/political-campaigns-track-cellphones-to-identify-and-target-individual-voters-11570718889) Subscription required, but Vanderbilt community members can get a free subscription through the library. Visit <https://www.library.vanderbilt.edu/pdf/wsj-vu-registration.pdf> for more information.
+
 ## Avoiding malware and viruses on your computer
 
 1. Keep your operating system up to date. Yes, those nagging reminders are annoying, but don't put off doing the updates.  If you have a PC and aren't running Windows 10, take special precautions.  Most viruses are targeted towards PCs, so Windows users need to be careful.
