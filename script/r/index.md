@@ -43,7 +43,7 @@ To try out some simple R scripts for t-test of means, paired t-test, chi-squared
 
 [Home page of the R Working Group](https://heardlibrary.github.io/commodore-r-group/) of the Vanderbilt Libraries
 
-[R/RStudio research guide](https://researchguides.library.vanderbilt.edu/c.php?g=882675) with additional resources, maintained by Meredith Broadway (Business and Data Analyst Librarian)
+[R/RStudio research guide](https://researchguides.library.vanderbilt.edu/c.php?g=882675) with additional resources.
 
 ----
-Revised 2019-09-08
+Revised 2019-10-17
