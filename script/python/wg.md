@@ -24,20 +24,6 @@ The Working Group meets in the Eskind Training Room (Room 010 in the basement of
 
 ## Schedule of Beginners Lessons - Fall 2019
 
-First cycle: 
-
-**Note** Both the Thursday and Friday sessions are full for this cycle.
-
-| Date | Session | Topic | Notes |
-|---|---|---|
-| Aug 29/30 | 1 | Getting started | [intro](../) / [Anaconda](../../anaconda/) / [install Thonny](../thonny/) / [install Python](../install/) / [install editor](../editor/) / [code examples](../examples/) / [example notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)|
-| Sep 5/6 | 2 | Python scripting basics | [lesson webpage](../basics/) |
-| Sep 12/13 | 3 | Object-oriented Python | [lesson webpage](../object/) |
-| Sep 19/20 | 4 | Lists and loops | [lesson webpage](../structures/) |
-| Sep 26/27 | 5 | Dictionaries and JSON | [lesson webpage](../json/) |
-| Oct 3/4 | 6 | Input and output from files | [lesson webpage](../inout/) |
-| Oct 10/11 | 7 | Interacting with the Internet | [lesson webpage](../internet/) |
-
 Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  This cycle is now fully enrolled.  Check again later for spring semester offerings. 
 
 | Date | Session | Topic | Notes |
