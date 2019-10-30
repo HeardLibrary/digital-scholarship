@@ -40,13 +40,13 @@ Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  This cycle is now fully enroll
 
 **Fridays** from 1:10 to 2:00 PM.  [Register here](https://docs.google.com/forms/d/e/1FAIpQLScaC3yV6DE50OEWFx7klDOJH3w-zs03g-4ViatzXKAoRopo7w/viewform?usp=sf_link)
 
-| Date | Session |
-|---|---|
-| Nov 1 | 1 |
-| Nov 8 | 2 |
-| Nov 15 | 3 |
-| Nov 22 | 4 |
-| Dec 6 | 5 |
+| Date | Session | Topic | Notes |
+|---|---|---|---|
+| Nov 1 | 1 | HTTP and APIs | |
+| Nov 8 | 2 | API search and authentication | |
+| Nov 15 | 3 | HTML and web page structure | |
+| Nov 22 | 4 | Using Beautiful Soup | |
+| Dec 6 | 5 | Project | |
 
 # Python Resources
 
