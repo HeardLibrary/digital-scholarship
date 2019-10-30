@@ -45,7 +45,7 @@ Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  This cycle is now fully enroll
 | Nov 1 | 1 | HTTP and APIs | |
 | Nov 8 | 2 | API search and authentication | |
 | Nov 15 | 3 | HTML and web page structure | |
-| Nov 22 | 4 | Using Beautiful Soup | |
+| Nov 22 | 4 | Scraping with Beautiful Soup | |
 | Dec 6 | 5 | Project | |
 
 # Python Resources
@@ -81,4 +81,4 @@ The event is free, but advance registration is required.
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2019-10-10
+Revised 2019-10-30
