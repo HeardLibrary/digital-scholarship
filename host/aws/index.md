@@ -8,7 +8,9 @@ breadcrumb: AWS
 
 AWS offers [many services](https://aws.amazon.com/) for deploying applications in the cloud.  They include Simple Storage Service (S3), Elastic Compute Cloud (EC2) cloud servers, simple DynamoDB NoSQL databases, and Lambda serverless computing. 
 
-For more information, go to [this page](security/)
+For information on security in AWS, go to [this page](security/)
+
+For information on uploading files to S3 buckets and creating a static website, see [this page](website/)
 
 ## Getting started
 
