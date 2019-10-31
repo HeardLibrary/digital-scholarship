@@ -19,7 +19,7 @@ By default, the root account has full privileges for most actions possible in AW
 3. Delete the access keys associated with the root account.
 4. Create and routinely use other Identity and Access Management (IAM) users.
 
-<img src="images/security.png" style="border:1px solid black">
+<img src="../images/security.png" style="border:1px solid black">
 
 When accessing a newly created account, AWS will suggest that you take these actions and provide links for doing so.
 
@@ -35,7 +35,7 @@ The best practice is to delete the powerful access keys of the root user and cre
 
 To create a user for a specific task, click on Services, then search for IAM.  
 
-<img src="images/security.png" style="border:1px solid black">
+<img src="../images/security.png" style="border:1px solid black">
 
 
 
