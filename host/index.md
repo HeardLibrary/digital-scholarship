@@ -10,9 +10,7 @@ breadcrumb: Host
 
 AWS offers [many services](https://aws.amazon.com/) for deploying applications in the cloud.  They include Simple Storage Service (S3), Elastic Compute Cloud (EC2) cloud servers, simple DynamoDB NoSQL databases, and Lambda serverless computing. You can open a small-scale personal account for one year for free.  [Vanderbilt IT](https://it.vanderbilt.edu/services/catalog/) provides some support for AWS cloud services.  
 
-To get started, AWS offers [a number of tutorials](https://aws.amazon.com/getting-started/tutorials/).
-
-[Placeholder link to blog post on Authentication with AWS static websites](https://douglasduhaime.com/posts/s3-lambda-auth.html)
+For more information about getting started with AWS, visit [this page](aws/).
 
 ## DigitalOcean
 
@@ -47,4 +45,4 @@ To get started, AWS offers [a number of tutorials](https://aws.amazon.com/gettin
 [Introduction to Docker Machine](dockermachine/)
 
 ----
-Revised 2019-07-26
+Revised 2019-10-31
