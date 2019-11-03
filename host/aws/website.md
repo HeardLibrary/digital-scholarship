@@ -64,7 +64,7 @@ Your web page should show up in the browser window.
 
 # Creating a more sophisticated website
 
-This is just a quick and dirty web page.  For creating a real static website using S3, you will probably want to do some more sophisticated things like associating a domain name with the site, redirects from similar subdomains, tracking usage, etc.  AWS has built in capabilities for doing all of these things.  See [this page](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) to get started.
+This is just a quick and dirty web page.  For creating a real static website using S3, you will probably want to do some more sophisticated things like associating a domain name with the site, redirects from similar subdomains, tracking usage, etc.  AWS has built in capabilities for doing all of these things.  See [this page](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) to get started.  See also [this blog post](https://douglasduhaime.com/posts/s3-lambda-auth.html) for information about allowing access to a static website using authentication.
 
 ----
-Revised 2019-10-31
+Revised 2019-11-03
