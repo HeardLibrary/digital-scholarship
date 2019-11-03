@@ -14,6 +14,8 @@ For information on uploading files to S3 buckets and creating a static website, 
 
 For information about setting up the AWS command line interface (CLI), see [this page](cli/)
 
+For information about using an AWS service by web interface, CLI, and by script, see [this page](translate/)
+
 ## Getting started
 
 You can open a small-scale personal account for one year for free.  Go to <https://aws.amazon.com/> and click on "Create an AWS Account".
