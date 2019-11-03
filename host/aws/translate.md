@@ -103,11 +103,13 @@ print()
 print(result.get('TranslatedText'))
 ```
 
-To run the script, go to [this page](), then right click on the `Raw` button and select `Save link as...`.  Save the file to the active directory for your console.  Then in the console, enter
+To run the script, go to [this page](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/aws/aws_translate_screen.py), then right click on the `Raw` button and select `Save link as...`.  Save the file to the active directory for your console.  Then in the console, enter
 
 ```
 python aws_translate_screen.py
 ```
+
+(If you are using a Mac, you may need to type `python3 ...` instead of `python ...`.)
 
 The following version of the script reads the text to be translated from a file and outputs the translated text to another file.
 
@@ -136,7 +138,15 @@ with open(outputFileName, 'wt', encoding='utf-8') as fileObject:
 print('Translation completed.')
 ```
 
-To run the script, go to [this page]() and download as you did the last script.  The sample text is in [this file](), which you can download to the same directory as the script, or you can use a text editor to create and save in the working directory a file called `translate.txt`.  
+To run the script, go to [this page](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/aws/aws_translate_file.py) and download as you did the last script.  The sample text is in [this file](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/aws/translate.txt), which you can download to the same directory as the script, or you can use a text editor to create and save in the working directory a file called `translate.txt`.  
+
+To run the script from the console, enter
+
+```
+python aws_translate_file.py
+```
+
+After the script has finished running, go to your working directory and open the file `translated.txt` with a text editor to see the results.
 
 ----
 Revised 2019-11-03
