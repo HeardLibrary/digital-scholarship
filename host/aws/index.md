@@ -12,6 +12,8 @@ For information on security in AWS, go to [this page](security/)
 
 For information on uploading files to S3 buckets and creating a static website, see [this page](website/)
 
+For information about setting up the AWS command line interface (CLI), see [this page](cli/)
+
 ## Getting started
 
 You can open a small-scale personal account for one year for free.  
