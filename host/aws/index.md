@@ -16,6 +16,8 @@ For information about setting up the AWS command line interface (CLI), see [this
 
 For information about using an AWS service by web interface, CLI, and by script, see [this page](translate/)
 
+For information on creating a serverless application using Lambda, see [this page](lambda/)
+
 ## Getting started
 
 You can open a small-scale personal account for one year for free.  Go to <https://aws.amazon.com/> and click on "Create an AWS Account".
