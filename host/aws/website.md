@@ -4,6 +4,8 @@ title: Static website on AWS
 breadcrumb: website
 ---
 
+[previous lesson on AWS security](../security/)
+
 # Accessing bucket objects via HTTPS
 
 To allow access to an object in a bucket through HTTPS, you must make both the bucket and the object within it publically accessible.
@@ -66,5 +68,7 @@ Your web page should show up in the browser window.
 
 This is just a quick and dirty web page.  For creating a real static website using S3, you will probably want to do some more sophisticated things like associating a domain name with the site, redirects from similar subdomains, tracking usage, etc.  AWS has built in capabilities for doing all of these things.  See [this page](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) to get started.  See also [this blog post](https://douglasduhaime.com/posts/s3-lambda-auth.html) for information about allowing access to a static website using authentication.
 
+[next lesson on setting up the Command Line Interface (CLI)](../cli/)
+
 ----
-Revised 2019-11-03
+Revised 2019-11-05

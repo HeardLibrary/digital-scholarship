@@ -4,6 +4,8 @@ title: AWS Command Line Interface (CLI)
 breadcrumb: CLI
 ---
 
+[previous lesson on setting up a static website using an S3 bucket]](../website/)
+
 # AWS Command Line Interface (CLI)
 
 The CLI allows you to carry out AWS operations remotely from your desktop without logging in to the AWS web interface.  It uses the normal console for your operating system (Command Prompt for Windows, Terminal for Mac, Shell for Linux).
@@ -95,5 +97,7 @@ aws s3 rm s3://baskauf-junk-123/states.csv
 
 You can verify that the deletion has occurred by refreshing the S3 bucket listing page in the web interface.
 
+[next lesson on scripting an AWS service using Lambda](../lambda/)
+
 ----
-Revised 2019-11-03
+Revised 2019-11-05

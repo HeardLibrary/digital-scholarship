@@ -77,5 +77,7 @@ Clicking on the `Security credentials` tab takes you to the page wher you can cr
 
 It's a good idea to institute the other suggested security measures, especially multi-factor authentication (MFA).  However, you will first need to instally an app like Google Authenticator first.
 
+[next lesson on creating a static website using an S3 bucket](../website/)
+
 ----
-Revised 2019-10-31
+Revised 2019-11-05

@@ -4,6 +4,8 @@ title: Creating a serverless application using AWS Lambda
 breadcrumb: lambda
 ---
 
+[previous lesson on setting up the Command Line Interface (CLI)](../cli/)
+
 # Creating a serverless application using AWS Lambda
 
 In [the previous lesson](../translate/) we ended by creating a Python script that would invoke the Amazon Translate service when we ran it on our local computer.  This required that the user have permissions to use the Transcribe service and required installation of Python and the `boto3` module on the user's computer.  In this lesson, we'll create the same script, but rather than having it run on the user's computer, we will have it run in the ASW cloud.
