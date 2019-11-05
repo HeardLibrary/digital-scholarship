@@ -4,7 +4,9 @@ title: Using an AWS service - Amazon Translate
 breadcrumb: Translate
 ---
 
-# Using an AWS Service - Amzaon Translate as an Example
+[previous lesson on setting up the Command Line Interface (CLI)](../cli/)
+
+# Using an AWS Service - Amazon Translate as an Example
 
 AWS has many cool services that you can explore.  You can see them by logging in to your account, then clicking on the Services menu at the top of the page.
 
@@ -148,5 +150,7 @@ python aws_translate_file.py
 
 After the script has finished running, go to your working directory and open the file `translated.txt` with a text editor to see the results.
 
+[next lesson on scripting an AWS service using Lambda](../lambda/)
+
 ----
-Revised 2019-11-03
+Revised 2019-11-05

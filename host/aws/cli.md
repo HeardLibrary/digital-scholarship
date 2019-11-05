@@ -97,7 +97,7 @@ aws s3 rm s3://baskauf-junk-123/states.csv
 
 You can verify that the deletion has occurred by refreshing the S3 bucket listing page in the web interface.
 
-[next lesson on scripting an AWS service using Lambda](../lambda/)
+[next lesson on running a service by web interface, CLI, and script](../translate/)
 
 ----
 Revised 2019-11-05

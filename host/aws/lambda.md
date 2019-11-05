@@ -4,7 +4,7 @@ title: Creating a serverless application using AWS Lambda
 breadcrumb: lambda
 ---
 
-[previous lesson on setting up the Command Line Interface (CLI)](../cli/)
+[previous lesson on running a service by web interface, CLI, and script](../translate/)
 
 # Creating a serverless application using AWS Lambda
 
@@ -70,7 +70,7 @@ Click on the `Create function` button.
 
 Using the `Author from scratch` option, enter a name for your function.  Select `Python 3.6` as the `Runtime` option. Click the triamgle to drop dow the `Choose or create an execution role` selection.  Click the `Use an existing role` radio button.  Select the IAM role that you created earlier.  Then click the `Create function` button.
 
-<img src="../images/create-function-dialog.png" style="border:1px solid black">
+<img src="../images/lambda-designer.png" style="border:1px solid black">
 
 After some time, the Lambda designer screen should show up.  
 
@@ -108,7 +108,7 @@ We want to trigger the Lambda to execute when we drop a text file that needs to 
 
 After creating the bucket, I've returned to my Lambda configuration screen and clicked on the `+ Add trigger` button on the left of the screen.  
 
-<img src="../images/edited-lambda.png" style="border:1px solid black">
+<img src="../images/select-trigger.png" style="border:1px solid black">
 
 That takes me to the trigger selection screen.  Select the `S3` option.
 
@@ -148,6 +148,8 @@ In the log list, click on the most recent event.
 <img src="../images/event-printing.png" style="border:1px solid black">
 
 Recall that I told the scipt to print the JSON that was passed into the function.  There is a lot of useless information, but an important piece of information is the name of the file that triggered the event.  The path to that value would be `event['Records'][0]['s3']['object']['key']`
+
+This is a somewhat painful way to look at the JSON that gets passed into the Lambda when the event is triggered.  It is easier to look at the examples given in the [AWS Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html), which has prettier JSON examples for many services that can trigger Lambdas.  For example, [this page](https://docs.aws.amazon.com/lambda/latest/dg/with-s3.html) shows the event JSON for an S3 notification.
 
 Now to test whether I can get the file name from the event string, I'll change the script to:
 
@@ -256,4 +258,4 @@ This was a very minimal example of using a Lambda.  Lambdas can be set up to sen
 Another useful possibility is to string multiple Lambdas sequentially.  For example, Amazon TExtract could be used to extract text from an image by one Lambda.  The output of that Lambda could then trigger Amazon Translate to translate into another language, Amazon Comprehend to do sentiment analysis, or Amazon Polly to convert the text into speech.
 
 ----
-Revised 2019-11-03
+Revised 2019-11-05
