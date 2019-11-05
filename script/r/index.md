@@ -49,4 +49,4 @@ To try out some simple R scripts for t-test of means, paired t-test, chi-squared
 [R/RStudio research guide](https://researchguides.library.vanderbilt.edu/c.php?g=882675) with additional resources.
 
 ----
-Revised 2019-10-25
+Revised 2019-11-05
