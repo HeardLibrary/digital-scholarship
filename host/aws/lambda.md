@@ -255,7 +255,7 @@ In the example above, my IAM user with only S3 privileges used CLI commands to u
 
 This was a very minimal example of using a Lambda.  Lambdas can be set up to send you a notification email when they run (usefully for rarely-triggered events).  They can also be used to obtain the data from an API rather than from an S3 bucket.  In that case, the trigger can be a Cron job scheduled to harvest data from the API at regular intervals.  AWS also has easily used cloud databases that can be used to store the output data rather than putting it in a file in a bucket.  
 
-Another useful possibility is to string multiple Lambdas sequentially.  For example, Amazon TExtract could be used to extract text from an image by one Lambda.  The output of that Lambda could then trigger Amazon Translate to translate into another language, Amazon Comprehend to do sentiment analysis, or Amazon Polly to convert the text into speech.
+Another useful possibility is to string multiple Lambdas sequentially.  For example, Amazon Textract could be used to extract text from an image by one Lambda.  The output of that Lambda could then trigger Amazon Translate to translate into another language, Amazon Comprehend to do sentiment analysis, or Amazon Polly to convert the text into speech.
 
 ----
 Revised 2019-11-05
