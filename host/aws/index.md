@@ -22,6 +22,8 @@ For information on creating a serverless application using Lambda, see [this pag
 
 [Presentation 2 on the CLI, using a service, and creating a Lambda](presentations/lesson2.pdf)
 
+[Presentation 3 on Docker and cloud servers](presentations/lesson3.pdf)
+
 ## Getting started
 
 You can open a small-scale personal account for one year for free.  Go to <https://aws.amazon.com/> and click on "Create an AWS Account".
