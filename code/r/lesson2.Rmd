@@ -1,0 +1,240 @@
+---
+title: "Lesson 2: Data structures"
+output: html_notebook
+---
+
+# R Markdown
+
+*R Markdown* is a tool for *literate programming*. Literate programming is a paradigm where execuatable code blocks are mixed with an explanation of how the code works.  Although it's possible to achieve some degree of literate programming by just including comments in your code, tools like R Markdown and Jupyter notebooks allow programmers to include richer content (like images and clickable hyperlinks) in their explanatory content.  
+
+## Viewing R Markdown in RStudio
+
+This document is itself an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you load it into the editor pane of RStudio, you see the Markdown document markup, which isn't that easy to read.  However, you can render the Markdown in a viewer pane.  
+
+![Selecting Preview in Viewer Pane](https://github.com/HeardLibrary/digital-scholarship/raw/gh-pages/script/r/images/preview-in-viewer.png) 
+
+Drop down the little gear icon to the right of the `Preview` button and select `Preview in Viewer Pant`.  If necessary, click the `Preview` button.  You should see the pretty version of the text in the Viewer pane at the right.  
+
+<img src="https://github.com/HeardLibrary/digital-scholarship/raw/gh-pages/script/r/images/click-to-expand.png" style="border:1px solid black" />
+
+When viewing an R Markdown notebook, the editor pane and Viewer pane are expanded to make them easier to see and the Environment and Console panes are collapsed.  If you want to expand them to see what's going on there, click on the expand icon at the right of their header.
+
+## Running code in an R Markdown notebook
+
+To execute a code chunk, click on the `Run` button (triangle) at the right of the chunk, or place the cursor in the chunk and hold `Command`+`Shift` then press `Return` on Mac or hold `Ctrl`+`Shift` then press `Enter` on Windows.  To execute a single line, place the cursor on the line and press `Command` `Return` (`Ctrl` `Enter`) without pressing the `Shift` key.  
+
+When you execute code within the notebook, the results appear beneath the code. Try executing this example.
+
+```{r}
+animal <- c("frog", "spider", "worm", "bee")
+animal[1]
+```
+
+If configured correctly, R Markdown can also execute chunks of Python code:
+
+```{python}
+string = 'hey dude!'
+print(string)
+```
+
+and console commands:
+
+```{bash}
+ls *.Rmd
+```
+
+The type of command is indicated after the triple backticks above the code block.  
+
+Separate chunks of R code "remember"" what's in the environment from the execution of a previous chunk.  If I've previously run the chunk above that assigns values to `animal`, I can recall a value when I run this chunk:
+
+```{r}
+animal[3]
+```
+
+You can edit the code in a chunk and re-run it to see the effect of your changes. (If you are used to Jupyter notebooks, this behavior is similar to the behavior of code cells in a notebook.)
+
+To clear the output of one or all chunks, go to the `Edit` menu and select `Clear Output` or `Clear All Output`.
+
+To add a new chunk, click the `Insert` button on the toolbar and select `R`.
+
+To refresh the preview of the code in the Viewer pane, click the `Preview` button again.
+
+# R data basics
+
+## Categorizing objects in R
+
+There are two main ways of categorizing objects in R.  Obhects can be categorized by their mode, which represents how they are stored.  Common modes are: numeric, character, list, and functions. We can find the mode of an object using the `mode()` function:
+
+```{r}
+pet <- "rover"
+pie <- 3.14159
+animal <- c("frog", "spider", "worm", "bee")
+mode(pet)
+mode(pie)
+mode(animal)
+```
+
+Objects can also be characterized by their class, which determines how R will process those objects.  
+
+## Sequences
+
+You can generate a sequence of numbers like this:
+
+```{r}
+1:5
+```
+
+Using this simple notation the sequence steps by ones.  You can have the sequence count down by putting the larger number in front of the colon:
+
+```{r}
+10:-2
+```
+
+If you are used to Python, you should notice that the sequence does not end at one value before the final number as it does in Python ranges.
+
+# R data structures
+
+R has a number of data structures that vary by the kinds of things that can be stored in them and their dimensionality (1 dimensional, 2 dimensional, etc.).  We'll learn about four: vectors, lists, data frames, and tibbles.
+
+## Vectors
+
+![Diagram of a vector](https://heardlibrary.github.io/digital-scholarship/script/r/images/vector-diagram.png)
+
+A *vector* is a one-dimensional data structure consisting of items of the same mode.  In R, all data structures are "one based" (counting starts with one) as opposed to "zero-based" languages like Python.
+
+Here's how to assign values to a vector using the "construct" function:
+
+```{r}
+animal <- c("frog", "spider", "worm", "bee")
+```
+
+Expand the Environment pane so that you can see the values in the vector.  Note: in R, it is conventional to use double quotes to define string literals, although single quotes are allowed. 
+
+You can also create a vector of numbers:
+
+```{r}
+myNumbers <- c(1, 3, 6, 10, 15)
+```
+
+When you create a sequence using the colon notation, the result is a vector that is the same as if you used the construct function:
+
+```{r}
+firstVector <- 1:5
+secondVector <- c(1:5)
+
+firstVector
+secondVector
+```
+
+To find the number of items in a vector, use the `length()` function:
+
+```{r}
+length(animal)
+```
+
+
+To append another item to a vector, include the previous vector in the construct function:
+
+```{r}
+animal <- c(animal,"monkey")
+
+animal
+length(animal)
+```
+
+To replace a particular item, reference it by its index:
+
+```{r}
+animal[2] <- "arachnid"
+```
+
+You can refer to part of a vector using a subvector reference like this:
+
+```{r}
+animal[2:4]
+```
+
+The items in the vector that you are extracting are specified by the sequence you put in the square brackets.  (Aside for Python users: unlike Python slices, the last number in the sequence is included in the subvector.  Also remember that that the first item in the vector is 1, not 0 as in Python.)
+
+You can explicitly construct the sequence of items by listing the item numbers.  You can also assign the sequence to a variable and specifiy the items to be extracted with it.
+
+```{r}
+animal[c(4, 1, 3)]
+indexSequence <- 4:1
+animal[indexSequence]
+```
+
+One somewhat surprising thing about R is that individual items are actually vectors with lengths of one. The result is the same whether the item is assigned directly to a variable or assigned by the construct function.  
+
+```{r}
+thingOne <- c("thing")
+thingTwo <- "thing"
+
+thingOne
+thingOne[1]
+thingTwo
+thingTwo[1]
+
+length(thingOne)
+length(thingOne[1])
+length(thingTwo)
+```
+
+R has two built-in values to indicate that something is wrong: `NA` and `NULL`.  
+
+`NA` is used for missing values.  It is an indicator that a value is missing and it can be assigned to a vector as a value.  It has a length of one and you can think of it as a sort of empty item. 
+
+```{r}
+animal[2] <- NA
+animal
+```
+
+`NULL` is used to indicate that there is no value.  It can't be assigned to a vector as a value.  It has a length of zero and and you can think of it as the case of an item that isn't there.
+
+```{r}
+animal[3] <- NULL
+animal
+```
+
+## Lists
+
+![Diagram of a list](https://heardlibrary.github.io/digital-scholarship/script/r/images/list-diagram.png)
+
+A *list* is also a one-dimensional data structure, like a vector. However, the items in a list can be heterogeneous (different modes of items).  In the example above, the list contains two character strings, one number, and one vector. 
+
+Assuming that the `animal` vector is in your environment,  the following command will create the list diagrammed above:
+
+```{r}
+thing <- list(fruitKind="apple", euler=2.71828, vectorData=animal, curse="!@#$%")
+```
+
+Notice that in this list I've assigned the items to the list by name. (It is also possbile to assign names to vector items but that is less common.)
+
+Because the list is complicated, the items composing it are not shown in the Environment pane.  To see all of the list's parts, I can either click on the `thing` entry in the Environment pane, or issue the command:
+
+```{r}
+View(thing)
+```
+
+When I view the list, the description opens as a new tabl in the same pane as the editor.
+
+Items in a list can viewed by either their position or their name.  In contrast to vectors, the index is put in double square brackets.
+
+```{r}
+thing[[3]]
+thing[["euler"]]
+```
+
+A commonly used shorthand method for referring to list items by their names is by separating the list from the name by a dollar sign:
+
+```{r}
+thing$euler
+thing$vectorData
+```
+
+## Factors
+
+## Data frames
+
+## Tibbles
+
