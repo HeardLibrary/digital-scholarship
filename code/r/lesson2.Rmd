@@ -9,7 +9,13 @@ output: html_notebook
 
 ## Viewing R Markdown in RStudio
 
-This document is itself an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you load it into the editor pane of RStudio, you see the Markdown document markup, which isn't that easy to read.  However, you can render the Markdown in a viewer pane.  
+This document is itself an [R Markdown](http://rmarkdown.rstudio.com) Notebook. To download it, go to [this page](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2.Rmd).
+
+![](https://github.com/HeardLibrary/digital-scholarship/raw/gh-pages/script/r/images/r-markdown-notebook-download.png) 
+
+Right click on the `Raw` button and select `Save link as ...`. Save the notebook somewhere where you can find it.  In R Studio, click the Open button or select the `Open File` option from the `File` menu. Navigate to the place where you saved the file and open it.
+
+When you load the notebook into the editor pane of RStudio, you see the Markdown document markup, which isn't that easy to read.  However, you can render the Markdown in a viewer pane.  
 
 ![Selecting Preview in Viewer Pane](https://github.com/HeardLibrary/digital-scholarship/raw/gh-pages/script/r/images/preview-in-viewer.png) 
 
