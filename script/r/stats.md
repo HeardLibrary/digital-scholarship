@@ -31,7 +31,7 @@ Data arranged in this manner is called ["tidy data"](https://heardlibrary.github
 Here's the script to perform the t-test of means on [these data](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/r/t-test.csv):
 
 ```
-heightsDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/t-test.csv")
+heightsDframe <- read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/t-test.csv")
 t.test(height ~ grouping, data=heightsDframe, var.equal=TRUE, conf.level=0.95)
 ```
 
@@ -60,7 +60,7 @@ The data for each group are located in a separate column since we will want to b
 This example file has a third column ("group") with a letter identifying each pair, but it isn't necessary for the test and R will simply ignore it. Here's how we can perform the test on [these data](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/r/paired-t.csv) comparing enzyme reaction rates in the presence and absence of malonate:
 
 ```
-malonateDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/paired-t.csv")
+malonateDframe <- read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/paired-t.csv")
 t.test(malonateDframe$no_malonate, malonateDframe$malonate, paired=TRUE)
 ```
 
@@ -79,8 +79,8 @@ while the setup in R would look like this:
 To carry out the test, we need two vectors: one containing the observed values as counts and another containing the expected values as relative frequencies.  For the example above, here's how we would do the test:
 
 ```
-observedFlips = c(46, 41)        # actual absolute frequency: (heads, tails)
-expectedProb = c(0.5, 0.5)      # expected relative frequency: (heads, tails)
+observedFlips <- c(46, 41)        # actual absolute frequency: (heads, tails)
+expectedProb <- c(0.5, 0.5)      # expected relative frequency: (heads, tails)
 chisq.test(x = observedFlips, p = expectedProb)
 ```
 
@@ -95,7 +95,7 @@ Here is [a contingency table for data](https://github.com/HeardLibrary/digital-s
 In R, the data for a contingency test must be in the form of a data structure called a *matrix*. Details of the matrix data structure are beyond the scope of this lesson - we will simply convert the data from a data frame into a matrix using a function.  Here is the script:
 
 ```
-childrenDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/contingency.csv")
+childrenDframe <- read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/contingency.csv")
 childrenMatrix <- as.matrix(childrenDframe[,-1]) # convert data frame to matrix, removing first column
 chisq.test(childrenMatrix, correct=FALSE)      # don't do Yates' correction
 ```
@@ -111,7 +111,7 @@ Using these [fake data](https://github.com/HeardLibrary/digital-scholarship/blob
 To perform a regression using R, we usd the *linear model* function `lm()`.  The first argument of the function contains the dependent variable (wag_rate), followed by a tildle and the independent variable (treat_size).  After running the model, we ask R to summarize the results:
 
 ```text
-dogtailDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/dog-tail.csv")
+dogtailDframe <- read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/dog-tail.csv")
 model <- lm(wag_rate ~ treat_size, data=dogtailDframe)
 summary(model)
 ```
@@ -152,7 +152,7 @@ The setup of a data table to carry out an ANOVA in R uses grouping variables in 
 The following example uses [data from an electroretinogram](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/r/red-green-anova-example.csv) to test whether there are differences in a cockroach eye's sensitivity to red and green light.  
 
 ```text
-ergDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/red-green-anova-example.csv")
+ergDframe <- read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/red-green-anova-example.csv")
 model <- lm(response ~ color, data = ergDframe)  # fit a linear model to the data
 anova(model)  #run the ANOVA on the model
 ```
@@ -164,7 +164,7 @@ Since the format required for a single factor ANOVA with two categories is exact
 Unlike a t-test, which can only compare two groups, a single factor ANOVA can check for differences among three or more levels of a treatment.  For example, if you replace the following line for the first line in the script, the ANOVA will compare the effect of red, green, and blue light based on [these data](https://github.com/HeardLibrary/digital-scholarship/tree/master/data/r/color-anova-example.csv):
 
 ```
-ergDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/color-anova-example.csv")
+ergDframe <- read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/color-anova-example.csv")
 ```
 
 ### Two factor ANOVA
@@ -172,7 +172,7 @@ ergDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digita
 The setup for a multi-factor ANOVA in R is similar to a single factor ANOVA except that there are two columns for grouping variables instead of one.  In this example (using [fake data](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/r/fake-soap-experiment.csv)), we are simultaneously examining the effect of soap and triclosan (an antimicrobial agent) on the bacteria found on hands after washing:
 
 ```text
-soapDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/fake-soap-experiment.csv")
+soapDframe <- read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/fake-soap-experiment.csv")
 model <- lm(counts ~ soap + triclosan, data = soapDframe)
 anova(model)
 ```
@@ -198,7 +198,7 @@ Since this is a two factor ANOVA, there is a line in the ANOVA table for each of
 We can run an ANOVA test in the same way when one of the two factors is a block effect.  (Note: we are oversimplifying in this example, since when one of the effects is random we should be making modifications to the script.  But that's beyond the scope of this lesson.)  Here is the script to analyze the cockroach color data from before, but this time including the individual roach as a block:  
 
 ```text
-ergDframe = read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/color-anova-example.csv")
+ergDframe <- read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/color-anova-example.csv")
 model <- lm(response ~ block + color, data = ergDframe)
 anova(model)
 ```
