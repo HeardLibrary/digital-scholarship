@@ -22,6 +22,8 @@ The following links lead to a series of lessons designed to help you get started
 
 Lesson 2: Data Structures. See the [web page](presentations/lesson2.nb.html) for instructions on how to download [the R Markdown lesson notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2.Rmd) and open it in R Studio.
 
+Lesson 3: Programming. Download [this R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-programs.R) by right clicking on the Raw button and selecting `Save As...`, then opening the saved file.  You can also just copy and paste the script into a new R script in the editor window.
+
 # Online R Resources
 
 [Software Carpentry Programming with R](http://swcarpentry.github.io/r-novice-inflammation/)
