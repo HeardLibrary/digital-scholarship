@@ -22,7 +22,6 @@ df_from_file$height
 class(df_from_file$height)
 
 # Notice that the grouping column is an instance of the "factor" class.
-df_from_file <- read.csv(file.choose())
 
 # It the CSV file does not have headers, you can add the "header = FALSE" argument:
 df_from_file <- read.csv(file.choose(), header = FALSE)
@@ -176,7 +175,7 @@ anova(model)  #run the ANOVA on the model
 # Here's a scatter plot of the dog tail-wagging data:
 
 dogtail_dframe <- read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/dog-tail.csv")
-plot(wag_rate ~ treat_size, data=dogtailDframe)
+plot(wag_rate ~ treat_size, data=dogtail_dframe)
 
 # The best-fit trend line from the regression can be added to the plot:
 model <- lm(wag_rate ~ treat_size, data=dogtail_dframe)
@@ -248,3 +247,4 @@ plot(zip_code_factor, y = frac_white)
 
 # Plot by school level:
 plot(schools_dframe$School.Level, y = frac_white)
+
