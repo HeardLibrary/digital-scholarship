@@ -64,7 +64,7 @@ malonateDframe <- read.csv(file="https://raw.githubusercontent.com/HeardLibrary/
 t.test(malonateDframe$no_malonate, malonateDframe$malonate, paired=TRUE)
 ```
 
-Notice that in this example, we referred to the data in a particular column using the `$` notation (e.g. `malonateDframe$no_malonate` for the data in the "no_malonate" column).  R treats the column data from the data fram as it would a vector when it inputs it into the `t.test` function.
+Notice that in this example, we referred to the data in a particular column using the `$` notation (e.g. `malonateDframe$no_malonate` for the data in the "no_malonate" column).  R treats the column data from the data frame as it would a vector when it inputs it into the `t.test` function.
 
 ## chi-squared goodness of fit test
 
@@ -79,9 +79,9 @@ while the setup in R would look like this:
 To carry out the test, we need two vectors: one containing the observed values as counts and another containing the expected values as relative frequencies.  For the example above, here's how we would do the test:
 
 ```
-observedFlips <- c(46, 41)        # actual absolute frequency: (heads, tails)
-expectedProb <- c(0.5, 0.5)      # expected relative frequency: (heads, tails)
-chisq.test(x = observedFlips, p = expectedProb)
+actualAbsFreq <- c(46, 41)        # actual absolute frequency: (heads, tails)
+expectedRelFreq <- c(0.5, 0.5)      # expected relative frequency: (heads, tails)
+chisq.test(x = actualAbsFreq, p = expectedRelFreq)
 ```
 
 Note that the order of the items in the observed vector need to correspond to the order in the expected vector.
@@ -102,7 +102,7 @@ chisq.test(childrenMatrix, correct=FALSE)      # don't do Yates' correction
 
 The first column of the table is to help us keep the combinations straight, but is not needed by R.  So when we convert the data frame into a matrix in the second line of the script, the `,-1` removes the first column before the conversion.  
 
-In the third line of the script, `correct=FALSE` turns off Yates' correction, which can be used when contingency tests have very values.  
+In the third line of the script, `correct=FALSE` turns off Yates' correction, which can be used when contingency tests have expected cell frequencies of less than 10.  
 
 ## Regression
 
