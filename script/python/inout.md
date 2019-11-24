@@ -305,7 +305,7 @@ def readCsv(filename, header):
     fileObject = open(filename, 'r', newline='', encoding='utf-8')
     readerObject = csv.reader(fileObject)
     array = []
-    if not header:
+    if header:
         next(readerObject)
     for row in readerObject:
         array.append(row)
