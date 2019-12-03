@@ -198,7 +198,7 @@ Ji,Kim,kimji8,44947
 Veronica,Fuentes,shakira<3,19846
 ```
 
-Paste this text into a text editor, then save it as `students.txt`. You can then open the file with a spreadsheet program like Excel, Open Office, or Libre Office.  If you do, it will look something like this:
+Paste this text into a text editor, then save it as `students.csv`. You can then open the file with a spreadsheet program like Excel, Open Office, or Libre Office.  If you do, it will look something like this:
 
 <img src="../images/open-office-table.png" style="border:1px solid black">
 
