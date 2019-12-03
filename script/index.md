@@ -22,7 +22,7 @@ Python is an easy to learn general purpose programming language.  It is broadly 
 
 [Python resources page](python/)
 
-[Python Working Group website](python/wg/)
+[Python lessons page](python/wg/)
 
 ## R
 
@@ -30,7 +30,7 @@ R is a freely-available, open-source programming language that is widely used fo
 
 [R resources page](r/)
 
-[R Working Group website](https://heardlibrary.github.io/commodore-r-group/)
+[R lessons page](r/lessons/)
 
 ## Other tools
 
