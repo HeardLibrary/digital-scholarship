@@ -16,7 +16,9 @@ The following links lead to a series of lessons designed to help you get started
 
 [4. Where do I go from here?](next)
 
-## Presentations
+## R lessons at Vanderbilt
+
+Go to the [lessons home page](lessons/) for information, schedule, and registration.
 
 [Lesson 1: Installing R and RStudio, Navigating around in RStudio](presentations/lesson1-r-rstudio.pdf)
 
