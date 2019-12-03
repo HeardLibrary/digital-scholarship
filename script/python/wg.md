@@ -1,30 +1,30 @@
 ---
 permalink: /script/python/wg/
-title: Python Working Group
-breadcrumb: Working Group
+title: DiSC Python lessons
+breadcrumb: Lessons
 ---
 
-# Python Working Group
+# DiSC Python Lessons
 
 A shortened link to this page is [vanderbi.lt/py](http://vanderbi.lt/py).
 
-## About the group
+## About the lessons
 
-The Python Working Group is a working group of the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/).  The group provides regular lessons for Python beginners and occasional special topics lessons.  Registration is required - go to [this form](https://docs.google.com/forms/d/e/1FAIpQLSfPgczgC0XquvLzCeXLpQc7Ojw9YdN0_uhd1Q8NAp1NWSt-MQ/viewform?usp=sf_link) to register for the second cycle beginner lessons or to [this form](https://docs.google.com/forms/d/e/1FAIpQLScaC3yV6DE50OEWFx7klDOJH3w-zs03g-4ViatzXKAoRopo7w/viewform?usp=sf_link) to register for the API/web scraping lessons.
+DiSC Python lessons are provided by the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/) at [Vanderbilt University](https://www.vanderbilt.edu/).  The DiSC office provides regular lessons for Python beginners and occasional special topics lessons.  Registration is required - go to [this form](https://forms.gle/QZiG5vg6NNNywrg19) to register for the first cycle beginner lessons.
 
 The beginners lessons generally cycle twice per semester.  See the schedule below for details.  You are also encouraged to work through the lessons on your own.  They contain practice exercises, with answers.  
 
-In the second half of the 2019 fall semester, the DiSC office is planning an intermediate-level series of lessons on APIs and web scraping using Python.  See the schedule below.
+In the second half of the 2020 spring semester, the DiSC office may present an intermediate-level series of lessons on working with large data sets.  Stay tuned for further information.
 
-In the fall 2019 semester, the DiSC office is also sponsoring a working group on using Python in GIS: [vanderbi.lt/gis](https://sites.google.com/view/vugis/home). 
+The DiSC office also provides [lessons for learning R](https://heardlibrary.github.io/digital-scholarship/script/r/lessons) in a similar format.
 
 ## Venue
 
-The Working Group meets in the Eskind Training Room (Room 010 in the basement of the Eskind Biomedical Library).  To get there, walk past the circulation desk and veer to the left.  Take the elevators or stair down one floor, then turn right when you come out.
+We meet in the Eskind Training Room (Room 010 in the basement of the Eskind Biomedical Library).  To get there, walk past the circulation desk and veer to the left.  Take the elevators or stair down one floor, then turn right when you come out.
 
 ## Schedule of Beginners Lessons - Fall 2019
 
-Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  This cycle is now fully enrolled.  Check again later for spring semester offerings. 
+Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  This cycle is now fully enrolled. 
 
 | Date | Session | Topic | Notes |
 |---|---|---|
@@ -48,6 +48,32 @@ Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  This cycle is now fully enroll
 | Nov 22 | 4 | Scraping with Beautiful Soup | [Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/lesson4-scrape.ipynb) |
 | Dec 6 | 5 | Project | |
 
+## Schedule of Beginners Lessons - Spring 2020
+
+First cycle: **Fridays** from 1:10 to 2:00 PM.  [Register here](https://forms.gle/QZiG5vg6NNNywrg19)
+
+| Date | Session | Topic | Notes |
+|---|---|---|
+| Jan 10 | 1 | Getting started | [intro](../) / [Anaconda](../../anaconda/) / [install Thonny](../thonny/) / [install Python](../install/) / [install editor](../editor/) / [code examples](../examples/) / [example notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)|
+| Jan 17 | 2 | Python scripting basics | [lesson webpage](../basics/) |
+| Jan 24 | 3 | Object-oriented Python | [lesson webpage](../object/) |
+| Jan 31 | 4 | Lists and loops | [lesson webpage](../structures/) |
+| Feb 7 | 5 | Dictionaries and JSON | [lesson webpage](../json/) |
+| Feb 21 | 6 | Input and output from files | [lesson webpage](../inout/) |
+| Feb 28 | 7 | Interacting with the Internet | [lesson webpage](../internet/) |
+
+Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  
+
+| Date | Session | Topic | Notes |
+|---|---|---|
+| Mar 10 | 1 | Getting started | [intro](../) / [Anaconda](../../anaconda/) / [install Thonny](../thonny/) / [install Python](../install/) / [install editor](../editor/) / [code examples](../examples/) / [example notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)|
+| Mar 17 | 2 | Python scripting basics | [lesson webpage](../basics/) |
+| Mar 24 | 3 | Object-oriented Python | [lesson webpage](../object/) |
+| Mar 31 | 4 | Lists and loops | [lesson webpage](../structures/) |
+| Apr 7 | 5 | Dictionaries and JSON | [lesson webpage](../json/) |
+| Apr 14 | 6 | Input and output from files | [lesson webpage](../inout/) |
+| Apr 21 | 7 | Interacting with the Internet | [lesson webpage](../internet/) |
+
 # Python Resources
 
 Here's a [page of Python resources](../)
@@ -69,4 +95,4 @@ Stay tuned for future offerings
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2019-10-30
+Revised 2019-12-03
