@@ -48,11 +48,5 @@ For summaries of how to perform a variety of tasks using the RStudio IDE, see th
 
 To try out some simple R scripts for t-test of means, paired t-test, chi-squared goodness of fit, chi-squared contingency, regression, and ANOVA, visit [this page](stats/).
 
-# Resources at Vanderbilt
-
-[Home page of the R Working Group](https://heardlibrary.github.io/commodore-r-group/) of the Vanderbilt Libraries
-
-[R/RStudio research guide](https://researchguides.library.vanderbilt.edu/c.php?g=882675) with additional resources.
-
 ----
-Revised 2019-11-05
+Revised 2019-12-03
