@@ -10,7 +10,7 @@ A shortened link to this page is [vanderbi.lt/py](http://vanderbi.lt/py).
 
 ## About the lessons
 
-DiSC Python lessons are provided by the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/) at [Vanderbilt University](https://www.vanderbilt.edu/).  The DiSC office provides regular lessons for Python beginners and occasional special topics lessons.  Registration is required - go to [this form](hhttps://forms.gle/nM4N2bYRmG7BA8z27) to register for the first cycle beginner lessons.
+DiSC Python lessons are provided by the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/) at [Vanderbilt University](https://www.vanderbilt.edu/).  The DiSC office provides regular lessons for Python beginners and occasional special topics lessons.  Registration is required - go to [this form](https://forms.gle/nM4N2bYRmG7BA8z27) to register for the first cycle beginner lessons.
 
 The beginners lessons generally cycle twice per semester.  See the schedule below for details.  You are also encouraged to work through the lessons on your own.  They contain practice exercises, with answers.  
 
