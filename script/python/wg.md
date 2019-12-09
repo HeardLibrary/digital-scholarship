@@ -46,7 +46,7 @@ Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  This cycle is now fully enroll
 | Nov 8 | 2 | API search and authentication | [Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/lesson2-api.ipynb) |
 | Nov 15 | 3 | HTML and web page structure | [Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/lesson3-html.ipynb), [Presentation](../presentations/lesson3-html.pdf) |
 | Nov 22 | 4 | Scraping with Beautiful Soup | [Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/lesson4-scrape.ipynb) |
-| Dec 6 | 5 | Project | |
+| Dec 6 | 5 | Project | [Jupyter notebook for Twitter location search project](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/twitter_location_search.ipynb) |
 
 ## Schedule of Beginners Lessons - Spring 2020
 
