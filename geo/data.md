@@ -1,7 +1,7 @@
 ---
-permalink: /geo/
-title: Geospatial Resources
-breadcrumb: Geospatial
+permalink: /geo/data/
+title: Data Resources
+breadcrumb: Data
 ---
 
 # Geospatial Science
@@ -13,6 +13,7 @@ The [Digital Scholarship and Scholarly Communications Office](https://www.librar
 [GIS homepage](gis/)
 
 [GIS Working Group](https://sites.google.com/view/vugis/home)
+
 
 ----
 Revised 2019-12-11

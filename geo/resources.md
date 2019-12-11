@@ -1,7 +1,7 @@
 ---
-permalink: /geo/
-title: Geospatial Resources
-breadcrumb: Geospatial
+permalink: /geo/resources/
+title: Learning Resources
+breadcrumb: Resources
 ---
 
 # Geospatial Science

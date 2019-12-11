@@ -1,7 +1,7 @@
 ---
-permalink: /geo/
-title: Geospatial Resources
-breadcrumb: Geospatial
+permalink: /geo/tools/
+title: Geospatial Tools
+breadcrumb: Tools
 ---
 
 # Geospatial Science
