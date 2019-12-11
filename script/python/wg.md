@@ -22,32 +22,6 @@ The DiSC office also provides [lessons for learning R](https://heardlibrary.gith
 
 We meet in the Eskind Training Room (Room 010 in the basement of the Eskind Biomedical Library).  To get there, walk past the circulation desk and veer to the left.  Take the elevators or stair down one floor, then turn right when you come out.
 
-## Schedule of Beginners Lessons - Fall 2019
-
-Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  This cycle is now fully enrolled. 
-
-| Date | Session | Topic | Notes |
-|---|---|---|
-| Oct 15 | 1 | Getting started | [intro](../) / [Anaconda](../../anaconda/) / [install Thonny](../thonny/) / [install Python](../install/) / [install editor](../editor/) / [code examples](../examples/) / [example notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)|
-| Oct 29 | 2 | Python scripting basics | [lesson webpage](../basics/) |
-| Nov 5 | 3 | Object-oriented Python | [lesson webpage](../object/) |
-| Nov 12 | 4 | Lists and loops | [lesson webpage](../structures/) |
-| Nov 19 | 5 | Dictionaries and JSON | [lesson webpage](../json/) |
-| Dec 3 | 6 | Input and output from files | [lesson webpage](../inout/) |
-| Dec 10 | 7 | Interacting with the Internet | [lesson webpage](../internet/) |
-
-## Schedule of API/Web Scraping Lessons - Fall 2019
-
-**Fridays** from 1:10 to 2:00 PM.  [Register here](https://docs.google.com/forms/d/e/1FAIpQLScaC3yV6DE50OEWFx7klDOJH3w-zs03g-4ViatzXKAoRopo7w/viewform?usp=sf_link)
-
-| Date | Session | Topic | Notes |
-|---|---|---|---|
-| Nov 1 | 1 | HTTP and APIs | [Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/lesson1-http.ipynb), [Presentation](../presentations/lesson1-http.pdf) |
-| Nov 8 | 2 | API search and authentication | [Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/lesson2-api.ipynb) |
-| Nov 15 | 3 | HTML and web page structure | [Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/lesson3-html.ipynb), [Presentation](../presentations/lesson3-html.pdf) |
-| Nov 22 | 4 | Scraping with Beautiful Soup | [Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/lesson4-scrape.ipynb) |
-| Dec 6 | 5 | Project | [Jupyter notebook for Twitter location search project](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/twitter_location_search.ipynb) |
-
 ## Schedule of Beginners Lessons - Spring 2020
 
 First cycle: **Fridays** from 1:10 to 2:00 PM.  [Register here](https://forms.gle/nM4N2bYRmG7BA8z27)
@@ -74,6 +48,16 @@ Second cycle: **Tuesdays** from 1:10 to 2:00 PM.
 | Apr 14 | 6 | Input and output from files | [lesson webpage](../inout/) |
 | Apr 21 | 7 | Interacting with the Internet | [lesson webpage](../internet/) |
 
+## Archive of API/Web Scraping Lessons - Fall 2019
+
+| Date | Session | Topic | Notes |
+|---|---|---|---|
+| Nov 1 | 1 | HTTP and APIs | [Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/lesson1-http.ipynb), [Presentation](../presentations/lesson1-http.pdf) |
+| Nov 8 | 2 | API search and authentication | [Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/lesson2-api.ipynb) |
+| Nov 15 | 3 | HTML and web page structure | [Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/lesson3-html.ipynb), [Presentation](../presentations/lesson3-html.pdf) |
+| Nov 22 | 4 | Scraping with Beautiful Soup | [Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/lesson4-scrape.ipynb) |
+| Dec 6 | 5 | Project | [Jupyter notebook for Twitter location search project](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/twitter_location_search.ipynb) |
+
 # Python Resources
 
 Here's a [page of Python resources](../)
@@ -95,4 +79,4 @@ Stay tuned for future offerings
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2019-12-03
+Revised 2019-12-11
