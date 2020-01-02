@@ -10,7 +10,7 @@ A shortened link to this page is [vanderbi.lt/r](http://vanderbi.lt/r).
 
 ## About the lessons
 
-DiSC R lessons are provided by the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/) at [Vanderbilt University](https://www.vanderbilt.edu/).  The DiSC office provides regular lessons for R beginners and occasional special topics lessons.  Registration is required - go to [this form](https://forms.gle/BDrnAg8aHvDRvz4i9) to register for the first cycle beginner lessons.
+DiSC R lessons are provided by the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/) at [Vanderbilt University](https://www.vanderbilt.edu/).  The DiSC office provides regular lessons for R beginners and occasional special topics lessons.  Registration is required - go to [this form](https://forms.gle/BDrnAg8aHvDRvz4i9) to register for the first cycle beginner lessons. There is no cost associated with the lessons.
 
 The beginners lessons generally cycle twice per semester.  See the schedule below for details.  You are also encouraged to work through the lessons on your own.   
 
@@ -65,4 +65,4 @@ Stay tuned for future offerings
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2019-12-03
+Revised 2020-01-02
