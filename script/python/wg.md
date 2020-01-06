@@ -36,8 +36,7 @@ First cycle: **Fridays** from 1:10 to 2:00 PM.  [Register here](https://forms.gl
 | Feb 21 | 6 | Input and output from files | [lesson webpage](../inout/) |
 | Feb 28 | 7 | Interacting with the Internet | [lesson webpage](../internet/) |
 
-Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  
-
+Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  [Register here](https://forms.gle/Z5UThwmzHBEZgiUs5)
 | Date | Session | Topic | Notes |
 |---|---|---|
 | Mar 10 | 1 | Getting started | [intro](../) / [Anaconda](../../anaconda/) / [install Thonny](../thonny/) / [install Python](../install/) / [install editor](../editor/) / [code examples](../examples/) / [example notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)|
