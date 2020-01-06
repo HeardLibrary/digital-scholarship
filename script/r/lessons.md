@@ -33,7 +33,7 @@ First cycle: **Tuesdays** from 1:10 to 2:00 PM.  [Register here](https://forms.g
 | Feb 11 | 5 | Data visualization with ggplot |  |
 | Feb 18 | 6 | Programming in R | |
 
-Second cycle: **Fridays** from 1:10 to 2:00 PM.  
+Second cycle: **Fridays** from 1:10 to 2:00 PM.  [Register here](https://forms.gle/nege53mCTEKyXZcH6)
 
 | Date | Session | Topic | Notes |
 |---|---|---|
