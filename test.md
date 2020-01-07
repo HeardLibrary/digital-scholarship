@@ -45,7 +45,7 @@ Successfully working with your research data requires skills in several areas:
 
 <hr/>
 
-<img src="https://heardlibrary.github.io/digital-scholarship/images/signal-logo.png" alt="Signal logo" style="height:130px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/tor-logo.png" alt="Tor logo" style="height:130px;" />
+<img src="https://heardlibrary.github.io/digital-scholarship/images/signal-logo.png" alt="Signal logo" style="height:120px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/tor-logo.png" alt="Tor logo" style="height:120px;" />
 
 # Digital privacy and security
 
