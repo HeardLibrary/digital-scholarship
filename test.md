@@ -1,60 +1,18 @@
 ---
 permalink: /test/
-title: Digital Scholarship Resources
-breadcrumb: test
+title: Data Curation and Analysis
+breadcrumb: data
 ---
 
-# About
+<img src="https://heardlibrary.github.io/digital-scholarship/images/desktop.png" alt="computer desktop" style="height:200px;" />
 
-This site is intended to be a one-stop resource for information broadly related to managing your digital life.  Although the pages are arranged in a topic hierarchy, you can navigate in other ways using the navigation pages linked below.
+# Basic computer skills
 
-In addition to the resources on this site, you can browse the Digital Scholarship [code repository](https://github.com/HeardLibrary/digital-scholarship) to find bits of code that might help you.
+Knowing how to use your computer effectively is a critical skill for success.  For a series of lessons to help you understand how to use your Mac or Windows computer visit [this page]( https://heardlibrary.github.io/digital-scholarship/computer/).  Topics covered include files and directories, installing and uninstalling software, connecting devices, and backups.  There is also a basic introduction to using the command line.  
 
-# Ways to navigate
+<img src="https://heardlibrary.github.io/digital-scholarship/images/dmp-tool.png" alt="DMP Tool logo" style="height:150px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/osf-logo.png" alt="Open Science Framework logo" style="height:130px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/GitHub_Logo.png" alt="GitHub logo" style="height:130px;" />
 
-## FAQ
+# Data management and publication
 
-[Frequently asked questions - Beginner](beginner)
+<img src="https://heardlibrary.github.io/digital-scholarship/images/python.png" alt="Python logo" style="height:130px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/R-Logo.png" alt="R logo" style="height:150px;" />
 
-[Frequently asked questions - Intermediate](intermediate)
-
-[Frequently asked questions - Advanced](advanced)
-
-## By Topic
-
-<table>
-<tr>
-<td><img src="../images/1052px-Wikidata-logo-en.svg.png" /></td><td>[Application hosting and management](host/)</td>
-</tr>
-<tr>
-<td>[Data cleaning](clean/)</td>
-</tr>
-<tr>
-<td>[Data management](manage/)</td>
-</tr>
-<tr>
-<td>[Data visualization](viz/)</td>
-</tr>
-<tr>
-<td>[Digital privacy and security](privacy/)</td>
-</tr>
-<tr>
-<td>[Document markup](markup/)</td>
-</tr>
-<tr>
-<td>[Geospatial data](geo/)</td>
-</tr>
-<tr>
-<td>[Linked Open Data (LOD)](lod/)</td>
-</tr>
-<tr>
-<td>[Scripting/programming languages](script/)</td>
-</tr>
-<tr>
-<td>[Understanding my computer](computer/)</td>
-</tr>
-</table>
-
-## Site Map
-
-[Go to the site map](map/)
