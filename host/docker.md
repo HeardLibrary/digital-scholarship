@@ -1,8 +1,22 @@
 ---
 permalink: /host/docker/
-title: Setting up Docker
+title: Introduction to Docker
 breadcrumb: Docker
 ---
+
+# What is Docker?
+
+*Docker* is a system that allows you to containerize a deployed application along with all of its configuration settings and associated files.  When you deploy a Docker container image, it is ready to run.  If you mess up a container, you can destroy it and redeploy the image. 
+
+[Notes from a workshop by Nick Stayer on building and running a Dockerfile](http://nickstrayer.me/docker_for_biostatisticians/) (2019-04-26)
+
+*Docker Compose* is a feature of Docker that allows several containers to interact with each other in a pre-determined way.  It allows one to archive a complex setup of several applications in a way that others can easily deply them.
+
+[Introduction to Docker Compose](dockercompose/)
+
+*Docker Machine* is a system for managing Docker containers on several servers.  This can include remote servers (such as those on Amazon Web Services or Digital Ocean), as well as a localhost server on your own computer.  You can switch between different servers, then interact with them in the same way (through Docker or Docker Compose commands) as you would with the default localhost server using generic Docker.
+
+[Introduction to Docker Machine](dockermachine/)
 
 # Setting up and testing Docker
 
@@ -129,13 +143,11 @@ docker image rm {imageId}
 
 If you really want to get rid of everything and start over, see [these instructions](../../lod/install/#cleaning-up-if-you-are-just-playing-around-with-this)
 
-# Next steps
+# Things to try
 
 [Example using Docker to install Blazegraph locally](../../lod/install/#using-docker-to-create-an-instance-of-blazegraph-on-your-local-computer)
 
 [Example using Docker Compose to install the components of Wikibase locally](../../lod/install/#using-docker-compose-to-create-an-instance-of-wikibase-on-your-local-computer)
 
-[Docker Machine](../dockermachine/)
-
 ----
-Revised 2019-01-29
+Revised 2020-01-07
