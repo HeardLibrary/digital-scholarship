@@ -19,11 +19,11 @@ Knowing how to use your computer effectively is a critical skill for success.  F
 
 <hr/>
 
-<img src="https://heardlibrary.github.io/digital-scholarship/images/dmp-tool.png" alt="DMP Tool logo" style="height:130px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/osf-logo.png" alt="Open Science Framework logo" style="height:130px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/GitHub_Logo.png" alt="GitHub logo" style="height:110px;" />
+<img src="https://heardlibrary.github.io/digital-scholarship/images/dmp-tool.png" alt="DMP Tool logo" style="height:130px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/osf-logo.png" alt="Open Science Framework logo" style="height:130px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/GitHub_Logo.png" alt="GitHub logo" style="height:100px;" />
 
 # Data management and publication
 
-Key topics for curating your research data include:
+Key topics related to curating your research data include:
 <ul>
 <li><a href="https://heardlibrary.github.io/digital-scholarship/manage/planning/">planning the management of your data</a></li>
 <li><a href="https://heardlibrary.github.io/digital-scholarship/manage/repository/">archiving your data in a repository</a></li>
@@ -45,7 +45,7 @@ Successfully working with your research data requires skills in several areas:
 
 <hr/>
 
-<img src="https://heardlibrary.github.io/digital-scholarship/images/signal-logo.png" alt="Signal logo" style="height:140px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/tor-logo.png" alt="Tor logo" style="height:140px;" />
+<img src="https://heardlibrary.github.io/digital-scholarship/images/signal-logo.png" alt="Signal logo" style="height:130px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/tor-logo.png" alt="Tor logo" style="height:130px;" />
 
 # Digital privacy and security
 
