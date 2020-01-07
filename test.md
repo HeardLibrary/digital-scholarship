@@ -17,6 +17,8 @@ Knowing how to use your computer effectively is a critical skill for success.  F
 <li>a basic introduction to using the command line</li>
 </ul>
 
+<hr/>
+
 <img src="https://heardlibrary.github.io/digital-scholarship/images/dmp-tool.png" alt="DMP Tool logo" style="height:130px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/osf-logo.png" alt="Open Science Framework logo" style="height:130px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/GitHub_Logo.png" alt="GitHub logo" style="height:110px;" />
 
 # Data management and publication
@@ -26,6 +28,8 @@ Key topics for curating your research data include:
 <li><a href="https://heardlibrary.github.io/digital-scholarship/manage/planning/">planning the management of your data</a></li>
 <li><a href="https://heardlibrary.github.io/digital-scholarship/manage/repository/">archiving your data in a repository</a></li>
 </ul>
+
+<hr/>
 
 <img src="https://heardlibrary.github.io/digital-scholarship/images/python.png" alt="Python logo" style="height:120px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/R-Logo.gif" alt="R logo" style="height:130px;" />
 
@@ -39,11 +43,15 @@ Successfully working with your research data requires skills in several areas:
 <li>code organization using tools like <a href="https://heardlibrary.github.io/digital-scholarship/script/jupyter/">Jupyter notebooks</a> and <a href="https://heardlibrary.github.io/digital-scholarship/script/r/presentations/lesson2.nb.html">R Markdown</a></li>
 </ul>
 
+<hr/>
+
 <img src="https://heardlibrary.github.io/digital-scholarship/images/signal-logo.png" alt="Signal logo" style="height:140px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/tor-logo.png" alt="Tor logo" style="height:140px;" />
 
 # Digital privacy and security
 
 In today's world of malware, hacking, and loss of privacy, take your privacy and security into your own hands by learning about <a href="https://heardlibrary.github.io/digital-scholarship/privacy/">password managers, secure messaging, anonymous browsing, phone privacy, and avoiding malware</a>
+
+<hr/>
 
 <img src="https://heardlibrary.github.io/digital-scholarship/images/1052px-Wikidata-logo-en.svg.png" alt="Wikidata logo" style="height:140px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/rdf_flyer.png" alt="Wikidata logo" style="height:130px;" />
 
@@ -54,7 +62,7 @@ As more and more data and computing moves to the cloud, keep up to date by learn
 <li><a href="https://heardlibrary.github.io/digital-scholarship/host/">cloud services like AWS and DigitalOcean </a></li>
 <li><a href="https://heardlibrary.github.io/digital-scholarship/host/docker/">containerization using Docker </a></li>
 <li><a href="https://heardlibrary.github.io/digital-scholarship/host/wikidata/)">structured data at Wikidata </a></li>
-<li><a href="https://heardlibrary.github.io/digital-scholarship/lod/">Linked Data and the Semantic Web</a>
+<li><a href="https://heardlibrary.github.io/digital-scholarship/lod/">Linked Data and the Semantic Web</a></li>
 </ul>
 
 ----
