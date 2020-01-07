@@ -8,7 +8,7 @@ breadcrumb: data
 
 # Basic computer skills
 
-Knowing how to use your computer effectively is a critical skill for success.  For a series of lessons to help you understand how to use your Mac or Windows computer visit [this page]( https://heardlibrary.github.io/digital-scholarship/computer/).  Topics covered include files and directories, installing and uninstalling software, connecting devices, and backups.  There is also a basic introduction to using the command line.  
+Knowing how to use your computer effectively is a critical skill for success.  For a series of lessons to help you understand how to use your Mac or Windows computer visit <a href="https://heardlibrary.github.io/digital-scholarship/computer/">this page</a>.  Topics covered include files and directories, installing and uninstalling software, connecting devices, and backups.  There is also a basic introduction to using the command line.  
 
 <img src="https://heardlibrary.github.io/digital-scholarship/images/dmp-tool.png" alt="DMP Tool logo" style="height:150px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/osf-logo.png" alt="Open Science Framework logo" style="height:130px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/GitHub_Logo.png" alt="GitHub logo" style="height:130px;" />
 
@@ -22,7 +22,7 @@ Knowing how to use your computer effectively is a critical skill for success.  F
 
 # Digital privacy and security
 
-<img src="https://heardlibrary.github.io/digital-scholarship/images/1052px-Wikidata-logo-en.svg.gif" alt="Wikidata logo" style="height:150px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/rdf_flyer.png" alt="Wikidata logo" style="height:150px;" />
+<img src="https://heardlibrary.github.io/digital-scholarship/images/1052px-Wikidata-logo-en.svg.png" alt="Wikidata logo" style="height:150px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/rdf_flyer.png" alt="Wikidata logo" style="height:150px;" />
 
 # Online services and technologies
 
