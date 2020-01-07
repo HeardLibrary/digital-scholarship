@@ -16,3 +16,13 @@ Knowing how to use your computer effectively is a critical skill for success.  F
 
 <img src="https://heardlibrary.github.io/digital-scholarship/images/python.png" alt="Python logo" style="height:130px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/R-Logo.gif" alt="R logo" style="height:150px;" />
 
+# Coding
+
+<img src="https://heardlibrary.github.io/digital-scholarship/images/signal-logo.png" alt="Signal logo" style="height:130px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/tor-logo.png" alt="Tor logo" style="height:130px;" />
+
+# Digital privacy and security
+
+<img src="https://heardlibrary.github.io/digital-scholarship/images/1052px-Wikidata-logo-en.svg.gif" alt="Wikidata logo" style="height:150px;" /><img src="https://heardlibrary.github.io/digital-scholarship/images/rdf_flyer.png" alt="Wikidata logo" style="height:150px;" />
+
+# Online services and technologies
+
