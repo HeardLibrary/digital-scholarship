@@ -61,7 +61,7 @@ As more and more data and computing moves to the cloud, keep up to date by learn
 <ul>
 <li><a href="https://heardlibrary.github.io/digital-scholarship/host/">cloud services like AWS and DigitalOcean </a></li>
 <li><a href="https://heardlibrary.github.io/digital-scholarship/host/docker/">containerization using Docker </a></li>
-<li><a href="https://heardlibrary.github.io/digital-scholarship/host/wikidata/)">structured data at Wikidata </a></li>
+<li><a href="https://heardlibrary.github.io/digital-scholarship/host/wikidata/">structured data at Wikidata </a></li>
 <li><a href="https://heardlibrary.github.io/digital-scholarship/lod/">Linked Data and the Semantic Web</a></li>
 </ul>
 
