@@ -72,11 +72,11 @@ Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 
 ## Software Carpentries (cosponsored by DiSC and Research IT)
 
-Stay tuned for future offerings  
+March 5-6: A two-day workshop focused on Unix, Git, and Python.  Additional details to come. 
 
 --------------------
 
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-01-02
+Revised 2020-01-08
