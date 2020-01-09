@@ -1,5 +1,5 @@
 ---
-permalink: /geo/lessons/
+permalink: /geo/Lessons/
 title: Geospatial Lessons
 breadcrumb: Lessons
 ---
