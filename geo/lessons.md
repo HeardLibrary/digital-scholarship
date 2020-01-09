@@ -4,9 +4,7 @@ title: Geospatial Lessons
 breadcrumb: lessons
 ---
 
-#Lessons
 
-##Spring 2020
 Dates:  Wednesdays beginning January 15, 2020.
 Time:  1:10 - 2:00pm
 Location:  The Training Room in the basement of the Eskind Biomedical Library (Room 010).  
