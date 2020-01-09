@@ -1,7 +1,7 @@
 ---
-permalink: /geo/Lessons/
+permalink: /geo/lessons/
 title: Geospatial Lessons
-breadcrumb: Lessons
+breadcrumb: lessons
 ---
 
 #Lessons
