@@ -46,7 +46,7 @@ Sometimes notebooks have been made avialable on GitHub.  An example notebook is 
 
 To be able to run and edit a notebook, you need to download it somewhere on your hard drive.
 
-<img src="../images/save-github-raw.png" style="border:1px solid black">
+<img src="../python/images/save-github-raw.png" style="border:1px solid black">
 
 From the web page for the notebook, right click on the `Raw` button, then select `Save Link As...`.  Navigate to the place where you want to save it.  In this example, we'll save it in the Downloads folder, since that's an easy place to find it.
 
