@@ -10,15 +10,12 @@ The [Digital Scholarship and Scholarly Communications Office](https://www.librar
 
 [visit the Research Guide for GIS](http://researchguides.library.vanderbilt.edu/content.php?pid=45375&sid=3244601)
 
-[lessons homepage](lessons/)
+[Lessons homepage](lessons/)
 
-[data page](data/)
+[Data Resources](data/)
 
-[resources page](resources/)
+[Software](Software/)
 
-[tools page](tools/)
-
-[GIS Working Group](https://sites.google.com/view/vugis/home)
 
 ----
-Revised 2019-12-11
+Revised 2020-09-01
