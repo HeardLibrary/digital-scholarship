@@ -18,7 +18,7 @@ Many different types of information can be compared and contrasted using GIS. Th
 
 With GIS technology, people can compare the locations of different things in order to discover how they relate to each other. For example, using GIS, a single map could include sites that produce pollution, such as factories, and sites that are sensitive to pollution, such as wetlands and rivers. Such a map would help people determine where water supplies are most at risk.
 
-[Lessons](Lessons/)
+[Lessons](lessons/)
 
 [Data](Data/)
 

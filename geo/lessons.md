@@ -4,7 +4,7 @@ title: Geospatial Lessons
 breadcrumb: Lessons
 ---
 
-# Lessons
+#Lessons
 
 ##Spring 2020
 Dates:  Wednesdays beginning January 15, 2020.
