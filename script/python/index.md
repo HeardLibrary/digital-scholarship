@@ -66,15 +66,15 @@ Jupyter notebooks are particularly great if you are running code that is essenti
 
 If you are new to Python, an excellent starting-off point is [Python For Beginners](https://www.python.org/about/gettingstarted/), part of the official Python website.  It contains links to a massive number of other resources, including tutorials, videos, books, lists of editors and IDEs, and code examples.
 
-Some examples of code to play with are [here](examples)
+## DiSC Python lessons at Vanderbilt
 
-Example Jupyter notebook to play with is [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)
+The [Vanderbilt Libraries Digital Scholarship and Communications (DiSC) office](https://www.library.vanderbilt.edu/disc/) typically offers two cycles of Python lessons for beginners.  These lessons are given on the Vanderbilt campus and are free and open to anyone.  For more information about current offerings, see the [landing page for DiSC Python lessons](wg).
 
-## Python Working Group at Vanderbilt
+## O'Reilly for Higher Education resources
 
-[Home page of the Python Working Group](wg) of the [Vanderbilt Libraries Digital Scholarship and Communications Office](https://www.library.vanderbilt.edu/scholarly/)
+As of 2019-01-10, the Vanderbilt Libraries has a subscription to [O'Reilly for Higher Education](http://www.library.vanderbilt.edu/eres?id=1676) resources.  To access these resources, you need to have a Vanderbilt VUNet ID and password.  
 
-The introductory [presentation is here](presentations/lesson1-starting.pdf)
+The resources include access to the excellent O'Reilly books reference books, many training videos, and other interactive learning resources.  One example is the book Introducing Python (2nd Edition) by Bill Lubanovic, which can easily located using the search box on the website.
 
 ## Books
 
@@ -115,4 +115,4 @@ These series have not been vetted in any way - check them out at your own risk.
 [OSP - Python Beginner Series for Absolute Beginners](https://www.youtube.com/playlist?list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg) kjdElectronics - (58K subscribers)
 
 ----
-Revised 2019-10-17
+Revised 2020-01-10
