@@ -52,6 +52,8 @@ The GUI is divided into several panes.  On the left there is a pane with two tab
 
 There is a third pane in the lower right that serves additional purposes.  Its Plots tab will show the results of any graphs that are generated.  Its Packages tab provides a graphical interface for installing and loading packages (an alternative to loading them via text commands in the console).
 
+## Opening an editor pane
+
 Typing commands directly in the Console pane is a fine way to experiment and carry out simple tasks.  However, it's not the best way to develop more complex multiline scripts.  RStudio has a built-in editor that can be used to build scripts.  To begin a new script, select **New File** from the **File** menu, then **R Script**.  A fourth pane will appear in the RStudio window, in a tab that defaults to `Untitled1`.  
 
 ![](../images/rstudio-editor.png)

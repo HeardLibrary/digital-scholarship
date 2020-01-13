@@ -4,7 +4,7 @@ title: Introduction to R data structures
 breadcrumb: Data structures
 ---
 
-go back to [Navigating around in RStudio](../navigate/)]
+go back to [Navigating around in RStudio](../navigate/)
 
 # Introduction to R data structures
 
