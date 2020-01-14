@@ -48,6 +48,8 @@ Second cycle: **Fridays** from 1:10 to 2:00 PM.  [Register here](https://forms.g
 
 Here's a [page of R resources](../)
 
+[O’Reilly for Higher Education](http://www.library.vanderbilt.edu/eres?id=1676) books and videos (Vanderbilt sign-in required)
+
 [ICPSR data example](../nlsaah/)
 
 
