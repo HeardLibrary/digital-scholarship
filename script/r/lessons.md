@@ -48,6 +48,10 @@ Second cycle: **Fridays** from 1:10 to 2:00 PM.  [Register here](https://forms.g
 
 Here's a [page of R resources](../)
 
+[ICPSR data example](../nlsaah/)
+
+
+
 ## Other sources of R resources on Vanderbilt's campus
 
 Data Science Institute (DSI) <https://www.vanderbilt.edu/datascience/>
@@ -65,4 +69,4 @@ Stay tuned for future offerings
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-01-02
+Revised 2020-01-14
