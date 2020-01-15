@@ -1,7 +1,7 @@
 ---
-permalink: /geo/tools/
+permalink: /geo/Software/
 title: Geospatial Tools
-breadcrumb: tools
+breadcrumb: Software
 ---
 
 **QGIS**
