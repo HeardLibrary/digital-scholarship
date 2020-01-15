@@ -13,7 +13,7 @@ Here is the schedule of our Spring 2020 meetings:
 
 | Date | Topic | Notes |
 |------|-------|-------|
-| Jan. 15 | Introduction, software installation, Exploring a GIS Map  |[Exercise Data](https://vanderbilt.box.com/s/ygga0fg21g703swy2hy0q1ns9patfy4l)  |
+| Jan. 15 | Introduction, software installation, Exploring a GIS Map  |[Exercise Data](https://vanderbilt.box.com/s/ygga0fg21g703swy2hy0q1ns9patfy4l)  |[Exercise Instructions] (https://mgimond.github.io/ArcGIS_tutorials/Exploring_a_GIS_map.htm) |
 | Jan. 22 | Managing GIS Data |   |
 | Jan. 29 | Symbolizing Features |  |
 | Feb. 05 | Labels and Annotations |  |
@@ -27,6 +27,9 @@ Here is the schedule of our Spring 2020 meetings:
 | Apr. 01 | Map Layout/Export/Sharing |  |
 | Apr. 08 | Working with Rasters |  |
 
+Tutorials adapted from Manny Gimond.   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+
+Tutorials also supplemented from ESRI Learn ArcGIS_tutorials.
 
 
 [GIS homepage](gis/)
@@ -34,4 +37,4 @@ Here is the schedule of our Spring 2020 meetings:
 
 
 ----
-Revised 2020-09-01
+Revised 2020-15-01
