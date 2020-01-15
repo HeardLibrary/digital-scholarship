@@ -104,7 +104,29 @@ After we have added the reference, here's a diagram of what the RDF looks like:
 
 We can see that Wikibase has now created a reference instance that is linked to the statement instance by `prov:wasDerivedFrom`.  Since the reference instance is a URI identified resource, we can say additional things about it.  The most important thing we want to describe is the source of the reference itself.  That connection is made by the reference property that we created (`P3`, "reference URL").  The connection is made to the URL that we provided as the value of the reference (`https://www.nbcnews.com/nightly-news`).
 
-There are many other properties associated with the entities, the statement instances, and the reference instances.  For a complete listing, see [this annotated dump](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/wikibase/wikibase-dump.ttl) of the Wikibase dataset after the items and properties discussed above had been created.  At this point, we don't care about most of these details.  However, there is one more bit that we need to know in order to examine what's going on in our Wikibase database.
+## Qualifiers
+
+The other major piece of the Wikibase model is *qualifiers* that are used to provide non-reference information about the statement instance. 
+
+<img src="../images/wikidata-qualifier.png" style="border:1px solid black">
+
+In this example, the Wikidata statement "Brandt F. Eichman employer Vanderbilt University" (wd:Q37371192 wdt:P108 wd:QQ29052.) may be true only for a particular period of time. We can add a qualifier to indicate the starting and ending dates of his employment.  The qualifier property P580 ("start time") is used to indicate the starting time of the employment interval.  
+
+<img src="../images/wikidata-qualifier-edit.png" style="border:1px solid black">
+
+Qualifiers statements are added in the graphical interface directly below the value of the main statement.
+
+<img src="../images/wikidata-qualifier-instance.png" style="border:1px solid black">
+
+This diagram shows how the qualifier is represented as Linked Data. In this example, the qualifier value can be expressed as a literal string, so a `pq:` namespace version of the property is used to link to the literal value "2004-01-01T00:00:00Z".  For some qualifier properties, a second link is created to a non-literal qualifier instance. That makes it possible to create additional statements about the qualifier value itself. In this example, the qualifier value is a date, so the qualifier value instance has a `wikibase:timeCalendarModel` link to the calendar used for the date.  
+
+If you compared the graph diagram to the GUI, you'll notice that the date entered in the GUI was "2004", but the date expressed in the graph was "2004-01-01T00:00:00Z". If you are wondering how Wikidata distinguishes between the year 2004 and 1 January 2004, it's determined by the value of `wikibase:timePrecision` assigned to the qualifier value instance (see [this page](https://en.wikibooks.org/wiki/SPARQL/WIKIDATA_Precision,_Units_and_Coordinates) for details). This approach allows all time values to be expressed as `xsd:dateTime` datatyped strings.  
+
+Not every qualifier has a link to a non-literal qualifier instance.  For example, "series ordinal" (P1545) has an integer value that is used to indicate the position in a series. The numeric literal value is sufficient to do that without further description of the qualifier instance.
+
+There are many other properties associated with entities, statement instances, qualifiers, and reference instances.  For a complete listing for this example, see [this annotated dump](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/wikibase/wikibase-dump.ttl) of the Wikibase dataset after the items and properties discussed above had been created.  We also are ingoring [statement ranks](https://www.mediawiki.org/wiki/Wikibase/DataModel#Ranks_of_Statements). These details are beyond the scope of this exercise.  However, there is one more bit that we need to know in order to examine what's going on in our Wikibase database.
+
+## Property labels
 
 Because there are at least three specific kinds of properties (we'll ignore the others for now) that are associated with every generic property, Wikidata defines an instance of an entity that's a generic property, then assoicates that generic property with the specific direct (`wdt:` namespace) and simple (`p:` namespace) properties.  The labels and descriptions are linked to the generic property, so that they don't have to be repeated for all of the other flavors of the property.  Here's an example in Turtle:
 
@@ -182,4 +204,4 @@ In this example, the schema for the Access to Biological Collections Data (ABCD)
 
 [go to the page on building a bot to load data into Wikidata](../../host/wikidata/bot/)
 ----
-Revised 2019-02-07
+Revised 2020-01-15
