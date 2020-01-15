@@ -8,6 +8,7 @@ breadcrumb: lessons
 Dates:  Wednesdays beginning January 15, 2020.
 Time:  1:10 - 2:00pm
 Location:  The Training Room in the basement of the Eskind Biomedical Library (Room 010).  
+**Meeting in Stevenson Library Seminar Room 3211 (Old Map Room) on January 29**
 
 Here is the schedule of our Spring 2020 meetings:
 
