@@ -26,7 +26,7 @@ radius = diameter/2
 print('Radius = ', radius)
 
 # We have all of the information necessary to complete the calcuation
-print('The area of the circle is ',pi*radius)
+print('The area of the circle is ',pi*radius**2)
 ```
 
 ## Uses the "turtle" drawing tool to make a shape
@@ -97,4 +97,4 @@ print('Finished writing the CSV spreadsheet file')
 ```
 
 ----
-Revised 2020-01-10
+Revised 2020-01-17
