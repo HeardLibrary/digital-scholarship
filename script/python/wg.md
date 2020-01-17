@@ -24,7 +24,7 @@ We meet in the Eskind Training Room (Room 010 in the basement of the Eskind Biom
 
 ## Schedule of Beginners Lessons - Spring 2020
 
-First cycle: **Fridays** from 1:10 to 2:00 PM.  [Register here](https://forms.gle/nM4N2bYRmG7BA8z27)
+First cycle: **Fridays** from 1:10 to 2:00 PM.  Registration has been closed for this cycle.
 
 | Date | Session | Topic | Notes |
 |---|---|---|
