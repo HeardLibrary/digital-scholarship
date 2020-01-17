@@ -28,13 +28,13 @@ Python is a strongly typed language, meaning that once an object is defined, it'
 
 The following conventions are suggestions for naming conventions that are commonly used and "safe".  That doesn't mean that you can construct names in other ways and get away with it, but if you follow these conventions, your code will be easy to read and won't have unexpected behavior.
 
-Your code is less likely to have bugs if it is easy for a human to read it and easily tell what's going on.  For that reason, it is better to have object names that are descriptive of what the object is or does.  For example, a name like `loadParticipantData` is better than `x`.
+Your code is less likely to have bugs if it is easy for a human to read it and easily tell what's going on.  For that reason, it is better to have object names that are descriptive of what the object is or does.  For example, a name like `load_participant_data` is better than `x`.
 
 The following **characters** can be considered "safe" for names in Python: upper and lower case Roman letters, numerals, and the underscore (`_`) character. Periods (dots) have special use in Python.  Spaces are bad. Hypens can cause problems in some circumstances, so it's better to avoid them.  As a general practice, it's probably safest to begin object names with letters, since other symbols sometimes have special uses, and in some contexts, object names beginning with numerals might have problems.
 
-For **names** of variables and functions, we recommend camelCase.  In camelCase, descriptive words are concatenated, with the first word beginning with a lower case letter and subsequent words beginning with capital letters.  Examples: `companyReportFileName` and `convertXmlToJson`.  
+For **names** of variables and functions, the [PEP 8 style guide](https://www.python.org/dev/peps/pep-0008/) recommends separating words with underscores.  Examples: `company_report_file_name` and `convert_xml_to_json`.  This style is sometimes called *snake_case*.
 
-For names of modules and packages, we recommend separating words with underscores.  Examples: `basic_structures` and `json_file_converters`.
+camelCase is also frequently used.  In camelCase, descriptive words are concatenated, with the first word beginning with a lower case letter and subsequent words beginning with capital letters.  Examples: `companyReportFileName` and `convertXmlToJson`.  
 
 # String, number, and boolean object types
 
@@ -91,40 +91,40 @@ A *variable* is like a box into which you can put objects.  A particular variabl
 Values are assigned to variables using an equals sign.  In variable assignment, **an equals sign does not mean that the two things are equal!**  The value on the right is assigned to the variable on the left.  It's helpful to think of the equals sign as an arrow pointing to the left.  Examples:
 
 ```python
-userName = "smithjr"
-isDoorOpen = False
-numberOfArrayElements = 47
-eulersNumber = 2.7182818
+user_name = "smithjr"
+is_door_open = False
+number_of_array_elements = 47
+eulers_number = 2.7182818
 ```
 
 In these examples, literals are being assigned to variables.  The contents of a variable can also be assigned to a variable, or an expression can be evalutated and the result placed in a variable.
 
 ```python
-userName = lastLoginName
-sum = numberWidgets + 3
-tooMany = sum > 10
-studentCount = studentCount + 1
+user_name = last_login_name
+sum = number_widgets + 3
+too_many = sum > 10
+student_count = student_count + 1
 ```
 
-In the third example above, the variable `tooMany` will contain a boolean (True or False) depending on a condition (whether the number in `sum` is greater than 10 or not).
+In the third example above, the variable `too_many` will contain a boolean (True or False) depending on a condition (whether the number in `sum` is greater than 10 or not).
 
-The fourth example above may seem strange, because no number can be equal to itself plus 1.  But the statment actual is saying "take the number that's in `studentCount`, add one to it, and put the answer back in `studentCount`.
+The fourth example above may seem strange, because no number can be equal to itself plus 1.  But the statment actual is saying "take the number that's in `student_count`, add one to it, and put the answer back in `student_count`.
 
 **Try this**
 
-Try re-running the following scripts with different values of `numberWidgets`.
+Try re-running the following scripts with different values of `number_widgets`.
 
 ```python
-numberWidgets = 1
-sum = numberWidgets + 3
+number_widgets = 1
+sum = number_widgets + 3
 print(sum)
 ```
 
 ```python
-numberWidgets = 1
-sum = numberWidgets + 3
-tooMany = sum > 10
-print(tooMany)
+number_widgets = 1
+sum = number_widgets + 3
+too_many = sum > 10
+print(too_many)
 ```
 
 Notice that when we tell Python to print a variable, it prints the value that's stored in the variable, not the variable name.
@@ -132,17 +132,17 @@ Notice that when we tell Python to print a variable, it prints the value that's 
 How do the following scripts differ? (Pay attention to the quotes!)
 
 ```python
-firstNumber = 325
-secondNumber = 145
-together = firstNumber + secondNumber
+first_number = 325
+second_number = 145
+together = first_number + second_number
 print(together)
 print(type(together))
 ```
 
 ```python
-firstNumber = '325'
-secondNumber = '145'
-together = firstNumber + secondNumber
+first_number = '325'
+second_number = '145'
+together = first_number + second_number
 print(together)
 print(type(together))
 ```
@@ -158,19 +158,19 @@ A function is like a processing machine.  You put stuff into it and different st
 The things you put into the function are called *arguments*.  The general format for a Python function is:
 
 ```python
-functionName(argument1, argument2, ...)
+function_name(argument1, argument2, ...)
 ```
 
 There can be zero to many arguments in a function.  The latte function might look like this:
 
 ```python
-makeLatte(beans, milk, water)
+make_latte(beans, milk, water)
 ```
 
 The output of the function can be assigned to a variable:
 
 ```python
-myLatte = makeLatte(beans, milk, water)
+my_latte = make_latte(beans, milk, water)
 ```
 
 ## Built-in functions
@@ -187,18 +187,18 @@ len()
 Try the following script with different values for the numbers:
 
 ```python
-firstNumber = 50
-secondNumber = 67
-biggest = max(firstNumber, secondNumber, 100)
+first_number = 50
+second_number = 67
+biggest = max(first_number, second_number, 100)
 print(biggest)
 ```
 
 In the following script, try changing the value of `name`:
 ```python
 name = 'Steve'
-howLong = len(name)
+how_long = len(name)
 print('Your name is '+ name + '. It is: ')
-print(howLong)
+print(how_long)
 print('characters long.')
 ```
 
@@ -207,9 +207,9 @@ print('characters long.')
 You can make your own function using this pattern:
 
 ```python
-def functionName(parameter1, parameter2):
+def function_name(parameter1, parameter2):
     # stuff happens with the parameters in this code block
-    return theResult
+    return the_result
 ```
 
 Notes:
@@ -222,8 +222,8 @@ Notes:
 ## Home-made function example
 
 ```python
-def multiplication(firstNumber, secondNumber):
-    answer = firstNumber * secondNumber
+def multiplication(first_number, second_number):
+    answer = first_number * second_number
     return answer
 
 print(multiplication(3,5))
@@ -236,8 +236,8 @@ Using the function is called *calling* the function. Inserting values into the f
 Here is a variation on the previous script:
 
 ```python
-def multiplication(firstNumber, secondNumber):
-    answer = firstNumber * secondNumber
+def multiplication(first_number, second_number):
+    answer = first_number * second_number
     return answer
 
 num1 = 3
@@ -246,7 +246,7 @@ answer = multiplication(num1,num2)
 print(answer)
 ```
 
-Notice that in this example, the arguments that are put into the function when it is called (`num1,num2`) have different names than the placeholder parameters used to define the function (`firstNumber, secondNumber`).  It would also be fine to use the same names in both places, since the parameter variables are local to the function and what happens to variables outside the function has no effect on their value.  The values that the parameters take when the function is run depends only on the values that are passed into the function as arguments.  
+Notice that in this example, the arguments that are put into the function when it is called (`num1,num2`) have different names than the placeholder parameters used to define the function (`first_number, second_number`).  It would also be fine to use the same names in both places, since the parameter variables are local to the function and what happens to variables outside the function has no effect on their value.  The values that the parameters take when the function is run depends only on the values that are passed into the function as arguments.  
 
 **Try this**
 
@@ -302,8 +302,8 @@ Here is a fun example using the standard `random` module:
 ```python
 import random
 
-dayList = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-x = random.choice(dayList)
+day_list = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+x = random.choice(day_list)
 
 print(x)
 ```
@@ -318,9 +318,9 @@ A categorized list of the modules in the standard library is [here](https://docs
 import math as m
 
 number = 113
-squareRoot = m.sqrt(number)
-print(squareRoot)
-integer = m.floor(squareRoot)
+square_root = m.sqrt(number)
+print(square_root)
+integer = m.floor(square_root)
 print(integer)
 ```
 
@@ -375,10 +375,10 @@ import functions.simple_string as st
 answer = simple_math.subtraction(10, 3)
 print(answer)
 
-firstName = 'Donald'
-lastName = 'Duck'
-combinedString = st.concatenation(firstName, lastName)
-print(combinedString)
+first_name = 'Donald'
+last_name = 'Duck'
+combined_string = st.concatenation(first_name, last_name)
+print(combined_string)
 ```
 
 In line 1, we simply imported the `simple_math` module by specifying that it was in the `function` package.  If we had wanted, we could have shortened the module name using an `as` clause.  In line 2, we directly specified the module by giving its "path" expressed using the dot notation.  
@@ -419,17 +419,17 @@ Here is an example:
 
 ```python
 name = 'Fred Flintstone'
-isMicky = name == 'Mickey Mouse'
+is_micky = name == 'Mickey Mouse'
 print(name)
-print(isMicky)
+print(is_micky)
 
-if isMicky:
+if is_micky:
     print('You are a Disney character')
 print('That is all!')
 ```
 
 Notes:
-1. The double equals sign `==` is a comparison operator to test for equality.  When `name == 'Micky Mouse'` is evaluated, the resulting boolean value is assigned to the variable `isMicky`.  Other conditional operators are: `!=` (not equal), `>` (greater than), `<=` (less than or equal to), etc.
+1. The double equals sign `==` is a comparison operator to test for equality.  When `name == 'Micky Mouse'` is evaluated, the resulting boolean value is assigned to the variable `is_micky`.  Other conditional operators are: `!=` (not equal), `>` (greater than), `<=` (less than or equal to), etc.
 2. The `if` statement controls whether the code block following the colon is executed or not (don't forget the colon!).  If the value following the keyword `if` has a value of `True`, then the code block is executed.  If the value is `False`, the code block is not executed. 
 3. As with code blocks in functions, the code block here is demarcated by indentation (of the standard four spaces).  In this example, there is only one line in the indented code block, but there could be many.
 4. The `print 'That is all!'` statement is not included in the code block, so it will be executed regardless of the condition.
@@ -440,11 +440,11 @@ Here's a modification of the previous example that uses the input() function:
 
 ```python
 name = input('What is the name of the character? ')
-isMicky = name == 'Mickey Mouse'
+is_micky = name == 'Mickey Mouse'
 print(name)
-print(isMicky)
+print(is_micky)
 
-if isMicky:
+if is_micky:
     print('You are a Disney character')
 print('That is all!')
 ```
@@ -622,4 +622,4 @@ if not zero:
 ```
 
 ----
-Revised 2019-09-20
+Revised 2020-01-17
