@@ -176,7 +176,7 @@ In the first case, the URL leads to a web page that displays the content of the 
 Here is the command that would read data from the file URL into a data frame:
 
 ```
-myOtherDataFrame = read.csv(file="https://gist.githubusercontent.com/baskaufs/1a7a995c1b25d6e88b45/raw/4bb17ccc5c1e62c27627833a4f25380f27d30b35/t-test.csv")
+myOtherDataFrame <- read.csv(file="https://gist.githubusercontent.com/baskaufs/1a7a995c1b25d6e88b45/raw/4bb17ccc5c1e62c27627833a4f25380f27d30b35/t-test.csv")
 ```
 
 You can test this command by copying it and entering it into the Console pane of RStudio.  You should see the newly created data frame in the workspace summary pane (upper right) as in the previous example.  
@@ -188,4 +188,4 @@ If you have a GitHub account, creating a Gist is an easy way to make raw data av
 Continue to [Where to go from here](../next/)
 
 ----
-Revised 2019-08-19
+Revised 2020-01-20
