@@ -76,7 +76,7 @@ my_data_frame <- read.csv(file.choose())  # by a file-choosing dialog
 my_data_frame <- read.csv(file="https://gist.githubusercontent.com/baskaufs/1a7a995c1b25d6e88b45/raw/4bb17ccc5c1e62c27627833a4f25380f27d30b35/t-test.csv") 
 
 # -------------------
-# Practice
+# Homework
 # ------------------
 
 # Explore the data at https://github.com/HeardLibrary/digital-scholarship/blob/master/data/gis/wg/Metro_Nashville_Schools.csv
@@ -101,114 +101,5 @@ schools_data <- read.csv(file="https://raw.githubusercontent.com/HeardLibrary/di
 
 
 # 6. Calculate the average fraction of white students by school
-
-
-# -----------------
-# Factors
-# -----------------
-
-# Create vectors
-water_conditions <- c("wet", "wet", "dry", "wet", "dry", "wet")
-height <- c(25, 21, 14, 13, 10, 18)
-
-# Convert the character string vector into a factor
-water_factor <- factor(water_conditions)
-
-# Display the values of each data structure
-water_conditions
-water_factor
-height
-
-# Reload schools data if necessary
-schools_data <- read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/gis/wg/Metro_Nashville_Schools.csv")
-
-# Are zip code and school name vectors or factors?
-schools_data$Zip.Code
-schools_data$School.Name
-
-# Convert to the other form
-zip_code <- factor(schools_data$Zip.Code)
-school_name <- as.character(schools_data$School.Name)
-
-# Display the results
-zip_code
-school_name
-
-# ---------------
-# Tibbles
-# ---------------
-
-# tibbles are part of the tidyverse, so need to install it if you haven't already
-install.packages("tidyverse")
-
-# Alternatively, install only tibble if the tidyverse install fails:
-install.packages("tibble")
-
-# load the tibble library (or tidyverse if you have it)
-library("tibble")
-
-# create a tibble from vectors
-organism_tibble <- tibble(group, animal, number_legs)
-
-# load a tibble from a CSV
-library(readr)
-tibble_from_csv <- read_csv(file.choose())
-tibble_from_csv <- read_csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/gis/wg/Metro_Nashville_Schools.csv")
-
-# load a tibble from an Excel file
-library(readxl)
-tibble_from_xl <- read_excel(file.choose())
-
-# --------------
-# Homework
-# --------------
-
-# 1. Scatterplot of two continuous variables
-
-# Reload schools data if necessary
-schools_data <- read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/gis/wg/Metro_Nashville_Schools.csv")
-
-# 1.a. Using the Nashville schools data, calculate the fraction of students that are economically 
-#      disadvantaged and the fraction that have limited English proficiency.
-
-
-
-# 1.b. Fit these two data to a linear model using
-model <- lm(y ~ x)
-# but replacing x with the limited English proficiency variable
-# and y with the exonomically disadvantaged variable
-
-
-
-# 1.c. Create a scatterplot of the data using the syntax:
-plot(y ~ x)
-# then add a best fit trendline using
-abline(model)
-
-
-
-# 1.d. Is there any good reason for the choice of which variables to assign to X and Y?
-
-
-
-# 2. Box plot by zip code
-
-# 2.A. Find the fraction of students that are white:
-
-
-# 2.B. We can make a plot of fraction white by zip code:
-plot(schools_data$Zip.Code, y = frac_white)
-
-# but this isn't really what we want since the zip codes are being treated as a meaningful number.
-class(schools_data$Zip.Code)
-
-# Zip codes are really categories, so we actually want them to be a factor.
-# Coerce the zip code vector to be a factor
-
-
-# 2.C. Try the plot again using the zip code factor instead of the original column:
-
-
-# 2.D. Change the plot to be categorized by the school level column:
 
 
