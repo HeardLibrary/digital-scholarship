@@ -145,6 +145,8 @@ organismInfo$animal[4]
 
 R Cookbook [section 5.4](https://learning-oreilly-com.proxy.library.vanderbilt.edu/library/view/r-cookbook-2nd/9781492040675/ch05.html#recipe-id051)
 
+R for Data Science [Chapter 10](https://r4ds.had.co.nz/tibbles.html) (no login required)
+
 When data are read into a data frame, what happens to them depends on the type of data.  Numeric data remain as numeric data, but string data (e.g. non-numeric data enclosed in quotes) are converted into a special data type called *factor* when they are loaded into the data frame.  This format is useful when the data are intended to be used in statistical tests, and given that R was originally statistics-heavy, this automatic conversion makes some sense.  
 
 R keeps track of the unique values of factors, which are known as the *levels* of the factor that are present.  ("Level" comes from experimental design terminology - also related to R's heavy statistical orientation.) The factors are stored in a more efficient way than strings, which improves performance when crunching large data sets.  In the screen shot above, displaying the value of a particular cell containing text results in not only the value of the cell, but a listing of all of the levels present in that column.  Levels are not listed when displaying the contents of a cell containing a number.
