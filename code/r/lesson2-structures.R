@@ -73,7 +73,7 @@ my_data_frame <- read.csv("~/test.csv")  # by a path (Mac home directory)
 my_data_frame <- read.csv("c:\temp\test.csv")  # by a path (Windows C: drive)
 my_data_frame <- read.csv(file.choose())  # by a file-choosing dialog
 # from a URL:
-my_data_frame <- read.csv(file="https://gist.githubusercontent.com/baskaufs/1a7a995c1b25d6e88b45/raw/4bb17ccc5c1e62c27627833a4f25380f27d30b35/t-test.csv") 
+my_data_frame <- read.csv("https://gist.githubusercontent.com/baskaufs/1a7a995c1b25d6e88b45/raw/4bb17ccc5c1e62c27627833a4f25380f27d30b35/t-test.csv") 
 
 # -------------------
 # Homework
