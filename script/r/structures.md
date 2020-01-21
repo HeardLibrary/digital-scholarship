@@ -8,6 +8,12 @@ go back to [Navigating around in RStudio](../navigate/)
 
 # Introduction to R data structures
 
+If you are a Vanderbilt user, you should be able to use your VUNet ID and password for free access to O'Reilly for Higher Education resources.  To access them, click [this link](http://www.library.vanderbilt.edu/eres?id=1676), then log in.  Sometimes it is necessary to close your browser, or clear your cookies to get access, so if you have problems, you can try that. It is also possible to navigate there by going to <https://www.library.vanderbilt.edu/>, select `DATABASES A-Z`, click on `O`, then select `O'Reilly for Higher Education`.
+
+In this lesson, I'll reference some sections of the book, *R Cookbook, 2nd Edition*, which you can find by searching at the O'Reilly sight, or try [this direct link to the book](https://learning-oreilly-com.proxy.library.vanderbilt.edu/library/view/r-cookbook-2nd/9781492040675/). The direct links in the text might work, otherwise navigate to the correct section by number.
+
+**Comments**
+
 Note on comments: comments can be added to R scripts to make them more understandable.  A comment starts with the `#` character and R simply ignores everything on the line after it.  Here's an example:
 
 ```
@@ -27,6 +33,8 @@ There are numerous data structures in R, but we will focus on the three most imp
 
 ## Vectors
 
+R Cookbook [section 2.5](https://learning-oreilly-com.proxy.library.vanderbilt.edu/library/view/r-cookbook-2nd/9781492040675/ch02.html#recipe-id038)
+
 A *vector* is a one-dimensional data structure consisting of items of the same kind. This would be analogous to a column of data in a spreadsheet.  Vectors have a name that is used to refer to that particular instance of a vector.  The individual items in the vector can be referenced using their position in the vector, as shown in the diagram above.  Note: R is "one based", meaning that we start counting items at 1.  This is in contrast to Python, which is "zero based" (counting starts at 0).
 
 We can construct a vector by explicitly entering its values using the `c()` (for "construct") function, like this:
@@ -43,6 +51,8 @@ The screenshot above shows what happens when we create a vector using RStudio, t
 
 ### Vector variants
 
+R Cookbook [section 5.14](https://learning-oreilly-com.proxy.library.vanderbilt.edu/library/view/r-cookbook-2nd/9781492040675/ch05.html#recipe-id062) 
+
 R has two additional data structures that are similar to vectors: *matrices* and *arrays*.  Both of these structures are similar to vectors in that they can only contain one kind of data.  A matrix has two dimensions (analogous to multiple columns and rows of the same kind of data) and a vector can be turned into a matrix simply by assigning it two dimensions.  An array is similar, except that it can have any number of dimensions.  
 
 Matrices and arrays are important data structures in cases where certain mathematical operations need to be performed efficiently on very large data sets.  You can learn more about them in any R reference work.
@@ -50,6 +60,8 @@ Matrices and arrays are important data structures in cases where certain mathema
 <img src="../images/list-diagram.png" style="border:1px solid black">
 
 ## Lists
+
+R Cookbook [section 5.6](https://learning-oreilly-com.proxy.library.vanderbilt.edu/library/view/r-cookbook-2nd/9781492040675/ch05.html#recipe-id053)
 
 A *list* is also a one-dimensional data structure, like a vector.  However, the items in a list can be heterogeneous (different types of items).  In the diagram above, we see that the values in the list consist of two strings (characters listed in quotes), one number (no quotes), and the vector `animal` that we created earlier (with its name given without quotes).  
 
@@ -80,6 +92,8 @@ thing$curse
 <img src="../images/data-frame-diagram.png" style="border:1px solid black">
 
 ## Data frames
+
+R Cookbook [section 5.18](https://learning-oreilly-com.proxy.library.vanderbilt.edu/library/view/r-cookbook-2nd/9781492040675/ch05.html#recipe-id251)
 
 Data frames are two dimensional data objects and are one of the most widely used data types in R.  One can think of a data frame as a table with rows and columns, with the top row containing column headers that are names describing what's in the columns.  
 
@@ -129,15 +143,21 @@ organismInfo$animal[4]
 
 ### Data types in data frames and tibbles
 
+R Cookbook [section 5.4](https://learning-oreilly-com.proxy.library.vanderbilt.edu/library/view/r-cookbook-2nd/9781492040675/ch05.html#recipe-id051)
+
+R for Data Science [Chapter 10](https://r4ds.had.co.nz/tibbles.html) (no login required)
+
 When data are read into a data frame, what happens to them depends on the type of data.  Numeric data remain as numeric data, but string data (e.g. non-numeric data enclosed in quotes) are converted into a special data type called *factor* when they are loaded into the data frame.  This format is useful when the data are intended to be used in statistical tests, and given that R was originally statistics-heavy, this automatic conversion makes some sense.  
 
 R keeps track of the unique values of factors, which are known as the *levels* of the factor that are present.  ("Level" comes from experimental design terminology - also related to R's heavy statistical orientation.) The factors are stored in a more efficient way than strings, which improves performance when crunching large data sets.  In the screen shot above, displaying the value of a particular cell containing text results in not only the value of the cell, but a listing of all of the levels present in that column.  Levels are not listed when displaying the contents of a cell containing a number.
 
 Factors are important when running statistical tests, since they are the means by which numeric data are assigned to groups ("grouping variables") as required by tests like t-test of means, ANOVA, and logistic regression.  
 
-More recently, the use of R has expanded far beyond statistics, so automatically trasforming data into a form that is optimal for statistics is no longer necessarily desirable in every case.  Another two-dimensional data structure, called a *tibble*, was developed to broaden the use of data frames.  When data are read into a tibble, there is never a conversion of data types (strings remain strings).  The rules for column names are also relaxed over traditional data frames.  For more information about tibbles, see [Chapter 10 of *R for Data Science*](https://r4ds.had.co.nz/tibbles.html) (Chapter 7 in the print version).  
+More recently, the use of R has expanded far beyond statistics, so automatically trasforming data into a form that is optimal for statistics is no longer necessarily desirable in every case.  Another two-dimensional data structure, called a *tibble*, was developed to broaden the use of data frames.  When data are read into a tibble, there is never a conversion of data types (strings remain strings).  The rules for column names are also relaxed over traditional data frames.  
 
 ### Methods for reading CSV data into data frames
+
+R Cookbook [section 4.8](https://learning-oreilly-com.proxy.library.vanderbilt.edu/library/view/r-cookbook-2nd/9781492040675/ch04.html#recipe-id027)
 
 The method of loading data into a data frame by manually entering the items as part of the script is not efficient for large data sets.  Large sets of tabular data are commonly saved as files in comma separated values (CSV) format.  All common spreadsheet applications (such as Microsoft Excel, OpenOffice Calc, and Libre Office Calc) provide a way to export spreadsheet data in CSV format, so that's the best way to get a dataset from a spreasheet into R. If a spreadsheet contains multiple sheets, each one must be saved as a separate CSV file.  **To save an Excel sheet in CSV format, go to Save As… and select "CSV (Comma delimited) (*.csv)" from the "Save as type:" dropdown.** 
 
@@ -163,6 +183,8 @@ To practice using this function, download and save the file [t-test.csv](https:/
 
 **From a URL**
 
+R Cookbook [section 4.10](https://learning-oreilly-com.proxy.library.vanderbilt.edu/library/view/r-cookbook-2nd/9781492040675/ch04.html#recipe-id031)
+
 Sometimes a teacher, colleague, or a website might make a file available directly via a URL.  So an alternative to getting a CSV file from your computer's drive is to specify a URL that points to the file location at some place on the Internet.  One important consideration is that the URL must deliver the raw data file and not a web page.  You can see the distinction between the two by comparing:
 
 <https://gist.github.com/baskaufs/1a7a995c1b25d6e88b45>
@@ -183,9 +205,43 @@ You can test this command by copying it and entering it into the Console pane of
 
 If you have a GitHub account, creating a Gist is an easy way to make raw data available publicly through a URL.  Create the gist in the editing environment, then after creating a public Gist, click on the Raw button at the upper right of the screen.  Copy the URL from the browser's address box and paste it into the script between the quotes after the `file=` key as shown in the example above.
 
+**Data from an Excel spreadsheet**
+
+R Cookbook [section 4.11]()
+
+The `openxlsx` package can read an Excel file into a data frame.  
+
+To load the package then read in the file:
+
+```
+library(openxlsx)
+data_frame <- read.xlsx(xlsxFile = "my_file.xlsx", sheet = 'name_of_sheet')
+```
+
+The `sheet` argument is optional.
+
+The `readxl` package can read from Excel files (both .xls and .xlsx) into a tibble. It is also included in the `tidyverse` package.
+
+To load the package then read in the file:
+
+```
+library(readxl)
+tibble_from_xl <- read_excel(file.choose())
+```
+
+As with read_csv, the grouping column contains characters, not factors.
+
+You can also specify the sheet to use:
+
+```
+another_tibble_from_xl <- read_excel(file.choose(), sheet = "t-test")
+```
+
+For more details, see <http://www.sthda.com/english/wiki/reading-data-from-excel-files-xls-xlsx-into-r>.
+
 ---
 
 Continue to [Where to go from here](../next/)
 
 ----
-Revised 2020-01-20
+Revised 2020-01-21
