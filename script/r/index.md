@@ -20,11 +20,6 @@ The following links lead to a series of lessons designed to help you get started
 
 Go to the [lessons home page](lessons/) for information, schedule, and registration.
 
-[Lesson 1: Installing R and RStudio, Navigating around in RStudio](presentations/lesson1-r-rstudio.pdf)
-
-Lesson 2: Data Structures. See the [web page](presentations/lesson2.nb.html) for instructions on how to download [the R Markdown lesson notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2.Rmd) and open it in R Studio.
-
-Lesson 3: Programming. Download [this R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-programs.R) by right clicking on the Raw button and selecting `Save As...`, then opening the saved file.  You can also just copy and paste the script into a new R script in the editor window.
 
 # Online R Resources
 
@@ -49,4 +44,4 @@ For summaries of how to perform a variety of tasks using the RStudio IDE, see th
 To try out some simple R scripts for t-test of means, paired t-test, chi-squared goodness of fit, chi-squared contingency, regression, and ANOVA, visit [this page](stats/).
 
 ----
-Revised 2019-12-03
+Revised 2020-01-21

@@ -205,6 +205,39 @@ You can test this command by copying it and entering it into the Console pane of
 
 If you have a GitHub account, creating a Gist is an easy way to make raw data available publicly through a URL.  Create the gist in the editing environment, then after creating a public Gist, click on the Raw button at the upper right of the screen.  Copy the URL from the browser's address box and paste it into the script between the quotes after the `file=` key as shown in the example above.
 
+**Data from an Excel spreadsheet**
+
+R Cookbook [section 4.11]()
+
+The `openxlsx` package can read an Excel file into a data frame.  
+
+To load the package then read in the file:
+
+```library(openxlsx)
+data_frame <- read.xlsx(xlsxFile = "my_file.xlsx", sheet = 'name_of_sheet')
+```
+
+The `sheet` argument is optional.
+
+The `readxl` package can read from Excel files (both .xls and .xlsx) into a tibble. It is also included in the `tidyverse` package.
+
+To load the package then read in the file:
+
+```
+library(readxl)
+tibble_from_xl <- read_excel(file.choose())
+```
+
+As with read_csv, the grouping column contains characters, not factors.
+
+You can also specify the sheet to use:
+
+```
+another_tibble_from_xl <- read_excel(file.choose(), sheet = "t-test")
+```
+
+For more details, see <http://www.sthda.com/english/wiki/reading-data-from-excel-files-xls-xlsx-into-r>.
+
 ---
 
 Continue to [Where to go from here](../next/)
