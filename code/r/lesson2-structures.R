@@ -189,7 +189,7 @@ abline(model)
 
 # 1.d. Is there any good reason for the choice of which variables to assign to X and Y?
 
-# Answer: Not really because we can't assign cause and effect to the variables.
+
 
 # 2. Box plot by zip code
 
