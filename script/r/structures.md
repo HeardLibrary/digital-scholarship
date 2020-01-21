@@ -10,7 +10,7 @@ go back to [Navigating around in RStudio](../navigate/)
 
 If you are a Vanderbilt user, you should be able to use your VUNet ID and password for free access to O'Reilly for Higher Education resources.  To access them, click [this link](http://www.library.vanderbilt.edu/eres?id=1676), then log in.  Sometimes it is necessary to close your browser, or clear your cookies to get access, so if you have problems, you can try that. It is also possible to navigate there by going to <https://www.library.vanderbilt.edu/>, select `DATABASES A-Z`, click on `O`, then select `O'Reilly for Higher Education`.
 
-In this lesson, I'll refernce some sections of the book, *R Cookbook, 2nd Edition*, which you can find by searching at the O'Reilly sight, or try [this direct link to the book](https://learning-oreilly-com.proxy.library.vanderbilt.edu/library/view/r-cookbook-2nd/9781492040675/). The direct links in the text might work, otherwise navigate to the correct section by number.
+In this lesson, I'll reference some sections of the book, *R Cookbook, 2nd Edition*, which you can find by searching at the O'Reilly sight, or try [this direct link to the book](https://learning-oreilly-com.proxy.library.vanderbilt.edu/library/view/r-cookbook-2nd/9781492040675/). The direct links in the text might work, otherwise navigate to the correct section by number.
 
 **Comments**
 
@@ -153,7 +153,7 @@ R keeps track of the unique values of factors, which are known as the *levels* o
 
 Factors are important when running statistical tests, since they are the means by which numeric data are assigned to groups ("grouping variables") as required by tests like t-test of means, ANOVA, and logistic regression.  
 
-More recently, the use of R has expanded far beyond statistics, so automatically trasforming data into a form that is optimal for statistics is no longer necessarily desirable in every case.  Another two-dimensional data structure, called a *tibble*, was developed to broaden the use of data frames.  When data are read into a tibble, there is never a conversion of data types (strings remain strings).  The rules for column names are also relaxed over traditional data frames.  For more information about tibbles, see [Chapter 10 of *R for Data Science*](https://r4ds.had.co.nz/tibbles.html) (Chapter 7 in the print version).  
+More recently, the use of R has expanded far beyond statistics, so automatically trasforming data into a form that is optimal for statistics is no longer necessarily desirable in every case.  Another two-dimensional data structure, called a *tibble*, was developed to broaden the use of data frames.  When data are read into a tibble, there is never a conversion of data types (strings remain strings).  The rules for column names are also relaxed over traditional data frames.  
 
 ### Methods for reading CSV data into data frames
 
