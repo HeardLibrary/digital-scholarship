@@ -213,7 +213,8 @@ The `openxlsx` package can read an Excel file into a data frame.
 
 To load the package then read in the file:
 
-```library(openxlsx)
+```
+library(openxlsx)
 data_frame <- read.xlsx(xlsxFile = "my_file.xlsx", sheet = 'name_of_sheet')
 ```
 
