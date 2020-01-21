@@ -24,12 +24,15 @@ We meet in the Eskind Training Room (Room 010 in the basement of the Eskind Biom
 
 First cycle: **Tuesdays** from 1:10 to 2:00 PM.  Registration for cycle 1 is now closed.
 
-To download an R script, click on the link.  On the resulting page, right-click on the `Raw` button and select `Save link as...` (or similar).  Download the script to some place where you can find it. Open the file in RStudio using `File`, then `Open file`.
+To download an R script, click on the link.  Then:
+
+- (method 1) On the resulting page, right-click on the `Raw` button and select `Save link as...` (or similar).  Download the script to some place where you can find it. Open the file in RStudio using `File`, then `Open file`.
+- (method 2) On the resulting page, left-click on the Raw button. Select all of the text on the page, then copy it.  In RStudio, go to `File`, then `New File`, then `R Script`.  In the resulting editor pane, paste the text you copied.  You can save the file if you care about preserving your work.
 
 | Date | Session | Topic | Notes |
 |---|---|---|
 | Jan 14 | 1 | Installing R and RStudio and navigating around | [lesson slides](../presentations/lesson1-r-rstudio.pdf)|
-| Jan 21 | 2 | R data structures | [lesson slides](../presentations/lesson2-structures.pdf) / [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures.R) / [web page](../structures) |
+| Jan 21 | 2 | R data structures | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures.R) / [lesson slides](../presentations/lesson2-structures.pdf) / [web page](../structures) |
 | Jan 28 | 3 | Creating simple scripts |  |
 | Feb 4 | 4 | Data wrangling | |
 | Feb 11 | 5 | Data visualization with ggplot |  |
@@ -40,7 +43,7 @@ Second cycle: **Fridays** from 1:10 to 2:00 PM.  [Register here](https://forms.g
 | Date | Session | Topic | Notes |
 |---|---|---|
 | Mar 13 | 1 | Installing R and RStudio and navigating around | [lesson slides](../presentations/lesson1-r-rstudio.pdf)|
-| Mar 20 | 2 | R data structures | [lesson slides](../presentations/lesson2-structures.pdf) / [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures.R) / [web page](../structures) |
+| Mar 20 | 2 | R data structures | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures.R) / [lesson slides](../presentations/lesson2-structures.pdf) / [web page](../structures) |
 | Mar 27 | 3 | Creating simple scripts |  |
 | Apr 3 | 4 | Data wrangling | |
 | Apr 10 | 5 | Data visualization with ggplot |  |
