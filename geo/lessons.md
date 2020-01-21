@@ -10,13 +10,15 @@ Time:  1:10 - 2:00pm
 Location:  The Training Room in the basement of the Eskind Biomedical Library (Room 010).  
 **Meeting in Stevenson Library Seminar Room 3211 (Old Map Room) on January 29**
 
+Download instructions for software installation [here](materials/InstallingArcGIS.pdf).
+
 Here is the schedule of our Spring 2020 meetings:
 
 | Date | Topic | Notes |
 |------|-------|-------|
-| Jan. 15 | Introduction, software installation, Exploring a GIS Map  |[Exercise Data](https://mgimond.github.io/ArcGIS_tutorials/Exploring_a_GIS_map_files/Map.zip)  |[Exercise Instructions](https://mgimond.github.io/ArcGIS_tutorials/Exploring_a_GIS_map.htm) |
-| Jan. 22 | Managing GIS Data |   |
-| Jan. 29 | Symbolizing Features |  |
+| Jan. 15 | Intro and Installation |
+| Jan. 22 | Introduction, software installation, Exploring a GIS Map  |[Exercise Data](https://mgimond.github.io/ArcGIS_tutorials/Exploring_a_GIS_map_files/Map.zip)  |[Exercise Instructions](https://mgimond.github.io/ArcGIS_tutorials/Exploring_a_GIS_map.htm) |
+| Jan. 29 |Managing GIS Data || Symbolizing Features |  |
 | Feb. 05 | Labels and Annotations |  |
 | Feb. 12 | Defining and Projecting Data |  |
 | Feb. 19 | Working with Tables (Joining) |  |
