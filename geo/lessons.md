@@ -18,8 +18,8 @@ Here is the schedule of our Spring 2020 meetings:
 |------|-------|-------|
 | Jan. 15 | Intro and Installation |
 | Jan. 22 | Introduction, software installation, Exploring a GIS Map  |[Exercise Data](https://mgimond.github.io/ArcGIS_tutorials/Exploring_a_GIS_map_files/Map.zip)  |[Exercise Instructions](https://mgimond.github.io/ArcGIS_tutorials/Exploring_a_GIS_map.htm) |
-| Jan. 29 |Managing GIS Data || Symbolizing Features |  |
-| Feb. 05 | Labels and Annotations |  |
+| Jan. 29 |Managing GIS Data | |
+| Feb. 05 | Symbolizing Features |  |
 | Feb. 12 | Defining and Projecting Data |  |
 | Feb. 19 | Working with Tables (Joining) |  |
 | Feb. 26 | Geocoding |  |
