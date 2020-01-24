@@ -69,11 +69,11 @@ Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 
 ## Software Carpentries (cosponsored by DiSC and Research IT)
 
-Stay tuned for future offerings  
+March 5-6: A two-day workshop focused on Unix, Git, and Python (Not R this time).  [Event web page](https://vanderbilt-data-science.github.io/2020-03-05-vanderbilt/) Cost: $33.46
 
 --------------------
 
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-01-14
+Revised 2020-01-24
