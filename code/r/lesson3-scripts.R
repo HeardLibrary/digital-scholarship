@@ -24,6 +24,26 @@ data_frame <- read.xlsx(xlsxFile = "my_file.xlsx", sheet = 'name_of_sheet')
 data_frame <- read.xlsx(file.choose())
 
 # ----------------
+# Basic stats for a vector
+# ----------------
+
+# Reload schools data if necessary
+
+schools_data <- read.csv("https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/gis/wg/Metro_Nashville_Schools.csv")
+
+# To see the distribution of data in a vector as a histogram, use the hist() function:
+
+hist(schools_data$Economically.Disadvantaged)
+
+# There are also functions for basic stats:
+count(schools_data$Economically.Disadvantaged)
+mean(schools_data$Economically.Disadvantaged)
+sd(schools_data$Economically.Disadvantaged)
+
+# NOTE: these statistics aren't particularly informative since nothing was done to control for differences
+# in school size.
+
+# ----------------
 # Exploring the relationship between two continuous variables
 # ----------------
 
@@ -43,6 +63,10 @@ schools_data <- read.csv("https://raw.githubusercontent.com/HeardLibrary/digital
 total_students <- schools_data$Male + schools_data$Female
 fraction_limited_proficiency <- schools_data$Limited.English.Proficiency / total_students
 fraction_economically_disadvantaged <- schools_data$Economically.Disadvantaged / total_students
+
+# ASIDE: It's now more sensible to plot a histogram of the fraction of economically disadvantaged
+# students rather than the absolute number since we've now normalized by school size.
+hist(fraction_economically_disadvantaged)
 
 # It's easy to create an X,Y scatterplot of the data using the syntax:
 # plot(y ~ x)
@@ -251,4 +275,41 @@ plot(frac_white ~ zip_code)
 
 # Is this what we want?
 # CHALLENGE: run an ANOVA on the zip code data to see if the differences in fraction white among zip codes are significant
+
+# -----------------------------
+# Homework
+# -----------------------------
+
+# The World Bank has assembled data on World Development Indicators.  We will examine some
+# data on Women and Development downloaded from their Data Catalog at
+# http://wdi.worldbank.org/table/WV.5 A downloaded Excel file is archived at
+# https://github.com/HeardLibrary/digital-scholarship/blob/master/data/r/WV.5_Women_and_Development.xlsx
+# The Excel file has a lot of extraneous rows that would not read into R, as well as 
+# non-standard missing data values.  The data have been cleaned up a little in this CSV:
+# https://github.com/HeardLibrary/digital-scholarship/blob/master/data/r/wv5_women_and_development.csv
+
+# 1. Load the CSV file and summarize the column headers
+womens_data <- read.csv("https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/wv5_women_and_development.csv")
+
+# 2. Notice that the last 12 lines contain summary data and not data from individual countries.
+# For the male and female life expectancy at birth columns, extract only the country data from the 
+# whole column vector. Check that it worked by looking at the last six values in the 
+# resulting vector.
+
+# 3. Plot female life expectancy vs. male life expectancy and include the best fit trendline.
+# Based on the model information, how much longer do women typically live than men?
+
+# 4. What kind of data structure is the nondiscrimination_clause_mentions_gender_in_the_constitution
+# column? Convert it to a factor (omitting the last 12 lines).  Note: you can control
+# the labels assigned to the factors as shown in this example:
+sex <- factor(nls_ds1$BIO_SEX,
+              levels = c(1, 2),
+              labels = c("male", "female"))
+
+# This isn't required, but makes the output easier to read.
+
+#5. Create a box and whisker plot comparing female life expectency in countries where the 
+# constitution mentions gender in a non-discrimination clause and where it does not.
+
+# Do women live longer in countries where constitutions mention gender in a non-discrimination clause?
 
