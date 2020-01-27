@@ -32,8 +32,8 @@ To download an R script, click on the link.  Then:
 | Date | Session | Topic | Notes |
 |---|---|---|
 | Jan 14 | 1 | Installing R and RStudio and navigating around | [lesson slides](../presentations/lesson1-r-rstudio.pdf)|
-| Jan 21 | 2 | R data structures | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures.R) / [lesson slides](../presentations/lesson2-structures.pdf) / [web page](../structures) |
-| Jan 28 | 3 | Creating simple scripts | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-scripts.R) / [lesson slides](../presentations/lesson3-scripts.pdf) |
+| Jan 21 | 2 | R data structures | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures.R) / [lesson slides](../presentations/lesson2-structures.pdf) / [web page](../structures) / [HW answers](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures-answers.R) |
+| Jan 28 | 3 | Creating simple scripts | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-scripts.R) / [lesson slides](../presentations/lesson3-scripts.pdf) / [HW answers](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-scripts-answers.R) |
 | Feb 4 | 4 | Data wrangling | |
 | Feb 11 | 5 | Data visualization with ggplot |  |
 | Feb 18 | 6 | Programming in R | |
@@ -43,8 +43,8 @@ Second cycle: **Fridays** from 1:10 to 2:00 PM.  [Register here](https://forms.g
 | Date | Session | Topic | Notes |
 |---|---|---|
 | Mar 13 | 1 | Installing R and RStudio and navigating around | [lesson slides](../presentations/lesson1-r-rstudio.pdf)|
-| Mar 20 | 2 | R data structures | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures.R) / [lesson slides](../presentations/lesson2-structures.pdf) / [web page](../structures) |
-| Mar 27 | 3 | Creating simple scripts | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-scripts.R) / [lesson slides](../presentations/lesson3-scripts.pdf)  |
+| Mar 20 | 2 | R data structures | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures.R) / [lesson slides](../presentations/lesson2-structures.pdf) / [web page](../structures) / [HW answers](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures-answers.R) |
+| Mar 27 | 3 | Creating simple scripts | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-scripts.R) / [lesson slides](../presentations/lesson3-scripts.pdf) / [HW answers](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-scripts-answers.R) |
 | Apr 3 | 4 | Data wrangling | |
 | Apr 10 | 5 | Data visualization with ggplot |  |
 | Apr 17 | 6 | Programming in R | |
