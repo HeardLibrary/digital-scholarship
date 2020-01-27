@@ -51,7 +51,7 @@ Second cycle: **Fridays** from 1:10 to 2:00 PM.  [Register here](https://forms.g
 
 # R Resources
 
-Here's a [page of R resources](../)
+Here's a [page of R resources](../) that include a number of online lessons for R beginners.
 
 [O’Reilly for Higher Education](http://www.library.vanderbilt.edu/eres?id=1676) books and videos (Vanderbilt sign-in required)
 
@@ -76,4 +76,4 @@ March 5-6: A two-day workshop focused on Unix, Git, and Python (Not R this time)
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-01-24
+Revised 2020-01-27
