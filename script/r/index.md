@@ -16,6 +16,10 @@ The following links lead to a series of lessons designed to help you get started
 
 [4. Where do I go from here?](next)
 
+## RStudio Cloud
+
+[RStudio Cloud](https://rstudio.cloud/) is a hosted version of RStudio in the cloud that allows you to run R code without installing R and RStudio on your local computer. It is in beta and is free, so it's worth trying out if you aren't sure that you want to commit to installing R and RStudio on your own computer.  You can set up team access to a project and work collaboratively with others.
+
 ## R lessons at Vanderbilt
 
 Go to the [lessons home page](lessons/) for information, schedule, and registration.
