@@ -18,7 +18,7 @@ Here is the schedule of our Spring 2020 meetings:
 |------|-------|-------|
 | Jan. 15 | Intro and Installation |
 | Jan. 22 | Introduction, software installation, Exploring a GIS Map  |[Exercise Data](https://mgimond.github.io/ArcGIS_tutorials/Exploring_a_GIS_map_files/Map.zip)  |[Exercise Instructions](https://mgimond.github.io/ArcGIS_tutorials/Exploring_a_GIS_map.htm) |
-| Jan. 29 |Managing GIS Data | |
+| Jan. 29 | Basic Lesson | [Exercise Data](https://drive.google.com/open?id=1Ukna-YppvoTb5l8ROnfdGW2uaf6GbYg3)|[Exercise Instructions](https://geospatialhistorian.wordpress.com/lessons/arcgis-lesson-1-mapping-great-plains-population/ |
 | Feb. 05 | Symbolizing Features |  |
 | Feb. 12 | Defining and Projecting Data |  |
 | Feb. 19 | Working with Tables (Joining) |  |
