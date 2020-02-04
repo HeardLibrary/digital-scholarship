@@ -175,6 +175,13 @@ inner_sorted_data <- arrange(inner_joined_data, country)
 
 # Note that the full outer joined data includes "Arab World" (only in the poverty data); inner join does not
 
+# Now that we have combined the dataset, we can check for a relationship between the female employment percentage and
+# the 2015 percentage of poverty for countries in the joined dataset
+plot(outer_sorted_data$`2015` ~ outer_sorted_data$female_employment_percentage)
+model <- lm(outer_sorted_data$`2015` ~ outer_sorted_data$female_employment_percentage)
+abline(model)
+summary(model)
+
 # Clear data here again
 
 # ------------------
