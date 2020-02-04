@@ -36,9 +36,12 @@ schools_data <- read.csv("https://raw.githubusercontent.com/HeardLibrary/digital
 hist(schools_data$Economically.Disadvantaged)
 
 # There are also functions for basic stats:
-count(schools_data$Economically.Disadvantaged)
+length(schools_data$Economically.Disadvantaged)
+count(schools_data)  # number of rows in a data frame
 mean(schools_data$Economically.Disadvantaged)
+mean(na.omit(schools_data$Economically.Disadvantaged)) # omit missing NA values
 sd(schools_data$Economically.Disadvantaged)
+sd(na.omit(schools_data$Economically.Disadvantaged)) # omit missing NA values
 
 # NOTE: these statistics aren't particularly informative since nothing was done to control for differences
 # in school size.
