@@ -139,8 +139,6 @@ mutate(schools_tibble, total_students = Male + Female)
 small_dataset <- transmute(schools_tibble, `School Name`, total_students = Male + Female, `Economically Disadvantaged`)
 small_dataset
 
-mutate(schools_tibble, total_students = Male + Female)
-
 # CHANGING COLUMNS
 
 # Changing the data type of a column
@@ -151,6 +149,8 @@ str(schools_tibble)
 # Format is mutate(tibble_name, column_to_replace = replace(source_column, condition, replacement_value)
 mutate(schools_tibble, `School Level` = replace(`School Level`, `School Level` == "Elementary School", "Primary School"))
 # There are other ways to do this, but this is the tidyverse way
+
+# Probably a good idea to clear your Global Environment again here
 
 # JOINS
 
@@ -174,6 +174,8 @@ inner_joined_data <- inner_join(womens_data, poverty_data, by = c("country"="Cou
 inner_sorted_data <- arrange(inner_joined_data, country)
 
 # Note that the full outer joined data includes "Arab World" (only in the poverty data); inner join does not
+
+# Clear data here again
 
 # ------------------
 # Pipelines using pipes
