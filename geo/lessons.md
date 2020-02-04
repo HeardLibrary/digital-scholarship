@@ -19,7 +19,7 @@ Here is the schedule of our Spring 2020 meetings:
 | Jan. 15 | Intro and Installation |
 | Jan. 22 | Introduction, software installation, Exploring a GIS Map  |[Lesson 1 Data](https://mgimond.github.io/ArcGIS_tutorials/Exploring_a_GIS_map_files/Map.zip)  |[Lesson 1 Instructions](https://mgimond.github.io/ArcGIS_tutorials/Exploring_a_GIS_map.htm) |
 | Jan. 29 | Basic Lesson | [Lesson 2 Data](https://drive.google.com/open?id=1Ukna-YppvoTb5l8ROnfdGW2uaf6GbYg3)|[Lesson 2 Instructions](https://geospatialhistorian.wordpress.com/lessons/arcgis-lesson-1-mapping-great-plains-population/) |
-| Feb. 05 | Defining and Projecting Data | [Lesson 3 Data](https://mgimond.github.io/ArcGIS_tutorials/Projection_files/projection.zip) |[Lesson 3 Instructions](https://mgimond.github.io/ArcGIS_tutorials/Projection.htm) |(https://www.esri.com/videos/watch?videoid=PICwxT0fTHQ&title=introducing-coordinate-systems-and-map-projections) |
+| Feb. 05 | Defining and Projecting Data | [Lesson 3 Data](https://mgimond.github.io/ArcGIS_tutorials/Projection_files/projection.zip) |[Lesson 3 Instructions](https://mgimond.github.io/ArcGIS_tutorials/Projection.htm) |
 | Feb. 12 |  |  |
 | Feb. 19 | Working with Tables (Joining) |  |
 | Feb. 26 | Geocoding |  |
