@@ -36,6 +36,7 @@ str(erg_dframe)
 str(erg_tibble)
 
 # Notice the difference in how the block and color columns are read in.
+# If the file has tab delimiters instead of commas, you can use read_tsv()
 
 # For reference: how to write a tibble to a CSV file
 write_csv(tibble_name, "file_name.csv", na = "NA", append = FALSE, col_names = TRUE, quote_escape = "double")
