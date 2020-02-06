@@ -239,3 +239,11 @@ read_csv("https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/mas
   mutate(econ_disadvantaged = `Economically Disadvantaged`/total_students, limited_english = `Limited English Proficiency`/total_students) %>%
   select(`School Name`, total_students, econ_disadvantaged, limited_english) %>% 
   write_csv("schools-output.csv", na = "NA", append = FALSE, col_names = TRUE, quote_escape = "double")
+
+# If the data are already in a tibble (or generic data frame), the tibble can be piped in directly:
+
+schools_tibble %>%
+  filter(`School Level` == "High School") %>%
+  mutate(total_students = Male + Female)
+
+# etc.
