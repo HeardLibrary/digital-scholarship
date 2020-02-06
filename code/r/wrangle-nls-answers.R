@@ -93,7 +93,7 @@ bmi_tibble <- inner_raw %>%
   mutate(bmi = mass_kg/height_m^2) # calculate BMI
 
 # ------------------
-# Homework assignment #3: Calculate a BMI column
+# Homework assignment #3: Calculate a maternal closeness column
 # ------------------
 
 # change missing values to NA, then calculate maternal closeness

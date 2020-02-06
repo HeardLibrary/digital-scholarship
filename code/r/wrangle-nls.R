@@ -84,7 +84,7 @@ bmi_tibble <- inner_raw %>%
   # *code here*
   
 # ------------------
-# Homework assignment #3: Calculate a BMI column
+# Homework assignment #3: Calculate a maternal closeness column
 # ------------------
 
 # change missing values to NA, then calculate maternal closeness
