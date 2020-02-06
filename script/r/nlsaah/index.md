@@ -12,7 +12,7 @@ breadcrumb: NLSAAH
 
 The data from this study are published in the *Inter-university Consortium for Political and Social Research (ICPSR)* [data archive](https://www.icpsr.umich.edu/icpsrweb/).  
 
-# Accessing the data
+# First session: Accessing the data
 
 ## Sign up for an ICPSR account
 
@@ -55,5 +55,15 @@ barplot(table(sex))
 
 You should go ahead and download the entire data set, unzip it, and put it somewhere on your computer where you can locate it again.  Go to the [Data and documentation page](https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/21600/datadocumentation) and click on the big `Download` button above the list of individual datasets.  Select `Delimited` as the format to download.
 
+# Second session: Wrangling the data
+
+The datasets are really big and might actually cause your computer to run out of memory if you have too many applications running. So one task we want to accomplish is to pull a subset of data out of of the origial datasets.
+
+A second issue is that the data include various forms of missing data ("don't know", "won't say", "not applicable", etc.). We may not want such data included in the analysis and therefore need to replace those values with missing data (NA) values.
+
+The third item is that we'd like to have two new variables to use in future analyses: a calculation of the *body mass index* (BMI) and a new index called "maternal closeness" that has a value of 1 if the five maternal closeness indications all have values of 1, and a value of 0 if they are a number other than 1. Missing values should continue to be missing values.
+
+The template assignment is [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls.R). Answers are [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls-answers.R).
+
 ----
-Revised 2020-01-14
+Revised 2020-02-06
