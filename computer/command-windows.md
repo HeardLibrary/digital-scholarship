@@ -305,11 +305,13 @@ Because all of the paths are crammed together and separated by semicolons, it ca
 
 5\. In the `Environmental variables` dialog box, go to the bottom pane and scroll down to `Path`.  Click to select it, then click on the `Edit...` button below the pane.
 
-<img src="../images-5-pc/edit-environmental-variable.png" style="border:1px solid black">
+<img src="../images-5-pc/edit-environmental-variables.png" style="border:1px solid black">
 
-6\. In the popup dialog window, click on the `New` button. 
+6\. If you are lucky, you will get a popup window like this that will allow you to add the new path to the list by clicking on the `New` button. 
 
 <img src="../images-5-pc/save-new-path.jpg" style="border:1px solid black">
+
+On some computers, you may instead have all of the paths listed on a single line, separated by semicolons. If that is what you see, go to the end of the line, add a semicolon (with no spaces before or after) and go to the next step (i.e., type the path).
 
 7\. Type the path to the directory where the executable file is located, then click OK.
 
