@@ -35,7 +35,7 @@ To download an R script, click on the link.  Then:
 | Jan 21 | 2 | R data structures | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures.R) / [lesson slides](../presentations/lesson2-structures.pdf) / [web page](../structures) / [HW answers](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures-answers.R) |
 | Jan 28 | 3 | Creating simple scripts | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-scripts.R) / [lesson slides](../presentations/lesson3-scripts.pdf) / [HW answers](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-scripts-answers.R) |
 | Feb 4 | 4 | Data wrangling | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson4-wrangle.R) / [lesson slides](../presentations/lesson4-wrangle.pdf) |
-| Feb 11 | 5 | Data visualization with ggplot |  |
+| Feb 11 | 5 | Data visualization with ggplot | [lesson slides](../presentations/ggplot2_dataViz_20200211.pdf) |
 | Feb 18 | 6 | Programming in R | |
 
 Second cycle: **Fridays** from 1:10 to 2:00 PM.  [Register here](https://forms.gle/nege53mCTEKyXZcH6)
