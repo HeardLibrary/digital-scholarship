@@ -20,14 +20,14 @@ Here is the schedule of our Spring 2020 meetings:
 | Jan. 22 | Introduction, software installation, Exploring a GIS Map  |[Lesson 1 Data](https://mgimond.github.io/ArcGIS_tutorials/Exploring_a_GIS_map_files/Map.zip)  |[Lesson 1 Instructions](https://mgimond.github.io/ArcGIS_tutorials/Exploring_a_GIS_map.htm) |
 | Jan. 29 | Basic Lesson | [Lesson 2 Data](https://drive.google.com/open?id=1Ukna-YppvoTb5l8ROnfdGW2uaf6GbYg3)|[Lesson 2 Instructions](https://geospatialhistorian.wordpress.com/lessons/arcgis-lesson-1-mapping-great-plains-population/) |
 | Feb. 05 | Defining and Projecting Data | [Lesson 3 Data](https://mgimond.github.io/ArcGIS_tutorials/Projection_files/projection.zip) |[Lesson 3 Instructions](https://mgimond.github.io/ArcGIS_tutorials/Projection.htm) |
-| Feb. 12 |  |  |
-| Feb. 19 | Working with Tables (Joining) |  |
+| Feb. 12 | Projections, Joins | [Lesson 4 Data](https://mgimond.github.io/ArcGIS_tutorials/Joining_tables_files/Table_join.zip) |[Lesson 4 Instructions](https://mgimond.github.io/ArcGIS_tutorials/Joining_tables.htm) |
+| Feb. 19 | Selection, Queries, Clip |  |
 | Feb. 26 | Geocoding |  |
 | Mar. 04 | Vector Editing |  |
 | Mar. 11 | No Meeting |  |
 | Mar. 18 | Geoprocessing |  |
 | Mar. 25 | Geoprocessing/Spatial Analysis |  |
-| Apr. 01 | Map Layout/Export/Sharing |  |
+| Apr. 01 | Georeferencing |  |
 | Apr. 08 | Working with Rasters |  |
 
 Tutorials adapted from Manny Gimond.   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
