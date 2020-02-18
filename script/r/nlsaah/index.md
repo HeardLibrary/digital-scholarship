@@ -43,7 +43,7 @@ Here's a script that reads in the files and does a bit of manipulation. You can 
 ```
 library(readr) # for reading tibbles
 
-# read in tab separated value file
+# read in tab separated value file 21600-0001-Data.tsv
 nls_ds1 <- read_tsv(file.choose())
 
 # display the data in the column labeled "BIO_SEX"
@@ -55,6 +55,7 @@ sex <- factor(nls_ds1$BIO_SEX,
               labels = c("male", "female"))
 
 # summarize the data
+sex
 table(sex)
 barplot(table(sex))
 ```
