@@ -41,6 +41,8 @@ The `read.csv()` function loads the data into a regular data frame. The `readr` 
 Here's a script that reads in the files and does a bit of manipulation. You can try running it to make sure you've successfully loaded the data.
 
 ```
+library(readr) # for reading tibbles
+
 # read in tab separated value file
 nls_ds1 <- read_tsv(file.choose())
 
