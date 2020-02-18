@@ -24,6 +24,8 @@ We meet in the Eskind Training Room (Room 010 in the basement of the Eskind Biom
 
 First cycle: **Tuesdays** from 1:10 to 2:00 PM.  Registration for cycle 1 is now closed.
 
+[Feedback link](https://forms.gle/NyTw8UaisBqBQvLr7)
+
 To download an R script, click on the link.  Then:
 
 - (method 1) On the resulting page, right-click on the `Raw` button and select `Save link as...` (or similar).  Download the script to some place where you can find it. Open the file in RStudio using `File`, then `Open file`.
