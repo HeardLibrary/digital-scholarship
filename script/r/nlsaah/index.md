@@ -22,21 +22,27 @@ Go to the [login page](https://www.icpsr.umich.edu/rpxlogin) and click on the `C
 
 1. Go to the [study data page](https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/21600/datadocumentation) for the study.
 
-2. We will start by looking at the `DS1 Wave 1: In-Home Questionnaire, Public Use Sample` dataset. To download it separately, click the Download button to the right of its heading and select `Delimited`. 
+2. We will be looking at the `DS1 Wave 1: In-Home Questionnaire, Public Use Sample` and `DS22 Wave IV: In-Home Questionnaire, Public Use Sample` datasets. To download each one, click the Download button to the right of its heading and select `Delimited`. 
 
-3. After the download is completed, go to your download directory and unzip the archive. The file we want is in the `ICPSR_21800` folder, then in the `DS0001` folder, called `21600-0001-Data.tsv`.  If necessary move the file to somewhere where you can easily navigate to it.
+3. After the download is completed, go to your download directory and unzip the archive. The files we want are in the `ICPSR_21800` folder, then in the `DS0001` and `DS0022` folders, called `21600-0001-Data.tsv` and `21600-0022-Data.tsv` respectively.  If necessary move the files to somewhere where you can easily navigate to it. Optimally, it will be a location that you know how to write a path for in the script.
 
 # Loading the data into RStudio
 
 The form of the data that we've downloaded is `tab separated values` (TSV).  TSV and variants with other separators, such as `comma separated values (CSV)` are very common tabular data storage and transfer formats.  (See [this information](https://heardlibrary.github.io/digital-scholarship/script/python/inout/#csv-files) for more information about CSV files and how you can look at them.)
 
-The R `read.csv` function can be used to read fielded text files with delimeters other than comma if the separator is indicated.  The tab character that's used as a delimeter is indicated as "\t".  The rest of this script uses syntax that we haven't discussed yet, but you can try running it to explore the data a little bit.
+The R `read.csv` function can be used to read fielded text files with delimeters other than comma if the separator is indicated.  The tab character that's used as a delimeter is indicated as "\t".  
 
-There is an example [here](https://heardlibrary.github.io/digital-scholarship/script/r/structures/#data-frames) showing how you can examine the data of a loaded data frame (`nls_ds1`) in our example.  Take a look at the data frame to see how the data are organized.
+```
+nls_ds1 <- read.csv(file.choose(), header = TRUE, sep = "\t")
+```
+
+The `read.csv()` function loads the data into a regular data frame. The `readr` library (part of the `tidyverse` library) contains two functions that read the data into tibbles rather than generic data frames. They are `read_csv()` (with an underscore rather than a dot) for comma delineated files and `read_tsv()` for tab delineated files.
+
+Here's a script that reads in the files and does a bit of manipulation. You can try running it to make sure you've successfully loaded the data.
 
 ```
 # read in tab separated value file
-nls_ds1 <- read.csv(file.choose(), header = TRUE, sep = "\t")
+nls_ds1 <- read_tsv(file.choose())
 
 # display the data in the column labeled "BIO_SEX"
 nls_ds1$BIO_SEX
@@ -51,11 +57,7 @@ table(sex)
 barplot(table(sex))
 ```
 
-## For next time
-
-You should go ahead and download the entire data set, unzip it, and put it somewhere on your computer where you can locate it again.  Go to the [Data and documentation page](https://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/21600/datadocumentation) and click on the big `Download` button above the list of individual datasets.  Select `Delimited` as the format to download.
-
-# Second session: Wrangling the data
+# Wrangling the data
 
 The datasets are really big and might actually cause your computer to run out of memory if you have too many applications running. So one task we want to accomplish is to pull a subset of data out of of the origial datasets.
 
@@ -66,4 +68,4 @@ The third item is that we'd like to have two new variables to use in future anal
 The template assignment is [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls.R). Answers are [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls-answers.R).
 
 ----
-Revised 2020-02-06
+Revised 2020-02-18
