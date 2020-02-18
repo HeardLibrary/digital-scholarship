@@ -68,7 +68,7 @@ A second issue is that the data include various forms of missing data ("don't kn
 
 The third item is that we'd like to have two new variables to use in future analyses: a calculation of the *body mass index* (BMI) and a new index called "maternal closeness" that has a value of 1 if the five maternal closeness indications all have values of 1, and a value of 0 if they are a number other than 1. Missing values should continue to be missing values.
 
-The template assignment is [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls.R). Answers are [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls-answers.R).
+The template without code is [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls.R) if you want to try to code it yourself. The completed script is [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls-answers.R).
 
 ----
 Revised 2020-02-18
