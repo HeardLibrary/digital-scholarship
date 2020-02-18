@@ -12,7 +12,7 @@ breadcrumb: NLSAAH
 
 The data from this study are published in the *Inter-university Consortium for Political and Social Research (ICPSR)* [data archive](https://www.icpsr.umich.edu/icpsrweb/).  
 
-# First session: Accessing the data
+# Accessing the data
 
 ## Sign up for an ICPSR account
 
