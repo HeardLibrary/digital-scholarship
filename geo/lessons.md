@@ -21,7 +21,7 @@ Here is the schedule of our Spring 2020 meetings:
 | Jan. 29 | Basic Lesson | [Lesson 2 Data](https://drive.google.com/open?id=1Ukna-YppvoTb5l8ROnfdGW2uaf6GbYg3)|[Lesson 2 Instructions](https://geospatialhistorian.wordpress.com/lessons/arcgis-lesson-1-mapping-great-plains-population/) |
 | Feb. 05 | Defining and Projecting Data | [Lesson 3 Data](https://mgimond.github.io/ArcGIS_tutorials/Projection_files/projection.zip) |[Lesson 3 Instructions](https://mgimond.github.io/ArcGIS_tutorials/Projection.htm) |
 | Feb. 12 | Projections, Joins | [Lesson 4 Data](https://mgimond.github.io/ArcGIS_tutorials/Joining_tables_files/Table_join.zip) |[Lesson 4 Instructions](https://mgimond.github.io/ArcGIS_tutorials/Joining_tables.htm)
-| Feb. 19 | Selection, Queries, Field Calculator | [Lesson 5 Data] No Download |[Lesson 5 Instructions](https://learn.arcgis.com/en/projects/map-breast-cancer-differences-by-ethnicity/arcmap/#map-the-mortality-rate-difference)  |
+| Feb. 19 | Selection, Queries, Field Calculator |  No Data Download |[Lesson 5 Instructions](https://learn.arcgis.com/en/projects/map-breast-cancer-differences-by-ethnicity/arcmap/#map-the-mortality-rate-difference)  |
 | Feb. 26 | Geocoding |  |
 | Mar. 04 | Vector Editing |  |
 | Mar. 11 | No Meeting |  |
