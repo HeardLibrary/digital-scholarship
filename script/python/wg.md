@@ -14,7 +14,7 @@ DiSC Python lessons are provided by the [Digital Scholarship and Communications 
 
 The beginners lessons generally cycle twice per semester.  See the schedule below for details.  You are also encouraged to work through the lessons on your own.  They contain practice exercises, with answers.  
 
-In the second half of the 2020 spring semester, the DiSC office may present an intermediate-level series of lessons on working with large data sets.  Stay tuned for further information.
+On March 19, the DiSC office will begin a series of intermediate lessons focused on data analysis and visualization with Python. See the schedule below for details.
 
 The DiSC office also provides [lessons for learning R](https://heardlibrary.github.io/digital-scholarship/script/r/lessons) in a similar format.
 
@@ -27,7 +27,7 @@ We meet in the Eskind Training Room (Room 010 in the basement of the Eskind Biom
 First cycle: **Fridays** from 1:10 to 2:00 PM.  Registration has been closed for this cycle.
 
 | Date | Session | Topic | Notes |
-|---|---|---|
+|---|---|---|---|
 | Jan 10 | 1 | Getting started | intro [web page](../) and [presentation](../presentations/lesson1-starting.pdf) / [Anaconda](../../anaconda/) / [install Thonny](../thonny/) / [install Python](../install/) / [install editor](../editor/) / [code examples](../examples/) / [example notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)|
 | Jan 17 | 2 | Python scripting basics | [lesson webpage](../basics/) |
 | Jan 24 | 3 | Object-oriented Python | [lesson webpage](../object/) |
@@ -39,7 +39,7 @@ First cycle: **Fridays** from 1:10 to 2:00 PM.  Registration has been closed for
 Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  [Register here](https://forms.gle/Z5UThwmzHBEZgiUs5)
 
 | Date | Session | Topic | Notes |
-|---|---|---|
+|---|---|---|---|
 | Mar 10 | 1 | Getting started | intro [web page](../) and [presentation](../presentations/lesson1-starting.pdf) / [Anaconda](../../anaconda/) / [install Thonny](../thonny/) / [install Python](../install/) / [install editor](../editor/) / [code examples](../examples/) / [example notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)|
 | Mar 17 | 2 | Python scripting basics | [lesson webpage](../basics/) |
 | Mar 24 | 3 | Object-oriented Python | [lesson webpage](../object/) |
@@ -47,6 +47,21 @@ Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  [Register here](https://forms.
 | Apr 7 | 5 | Dictionaries and JSON | [lesson webpage](../json/) |
 | Apr 14 | 6 | Input and output from files | [lesson webpage](../inout/) |
 | Apr 21 | 7 | Interacting with the Internet | [lesson webpage](../internet/) |
+
+## Intermediate Lessons on Data Analysis and Visualization - Spring 2020
+
+These lessons will be taught by Dr. Sanjay Mishra of the Vanderbilt Vaccine Center and former Data Science instructor at the Nashville Software School. They will focus on analyzing and visualizing large data sets with Python and will use Pandas and Matplotlib. The lessons assume that you have basic Python skills and will use Jupyter notebooks as a computing platform. 
+
+**Thursdays** from 11:10 AM to noon. [Register here](https://forms.gle/cT27q4yjNexu9Xkk8)
+
+| Date | Session | Topic | Notes |
+|---|---|---|---|
+| Mar 19 | 1 | Importing data (Pandas, slicing) | |
+| Mar 26 | 2 | Creating figures with Matplotlib | |
+| Apr 2 | 3 | Curve fitting and regression | |
+| Apr 9 | 4 | Basic image processing |  |
+| Apr 16 | 5 | Reproducible results: notebooks, LaTex, and presentations |  |
+
 
 ## Archive of API/Web Scraping Lessons - Fall 2019
 
@@ -81,4 +96,4 @@ March 5-6: A two-day workshop focused on Unix, Git, and Python.  [Event web page
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-01-24
+Revised 2020-02-24
