@@ -63,6 +63,8 @@ Do not close the Jupyter tree tab on your web browser because you'll need it lat
 
 There are many tutorials on the web for using Jupyter notebooks, so we won't repeat that information here.  Here's [one tutorial for beginners](https://www.dataquest.io/blog/jupyter-notebook-tutorial/) and [more detailed documentation](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Notebook%20Basics.html).  
 
+You can also integrate slide shows with Jupyter notebooks using RISE. See [this page](https://rise.readthedocs.io/en/stable/) for more information.
+
 ## Quitting Jupyter notebooks
 
 When you are done with the notebook itself, save it by clicking on the save button (if desired) before closing the notebook's tab in the browser.  
@@ -78,4 +80,4 @@ If you forget to shut down the server before closing the Jupyter tree tab, you c
 If you forget to follow this procedure, nothing will probably be "broken" but you may experience some data loss if you close things in the middle of editing a notebook.
 
 ----
-Revised 2019-08-26
+Revised 2020-02-24
