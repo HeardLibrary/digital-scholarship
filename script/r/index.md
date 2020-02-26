@@ -49,7 +49,13 @@ Vanderbilt has a submscription to *O'Reilly for Higher Education* which provides
 
 [R Graphics Cookbook](https://r-graphics.org/) by Winston Chang provides many recipes for generating high-quality graphs quickly using R.
 
+["Introducing R" website](https://data.princeton.edu/R/gettingStarted) by Germán Rodríguez provides a basic introduction to RStudio, loading data, and linear models.
+
 [Online R resources for Beginners](http://www.introductoryr.co.uk/R_Resources_for_Beginners.html) is a page of links to many other R online resources, including online books, video tutorials, and other websites.
+
+[Getting Started in Data Analysis using Stata and R](https://dss.princeton.edu/training/) by Princeton Data and Statistical Services has links to many presentations on using R to carry out statistical tests.
+
+[UCLA R resources](https://stats.idre.ucla.edu/r/) by the UCLA Institute for Digital Research and Education Statistical Consulting service. There are links here to lessons and examples. The [data analysis examples](https://stats.idre.ucla.edu/other/dae/) has examples for many common statistical tests.
 
 [An R Companion for the Handbook of Biological Statistics](http://rcompanion.org/rcompanion/) is the code supplement for the online [Handbook of Biological Statistics](http://www.biostathandbook.com/) by John H. McDonald.  The examples include many of the most common parametric and non-parametric statistical tests, including some of the simpler multivariate tests.
 
