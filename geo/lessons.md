@@ -22,15 +22,16 @@ Here is the schedule of our Spring 2020 meetings:
 | Feb. 05 | Defining and Projecting Data | [Lesson 3 Data](https://mgimond.github.io/ArcGIS_tutorials/Projection_files/projection.zip) |[Lesson 3 Instructions](https://mgimond.github.io/ArcGIS_tutorials/Projection.htm) |
 | Feb. 12 | Projections, Joins | [Lesson 4 Data](https://mgimond.github.io/ArcGIS_tutorials/Joining_tables_files/Table_join.zip) |[Lesson 4 Instructions](https://mgimond.github.io/ArcGIS_tutorials/Joining_tables.htm)
 | Feb. 19 | Selection, Queries, Field Calculator |  No Data Download |[Lesson 5 Instructions](https://learn.arcgis.com/en/projects/map-breast-cancer-differences-by-ethnicity/arcmap/#map-the-mortality-rate-difference)  |
-| Feb. 26 | Geocoding |  |
-| Mar. 04 | Vector Editing |  |
+| Feb. 26 | No Meeting - Geocoding Tutorial | [Lesson 5 Data](https://mgimond.github.io/ArcGIS_tutorials/Geocoding_files/Addresses.csv) |[Lesson 5 Instructions](https://mgimond.github.io/ArcGIS_tutorials/Geocoding.htm) |
+| Mar. 04 | No Meeting - Spring Break |  |
 | Mar. 11 | No Meeting |  |
 | Mar. 18 | Geoprocessing |  |
 | Mar. 25 | Geoprocessing/Spatial Analysis |  |
 | Apr. 01 | Georeferencing |  |
-| Apr. 08 | Working with your Own Data! |  |
+| Apr. 08 | Map Layout - Cartography |  |
+| Apr. 15 | Working with your Own Data! |  |
 
-Tutorials adapted from Manny Gimond.   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+Some tutorials adapted from Manny Gimond.   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.  
 
 Tutorials also supplemented from ESRI Learn ArcGIS_tutorials.
 
@@ -40,4 +41,4 @@ Tutorials also supplemented from ESRI Learn ArcGIS_tutorials.
 
 
 ----
-Revised 2020-15-01
+Revised 2020-26-02
