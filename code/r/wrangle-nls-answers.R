@@ -120,7 +120,12 @@ with_maternal <- bmi_tibble %>%
   mutate(H1PF23 = replace(H1PF23, H1PF23>=6, NA)) %>%
   mutate(H1PF24 = replace(H1PF24, H1PF24>=6, NA)) %>%
   mutate(H1PF25 = replace(H1PF25, H1PF25>=6, NA)) %>%
-  mutate(maternal_closeness = ifelse(!H1PF1==1 & !is.na(H1PF1), 0, ifelse(H1PF1==1, 1, NA)))
+  mutate(mc_H1PF1 = ifelse(!H1PF1==1 & !is.na(H1PF1), 0, ifelse(H1PF1==1, 1, NA))) %>%
+  mutate(mc_H1PF2 = ifelse(!H1PF2==1 & !is.na(H1PF2), 0, ifelse(H1PF2==1, 1, NA))) %>%
+  mutate(mc_H1PF3 = ifelse(!H1PF3==1 & !is.na(H1PF3), 0, ifelse(H1PF3==1, 1, NA))) %>%
+  mutate(mc_H1PF4 = ifelse(!H1PF4==1 & !is.na(H1PF4), 0, ifelse(H1PF4==1, 1, NA))) %>%
+  mutate(mc_H1PF5 = ifelse(!H1PF5==1 & !is.na(H1PF5), 0, ifelse(H1PF5==1, 1, NA))) %>%
+  mutate(maternal_closeness = ifelse(mc_H1PF1==1 & mc_H1PF2==1 & mc_H1PF3==1 & mc_H1PF4==1 & mc_H1PF5==1, 1, ifelse(is.na(H1PF1) | is.na(H1PF2) | is.na(H1PF3) | is.na(H1PF4) | is.na(H1PF5), NA, 0)))
 
 write_csv(with_maternal, "mutated_data.csv", na = "NA", append = FALSE, col_names = TRUE, quote_escape = "double")
 
