@@ -59,7 +59,7 @@ Here's a [page of R resources](../) that include a number of online lessons for 
 
 [ICPSR data example](../nlsaah/)
 
-
+[Bivariate tests example code][https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/bivariate_tests_assumptions.R] - **Requires installation of the MVN library**
 
 ## Other sources of R resources on Vanderbilt's campus
 
