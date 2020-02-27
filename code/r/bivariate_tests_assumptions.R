@@ -134,10 +134,6 @@ model <- lm(with_maternal$bmi ~ with_maternal$H4TO5)
 abline(model)
 summary(model)
 
-# since cause and effect is not really known, should be a correlation
-bmi_smoking_cor <- cor.test(with_maternal$bmi, with_maternal$H4TO5)
-bmi_smoking_cor
-
 # ggplot visualization
 # see ggplot cheat sheet at https://rstudio.com/resources/cheatsheets/ under "Data Visualization Cheat Sheet"
 
@@ -150,6 +146,10 @@ ggplot(data = with_maternal) +
   geom_smooth(mapping = aes(x = H4TO5, y = bmi, color = BIO_SEX)) + 
   # labels labs() controls the labels of the axes and legend
   labs(y="body mass index (BMI)", x = "days smoked per month", color = "sex")
+
+# since cause and effect is not really known, should be a correlation
+bmi_smoking_cor <- cor.test(with_maternal$bmi, with_maternal$H4TO5)
+bmi_smoking_cor
 
 # test assumptions of bivariate normality
 normality_test <- select(with_maternal, H4TO5, bmi)
