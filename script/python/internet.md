@@ -166,7 +166,7 @@ url = 'http://api.gbif.org/v1/occurrence/search'
 r = requests.get(url, params={'recordedBy' : 'William A. Haber'})
 data = r.json()
 
-print(json.dumps(data))
+print(json.dumps(data, indent = 2))
 ```
 
 ## Examining the structure of JSON from an API
