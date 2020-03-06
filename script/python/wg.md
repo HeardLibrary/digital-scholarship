@@ -24,23 +24,11 @@ We meet in the Eskind Training Room (Room 010 in the basement of the Eskind Biom
 
 ## Schedule of Beginners Lessons - Spring 2020
 
-First cycle: **Fridays** from 1:10 to 2:00 PM.  Registration has been closed for this cycle.
-
-| Date | Session | Topic | Notes |
-|---|---|---|---|
-| Jan 10 | 1 | Getting started | intro [web page](../) and [presentation](../presentations/lesson1-starting.pdf) / [Anaconda](../../anaconda/) / [install Thonny](../thonny/) / [install Python](../install/) / [install editor](../editor/) / [code examples](../examples/) / [example notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)|
-| Jan 17 | 2 | Python scripting basics | [lesson webpage](../basics/) |
-| Jan 24 | 3 | Object-oriented Python | [lesson webpage](../object/) |
-| Jan 31 | 4 | Lists and loops | [lesson webpage](../structures/) |
-| Feb 7 | 5 | Dictionaries and JSON | [lesson webpage](../json/) |
-| Feb 21 | 6 | Input and output from files | [lesson webpage](../inout/) |
-| Feb 28 | 7 | Interacting with the Internet | [lesson webpage](../internet/) |
-
 Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  [Register here](https://forms.gle/Z5UThwmzHBEZgiUs5)
 
 | Date | Session | Topic | Notes |
 |---|---|---|---|
-| Mar 10 | 1 | Getting started | intro [web page](../) and [presentation](../presentations/lesson1-starting.pdf) / [Anaconda](../../anaconda/) / [install Thonny](../thonny/) / [install Python](../install/) / [install editor](../editor/) / [code examples](../examples/) / [example notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)|
+| Mar 10 | 1 | Getting started | intro [web page](../) and [presentation](../presentations/lesson1-starting.pdf) / [Anaconda](../../anaconda/) / [install Thonny](../thonny/) / [install Python](../install/) / [install editor](../editor/) / [code examples](../examples/) / [colab notebook](https://drive.google.com/file/d/1DE2Sl7KT29bWnWvhWnI4Fdk-knnMVTbe/view?usp=sharing) / [example Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)|
 | Mar 17 | 2 | Python scripting basics | [lesson webpage](../basics/) |
 | Mar 24 | 3 | Object-oriented Python | [lesson webpage](../object/) |
 | Mar 31 | 4 | Lists and loops | [lesson webpage](../structures/) |
@@ -89,11 +77,11 @@ Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 
 ## Software Carpentries (cosponsored by DiSC and Research IT)
 
-March 5-6: A two-day workshop focused on Unix, Git, and Python.  [Event web page](https://vanderbilt-data-science.github.io/2020-03-05-vanderbilt/) Cost: $33.46
+Stay tuned for the next offering
 
 --------------------
 
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-02-24
+Revised 2020-03-06
