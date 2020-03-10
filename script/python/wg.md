@@ -24,7 +24,7 @@ Due to the COVID-19 outbreak, the beginners lessons will be held online using Zo
 
 Join Zoom Meeting:
 
-https://zoom.us/j/456379817
+<https://zoom.us/j/456379817>
 
 ```
 One tap mobile
@@ -37,7 +37,7 @@ Dial by your location
 Meeting ID: 456 379 817
 ```
 
-Find your local number: https://zoom.us/u/aeJeX7bqJi
+Find your local number: <https://zoom.us/u/aeJeX7bqJi>
 
 Although the class is scheduled to begin at 1:10, we'll plan to be online at 1:00 to give people a chance to get connected. If you haven't used Zoom before, after you click the "Join Zoom Meeting" link, you'll be prompted to download the Zoom web app if you don't already have it.  After you give the app permission to connect, you'll be given an opportunity to test your microphone and sound to make sure that it's working.  If your sound is working, you can join using computer audio. If it's not working, you can with audio by phone using one of the numbers listed above. It's good to try to connect a few minutes ahead of the start of the meeting because it can take a few minutes to get set up if it's your first time.
  
