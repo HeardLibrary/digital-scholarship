@@ -20,7 +20,32 @@ The DiSC office also provides [lessons for learning R](https://heardlibrary.gith
 
 ## Venue
 
-We meet in the Eskind Training Room (Room 010 in the basement of the Eskind Biomedical Library).  To get there, walk past the circulation desk and veer to the left.  Take the elevators or stair down one floor, then turn right when you come out.
+Due to the COVID-19 outbreak, the beginners lessons will be held online using Zoom. Here is the information needed to connect to the March 10 meeting:
+
+Join Zoom Meeting:
+
+https://zoom.us/j/456379817
+
+```
+One tap mobile
++16465588656,,456379817# US (New York)
++16699009128,,456379817# US (San Jose)
+
+Dial by your location
+        +1 646 558 8656 US (New York)
+        +1 669 900 9128 US (San Jose)
+Meeting ID: 456 379 817
+```
+
+Find your local number: https://zoom.us/u/aeJeX7bqJi
+
+Although the class is scheduled to begin at 1:10, we'll plan to be online at 1:00 to give people a chance to get connected. If you haven't used Zoom before, after you click the "Join Zoom Meeting" link, you'll be prompted to download the Zoom web app if you don't already have it.  After you give the app permission to connect, you'll be given an opportunity to test your microphone and sound to make sure that it's working.  If your sound is working, you can join using computer audio. If it's not working, you can with audio by phone using one of the numbers listed above. It's good to try to connect a few minutes ahead of the start of the meeting because it can take a few minutes to get set up if it's your first time.
+ 
+I've set the meeting so that your camera is turned on and your microphone is turned off when you join the meeting. If you don't like the idea of your camera being turned on, you can "mute" it using the button at the bottom of the Zoom app window. It's best if everyone leaves their microphones turned off unless you want to say something because there tends to be a lot of feedback if many participants have their microphones turned on. It's fine to unmute your microphone if you want to ask a question.
+ 
+Zoom also has a chat feature that can be accessed by clicking on a button at the bottom of the screen. I'm not sure how much space I'll have for the presentation screen and also the chat window, but I'll try to have the chat window open during the presentation so that I can see any questions that people type there during the class.
+
+After this first meeting, we'll try to have a stable meeting URL for the remaining meetings. Check this page later for more information. 
 
 ## Schedule of Beginners Lessons - Spring 2020
 
@@ -84,4 +109,4 @@ Stay tuned for the next offering
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-03-06
+Revised 2020-03-10
