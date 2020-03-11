@@ -18,13 +18,35 @@ The DiSC office also provides [lessons for learning Python](https://heardlibrary
 
 ## Venue
 
-We meet in the Eskind Training Room (Room 010 in the basement of the Eskind Biomedical Library).  To get there, walk past the circulation desk and veer to the left.  Take the elevators or stair down one floor, then turn right when you come out.
+Due to the COVID-19 outbreak, the beginners lessons will be held online using Zoom. Here is the information needed to connect to the March 10 meeting:
+
+Join Zoom Meeting
+<https://zoom.us/j/298444608>
+
+```
+One tap mobile
++16465588656,,298444608# US (New York)
++16699009128,,298444608# US (San Jose)
+
+Dial by your location
+        +1 646 558 8656 US (New York)
+        +1 669 900 9128 US (San Jose)
+Meeting ID: 298 444 608
+```
+
+Find your local number: <https://zoom.us/u/aeJeX7bqJi>
+
+Although the class is scheduled to begin at 1:10, we'll plan to be online at 1:00 to give people a chance to get connected. If you haven't used Zoom before, after you click the "Join Zoom Meeting" link, you'll be prompted to download the Zoom web app if you don't already have it.  After you give the app permission to connect, you'll be given an opportunity to test your microphone and sound to make sure that it's working.  If your sound is working, you can join using computer audio. If it's not working, you can with audio by phone using one of the numbers listed above. It's good to try to connect a few minutes ahead of the start of the meeting because it can take a few minutes to get set up if it's your first time.
+ 
+I've set the meeting so that your camera is turned on and your microphone is turned off when you join the meeting. If you don't like the idea of your camera being turned on, you can "mute" it using the button at the bottom of the Zoom app window. It's best if everyone leaves their microphones turned off unless you want to say something because there tends to be a lot of feedback if many participants have their microphones turned on. It's fine to unmute your microphone if you want to ask a question. I'm planning to record the first session so that anyone who is traveling or otherwise can't attend will be able to catch up for the second meeting.
+ 
+Zoom also has a chat feature that can be accessed by clicking on a button at the bottom of the screen. I'll have the chat window open during the presentation so that I can see any questions that people type there during the class.
+
+After this first meeting, we'll try to have a stable meeting URL for the remaining meetings. Check this page later for more information. 
 
 ## Schedule of Beginners Lessons - Spring 2020
 
-First cycle: **Tuesdays** from 1:10 to 2:00 PM.  Registration for cycle 1 is now closed.
-
-[Feedback link](https://forms.gle/NyTw8UaisBqBQvLr7)
+Second cycle: **Fridays** from 1:10 to 2:00 PM.  [Register here](https://forms.gle/nege53mCTEKyXZcH6)
 
 To download an R script, click on the link.  Then:
 
@@ -33,23 +55,12 @@ To download an R script, click on the link.  Then:
 
 | Date | Session | Topic | Notes |
 |---|---|---|
-| Jan 14 | 1 | Installing R and RStudio and navigating around | [lesson slides](../presentations/lesson1-r-rstudio.pdf)|
-| Jan 21 | 2 | R data structures | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures.R) / [lesson slides](../presentations/lesson2-structures.pdf) / [web page](../structures) / [HW answers](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures-answers.R) |
-| Jan 28 | 3 | Creating simple scripts | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-scripts.R) / [lesson slides](../presentations/lesson3-scripts.pdf) / [HW answers](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-scripts-answers.R) |
-| Feb 4 | 4 | Data wrangling | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson4-wrangle.R) / [lesson slides](../presentations/lesson4-wrangle.pdf) |
-| Feb 11 | 5 | Data visualization with ggplot | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/usaNamesMain.R) / [lesson slides](../presentations/ggplot2_dataViz_20200211.pdf) |
-| Feb 18 | 6 | Practice with real data | [download instructions](../nlsaah/) / [lesson R script (with answers)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls-answers.R) / [starter script (no answers)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls.R) |
-
-Second cycle: **Fridays** from 1:10 to 2:00 PM.  [Register here](https://forms.gle/nege53mCTEKyXZcH6)
-
-| Date | Session | Topic | Notes |
-|---|---|---|
 | Mar 13 | 1 | Installing R and RStudio and navigating around | [lesson slides](../presentations/lesson1-r-rstudio.pdf)|
 | Mar 20 | 2 | R data structures | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures.R) / [lesson slides](../presentations/lesson2-structures.pdf) / [web page](../structures) / [HW answers](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures-answers.R) |
 | Mar 27 | 3 | Creating simple scripts | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-scripts.R) / [lesson slides](../presentations/lesson3-scripts.pdf) / [HW answers](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-scripts-answers.R) |
 | Apr 3 | 4 | Data wrangling | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson4-wrangle.R) / [lesson slides](../presentations/lesson4-wrangle.pdf) |
-| Apr 10 | 5 | Data visualization with ggplot |  |
-| Apr 17 | 6 | Programming in R | |
+| Apr 10 | 5 | Data visualization with ggplot | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/usaNamesMain.R) / [lesson slides](../presentations/ggplot2_dataViz_20200211.pdf) |
+| Apr 17 | 6 | Practice with real data | [download instructions](../nlsaah/) / [lesson R script (with answers)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls-answers.R) / [starter script (no answers)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls.R) |
 
 # R Resources
 
