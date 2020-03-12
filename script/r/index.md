@@ -73,4 +73,4 @@ For summaries of how to perform a variety of tasks using the RStudio IDE, see th
 To try out some simple R scripts for t-test of means, paired t-test, chi-squared goodness of fit, chi-squared contingency, regression, and ANOVA, visit [this page](stats/).
 
 ----
-Revised 2020-01-27
+Revised 2020-03-12
