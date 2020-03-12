@@ -53,7 +53,7 @@ Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  [Register here](https://forms.
 
 | Date | Session | Topic | Notes |
 |---|---|---|---|
-| Mar 10 | 1 | Getting started | intro [web page](../), [presentation](../presentations/lesson1-starting.pdf), and [video](https://www.library.vanderbilt.edu/medialink/viewfile.php?local=disc&file=beginner-python.mp4) (VUNet ID required) / [Anaconda](../../anaconda/) / [install Thonny](../thonny/) / [install Python](../install/) / [install editor](../editor/) / [code examples](../examples/) / [colab notebook](https://colab.research.google.com/drive/1DE2Sl7KT29bWnWvhWnI4Fdk-knnMVTbe) / [example Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)|
+| Mar 10 | 1 | Getting started | intro [web page](../), [presentation](../presentations/lesson1-starting.pdf), and [video](https://www.library.vanderbilt.edu/pubmedia/viewfile.php?file=beginner-python.mp4) / [Anaconda](../../anaconda/) / [install Thonny](../thonny/) / [install Python](../install/) / [install editor](../editor/) / [code examples](../examples/) / [colab notebook](https://colab.research.google.com/drive/1DE2Sl7KT29bWnWvhWnI4Fdk-knnMVTbe) / [example Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)|
 | Mar 17 | 2 | Python scripting basics | [lesson webpage](../basics/) |
 | Mar 24 | 3 | Object-oriented Python | [lesson webpage](../object/) |
 | Mar 31 | 4 | Lists and loops | [lesson webpage](../structures/) |
