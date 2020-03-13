@@ -4,9 +4,13 @@ title: Basics of Python structure
 breadcrumb: Basics
 ---
 
-Note: this is the second lesson in a beginner's introduction to Python.  For the whole schedule, see the [Vanderbilt Python Working Group homepage](../wg/)
+Note: this is the second lesson in a beginner's introduction to Python.  For the whole schedule, see the [Vanderbilt Python lessons homepage](../wg/)
 
-**General note:** Since these examples are really simple, we advise using the Thonny IDE so that you can cut, paste, then click the green run button to quickly test them out.  If you've installed Anaconda, the Spyder IDE can be used in the same way.
+**General note:** 
+
+The examples in this lesson can be run in a Google Colaboratory notebook. A Google account is required. Click on [this link](https://colab.research.google.com/drive/1HfJiFQCn0uFBSMLNXUxx63-2HzqOHel4), then from the file menu select `Save a copy in Drive...`. That will create a copy of the notebook that you can run, edit, and save.
+
+You can run the examples in the Thonny IDE. Just cut, paste, then click the green run button to quickly test them out.  If you've installed Anaconda, the Spyder IDE can be used in the same way.
 
 If you are interested in using Jupyter notebooks, the examples are available in [this notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/basics.ipynb).
 
@@ -622,4 +626,4 @@ if not zero:
 ```
 
 ----
-Revised 2020-01-17
+Revised 2020-03-13
