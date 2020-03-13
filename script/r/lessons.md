@@ -38,27 +38,6 @@ To download an R script, click on the link.  Then:
 
 Due to the COVID-19 outbreak, the beginners lessons will be held online using Zoom. Here is the information needed to connect to the meetings:
 
---------------
-
-Join Zoom Meeting (**March 13 drop-in Q&A only**)
-
-<https://zoom.us/j/298444608>
-
-```
-One tap mobile
-+16465588656,,298444608# US (New York)
-+16699009128,,298444608# US (San Jose)
-
-Dial by your location
-        +1 646 558 8656 US (New York)
-        +1 669 900 9128 US (San Jose)
-Meeting ID: 298 444 608
-```
-
-Find your local number: <https://zoom.us/u/aeJeX7bqJi>
-
-------------------
-
 Join Zoom Meeting (**March 20 through April 17 lessons**) 
 
 <https://vanderbilt.zoom.us/j/138335805>
@@ -78,7 +57,6 @@ Find your local number: <https://vanderbilt.zoom.us/u/aeh80pRUuM>
 
 Click [here](https://vanderbilt.zoom.us/meeting/vJcldOqtpjsvTLiOA1pzGAzwCsrleDhECQ/ics?icsToken=98tyKuirpjgpH9yVtV_9UaotOZ35bvHylEVio4x8zQ__JAFJdSDlJO5HFrpaM-mB) to download and import iCalendar (.ics) files to your calendar system.
 
----------------------
 
 Although the class is scheduled to begin at 1:10, we'll plan to be online at 1:00 to give people a chance to get connected. If you haven't used Zoom before, after you click the "Join Zoom Meeting" link, you'll be prompted to download the Zoom web app if you don't already have it.  After you give the app permission to connect, you'll be given an opportunity to test your microphone and sound to make sure that it's working.  If your sound is working, you can join using computer audio. If it's not working, you can with audio by phone using one of the numbers listed above. It's good to try to connect a few minutes ahead of the start of the meeting because it can take a few minutes to get set up if it's your first time.
  
