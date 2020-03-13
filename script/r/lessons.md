@@ -10,39 +10,11 @@ A shortened link to this page is [vanderbi.lt/r](http://vanderbi.lt/r).
 
 ## About the lessons
 
-DiSC R lessons are provided by the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/) at [Vanderbilt University](https://www.vanderbilt.edu/).  The DiSC office provides regular lessons for R beginners and occasional special topics lessons.  Registration is required - go to [this form](https://forms.gle/BDrnAg8aHvDRvz4i9) to register for the first cycle beginner lessons. There is no cost associated with the lessons.
+DiSC R lessons are provided by the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/) at [Vanderbilt University](https://www.vanderbilt.edu/).  The DiSC office provides regular lessons for R beginners and occasional special topics lessons.  There is no cost associated with the lessons.
 
 The beginners lessons generally cycle twice per semester.  See the schedule below for details.  You are also encouraged to work through the lessons on your own.   
 
 The DiSC office also provides [lessons for learning Python](https://heardlibrary.github.io/digital-scholarship/script/python/wg/) in a similar format.
-
-## Venue
-
-Due to the COVID-19 outbreak, the beginners lessons will be held online using Zoom. Here is the information needed to connect to the March 10 meeting:
-
-Join Zoom Meeting
-<https://zoom.us/j/298444608>
-
-```
-One tap mobile
-+16465588656,,298444608# US (New York)
-+16699009128,,298444608# US (San Jose)
-
-Dial by your location
-        +1 646 558 8656 US (New York)
-        +1 669 900 9128 US (San Jose)
-Meeting ID: 298 444 608
-```
-
-Find your local number: <https://zoom.us/u/aeJeX7bqJi>
-
-Although the class is scheduled to begin at 1:10, we'll plan to be online at 1:00 to give people a chance to get connected. If you haven't used Zoom before, after you click the "Join Zoom Meeting" link, you'll be prompted to download the Zoom web app if you don't already have it.  After you give the app permission to connect, you'll be given an opportunity to test your microphone and sound to make sure that it's working.  If your sound is working, you can join using computer audio. If it's not working, you can with audio by phone using one of the numbers listed above. It's good to try to connect a few minutes ahead of the start of the meeting because it can take a few minutes to get set up if it's your first time.
- 
-I've set the meeting so that your camera is turned on and your microphone is turned off when you join the meeting. If you don't like the idea of your camera being turned on, you can "mute" it using the button at the bottom of the Zoom app window. It's best if everyone leaves their microphones turned off unless you want to say something because there tends to be a lot of feedback if many participants have their microphones turned on. It's fine to unmute your microphone if you want to ask a question. I'm planning to record the first session so that anyone who is traveling or otherwise can't attend will be able to catch up for the second meeting.
- 
-Zoom also has a chat feature that can be accessed by clicking on a button at the bottom of the screen. I'll have the chat window open during the presentation so that I can see any questions that people type there during the class.
-
-After this first meeting, we'll try to have a stable meeting URL for the remaining meetings. Check this page later for more information. 
 
 ## Schedule of Beginners Lessons - Spring 2020
 
@@ -61,6 +33,59 @@ To download an R script, click on the link.  Then:
 | Apr 3 | 4 | Data wrangling | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson4-wrangle.R) / [lesson slides](../presentations/lesson4-wrangle.pdf) |
 | Apr 10 | 5 | Data visualization with ggplot | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/usaNamesMain.R) / [lesson slides](../presentations/ggplot2_dataViz_20200211.pdf) |
 | Apr 17 | 6 | Practice with real data | [download instructions](../nlsaah/) / [lesson R script (with answers)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls-answers.R) / [starter script (no answers)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls.R) |
+
+**Connection details**
+
+Due to the COVID-19 outbreak, the beginners lessons will be held online using Zoom. Here is the information needed to connect to the meetings:
+
+--------------
+
+Join Zoom Meeting (**March 13 drop-in Q&A only**)
+
+<https://zoom.us/j/298444608>
+
+```
+One tap mobile
++16465588656,,298444608# US (New York)
++16699009128,,298444608# US (San Jose)
+
+Dial by your location
+        +1 646 558 8656 US (New York)
+        +1 669 900 9128 US (San Jose)
+Meeting ID: 298 444 608
+```
+
+Find your local number: <https://zoom.us/u/aeJeX7bqJi>
+
+------------------
+
+Join Zoom Meeting (**March 20 through April 17 lessons**) 
+
+<https://vanderbilt.zoom.us/j/138335805>
+
+```
+One tap mobile
++16465588656,,138335805# US (New York)
++13462487799,,138335805# US (Houston)
+
+Dial by your location
+        +1 646 558 8656 US (New York)
+        +1 346 248 7799 US (Houston)
+Meeting ID: 138 335 805
+```
+
+Find your local number: <https://vanderbilt.zoom.us/u/aeh80pRUuM>
+
+Click [here](https://vanderbilt.zoom.us/meeting/vJcldOqtpjsvTLiOA1pzGAzwCsrleDhECQ/ics?icsToken=98tyKuirpjgpH9yVtV_9UaotOZ35bvHylEVio4x8zQ__JAFJdSDlJO5HFrpaM-mB) to download and import iCalendar (.ics) files to your calendar system.
+
+---------------------
+
+Although the class is scheduled to begin at 1:10, we'll plan to be online at 1:00 to give people a chance to get connected. If you haven't used Zoom before, after you click the "Join Zoom Meeting" link, you'll be prompted to download the Zoom web app if you don't already have it.  After you give the app permission to connect, you'll be given an opportunity to test your microphone and sound to make sure that it's working.  If your sound is working, you can join using computer audio. If it's not working, you can with audio by phone using one of the numbers listed above. It's good to try to connect a few minutes ahead of the start of the meeting because it can take a few minutes to get set up if it's your first time.
+ 
+I've set the meeting so that your camera is turned on and your microphone is turned off when you join the meeting. If you don't like the idea of your camera being turned on, you can "mute" it using the button at the bottom of the Zoom app window. It's best if everyone leaves their microphones turned off unless you want to say something because there tends to be a lot of feedback if many participants have their microphones turned on. It's fine to unmute your microphone if you want to ask a question. I'm planning to record the first session so that anyone who is traveling or otherwise can't attend will be able to catch up for the second meeting.
+ 
+Zoom also has a chat feature that can be accessed by clicking on a button at the bottom of the screen. I'll have the chat window open during the presentation so that I can see any questions that people type there during the class.
+
 
 # R Resources
 
