@@ -14,7 +14,11 @@ You can run the examples in the Thonny IDE. Just cut, paste, then click the gree
 
 If you are interested in using Jupyter notebooks, the examples are available in [this notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/basics.ipynb).
 
-The presentation for this lesson is [here](presentations/lesson2-basics.pdf)
+The PowerPoint presentation for this lesson is [here](presentations/lesson2-basics.pdf)
+
+The video of this presentation is in two parts. The first part is embedded immediately below and the second part is inserted in the page at the place where it picks up in the lesson.
+
+<iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/1821441/sp/182144100/embedIframeJs/uiconf_id/41615771/partner_id/1821441?iframeembed=true&playerId=kaltura_player&entry_id=1_8036a7dk&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_o6nbezhi" width="800" height="570" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
 
 # Basics of Python Structure
 
@@ -335,6 +339,8 @@ This example finds the square root of the number, then finds the largest whole n
 Python would take up a lot more space on your computer if it included every known module that the Python community has created.  Sometimes you will see an Python script on the web that uses a module that isn't in the standard library.  If you try to run that script, an error will be generated saying that the module can't be found.  In that case, either use your IDE's package manager or PIP at the command line to install the missing module.  Once you've installed it on that particular computer, you won't need to do it again.  Instructions for using PIP are [here](../examples/#retrieving-libraries-that-arent-in-the-standard-library) and for installing packages in the Thonny IDE are [here](../thonny/#installing-a-package-in-thonny).
 
 If you have installed Python by installing Anaconda, Anaconda has already installed many of the typical modules used in the STEM and data science world.
+
+<iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/1821441/sp/182144100/embedIframeJs/uiconf_id/41615771/partner_id/1821441?iframeembed=true&playerId=kaltura_player&entry_id=1_ot3ekhik&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_o45fn152" width="480" height="570" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
 
 <img src="../images/module-structure.png" style="border:1px solid black">
 
