@@ -63,7 +63,7 @@ Zoom also has a chat feature that can be accessed by clicking on a button at the
 
 ## Intermediate Lessons on Data Analysis and Visualization - Spring 2020
 
-These lessons will be taught by Dr. Sanjay Mishra of the Vanderbilt Vaccine Center and former Data Science instructor at the Nashville Software School. They will focus on analyzing and visualizing large data sets with Python and will use Pandas and Matplotlib. The lessons assume that you have basic Python skills and will use Jupyter notebooks as a computing platform. 
+These lessons will be taught by Dr. Sanjay Mishra of the Vanderbilt Vaccine Center and former Data Science instructor at the Nashville Software School. They will focus on analyzing and visualizing large data sets with Python and will use Pandas and Matplotlib. The lessons assume that you have basic Python skills. We will be using Microsoft Azure hosted Jupyter notebooks. You can access them with any Microsoft compatible login credentials, including Vanderbilt / VUMC logins. A functioning Anaconda installation on your local computer may also be beneficial. 
 
 **Thursdays** from 11:10 AM to noon. [Register here](https://forms.gle/cT27q4yjNexu9Xkk8)
 
