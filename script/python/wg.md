@@ -96,7 +96,7 @@ Meeting ID: 309 749 379
 
 Find your local number: <https://vanderbilt.zoom.us/u/aeh80pRUuM>
 
-Click [here](https://vanderbilt.zoom.us/meeting/vpQkcO2hrTwjgKsVMVU-0qh0VzgR7NybyA/ics?icsToken=98tyKuqopzwuE9eSuV_HY60qOd7lbM_2iHZluZVwqiqoUzFbMjXsMdAVHKt9CfmB) to download and import iCalendar (.ics) files to your calendar system. Although the class is scheduled to begin at 11:10, we'll plan to be online at 1:00 to give people a chance to get connected. Please see the connection details listed above under the beginners lessons for more information about connecting with Zoom.
+Click [here](https://vanderbilt.zoom.us/meeting/vpQkcO2hrTwjgKsVMVU-0qh0VzgR7NybyA/ics?icsToken=98tyKuqopzwuE9eSuV_HY60qOd7lbM_2iHZluZVwqiqoUzFbMjXsMdAVHKt9CfmB) to download and import iCalendar (.ics) files to your calendar system. Although the class is scheduled to begin at 11:10, we'll plan to be online at 11:00 to give people a chance to get connected. Please see the connection details listed above under the beginners lessons for more information about connecting with Zoom.
 
 ## Archive of API/Web Scraping Lessons - Fall 2019
 
