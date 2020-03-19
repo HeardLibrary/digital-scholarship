@@ -69,7 +69,7 @@ These lessons will be taught by Dr. Sanjay Mishra of the Vanderbilt Vaccine Cent
 
 | Date | Session | Topic | Notes |
 |---|---|---|---|
-| Mar 19 | 1 | Importing data (Pandas, slicing) | [Azure notebook link](https://notebooks.azure.com/sanjay-mishra-VUMC/projects/intermediate-python-2020) |
+| Mar 19 | 1 | Importing data (Pandas, slicing) | [Azure notebook link](https://notebooks.azure.com/sanjay-mishra-VUMC/projects/intermediate-python-2020) After clicking, clone the notebook to your account in order to run it. |
 | Mar 26 | 2 | Creating figures with Matplotlib | |
 | Apr 2 | 3 | Curve fitting and regression | |
 | Apr 9 | 4 | Basic image processing |  |
