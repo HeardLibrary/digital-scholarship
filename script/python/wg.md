@@ -65,12 +65,14 @@ Zoom also has a chat feature that can be accessed by clicking on a button at the
 
 These lessons will be taught by Dr. Sanjay Mishra of the Vanderbilt Vaccine Center and former Data Science instructor at the Nashville Software School. They will focus on analyzing and visualizing large data sets with Python and will use Pandas and Matplotlib. The lessons assume that you have basic Python skills. We will be using Microsoft Azure hosted Jupyter notebooks. You can access them with any Microsoft compatible login credentials, including Vanderbilt / VUMC logins. A functioning Anaconda installation on your local computer may also be beneficial. 
 
+Dr. Mishra recommends the book *Python for Data Analysis - Data Wrangling with Pandas, NumPy, and IPython* by William (Wes) McKinney as a reference for this lesson. Vanderbilt users can access the eBook through the Heard Libraries subscription to O'Reilly For Higher Education media (VUNet ID and password required) at [this link](https://catalog.library.vanderbilt.edu/permalink/01VAN_INST/6ll2l/alma991043601866403276). Non-Vanderbilt users can access a free PDF of the first edition of the similar *pandas: powerful Python data analysis toolkit* at [the Pandas home page](https://pandas.pydata.org/). 
+
 **Thursdays** from 11:10 AM to noon. [Register here](https://forms.gle/cT27q4yjNexu9Xkk8)
 
 | Date | Session | Topic | Notes |
 |---|---|---|---|
 | Mar 19 | 1 | Importing data (Pandas, slicing) | [lesson video](https://youtu.be/hWl6pMLWRac) / [Azure notebook link](https://notebooks.azure.com/sanjay-mishra-VUMC/projects/intermediate-python-2020) After clicking, clone the notebook to your account in order to run it. Click on the `Download Project` link to download the notebook and open it in a local Jupyter notebook. / [Review of modules and packages](https://heardlibrary.github.io/digital-scholarship/script/python/basics/#modules-and-packages)  |
-| Mar 26 | 2 | Creating figures with Matplotlib | |
+| Mar 26 | 2 | Creating figures with Matplotlib | [lesson video](https://youtu.be/3nKB0VMJzVE) / [Azure notebook link](https://notebooks.azure.com/sanjay-mishra-VUMC/projects/intermediate-python-2020) See the first part of the lesson video for more information about how to access the data in the notebook on a local Jupyter notebook or in the cloud through Azure / See notes above to access the book mentioned in the lesson |
 | Apr 2 | 3 | Curve fitting and regression | |
 | Apr 9 | 4 | Basic image processing |  |
 | Apr 16 | 5 | Reproducible results: notebooks, LaTex, and presentations |  |
