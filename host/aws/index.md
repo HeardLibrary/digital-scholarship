@@ -4,6 +4,8 @@ title: Amazon Web Services (AWS)
 breadcrumb: AWS
 ---
 
+A shortened link to this page is [http://vanderbi.lt/learnaws](http://vanderbi.lt/learnaws)
+
 # Amazon Web Services (AWS)
 
 AWS offers [many services](https://aws.amazon.com/) for deploying applications in the cloud.  They include Simple Storage Service (S3), Elastic Compute Cloud (EC2) cloud servers, simple DynamoDB NoSQL databases, and Lambda serverless computing.  AWS also makes available many media and machine learning services that transcribe, translate, speak, and perform sentiment analysis. Those services can be used through the AWS web interface or via the command line interface (CLI).  

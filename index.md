@@ -12,6 +12,21 @@ In addition to the resources on this site, you can browse the Digital Scholarshi
 
 # Ways to navigate
 
+## Lesson series (from previous and current DiSC programming)
+
+Understanding My Computer bootcamp (Windows and Mac) [http://vanderbi.lt/computer](http://vanderbi.lt/computer)
+
+GitHub Bootcamp [http://vanderbi.lt/github](http://vanderbi.lt/github)
+
+Python lessons: beginner, intermediate web scraping, intermediate data analysis and viz [http://vanderbi.lt/py]
+
+R lessons [http://vanderbi.lt/r](http://vanderbi.lt/r)
+
+Introduction to Linked Open Data (LOD) [http://vanderbi.lt/lod](http://vanderbi.lt/lod)
+
+Getting started on AWS [http://vanderbi.lt/learnaws](http://vanderbi.lt/learnaws)
+
+
 ## Alphabetical topic list
 
 [Go to the topic list](topics/)
@@ -44,3 +59,5 @@ In addition to the resources on this site, you can browse the Digital Scholarshi
 
 [Go to the site map](map/)
 
+----
+Revised 2020-03-31

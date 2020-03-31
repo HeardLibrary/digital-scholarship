@@ -4,6 +4,8 @@ title: Understanding my computer
 breadcrumb: Computer
 ---
 
+A shortened link to this page is [http://vanderbi.lt/computer](http://vanderbi.lt/computer)
+
 # Understanding My Computer Bootcamp
 
 Do you find yourself confused when installing software or trying to find files? Are you terrified with the prospect of using the command line? This bootcamp is designed for the person who wants to beef up their basic computer skills and feel comfortable with their computer's operating system.  
