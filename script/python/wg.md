@@ -27,7 +27,7 @@ Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  [Register here](https://forms.
 | Mar 10 | 1 | Getting started | intro [web page](../), [presentation](../presentations/lesson1-starting.pdf), and [video](https://www.library.vanderbilt.edu/pubmedia/viewfile.php?file=beginner-python.mp4) / [Anaconda](../../anaconda/) / [install Thonny](../thonny/) / [install Python](../install/) / [install editor](../editor/) / [code examples](../examples/) / [colab notebook](https://colab.research.google.com/drive/1DE2Sl7KT29bWnWvhWnI4Fdk-knnMVTbe) / [example Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/intro.ipynb)|
 | Mar 17 | 2 | Python scripting basics | [lesson webpage](../basics/) |
 | Mar 24 | 3 | Object-oriented Python | [lesson webpage](../object/) / [video](https://youtu.be/X84EWAtRn0k) |
-| Mar 31 | 4 | Lists and loops | [lesson webpage](../structures/) |
+| Mar 31 | 4 | Lists and loops | [lesson webpage](../structures/) / [video](https://youtu.be/6zbPZigoKBo) |
 | Apr 7 | 5 | Dictionaries and JSON | [lesson webpage](../json/) |
 | Apr 14 | 6 | Input and output from files | [lesson webpage](../inout/) |
 | Apr 21 | 7 | Interacting with the Internet | [lesson webpage](../internet/) |
