@@ -17,7 +17,7 @@ Understanding My Computer bootcamp (Windows and Mac) [http://vanderbi.lt/compute
 
 GitHub Bootcamp [http://vanderbi.lt/github](http://vanderbi.lt/github)
 
-Python lessons: beginner, intermediate web scraping, intermediate data analysis and viz [http://vanderbi.lt/py]
+Python lessons: beginner, intermediate web scraping, intermediate data analysis and viz [http://vanderbi.lt/py](http://vanderbi.lt/py)
 
 R lessons [http://vanderbi.lt/r](http://vanderbi.lt/r)
 
