@@ -10,9 +10,8 @@ This site is intended to be a one-stop resource for information broadly related 
 
 In addition to the resources on this site, you can browse the Digital Scholarship [code repository](https://github.com/HeardLibrary/digital-scholarship) to find bits of code that might help you.
 
-# Ways to navigate
 
-## Lesson series (from previous and current DiSC programming)
+# Lesson series (from previous and current DiSC programming)
 
 Understanding My Computer bootcamp (Windows and Mac) [http://vanderbi.lt/computer](http://vanderbi.lt/computer)
 
@@ -26,6 +25,8 @@ Introduction to Linked Open Data (LOD) [http://vanderbi.lt/lod](http://vanderbi.
 
 Getting started on AWS [http://vanderbi.lt/learnaws](http://vanderbi.lt/learnaws)
 
+
+# Ways to navigate
 
 ## Alphabetical topic list
 
