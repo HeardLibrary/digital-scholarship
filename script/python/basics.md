@@ -8,7 +8,7 @@ Note: this is the second lesson in a beginner's introduction to Python.  For the
 
 **General note:** 
 
-The examples in this lesson can be run in a Google Colaboratory notebook. A Google account is required. Click on [this link](https://colab.research.google.com/drive/1HfJiFQCn0uFBSMLNXUxx63-2HzqOHel4), then from the file menu select `Save a copy in Drive...`. That will create a copy of the notebook that you can run, edit, and save.
+The examples in this lesson can be run in a [Google Colaboratory notebook](https://colab.research.google.com/drive/1HfJiFQCn0uFBSMLNXUxx63-2HzqOHel4). A Google account is required. Click on this link, then if necessary, click on "Open with Google Colaboratory". From the file menu select `Save a copy in Drive....` That will create a copy of the notebook that you can run, edit, and save. You may have to enable popups in order for the copy to open in a new tab.
 
 You can run the examples in the Thonny IDE. Just cut, paste, then click the green run button to quickly test them out.  If you've installed Anaconda, the Spyder IDE can be used in the same way.
 

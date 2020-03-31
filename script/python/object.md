@@ -8,7 +8,7 @@ Note: this is the third lesson in a beginner's introduction to Python.  For the 
 
 [previous lesson on basics of Python structure](../basics/)
 
-The examples in this lesson can be run in a [Google Colaboratory notebook](https://colab.research.google.com/drive/18_00pvwYA959KrCXnHv3pgYc2VsQy93D). A Google account is required. Click on this link, then from the file menu select Save a copy in Drive.... That will create a copy of the notebook that you can run, edit, and save.
+The examples in this lesson can be run in a [Google Colaboratory notebook](https://colab.research.google.com/drive/18_00pvwYA959KrCXnHv3pgYc2VsQy93D). A Google account is required. Click on this link, then if necessary, click on "Open with Google Colaboratory". From the file menu select `Save a copy in Drive....` That will create a copy of the notebook that you can run, edit, and save. You may have to enable popups in order for the copy to open in a new tab.
 
 If you are interested in using Jupyter notebooks, the examples are available in [this notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/object.ipynb).
 
