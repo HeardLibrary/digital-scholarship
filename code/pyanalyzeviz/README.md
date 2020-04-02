@@ -1,0 +1,1 @@
+This 6 week course intends to be a walkthrough on using Python for day to day data presentation and lab notebook requirements.  
