@@ -63,7 +63,7 @@ Zoom also has a chat feature that can be accessed by clicking on a button at the
 
 ## Intermediate Lessons on Data Analysis and Visualization - Spring 2020
 
-These lessons will be taught by Dr. Sanjay Mishra of the Vanderbilt Vaccine Center and former Data Science instructor at the Nashville Software School. They will focus on analyzing and visualizing large data sets with Python and will use Pandas and Matplotlib. The lessons assume that you have basic Python skills. We will be using Microsoft Azure hosted Jupyter notebooks. You can access them with any Microsoft compatible login credentials, including Vanderbilt / VUMC logins. A functioning Anaconda installation on your local computer may also be beneficial. 
+These lessons will be taught by Dr. Sanjay Mishra, Staff Scientist in the Vanderbilt Ingram Cancer Center and former Data Science instructor at the Nashville Software School. They will focus on analyzing and visualizing large data sets with Python and will use Pandas and Matplotlib. The lessons assume that you have basic Python skills. We will be using Microsoft Azure hosted Jupyter notebooks. You can access them with any Microsoft compatible login credentials, including Vanderbilt / VUMC logins. A functioning Anaconda installation on your local computer may also be beneficial. 
 
 Dr. Mishra recommends the book *Python for Data Analysis - Data Wrangling with Pandas, NumPy, and IPython* by William (Wes) McKinney as a reference for this lesson. Vanderbilt users can access the eBook through the Heard Libraries subscription to O'Reilly For Higher Education media (VUNet ID and password required) at [this link](https://catalog.library.vanderbilt.edu/permalink/01VAN_INST/6ll2l/alma991043601866403276). Non-Vanderbilt users can access a free PDF of the first edition of the similar *pandas: powerful Python data analysis toolkit* at [the Pandas home page](https://pandas.pydata.org/). To access the code examples, go to [Wes McKinney's GitHub site](https://github.com/wesm/pydata-book) and click on the appropriate IPython Notebook for the chapter. **Note**: *IPython* is an older name for *Jupyter notebooks*. 
 
@@ -73,7 +73,7 @@ Dr. Mishra recommends the book *Python for Data Analysis - Data Wrangling with P
 |---|---|---|---|
 | Mar 19 | 1 | Importing data (Pandas, slicing) | [lesson video](https://youtu.be/hWl6pMLWRac) / [Azure project link](https://notebooks.azure.com/sanjay-mishra-VUMC/projects/intermediate-python-2020) After clicking, clone the project to your account in order to run it in the cloud. Click on the `Download Project` link if you want to download the project and open it in a local Jupyter notebook. The notebook for this lesson is **intermediate_python_1.ipynb** / [Review of modules and packages](https://heardlibrary.github.io/digital-scholarship/script/python/basics/#modules-and-packages)  |
 | Mar 26 | 2 | Creating figures with Matplotlib | [lesson video](https://youtu.be/3nKB0VMJzVE) / [Azure project link](https://notebooks.azure.com/sanjay-mishra-VUMC/projects/intermediate-python-2020) The notebook for this lesson is **intermediate_python_2.ipynb**. See the first part of the lesson video for more information about how to access the data in the notebook on a local Jupyter notebook or in the cloud through Azure / See notes above to access the O'Reilly book mentioned in the lesson |
-| Apr 2 | 3 | Curve fitting and regression | |
+| Apr 2 | 3 | Curve fitting | [lesson video](https://youtu.be/i6dz9hHtuU4) / [Azure project link](https://notebooks.azure.com/sanjay-mishra-VUMC/projects/intermediate-python-2020) After clicking, clone the project to your account in order to run it in the cloud. Click on the `Download Project` link if you want to download the project and open it in a local Jupyter notebook. The notebook for this lesson is **intermediate_python_3.ipynb** / [starting page for LaTex information](https://heardlibrary.github.io/digital-scholarship/markup/) |
 | Apr 9 | 4 | Basic image processing |  |
 | Apr 16 | 5 | Reproducible results: notebooks, LaTex, and presentations |  |
 
@@ -133,4 +133,4 @@ Stay tuned for the next offering
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-03-13
+Revised 2020-04-02
