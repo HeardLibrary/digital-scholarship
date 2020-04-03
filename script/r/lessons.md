@@ -30,7 +30,7 @@ To download an R script, click on the link.  Then:
 | Mar 13 | 1 | Installing R and RStudio and navigating around | [lesson video](../#introduction-video) / [lesson slides](../presentations/lesson1-r-rstudio.pdf)|
 | Mar 20 | 2 | R data structures | [lesson video](https://youtu.be/uDkgK3SoCbg) / [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures.R) / [lesson slides](../presentations/lesson2-structures.pdf) / [web page](../structures) / [HW answers](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures-answers.R) |
 | Mar 27 | 3 | Creating simple scripts | [lesson video](https://youtu.be/-26V8J9SfkA) / [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-scripts.R) / [lesson slides](../presentations/lesson3-scripts.pdf) / [HW answers](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-scripts-answers.R) |
-| Apr 3 | 4 | Data wrangling | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson4-wrangle.R) / [lesson slides](../presentations/lesson4-wrangle.pdf) |
+| Apr 3 | 4 | Data wrangling | [lesson video part 1](https://youtu.be/UnsC_S-nxTI) / [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson4-wrangle.R) / [lesson slides](../presentations/lesson4-wrangle.pdf) |
 | Apr 10 | 5 | Data visualization with ggplot | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/usaNamesMain.R) / [lesson slides](../presentations/ggplot2_dataViz_20200211.pdf) |
 | Apr 17 | 6 | Practice with real data | [download instructions](../nlsaah/) / [lesson R script (with answers)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls-answers.R) / [starter script (no answers)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls.R) |
 
@@ -92,4 +92,4 @@ March 5-6: A two-day workshop focused on Unix, Git, and Python (Not R this time)
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-03-30
+Revised 2020-04-03
