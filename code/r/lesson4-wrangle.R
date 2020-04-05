@@ -8,6 +8,10 @@
 
 # library(tidyverse)
 
+# Note: some people have had trouble installing tidyverse, particularly on old computers. One suggested solution
+# was to install an older version of R. It was also suggested during installation to answer "no" when asked
+# "Do you want to install from sources the packages which need compilation? (Yes/no/cancel)"
+
 # The authoritative work on this topic is "R For Data Science" by Hadley Wickham and Garrett Grolemund
 # available online at https://r4ds.had.co.nz/
 # Relevant chapters are linked in appropriate places in the script.
