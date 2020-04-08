@@ -28,7 +28,7 @@ Second cycle: **Tuesdays** from 1:10 to 2:00 PM.  [Register here](https://forms.
 | Mar 17 | 2 | Python scripting basics | [lesson webpage](../basics/) |
 | Mar 24 | 3 | Object-oriented Python | [lesson webpage](../object/) / [video](https://youtu.be/X84EWAtRn0k) |
 | Mar 31 | 4 | Lists and loops | [lesson webpage](../structures/) / [video](https://youtu.be/6zbPZigoKBo) |
-| Apr 7 | 5 | Dictionaries and JSON | [lesson webpage](../json/) |
+| Apr 7 | 5 | Dictionaries and JSON | [lesson webpage](../json/) / [video](https://youtu.be/PH8P5crGfrY) |
 | Apr 14 | 6 | Input and output from files | [lesson webpage](../inout/) |
 | Apr 21 | 7 | Interacting with the Internet | [lesson webpage](../internet/) |
 
@@ -133,4 +133,4 @@ Stay tuned for the next offering
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-04-02
+Revised 2020-04-08
