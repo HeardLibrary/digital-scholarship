@@ -8,6 +8,8 @@ Note: this is the sixth lesson in a beginner's introduction to Python.  For the 
 
 [prevous lesson on dictionaries and JSON](../json/)
 
+The examples in this lesson can be run in a [Google Colaboratory notebook](https://colab.research.google.com/drive/1nWilZbB9b8OZ601Hej1djCsUHzHsrisd). A Google account is required. Click on this link, then if necessary, click on "Open with Google Colaboratory". From the file menu select `Save a copy in Drive....` That will create a copy of the notebook that you can run, edit, and save. You may have to enable popups in order for the copy to open in a new tab.
+
 If you are interested in using Jupyter notebooks, the examples are available in [this notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/inout.ipynb).
 
 The presentation for this lesson is [here](presentations/lesson6-files.pdf)
@@ -18,7 +20,7 @@ Answers for last week's challenge problem:
 
 # File Input and Output
 
-Although you can have a lot of fun playihg around with Python by just hard-coding information within the script, the ability to let Python work hard for you depends a lot on having ways to get large amounts of information in and out of the script.  We have already seen a simple way to get data into a script from a user: the `input()` function.  The `input()` function stops the execution of the program and waits for the user to enter some information.  We have also seen an example of a simple way to get data out of a script: the `print()` function, which displays something on the screen in the Shell window.  Here's an example of how we can use the two functions:
+Although you can have a lot of fun playing around with Python by just hard-coding information within the script, the ability to let Python work hard for you depends a lot on having ways to get large amounts of information in and out of the script.  We have already seen a simple way to get data into a script from a user: the `input()` function.  The `input()` function stops the execution of the program and waits for the user to enter some information.  We have also seen an example of a simple way to get data out of a script: the `print()` function, which displays something on the screen in the Shell window.  Here's an example of how we can use the two functions:
 
 ```python
 yourName = input("What's your name? ")
