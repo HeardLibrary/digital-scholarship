@@ -61,13 +61,11 @@ I've set the meeting so that your camera is turned on and your microphone is tur
  
 Zoom also has a chat feature that can be accessed by clicking on a button at the bottom of the screen. I'll try to have the chat window open during the presentation so that I can see any questions that people type there during the class.
 
-## Intermediate Lessons on Data Analysis and Visualization - Spring 2020
+## Archive of Intermediate Lessons on Data Analysis and Visualization - Spring 2020
 
-These lessons will be taught by Dr. Sanjay Mishra, Staff Scientist in the Vanderbilt Ingram Cancer Center and former Data Science instructor at the Nashville Software School. They will focus on analyzing and visualizing large data sets with Python and will use Pandas and Matplotlib. The lessons assume that you have basic Python skills. We will be using Microsoft Azure hosted Jupyter notebooks. You can access them with any Microsoft compatible login credentials, including Vanderbilt / VUMC logins. A functioning Anaconda installation on your local computer may also be beneficial. 
+These lessons were taught by Dr. Sanjay Mishra, Staff Scientist in the Vanderbilt Ingram Cancer Center and former Data Science instructor at the Nashville Software School. They focused on analyzing and visualizing large data sets with Python and used Pandas and Matplotlib. The lessons assume that you have basic Python skills. The examples use Microsoft Azure hosted Jupyter notebooks, which you can access them with any Microsoft compatible login credentials, including Vanderbilt / VUMC logins. If you have a functioning Anaconda installation on your local computer you can download the Jupyter notebooks and run them locally. 
 
 Dr. Mishra recommends the book *Python for Data Analysis - Data Wrangling with Pandas, NumPy, and IPython* by William (Wes) McKinney as a reference for this lesson. Vanderbilt users can access the eBook through the Heard Libraries subscription to O'Reilly For Higher Education media (VUNet ID and password required) at [this link](https://catalog.library.vanderbilt.edu/permalink/01VAN_INST/6ll2l/alma991043601866403276). Non-Vanderbilt users can access a free PDF of the first edition of the similar *pandas: powerful Python data analysis toolkit* at [the Pandas home page](https://pandas.pydata.org/). To access the code examples, go to [Wes McKinney's GitHub site](https://github.com/wesm/pydata-book) and click on the appropriate IPython Notebook for the chapter. **Note**: *IPython* is an older name for *Jupyter notebooks*. 
-
-**Thursdays** from 11:10 AM to noon. [Register here](https://forms.gle/cT27q4yjNexu9Xkk8)
 
 | Date | Session | Topic | Notes |
 |---|---|---|---|
@@ -88,6 +86,7 @@ Dr. Mishra recommends the book *Python for Data Analysis - Data Wrangling with P
 [nbconvert for supressing input code in final rendered display](https://nbconvert.readthedocs.io/en/latest/)
 
 [RISE system for presentations from notebooks](https://rise.readthedocs.io/en/stable/)
+
 
 ## Archive of API/Web Scraping Lessons - Fall 2019
 
