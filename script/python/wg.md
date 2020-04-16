@@ -75,30 +75,19 @@ Dr. Mishra recommends the book *Python for Data Analysis - Data Wrangling with P
 | Mar 26 | 2 | Creating figures with Matplotlib | [lesson video](https://youtu.be/3nKB0VMJzVE) / [Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pyanalyzeviz/intermediate_python_2.ipynb) / [Azure project link](https://notebooks.azure.com/sanjay-mishra-VUMC/projects/intermediate-python-2020) The notebook for this lesson is **intermediate_python_2.ipynb**. See the first part of the lesson video for more information about how to access the data in the notebook on a local Jupyter notebook or in the cloud through Azure / See notes above to access the O'Reilly book mentioned in the lesson |
 | Apr 2 | 3 | Curve fitting | [lesson video](https://youtu.be/i6dz9hHtuU4) / [Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pyanalyzeviz/Intermediate_Python_3.ipynb) / [Azure project link](https://notebooks.azure.com/sanjay-mishra-VUMC/projects/intermediate-python-2020) After clicking, clone the project to your account in order to run it in the cloud. Click on the `Download Project` link if you want to download the project and open it in a local Jupyter notebook. The notebook for this lesson is **Intermediate_Python_3.ipynb** / [starting page for LaTex information](https://heardlibrary.github.io/digital-scholarship/markup/) |
 | Apr 9 | 4 | Basic image processing | [lesson video](https://youtu.be/YBq4MCrvWy8) / [Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pyanalyzeviz/Intermediate_python_4.ipynb) / [Azure project link](https://notebooks.azure.com/sanjay-mishra-VUMC/projects/intermediate-python-2020) After clicking, clone the project to your account in order to run it in the cloud. Click on the `Download Project` link if you want to download the project and open it in a local Jupyter notebook. The notebook for this lesson is **Intermediate_python_4.ipynb** |
-| Apr 16 | 5 | Reproducible results: notebooks, LaTex, and presentations |  |
+| Apr 16 | 5 | Reproducible results: notebooks, LaTex, and presentations | [lesson video](https://youtu.be/GK5g1HGy1Pk) / [Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pyanalyzeviz/Intermediate_python_5.ipynb) / [Azure project link](https://notebooks.azure.com/sanjay-mishra-VUMC/projects/intermediate-python-2020) After clicking, clone the project to your account in order to run it in the cloud. Click on the `Download Project` link if you want to download the project and open it in a local Jupyter notebook. The notebook for this lesson is **Intermediate_python_5.ipynb** |
 
-**Connection details**
+**Jupyter notebook links for lesson 5**
 
-Due to the COVID-19 pandemic, these intermediate lessons will be held online using Zoom. Here is the information needed to connect to the March 19 through April 16 meetings:
+[Extensions for Jupyter notebooks](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/index.html)
 
-Join Zoom Meeting:
+[Code folding for Jupyter notebooks](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/codefolding/readme.html)
 
-<https://vanderbilt.zoom.us/j/309749379>
+[LaTeX cheatsheet (pdf)](http://www.icl.utk.edu/~mgates3/docs/latex.pdf)
 
-```
-One tap mobile
-+16465588656,,279598679# US (New York)
-+13462487799,,279598679# US (Houston)
+[nbconvert for supressing input code in final rendered display](https://nbconvert.readthedocs.io/en/latest/)
 
-Dial by your location
-        +1 646 558 8656 US (New York)
-        +1 346 248 7799 US (Houston)
-Meeting ID: 309 749 379
-```
-
-Find your local number: <https://vanderbilt.zoom.us/u/aeh80pRUuM>
-
-Click [here](https://vanderbilt.zoom.us/meeting/vpQkcO2hrTwjgKsVMVU-0qh0VzgR7NybyA/ics?icsToken=98tyKuqopzwuE9eSuV_HY60qOd7lbM_2iHZluZVwqiqoUzFbMjXsMdAVHKt9CfmB) to download and import iCalendar (.ics) files to your calendar system. Although the class is scheduled to begin at 11:10, we'll plan to be online at 11:00 to give people a chance to get connected. Please see the connection details listed above under the beginners lessons for more information about connecting with Zoom.
+[RISE system for presentations from notebooks](https://rise.readthedocs.io/en/stable/)
 
 ## Archive of API/Web Scraping Lessons - Fall 2019
 
