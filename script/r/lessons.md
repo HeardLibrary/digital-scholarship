@@ -32,7 +32,7 @@ To download an R script, click on the link.  Then:
 | Mar 27 | 3 | Creating simple scripts | [lesson video](https://youtu.be/-26V8J9SfkA) / [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-scripts.R) / [lesson slides](../presentations/lesson3-scripts.pdf) / [HW answers](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-scripts-answers.R) |
 | Apr 3 | 4 | Data wrangling (part 1) | [lesson video](https://youtu.be/UnsC_S-nxTI) / [wrangling lesson R script (part 1)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson4-wrangle1.R) / [lesson slides](../presentations/lesson4-wrangle1.pdf) |
 | Apr 10 | 5 | Data wrangling (part 2) | [lesson video](https://youtu.be/BlSbawB0erY) / [wrangling lesson R script (part 2)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson5-wrangle2.R) / [lesson slides](../presentations/lesson5-wrangle2.pdf) |
-| Apr 17 | 6 | Data visualization with ggplot | lesson R script / [lesson slides](../presentations/lesson6-viz.pdf) |
+| Apr 17 | 6 | Data visualization with ggplot | [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson6-viz.R) / [lesson slides](../presentations/lesson6-viz.pdf) |
 | Apr 24 | 7 | Optional practice lesson working with ICPSR data | [download instructions for ICPSR data](../nlsaah/) /  [practice lesson R script (with answers)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls-answers.R) / [practice starter script (no answers)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls.R) |
 
 
