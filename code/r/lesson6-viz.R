@@ -88,7 +88,7 @@ ggplot(data, aesthetic) +
 # ----------------------
 
 # use Nasvhille schools as data again, with option to reduce categories
-data <- schools #[schools$School.Level %in% c("High School", "Elementary School", "Middle School", "Charter"), ]
+data <- schools [schools$School.Level %in% c("High School", "Elementary School", "Middle School", "Charter"), ]
 
 # this time put the total number of students in each school on the x axis
 # use fill to indicate the type of school
@@ -107,17 +107,13 @@ ggplot(data, aesthetic) + geometry
 # ----------------------
 
 # use Nasvhille schools as data again
-data <- schools #[schools$School.Level %in% c("High School", "Elementary School", "Middle School", "Charter"), ]
+data <- schools [schools$School.Level %in% c("High School", "Elementary School", "Middle School", "Charter"), ]
 
 # use the boxplot geometry
 geometry <- geom_boxplot()
 
 # put the total number of students in each school on the x axis and the school type on the y axis
 aesthetic <- aes(x=School.Level, y=Total)
-
-# ----------------------
-# ggplot for schools by grade and size with school level as color (fancy calculations)
-# ----------------------
 
 ggplot(data, aesthetic) + 
   geometry + 
@@ -126,6 +122,10 @@ ggplot(data, aesthetic) +
   # geom_point(stat = "summary", fun.y = "median", shape="|", size=10, color="red") + # uncomment to show the median as a red line
   # swap the x and y axes
   coord_flip()
+
+# ----------------------
+# ggplot for schools by grade and size with school level as color (fancy calculations)
+# ----------------------
 
 # make a list of the columns that start with "Grade."
 grade_names <- lapply(
@@ -183,7 +183,7 @@ ggplot(data, aesthetic) +
    map_plot + 
    coord_fixed() + 
    ggtitle("Where Nashville Goes to School") + # add a title
-  geom_point(color="red", size=5)
+   geom_point(color="red", size=5)
 
 # ----------------------
 # ggplot putting data on a map with dots colored by fraction white
@@ -194,7 +194,7 @@ data <- schools[schools$School.Level %in% c("Elementary School", "Middle School"
 
 # map latitude to the y axis and longitude to the x axis
 # commented are some aesthetics to add
-aesthetic <- aes(y=Latitude, x=Longitude) #, shape=School.Level, color=White/Total, size=Total)
+aesthetic <- aes(y=Latitude, x=Longitude, shape=School.Level, color=Hispanic.Latino/Total, size=Total)
 
 # races
 # White
@@ -204,15 +204,13 @@ aesthetic <- aes(y=Latitude, x=Longitude) #, shape=School.Level, color=White/Tot
 # Native.Hawaiian.or.Other.Pacific.Islander
 # American.Indian.or.Alaska.Native
 
-geometry <- geom_point()
-
 ggplot(data, aesthetic) + 
   map_plot + 
-  geometry + 
-  # scale_colour_gradient(low = "blue", high = "red") + # uncomment to change the color gradient
-  # ggtitle("How segregated is Nashville?") + 
-  coord_fixed()
-
+  coord_fixed() +
+  scale_colour_gradient(low = "blue", high = "red") + # uncomment to change the color gradient
+  ggtitle("How segregated is Nashville?") + 
+  geom_point()
+  
 # ----------------------
 # ggplot complex data wrangling to plot race by school
 # ----------------------
@@ -258,8 +256,8 @@ aesthetic <- aes(x=School.Name, y=Fraction, fill=Race)#, width=Total/1800)
 geometry <- geom_bar(stat="identity", position="stack")
 
 ggplot(data, aesthetic) + geometry + 
-  # facet_grid( ~ School.Level) + 
-  # theme(axis.title.y=element_blank(),
-  #         axis.text.y=element_blank(),
-  #         axis.ticks.y=element_blank()) +
+   facet_grid( ~ School.Level) + 
+   theme(axis.title.y=element_blank(),
+           axis.text.y=element_blank(),
+           axis.ticks.y=element_blank()) +
   coord_flip()
