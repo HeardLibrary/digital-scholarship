@@ -26,7 +26,7 @@ The DiSC office also provides [lessons for learning R](https://heardlibrary.gith
 | Mar 31 | 4 | Lists and loops | [lesson webpage](../structures/) / [video](https://youtu.be/6zbPZigoKBo) |
 | Apr 7 | 5 | Dictionaries and JSON | [lesson webpage](../json/) / [video](https://youtu.be/PH8P5crGfrY) |
 | Apr 14 | 6 | Input and output from files | [lesson webpage](../inout/) / [video](https://youtu.be/FOa7UryKLig) |
-| Apr 21 | 7 | Interacting with the Internet | [lesson webpage](../internet/) / [video](https://youtu.be/https://youtu.be/i6s7ChI5qdw) |
+| Apr 21 | 7 | Interacting with the Internet | [lesson webpage](../internet/) / [video](https://youtu.be/i6s7ChI5qdw) |
 
 
 ## Archive of Intermediate Lessons on Data Analysis and Visualization - Spring 2020
