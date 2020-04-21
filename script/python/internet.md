@@ -10,6 +10,8 @@ Note: this is the seventh lesson in a beginner's introduction to Python.  For th
 
 [Brief evaluation survey](https://forms.gle/xXLpLt4YcdCVbRqu7)
 
+The examples in this lesson can be run in a [Google Colaboratory notebook](https://colab.research.google.com/drive/1cvYq-d7csmuTxPGXrKCHdOe4ddbsPiMF). A Google account is required. Click on this link, then if necessary, click on "Open with Google Colaboratory". From the file menu select `Save a copy in Drive....` That will create a copy of the notebook that you can run, edit, and save. You may have to enable popups in order for the copy to open in a new tab. **Note: the `webbrowser.open_new_tab()` function will not work from the Colab notebook since its on a remote server. But you can still click on or loads the generated URL from the last homework problem. Alternatively, you can run the code locally using Thonny or a local Jupyter notebook.** 
+
 If you are interested in using Jupyter notebooks, the examples are available in [this notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/pylesson/internet.ipynb).
 
 The presentation for this lesson is [here](presentations/lesson7-internet.pdf)
@@ -399,4 +401,4 @@ webbrowser.open_new_tab(googleMapUrl)
 [some notes about practical problem solving with Python](../hack/)
 
 ----
-Revised 2019-10-10
+Revised 2020-04-21
