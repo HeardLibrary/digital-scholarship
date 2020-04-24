@@ -16,9 +16,7 @@ The beginners lessons generally cycle twice per semester.  See the schedule belo
 
 The DiSC office also provides [lessons for learning Python](https://heardlibrary.github.io/digital-scholarship/script/python/wg/) in a similar format.
 
-## Schedule of Beginners Lessons - Spring 2020
-
-Second cycle: **Fridays** from 1:10 to 2:00 PM.  [Register here](https://forms.gle/nege53mCTEKyXZcH6)
+## Archive of Beginners Lessons - Spring 2020
 
 To download an R script, click on the link.  Then:
 
@@ -33,38 +31,7 @@ To download an R script, click on the link.  Then:
 | Apr 3 | 4 | Data wrangling (part 1) | [lesson video](https://youtu.be/UnsC_S-nxTI) / [wrangling lesson R script (part 1)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson4-wrangle1.R) / [lesson slides](../presentations/lesson4-wrangle1.pdf) |
 | Apr 10 | 5 | Data wrangling (part 2) | [lesson video](https://youtu.be/BlSbawB0erY) / [wrangling lesson R script (part 2)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson5-wrangle2.R) / [lesson slides](../presentations/lesson5-wrangle2.pdf) |
 | Apr 17 | 6 | Data visualization with ggplot | [lesson video](https://youtu.be/51ZbsobTQwE) / [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson6-viz.R) / [lesson slides](../presentations/lesson6-viz.pdf) |
-| Apr 24 | 7 | Optional practice lesson working with ICPSR data | [download instructions for ICPSR data](../nlsaah/) /  [practice lesson R script (with answers)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls-answers.R) / [practice starter script (no answers)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls.R) |
-
-
-**Connection details**
-
-Due to the COVID-19 outbreak, the beginners lessons will be held online using Zoom. Here is the information needed to connect to the meetings:
-
-Join Zoom Meeting (**March 20 through April 17 lessons**) 
-
-<https://vanderbilt.zoom.us/j/138335805>
-
-```
-One tap mobile
-+16465588656,,138335805# US (New York)
-+13462487799,,138335805# US (Houston)
-
-Dial by your location
-        +1 646 558 8656 US (New York)
-        +1 346 248 7799 US (Houston)
-Meeting ID: 138 335 805
-```
-
-Find your local number: <https://vanderbilt.zoom.us/u/aeh80pRUuM>
-
-Click [here](https://vanderbilt.zoom.us/meeting/vJcldOqtpjsvTLiOA1pzGAzwCsrleDhECQ/ics?icsToken=98tyKuirpjgpH9yVtV_9UaotOZ35bvHylEVio4x8zQ__JAFJdSDlJO5HFrpaM-mB) to download and import iCalendar (.ics) files to your calendar system.
-
-
-Although the class is scheduled to begin at 1:10, we'll plan to be online at 1:00 to give people a chance to get connected. If you haven't used Zoom before, after you click the "Join Zoom Meeting" link, you'll be prompted to download the Zoom web app if you don't already have it.  After you give the app permission to connect, you'll be given an opportunity to test your microphone and sound to make sure that it's working.  If your sound is working, you can join using computer audio. If it's not working, you can with audio by phone using one of the numbers listed above. It's good to try to connect a few minutes ahead of the start of the meeting because it can take a few minutes to get set up if it's your first time.
- 
-I've set the meeting so that your camera is turned on and your microphone is turned off when you join the meeting. If you don't like the idea of your camera being turned on, you can "mute" it using the button at the bottom of the Zoom app window. It's best if everyone leaves their microphones turned off unless you want to say something because there tends to be a lot of feedback if many participants have their microphones turned on. It's fine to unmute your microphone if you want to ask a question. I'm planning to record the first session so that anyone who is traveling or otherwise can't attend will be able to catch up for the second meeting.
- 
-Zoom also has a chat feature that can be accessed by clicking on a button at the bottom of the screen. I'll have the chat window open during the presentation so that I can see any questions that people type there during the class.
+| Apr 24 | 7 | Optional practice lesson working with ICPSR data | [lesson video](https://youtu.be/GiAVbtx_B_c) [download instructions for ICPSR data](../nlsaah/) /  [practice lesson R script (with answers)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls-answers.R) / [practice starter script (no answers)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls.R) / [lesson slides](../presentations/lesson7-wrangle3.pdf) |
 
 
 # R Resources
@@ -94,4 +61,4 @@ Check back later for future offerings.
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-04-17
+Revised 2020-04-24
