@@ -6,6 +6,8 @@ breadcrumb: CodeGraf
 
 # CodeGraf
 
+A short link to this page is [vanderbi.lt/codegraf](http://vanderbi.lt/codegraf)
+
 [Basic programming terminology](001)
 
 ----
