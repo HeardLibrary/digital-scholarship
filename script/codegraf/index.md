@@ -14,13 +14,13 @@ CodeGraph is a program to allow you to choose your own path through learning to 
 
 ## Getting started
 
-Begin with the START entry point and work your way through the lessons. Each lesson page includes a series of topics, each explained with a short video (typically 3-7 minutes). There may also be explanatory text, do-it-yourself code examples, and links to external resources. If you already feel confident about one of the topics, you can skip to the next one. You can always come back to a topic to review.
+Begin with the START entry point and work your way through the lessons. Each lesson page includes a series of topics explained with a short video (typically 3-7 minutes). There may also be explanatory text, do-it-yourself code examples, and links to external resources. If you already feel confident about one of the topics, you can skip to the next one. You can always come back to a topic to review.
 
 # Modules
 
-## Terminology and getting started
+## Getting started
 
-![entry path into CodeGraf](flowchart.png)
+![CodeGraf getting started module diagram](getting-started-module-diagram.png)
 
 [Basic terminology](001)
 
@@ -29,4 +29,16 @@ Begin with the START entry point and work your way through the lessons. Each les
 [Installing an environment](003)
 
 ----
-Revised 2020-05-08
+
+## Getting started
+
+![Introductory coding module diagram](introductory-coding-module-diagram.png)
+
+[Python programming basics](004)
+
+[Using code libraries](005)
+
+List objects
+
+----
+Revised 2020-05-11
