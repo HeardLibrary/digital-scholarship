@@ -18,6 +18,8 @@ Begin with the START entry point and work your way through the lessons. Each les
 
 # Modules
 
+----
+
 ## Getting started
 
 ![CodeGraf getting started module diagram](getting-started-module-diagram.png)
@@ -30,7 +32,7 @@ Begin with the START entry point and work your way through the lessons. Each les
 
 ----
 
-## Getting started
+## Introductory coding
 
 ![Introductory coding module diagram](introductory-coding-module-diagram.png)
 
