@@ -22,25 +22,39 @@ Begin with the START entry point and work your way through the lessons. Each les
 
 ## Getting started
 
+This is a general introduction to both Python and R, although much of the video is focused on the variety of ways to code in Python. Total video time: 1h 43m
+
 ![CodeGraf getting started module diagram](getting-started-module-diagram.png)
 
-[Basic terminology](001)
+[Basic terminology](001) 18 minutes
 
-[Programming environments](002)
+[Programming environments](002) 51 minutes
 
-[Installing an environment](003)
+[Installing an environment](003) 34 minutes
 
 ----
 
-## Introductory coding
+## Introductory coding (Python)
+
+This module covers many basic Python concepts through one-dimensional data structures. It provides background for several intermediate level modules. Total video time: 2h 39
 
 ![Introductory coding module diagram](introductory-coding-module-diagram.png)
 
-[Python programming basics](004)
+[Python programming basics](004) 67 minutes
 
-[Using code libraries](005)
+[Using code libraries](005) 34 minutes
 
-List objects
+[List objects](006) 59 minutes
 
 ----
-Revised 2020-05-11
+
+## Two-dimensional data structures (Python)
+
+Under construction 2020-05-12
+
+## Procedural programming (Python)
+
+This module has not been created. However, you could learn about this subject by starting with [this lesson](../python/basics/). Some of the content repeats what was covered in the *Introductory coding (Python)* module, but new content is also included.
+
+----
+Revised 2020-05-12
