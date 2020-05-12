@@ -42,7 +42,7 @@ Total video time: 1h 43m
 
 This module covers many basic Python concepts through one-dimensional data structures. It provides background for several intermediate level modules. 
 
-Total video time: 2h 39
+Total video time: 2h 39m
 
 ![Introductory coding module diagram](introductory-coding-module-diagram.png)
 
