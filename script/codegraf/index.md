@@ -68,3 +68,5 @@ This module has not been created. However, you could learn about this subject by
 
 ----
 Revised 2020-05-12
+
+If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
