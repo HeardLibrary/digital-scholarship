@@ -20,6 +20,8 @@ Begin with the START entry point and work your way through the lessons. Each les
 
 [Slides from introductory session](slides/intro-sesson.pdf)
 
+[Link to additional book and online resources](https://heardlibrary.github.io/digital-scholarship/script/python/#for-more-information)
+
 # Modules
 
 ----
