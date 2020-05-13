@@ -16,6 +16,8 @@ CodeGraph is a program to allow you to choose your own path through learning to 
 
 Begin with the START entry point and work your way through the lessons. Each lesson page includes a series of topics explained with a short video (typically 3-7 minutes). There may also be explanatory text, do-it-yourself code examples, and links to external resources. If you already feel confident about one of the topics, you can skip to the next one. You can always come back to a topic to review.
 
+[Video from introductory session](https://vanderbilt.app.box.com/v/maymesterpython1)
+
 [Slides from introductory session](slides/intro-sesson.pdf)
 
 # Modules
