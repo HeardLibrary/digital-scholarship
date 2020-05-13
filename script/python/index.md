@@ -72,7 +72,7 @@ The [Vanderbilt Libraries Digital Scholarship and Communications (DiSC) office](
 
 ## O'Reilly for Higher Education resources
 
-As of 2019-01-10, the Vanderbilt Libraries has a subscription to [O'Reilly for Higher Education](http://www.library.vanderbilt.edu/eres?id=1676) resources.  To access these resources, you need to have a Vanderbilt VUNet ID and password.  **Important note:** When you have finished accessing a resource, be sure to sign out and close the browser tab. If you don't you may not be able to log in the next time and need to delete your browser cookies in order to successfully log in.
+The Vanderbilt Libraries has a subscription to [O'Reilly for Higher Education](http://www.library.vanderbilt.edu/eres?id=1676) resources.  To access these resources, you need to have a Vanderbilt VUNet ID and password.  **Important note:** When you have finished accessing a resource, be sure to sign out and close the browser tab. If you don't you may not be able to log in the next time and need to delete your browser cookies in order to successfully log in.
 
 The resources include access to the excellent O'Reilly books reference books, many training videos, and other interactive learning resources.  One example is the book Introducing Python (2nd Edition) by Bill Lubanovic, which can easily located using the search box on the website. You may be able to access it directly with [this link](https://learning-oreilly-com.proxy.library.vanderbilt.edu/library/view/introducing-python-2nd/9781492051374/).
 
