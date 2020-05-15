@@ -46,6 +46,8 @@ Total video time: 1h 43m
 
 This module covers many basic Python concepts through one-dimensional data structures. It provides background for several intermediate level modules. 
 
+**Recommended reference:** Introducing Python (2nd Edition) by Bill Lubanovic [via the Vanderbilt Libraries' catalog](https://catalog.library.vanderbilt.edu/permalink/01VAN_INST/6ll2l/alma991043641691203276) / [direct link to O'Reilly (VUNet login required)](https://learning-oreilly-com.proxy.library.vanderbilt.edu/library/view/introducing-python-2nd/9781492051374/).
+
 Total video time: 3h 07m
 
 ![Introductory coding module diagram](introductory-coding-module-diagram.png)
@@ -60,7 +62,15 @@ Total video time: 3h 07m
 
 ## Two-dimensional data structures (Python)
 
-Under construction 2020-05-12
+This module introduces two kinds of two-dimensional data structures used in data science with Python: NumPy arrays and Pandas data frames. It also shows how to load data from a local file and to perform basic manipulation of the data.
+
+**Recommended reference:** Python for Data Analysis, 2nd Edition by Wes McKinney [via Vanderbilt's catalog](https://catalog.library.vanderbilt.edu/permalink/01VAN_INST/6ll2l/alma991043601866403276) / [direct link to O'Reilly (VUNet login required)](https://learning.oreilly.com/library/view/python-for-data/9781491957653/)
+
+![Two-dimensional data structures diagram](2-d-data-structures-diagram.png)
+
+[NumPy arrays](007) 53 minutes
+
+Under construction 2020-05-15
 
 ----
 
@@ -69,6 +79,6 @@ Under construction 2020-05-12
 This module has not been created. However, you could learn about this subject by starting with [this lesson](../python/basics/). Some of the content repeats what was covered in the *Introductory coding (Python)* module, but new content is also included.
 
 ----
-Revised 2020-05-12
+Revised 2020-05-15
 
 If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
