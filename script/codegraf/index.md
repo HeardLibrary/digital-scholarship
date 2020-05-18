@@ -64,11 +64,13 @@ Total video time: 3h 07m
 
 This module introduces two kinds of two-dimensional data structures used in data science with Python: NumPy arrays and Pandas data frames. It also shows how to load data from a local file and to perform basic manipulation of the data.
 
-**Recommended reference:** Python for Data Analysis, 2nd Edition by Wes McKinney [via Vanderbilt's catalog](https://catalog.library.vanderbilt.edu/permalink/01VAN_INST/6ll2l/alma991043601866403276) / [direct link to O'Reilly (VUNet login required)](https://learning.oreilly.com/library/view/python-for-data/9781491957653/)
+**Recommended reference:** Python for Data Analysis, 2nd Edition by Wes McKinney [via Vanderbilt's catalog](https://catalog.library.vanderbilt.edu/permalink/01VAN_INST/6ll2l/alma991043601866403276) / [direct link to O'Reilly (VUNet login required)](https://learning.oreilly.com/library/view/python-for-data/9781491957653/). [Free online version of documentation via pandas website](https://pandas.pydata.org/).
 
 ![Two-dimensional data structures diagram](2-d-data-structures-diagram.png)
 
 [NumPy arrays](007) 53 minutes
+
+[Pandas data frames](008) 61 minutes
 
 Under construction 2020-05-15
 
