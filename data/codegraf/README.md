@@ -37,6 +37,8 @@ U.S. Energy Information Administration (eia.gov). Analysis and predictions tab.
 
 <https://www.eia.gov/environment/emissions/state/analysis/> Retrieved 2020-05-17
 
+In readable files, "mmt" is the unit million metric tons. 
+
 Table 3. 2016 state energy-related carbon dioxide emissions by fuel
 
 Original file: [co2_state_2016_fuel_original.xlsx](co2_state_2016_fuel_original.xlsx)
