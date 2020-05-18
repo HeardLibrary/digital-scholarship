@@ -47,9 +47,9 @@ Readable file: [co2_state_2016_fuel.xlsx](co2_state_2016_fuel.xlsx)
 
 Table 4. 2016 state energy-related carbon dioxide emissions by sector
 
-Original file: [co2_state_2016_fuel_original.xlsx](co2_state_2016_sector_original.xlsx)
+Original file: [co2_state_2016_sector_original.xlsx](co2_state_2016_sector_original.xlsx)
 
-Readable file: [co2_state_2016_fuel.xlsx](co2_state_2016_sector.xlsx)
+Readable file: [co2_state_2016_sector.xlsx](co2_state_2016_sector.xlsx)
 
 
 ## New York Times COVID 19 data
