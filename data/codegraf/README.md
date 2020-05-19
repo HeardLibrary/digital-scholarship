@@ -4,7 +4,7 @@
 
 Energy Resources for State and Local Governments <https://www.epa.gov/statelocalenergy/state-co2-emissions-fossil-fuel-combustion> Retrieved 2020-05-17
 
-State CO2 Emissions from Fossil Fuel Combustion, 1990-2017 
+State CO2 Emissions from Fossil Fuel Combustion, 1990-2017. Units are million metric tons.
 
 Original file: [co2ffc_2017_2.xlsx](co2ffc_2017_2.xlsx)
 
