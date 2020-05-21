@@ -22,11 +22,17 @@ Begin with the START entry point and work your way through the lessons. Each les
 
 [Link to additional book and online resources](https://heardlibrary.github.io/digital-scholarship/script/python/#for-more-information)
 
+----
+
 # Modules
+
+The following modules are currently available or under construction. More modules will be available in the future.
+
+![CodeGraf modules diagram](modules-graph-diagram.png)
 
 ----
 
-## Getting started
+## Getting started module
 
 This is a general introduction to both Python and R, although much of the video is focused on the variety of ways to code in Python. 
 
@@ -42,7 +48,7 @@ Total video time: 1h 43m
 
 ----
 
-## Introductory coding (Python)
+## Introductory coding (Python) module
 
 This module covers many basic Python concepts through one-dimensional data structures. It provides background for several intermediate level modules. 
 
@@ -60,11 +66,13 @@ Total video time: 3h 07m
 
 ----
 
-## Two-dimensional data structures (Python)
+## Two-dimensional data structures (Python) module
 
 This module introduces two kinds of two-dimensional data structures used in data science with Python: NumPy arrays and Pandas data frames. It also shows how to load data from a local file and to perform basic manipulation of the data.
 
 **Recommended reference:** Python for Data Analysis, 2nd Edition by Wes McKinney [via Vanderbilt's catalog](https://catalog.library.vanderbilt.edu/permalink/01VAN_INST/6ll2l/alma991043601866403276) / [direct link to O'Reilly (VUNet login required)](https://learning.oreilly.com/library/view/python-for-data/9781491957653/). [Free online version of documentation via pandas website](https://pandas.pydata.org/).
+
+Total video time: 3h 09m
 
 ![Two-dimensional data structures diagram](2-d-data-structures-diagram.png)
 
@@ -72,7 +80,13 @@ This module introduces two kinds of two-dimensional data structures used in data
 
 [Pandas data frames](008) 61 minutes
 
-Under construction 2020-05-15
+[Data wrangling](009) 75 minutes
+
+----
+
+## Data visualization (Python) module
+
+under construction 2020-05-21
 
 ----
 
@@ -81,6 +95,6 @@ Under construction 2020-05-15
 This module has not been created. However, you could learn about this subject by starting with [this lesson](../python/basics/). Some of the content repeats what was covered in the *Introductory coding (Python)* module, but new content is also included.
 
 ----
-Revised 2020-05-15
+Revised 2020-05-21
 
 If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
