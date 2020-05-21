@@ -40,6 +40,8 @@ Total video time: 1h 43m
 
 ![CodeGraf getting started module diagram](getting-started-module-diagram.png)
 
+**Lessons included in the module:**
+
 [Basic terminology](001) 18 minutes
 
 [Programming environments](002) 51 minutes
@@ -58,6 +60,8 @@ Total video time: 3h 07m
 
 ![Introductory coding module diagram](introductory-coding-module-diagram.png)
 
+**Lessons included in the module:**
+
 [Python programming basics](004) 67 minutes
 
 [Using code libraries](005) 34 minutes
@@ -75,6 +79,8 @@ This module introduces two kinds of two-dimensional data structures used in data
 Total video time: 3h 09m
 
 ![Two-dimensional data structures diagram](2-d-data-structures-diagram.png)
+
+**Lessons included in the module:**
 
 [NumPy arrays](007) 53 minutes
 
