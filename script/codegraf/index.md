@@ -92,7 +92,9 @@ Total video time: 3h 09m
 
 ## Data visualization (Python) module
 
-under construction 2020-05-21
+[Introduction to plotting](010) 63 minutes
+
+Other lessons may be added at some point in the future.
 
 ----
 
@@ -101,6 +103,6 @@ under construction 2020-05-21
 This module has not been created. However, you could learn about this subject by starting with [this lesson](../python/basics/). Some of the content repeats what was covered in the *Introductory coding (Python)* module, but new content is also included.
 
 ----
-Revised 2020-05-21
+Revised 2020-05-23
 
 If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
