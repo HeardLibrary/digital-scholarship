@@ -24,6 +24,12 @@ Depending on the app you use for messaging, your messages may or may not be encr
 
 [Keybase](https://keybase.io/) is a less well-known service that provides encrypted messaging as well as other services, such as 250 GB of free, encrypted cloud storage and private/public keys that can be used with other services.  It is available for Mac and Windows operating systems and for mobile devices.
 
+[Cryptopad](https://cryptpad.fr/) is an open-source project that is a private-by-design alternative to popular office tools and cloud services.
+
+## Secure meeting
+
+[Jitsi](https://jitsi.org/jitsi-meet/) is a free video conferencing platform that is fully encrypted. It's open source and can be used without an account.
+
 ## Anonymous browsing with Tor
 
 Although most browsers have "incognito" or "private" browsing modes that delete browsing history and cookies, they do not actually protect you from online data harvesting or monitoring of your browsing activities.  The [Tor Browser](https://www.torproject.org/) enables real anonymous and private browsing through a number of technologies that encrypt your browsing and sends your traffic through a network of volunteer-run Tor Relay servers.  It also isolates each website you visit and aims to make all users look the same so that you can't be "fingerprinted".  
@@ -33,6 +39,10 @@ Because of the way the Tor browser uses the network, it operates more slowly tha
 By default, the Tor browser uses [DuckDuckGo](https://duckduckgo.com/), a search engine that does not track you.  
 
 For [more information](https://www.torproject.org/about/history/) and to [download the Tor browser](https://www.torproject.org/download/) visit the [Tor project website]((https://www.torproject.org/) ).  
+
+## Privacy in operating systems
+
+[Tails](https://tails.boum.org/) is a portable operating system that uses the Tor network. Booting your computer into tails leaves no trace when the computer is shut down.
 
 ## Privacy on your iPhone
 
@@ -106,7 +116,7 @@ For information on "geofencing" (using location services on your phone to identi
 
 For an informative and somewhat chilling report on how web browsers, phone apps, and smart speakers are tracking you, listen to [this July 2019 interview](https://www.npr.org/2019/07/31/746970018/how-tech-companies-track-your-every-move-sell-your-data) of Washington Post tech colomnist Geoffrey Fowler. See also his posts [I found your data. It's for sale](https://beta.washingtonpost.com/technology/2019/07/18/i-found-your-data-its-sale/), [Goodbye, Chrome: Google’s Web browser has become spy software](https://beta.washingtonpost.com/technology/2019/06/21/google-chrome-has-become-surveillance-software-its-time-switch/), [It’s the middle of the night. Do you know who your iPhone is talking to?](https://beta.washingtonpost.com/technology/2019/05/28/its-middle-night-do-you-know-who-your-iphone-is-talking/), [Alexa has been eavesdropping on you this whole time](https://beta.washingtonpost.com/technology/2019/05/06/alexa-has-been-eavesdropping-you-this-whole-time/), and others on [his website](https://www.washingtonpost.com/people/geoffrey-a-fowler/).
 
-There are many other important topics you can research, including: file and hard drive encryption and the [Tails safe and anonymous operating system](https://tails.boum.org/).
+There are many other important topics you can research, including: file and hard drive encryption.
 
 The [Library Freedom Project](https://libraryfreedomproject.org/) has resources for [online privacy basics](https://libraryfreedomproject.org/resources/onlineprivacybasics/) and a [mobile privacy crash course](https://libraryfreedomproject.org/mobileprivacytoolkit/).
 
@@ -114,7 +124,9 @@ The [CryptoParty](https://www.cryptoparty.in/) movement organizes digital privac
 
 [Security in a Box](https://securityinabox.org/en/) has links to many useful tools.
 
+[PrivacyTools](https://www.privacytools.io/) provides information to many privacy-related tools.
+
 [privy.sh link shortener](https://priv.sh/) provides a service that does not track clickthroughs (no cookies saved).
 
 ----
-Revised 2019-09-14
+Revised 2020-06-09
