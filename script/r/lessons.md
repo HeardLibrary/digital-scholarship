@@ -10,29 +10,52 @@ A shortened link to this page is [vanderbi.lt/r](http://vanderbi.lt/r).
 
 ## About the lessons
 
-DiSC R lessons are provided by the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/) at [Vanderbilt University](https://www.vanderbilt.edu/).  The DiSC office provides regular lessons for R beginners and occasional special topics lessons.  There is no cost associated with the lessons.
+DiSC R lessons are provided by the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/) at [Vanderbilt University](https://www.vanderbilt.edu/).  The DiSC office provides regular lessons for R beginners with a variety of followup intermediate and advanced lessons.  There is no cost associated with the lessons.
 
-The beginners lessons generally cycle twice per semester.  See the schedule below for details.  You are also encouraged to work through the lessons on your own.   
+The beginners lessons generally cycle twice per semester.  See the schedule below for details.  There are videos for all lessons, so you can also work through them on your own.  
 
-The DiSC office also provides [lessons for learning Python](https://heardlibrary.github.io/digital-scholarship/script/python/wg/) in a similar format.
+The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/py) and [getting started with GitHub](vanderbi.lt/github) in a similar format.
 
-## Archive of Beginners Lessons - Spring 2020
+[Archive of past lessons](../archive/)
 
-To download an R script, click on the link.  Then:
 
-- (method 1) On the resulting page, right-click on the `Raw` button and select `Save link as...` (or similar).  Download the script to some place where you can find it. Open the file in RStudio using `File`, then `Open file`.
-- (method 2) On the resulting page, left-click on the Raw button. Select all of the text on the page, then copy it.  In RStudio, go to `File`, then `New File`, then `R Script`.  In the resulting editor pane, paste the text you copied.  You can save the file if you care about preserving your work.
+## Beginners Lessons - Fall 2020
 
-| Date | Session | Topic | Notes |
-|---|---|---|
-| Mar 13 | 1 | Installing R and RStudio and navigating around | [lesson video](../#introduction-video) / [lesson slides](../presentations/lesson1-r-rstudio.pdf)|
-| Mar 20 | 2 | R data structures | [lesson video](https://youtu.be/uDkgK3SoCbg) / [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures.R) / [lesson slides](../presentations/lesson2-structures.pdf) / [web page](../structures) / [HW answers](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2-structures-answers.R) |
-| Mar 27 | 3 | Creating simple scripts | [lesson video](https://youtu.be/-26V8J9SfkA) / [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-scripts.R) / [lesson slides](../presentations/lesson3-scripts.pdf) / [HW answers](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson3-scripts-answers.R) |
-| Apr 3 | 4 | Data wrangling (part 1) | [lesson video](https://youtu.be/UnsC_S-nxTI) / [wrangling lesson R script (part 1)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson4-wrangle1.R) / [lesson slides](../presentations/lesson4-wrangle1.pdf) |
-| Apr 10 | 5 | Data wrangling (part 2) | [lesson video](https://youtu.be/BlSbawB0erY) / [wrangling lesson R script (part 2)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson5-wrangle2.R) / [lesson slides](../presentations/lesson5-wrangle2.pdf) |
-| Apr 17 | 6 | Data visualization with ggplot | [lesson video](https://youtu.be/51ZbsobTQwE) / [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson6-viz.R) / [lesson slides](../presentations/lesson6-viz.pdf) |
-| Apr 24 | 7 | Optional practice lesson working with ICPSR data | [lesson video](https://youtu.be/GiAVbtx_B_c) / [download instructions for ICPSR data](../nlsaah/) /  [practice lesson R script (with answers)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls-answers.R) / [practice starter script (no answers)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls.R) / [lesson slides](../presentations/lesson7-wrangle3.pdf) |
+First cycle: Fridays from 1:00 - 2:00 PM
 
+| Date | Session | Topic | Web pages |
+|---|---|---|---|
+| Sep 4 | 1 | Introduction |  |
+| Sep 11 | 2 | Installation troubleshooting |  |
+| Sep 18 | 3 | Vectors and vectorized computing, packages |  |
+| Sep 25 | 4 | Lists and dataframes, tibbles |  |
+| Oct 2 | 5 | Missing data, basic stats, basic plots |  |
+| Oct 9 | 6 | Basic data wrangling, tidy data, piping |  |
+
+Second cycle: Thursdays from 11:00 AM - noon
+
+| Date | Session | Topic | Web pages |
+|---|---|---|---|
+| Oct 15 | 1 | Introduction |  |
+| Oct 22 | 2 | Installation troubleshooting |  |
+| Oct 29 | 3 | Vectors and vectorized computing, packages |  |
+| Nov 5 | 4 | Lists and dataframes, tibbles |  |
+| Nov 12 | 5 | Missing data, basic stats, basic plots |  |
+| Nov 19 | 6 | Basic data wrangling, tidy data, piping |  |
+
+
+## Intermediate Lessons (Introduction to statistical analysis) - Fall 2020
+
+Fridays from 1:00 - 2:00 PM
+
+| Date | Session | Topic | Web pages |
+|---|---|---|---|
+| Oct 16 | 1 |  |  |
+| Oct 23 | 2 |  |  |
+| Oct 30 | 3 |  |  |
+| Nov 6 | 4 |  |  |
+| Nov 13 | 5 |  |  |
+| Nov 20 | 6 |  |  |
 
 # R Resources
 
@@ -61,4 +84,4 @@ Check back later for future offerings.
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-04-24
+Revised 2020-08-18
