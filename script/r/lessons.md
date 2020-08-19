@@ -14,7 +14,7 @@ DiSC R lessons are provided by the [Digital Scholarship and Communications Offic
 
 The beginners lessons generally cycle twice per semester.  See the schedule below for details.  There are videos for all lessons, so you can also work through them on your own.  
 
-The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/py) and [getting started with GitHub](vanderbi.lt/github) in a similar format.
+The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/py) and [getting started with GitHub](http://vanderbi.lt/github) in a similar format.
 
 [Archive of past lessons](../archive/)
 
