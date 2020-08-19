@@ -28,7 +28,7 @@ Wednesdays from 1:00 - 2:00 PM Central (US) Time
 
 [Registration link](https://vanderbilt.zoom.us/meeting/register/tJYqduCrqT4rE91PCaL55R8yoeV3B_Xv6aB5). 
 
-| Date | Session | Topic | Web pages |
+| Working session date | Lesson | Topic | Web pages |
 |---|---|---|---|
 | Sep 2 | 1 | Introduction |  |
 | Sep 9 | 2 | Desktop Client installation troubleshooting  |  |

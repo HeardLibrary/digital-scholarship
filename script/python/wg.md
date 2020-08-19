@@ -42,7 +42,7 @@ Second cycle: Wednesdays from 1:00 - 2:00 PM Central (US) Time
 
 [Registration link](https://vanderbilt.zoom.us/meeting/register/tJYoceCspzsrGNcKXFlxeuHUXj5kQpTRIXde). 
 
-| Date | Session | Topic | Web page |
+| Working session date | Lesson | Topic | Web page |
 |---|---|---|---|
 | Oct 14 | 1 | Introduction |  |
 | Oct 21 | 2 | Installation troubleshooting |  |
@@ -58,7 +58,7 @@ Tuesdays from 10:00 - 11:00 AM Central (US) Time
 
 [Registration link](https://vanderbilt.zoom.us/meeting/register/tJwudu2oqzgsGNQzGjxodFLXeqU8LzjM26VC). 
 
-| Date | Session | Topic | Web pages |
+| Working session date | Lesson | Topic | Web pages |
 |---|---|---|---|
 | Oct 13 | 1 | Data from files |  |
 | Oct 20 | 2 | Dictionaries and "lists of dictionaries" tables |  |

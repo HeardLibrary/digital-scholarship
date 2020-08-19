@@ -29,7 +29,7 @@ First cycle: Fridays from 1:00 - 2:00 PM Central (US) Time
 
 [Registration link](https://vanderbilt.zoom.us/meeting/register/tJwpc-6prjgrHd3M1Fps39PDg4Z8YpBWUYME). 
 
-| Date | Session | Topic | Web pages |
+| Working session date | Lesson | Topic | Web pages |
 |---|---|---|---|
 | Sep 4 | 1 | Introduction |  |
 | Sep 11 | 2 | Installation troubleshooting |  |
@@ -42,7 +42,7 @@ Second cycle: Thursdays from 11:00 AM - noon Central (US) Time
 
 [Registration link](https://vanderbilt.zoom.us/meeting/register/tJYodOqoqDwiH9JZ09_9-U2u8qyt75Am5Uwc). 
 
-| Date | Session | Topic | Web pages |
+| Working session date | Lesson | Topic | Web pages |
 |---|---|---|---|
 | Oct 15 | 1 | Introduction |  |
 | Oct 22 | 2 | Installation troubleshooting |  |
@@ -58,7 +58,7 @@ Fridays from 1:00 - 2:00 PM Central (US) Time
 
 [Registration link](https://vanderbilt.zoom.us/meeting/register/tJAocOGhqjMrG9BuggcFEOjf8HnLBqyaVn3Q). 
 
-| Date | Session | Topic | Web pages |
+| Working session date | Lesson | Topic | Web pages |
 |---|---|---|---|
 | Oct 16 | 1 |  |  |
 | Oct 23 | 2 |  |  |
