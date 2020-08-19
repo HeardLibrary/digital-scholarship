@@ -18,7 +18,7 @@ Each lesson includes of a series of videos and homework assignments. The live Zo
 
 You are also welcome to work through the lessons on your own at any time (no registration required).
 
-The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/py) and [learning R](vanderbi.lt/r) in a similar format.
+The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/py) and [learning R](http://vanderbi.lt/r) in a similar format.
 
 Before starting the lessons, you need to create a free GitHub account.  To open an account, go to <https://github.com/> and follow the directions.
 
