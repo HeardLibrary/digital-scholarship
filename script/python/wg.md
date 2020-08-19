@@ -12,7 +12,11 @@ A shortened link to this page is [vanderbi.lt/py](http://vanderbi.lt/py).
 
 DiSC Python lessons are provided by the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/) at [Vanderbilt University](https://www.vanderbilt.edu/).  The DiSC office provides regular lessons for Python beginners with a variety of followup intermediate and advanced lessons. There is no cost associated with the lessons.
 
-The beginners lessons generally cycle twice per semester.  See the schedule below for details.  There are videos for all lessons, so you can also work through them on your own.
+The beginners lessons generally cycle twice per semester.  See the schedule below for session details.  Advance registration and a Zoom login are required to attend the live working sessions. To register, go to the link at the schedule below. After registering, you will receive a confirmation email containing information about joining the meeting.
+
+Each lesson includes of a series of videos with a practice Jupyter notebook and homework assignments. The live Zoom working sessions are not class sessions. Rather, they provide an opportunity for participants to ask questions about the lesson videos and homework, or to work on the homework with assistance. 
+
+You are also welcome to work through the lessons on your own at any time (no registration required).
 
 The DiSC office also provides [lessons for learning R](http://vanderbi.lt/r) and [getting started with GitHub](http://vanderbi.lt/github) in a similar format.
 
@@ -21,9 +25,11 @@ The DiSC office also provides [lessons for learning R](http://vanderbi.lt/r) and
 
 ## Beginners Lessons - Fall 2020
 
-First cycle: Tuesdays from 10:00 - 11:00 AM
+First cycle: Tuesdays from 10:00 - 11:00 AM Central (US) Time
 
-| Date | Session | Topic | Web pages |
+[Registration link](https://vanderbilt.zoom.us/meeting/register/tJUqfuCtrD8uG9AyWlJJdrDsWo-G_vzsXJTE). 
+
+| Working session date | Lesson | Topic | Web pages |
 |---|---|---|---|
 | Sep 1 | 1 | Introduction |  |
 | Sep 8 | 2 | Installation troubleshooting |  |
@@ -32,7 +38,9 @@ First cycle: Tuesdays from 10:00 - 11:00 AM
 | Sep 29 | 5 | List objects |  |
 | Oct 6 | 6 | Loops |  |
 
-Second cycle: Wednesdays from 1:00 - 2:00 PM
+Second cycle: Wednesdays from 1:00 - 2:00 PM Central (US) Time
+
+[Registration link](https://vanderbilt.zoom.us/meeting/register/tJYoceCspzsrGNcKXFlxeuHUXj5kQpTRIXde). 
 
 | Date | Session | Topic | Web page |
 |---|---|---|---|
@@ -46,7 +54,9 @@ Second cycle: Wednesdays from 1:00 - 2:00 PM
 
 ## Intermediate Lessons (Files and tables) - Fall 2020
 
-Tuesdays from 10:00 - 11:00 AM
+Tuesdays from 10:00 - 11:00 AM Central (US) Time
+
+[Registration link](https://vanderbilt.zoom.us/meeting/register/tJwudu2oqzgsGNQzGjxodFLXeqU8LzjM26VC). 
 
 | Date | Session | Topic | Web pages |
 |---|---|---|---|
@@ -80,4 +90,4 @@ Stay tuned for the next offering
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-08-18
+Revised 2020-08-19

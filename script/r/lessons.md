@@ -12,7 +12,11 @@ A shortened link to this page is [vanderbi.lt/r](http://vanderbi.lt/r).
 
 DiSC R lessons are provided by the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/) at [Vanderbilt University](https://www.vanderbilt.edu/).  The DiSC office provides regular lessons for R beginners with a variety of followup intermediate and advanced lessons.  There is no cost associated with the lessons.
 
-The beginners lessons generally cycle twice per semester.  See the schedule below for details.  There are videos for all lessons, so you can also work through them on your own.  
+The beginners lessons generally cycle twice per semester.  See the schedule below for session details.  Advance registration and a Zoom login are required to attend the live working sessions. To register, go to the link at the schedule below. After registering, you will receive a confirmation email containing information about joining the meeting.
+
+Each lesson includes of a series of videos with a practice scripts and homework assignments. The live Zoom working sessions are not class sessions. Rather, they provide an opportunity for participants to ask questions about the lesson videos and homework, or to work on the homework with assistance. 
+
+You are also welcome to work through the lessons on your own at any time (no registration required).
 
 The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/py) and [getting started with GitHub](http://vanderbi.lt/github) in a similar format.
 
@@ -21,7 +25,9 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 
 ## Beginners Lessons - Fall 2020
 
-First cycle: Fridays from 1:00 - 2:00 PM
+First cycle: Fridays from 1:00 - 2:00 PM Central (US) Time
+
+[Registration link](https://vanderbilt.zoom.us/meeting/register/tJwpc-6prjgrHd3M1Fps39PDg4Z8YpBWUYME). 
 
 | Date | Session | Topic | Web pages |
 |---|---|---|---|
@@ -32,7 +38,9 @@ First cycle: Fridays from 1:00 - 2:00 PM
 | Oct 2 | 5 | Missing data, basic stats, basic plots |  |
 | Oct 9 | 6 | Basic data wrangling, tidy data, piping |  |
 
-Second cycle: Thursdays from 11:00 AM - noon
+Second cycle: Thursdays from 11:00 AM - noon Central (US) Time
+
+[Registration link](https://vanderbilt.zoom.us/meeting/register/tJYodOqoqDwiH9JZ09_9-U2u8qyt75Am5Uwc). 
 
 | Date | Session | Topic | Web pages |
 |---|---|---|---|
@@ -46,7 +54,9 @@ Second cycle: Thursdays from 11:00 AM - noon
 
 ## Intermediate Lessons (Introduction to statistical analysis) - Fall 2020
 
-Fridays from 1:00 - 2:00 PM
+Fridays from 1:00 - 2:00 PM Central (US) Time
+
+[Registration link](https://vanderbilt.zoom.us/meeting/register/tJAocOGhqjMrG9BuggcFEOjf8HnLBqyaVn3Q). 
 
 | Date | Session | Topic | Web pages |
 |---|---|---|---|
@@ -84,4 +94,4 @@ Check back later for future offerings.
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-08-18
+Revised 2020-08-19
