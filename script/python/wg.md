@@ -29,14 +29,14 @@ First cycle: Tuesdays from 10:00 - 11:00 AM Central (US) Time
 
 [Registration link](https://vanderbilt.zoom.us/meeting/register/tJUqfuCtrD8uG9AyWlJJdrDsWo-G_vzsXJTE). 
 
-| Working session date | Lesson | Topic | Web pages |
+| Working session date | Lesson | Topic | Pre-lesson web pages |
 |---|---|---|---|
-| Sep 1 | 1 | Introduction |  |
-| Sep 8 | 2 | Installation troubleshooting |  |
-| Sep 15 | 3 | Programming basics |  |
-| Sep 22 | 4 | Code libraries |  |
-| Sep 29 | 5 | List objects |  |
-| Oct 6 | 6 | Loops |  |
+| Sep 1 | 1 | Introduction | [terminology](../codegraf/001/) (18 min) / [programming environments](../codegraf/002/) (50 min) |
+| Sep 8 | 2 | Installation troubleshooting | [installation videos](../codegraf/003/) (33 min) |
+| Sep 15 | 3 | Programming basics | [lesson videos](../codegraf/004/) (67 min) |
+| Sep 22 | 4 | Code libraries | [lesson videos](../codegraf/005/) (34 min) |
+| Sep 29 | 5 | List objects | [lesson videos](../codegraf/006a/) (25 min) |
+| Oct 6 | 6 | Loops | [lesson videos](../codegraf/006b/) (61 min) |
 
 Second cycle: Wednesdays from 1:00 - 2:00 PM Central (US) Time
 
