@@ -66,7 +66,9 @@ Total video time: 3h 07m
 
 [Using code libraries](005) 34 minutes
 
-[List objects](006) 86 minutes
+[List objects](006a) 25 minutes
+
+[Loops](006b) 61 minutes
 
 ----
 
