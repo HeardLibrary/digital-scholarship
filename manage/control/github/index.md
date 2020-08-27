@@ -28,9 +28,9 @@ Wednesdays from 1:00 - 2:00 PM Central (US) Time
 
 [Registration link](https://vanderbilt.zoom.us/meeting/register/tJYqduCrqT4rE91PCaL55R8yoeV3B_Xv6aB5). 
 
-| Working session date | Lesson | Topic | Web pages |
+| Working session date | Lesson | Topic | Pre-lesson web pages |
 |---|---|---|---|
-| Sep 2 | 1 | Introduction |  |
+| Sep 2 | 1 | Introduction | [background information videos](../../codegraf/015/) (17 min) |
 | Sep 9 | 2 | Desktop Client installation troubleshooting  |  |
 | Sep 16 | 3 | Markdown basics, commits, push to/pull from GitHub |  |
 | Sep 23 | 4 | Diffs and recovering previous versions |  |
@@ -55,4 +55,4 @@ The following pages provide information for developing basic skills with GitHub.
 [Managing a website with GitHub Pages](pages/)
 
 ----
-Revised 2020-08-19
+Revised 2020-08-27

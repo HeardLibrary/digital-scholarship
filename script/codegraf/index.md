@@ -24,15 +24,7 @@ Begin with the START entry point and work your way through the lessons. Each les
 
 ----
 
-# Modules
-
-The following modules are currently available or under construction. More modules will be available in the future.
-
-![CodeGraf modules diagram](modules-graph-diagram.png)
-
-----
-
-## Getting started module
+## Getting started with coding module
 
 This is a general introduction to both Python and R, although much of the video is focused on the variety of ways to code in Python. 
 
@@ -47,6 +39,16 @@ Total video time: 1h 43m
 [Programming environments](002) 51 minutes
 
 [Installing an environment](003) 34 minutes
+
+From here, continue with the Python or R modules
+
+----
+
+# Python Modules
+
+The following modules are currently available or under construction. More modules will be available in the future.
+
+![CodeGraf modules diagram](modules-graph-diagram.png)
 
 ----
 
@@ -105,6 +107,36 @@ Other lessons may be added at some point in the future.
 This module has not been created. However, you could learn about this subject by starting with [this lesson](../python/basics/). Some of the content repeats what was covered in the *Introductory coding (Python)* module, but new content is also included.
 
 ----
-Revised 2020-05-23
+
+# R Modules
+
+The following modules are currently available or under construction. More modules will be available in the future.
+
+----
+
+# GitHub Modules
+
+The following modules are currently available or under construction. More modules will be available in the future.
+
+[Introduction to GitHub module]()
+
+----
+
+## Introduction to GitHub module
+
+This module teaches you how to use the GitHub Desktop Client to create a personal version control and backup system using GitHub.
+
+Total video time: xh xm
+
+
+**Lessons included in the module:**
+
+[Background](015) 17 minutes
+
+----
+
+
+----
+Revised 2020-08-27
 
 If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
