@@ -30,7 +30,7 @@ Wednesdays from 1:00 - 2:00 PM Central (US) Time
 
 | Working session date | Lesson | Topic | Pre-lesson web pages |
 |---|---|---|---|
-| Sep 2 | 1 | Introduction | [background information videos](../../codegraf/015/) (17 min) |
+| Sep 2 | 1 | Introduction | [background information videos](../../../script/codegraf/015/) (17 min) |
 | Sep 9 | 2 | Desktop Client installation troubleshooting  |  |
 | Sep 16 | 3 | Markdown basics, commits, push to/pull from GitHub |  |
 | Sep 23 | 4 | Diffs and recovering previous versions |  |
