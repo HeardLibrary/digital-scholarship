@@ -1,0 +1,214 @@
+<html>
+    <!-- Form to generate metadata JSON for mapping a CSV file to the Wikidata graph model according to the
+    W3C Generating RDF from Tabular Data on the Web Recommendation https://www.w3.org/TR/csv2rdf/
+    Jessica K. Baskauf 2020-08-23 -->
+    <head>
+        <script type="text/javascript" src="wikidata-csv2rdf-metadata.js" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="wikidata-csv2rdf-metadata.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <form id="main-form">
+            <!--<input type="file" id="csv-input">-->
+            <div class="form-container">
+                <p>Form to generate metadata JSON for mapping a CSV file to the Wikidata graph model according to the
+                    W3C Generating RDF from Tabular Data on the Web Recommendation <a href="https://www.w3.org/TR/csv2rdf/">https://www.w3.org/TR/csv2rdf/</a>.
+                   For details, see <a href="http://vanderbi.lt/vanderbot">http://vanderbi.lt/vanderbot</a></p>
+                <p>Jessica K. Baskauf 2020-08-23</p>
+                <h3>For each component of a Wikidata entry, enter the name of the column header in your spreadsheet whose entries correspond to that component.
+                (Wikidata ID column header is required, all other components can be added as needed.)</h3>
+                <div class="form-section">
+                    <button type="button" class="collapsible maximized">Wikidata ID*</button>
+                    <div class="section-contents">
+                        <div class="section-items">
+                            <div class="section-item">
+                                <input type="text" id="wikidata-id" value="qid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <button type="button" class="collapsible maximized">Labels (one per language)</button>
+                    <div class="section-contents">
+                        <div class="section-items">
+                            <div class="section-item template">
+                                <input type="text" class="label" placeholder="Label">
+                                <select class="languages-dropdown">
+                                    <option id="language-choose">Choose language</option>
+                                </select>
+                                <button type="button" class="delete-button fa fa-trash-o"></button>
+                            </div>
+                        </div>
+                        <button type="button" class="add-button">Add label</button>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <button type="button" class="collapsible maximized">Descriptions (one per language)</button>
+                    <div class="section-contents">
+                        <div class="section-items">
+                            <div class="section-item template">
+                                <input type="text" class="description" placeholder="Description">
+                                <select class="languages-dropdown">
+                                    <option id="language-choose">Choose language</option>
+                                </select>
+                                <button type="button" class="delete-button fa fa-trash-o"></button>
+                            </div>
+                        </div>
+                        <button type="button" class="add-button">Add description</button>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <button type="button" class="collapsible maximized">Property</button>
+                    <div class="section-contents">
+                        <div class="section-items property-items">
+                            <div class="section-item property-item template">
+                                <div class="property-item-contents">
+                                    <div class="property-header">
+                                        <input type="text" class="property-name" placeholder="Property name">
+                                        <input type="text" class="property-id" placeholder="Property ID">
+                                        <select class="type">
+                                            <option id="type-choose">Choose type</option>
+                                            <option id="type-item">Item</option>
+                                            <option id="type-string">String</option>
+                                            <option id="type-url">URL</option>
+                                            <option id="type-date">Date</option>
+                                        </select>
+                                        <input type="text" class="statement-uuid" placeholder="Statement UUID">
+                                    </div>
+                                    <div class="property-quals">
+                                        <button type="button" class="subheader collapsible maximized">Qualifiers</button>
+                                        <div class="qual-contents">
+                                            <div class="qual-items">
+                                                <div class="qual-item template">
+                                                    <input type="text" class="qualifier" placeholder="Qualifier">
+                                                    <input type="text" class="qualifier-id" placeholder="Qualifier ID">
+                                                    <select class="type">
+                                                        <option id="type-choose">Choose type</option>
+                                                        <option id="type-item">Item</option>
+                                                        <option id="type-string">String</option>
+                                                        <option id="type-url">URL</option>
+                                                        <option id="type-date">Date</option>
+                                                    </select>
+                                                    <button type="button" class="delete-button fa fa-trash-o"></button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="add-button">Add qualifier</button>
+                                        </div>
+                                    </div>
+                                    <div class="property-refs">
+                                        <button type="button" class="subheader collapsible maximized">References</button>
+                                        <div class="ref-contents">
+                                            <div class="ref-items">
+                                                <div class="ref-item template">
+                                                    <div class="ref-item-contents">
+                                                        <input type="text" class="ref-hash" placeholder="Reference hash">
+                                                        <div class="ref-properties">
+                                                            <button type="button" class="subsubheader collapsible maximized">Reference Properties</button>
+                                                            <div class="ref-properties-contents">
+                                                                <div class="ref-property-items">
+                                                                    <div class="ref-property-item template">
+                                                                        <input type="text" class="ref-prop" placeholder="Reference property">
+                                                                        <input type="text" class="ref-prop-id" placeholder="Reference property ID">
+                                                                        <select class="type">
+                                                                            <option id="type-choose">Choose type</option>
+                                                                            <option id="type-item">Item</option>
+                                                                            <option id="type-string">String</option>
+                                                                            <option id="type-url">URL</option>
+                                                                            <option id="type-date">Date</option>
+                                                                        </select>
+                                                                        <button type="button" class="delete-button fa fa-trash-o"></button>
+                                                                    </div>
+                                                                </div>
+                                                                <button type="button" class="add-button">Add reference property</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="delete-button fa fa-trash-o"></button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="add-button">Add reference</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="delete-button fa fa-trash-o"></button>
+                            </div>
+                            <p>Please enter the name of the property, the ID for that property, and the type of the column entries for this property.
+                                You can find the Property ID corresponding to your property name here: https://www.wikidata.org/wiki/Wikidata:List_of_properties.
+                                You must also include a column for Statement UUIDs corresponding to this property.</p>
+                        </div>
+                        <button type="button" class="add-button">Add property</button>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <button type="button" class="collapsible maximized">Suppressed Columns</button>
+                    <div class="section-contents">
+                        <p>Add any column headers here for columns you want to ignore in the output JSON.</p>
+                        <div class="section-items">
+                            <div class="section-item template">
+                                <input type="text" class="suppressed-column">
+                                <button type="button" class="delete-button fa fa-trash-o"></button>
+                            </div>
+                        </div>
+                        <button type="button" class="add-button">Add suppressed column</button>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <button type="button" class="collapsible maximized">Finalize</button>
+                    <div class="final-sections">
+                        <div class="filename-section">
+                            <p>Enter the filename you will use for your CSV:</p>
+                            <input type="text" id="csv-filename">.csv</input>
+                        </div>
+                        <div class="output-section">
+                            <div class="output-area">
+                                <button type="button" class="submit-button" id="create-csv">Create CSV</button>
+                                <button type="button" class="clipboard-button" id="csv-clip" data-clipboard-target="#output-csv-contents" hidden>Copy to clipboard</button>
+                                <p class="output-file-contents" id="output-csv-contents"></p>
+                                <a href="" class="hidden-download-link" id="csv-download" download></a>
+                            </div>
+                            <div class="output-area">
+                                <button type="button" class="submit-button" id="create-json">Create JSON</button>
+                                <button type="button" class="clipboard-button" id="json-clip" data-clipboard-target="#output-json-contents" hidden>Copy to clipboard</button>
+                                <p class="output-file-contents" id="output-json-contents"></p>
+                                <a href="" class="hidden-download-link" id="json-download" download></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ALIAS section, probably don't need it, this would need minor updates from old structure version
+                <div class="form-section">
+                    <button class="collapsible minimized">Aliases</button>
+                    <div class="section-contents">
+                        <div class="section-items">
+                            <div class="section-item template">
+                                <label for="aliases-item">Aliases for language:</label>
+                                <select>
+                                    <option>en</option>
+                                    <option>es</option>
+                                </select>
+                                <div class="item-entries">
+                                    <input type="text" id="alias">
+                                    <input type="text" id="alias">
+                                </div>
+                            </div>
+                            <div class="section-item">
+                                <label for="aliases-item">Aliases for language:</label>
+                                <select>
+                                    <option>en</option>
+                                    <option>es</option>
+                                </select>
+                                <div class="item-entries">
+                                    <input type="text" id="alias">
+                                    <input type="text" id="alias">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-button">Add another language</button>
+                    </div>
+                </div>-->
+            </div>
+        </form>
+    </body>
+</html>

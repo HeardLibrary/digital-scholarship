@@ -1,0 +1,142 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.item-entries {
+    display: flex;
+    flex-direction:column;
+}
+
+.add-button, .submit-button {
+    width: fit-content;
+    padding: 5px;
+    margin: 5px;
+}
+
+#alias {
+    width: fit-content;
+}
+
+.collapsible {
+    background-color: #ddd;
+    color: #444;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    outline: none;
+    padding: 18px;
+}
+
+.subheader {
+    background-color: #eee;
+    padding: 5px;
+}
+
+.subsubheader {
+    background-color: #f5f5f5;
+    padding: 5px;
+}
+
+.section-item-headers {
+    display: flex;
+    flex-direction: row;
+}
+
+.section-contents {
+    overflow: hidden;
+}
+
+.minimized:after {
+    content: ' \02795';
+}
+
+.maximized:after {
+    content: " \2796";
+}
+
+.output-file-contents {
+    background-color: #eee;
+}
+
+.output-section {
+    display: flex;
+    flex-direction: column;
+}
+
+#output-json-contents {
+    white-space: pre;
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+#output-csv-contents {
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+.property-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: 2px solid #bbb;
+    margin: 3px;
+    margin-bottom: 8px;
+    padding: 3px;
+}
+
+.property-item-contents {
+    flex-grow: 1;
+}
+
+.ref-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: 1px solid #bbb;
+    margin: 3px;
+    margin-bottom: 8px;
+    padding: 3px;
+}
+
+.ref-item-contents {
+    flex-grow: 1;
+}
+
+.property-quals {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+.property-refs {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+.ref-properties {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+.property-delete {
+    display: block;
+}
+
+.template {
+    display: none;
+}
+
+.red {
+    background-color: #ff0000;
+}
