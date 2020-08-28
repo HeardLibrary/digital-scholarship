@@ -201,7 +201,7 @@ function createCSV() {
     if (somethingWrong) {
         return;
     }
-    string = string.substring(0, string.length - 2);
+    string = string.substring(0, string.length - 1);
     // check that there are no duplicate column headers
     var columnList = string.split(",");
     if (hasDuplicate(columnList)) {
