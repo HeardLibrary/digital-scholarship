@@ -28,7 +28,7 @@ Begin with the START entry point and work your way through the lessons. Each les
 
 This is a general introduction to both Python and R, although much of the video is focused on the variety of ways to code in Python. 
 
-Total video time: 1h 43m
+Total video time: 1h 36m
 
 ![CodeGraf getting started module diagram](getting-started-module-diagram.png)
 
@@ -38,7 +38,7 @@ Total video time: 1h 43m
 
 [Programming environments](002) 51 minutes
 
-[Installing an environment](003) 34 minutes
+[Installing an environment](003) 27 minutes
 
 From here, continue with the Python or R modules
 
