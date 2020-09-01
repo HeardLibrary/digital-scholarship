@@ -31,12 +31,12 @@ First cycle: Tuesdays from 10:00 - 11:00 AM Central (US) Time
 
 | Working session date | Lesson | Topic | Pre-lesson web pages |
 |---|---|---|---|
-| Sep 1 | 1 | Introduction | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) |
-| Sep 8 | 2 | Installation troubleshooting | [installation videos](../../codegraf/003/) (33 min) |
-| Sep 15 | 3 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
-| Sep 22 | 4 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
-| Sep 29 | 5 | List objects | [lesson videos](../../codegraf/006a/) (25 min) |
-| Oct 6 | 6 | Loops | [lesson videos](../../codegraf/006b/) (61 min) |
+| Sep 1 | 1 | Introduction / Installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (33 min)  |
+| Sep 8 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
+| Sep 15 | 3 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
+| Sep 22 | 4 | List objects | [lesson videos](../../codegraf/006a/) (25 min) |
+| Sep 29 | 5 | Loops | [lesson videos](../../codegraf/006b/) (61 min) |
+| Oct 6 | 6 |  |  |
 
 Second cycle: Wednesdays from 1:00 - 2:00 PM Central (US) Time
 
@@ -44,12 +44,12 @@ Second cycle: Wednesdays from 1:00 - 2:00 PM Central (US) Time
 
 | Working session date | Lesson | Topic | Web page |
 |---|---|---|---|
-| Oct 14 | 1 | Introduction |  |
-| Oct 21 | 2 | Installation troubleshooting |  |
-| Oct 28 | 3 | Programming basics |  |
-| Nov 4 | 4 | Code libraries |  |
-| Nov 11 | 5 | List objects |  |
-| Nov 18 | 6 | Loops |  |
+| Oct 14 | 1 | Introduction / Installation troubleshooting |  |
+| Oct 21 | 2 | Programming basics |  |
+| Oct 28 | 3 | Code libraries |  |
+| Nov 4 | 4 | List objects |  |
+| Nov 11 | 5 | Loops |  |
+| Nov 18 | 6 |  |  |
 
 
 ## Intermediate Lessons (Files and tables) - Fall 2020
@@ -90,4 +90,4 @@ Stay tuned for the next offering
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-08-19
+Revised 2020-09-01
