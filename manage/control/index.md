@@ -36,7 +36,7 @@ Basic Git is a free, open-source system that is typically used via the command l
 
 [GitHub](https://github.com/) is a commercial website and web service that provides a place for groups to manage their projects using Git.  When used for open projects, GitHub is available for free (private repositories require a paid subscription).  GitHub has a free graphical user tool called [GitHub Desktop](https://desktop.github.com/) that enables users to manage their files on GitHub in a simple and relatively intuitive fashion, without requiring the use of command line Git.  However, it can only be used to communicate with GitHub and not other Git-based repository systems.
 
-[GitHub resources](github/)
+[DiSC GitHub lessons](github/)
 
 [go to GitHub](https://github.com/)
 
@@ -54,4 +54,4 @@ The Open Science Framework is a permanent data repository.  However, it also inc
 There are other version control systems in use besides Git.  Another commonly used system is [Subversion](https://subversion.apache.org/), an open source system supported by the Apache Software Foundation.  [Jira](https://www.atlassian.com/software/jira), a commonly used project-management system, supports version control with Subversion.  [Mercurial](https://www.mercurial-scm.org/) is another well-known system.
 
 ----
-Revised 2019-02-18
+Revised 2020-08-31
