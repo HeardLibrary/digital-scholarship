@@ -118,7 +118,7 @@ The following modules are currently available or under construction. More module
 
 The following modules are currently available or under construction. More modules will be available in the future.
 
-[Introduction to GitHub module]()
+[Introduction to GitHub module](#introduction-to-github-module)
 
 ----
 
@@ -133,10 +133,15 @@ Total video time: xh xm
 
 [Background](015) 17 minutes
 
+[Setup a repository](016) 16 minutes
+
+[Markdown basics, commits, pull from/push to GitHub](017) 28 minutes
+
+
 ----
 
 
 ----
-Revised 2020-08-27
+Revised 2020-08-31
 
 If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)

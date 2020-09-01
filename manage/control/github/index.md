@@ -30,15 +30,15 @@ Wednesdays from 1:00 - 2:00 PM Central (US) Time
 
 | Working session date | Lesson | Topic | Pre-lesson web pages |
 |---|---|---|---|
-| Sep 2 | 1 | Introduction | [background information videos](../../../script/codegraf/015/) (17 min) / [setup](../../../script/codegraf/016/) (16 min) |
-| Sep 9 | 2 | Desktop Client installation troubleshooting  |  |
-| Sep 16 | 3 | Markdown basics, commits, push to/pull from GitHub |  |
-| Sep 23 | 4 | Diffs and recovering previous versions |  |
+| Sep 2 | 1 | Introduction and Desktop Client installation | [background information videos](../../../script/codegraf/015/) (17 min) / [setup](../../../script/codegraf/016/) (16 min) |
+| Sep 9 | 2 | Markdown basics, commits, pull from/push to GitHub | [lesson videos](../../../script/codegraf/017/) (28 min) |
+| Sep 16 | 3 | Diffs and recovering previous versions |  |
+| Sep 23 | 4 |  |  |
 
 
 # GitHub resources
 
-The following pages provide information for developing basic skills with GitHub.  The first five pages should be studied in order.  The last two are optional extensions.
+The following pages provide information for developing basic skills with GitHub.  The first five pages should be studied in order.  The last two are optional extensions. **Note:** these pages repeat content found in the lessons above.
 
 [Ways to use GitHub](ways/)
 
@@ -55,4 +55,4 @@ The following pages provide information for developing basic skills with GitHub.
 [Managing a website with GitHub Pages](pages/)
 
 ----
-Revised 2020-08-27
+Revised 2020-08-31
