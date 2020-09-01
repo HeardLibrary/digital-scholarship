@@ -32,8 +32,8 @@ Wednesdays from 1:00 - 2:00 PM Central (US) Time
 |---|---|---|---|
 | Sep 2 | 1 | Introduction and Desktop Client installation | [background information videos](../../../script/codegraf/015/) (17 min) / [setup](../../../script/codegraf/016/) (16 min) |
 | Sep 9 | 2 | Markdown basics, commits, pull from/push to GitHub | [lesson videos](../../../script/codegraf/017/) (28 min) |
-| Sep 16 | 3 | Diffs and recovering previous versions |  |
-| Sep 23 | 4 |  |  |
+| Sep 16 | 3 | Staging, diffs |  |
+| Sep 23 | 4 | Using GitHub to recover from disasters |  |
 
 
 # GitHub resources
