@@ -33,7 +33,7 @@ First cycle: Fridays from 1:00 - 2:00 PM Central (US) Time
 |---|---|---|---|
 | Sep 4 | 1 | Introduction | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) |
 | Sep 11 | 2 | Installation troubleshooting | [installation videos](../../codegraf/003/) (10 min) Stop on the page after the `Installing Anaconda` section. |
-| Sep 18 | 3 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (x min) |
+| Sep 18 | 3 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (50 min) |
 | Sep 25 | 4 | Lists and dataframes, tibbles |  |
 | Oct 2 | 5 | Missing data, basic stats, basic plots |  |
 | Oct 9 | 6 | Basic data wrangling, tidy data, piping |  |

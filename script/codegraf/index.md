@@ -112,6 +112,16 @@ This module has not been created. However, you could learn about this subject by
 
 The following modules are currently available or under construction. More modules will be available in the future.
 
+[R programming basics](#r-programming-basics)
+
+## R programming basics
+
+This module introduces the RStudio interface and basic programming concepts of R
+
+**Lessons included in the module:**
+
+[Vectors, vectorized computing, and packages](011) 50 minutes
+
 ----
 
 # GitHub Modules
