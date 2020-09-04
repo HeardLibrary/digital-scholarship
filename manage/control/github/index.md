@@ -28,6 +28,8 @@ Wednesdays from 1:00 - 2:00 PM Central (US) Time
 
 [Registration link](https://vanderbilt.zoom.us/meeting/register/tJYqduCrqT4rE91PCaL55R8yoeV3B_Xv6aB5). 
 
+Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
+
 | Working session date | Lesson | Topic | Pre-lesson web pages |
 |---|---|---|---|
 | Sep 2 | 1 | Introduction and Desktop Client installation | [background information videos](../../../script/codegraf/015/) (17 min) / [setup](../../../script/codegraf/016/) (16 min) |

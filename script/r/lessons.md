@@ -29,6 +29,8 @@ First cycle: Fridays from 1:00 - 2:00 PM Central (US) Time
 
 [Registration link](https://vanderbilt.zoom.us/meeting/register/tJwpc-6prjgrHd3M1Fps39PDg4Z8YpBWUYME). 
 
+Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
+
 | Working session date | Lesson | Topic | Web pages |
 |---|---|---|---|
 | Sep 4 | 1 | Introduction, installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (10 min) Stop on the page after the `Installing Anaconda` section. |

@@ -29,6 +29,8 @@ First cycle: Tuesdays from 10:00 - 11:00 AM Central (US) Time
 
 [Registration link](https://vanderbilt.zoom.us/meeting/register/tJUqfuCtrD8uG9AyWlJJdrDsWo-G_vzsXJTE). 
 
+Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
+
 | Working session date | Lesson | Topic | Pre-lesson web pages |
 |---|---|---|---|
 | Sep 1 | 1 | Introduction / Installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (27 min)  |
