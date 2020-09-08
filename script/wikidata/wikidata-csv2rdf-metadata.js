@@ -11,7 +11,7 @@ function init() {
             setUpCollapsibleOnClick($(this));
         });
         // add on-click listeners to buttons for adding section items
-        //first section-item in a div of section-items must be a template
+        // first section-item in a div of section-items must be a template
         $(".add-button").click(function() {
             setUpAddButtonOnClick($(this));
         })
@@ -180,21 +180,35 @@ function createCSV() {
     $('input[type="text"]').each(function () {
         // if input actually contains something
         if ($(this).val() != "") {
-            // save property names to append after property statement uuids
-            //(order is flipped in JSON, needs to stay consistent in CSV too)
-            if ($(this).hasClass("property-name")) {
-                propName = $(this).val();
-            }
-            // if the input is not for property id, qualifier id, or reference property id
+            // ignore if the input is for filename, property id, qualifier id, or reference property id
             // (which are referenced for the json but shouldn't have columns in the csv)
-            else if (!($(this).hasClass("property-id") || $(this).hasClass("qualifier-id") || $(this).hasClass("ref-prop-id") || $(this).is("#csv-filename"))) {
-                    string += $(this).val() + ",";
+            if (!($(this).hasClass("property-id") || $(this).hasClass("qualifier-id") || $(this).hasClass("ref-prop-id") || $(this).is("#csv-filename"))) {
+                // if prop name, qual name, or ref prop name, check for type-date
+                if ($(this).hasClass("property-name") || $(this).hasClass("qualifier") || $(this).hasClass("ref-prop")) {
+                    var toAppend = ""
+                    var typeId = $(this).siblings(".type").children("option:selected").attr("id");
+                    // if it is type date, more column headers need to be added for _nodeId, _val, and _prec
+                    if (typeId == "type-date") {
+                        toAppend = $(this).val() + "_nodeId," + $(this).val() + "_val," + $(this).val() + "_prec,";
+                    } else {
+                        toAppend = $(this).val() + ",";
+                    }
+                    // save property names to append after property statement uuids
+                    //(order is flipped in JSON, needs to stay consistent in CSV too)
+                    if ($(this).hasClass("property-name")) {
+                        propName = toAppend;
+                    } else {
+                        string += toAppend;
+                    }
+                } else {
+                    string += $(this).val() + ","
+                }
             }
             // append property names after statement UUIDs
             // this should always put the correct corresponding property name for the current
             // uuid since inputs are traversed in order, and prop-name always comes directly before statement-uuid
             if ($(this).hasClass("statement-uuid")) {
-                string += propName + ",";
+                string += propName;
             }
         }
     });
@@ -210,7 +224,7 @@ function createCSV() {
     }
 
     $("#output-csv-contents").text(string);
-    //un-hide copy to clipboard button if it is hidden
+    // un-hide copy to clipboard button if it is hidden
     $("#csv-clip").removeAttr('hidden');
 }
 
@@ -265,23 +279,25 @@ function createJSON() {
             // add basic property info (not including any references and qualifiers)
             // this includes two entries: one for the link between the entity with {wikidataID}
             // and the statementUUID, and one between the statementUUID and the property {propertyName}
-            // *********(still need to get the order of these right)
             else if ($(this).hasClass("property-name")) {
                 result = generatePropertyEntry($(this), wikidataId);
             }
-            //qualifiers
+            // qualifiers
             else if ($(this).hasClass("qualifier")) {
                 result = generateQualifierEntry($(this), wikidataId);
             }
-            //references
+            // references
             else if ($(this).hasClass("ref-hash")) {
                 result = generateReferenceHashEntry($(this), wikidataId);
             }
-            //reference properties
+            // reference properties
             else if ($(this).hasClass("ref-prop")) {
                 result = generateReferencePropertyEntry($(this));
             }
-            columnList.push($(this).val());
+            // only add input values that are real csv column names to the list of columns
+            if (!($(this).hasClass("property-id") || $(this).hasClass("qualifier-id") || $(this).hasClass("ref-prop-id"))) {
+                columnList.push($(this).val());
+            }
             if (result == null) {
                 somethingWrong = true;
                 return;
@@ -290,7 +306,7 @@ function createJSON() {
             }
         }
     });
-    //remove trailing comma from last column list entry
+    // remove trailing comma from last column list entry
     string = string.substring(0, string.length - 1);
     string +=`
                     ]
@@ -299,15 +315,15 @@ function createJSON() {
         ]
 }`
     // check for duplicate column headers
-    //if (hasDuplicate(columnList)) {
-    //    alert("You have a duplicate column header.");
-    //    return;
-    //}
+    if (hasDuplicate(columnList)) {
+       alert("You have a duplicate column header.");
+       return;
+    }
     if (somethingWrong) {
         return;
     }
     $("#output-json-contents").text(string);
-    //un-hide copy to clipboard button if it is hidden
+    // un-hide copy to clipboard button if it is hidden
     $("#json-clip").removeAttr('hidden');
 }
 
@@ -322,7 +338,7 @@ function generateWikidataIDOrSuppressedEntry(input) {
 }
 
 function generateLabelOrDescriptionEntry(input, wikidataId) {
-    //get the currently selected option in the language dropdown
+    // get the currently selected option in the language dropdown
     var languageDropdownSelectedId = input.siblings(".languages-dropdown").children("option:selected").attr("id");
     if (languageDropdownSelectedId == "language-choose") {
         alert(`You must choose a language for ${input.val()}.`);
@@ -380,40 +396,59 @@ function generatePropertyEntry(input, wikidataId) {
                             "valueUrl": "http://www.wikidata.org/entity/statement/{${wikidataId}}-{${statementUUID}}"
                         },`
     // add on column for the link between statement UUID and property
-    string += `
+    if (propertyTypeId == "type-date") {
+        // deal with type = dateTime separately - add a _nodeId, _val, and _prec entry
+        // this is to allow you to add date precision
+        string += `
+                        {
+                            "titles": "${propertyName}_nodeId",
+                            "name": "${propertyName}_nodeId",
+                            "datatype": "string",
+                            "aboutUrl": "http://www.wikidata.org/entity/statement/{${wikidataId}}-{${statementUUID}}",
+                            "propertyUrl": "http://www.wikidata.org/prop/statement/value/${propertyId}",
+                            "valueUrl": "http://example.com/.well-known/genid/{${propertyName}_nodeId}"
+                        },
+                        {
+                            "titles": "${propertyName}_val",
+                            "name": "${propertyName}_val",
+                            "datatype": "dateTime",
+                            "aboutUrl": "http://example.com/.well-known/genid/{${propertyName}_nodeId}",
+                            "propertyUrl": "http://wikiba.se/ontology#timeValue"
+                        },
+                        {
+                            "titles": "${propertyName}_prec",
+                            "name": "${propertyName}_prec",
+                            "datatype": "integer",
+                            "aboutUrl": "http://example.com/.well-known/genid/{${propertyName}_nodeId}",
+                            "propertyUrl": "http://wikiba.se/ontology#timePrecision"
+                        },`
+    } else {
+        string += `
                         {
                             "titles": "${propertyName}",
-                            "name": "${propertyName}",`
-    // add datatype string unless propertyTypeId is type-date
-    if (propertyTypeId == "type-date") {
-        string += `
-                            "datatype": "dateTime",`
-    } else {
-        string += `
-                            "datatype": "string",`
-    }
-    string += `
+                            "name": "${propertyName}",
+                            "datatype": "string",
                             "aboutUrl": "http://www.wikidata.org/entity/statement/{${wikidataId}}-{${statementUUID}}",
                             "propertyUrl": "http://www.wikidata.org/prop/statement/${propertyId}"`
-    if (propertyTypeId == "type-item") {
-        string += `,
+        if (propertyTypeId == "type-item") {
+            string += `,
                             "valueUrl": "http://www.wikidata.org/entity/{${propertyName}}"
                         },`
-    } else if (propertyTypeId == "type-url") {
-        string += `,
+        } else if (propertyTypeId == "type-url") {
+            string += `,
                             "valueUrl": "{+${propertyName}}"
                         },`
-    } else {
-        string += `
+        } else {
+            string += `
                         },`
-
+        }
     }
     return string;
 }
 
 function generateQualifierEntry(input, wikidataId) {
     var string = "";
-    //get the currently selected option in the language dropdown
+    // get the currently selected option in the language dropdown
     var qualifierName = input.val();
     var qualifierId = input.siblings(".qualifier-id").val();
     var qualifierTypeId = input.siblings(".type").children("option:selected").attr("id");
@@ -434,32 +469,51 @@ function generateQualifierEntry(input, wikidataId) {
         alert(`You must choose a type for ${qualifierName}.`);
         return null;
     }
-    string += `
-                        {
-                            "titles": "${qualifierName}",
-                            "name": "${qualifierName}",`
-    // add datatype string unless qualifierTypeId is type-date
+    // deal with dateTime separately to add date precision entries
     if (qualifierTypeId == "type-date") {
         string += `
-                            "datatype": "dateTime",`
+                        {
+                            "titles": "${qualifierName}_nodeId",
+                            "name": "${qualifierName}_nodeId",
+                            "datatype": "string",
+                            "aboutUrl": "http://www.wikidata.org/entity/statement/{${wikidataId}}-{${statementUUID}}",
+                            "propertyUrl": "http://www.wikidata.org/prop/qualifier/value/${qualifierId}",
+                            "valueUrl": "http://example.com/.well-known/genid/{${qualifierName}_nodeId}"
+                        },
+                        {
+                            "titles": "${qualifierName}_val",
+                            "name": "${qualifierName}_val",
+                            "datatype": "dateTime",
+                            "aboutUrl": "http://example.com/.well-known/genid/{${qualifierName}_nodeId}",
+                            "propertyUrl": "http://wikiba.se/ontology#timeValue"
+                        },
+                        {
+                            "titles": "${qualifierName}_prec",
+                            "name": "${qualifierName}_prec",
+                            "datatype": "integer",
+                            "aboutUrl": "http://example.com/.well-known/genid/{${qualifierName}_nodeId}",
+                            "propertyUrl": "http://wikiba.se/ontology#timePrecision"
+                        },`
     } else {
         string += `
-                            "datatype": "string",`
-    }
-    string += `
+                        {
+                            "titles": "${qualifierName}",
+                            "name": "${qualifierName}",
+                            "datatype": "string",
                             "aboutUrl": "http://www.wikidata.org/entity/statement/{${wikidataId}}-{${statementUUID}}",
                             "propertyUrl": "http://www.wikidata.org/prop/qualifier/${qualifierId}"`
-    if (qualifierTypeId == "type-item") {
-        string += `,
+        if (qualifierTypeId == "type-item") {
+            string += `,
                             "valueUrl": "http://www.wikidata.org/entity/{${qualifierName}}"
                         },`
-    } else if (qualifierTypeId == "type-url") {
-        string += `,
+        } else if (qualifierTypeId == "type-url") {
+            string += `,
                             "valueUrl": "{+${qualifierName}}"
                         },`
-    } else {
-        string += `
+        } else {
+            string += `
                         },`
+        }
     }
     return string;
 }
@@ -498,48 +552,58 @@ function generateReferencePropertyEntry(input) {
         alert(`You must choose a type for ${refPropName}.`);
         return null;
     }
-    string += `
-                        {
-                            "titles": "${refPropName}",
-                            "name": "${refPropName}",`
-    // add datatype string unless refPropTypeId is type-date
+    // deal with dateTime type separately to add time precision
     if (refPropTypeId == "type-date") {
         string += `
-                            "datatype": "dateTime",`
+                        {
+                            "titles": "${refPropName}_nodeId",
+                            "name": "${refPropName}_nodeId",
+                            "datatype": "string",
+                            "aboutUrl": "http://www.wikidata.org/reference/{${referenceHash}}",
+                            "propertyUrl": "http://www.wikidata.org/prop/reference/value/${refPropId}",
+                            "valueUrl": "http://example.com/.well-known/genid/{${refPropName}_nodeId}"
+                        },
+                        {
+                            "titles": "${refPropName}_val",
+                            "name": "${refPropName}_val",
+                            "datatype": "dateTime",
+                            "aboutUrl": "http://example.com/.well-known/genid/{${refPropName}_nodeId}",
+                            "propertyUrl": "http://wikiba.se/ontology#timeValue"
+                        },
+                        {
+                            "titles": "${refPropName}_prec",
+                            "name": "${refPropName}_prec",
+                            "datatype": "integer",
+                            "aboutUrl": "http://example.com/.well-known/genid/{${refPropName}_nodeId}",
+                            "propertyUrl": "http://wikiba.se/ontology#timePrecision"
+                        },`
     } else {
         string += `
-                            "datatype": "string",`
-    }
-    string += `
+                        {
+                            "titles": "${refPropName}",
+                            "name": "${refPropName}",
+                            "datatype": "string",
                             "aboutUrl": "http://www.wikidata.org/reference/{${referenceHash}}",
                             "propertyUrl": "http://www.wikidata.org/prop/reference/${refPropId}"`
-    if (refPropTypeId == "type-item") {
-        string += `,
+        if (refPropTypeId == "type-item") {
+            string += `,
                             "valueUrl": "http://www.wikidata.org/entity/{${refPropName}}"
                         },`
-    } else if (refPropTypeId == "type-url") {
-        string += `,
+        } else if (refPropTypeId == "type-url") {
+            string += `,
                             "valueUrl": "{+${refPropName}}"
                         },`
-    } else {
-        string += `
+        } else {
+            string += `
                         },`
-
+        }
     }
     return string;
 }
 
-// why is this not working?
-function downloadCSV(text, name, type) {
-    var a = $("#csv-download");
-    var file = new Blob([text], {type: type});
-    a.href = URL.createObjectURL(file);
-    a.download = name;
-    a.click();
-}
-
 function setUpLanguagesDropdown() {
-    //temporary solution - move this list somewhere else
+    // this list may not be up to date if changes are made to the wikidata property IDs
+    // (see https://www.wikidata.org/wiki/Wikidata:List_of_properties)
     var languages = ["aa,Afar","ab,Abkhaz","abe,Abenaki","abs,Ambonese","ace,Acehnese","acf,Saint Lucian Creole French","ady,Adyghe","ady-cyrl,Adyghe in Cyrillic script","aeb,Tunisian Arabic","aeb-arab,Tunisian Arabic in Arabic script","aeb-latn,Tunisian Arabic in Latin script","af,Afrikaans","agq,Aghem","ak,Akan","akl,Aklan","akz,Alabama","aln,Gheg Albanian","als,Swiss German","am,Amharic","ami,Amis","an,Aragonese","ang,Old English","anp,Angika","aoc,Pemon","ar,Arabic","arc,Aramaic","arn,Mapudungun","arq,Algerian Arabic","ary,Moroccan Arabic","as,Assamese","ase,American Sign Language","ast,Asturian","atj,Atikamekw","av,Avaric","avk,Kotava","awa,Awadhi","ay,Aymara","az,Azerbaijani","azb,South Azerbaijani","ba,Bashkir","ban,Balinese","bar,Bavarian","bat-smg,Samogitian","sgs,","bbc,Toba Batak language","bbc-latn,Batak Toba in Latin script","bcc,Southern Balochi","bcl,Central Bikol","be,Belarusian","be-tarask,Taraškievica","be-x-old,","bej,Beja","bfi,British Sign Language","bfq,Badaga","bg,Bulgarian","bgn,Western Balochi","bh,Bhojpuri","bho,","bi,Bislama","bjn,Banjar","bm,Bambara","bn,Bengali","bnn,Bunun","bo,Tibetan","bpy,Bishnupriya Manipuri","bqi,Bakhtiari","br,Breton","brh,Brahui","brx,Bodo language","bs,Bosnian","bsk,Burushaski","bss,Kose language","btm,Mandailing language","bto,Rinconada Bikol","bug,Buginese","bxr,Buryat","bxr,Russia Buriat","ca,Catalan","cbk-zam,Chavacano","cdo,Min Dong","ce,Chechen","ceb,Cebuano","ch,Chamorro","chn,Chinook Jargon","cho,Choctaw","chr,Cherokee","chu,Church Slavonic","chy,Cheyenne","ckb,Sorani","ckt,Chukchi","cnr,Montenegrin","co,Corsican","cop,Coptic","cps,Capiznon","cr,Cree","crh,Crimean Tatar","crh-cyrl,Crimean Tatar Cyrillic alphabet","crh-latn,Crimean Tatar Latin alphabet","crs,Seychellois Creole","cs,Czech","csb,Kashubian","cu,Old Church Slavonic","cv,Chuvash","cy,Welsh","da,Danish","de,German","de-at,Austrian German","de-ch,Swiss Standard German","de-formal,formal address in German","din,Dinka","diq,Zazaki","dsb,Lower Sorbian","dtp,Kadazandusun","dtp,Central Dusun language","dty,Doteli","dv,Dhivehi","dz,Dzongkha","ee,Ewe","eg,Egyptian Arabic","egl,Emilian","el,Modern Greek","el,Greek","eml,Emilian-Romagnol","en,English","en-ca,Canadian English","en-gb,British English","en-in,Indian English","en-us,American English","eo,Esperanto","es,Spanish","es-419,Latin American Spanish","es-formal,formal Spanish","es-mx,Mexican Spanish","esu,Central Alaskan Yup'ik","et,Estonian","ett,Etruscan","eu,Basque","ext,Extremaduran","eya,Eyak","fa,Persian","fa-af,Dari","ff,Fula","fi,Finnish","fit,Meänkieli","fiu-vro,Võro","vro,","fj,Fijian","fkv,kven","fo,Faroese","fon,Fon","fos,Siraya","fr,French","fr-be,Belgian French","fr-ca,Canadian French","frc,Louisiana French","frm,Middle French","fro,Old French","frp,Franco-Provençal","frr,North Frisian","fuf,Pular","fur,Friulian","fy,West Frisian","ga,Irish","gaa,Ga","gag,Gagauz","gan,Gan","gan-hans,simplified Gan","gan-hant,traditional Gan","gcr,Guianan Creole","gd,Scottish Gaelic","gez,Ge'ez","gkm,Medieval Greek","gl,Galician","glk,Gilaki","gml,Middle Low German","gn,Guarani","gom,Goan Konkani","gom-deva,Goan Konkani in Devanagari script","gom-latn,Goan Konkani in Latin script","gor,Gorontalo","got,Gothic","grc,Ancient Greek","gsw,Alemannic","gu,Gujarati","gv,Manx","ha,Hausa","hai,Haida","hak,Hakka","haw,Hawaiian","he,Hebrew","hi,Hindi","hif,Fiji Hindi","hif-latn,Fiji Hindi in Latin script","hil,Hiligaynon","ho,Hiri Motu","hr,Croatian","hrx,Hunsrik","hsb,Upper Sorbian","ht,Haitian Creole","hu,Hungarian","hu-formal,formal Hungarian","hy,Armenian","hyw,Western Armenian","hz,Herero","ia,Interlingua","id,Indonesian","ie,Interlingue","ig,Igbo","ii,Nuosu","ik,Inupiat","ike-cans,Eastern Canadian in aboriginal syllabics","ike-latn,Eastern Canadian in Latin script","ilo,Ilocano","ine,Proto-Indo-European","inh,Ingush","ins,Indian Sign Language","io,Ido","is,Icelandic","it,Italian","iu,Inuktitut","ja,Japanese","jam,Jamaican Patois","jbo,Lojban","jut,Jutlandic","jv,Javanese","ka,Georgian","kaa,Karakalpak","kab,Kabyle","kbd,Kabardian","kbd-cyrl,Kabardian in Cyrillic script","kbp,Kabiye","kea,Cape Verdean Creole","kg,Kongo","kha,Khasi","khw,Khowar","ki,Gikuyu","kiu,Kirmanjki","kj,Kwanyama","kjh,Khakas","kjp,Eastern Pwo","kk,Kazakh","kk-arab,Kazakh Arabic alphabets","kk-cn,Kazakh in China","kk-cyrl,Kazakh in Cyrillic script","kk-kz,Kazakh in Kazakhstan","kk-latn,Kazakh in Latin script","kk-tr,Kazakh in Turkey","kl,Greenlandic","km,Khmer","kn,Kannada","ko,Korean","ko-kp,North Korean standard language","ko-kr,South Korean standard language","koi,Permyak language","koy,Koyukon","kr,Kanuri","krc,Karachay-Balkar","kri,Krio","krj,Kinaray-a language","krl,Karelian","krx,Karon","ks,Kashmiri","ks-arab,Kashmiri in Arabic script","ks-deva,Kashmiri in Devanagari script","ksh,Kölsch","ksh,Ripuarian","ku,Kurmanji","ku,Kurdish languages","ku-arab,Kurdish Arabic alphabet","ku-latn,Kurdish in Latin script","kum,Kumyk","kv,Komi","kw,Cornish","ky,Kyrgyz","ky-arab,Kyrgyz in Arabic script","ky-cyrl,Kyrgyz in Cyrillic script","la,Latin","lad,Ladino","lag,Rangi language","lat-vul,Vulgar Latin","lb,Luxembourgish","lbe,Lak","lez,Lezgian","lfn,Lingua Franca Nova","lg,Luganda","li,Limburgish","lij,Ligurian","liv,Livonian","lki,Laki","lkt,Lakota","lld,Ladin","lmo,Lombard","ln,Lingala","lo,Lao","loz,Lozi","lrc,Northern Luri","lt,Lithuanian","ltg,Latgalian","lus,Mizo language","luz,Southern Luri","lv,Latvian","lzz,Laz","mai,Maithili","map-bms,Banyumasan","mdf,Moksha","mfe,Mauritian Creole","mg,Malagasy","mh,Marshallese","mhr,Meadow Mari","mi,Maori","min,Minangkabau","mis,Riksmål","mis,Early Middle Japanese","mis,unknown","mk,Macedonian","ml,Malayalam","mn,Mongolian","mnc,Manchu","mni,Meitei","mnw,Mon","mo,Moldovan","moe,Innu-aimun","mr,Marathi","mrj,Hill Mari","ms,Malay","mt,Maltese","mui,Musi","mul,multiple languages","mus,Muscogee","mwl,Mirandese","mwv,Mentawai","my,Burmese","myv,Erzya","mzn,Mazanderani","na,Nauruan","nah,Nahuatl","nap,Neapolitan","nb,Bokmål","nds,Low German","nds-nl,Dutch Low Saxon","ne,Nepali","new,Newar","ng,Ndonga","niu,Niuean","nl,Dutch","nl-be,Belgian Dutch","nl-informal,informal Dutch","nn,Nynorsk","nn-hognorsk,Høgnorsk","no,Norwegian","nod,Northern Thai","nog,Nogai","non,Old Norse","nov,Novial","nqo,N'Ko","nr,Southern Ndebele","nrm,Norman","fr-x-nrm,","nso,Northern Sotho","nui,Kombe language","nv,Navajo","nxm,Numidian","ny,Chewa","nys,Noongar","oc,Occitan","olo,Livvi-Karelian","om,Oromo","ood,O'odham","or,Odia","os,Ossetian","ota,Ottoman Turkish","otk,Old Turkic","pa,Punjabi","pa,Eastern Punjabi","pag,Pangasinan","pam,Kapampangan","pap,Papiamento","pcd,Picard","pdc,Pennsylvania German","pdt,Plautdietsch","peo,Old Persian","pfl,Palatinate German","pi,Pali","pih,Pitkern","pis,Pijin","pjt,Pitjantjatjara","pko,Pökoot","pl,Polish","pms,Piedmontese","pmy,Papuan Malay","pnb,Western Punjabi","pnt,Pontic Greek","ppu,Papora-Hoanya language","prg,Old Prussian","ps,Pashto","pt,Portuguese","pt-br,Brazilian Portuguese","pyu,Puyuma","qu,Quechua","quc,K’iche’","qug,Kichwa","rcf,Réunion Creole","rgn,Romagnol","rif,Riffian","rm,Romansh","rm-puter,Putèr","rm-rumgr,Rumantsch Grischun","rm-surmiran,Surmiran","rm-sursilv,Sursilvan","rm-sutsilv,Sutsilvan","rm-vallader,Vallader","rmy,Romani","rn,Kirundi","ro,Romanian","roa-tara,Tarantino","it-x-tara,","ru,Russian","ru-sib,Siberian language","rue,Rusyn","rup,Aromanian","ruq,Megleno-Romanian","ruq-cyrl,Megleno-Romanian in Cyrillic script","ruq-latn,Megleno-Romanian in Latin script","rw,Kinyarwanda","rwr,Marwari (India)","ryu,Okinawan","sa,Sanskrit","sah,Sakha","sat,Santali","sc,Sardinian","scn,Sicilian","sco,Scots","sd,Sindhi","sdc,Sassarese","sdh,Southern Kurdish","se,Northern Sami","sei,Seri","ses,Koyraboro Senni","sg,Sango","sh,Serbo-Croatian","shi,Shilha","shi-latn,Tachelhit in Latin script","shi-tfng,Tachelhit in Tifinagh script","shn,Shan","shy,Shawiya","shy-latn,Shawiya in Latin script","si,Sinhala","sid,Sidamo","simple,Simple English","en-x-simple,","en-simple,","sjd,Kildin Sami","sje,Pite Sami","sjm,Mapun","sju,Ume Sami","sk,Slovak","skr,Saraiki language","skr-arab,Saraiki in Arabic script","sl,Slovene","sli,Silesian German","sm,Samoan","sma,Southern Sami","smj,Lule Sami","smn,Inari Sami","sms,Skolt Sami","sn,Shona","so,Somali","sou,Southern Thai","sq,Albanian","sr,Serbian","sr-ec,Serbian Cyrillic alphabet","sr-ec,Serbian written in Cyrillic","sr-el,Serbian Latin alphabet","srn,Sranan tongo","srq,Sirionó","ss,Swazi","ssf,Thao","st,Sesotho","stq,Saterland Frisian","sty,Siberian Tatar","su,Sundanese","sv,Swedish","sw,Swahili","szl,Silesian","szy,Sakizaya","ta,Tamil","tay,Atayal","tcy,Tulu","te,Telugu","tet,Tetum","tg,Tajik","tg-arab,Tajik in Arabic script","tg-cyrl,Tajik in Cyrillic script","tg-latn,Tajik in Latin script","th,Thai","ti,Tigrinya","tk,Turkmen","tl,Tagalog","tlh,Klingon","tly,Talysh","tn,Tswana","to,Tongan","tpi,Tok Pisin","tr,Turkish","tru,Turoyo","trv,Seediq","ts,Tsonga","tsg,Tausug","tt,Tatar","tt-cyrl,Tatar in Cyrillic script","tt-latn,Tatar in Latin script","tum,Tumbuka","tvl,Tuvaluan","tw,Twi","ty,Tahitian","tyv,Tuvan","tzl,Talossan","tzm,Central Atlas Tamazight","udm,Udmurt","ug,Uyghur","ug-arab,Uyghur Arabic alphabet","ug-latn,Uyghur Latin alphabet","uk,Ukrainian","umu,Munsee","und,undetermined language","ur,Urdu","uun,Pazeh language","uz,Uzbek","uz-cyrl,Uzbek Cyrillic alphabet","uz-latn,Uzbek Latin alphabet","uzs,Southern Uzbek","ve,Venda","vec,Venetian","vep,Veps","vi,Vietnamese","vls,Flemish","vls,West Flemish","vmf,Main-Franconian","vo,Volapük","vot,Votic","wa,Walloon","wal,Wolaytta","war,Waray","wbl,Wakhi","wo,Wolof","wuu,Wu Chinese","wym,Vilamovian","xal,Kalmyk Oirat","xh,Xhosa","xmf,Mingrelian","xpu,Punic","xsy,Saisiyat","yai,Yaghnobi","yap,Yapese","yav,Yangben","ydg,Yidgha","yi,Yiddish","yo,Yoruba","yrk,Nenets","yrl,Nheengatu","za,Zhuang","zea,Zeelandic","zgh,Standard Moroccan Berber","zh,Chinese","zh-classical,Classical Chinese","zh-cn,Putonghua","zh-hans,Simplified Chinese","zh-hant,Traditional Chinese","zh-min-nan,Southern Min","zh-mo,Chinese in Macau","zh-my,Malaysian Mandarin","zh-sg,Singaporean Mandarin","zh-tw,Taiwanese Mandarin","zh-tw,National language of Republic of China","zh-yue,Yue Chinese","zh-yue,Cantonese","zu,Zulu","zun,Zuni"];
     for (i = 0; i < languages.length; i++) {
         var langRes = languages[i].split(",");

@@ -21,10 +21,6 @@
     margin: 5px;
 }
 
-#alias {
-    width: fit-content;
-}
-
 .collapsible {
     background-color: #ddd;
     color: #444;
@@ -77,6 +73,7 @@
 }
 
 #output-csv-contents {
+    overflow-wrap: anywhere;
     font-family: "Lucida Console", Courier, monospace;
 }
 
@@ -135,8 +132,4 @@
 
 .template {
     display: none;
-}
-
-.red {
-    background-color: #ff0000;
 }

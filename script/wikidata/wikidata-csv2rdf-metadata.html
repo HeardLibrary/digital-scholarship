@@ -11,7 +11,6 @@
     </head>
     <body>
         <form id="main-form">
-            <!--<input type="file" id="csv-input">-->
             <div class="form-container">
                 <p>Form to generate metadata JSON for mapping a CSV file to the Wikidata graph model according to the
                     W3C Generating RDF from Tabular Data on the Web Recommendation <a href="https://www.w3.org/TR/csv2rdf/">https://www.w3.org/TR/csv2rdf/</a>.
@@ -136,7 +135,9 @@
                             </div>
                             <p>Please enter the name of the property, the ID for that property, and the type of the column entries for this property.
                                 You can find the Property ID corresponding to your property name here: https://www.wikidata.org/wiki/Wikidata:List_of_properties.
-                                You must also include a column for Statement UUIDs corresponding to this property.</p>
+                                You must also include a column for Statement UUIDs corresponding to this property.
+                                *Any property, qualifier, or reference property with type Date will have three column headers automatically generated
+                                in order to allow for the specification of date/time precision.</p>
                         </div>
                         <button type="button" class="add-button">Add property</button>
                     </div>
@@ -177,37 +178,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- ALIAS section, probably don't need it, this would need minor updates from old structure version
-                <div class="form-section">
-                    <button class="collapsible minimized">Aliases</button>
-                    <div class="section-contents">
-                        <div class="section-items">
-                            <div class="section-item template">
-                                <label for="aliases-item">Aliases for language:</label>
-                                <select>
-                                    <option>en</option>
-                                    <option>es</option>
-                                </select>
-                                <div class="item-entries">
-                                    <input type="text" id="alias">
-                                    <input type="text" id="alias">
-                                </div>
-                            </div>
-                            <div class="section-item">
-                                <label for="aliases-item">Aliases for language:</label>
-                                <select>
-                                    <option>en</option>
-                                    <option>es</option>
-                                </select>
-                                <div class="item-entries">
-                                    <input type="text" id="alias">
-                                    <input type="text" id="alias">
-                                </div>
-                            </div>
-                        </div>
-                        <button class="add-button">Add another language</button>
-                    </div>
-                </div>-->
             </div>
         </form>
     </body>
