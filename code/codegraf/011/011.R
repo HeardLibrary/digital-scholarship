@@ -41,5 +41,5 @@ c
 # Packages
 # --------------------------
 
-library(dplyr)
+library(readr)
 schools_tibble <- read_csv("https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/gis/wg/Metro_Nashville_Schools.csv")
