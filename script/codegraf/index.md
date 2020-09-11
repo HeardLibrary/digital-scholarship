@@ -136,7 +136,7 @@ The following modules are currently available or under construction. More module
 
 This module teaches you how to use the GitHub Desktop Client to create a personal version control and backup system using GitHub.
 
-Total video time: xh xm
+Total video time: 1h 42m
 
 
 **Lessons included in the module:**
@@ -147,11 +147,12 @@ Total video time: xh xm
 
 [Markdown basics, commits, pull from/push to GitHub](017) 28 minutes
 
+[The work cycle](018) 40 minutes
+
+[Using GitHub to recover from disasters](019) 18 minutes
 
 ----
 
-
-----
-Revised 2020-08-31
+Revised 2020-09-10
 
 If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
