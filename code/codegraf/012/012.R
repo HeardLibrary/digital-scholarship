@@ -159,3 +159,6 @@ schools_data <- read_csv("https://raw.githubusercontent.com/HeardLibrary/digital
 
 
 # 5. Calculate the fraction of students that are white in each school
+
+
+# 6. Try to load into a data frame some Excel file that you have on your local drive using the read.xlsx() function.
