@@ -35,7 +35,7 @@ Instructor (Steve Baskauf) [office hours information](https://www.library.vander
 |---|---|---|---|
 | Sep 4 | 1 | Introduction, installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (10 min) Stop on the page after the `Installing Anaconda` section. |
 | Sep 11 | 2 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (50 min) |
-| Sep 18 | 3 | Lists and dataframes, tibbles |  |
+| Sep 18 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) ( min) |
 | Sep 25 | 4 | Missing data, basic stats, basic plots |  |
 | Oct 2 | 5 | Basic data wrangling, tidy data, piping |  |
 | Oct 9 | 6 | | |
