@@ -37,8 +37,8 @@ Instructor (Steve Baskauf) [office hours information](https://www.library.vander
 | Sep 8 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
 | Sep 15 | 3 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
 | Sep 22 | 4 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
-| Sep 29 | 5 | Loops | [lesson videos](../../codegraf/006b/) (61 min) |
-| Oct 6 | 6 |  |  |
+| Sep 29 | 5 | Loops | [lesson videos](../../codegraf/006b/) (33 min lessons, 61 min including demos) |
+| Oct 6 | 6 | Conditional execution | [lesson videos](../../codegraf/006c/) (x min) |
 
 Second cycle: Wednesdays from 1:00 - 2:00 PM Central (US) Time
 
@@ -49,9 +49,9 @@ Second cycle: Wednesdays from 1:00 - 2:00 PM Central (US) Time
 | Oct 14 | 1 | Introduction / Installation troubleshooting |  |
 | Oct 21 | 2 | Programming basics |  |
 | Oct 28 | 3 | Code libraries |  |
-| Nov 4 | 4 | List objects |  |
+| Nov 4 | 4 | List and dictionary objects |  |
 | Nov 11 | 5 | Loops |  |
-| Nov 18 | 6 |  |  |
+| Nov 18 | 6 | Conditional execution |  |
 
 
 ## Intermediate Lessons (Files and tables) - Fall 2020
@@ -92,4 +92,4 @@ Stay tuned for the next offering
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-09-01
+Revised 2020-09-15

@@ -70,7 +70,9 @@ Total video time: 3h 07m
 
 [List and dictionary objects](006a) 32 minutes
 
-[Loops](006b) 61 minutes
+[Loops](006b) 33 minutes (lesson videos only, 61 minutes with live coding examples)
+
+[Conditional execution](006c) x minutes
 
 ----
 
