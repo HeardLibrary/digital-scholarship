@@ -36,7 +36,7 @@ Instructor (Steve Baskauf) [office hours information](https://www.library.vander
 | Sep 1 | 1 | Introduction / Installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (27 min)  |
 | Sep 8 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
 | Sep 15 | 3 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
-| Sep 22 | 4 | List objects | [lesson videos](../../codegraf/006a/) (25 min) |
+| Sep 22 | 4 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (25 min) |
 | Sep 29 | 5 | Loops | [lesson videos](../../codegraf/006b/) (61 min) |
 | Oct 6 | 6 |  |  |
 
