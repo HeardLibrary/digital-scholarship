@@ -38,7 +38,7 @@ Instructor (Steve Baskauf) [office hours information](https://www.library.vander
 | Sep 15 | 3 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
 | Sep 22 | 4 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
 | Sep 29 | 5 | Loops | [lesson videos](../../codegraf/006b/) (33 min lessons, 61 min including demos) |
-| Oct 6 | 6 | Conditional execution | [lesson videos](../../codegraf/006c/) (x min) |
+| Oct 6 | 6 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
 
 Second cycle: Wednesdays from 1:00 - 2:00 PM Central (US) Time
 

@@ -58,7 +58,7 @@ This module covers many basic Python concepts through one-dimensional data struc
 
 **Recommended reference:** Introducing Python (2nd Edition) by Bill Lubanovic [via the Vanderbilt Libraries' catalog](https://catalog.library.vanderbilt.edu/permalink/01VAN_INST/6ll2l/alma991043641691203276) / [direct link to O'Reilly (VUNet login required)](https://learning-oreilly-com.proxy.library.vanderbilt.edu/library/view/introducing-python-2nd/9781492051374/).
 
-Total video time: 3h 07m
+Total video time: 3h 30m
 
 ![Introductory coding module diagram](introductory-coding-module-diagram.png)
 
@@ -72,7 +72,7 @@ Total video time: 3h 07m
 
 [Loops](006b) 33 minutes (lesson videos only, 61 minutes with live coding examples)
 
-[Conditional execution](006c) x minutes
+[Conditional execution](006c) 44 minutes
 
 ----
 
