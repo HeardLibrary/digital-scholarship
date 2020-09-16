@@ -124,6 +124,8 @@ This module introduces the RStudio interface and basic programming concepts of R
 
 [Vectors, vectorized computing, and packages](011) 50 minutes
 
+[Lists and dataframes, tibbles](012) 33 minutes
+
 ----
 
 # GitHub Modules
@@ -155,6 +157,6 @@ Total video time: 1h 42m
 
 ----
 
-Revised 2020-09-10
+Revised 2020-09-16
 
 If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
