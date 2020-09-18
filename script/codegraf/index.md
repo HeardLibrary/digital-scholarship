@@ -126,6 +126,8 @@ This module introduces the RStudio interface and basic programming concepts of R
 
 [Lists and dataframes, tibbles](012) 33 minutes
 
+[Basic stats and plots, missing data](013) 47 minutes
+
 ----
 
 # GitHub Modules
