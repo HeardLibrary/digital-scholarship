@@ -16,6 +16,7 @@ mean(vector_with_missing, na.rm = TRUE) # remove NAs, then calculate
 # See https://gist.github.com/baskaufs/6664d6873121f02c47dbe77a743de65d for the test CSV used in this exercise
 
 # Load the CSV from a URL
+library(readr)
 url <- "https://gist.github.com/baskaufs/6664d6873121f02c47dbe77a743de65d/raw/c0f63a806795327fc159585475b75037239aaba5/people.csv"
 data_tibble <- read_csv(url) # "" and "NA" converted to NA. All other strings unchanged.
 
