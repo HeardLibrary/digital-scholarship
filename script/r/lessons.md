@@ -37,8 +37,8 @@ Instructor (Steve Baskauf) [office hours information](https://www.library.vander
 | Sep 11 | 2 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (50 min) |
 | Sep 18 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (33 min) |
 | Sep 25 | 4 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
-| Oct 2 | 5 | Basic data wrangling, tidy data, piping |  |
-| Oct 9 | 6 | | |
+| Oct 2 | 5 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (x min) |
+| Oct 9 | 6 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (x min) |
 
 Second cycle: Thursdays from 11:00 AM - noon Central (US) Time
 
@@ -46,12 +46,12 @@ Second cycle: Thursdays from 11:00 AM - noon Central (US) Time
 
 | Working session date | Lesson | Topic | Web pages |
 |---|---|---|---|
-| Oct 15 | 1 | Introduction |  |
-| Oct 22 | 2 | Installation troubleshooting |  |
-| Oct 29 | 3 | Vectors and vectorized computing, packages |  |
-| Nov 5 | 4 | Lists and dataframes, tibbles |  |
-| Nov 12 | 5 | Missing data, basic stats, basic plots |  |
-| Nov 19 | 6 | Basic data wrangling, tidy data, piping |  |
+| Oct 15 | 1 | Introduction, installation troubleshooting |  |
+| Oct 22 | 2 | Basics: Vectors and vectorized computing, packages |  |
+| Oct 29 | 3 | Lists and dataframes, tibbles |  |
+| Nov 5 | 4 | Missing data, basic stats, basic plots |  |
+| Nov 12 | 5 | Tidy Data and basic data wrangling |  |
+| Nov 19 | 6 | More data wrangling and piping |  |
 
 
 ## Intermediate Lessons (Introduction to statistical analysis) - Fall 2020
@@ -96,4 +96,4 @@ Check back later for future offerings.
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-09-03
+Revised 2020-09-25
