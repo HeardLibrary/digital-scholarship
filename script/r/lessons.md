@@ -37,7 +37,7 @@ Instructor (Steve Baskauf) [office hours information](https://www.library.vander
 | Sep 11 | 2 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (50 min) |
 | Sep 18 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (33 min) |
 | Sep 25 | 4 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
-| Oct 2 | 5 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (x min) |
+| Oct 2 | 5 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
 | Oct 9 | 6 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (x min) |
 
 Second cycle: Thursdays from 11:00 AM - noon Central (US) Time
@@ -96,4 +96,4 @@ Check back later for future offerings.
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-09-25
+Revised 2020-09-28
