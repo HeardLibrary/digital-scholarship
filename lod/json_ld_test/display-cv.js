@@ -60,12 +60,12 @@ function setStatusOptions(isoLanguage) {
 						}
 					if (data[i]['rdf:value']) {
 						cv_string = data[i]['rdf:value']
-						text = text + 'Use with dwc:establishmentMeans : ' + cv_string + '<br/>'
+						text = text + 'Use this value with dwc:establishmentMeans : ' + cv_string + '<br/>'
 						}
 
 					if (data[i]['@type'] == 'http://www.w3.org/2004/02/skos/core#Concept') {
 						iri = data[i]['@id']
-						text = text + 'Use with dwciri:establishmentMeans : ' + iri + '<br/>'
+						text = text + 'Use this value with dwciri:establishmentMeans : ' + iri + '<br/>'
 						}
 					text += '<br/>'
 					}
