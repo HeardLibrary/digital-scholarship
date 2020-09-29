@@ -1,0 +1,246 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "http://rs.tdwg.org/dwcem/values/e",
+      "@type": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "establishmentMeans controlled concept scheme"
+        },
+        {
+          "@language": "es",
+          "@value": "esquema de conceptos controlado de establishmentMeans"
+        },
+        {
+          "@language": "nl",
+          "@value": "establishmentMeans gecontroleerd conceptschema"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A SKOS Concept Scheme to be used as a controlled vocabulary for the Darwin Core terms dwc:establishmentMeans and dwciri:establishmentMeans"
+        },
+        {
+          "@language": "es",
+          "@value": "Un Esquema de Conceptos de SKOS para ser utilizado como vocabulario controlado para los términos de Darwin Core dwc:establishmentMeans y dwciri:establishmentMeans"
+        },
+        {
+          "@language": "nl",
+          "@value": "Een SKOS Conceptschema te gebruiken als een gecontoleerde woordenschat voor de Darwin Core termen dwc:establishmentMeans en dwciri:establishmentMeans"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwcem/values/e001",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "native",
+      "skos:inScheme": "http://rs.tdwg.org/dwcem/values/e",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "native (indigenous)"
+        },
+        {
+          "@language": "es",
+          "@value": "nativo (autóctono)"
+        },
+        {
+          "@language": "nl",
+          "@value": "inheems"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A taxon occurring within its natural range"
+        },
+        {
+          "@language": "es",
+          "@value": "Un taxón que se encuentra dentro de su área de distribución natural"
+        },
+        {
+          "@language": "nl",
+          "@value": "Een taxon dat voorkomt binnen zijn natuurlijk verspreidingsgebied"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwcem/values/e002",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "nativeReintroduced",
+      "skos:inScheme": "http://rs.tdwg.org/dwcem/values/e",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "native: reintroduced"
+        },
+        {
+          "@language": "es",
+          "@value": "nativo: reintroducido"
+        },
+        {
+          "@language": "nl",
+          "@value": "inheems: geherintroduceerd"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "A taxon re-established by direct introduction by humans into an area which was once part of its natural range, but from where it had become extinct."
+        },
+        {
+          "@language": "es",
+          "@value": "Un taxón reestablecido por introducción humana directa en una zona que era parte de su área de distribución natural, pero en la cual estaba extinguido."
+        },
+        {
+          "@language": "nl",
+          "@value": "Een taxon dat zich opnieuw vestigde door directe introductie door mensen in een gebied dat oorspronkelijk deel uitmaakte van zijn natuurlijk verspreidingsgebied, maar waar het was uitgestorven."
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwcem/values/e003",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "introduced",
+      "skos:inScheme": "http://rs.tdwg.org/dwcem/values/e",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "introduced (alien, exotic, non-native, nonindigenous)"
+        },
+        {
+          "@language": "es",
+          "@value": "introducido (exótico, no-nativo, no-autóctono)"
+        },
+        {
+          "@language": "nl",
+          "@value": "geïntroduceerd (uitheems, niet-inheems)"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "Establishment of a taxon by human agency into an area that is not part of its natural range"
+        },
+        {
+          "@language": "es",
+          "@value": "Establecimiento de un taxón por acción humana en una zona que no es parte de su área de distribución natural."
+        },
+        {
+          "@language": "nl",
+          "@value": "Vestiging van een taxon door menselijk handelen in een gebied dat geen deel uitmaakt van zijn natuurlijk verspreidingsgebied"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwcem/values/e004",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "introducedAssistedColonisation",
+      "skos:inScheme": "http://rs.tdwg.org/dwcem/values/e",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "introduced: assisted colonisation"
+        },
+        {
+          "@language": "es",
+          "@value": "introducido: colonización asistida"
+        },
+        {
+          "@language": "nl",
+          "@value": "geïntroduceerd: geassisteerde kolonisatie"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "Establishment of a taxon specifically with the intention of creating a self-sustaining wild population in an area that is not part of the taxon's natural range"
+        },
+        {
+          "@language": "es",
+          "@value": "Establecimiento de un taxón específicamente con la intención de crear una población salvaje autosostenible en una zona que no es parte del área de distribución natural del taxón."
+        },
+        {
+          "@language": "nl",
+          "@value": "Vestiging van een taxon specifiek met het doel om een zich zelfonderhoudende wilde populatie te creëren in een gebied dat geen deel uitmaakt van het taxon zijn natuurlijk verspreidingsgebied"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwcem/values/e005",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "vagrant",
+      "skos:inScheme": "http://rs.tdwg.org/dwcem/values/e",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "vagrant (casual)"
+        },
+        {
+          "@language": "es",
+          "@value": "vagabundo (incidental)"
+        },
+        {
+          "@language": "nl",
+          "@value": "zwervend (incidenteel)"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "The temporary occurrence of a taxon far outside its natural or migratory range."
+        },
+        {
+          "@language": "es",
+          "@value": "La presencia temporaria de un taxón muy por afuera de su área de distribución o de migración natural."
+        },
+        {
+          "@language": "nl",
+          "@value": "Het tijdelijk voorkomen van een taxon ver buiten zijn natuurlijk verspreidingsgebied of trekgebied."
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/dwcem/values/e006",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "uncertain",
+      "skos:inScheme": "http://rs.tdwg.org/dwcem/values/e",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "uncertain (unknown, cryptogenic)"
+        },
+        {
+          "@language": "es",
+          "@value": "incierto (desconocido, criptogénico)"
+        },
+        {
+          "@language": "nl",
+          "@value": "onzeker (onbekend, cryptogeen)"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "The origin of the occurrence of the taxon in an area is obscure"
+        },
+        {
+          "@language": "es",
+          "@value": "El origen de la presencia de un taxón en una zona no es bien conocido."
+        },
+        {
+          "@language": "nl",
+          "@value": "De oorsprong van het voorkomen van het taxon in een gebied is onbekend"
+        }
+      ]
+    }
+  ]
+}

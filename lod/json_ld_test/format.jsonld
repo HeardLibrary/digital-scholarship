@@ -1,0 +1,4267 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "http://rs.tdwg.org/format/values/m",
+      "@type": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "media types and physical media concept scheme"
+        },
+        {
+          "@language": "es",
+          "@value": "Nombre aceptado en uso"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "公认使用名称"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "concept scheme for IANA media types and various physical media items"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre completo, con autoría e información de fecha si se conoce, del taxón actualmente válido (zoológico) o aceptado (botánico). "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "目前有效（动物学）的或公认（植物学）的分类单元全称，如已知来源和日期信息则需注明。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e",
+      "@type": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "file extensions concept scheme"
+        },
+        {
+          "@language": "es",
+          "@value": "Nombre aceptado en uso - ID"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "公认使用名称编号"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "concept scheme based on conventional file extensions for media types"
+        },
+        {
+          "@language": "es",
+          "@value": "Un identificador para el nombre en uso (significado del nombre, documentado de acuerdo con alguna fuente) del taxón actualmente válido (zoológico) o aceptado (botánico).   "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "目前有效（动物学）的或公认（植物学）的分类单元的名称使用（根据来源所取名称的存档记录方法）标识符。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m001",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "application",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "application"
+        },
+        {
+          "@language": "es",
+          "@value": "Medios asociados"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "相关媒介"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media type for application"
+        },
+        {
+          "@language": "es",
+          "@value": "Una lista (concatenada o delimitada) de identificadores (publicación, identificador único global, URI) de los medios asociados con el registro biológico."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "发现媒介的（发表、全局唯一标识符、统一资源标识符等）标识符之（连接的或分开的）列表。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m002",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "audio",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "audio"
+        },
+        {
+          "@language": "es",
+          "@value": "Registros biológicos asociados"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "相关事件"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media type for audio"
+        },
+        {
+          "@language": "es",
+          "@value": "Una lista (concatenada y separada) de los identificadores de otros registros biológicos y su relación con este Registro Biológico. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "其他发现记录及其与发现信息相关联的标识符之（连接的或分开的）列表。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m003",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "image",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "image"
+        },
+        {
+          "@language": "es",
+          "@value": "Referencias asociadas"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "相关参考"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media type for image"
+        },
+        {
+          "@language": "es",
+          "@value": "Una lista (concatenada y separada) de los identificadores (publicación, referencia bibliográfica, identificador único global, URI) de la literatura asociada con el Registro Biológico. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "与发现情况相关之文献的（发表、参考文献、全局唯一标识符、统一资源标识符等）标识符之（连接的或分开的）列表。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m004",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "model",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "model"
+        },
+        {
+          "@language": "es",
+          "@value": "Secuencias asociadas"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "相关序列"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media type for model"
+        },
+        {
+          "@language": "es",
+          "@value": "Una lista (concatenada y separada) de los identificadores (publicación, identificador único global, URI) de la información de la secuencia genética asociada con el Registro Biológico. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "与发现情况相关之基因序列信息的（发表、全局唯一标识符、统一资源标识符等）标识符之（连接的或分开的）列表。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m005",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "text",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "text"
+        },
+        {
+          "@language": "es",
+          "@value": "Taxones asociados"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "相关类群"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media type for text"
+        },
+        {
+          "@language": "es",
+          "@value": "Una lista (concatenada y separada) de los identificadores o nombres de taxones y su asociación con el Registro Biológico."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "与发现情况相关的标识符或分类单元名称之（连接的或分开的）列表。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m006",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "video",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "video"
+        },
+        {
+          "@language": "es",
+          "@value": "Base del registro"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "记录基础"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media type for video"
+        },
+        {
+          "@language": "es",
+          "@value": "La naturaleza específica del registro de datos - un subtipo de Tipo. La práctica recomendada es el uso de lenguaje controlado como el vocabulario controlado para Tipo de Darwin Core (http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm). "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "数据记录的特有属性——dcterms:type的子类。建议最好使用控制性词汇，如达尔文核心类型词汇（http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm）。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m007",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "image/png",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "PNG"
+        },
+        {
+          "@language": "es",
+          "@value": "Capa"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "岩床"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for portable network graphics images"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre completo de la capa litoestratigráfica de la cual se colectó el elemento catalogado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "采集收录对象的岩床的全称。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m008",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "image/jpeg",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "JPEG"
+        },
+        {
+          "@language": "es",
+          "@value": "Comportamiento"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "行为"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for JPEG images"
+        },
+        {
+          "@language": "es",
+          "@value": "Una descripción de la conducta mostrada por el sujeto en el momento del Registro Biológico. La práctica recomendada es el uso de un lenguaje controlado."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "对记录发现过程中目标行为的描述。建议最好使用控制性词汇。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m009",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "image/bmp",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "BMP"
+        },
+        {
+          "@language": "es",
+          "@value": "Número de catálogo"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "目录编号"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for bitmap images"
+        },
+        {
+          "@language": "es",
+          "@value": "Un identificador (preferiblemente único) para el registro dentro del conjunto de datos o colección. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "数据集或保藏信息中的记录标识符（最好是唯一的）。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m010",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "image/gif",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "GIF"
+        },
+        {
+          "@language": "es",
+          "@value": "Clase"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "纲"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for GIF images"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre científico completo de la clase en la que se clasifica el taxón."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "分类单元所属纲的完整学名。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m011",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "image/tiff",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "TIFF"
+        },
+        {
+          "@language": "es",
+          "@value": "Código de la colección"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "保藏代码"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for TIFF images"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre, acrónimo, coden, o iniciales que identifican la colección o conjunto de datos del que procede el registro. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "标识生成记录的保藏信息或数据集的名称、首字母缩略词、分类编号或词起首字母"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m012",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "video/mp4",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m006",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "MP4 video"
+        },
+        {
+          "@language": "es",
+          "@value": "ID de la colección"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "保藏编号"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for MP4 videos"
+        },
+        {
+          "@language": "es",
+          "@value": "Un identificador de la colección o conjunto de datos del que procede el registro. Para especímenes físicos, la práctica recomendada es utilizar el identificador de un índice de colección tal como el Índice de Colecciones de Biodiversidad (http://www.biodi"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "生成记录的保藏信息或数据集的标识符。针对实体标本，建议最好使用保藏注册标识符，如生物多样性保藏索引(http://www.biodiversitycollectionsindex.org/)。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m013",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "video/mpeg",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m006",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "MPEG"
+        },
+        {
+          "@language": "es",
+          "@value": "Continente"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "洲"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for MPEG videos"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre del continente en el que la ubicación ocurre. La práctica recomendada es el uso de un lenguaje controlado, como la norma ISO 3166 de códigos de Continente. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "发现地点所在的大洲名。建议最好使用控制性词汇，如盖提地理名称索引典或国际标准化组织3166洲代码。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m014",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "video/quicktime",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m006",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "QuickTime"
+        },
+        {
+          "@language": "es",
+          "@value": "Precisión de las coordenadas"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "坐标精度"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for QuickTime videos"
+        },
+        {
+          "@language": "es",
+          "@value": "Una representación decimal de la precisión de las coordenadas provistas en Latitud Decimal y Longitud Decimal. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "精确到小数的纬度和经度坐标的小数示数。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m015",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "audio/mp4",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m002",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "MP4 audio"
+        },
+        {
+          "@language": "es",
+          "@value": " Incertidumbre de las coordenadas en metros"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "坐标不确定性（以米为单位）"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for MP4 audio"
+        },
+        {
+          "@language": "es",
+          "@value": "La distancia horizontal (en metros) de la Latitud Decimal y Longitud Decimal provistas describiendo el círculo más pequeño que contiene la totalidad de la ubicación. Deje el valor vacío si la incertidumbre es desconocida, no se puede estimar, o no es apli"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "到涵盖整个地点的最小圆形区域的小数纬度和经度的水平距离（以“米”为单位）。若未知、无法估算或不适用（由于没有坐标），则值为空。此项中0不是有效值。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m016",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "audio/mpeg",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m002",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "MP3"
+        },
+        {
+          "@language": "es",
+          "@value": "País"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "国家"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for MP3 audio"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre del país o unidad administrativa de mayor jerarquía de la ubicación. La práctica recomendada es utilizar un identificador persistente de un lenguaje controlado como el Tesauro Getty de Nombres Geográficos. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "发现地点的国家或主要行政区划名称。建议最好使用控制性词汇，如盖提地理名称索引。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m017",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "model/x3d-vrml",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m004",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "X3D VRML"
+        },
+        {
+          "@language": "es",
+          "@value": "Código del país"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "国家代码"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for X3D VRML models"
+        },
+        {
+          "@language": "es",
+          "@value": "El código estándar para el país de la ubicación. La práctica recomendada es el uso de ISO 3166-1-alfa-2 de códigos de países. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "发现地点的标准国家代码。建议最好使用国际标准化组织3166-1-阿尔法-2国家代码。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m018",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "application/pdf",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m001",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "PDF"
+        },
+        {
+          "@language": "es",
+          "@value": "Condado"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "郡/县"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for PDF documents"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre completo, sin abreviar de la siguiente región administrativa de menor jerarquía que Estado Provincia (condado, departamento, etc.) de la ubicación."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "发现地点所在的除州/省之外的次一级行政区划（县、郡、行政区等）。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m019",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "text/plain",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m005",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "plain text"
+        },
+        {
+          "@language": "es",
+          "@value": "Generalización de los datos"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "数据概括"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for plain text"
+        },
+        {
+          "@language": "es",
+          "@value": "Las medidas adoptadas para que los datos compartidos sean menos específicos o completos que en su forma original. Sugiere que datos alternativos de mayor calidad pueden estar disponibles bajo petición."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "为使共享数据较之其原始形式不那么精确或完整所采取的行动。建议以更高质量的替代数据备索。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m020",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "application/msword",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m001",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Word (pre-2003) document"
+        },
+        {
+          "@language": "es",
+          "@value": "ID del conjunto de datos"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "数据集编号"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for Microsoft Word (2003 and before) documents"
+        },
+        {
+          "@language": "es",
+          "@value": "Un identificador para el conjunto de datos. Puede ser un identificador único global o un identificador específico de una colección o institución."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "数据集的标识符。可能是一个全局唯一标识符或一个保藏中心或研究机构的特定标识符。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m021",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m001",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Word (post-2007) document"
+        },
+        {
+          "@language": "es",
+          "@value": "Nombre del conjunto de datos"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "数据集名称"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for Microsoft Word (2007 and after) documents"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre que identifica el conjunto de datos del cual se derivó el registro.  "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "标识生成记录的数据集的名称。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m022",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "image/x-adobe-dng",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Digital Negative"
+        },
+        {
+          "@language": "es",
+          "@value": "Fecha de identificación"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "鉴定日期"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for Digital Negative images"
+        },
+        {
+          "@language": "es",
+          "@value": "La fecha en que fue identificado el sujeto como representativo del taxón. La práctica recomendada es utilizar un esquema de codificación, como ISO 8601:2004 (E). "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "涉及被视为代表分类单元的主体的数据。建议最好使用编码方案，如ISO 8601:2004(E)。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m023",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "image/x-canon-cr2",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "CR2"
+        },
+        {
+          "@language": "es",
+          "@value": "Día"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "天"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for Canon Raw images"
+        },
+        {
+          "@language": "es",
+          "@value": "El día en números enteros, del mes en que ocurrió el evento. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "事件发生的整数天。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m024",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "image/jp2",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "JPEG 2000"
+        },
+        {
+          "@language": "es",
+          "@value": "Latitud decimal"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "十进制纬度"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for JPEG 2000 images"
+        },
+        {
+          "@language": "es",
+          "@value": "La latitud geográfica (en grados decimales, utilizando el sistema de referencia espacial provisto en Datum Geodésico) del centro geográfico de una ubicación. Los valores positivos se encuentran al norte del ecuador, los valores negativos están al sur del "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "地点的地理中心的纬度（以小数表示，采用大地基准中提供的空间参照系统）。正值代表赤道以北，负值代表赤道以南。法定值介于-90至90（含）之间。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m025",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "audio/vnd.wave",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m002",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "WAVE"
+        },
+        {
+          "@language": "es",
+          "@value": "Longitud decimal"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "十进制经度"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for WAVE audio"
+        },
+        {
+          "@language": "es",
+          "@value": "La longitud geográfica (en grados decimales, mediante el sistema de referencia espacial provisto en Datum Geodésico) del centro geográfico de un lugar. Los valores positivos se encuentran al este del meridiano de Greenwich, los valores negativos se encuen"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "地点的地理中心的经度（以小数表示，采用大地基准中提供的空间参照系统）。正值代表格林威治子午线以西，负值代表格林威治子午线以东。法定值介于-180至180（含）之间。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m026",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "image/x-nikon-nef",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Nikon NEF Raw"
+        },
+        {
+          "@language": "es",
+          "@value": "Disposición"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "寄存"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for Nikon NEF Raw images"
+        },
+        {
+          "@language": "es",
+          "@value": "El estado actual de un espécimen con respecto a la colección identificada en Código de la Colección o ID de la Colección. La práctica recomendada es el uso de un lenguaje controlado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "与确定了保藏代码或保藏识别码的保藏物相关的标本的当前状态。推荐使用控制词表。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m027",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "video/x-m4v",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m006",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "M4V"
+        },
+        {
+          "@language": "es",
+          "@value": "Propiedades dinámicas"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "动态属性"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for Apple M4V videos"
+        },
+        {
+          "@language": "es",
+          "@value": "Una lista (concatenada y separada) de las medidas, hechos, características, o aseveraciones adicionales sobre el registro. Su intención es proporcionar un mecanismo para contenido estructurado como pares de valor.  "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "关于记录的其他测量、情况、特征、判定等信息的（连接的或分开的）列表。意在为诸如键值对等的结构化内容设立机制。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m028",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "‎video/3gpp",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m006",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "3GPP"
+        },
+        {
+          "@language": "es",
+          "@value": "Edad temprana o estadío inferior"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "最早地质年代或最低年代地层"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for 3GPP video"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre completo de la edad geocronológica más temprana posible o la etapa cronoestratigráfica más baja, atribuible al horizonte estratigráfico donde se recolectó el objeto catalogado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "编目项所采集的地层层位所属之可能的最早的地质年代或最低的年代地层的全称。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m029",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "video/vnd.avi",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m006",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "AVI"
+        },
+        {
+          "@language": "es",
+          "@value": "Eón temprano o eonotema inferior"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "最早地质宙或最低地层宇"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for AVI video"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre completo del eón geocronológico más temprano o el eratema crono-estratigráfico más bajo, o el nombre informal (\"Precámbrico\") atribuible al horizonte estratigráfico donde se recolectó el objeto catalogado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "编目项所采集的地层层位所属之可能的最早的地质宙或最低的地层宇的全称或非正式名称（“前寒武纪”）。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m030",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "audio/AMR",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m002",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "AMR"
+        },
+        {
+          "@language": "es",
+          "@value": "Época temprana o serie inferior"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "最早地质世或最低地层统"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for Adaptive Multi-Rate audio"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre completo de la época geocronológica más temprana o la serie cronoestratigráfica más baja posible, atribuible al horizonte estratigráfico donde se recolectó el objeto catalogado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "编目项所采集的地层层位所属之可能的最早的地质世或最低的地层统的全称。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m031",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "audio/x-aiff",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m002",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "AIFF"
+        },
+        {
+          "@language": "es",
+          "@value": "Era temprana o eratema inferior"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "最早地质代或最低地层界"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for Audio Interchange File Format audio"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre completo de la era geocronológica más temprana o el eratema crono-estratigráfico más bajo, atribuible al horizonte estratigráfico donde se recolectó el objeto catalogado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "编目项所采集的地层层位所属之可能的最早的地质代或最低的地层界的全称。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m032",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "audio/ogg",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m002",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "OGG audio"
+        },
+        {
+          "@language": "es",
+          "@value": "Periodo temprano o sistema inferior"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "最早地质纪或最低地层系"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for OGG audio"
+        },
+        {
+          "@language": "es",
+          "@value": "Puede corresponder a: a) un indicador de la existencia de, b) una referencia a (publicación, URI), o c) el texto de las notas tomadas en campo sobre el evento."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "编目项所采集的地层层位所属之可能的最早的地质纪或最低的地层系的全称。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m033",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "video/ogg",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m006",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "OGG video"
+        },
+        {
+          "@language": "es",
+          "@value": "Día final del año"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "当年结束日"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for OGG video"
+        },
+        {
+          "@language": "es",
+          "@value": "El último día ordinal del año en que ocurrió el evento (1 para el 1º de enero, 365 para el 31 de diciembre, excepto en un año bisiesto, en cuyo caso es 366)."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "事件发生当年的最新日期号（除了闰年有366天的情况，1代表1月1日，365代表12月31日）。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m034",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "application/ogg",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m001",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "OGG multiplex"
+        },
+        {
+          "@language": "es",
+          "@value": "Medios de establecimiento"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "确定方法"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for OGG multiplex"
+        },
+        {
+          "@language": "es",
+          "@value": "El proceso por el cual el individuo(s) biológico(s) representado en el Registro Biológico se estableció en el lugar. La práctica recomendada es el uso de un lenguaje controlado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "在采集地点确定生物个体在事件中表现的过程。建议最佳做法是使用一个控制性词汇。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m035",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "image/x-photo-cd",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Kodak Photo CD image"
+        },
+        {
+          "@language": "es",
+          "@value": "Fecha del evento"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "事件日期"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for Kodak Photo CD image"
+        },
+        {
+          "@language": "es",
+          "@value": "La fecha y hora o el intervalo durante el cual se produjo un evento. Para los registros de especies, esta es la fecha y hora cuando el evento se registró. No es adecuado para un momento en un contexto geológico. La práctica recomendada es utilizar un esqu"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "事件发生的日期或间隔。对于已发生的事件这是被记录的日期。\t\t\t\t\t\t不适合地质背景时间。建议最佳做法是使用一个编码方案，例如ISO 8601:2004(E)。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m036",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "image/vnd.adobe.photoshop",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Photoshop"
+        },
+        {
+          "@language": "es",
+          "@value": "ID del evento"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "事件编号"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for Photoshop images"
+        },
+        {
+          "@language": "es",
+          "@value": "Un identificador para el conjunto de la información asociada a un Evento (algo que ocurre en un lugar y tiempo). Puede ser un identificador único global o un identificador específico para el conjunto de datos. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "与事件相关的信息集标识符（发生在同一地点和时间）。可能是一个全局唯一标识符或特定的数据集标识符。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m037",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "video/vnd.dlna.mpeg-tts",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m006",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "extended MPEG-2 Transport Stream"
+        },
+        {
+          "@language": "es",
+          "@value": "Comentarios del evento"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "事件备注"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for extended MPEG-2 Transport Stream"
+        },
+        {
+          "@language": "es",
+          "@value": "Comentarios o anotaciones sobre el evento. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "关于事件的评论或记录。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m038",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "audio/x-flac",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m002",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "FLAC"
+        },
+        {
+          "@language": "es",
+          "@value": "Hora del evento"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "事件时间"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for Free Lossless Audio Codec audio"
+        },
+        {
+          "@language": "es",
+          "@value": "El tiempo o intervalo durante el cual se produjo un evento. La práctica recomendada es utilizar un esquema de codificación, tales como ISO 8601:2004 (E). "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "事件发生的时间或间隔。\t\t\t建议最佳做法是使用一个编码方案，例如ISO \t\t\t8601:2004(E)。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m039",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "audio/x-ms-wma",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m002",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "WMA"
+        },
+        {
+          "@language": "es",
+          "@value": "Familia"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "科"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for Windows Media Audio"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre científico completo de la familia en el que se clasifica el taxón. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "分类单元所属科的完整学名。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m040",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "video/x-ms-asf",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m006",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "WMV"
+        },
+        {
+          "@language": "es",
+          "@value": "Notas de campo"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "现场记录"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for Windows Media Video"
+        },
+        {
+          "@language": "es",
+          "@value": "Puede corresponder a: a) un indicador de la existencia de, b) una referencia a (publicación, URI), o c) el texto de las notas tomadas en campo sobre el evento."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "有关事件的现场记录之一：a）存在标志，b）出版物、网站资源参考，c）记录文本。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m041",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "application/ms-asf",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m001",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "ASF"
+        },
+        {
+          "@language": "es",
+          "@value": "Número de campo"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "现场编号"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for Advanced Systems Format"
+        },
+        {
+          "@language": "es",
+          "@value": "Un identificador dado en campo al evento. A menudo sirve como un vínculo entre las anotaciones de campo y el evento."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "现场事件标识符。通常作为现场记录和事件的联系。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m042",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "image/svg+xml",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "SVG"
+        },
+        {
+          "@language": "es",
+          "@value": "Ajuste espacial de footprint"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "足迹空间拟合"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for SVG images"
+        },
+        {
+          "@language": "es",
+          "@value": "La relación del área de footprint (WKT Footprint) y el área de la verdadera (original, o más específica) representación espacial de la ubicación. Los valores válidos son 0, mayor que o igual a 1, o indefinido. Un valor de 1 es una coincidencia exacta o su"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "采集地点足迹区面积（footprintWKT）与真正（最初或最具体）所用空间面积的比率。合法值是0，或大于等于1，或未定义。值为1时表示两者精确匹配或100%重叠。值为0时表示给定的足迹区不完全包含最初地域。如果最初地域是一个点而给定的地理参考是另外一个点，那么足迹空间拟合值未定义（应该留白）。如果最初地域与给定的地理参考是同一个点，则足迹空间拟合值为1。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m043",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "Data-CD",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m001",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "data CD"
+        },
+        {
+          "@language": "es",
+          "@value": "SRS footprint"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "足迹空间参考系统"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "physical data compact disc"
+        },
+        {
+          "@language": "es",
+          "@value": "Una representación Well-Known Text (WKT) del sistema de referencia espacial (SRS) para WKT Footprint de la ubicación. No utilice este elemento para describir el SRS de Latitud Decimal y Longitud Decimal, incluso si es la misma que para WKT Footprint - uti"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "采集地点足迹区空间参考系统的公认的文本表示。请勿使用这个词描述十进制经度和纬度的空间参考系统，即便它与足迹区公认文本表示相同，请用大地基准点代替。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m044",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "Audio-CD",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m002",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "audio CD"
+        },
+        {
+          "@language": "es",
+          "@value": "WKT footprint"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "足迹公认文本"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "physical audio compact disc"
+        },
+        {
+          "@language": "es",
+          "@value": "Una representación Well-Known Text (WKT) de la forma (footprint, geometría) que define la ubicación. Una ubicación puede tener una representación de radio-punto (véase Latitud Decimal) y una representación de footprint, y pueden diferir entre sí. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "描述地点形状（足迹，几何）的公认文本表示。一个地点可能同时用点半径（看十进制纬度）和足迹区表示，而两者之间并不相同。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m045",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "Video-CD",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m006",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "video CD"
+        },
+        {
+          "@language": "es",
+          "@value": "Formación"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "地层"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "physical video compact disc"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre completo de la formación litoestratigráfica de la cual se colectó el objeto catalogado."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "采集编目项所在地层的完整名称。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m046",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "Data-DVD",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m001",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "data DVD"
+        },
+        {
+          "@language": "es",
+          "@value": "Género"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "属"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "physical data DVD"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre científico completo del género en el que se clasifica el taxón. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "分类单元所属属的完整学名。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m047",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "Audio-DVD",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m002",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "audio DVD"
+        },
+        {
+          "@language": "es",
+          "@value": "Datum geodésico"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "大地基准"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "physical audio DVD"
+        },
+        {
+          "@language": "es",
+          "@value": "El elipsoide, datum geodésico, o sistema de referencia espacial (SRS) en el que se basan las coordenadas geográficas provistas en Latitud Decimal y Longitud Decimal. La práctica recomendada es usar el código EPSG como un lenguaje controlado para proporcio"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "椭圆体、大地基准点或空间参考系统的地理坐标以十进制经度和纬度为基础。建议最佳做法是如果已知EPSG编码，使用其作为控制性词汇规定一个空间参考系统。或者使用已知的控制性词汇作为大地基准点的名称或编码。或者使用已知的控制性词汇作为椭圆体的名称或编码。如果这些都未知，则使用“未知”值。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m048",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "Video-DVD-PAL",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m006",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "PAL video DVD"
+        },
+        {
+          "@language": "es",
+          "@value": "ID del contexto geológico"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "地质环境编号"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "physical PAL video DVD"
+        },
+        {
+          "@language": "es",
+          "@value": "Un identificador para el conjunto de la información asociada con Contexto Geológico (la ubicación dentro de un contexto geológico, tal como la estratigrafía). Puede ser un identificador único global o un identificador específico para el conjunto de datos."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "与地质环境（有地质环境的地点，如地层）有关的信息集标识符。可能是一个全局唯一标识符或特定的数据集标识符。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m049",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "Video-DVD-NTSC",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m006",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "NTSC video DVD"
+        },
+        {
+          "@language": "es",
+          "@value": "Georreferenciado por"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "确定地理参考者"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "physical NTSC video DVD"
+        },
+        {
+          "@language": "es",
+          "@value": "Una lista (concatenada y separada) de los nombres de las personas, grupos u organizaciones que determinan la georreferencia (representación espacial) para la ubicación. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "确定地点的地理参考（空间表述）的人名、群体或组织列表（连接的或分开的）。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m050",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "photographic slide",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "photographic slide"
+        },
+        {
+          "@language": "es",
+          "@value": "Fecha de la georreferenciación"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "确定地理参考日期"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "physical photographic slide"
+        },
+        {
+          "@language": "es",
+          "@value": "La fecha en que fue georreferenciada la ubicación. La práctica recomendada es utilizar un esquema de codificación, tal como ISO 8601:2004 (E)."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "确定地点的地理参考的日期。建议最佳做法是使用一个编码方案，例如ISO 8601:2004(E)。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m051",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "photographic print",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "photographic print"
+        },
+        {
+          "@language": "es",
+          "@value": "Protocolo de georreferenciación"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "地理参考草案"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "physical photographic print"
+        },
+        {
+          "@language": "es",
+          "@value": "Una descripción o referencia a los métodos utilizados para determinar el footprint espacial, coordenadas, e incertidumbres. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "用来确定空间足迹、坐标和不确定性的方法描述或参考。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m052",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "Blu-ray",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m006",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Blu-ray video disc"
+        },
+        {
+          "@language": "es",
+          "@value": "Comentarios de la georreferenciación"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "地理参考备注"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "physical Blu-ray video disc"
+        },
+        {
+          "@language": "es",
+          "@value": "Anotaciones o comentarios acerca de la determinación de la descripción espacial, suposiciones explicativas adicionales o en oposición a las formalizadas en el método referido en Protocolo de Georreferenciación. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "关于为补充或反对地理参考草案中提到的那些正式的方法所做的空间描述确定、解释假设的记录或评论。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m053",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "physical artwork",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "physical artwork"
+        },
+        {
+          "@language": "es",
+          "@value": "Fuentes de la georreferenciación"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "地理参考源"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "physical drawing or painting (non-photographic)"
+        },
+        {
+          "@language": "es",
+          "@value": "Una lista (concatenada y separada) de los mapas, gaceteros, u otros recursos utilizados para georreferenciar la ubicación, que se describe lo suficiente específicamente como para permitir que cualquier persona en el futuro utilice los mismos recursos. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "用于对地点进行地理参考标识的地图、地名表或其他资源列表，描述具体，足以让将来任何人使用相同的资源。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m054",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "image/zvi",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "ZVI"
+        },
+        {
+          "@language": "es",
+          "@value": "Estado de verificación de la georreferenciación"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "地理参考确认状态"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "unofficial media subtype for Zeiss Vision Image images"
+        },
+        {
+          "@language": "es",
+          "@value": "Una descripción categórica de la medida en que se ha verificado la georreferencia para representar, de la mejor manera, la descripción espacial. La práctica recomendada es el uso de un lenguaje controlado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "一个已证实代表最好的空间描述的地理参考范围的分类描述。建议最佳做法是使用一个控制性词汇。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m055",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "model/stl",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m004",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "STL"
+        },
+        {
+          "@language": "es",
+          "@value": "Grupo"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "组"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for steriolithography files"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre completo del grupo litoestratigráfico del cual se colectó el objeto catalogado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "采集编目项所在地层组的完整名称。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m056",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "audio tape",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m002",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "reel-to-reel audio tape"
+        },
+        {
+          "@language": "es",
+          "@value": "Hábitat"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "栖息地"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "physical analogue audio tape (reel-to-reel)"
+        },
+        {
+          "@language": "es",
+          "@value": "Una categoría o la descripción del hábitat en el que ocurrió el evento."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "事件发生的栖息地的类别或描述。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m057",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "audio cassette",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m002",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "audio cassette"
+        },
+        {
+          "@language": "es",
+          "@value": "Clasificación superior"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "较高级分类"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "physical analogue audio cassette"
+        },
+        {
+          "@language": "es",
+          "@value": "Una lista (concatenada y separada) de los nombres de los taxones que terminan en el nivel inmediatamente superior al del taxón de referencia en el registro del taxón. La práctica recomendada es ordenar la lista comenzando con el más alto nivel y separando"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "优于分类记录中引用的类群、在等级排列中紧接在最后的类群名称列表（连接的或分开的）。建议最佳做法是从最高分类级别开始排列，用分号（\";\"）分隔每个等级名称。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m058",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "DAT",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m002",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "digital audio tape"
+        },
+        {
+          "@language": "es",
+          "@value": "Geografía superior"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "较高一级地区"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "physical digital audio tape (DAT)"
+        },
+        {
+          "@language": "es",
+          "@value": "Una lista (concatenada y separada) de los nombres geográficos menos específicos que la información capturada en el elemento de Localidad."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "与在当地长期获得的信息相比不够具体的地名列表（连接的或分开的）。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m059",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "MiniDisc",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m002",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "MiniDisc"
+        },
+        {
+          "@language": "es",
+          "@value": "ID de la geografía superior"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "较高一级地区编号"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "physical MiniDisc "
+        },
+        {
+          "@language": "es",
+          "@value": "Un identificador de la región geográfica de la ubicación. La práctica recomendada es utilizar un identificador persistente de un lenguaje controlado como el Tesauro Getty de Nombres Geográficos. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "地点所在地理区域的标识符。建议最佳做法是使用一个控制性词汇中的持久标识符，如地名盖蒂词库。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m060",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "vinyl",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m002",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "vinyl record"
+        },
+        {
+          "@language": "es",
+          "@value": "Zona bioestratigráfica superior"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "最高生物地层区"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "physical vinyl record"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre completo de la zona geológica bioestratigráfica más alta posible del horizonte estratigráfico donde se recolectó el objeto catalogado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "采集编目项所在地层地平线的可能最高的地质生物地层区的完整名称。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m061",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "Mixed-CD",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m001",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "mixed CD (data and audio)"
+        },
+        {
+          "@language": "es",
+          "@value": "ID de la identificación"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "鉴定编号"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "physical compact disc containing both data and audio tracks"
+        },
+        {
+          "@language": "es",
+          "@value": "Un identificador para la identificación (el cuerpo de la información asociada con la asignación de un nombre científico). Puede ser un identificador único global o un identificador específico para el conjunto de datos. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "鉴定标识符（与分配学名相关的信息主体）。可能是一个全局唯一标识符或特定的数据集标识符。\n"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m062",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "model/obj",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m004",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "OBJ"
+        },
+        {
+          "@language": "es",
+          "@value": "Calificador de la identificación"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "鉴定合格者"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for OBJ 3D models"
+        },
+        {
+          "@language": "es",
+          "@value": "Una breve frase o término estándar (\"cf.\" ,\"aff.\") para expresar las dudas del determinador sobre la identificación. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "鉴定者对结果表示疑虑的一个简单短语或一个标准术语(\"cf.\", \"aff.\")。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m063",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "model/gltf-binary",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m004",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "gLTF binary"
+        },
+        {
+          "@language": "es",
+          "@value": "Referencias de la identificación"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "鉴定参考"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for Binary GL Transmission Format"
+        },
+        {
+          "@language": "es",
+          "@value": "Una lista (concatenada y separada) de las referencias (publicación, identificador único global, URI) utilizadas en la identificación. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "鉴定中使用的参考（出版物，全球唯一标识符，网站资源）列表（连接的或分开的）。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m064",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "model/gltf+json",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m004",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "gLTF"
+        },
+        {
+          "@language": "es",
+          "@value": "Comentarios de la identificación"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "鉴定备注"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for GL Transmission Format"
+        },
+        {
+          "@language": "es",
+          "@value": "Comentarios o anotaciones sobre la identificación. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "有关鉴定的评论或记录。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m065",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "model/vrml",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m004",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "VRML"
+        },
+        {
+          "@language": "es",
+          "@value": "Estado de la verificación de la identificación"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "鉴定确认状态"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for Virtual Reality Modeling Language"
+        },
+        {
+          "@language": "es",
+          "@value": "Un indicador categórico del alcance de la verificación de la identificación taxonómica. La práctica recomendada es el uso de un lenguaje controlado."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "分类鉴定结果经核实为正确的确切范围指标。建议最佳做法是使用一个例如用在HISPID/ABCD中的控制性词汇。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m066",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "application/dicom",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m001",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "DICOM"
+        },
+        {
+          "@language": "es",
+          "@value": "Identificado por"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "鉴定者"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for Digital Imaging and Communications in Medicine"
+        },
+        {
+          "@language": "es",
+          "@value": "Una lista (concatenada y separada) de los nombres de las personas, grupos u organizaciones que asignaron el taxón al sujeto. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "鉴定未知对象为相关类群的人名、群体或组织列表（连接的或分开的）。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m067",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "model/mtl",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m004",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "MTL"
+        },
+        {
+          "@language": "es",
+          "@value": "Conteo de individuos"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "个体计数"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for OBJ Material Template Library"
+        },
+        {
+          "@language": "es",
+          "@value": "El número de individuos representados presente en el momento del Registro Biológico. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "当前发生时间参加的个体数量。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m068",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "model/x3d+xml",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m004",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "X3D XML"
+        },
+        {
+          "@language": "es",
+          "@value": "ID del individuo"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "个体编号"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "media subtype for X3D XML models"
+        },
+        {
+          "@language": "es",
+          "@value": "Un identificador para un individuo o grupo de organismos individuales representados en el Registro Biológico. Destinado a alojar remuestreo del mismo individuo o grupo con fines de monitoreo. Puede ser un identificador único global o un identificador espe"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "事件中展现的个体标识符或生物个体命名组。为以后对相同个体或组群重新采样进行检测提供方便。可能是一个全局唯一标识符或特定数据集标识符。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m069",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "image/x-canon-crw",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "CIFF raw image"
+        },
+        {
+          "@language": "es",
+          "@value": "Información retenida"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "信息隐瞒"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "unofficial media subtype for Camera Image File Format raw image"
+        },
+        {
+          "@language": "es",
+          "@value": "Información adicional que existe, pero que no ha sido compartida en el registro dado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "存在附加信息，但没有在给定记录中共享。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m070",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "image/x-canon-cr3",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "CR3 raw image"
+        },
+        {
+          "@language": "es",
+          "@value": "Epíteto infraespecífico"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "种内名称"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "unofficial media subtype for Canon Raw 3 image"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre del epíteto infraespecífico más bajo o terminal del Nombre Científico, excluyendo cualquier otra denominación de nivel. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "学名的最低等级或末端的种内别名，不包括任何等级名称。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m071",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "image/x-sony-arw",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "ARW raw image"
+        },
+        {
+          "@language": "es",
+          "@value": "Código de la institución"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "机构编码"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "unofficial media subtype for Sony raw image"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre (o acrónimo) en uso por la institución que tenga la custodia del objeto(s) o información mencionada en el registro. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "记录中提到有保管的物品或资料的机构所使用的名称（或首字母缩略词）。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/m072",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "image/x-panasonic-rw2",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/m",
+      "skos:broader": "http://rs.tdwg.org/format/values/m003",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "RW2 raw image"
+        },
+        {
+          "@language": "es",
+          "@value": "ID de la institución"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "机构编号"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "unofficial media subtype for Panasonic raw image"
+        },
+        {
+          "@language": "es",
+          "@value": "Un identificador de la institución que custodia el objeto(s) o información mencionada en el registro. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "记录中提到有保管的物品或资料的机构的标识符。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e001",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "txt",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m019",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "plain text"
+        },
+        {
+          "@language": "es",
+          "@value": "Isla"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "岛屿"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for palin text"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre de la isla en o cerca de la ubicación. La práctica recomendada es utilizar un identificador persistente de un lenguaje controlado como el Tesauro Getty de Nombres Geográficos."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "事件发生地点或附近的岛屿名称。建议最佳做法是使用一个控制性词汇，如地名盖蒂词库。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e002",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "doc",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m020",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Word (pre-2003) document"
+        },
+        {
+          "@language": "es",
+          "@value": "Grupo de islas"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "岛群"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Microsoft Word (2003 and before) documents"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre del grupo de islas de la ubicación. La práctica recomendada es utilizar un identificador persistente de un lenguaje controlado como el Tesauro Getty de Nombres Geográficos."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "事件发生地点的岛群名称。建议最佳做法是使用一个控制性词汇，如地名盖蒂词库。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e003",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "docx",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m021",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Word (post-2007) document"
+        },
+        {
+          "@language": "es",
+          "@value": "Reino"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "界"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Microsoft Word (2007 and after) documents"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre científico completo del reino en el que se clasifica el taxón. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "分类单元所属界的完整学名。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e004",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "png",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m007",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "PNG"
+        },
+        {
+          "@language": "es",
+          "@value": "Edad tardía o estadío superior"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "最晚地质年代或最高年代地层"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for portable network graphics images"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre completo de la edad geocronológica más tardía posible o etapa cronoestratigráfica más alta, atribuible al horizonte estratigráfico donde se recolectó el objeto catalogado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "采集编目项所在地层地平线的可能最晚的地质年代或最高年代地层的完整名称。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e005",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "jpg",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m008",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "JPEG"
+        },
+        {
+          "@language": "es",
+          "@value": "Eón tardío o eonotema superior"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "最晚地质宙或最高地层宇"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for JPEG images"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre completo del eón geocronológico más tardío o el eratema crono-estratigráfico más alto posible, o el nombre informal (\"Precámbrico\") atribuible al horizonte estratigráfico donde se recolectó el objeto catalogado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "采集编目项所在地层地平线的可能最晚的地质宙或最高地层宇或非正式名称（“前寒武纪”）的完整名称。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e006",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "pdf",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m018",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "PDF"
+        },
+        {
+          "@language": "es",
+          "@value": "Época tardía o sistema superior"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "最晚地质世或最高地层统"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for PDF documents"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre completo de la época geocronológica más tardía posible o la serie cronoestratigráfica más alta, atribuible al horizonte estratigráfico donde se recolectó el objeto catalogado."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "采集编目项所在地层地平线的可能最晚的地质世或最高地层统的完整名称。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e007",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "tif",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m011",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "TIFF"
+        },
+        {
+          "@language": "es",
+          "@value": "Era tardía o eratema superior"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "最晚地质代或最高地层界"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for TIFF images"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre completo de la era geocronológica más tardía o el eratema cronoestratigráfico más alto posible, atribuible al horizonte estratigráfico donde se recolectó el objeto catalogado."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "采集编目项所在地层地平线的可能最晚的地质代或最高地层界的完整名称。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e008",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "dng",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m022",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Digital Negative"
+        },
+        {
+          "@language": "es",
+          "@value": "Periodo tardío o sistema superior"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "最晚地质纪或最高地层系"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Digital Negative images"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre completo del período geocronológico más tardío posible o del sistema cronoestratigráfico más alto, atribuible al horizonte estratigráfico donde se recolectó el objeto catalogado."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "采集编目项所在地层地平线的可能最晚的地质纪或最高地层系的完整名称。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e009",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "cr2",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m023",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Canon Raw"
+        },
+        {
+          "@language": "es",
+          "@value": "Etapa de vida"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "生命期"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Canon Raw images"
+        },
+        {
+          "@language": "es",
+          "@value": "La clase etaria o etapa de vida del individuo(s) biológico(s) en el momento del Registro Biológico. La práctica recomendada es el uso de un lenguaje controlado."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "事件记录时生物个体的年龄级或生命期。建议最佳做法是使用一个控制性词汇。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e010",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "jp2",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m024",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "JPEG 2000"
+        },
+        {
+          "@language": "es",
+          "@value": "Términos litoestratigráficos"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "岩性地层"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for JPEG 2000 images"
+        },
+        {
+          "@language": "es",
+          "@value": "La combinación de todos los nombres litoestratigráficos de la roca de donde se colectó el objeto catalogado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "采集编目项所在岩石的所有岩性地层名称的组合。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e011",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "wav",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m025",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "WAVE"
+        },
+        {
+          "@language": "es",
+          "@value": "Localidad"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "地点"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for WAVE audio"
+        },
+        {
+          "@language": "es",
+          "@value": "La descripción específica del lugar. Información geográfica de menor especificidad puede ser provista en otros elementos geográficos (Geografía Superior, Continente, País, Estado Provincia, Condado, Municipio, Cuerpo de Agua, Isla, Grupo Islas). Este elem"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "地点的具体描述。其它的地理术语几乎不提供具体地理信息（高级地域，大陆，国家，州/省，县，自治市，水体，岛屿，群岛）。这个术语可能包含由最初修改而来的信息，以纠正理解错误或规范描述。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e012",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "mp3",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m016",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "MP3"
+        },
+        {
+          "@language": "es",
+          "@value": "Ubicación de acuerdo con"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "地点依据"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "ffle extension for MP3 audio"
+        },
+        {
+          "@language": "es",
+          "@value": "La información sobre la fuente de la información de ubicación. Podría ser una publicación (gacetero), institución o grupo de individuos."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "地点信息源的信息，可能是出版物（地名），机构，或者团队个体。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e013",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "nef",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m026",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Nikon NEF Raw"
+        },
+        {
+          "@language": "es",
+          "@value": "ID de la ubicación"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "地点编号"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Nikon NEF Raw images"
+        },
+        {
+          "@language": "es",
+          "@value": "Un identificador para el conjunto de información de la ubicación (los datos asociados a Ubicación). Puede ser un identificador único global o un identificador específico para el conjunto de datos. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "地点信息集（与dcterms:Location有关的数据）的标识符，可能是一个全局唯一标识符或者是一个特定数据集的标识符。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e014",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "m4a",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m015",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "MP4 audio"
+        },
+        {
+          "@language": "es",
+          "@value": "Comentarios de la ubicación"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "地点备注"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for MP4 audio"
+        },
+        {
+          "@language": "es",
+          "@value": "Comentarios o anotaciones sobre la ubicación. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "关于地点的评论或记录。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e015",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "mp4",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m012",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "MP4 video"
+        },
+        {
+          "@language": "es",
+          "@value": "Zona bioestatigráfica inferior"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "最低生物地层区"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for MP4 video"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre completo de la zona geológica bioestratigráfica más baja posible del horizonte estratigráfico donde se recolectó el objeto catalogado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "采集编目项所在地层地平线的可能最低的地质生物地层学区的完整名称。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e016",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "gif",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m010",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "GIF"
+        },
+        {
+          "@language": "es",
+          "@value": "Profundidad máxima en metros"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "最大深度（米）"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for GIF images"
+        },
+        {
+          "@language": "es",
+          "@value": "La mayor profundidad de un rango de profundidad por debajo de la superficie local, en metros."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "在地表一定深度范围以下的更深的深度，以“米”作单位。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e017",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "bmp",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m009",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "BMP"
+        },
+        {
+          "@language": "es",
+          "@value": "Máxima distancia de la superficie metros"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "参考表面以上的最大距离（米）"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for bitmap images"
+        },
+        {
+          "@language": "es",
+          "@value": "La mayor distancia en un rango de distancia desde una superficie de referencia en dirección vertical, en metros. Utilice valores positivos para las ubicaciones por encima de la superficie, valores negativos para las ubicaciones por debajo. Si las medidas "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "在垂直方向，距离参考表面更大的一个距离范围内，以米作为单位。使用正值代表表面以上的位置，负值代表表面以下的位置。如果已经给出深度的测量值，那么参考表面的位置由深度确定，否则参考表面的位置由海拔确定。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e018",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "m4v",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m027",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "M4V"
+        },
+        {
+          "@language": "es",
+          "@value": "Elevación máxima en metros"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "最高海拔（米）"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Apple M4V videos"
+        },
+        {
+          "@language": "es",
+          "@value": "El límite superior del rango de elevación (altitud, generalmente por encima del nivel del mar), en metros. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "海拔（海平面以上的高度）范围的上限，以“米”为单位。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e019",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "ply",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "PLY"
+        },
+        {
+          "@language": "es",
+          "@value": "Precisión de la medición"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "测量精度"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Polygon File Format"
+        },
+        {
+          "@language": "es",
+          "@value": "La descripción de los errores potenciales asociados con Valor de la medición. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "与测量值相关的潜在误差的描述。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e020",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "stl",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m055",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "STL"
+        },
+        {
+          "@language": "es",
+          "@value": "Medición determinada por"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "确定测量结果者"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for steriolithography files"
+        },
+        {
+          "@language": "es",
+          "@value": "Una lista (concatenada y separada) de los nombres de las personas, grupos u organizaciones que determinan el valor de Medición o Hecho. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "确定“测量或事实”值的人名，群体或组织的列表（连接的或分开的）。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e021",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "3gp",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m028",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "3GPP"
+        },
+        {
+          "@language": "es",
+          "@value": "Fecha de la determinación de la medición"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "确定测量结果日期"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for 3GPP video"
+        },
+        {
+          "@language": "es",
+          "@value": "La fecha en que se realizó Medición o Hecho. La práctica recomendada es utilizar un esquema de codificación, como ISO 8601:2004 (E). "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "制定“测量或事实”的日期，建议最佳做法是使用一个编码方案，例如ISO 8601:2004(E)。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e022",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "zvi",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m054",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "ZVI"
+        },
+        {
+          "@language": "es",
+          "@value": "ID de la medición"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "测量编号"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Zeiss Vision Image images"
+        },
+        {
+          "@language": "es",
+          "@value": "Un identificador para Medición o hecho (la información relativa a las mediciones, hechos, características o aseveraciones). Puede ser un identificador único global o un identificador específico para el conjunto de datos. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "测量或事实（关于测量，事实，特征或推断的信息）的标识符，可能是一个全局唯一标识符或者一个数据集特有的标识符。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e023",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "avi",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m029",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "AVI"
+        },
+        {
+          "@language": "es",
+          "@value": "Método de medición"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "测量方法"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for AVI video"
+        },
+        {
+          "@language": "es",
+          "@value": "Una descripción o referencia (publicación, URI) del método o protocolo utilizado para determinar la medición, hecho, característica o aseveración. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "用来确定测量，事实，特征或者推断的方法或草案的描述或者参考。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e024",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "amr",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m030",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "AMR"
+        },
+        {
+          "@language": "es",
+          "@value": "Comentarios de la medición"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "测量备注"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Adaptive Multi-Rate audio"
+        },
+        {
+          "@language": "es",
+          "@value": "Comentarios o anotaciones que acompañan a Medición o hecho. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "附在“测量或事实”上的评论和注释。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e025",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "aiff",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m031",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "AIFF"
+        },
+        {
+          "@language": "es",
+          "@value": "Tipo de medición"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "测量类型"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Audio Interchange File Format audio"
+        },
+        {
+          "@language": "es",
+          "@value": "La naturaleza de la medición, hecho, característica o aseveración. La práctica recomendada es el uso de un lenguaje controlado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "测量，事实，特征，和推断的性质。最好的做法是使用一个控制性词汇。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e026",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "ogg",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m032",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "OGG audio"
+        },
+        {
+          "@language": "es",
+          "@value": "Unidad de medición"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "测量单位"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for OGG audio"
+        },
+        {
+          "@language": "es",
+          "@value": "Las unidades asociadas con Valor de la Medición. La práctica recomendada es utilizar el Sistema Internacional de Unidades (SI). "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "与测量值相关的单位最好采用国际单位系统（SI）。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e027",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "ogv",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m033",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "OGG video"
+        },
+        {
+          "@language": "es",
+          "@value": "Valor de la medición"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "测量值"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for OGG video"
+        },
+        {
+          "@language": "es",
+          "@value": "El valor de la medición, hecho, característica o aseveración. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "测量，事实，特征，和推断的值。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e028",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "ogx",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m034",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "OGG multiplex"
+        },
+        {
+          "@language": "es",
+          "@value": "Miembro"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "成员"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for OGG multiplex"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre completo del miembro litoestratigráfico del cual se colectó el elemento catalogado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "采集编目项所在地层成员的完整名称。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e029",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "pcd",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m035",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Kodak Photo CD image"
+        },
+        {
+          "@language": "es",
+          "@value": "Profundidad mínima en metros"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "最小深度（米）"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Kodak Photo CD image"
+        },
+        {
+          "@language": "es",
+          "@value": "La menor profundidad de un rango de profundidad por debajo de la superficie local, en metros. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "地表以下较低的深度，以“米”为单位。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e030",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "mov",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m014",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "QuickTime"
+        },
+        {
+          "@language": "es",
+          "@value": "Mínima distancia de la superficie en metros"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "参考表面以上的最小距离（米）"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Apple QuickTime video"
+        },
+        {
+          "@language": "es",
+          "@value": "La menor distancia en un rango de distancia desde una superficie de referencia en dirección vertical, en metros. Utilice valores positivos para las ubicaciones por encima de la superficie, valores negativos para ubicaciones por debajo. Si las medidas de p"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "在垂直方向，距离参考表面较小的距离范围内的距离，以“米”为单位。使用正值代表表面以上的位置，负值代表表面以下的位置。如果已经给出深度的测量值，那么参考表面的位置由深度确定，否则参考表面的位置由海拔确定。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e031",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "psd",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m036",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Photoshop"
+        },
+        {
+          "@language": "es",
+          "@value": "Elevación mínima en metros"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "最低海拔（米）"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Photoshop images"
+        },
+        {
+          "@language": "es",
+          "@value": "El límite inferior del rango de elevación (altitud, generalmente por encima del nivel del mar), en metros. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "海拔（海平面以上的高度）范围的下限，以“米”为单位。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e032",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "flac",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m038",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "FLAC"
+        },
+        {
+          "@language": "es",
+          "@value": "Mes"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "月份"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Free Lossless Audio Codec audio"
+        },
+        {
+          "@language": "es",
+          "@value": "El mes ordinal en que ocurrió el evento. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "事件发生的月份序号。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e033",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "wma",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m039",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "MWA"
+        },
+        {
+          "@language": "es",
+          "@value": "Municipio"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "自治市"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Windows Media Audio"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre completo, sin abreviar de la siguiente región administrativa de menor jerarquía que condado (ciudad, municipio, etc.) en el que la ubicación se produce. No utilice este elemento para el nombre de un lugar cercano que no contiene la ubicación rea"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "事件发生的完整、未缩写的地点名称，比县（市、自治区等）更小的行政区域。对于附近不包含实际地点的已命名地区不要使用这个词语。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e034",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "wmv",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m040",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "WMV"
+        },
+        {
+          "@language": "es",
+          "@value": "Nombre de acuerdo con"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "名称依据"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Windows Media Video"
+        },
+        {
+          "@language": "es",
+          "@value": "La referencia a la fuente en la que está definida o implícita la circunscripción conceptual del taxón - tradicionalmente representado por el Latín \"sensu\" o \"sec.\" (de secundum, que significa \"según\"). Para los taxones que resultan de las identificaciones"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "参考源中定义或暗示了具体类群的概念界限，照惯例表示为拉丁语\"sensu\"或\"sec.\"（按照依据，意思是“根据”）。对于一个鉴定结果的类群，应给出参考关键词，专题论文，专家及其他资源。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e035",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "asf",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m041",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "ASF"
+        },
+        {
+          "@language": "es",
+          "@value": "ID nombre de acuerdo con"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "名称依据编号"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Advanced Systems Format"
+        },
+        {
+          "@language": "es",
+          "@value": "Un identificador de la fuente en la que está definida o implícita la circunscripción conceptual del taxón específico. Ver Nombre de acuerdo con. Ejemplo: \"doi:10.1016/S0269-915X(97)80026-2\"."
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "参考源中定义或暗示具体类群概念界限的标识符，参见“名称依据”。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e036",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "svg",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m042",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "SVG"
+        },
+        {
+          "@language": "es",
+          "@value": "Nombre publicado en  "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "发布名称"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for SVG images"
+        },
+        {
+          "@language": "es",
+          "@value": "Una referencia para la publicación en que se estableció originalmente Nombre Científico bajo las reglas del Código Nomenclatural asociado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "在相关的命名规则下，确定最初学名的出版参考物。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e037",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "obj",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m062",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "OBJ"
+        },
+        {
+          "@language": "es",
+          "@value": "ID del nombre publicado en"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "名称发布编号"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for OBJ"
+        },
+        {
+          "@language": "es",
+          "@value": "Un identificador de la publicación en que se estableció originalmente Nombre científico bajo las reglas del Código nomenclatural asociado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "在相关的命名规则下，确定最初学名的出版物标识符。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e038",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "glb",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m063",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "gLTF binary"
+        },
+        {
+          "@language": "es",
+          "@value": "Nombre publicado en año"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "名称发布年份"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Binary GL Transmission Format"
+        },
+        {
+          "@language": "es",
+          "@value": "El año de cuatro dígitos en el que se publicó el Nombre científico. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "学名发布的四位公历年份。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e039",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "gltf",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m064",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "gLTF"
+        },
+        {
+          "@language": "es",
+          "@value": "Código nomenclatural"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "命名准则"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for GL Transmission Format"
+        },
+        {
+          "@language": "es",
+          "@value": "El código de nomenclatura (o códigos en el caso de un nombre ambireinal) en virtud del cual se construye el Nombre Científico. La práctica recomendada es el uso de un lenguaje controlado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "创建学名所遵循的命名准则。建议最佳做法是使用一个控制性词汇。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e040",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "wrl",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m065",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "VRML"
+        },
+        {
+          "@language": "es",
+          "@value": "Estado nomenclatural"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "命名状态"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Virtual Reality Modeling Language"
+        },
+        {
+          "@language": "es",
+          "@value": "El estatus relacionado con la publicación original del nombre y su conformidad con las normas pertinentes de nomenclatura. Se basa esencialmente en un algoritmo de acuerdo a las reglas de negociación del código. No requiere opinión taxonómica. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "与名称的最初出版物相关的状态及与命名相关规则的一致性。本质上基于一个根据业务规则代码的算法，不需要分类的意见。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e041",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "dcm",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m066",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "DICOM"
+        },
+        {
+          "@language": "es",
+          "@value": "ID del registro biológico"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "事件编号"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Digital Imaging and Communications in Medicine"
+        },
+        {
+          "@language": "es",
+          "@value": "Un identificador del Registro biológico (a cambio de un registro digital particular del Registro biológico). En ausencia de un identificador único global persistente, se debe construir uno a partir de una combinación de identificadores en el registro de m"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "一个事件的标识符（并非一个事件的具体数字记录）。在缺乏全局唯一标识符的情况下，从最接近全局唯一事件编号的记录中构建一个标识符。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e042",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "mtl",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m067",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "MTL"
+        },
+        {
+          "@language": "es",
+          "@value": "Comentarios del registro biológico"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "事件备注"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for OBJ Material Template Library"
+        },
+        {
+          "@language": "es",
+          "@value": "Comentarios o anotaciones sobre el Registro Biológico. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "关于这个事件的评论和注释。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e043",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "x3dv",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m017",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "X3D VRML"
+        },
+        {
+          "@language": "es",
+          "@value": "Estado del registro biológico"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "事件状态"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for X3D VRML models"
+        },
+        {
+          "@language": "es",
+          "@value": "Una declaración sobre la presencia o ausencia de un taxón en una ubicación. La práctica recomendada es el uso de un lenguaje controlado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "关于一个类群在一个地点存在或者不存在的声明。建议最佳做法是使用一个控制性词汇。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e044",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "x3d",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m068",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "X3D XML"
+        },
+        {
+          "@language": "es",
+          "@value": "Orden"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "目"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for X3D XML models"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre científico completo del orden en el que se clasifica el taxón. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "分类单元所属目的完整学名。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e045",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "crw",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m069",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "CIFF raw image"
+        },
+        {
+          "@language": "es",
+          "@value": "Uso del nombre original"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "最初使用名称"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Camera Image File Format raw image"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre del taxón, con información de autoría y fecha si se conoce, tal como apareció originalmente cuando se estableció por primera vez bajo las reglas del Código Nomenclatural asociadas. El basiónimo (botánica) o basiónimo (bacteriología) de Nombre Ci"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "在相关的命名规则下第一次被建立的最初出现的类群名称，如果知道的话，附作者和日期信息。学名的异名或基名，或用来替换名称的同音词。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e046",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "cr3",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m070",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "CR3 raw image"
+        },
+        {
+          "@language": "es",
+          "@value": "ID del uso del nombre original"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "最初使用名称编号"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Canon Raw 3 image"
+        },
+        {
+          "@language": "es",
+          "@value": "Un identificador para el uso del nombre (significado documentado del nombre de acuerdo a una fuente) en el que se estableció originalmente, el elemento terminal de Nombre Científico bajo las reglas del Código Nomenclatural asociado. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "学名在相关命名规则下最初建立时，学名的末端组成上的名称使用标识符。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e047",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "arw",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m071",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "ARW raw image"
+        },
+        {
+          "@language": "es",
+          "@value": "Otros números de catálogo"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "其它目录编号"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Sony raw image"
+        },
+        {
+          "@language": "es",
+          "@value": "Una lista (concatenada y separada) de números de catálogos anteriores o alternativos, calificados, u otros identificadores de uso humano para el mismo Registro Biológico, ya sea en el actual o cualquier otro conjunto de datos o colección. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "无论在当前或其他任何数据集，同一事件中以前或备用的完全合格的目录号或其他人使用的标识符列表（连接的或分开的）。"
+        }
+      ]
+    },
+    {
+      "@id": "http://rs.tdwg.org/format/values/e048",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept",
+      "rdf:value": "rw2",
+      "skos:inScheme": "http://rs.tdwg.org/format/values/e",
+      "skos:exactMatch": "http://rs.tdwg.org/format/values/m072",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "RW2 raw image"
+        },
+        {
+          "@language": "es",
+          "@value": "Código de la institución propietaria"
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "所有者机构代码"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@language": "en",
+          "@value": "file extension for Panasonic raw image"
+        },
+        {
+          "@language": "es",
+          "@value": "El nombre (o acrónimo) en uso por la institución que tiene la propiedad del objeto(s) o información referida en el registro. "
+        },
+        {
+          "@language": "zh-Hans",
+          "@value": "记录中显示的对物品或信息享有所有权的机构名称（或缩写）。"
+        }
+      ]
+    }
+  ]
+}
