@@ -1,0 +1,868 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix hint: <http://www.bigdata.com/queryHints#> .
+@prefix bd: <http://www.bigdata.com/rdf#> .
+@prefix bds: <http://www.bigdata.com/rdf/search#> .
+
+<http://rs.tdwg.org/format/values/m001> <http://www.w3.org/2004/02/skos/core#prefLabel> "application"@en , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m002> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "audio" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media type for audio"@en , "Una lista (concatenada y separada) de los identificadores de otros registros biol��gicos y su relaci��n con este Registro Biol��gico. "@es , "���������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "audio"@en , "Registros biol��gicos asociados"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m003> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "image" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media type for image"@en , "Una lista (concatenada y separada) de los identificadores (publicaci��n, referencia bibliogr��fica, identificador ��nico global, URI) de la literatura asociada con el Registro Biol��gico. "@es , "���������������������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Referencias asociadas"@es , "image"@en , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m004> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "model" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media type for model"@en , "Una lista (concatenada y separada) de los identificadores (publicaci��n, identificador ��nico global, URI) de la informaci��n de la secuencia gen��tica asociada con el Registro Biol��gico. "@es , "������������������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Secuencias asociadas"@es , "model"@en , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m005> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "text" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media type for text"@en , "Una lista (concatenada y separada) de los identificadores o nombres de taxones y su asociaci��n con el Registro Biol��gico."@es , "���������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Taxones asociados"@es , "text"@en , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m006> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "video" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media type for video"@en , "La naturaleza espec��fica del registro de datos - un subtipo de Tipo.��La pr��ctica recomendada es el uso de lenguaje controlado como el vocabulario controlado para Tipo de Darwin Core (http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm). "@es , "���������������������������������dcterms:type���������������������������������������������������������������������������������http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Base del registro"@es , "video"@en , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m007> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "image/png" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for portable network graphics images"@en , "El nombre completo de la capa litoestratigr��fica de la cual se colect�� el elemento catalogado. "@es , "���������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Capa"@es , "PNG"@en , "������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m008> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "image/jpeg" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for JPEG images"@en , "Una descripci��n de la conducta mostrada por el sujeto en el momento del Registro Biol��gico.��La pr��ctica recomendada es el uso de un lenguaje controlado."@es , "������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Comportamiento"@es , "JPEG"@en , "������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m009> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "image/bmp" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for bitmap images"@en , "Un identificador (preferiblemente ��nico) para el registro dentro del conjunto de datos o colecci��n. "@es , "������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "BMP"@en , "N��mero de cat��logo"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m010> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "image/gif" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for GIF images"@en , "El nombre cient��fico completo de la clase en la que se clasifica el tax��n."@es , "���������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Clase"@es , "GIF"@en , "���"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m011> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "image/tiff" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for TIFF images"@en , "El nombre, acr��nimo, coden, o iniciales que identifican la colecci��n o conjunto de datos del que procede el registro. "@es , "������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "TIFF"@en , "C��digo de la colecci��n"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m012> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "video/mp4" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" .
+
+<http://rs.tdwg.org/format/values/e020> <http://www.w3.org/2004/02/skos/core#definition> "������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m055" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "STL"@en , "Medici��n determinada por"@es , "���������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e021> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "3gp" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for 3GPP video"@en , "La fecha en que se realiz�� Medici��n o Hecho.��La pr��ctica recomendada es utilizar un esquema de codificaci��n, como ISO 8601:2004 (E). "@es , "���������������������������������������������������������������������������������������������ISO 8601:2004(E)���"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m028" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "3GPP"@en , "Fecha de la determinaci��n de la medici��n"@es , "������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e022> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "zvi" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Zeiss Vision Image images"@en , "Un identificador para Medici��n o hecho (la informaci��n relativa a las mediciones, hechos, caracter��sticas o aseveraciones).��Puede ser un identificador ��nico global o un identificador espec��fico para el conjunto de datos. "@es , "������������������������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m054" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "ZVI"@en , "ID de la medici��n"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e023> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "avi" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for AVI video"@en , "Una descripci��n o referencia (publicaci��n, URI) del m��todo o protocolo utilizado para determinar la medici��n, hecho, caracter��stica o aseveraci��n. "@es , "������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m029" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "AVI"@en , "M��todo de medici��n"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e024> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "amr" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Adaptive Multi-Rate audio"@en , "Comentarios o anotaciones que acompa��an a Medici��n o hecho. "@es , "���������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m030" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "AMR"@en , "Comentarios de la medici��n"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e025> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "aiff" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Audio Interchange File Format audio"@en , "La naturaleza de la medici��n, hecho, caracter��stica o aseveraci��n.��La pr��ctica recomendada es el uso de un lenguaje controlado. "@es , "������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m031" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "AIFF"@en , "Tipo de medici��n"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e026> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "ogg" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for OGG audio"@en , "Las unidades asociadas con Valor de la Medici��n.��La pr��ctica recomendada es utilizar el Sistema Internacional de Unidades (SI). "@es , "������������������������������������������������������������SI������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m032" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "OGG audio"@en , "Unidad de medici��n"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e027> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "ogv" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for OGG video"@en , "El valor de la medici��n, hecho, caracter��stica o aseveraci��n. "@es , "���������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m033" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "OGG video"@en , "Valor de la medici��n"@es , "���������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e028> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "ogx" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for OGG multiplex"@en , "El nombre completo del miembro litoestratigr��fico del cual se colect�� el elemento catalogado. "@es , "���������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m034" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Miembro"@es , "OGG multiplex"@en , "������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e029> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "pcd" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Kodak Photo CD image"@en , "La menor profundidad de un rango de profundidad por debajo de la superficie local, en metros. "@es , "������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m035" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Kodak Photo CD image"@en , "Profundidad m��nima en metros"@es , "���������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e030> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "mov" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Apple QuickTime video"@en , "���������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e010> <http://www.w3.org/2004/02/skos/core#definition> "La combinaci��n de todos los nombres litoestratigr��ficos de la roca de donde se colect�� el objeto catalogado. "@es , "������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m024" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "JPEG 2000"@en , "T��rminos litoestratigr��ficos"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e011> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "wav" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for WAVE audio"@en , "La descripci��n espec��fica del lugar.��Informaci��n geogr��fica de menor especificidad puede ser provista en otros elementos geogr��ficos (Geograf��a Superior, Continente, Pa��s, Estado Provincia, Condado, Municipio, Cuerpo de Agua, Isla, Grupo Islas).��Este elem"@es , "���������������������������������������������������������������������������������������������������������������������/������������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m025" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Localidad"@es , "WAVE"@en , "������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e012> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "mp3" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "ffle extension for MP3 audio"@en , "La informaci��n sobre la fuente de la informaci��n de ubicaci��n.��Podr��a ser una publicaci��n (gacetero), instituci��n o grupo de individuos."@es , "������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m016" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "MP3"@en , "Ubicaci��n de acuerdo con"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e013> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "nef" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Nikon NEF Raw images"@en , "Un identificador para el conjunto de informaci��n de la ubicaci��n (los datos asociados a Ubicaci��n).��Puede ser un identificador ��nico global o un identificador espec��fico para el conjunto de datos. "@es , "���������������������dcterms:Location������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m026" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Nikon NEF Raw"@en , "ID de la ubicaci��n"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e014> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "m4a" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for MP4 audio"@en , "Comentarios o anotaciones sobre la ubicaci��n. "@es , "���������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m015" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "MP4 audio"@en , "Comentarios de la ubicaci��n"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e015> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "mp4" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for MP4 video"@en , "El nombre completo de la zona geol��gica bioestratigr��fica m��s baja posible del horizonte estratigr��fico donde se recolect�� el objeto catalogado. "@es , "������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m012" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "MP4 video"@en , "Zona bioestatigr��fica inferior"@es , "���������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e016> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "gif" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "La mayor profundidad de un rango de profundidad por debajo de la superficie local, en metros."@es , "file extension for GIF images"@en , "������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m010" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "GIF"@en , "Profundidad m��xima en metros"@es , "���������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e017> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "bmp" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for bitmap images"@en , "���������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans , "La mayor distancia en un rango de distancia desde una superficie de referencia en direcci��n vertical, en metros.��Utilice valores positivos para las ubicaciones por encima de la superficie, valores negativos para las ubicaciones por debajo.��Si las medidas "@es ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m009" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "BMP"@en , "M��xima distancia de la superficie metros"@es , "������������������������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e018> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "m4v" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Apple M4V videos"@en , "El l��mite superior del rango de elevaci��n (altitud, generalmente por encima del nivel del mar), en metros. "@es , "������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m027" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "M4V"@en , "Elevaci��n m��xima en metros"@es , "���������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e019> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "ply" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Polygon File Format"@en , "La descripci��n de los errores potenciales asociados con Valor de la medici��n. "@es , "���������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "PLY"@en , "Precisi��n de la medici��n"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e020> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "stl" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for steriolithography files"@en , "Una lista (concatenada y separada) de los nombres de las personas, grupos u organizaciones que determinan el valor de Medici��n o Hecho. "@es .
+
+<http://rs.tdwg.org/format/values/e> a <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "concept scheme based on conventional file extensions for media types"@en , "Un identificador para el nombre en uso (significado del nombre, documentado de acuerdo con alguna fuente) del tax��n actualmente v��lido (zool��gico) o aceptado (bot��nico).   "@es , "���������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Nombre aceptado en uso - ID"@es , "file extensions concept scheme"@en , "������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e001> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "txt" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for palin text"@en , "El nombre de la isla en o cerca de la ubicaci��n. La pr��ctica recomendada es utilizar un identificador persistente de un lenguaje controlado como el Tesauro Getty de Nombres Geogr��ficos."@es , "������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m019" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Isla"@es , "plain text"@en , "������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e002> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "doc" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Microsoft Word (2003 and before) documents"@en , "El nombre del grupo de islas de la ubicaci��n.��La pr��ctica recomendada es utilizar un identificador persistente de un lenguaje controlado como el Tesauro Getty de Nombres Geogr��ficos."@es , "���������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m020" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Grupo de islas"@es , "Word (pre-2003) document"@en , "������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e003> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "docx" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Microsoft Word (2007 and after) documents"@en , "El nombre cient��fico completo del reino en el que se clasifica el tax��n. "@es , "���������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m021" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Reino"@es , "Word (post-2007) document"@en , "���"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e004> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "png" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for portable network graphics images"@en , "El nombre completo de la edad geocronol��gica m��s tard��a posible o etapa cronoestratigr��fica m��s alta, atribuible al horizonte estratigr��fico donde se recolect�� el objeto catalogado. "@es , "���������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m007" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "PNG"@en , "Edad tard��a o estad��o superior"@es , "���������������������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e005> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "jpg" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for JPEG images"@en , "El nombre completo del e��n geocronol��gico m��s tard��o o el eratema crono-estratigr��fico m��s alto posible, o el nombre informal (\"Prec��mbrico\") atribuible al horizonte estratigr��fico donde se recolect�� el objeto catalogado. "@es , "���������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m008" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "JPEG"@en , "E��n tard��o o eonotema superior"@es , "���������������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e006> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "pdf" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for PDF documents"@en , "El nombre completo de la ��poca geocronol��gica m��s tard��a posible o la serie cronoestratigr��fica m��s alta, atribuible al horizonte estratigr��fico donde se recolect�� el objeto catalogado."@es , "���������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m018" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "PDF"@en , "��poca tard��a o sistema superior"@es , "���������������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e007> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "tif" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for TIFF images"@en , "El nombre completo de la era geocronol��gica m��s tard��a o el eratema cronoestratigr��fico m��s alto posible, atribuible al horizonte estratigr��fico donde se recolect�� el objeto catalogado."@es , "���������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m011" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "TIFF"@en , "Era tard��a o eratema superior"@es , "���������������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e008> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "dng" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Digital Negative images"@en , "El nombre completo del per��odo geocronol��gico m��s tard��o posible o del sistema cronoestratigr��fico m��s alto, atribuible al horizonte estratigr��fico donde se recolect�� el objeto catalogado."@es , "���������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m022" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Digital Negative"@en , "Periodo tard��o o sistema superior"@es , "���������������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e009> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "cr2" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Canon Raw images"@en , "La clase etaria o etapa de vida del individuo(s) biol��gico(s) en el momento del Registro Biol��gico.��La pr��ctica recomendada es el uso de un lenguaje controlado."@es , "���������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m023" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Etapa de vida"@es , "Canon Raw"@en , "���������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e010> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "jp2" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for JPEG 2000 images"@en .
+
+<http://rs.tdwg.org/format/values/m062> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for OBJ 3D models"@en , "Una breve frase o t��rmino est��ndar (\"cf.\" ,\"aff.\") para expresar las dudas del determinador sobre la identificaci��n. "@es , "������������������������������������������������������������������������(\"cf.\", \"aff.\")���"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "OBJ"@en , "Calificador de la identificaci��n"@es , "���������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m063> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "model/gltf-binary" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m004" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for Binary GL Transmission Format"@en , "Una lista (concatenada y separada) de las referencias (publicaci��n, identificador ��nico global, URI) utilizadas en la identificaci��n. "@es , "������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "gLTF binary"@en , "Referencias de la identificaci��n"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m064> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "model/gltf+json" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m004" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for GL Transmission Format"@en , "Comentarios o anotaciones sobre la identificaci��n. "@es , "���������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "gLTF"@en , "Comentarios de la identificaci��n"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m065> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "model/vrml" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m004" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for Virtual Reality Modeling Language"@en , "Un indicador categ��rico del alcance de la verificaci��n de la identificaci��n taxon��mica.��La pr��ctica recomendada es el uso de un lenguaje controlado."@es , "���������������������������������������������������������������������������������������������������������HISPID/ABCD������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "VRML"@en , "Estado de la verificaci��n de la identificaci��n"@es , "������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m066> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "application/dicom" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m001" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for Digital Imaging and Communications in Medicine"@en , "Una lista (concatenada y separada) de los nombres de las personas, grupos u organizaciones que asignaron el tax��n al sujeto. "@es , "������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Identificado por"@es , "DICOM"@en , "���������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m067> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "model/mtl" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m004" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for OBJ Material Template Library"@en , "El n��mero de individuos representados presente en el momento del Registro Biol��gico. "@es , "������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Conteo de individuos"@es , "MTL"@en , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m068> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "model/x3d+xml" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m004" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for X3D XML models"@en , "������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans , "Un identificador para un individuo o grupo de organismos individuales representados en el Registro Biol��gico.��Destinado a alojar remuestreo del mismo individuo o grupo con fines de monitoreo.��Puede ser un identificador ��nico global o un identificador espe"@es ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "ID del individuo"@es , "X3D XML"@en , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m069> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "image/x-canon-crw" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "unofficial media subtype for Camera Image File Format raw image"@en , "Informaci��n adicional que existe, pero que no ha sido compartida en el registro dado. "@es , "���������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "CIFF raw image"@en , "Informaci��n retenida"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m070> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "image/x-canon-cr3" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "unofficial media subtype for Canon Raw 3 image"@en , "El nombre del ep��teto infraespec��fico m��s bajo o terminal del Nombre Cient��fico, excluyendo cualquier otra denominaci��n de nivel. "@es , "������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "CR3 raw image"@en , "Ep��teto infraespec��fico"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m071> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "image/x-sony-arw" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "unofficial media subtype for Sony raw image"@en , "El nombre (o acr��nimo) en uso por la instituci��n que tenga la custodia del objeto(s) o informaci��n mencionada en el registro. "@es , "���������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "ARW raw image"@en , "C��digo de la instituci��n"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m072> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "image/x-panasonic-rw2" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+
+<http://rs.tdwg.org/format/values/m052> <http://www.w3.org/2004/02/skos/core#definition> "physical Blu-ray video disc"@en , "Anotaciones o comentarios acerca de la determinaci��n de la descripci��n espacial, suposiciones explicativas adicionales o en oposici��n a las formalizadas en el m��todo referido en Protocolo de Georreferenciaci��n. "@es , "������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Blu-ray video disc"@en , "Comentarios de la georreferenciaci��n"@es , "������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m053> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "physical artwork" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "physical drawing or painting (non-photographic)"@en , "���������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans , "Una lista (concatenada y separada) de los mapas, gaceteros, u otros recursos utilizados para georreferenciar la ubicaci��n, que se describe lo suficiente espec��ficamente como para permitir que cualquier persona en el futuro utilice los mismos recursos. "@es ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "physical artwork"@en , "Fuentes de la georreferenciaci��n"@es , "���������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m054> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "image/zvi" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "unofficial media subtype for Zeiss Vision Image images"@en , "Una descripci��n categ��rica de la medida en que se ha verificado la georreferencia para representar, de la mejor manera, la descripci��n espacial.��La pr��ctica recomendada es el uso de un lenguaje controlado. "@es , "������������������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "ZVI"@en , "Estado de verificaci��n de la georreferenciaci��n"@es , "������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m055> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "model/stl" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m004" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for steriolithography files"@en , "El nombre completo del grupo litoestratigr��fico del cual se colect�� el objeto catalogado. "@es , "������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Grupo"@es , "STL"@en , "���"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m056> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "audio tape" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "physical analogue audio tape (reel-to-reel)"@en , "Una categor��a o la descripci��n del h��bitat en el que ocurri�� el evento."@es , "���������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "reel-to-reel audio tape"@en , "H��bitat"@es , "���������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m057> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "audio cassette" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "physical analogue audio cassette"@en , "������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������\";\"������������������������������"@zh-hans , "Una lista (concatenada y separada) de los nombres de los taxones que terminan en el nivel inmediatamente superior al del tax��n de referencia en el registro del tax��n.��La pr��ctica recomendada es ordenar la lista comenzando con el m��s alto nivel y separando"@es ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "audio cassette"@en , "Clasificaci��n superior"@es , "���������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m058> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "DAT" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "physical digital audio tape (DAT)"@en , "Una lista (concatenada y separada) de los nombres geogr��ficos menos espec��ficos que la informaci��n capturada en el elemento de Localidad."@es , "������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "digital audio tape"@en , "Geograf��a superior"@es , "������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m059> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "MiniDisc" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "physical MiniDisc "@en , "Un identificador de la regi��n geogr��fica de la ubicaci��n.��La pr��ctica recomendada es utilizar un identificador persistente de un lenguaje controlado como el Tesauro Getty de Nombres Geogr��ficos. "@es , "���������������������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "MiniDisc"@en , "ID de la geograf��a superior"@es , "������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m060> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "vinyl" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "physical vinyl record"@en , "El nombre completo de la zona geol��gica bioestratigr��fica m��s alta posible del horizonte estratigr��fico donde se recolect�� el objeto catalogado. "@es , "���������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "vinyl record"@en , "Zona bioestratigr��fica superior"@es , "���������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m061> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "Mixed-CD" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m001" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "physical compact disc containing both data and audio tracks"@en , "Un identificador para la identificaci��n (el cuerpo de la informaci��n asociada con la asignaci��n de un nombre cient��fico).��Puede ser un identificador ��nico global o un identificador espec��fico para el conjunto de datos. "@es , """���������������������������������������������������������������������������������������������������������������������������������
+"""@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "mixed CD (data and audio)"@en , "ID de la identificaci��n"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m062> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "model/obj" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m004" .
+
+<http://rs.tdwg.org/format/values/m022> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for Digital Negative images"@en , "La fecha en que fue identificado el sujeto como representativo del tax��n.��La pr��ctica recomendada es utilizar un esquema de codificaci��n, como ISO 8601:2004 (E). "@es , "������������������������������������������������������������������������������������������ISO 8601:2004(E)���"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Digital Negative"@en , "Fecha de identificaci��n"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m023> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "image/x-canon-cr2" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for Canon Raw images"@en , "El d��a en n��meros enteros, del mes en que ocurri�� el evento. "@es , "���������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "CR2"@en , "D��a"@es , "���"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m024> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "image/jp2" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for JPEG 2000 images"@en , "������������������������������������������������������������������������������������������������������������������������������������������������������������������������������-90���90������������������"@zh-hans , "La latitud geogr��fica (en grados decimales, utilizando el sistema de referencia espacial provisto en Datum Geod��sico) del centro geogr��fico de una ubicaci��n.��Los valores positivos se encuentran al norte del ecuador, los valores negativos est��n al sur del "@es ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Latitud decimal"@es , "JPEG 2000"@en , "���������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m025> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "audio/vnd.wave" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for WAVE audio"@en , "������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������-180���180������������������"@zh-hans , "La longitud geogr��fica (en grados decimales, mediante el sistema de referencia espacial provisto en Datum Geod��sico) del centro geogr��fico de un lugar.��Los valores positivos se encuentran al este del meridiano de Greenwich, los valores negativos se encuen"@es ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Longitud decimal"@es , "WAVE"@en , "���������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m026> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "image/x-nikon-nef" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for Nikon NEF Raw images"@en , "El estado actual de un esp��cimen con respecto a la colecci��n identificada en C��digo de la Colecci��n o ID de la Colecci��n.��La pr��ctica recomendada es el uso de un lenguaje controlado. "@es , "������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Nikon NEF Raw"@en , "Disposici��n"@es , "������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m027> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "video/x-m4v" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for Apple M4V videos"@en , "Una lista (concatenada y separada) de las medidas, hechos, caracter��sticas, o aseveraciones adicionales sobre el registro. Su intenci��n es proporcionar un mecanismo para contenido estructurado como pares de valor.  "@es , "������������������������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "M4V"@en , "Propiedades din��micas"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m028> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "���video/3gpp" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for 3GPP video"@en , "El nombre completo de la edad geocronol��gica m��s temprana posible o la etapa cronoestratigr��fica m��s baja, atribuible al horizonte estratigr��fico donde se recolect�� el objeto catalogado. "@es , "������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "3GPP"@en , "Edad temprana o estad��o inferior"@es , "���������������������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m029> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "video/vnd.avi" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for AVI video"@en , "El nombre completo del e��n geocronol��gico m��s temprano o el eratema crono-estratigr��fico m��s bajo, o el nombre informal (\"Prec��mbrico\") atribuible al horizonte estratigr��fico donde se recolect�� el objeto catalogado. "@es , "������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "AVI"@en , "E��n temprano o eonotema inferior"@es , "���������������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m030> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "audio/AMR" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for Adaptive Multi-Rate audio"@en , "El nombre completo de la ��poca geocronol��gica m��s temprana o la serie cronoestratigr��fica m��s baja posible, atribuible al horizonte estratigr��fico donde se recolect�� el objeto catalogado. "@es , "������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "AMR"@en , "��poca temprana o serie inferior"@es , "���������������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m031> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "audio/x-aiff" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for Audio Interchange File Format audio"@en , "El nombre completo de la era geocronol��gica m��s temprana o el eratema crono-estratigr��fico m��s bajo, atribuible al horizonte estratigr��fico donde se recolect�� el objeto catalogado. "@es , "������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Era temprana o eratema inferior"@es , "AIFF"@en , "���������������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m032> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "audio/ogg" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" .
+
+<http://rs.tdwg.org/format/values/m042> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for SVG images"@en , "La relaci��n del ��rea de footprint (WKT Footprint) y el ��rea de la verdadera (original, o m��s espec��fica) representaci��n espacial de la ubicaci��n.��Los valores v��lidos son 0, mayor que o igual a 1, o indefinido.��Un valor de 1 es una coincidencia exacta o su"@es , "������������������������������footprintWKT������������������������������������������������������������������������������0������������������1������������������������1������������������������������100%���������������0������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������1���"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Ajuste espacial de footprint"@es , "SVG"@en , "������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m043> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "Data-CD" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m001" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "physical data compact disc"@en , "���������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans , "Una representaci��n Well-Known Text (WKT) del sistema de referencia espacial (SRS) para WKT Footprint de la ubicaci��n.��No utilice este elemento para describir el SRS de Latitud Decimal y Longitud Decimal, incluso si es la misma que para WKT Footprint - uti"@es ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "SRS footprint"@es , "data CD"@en , "������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m044> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "Audio-CD" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "physical audio compact disc"@en , "������������������������������������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans , "Una representaci��n Well-Known Text (WKT) de la forma (footprint, geometr��a) que define la ubicaci��n.��Una ubicaci��n puede tener una representaci��n de radio-punto (v��ase Latitud Decimal) y una representaci��n de footprint, y pueden diferir entre s��. "@es ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "WKT footprint"@es , "audio CD"@en , "������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m045> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "Video-CD" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "physical video compact disc"@en , "El nombre completo de la formaci��n litoestratigr��fica de la cual se colect�� el objeto catalogado."@es , "���������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "video CD"@en , "Formaci��n"@es , "������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m046> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "Data-DVD" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m001" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "physical data DVD"@en , "El nombre cient��fico completo del g��nero en el que se clasifica el tax��n. "@es , "���������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "data DVD"@en , "G��nero"@es , "���"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m047> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "Audio-DVD" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "physical audio DVD"@en , "El elipsoide, datum geod��sico, o sistema de referencia espacial (SRS) en el que se basan las coordenadas geogr��ficas provistas en Latitud Decimal y Longitud Decimal.��La pr��ctica recomendada es usar el c��digo EPSG como un lenguaje controlado para proporcio"@es , "���������������������������������������������������������������������������������������������������������������������������������������EPSG���������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "audio DVD"@en , "Datum geod��sico"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m048> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "Video-DVD-PAL" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "physical PAL video DVD"@en , "������������������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans , "Un identificador para el conjunto de la informaci��n asociada con Contexto Geol��gico (la ubicaci��n dentro de un contexto geol��gico, tal como la estratigraf��a).��Puede ser un identificador ��nico global o un identificador espec��fico para el conjunto de datos."@es ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "PAL video DVD"@en , "ID del contexto geol��gico"@es , "������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m049> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "Video-DVD-NTSC" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "physical NTSC video DVD"@en , "Una lista (concatenada y separada) de los nombres de las personas, grupos u organizaciones que determinan la georreferencia (representaci��n espacial) para la ubicaci��n. "@es , "������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Georreferenciado por"@es , "NTSC video DVD"@en , "���������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m050> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "photographic slide" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "physical photographic slide"@en , "La fecha en que fue georreferenciada la ubicaci��n.��La pr��ctica recomendada es utilizar un esquema de codificaci��n, tal como ISO 8601:2004 (E)."@es , "���������������������������������������������������������������������������������������������ISO 8601:2004(E)���"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "photographic slide"@en , "Fecha de la georreferenciaci��n"@es , "������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m051> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "photographic print" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "physical photographic print"@en , "Una descripci��n o referencia a los m��todos utilizados para determinar el footprint espacial, coordenadas, e incertidumbres. "@es , "���������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "photographic print"@en , "Protocolo de georreferenciaci��n"@es , "������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m052> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "Blu-ray" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" .
+
+<http://rs.tdwg.org/format/values/m072> <http://www.w3.org/2004/02/skos/core#definition> "unofficial media subtype for Panasonic raw image"@en , "Un identificador de la instituci��n que custodia el objeto(s) o informaci��n mencionada en el registro. "@es , "������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "RW2 raw image"@en , "ID de la instituci��n"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e030> <http://www.w3.org/2004/02/skos/core#definition> "La menor distancia en un rango de distancia desde una superficie de referencia en direcci��n vertical, en metros.��Utilice valores positivos para las ubicaciones por encima de la superficie, valores negativos para ubicaciones por debajo.��Si las medidas de p"@es ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m014" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "QuickTime"@en , "M��nima distancia de la superficie en metros"@es , "������������������������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e031> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "psd" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Photoshop images"@en , "El l��mite inferior del rango de elevaci��n (altitud, generalmente por encima del nivel del mar), en metros. "@es , "������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m036" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Photoshop"@en , "Elevaci��n m��nima en metros"@es , "���������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e032> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "flac" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Free Lossless Audio Codec audio"@en , "El mes ordinal en que ocurri�� el evento. "@es , "������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m038" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Mes"@es , "FLAC"@en , "������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e033> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "wma" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Windows Media Audio"@en , "���������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans , "El nombre completo, sin abreviar de la siguiente regi��n administrativa de menor jerarqu��a que condado (ciudad, municipio, etc.) en el que la ubicaci��n se produce.��No utilice este elemento para el nombre de un lugar cercano que no contiene la ubicaci��n rea"@es ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m039" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Municipio"@es , "MWA"@en , "���������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e034> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "wmv" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Windows Media Video"@en , "La referencia a la fuente en la que est�� definida o impl��cita la circunscripci��n conceptual del tax��n - tradicionalmente representado por el Lat��n \"sensu\" o \"sec.\"��(de secundum, que significa \"seg��n\").��Para los taxones que resultan de las identificaciones"@es , "���������������������������������������������������������������������������������������\"sensu\"���\"sec.\"���������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m040" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Nombre de acuerdo con"@es , "WMV"@en , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e035> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "asf" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Advanced Systems Format"@en , "Un identificador de la fuente en la que est�� definida o impl��cita la circunscripci��n conceptual del tax��n espec��fico.��Ver Nombre de acuerdo con. Ejemplo: \"doi:10.1016/S0269-915X(97)80026-2\"."@es , "���������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m041" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "ID nombre de acuerdo con"@es , "ASF"@en , "������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e036> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "svg" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for SVG images"@en , "Una referencia para la publicaci��n en que se estableci�� originalmente Nombre Cient��fico bajo las reglas del C��digo Nomenclatural asociado. "@es , "���������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m042" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "SVG"@en , "Nombre publicado en  "@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e037> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "obj" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for OBJ"@en , "Un identificador de la publicaci��n en que se estableci�� originalmente Nombre cient��fico bajo las reglas del C��digo nomenclatural asociado. "@es , "������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m062" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "ID del nombre publicado en"@es , "OBJ"@en , "������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e038> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "glb" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Binary GL Transmission Format"@en , "El a��o de cuatro d��gitos en el que se public�� el Nombre cient��fico. "@es , "������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m063" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "gLTF binary"@en , "Nombre publicado en a��o"@es , "������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e039> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "gltf" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for GL Transmission Format"@en , "El c��digo de nomenclatura (o c��digos en el caso de un nombre ambireinal) en virtud del cual se construye el Nombre Cient��fico.��La pr��ctica recomendada es el uso de un lenguaje controlado. "@es , "������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m064" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "gLTF"@en , "C��digo nomenclatural"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e040> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "wrl" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Virtual Reality Modeling Language"@en , "El estatus relacionado con la publicaci��n original del nombre y su conformidad con las normas pertinentes de nomenclatura.��Se basa esencialmente en un algoritmo de acuerdo a las reglas de negociaci��n del c��digo.��No requiere opini��n taxon��mica. "@es , "���������������������������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m065" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Estado nomenclatural"@es , "VRML"@en , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e041> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "dcm" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Digital Imaging and Communications in Medicine"@en , "���������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans , "Un identificador del Registro biol��gico (a cambio de un registro digital particular del Registro biol��gico).��En ausencia de un identificador ��nico global persistente, se debe construir uno a partir de una combinaci��n de identificadores en el registro de m"@es ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m066" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "DICOM"@en , "ID del registro biol��gico"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e042> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "mtl" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for OBJ Material Template Library"@en , "Comentarios o anotaciones sobre el Registro Biol��gico. "@es , "���������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m067" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "MTL"@en , "Comentarios del registro biol��gico"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e043> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "x3dv" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for X3D VRML models"@en , "Una declaraci��n sobre la presencia o ausencia de un tax��n en una ubicaci��n.��La pr��ctica recomendada es el uso de un lenguaje controlado. "@es , "���������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m017" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "X3D VRML"@en , "Estado del registro biol��gico"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e044> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "x3d" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for X3D XML models"@en , "El nombre cient��fico completo del orden en el que se clasifica el tax��n. "@es , "���������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m068" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Orden"@es , "X3D XML"@en , "���"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e045> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "crw" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Camera Image File Format raw image"@en , "���������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans , "El nombre del tax��n, con informaci��n de autor��a y fecha si se conoce, tal como apareci�� originalmente cuando se estableci�� por primera vez bajo las reglas del C��digo Nomenclatural asociadas.��El basi��nimo (bot��nica) o basi��nimo (bacteriolog��a) de Nombre Ci"@es ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m069" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Uso del nombre original"@es , "CIFF raw image"@en , "������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e046> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "cr3" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Canon Raw 3 image"@en , "Un identificador para el uso del nombre (significado documentado del nombre de acuerdo a una fuente) en el que se estableci�� originalmente, el elemento terminal de Nombre Cient��fico bajo las reglas del C��digo Nomenclatural asociado. "@es , "���������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m070" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "ID del uso del nombre original"@es , "CR3 raw image"@en , "������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e047> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "arw" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Sony raw image"@en , "Una lista (concatenada y separada) de n��meros de cat��logos anteriores o alternativos, calificados, u otros identificadores de uso humano para el mismo Registro Biol��gico, ya sea en el actual o cualquier otro conjunto de datos o colecci��n. "@es , "���������������������������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m071" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "ARW raw image"@en , "Otros n��meros de cat��logo"@es , "������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/e048> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "rw2" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "file extension for Panasonic raw image"@en , "El nombre (o acr��nimo) en uso por la instituci��n que tiene la propiedad del objeto(s) o informaci��n referida en el registro. "@es , "������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m072" ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "RW2 raw image"@en , "C��digo de la instituci��n propietaria"@es , "���������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m> a <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+	<http://www.w3.org/2004/02/skos/core#definition> "concept scheme for IANA media types and various physical media items"@en , "El nombre completo, con autor��a e informaci��n de fecha si se conoce, del tax��n actualmente v��lido (zool��gico) o aceptado (bot��nico). "@es , "���������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Nombre aceptado en uso"@es , "media types and physical media concept scheme"@en , "������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m001> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "application" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media type for application"@en , "Una lista (concatenada o delimitada) de identificadores (publicaci��n, identificador ��nico global, URI) de los medios asociados con el registro biol��gico."@es , "������������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Medios asociados"@es .
+
+<http://rs.tdwg.org/format/values/m012> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for MP4 videos"@en , "���������������������������������������������������������������������������������������������������������������������������������������������������(http://www.biodiversitycollectionsindex.org/)���"@zh-hans , "Un identificador de la colecci��n o conjunto de datos del que procede el registro. Para espec��menes f��sicos, la pr��ctica recomendada es utilizar el identificador de un ��ndice de colecci��n tal como el ��ndice de Colecciones de Biodiversidad (http://www.biodi"@es ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "MP4 video"@en , "ID de la colecci��n"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m013> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "video/mpeg" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for MPEG videos"@en , "El nombre del continente en el que la ubicaci��n ocurre.��La pr��ctica recomendada es el uso de un lenguaje controlado, como la norma ISO 3166 de c��digos de Continente. "@es , "���������������������������������������������������������������������������������������������������������������������������3166������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Continente"@es , "MPEG"@en , "���"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m014> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "video/quicktime" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for QuickTime videos"@en , "Una representaci��n decimal de la precisi��n de las coordenadas provistas en Latitud Decimal y Longitud Decimal. "@es , "���������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "QuickTime"@en , "Precisi��n de las coordenadas"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m015> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "audio/mp4" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for MP4 audio"@en , "������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������0������������������"@zh-hans , "La distancia horizontal (en metros) de la Latitud Decimal y Longitud Decimal provistas describiendo el c��rculo m��s peque��o que contiene la totalidad de la ubicaci��n.��Deje el valor vac��o si la incertidumbre es desconocida, no se puede estimar, o no es apli"@es ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "MP4 audio"@en , " Incertidumbre de las coordenadas en metros"@es , "���������������������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m016> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "audio/mpeg" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for MP3 audio"@en , "El nombre del pa��s o unidad administrativa de mayor jerarqu��a de la ubicaci��n.��La pr��ctica recomendada es utilizar un identificador persistente de un lenguaje controlado como el Tesauro Getty de Nombres Geogr��ficos. "@es , "���������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "MP3"@en , "Pa��s"@es , "������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m017> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "model/x3d-vrml" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m004" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for X3D VRML models"@en , "El c��digo est��ndar para el pa��s de la ubicaci��n.��La pr��ctica recomendada es el uso de ISO 3166-1-alfa-2 de c��digos de pa��ses. "@es , "���������������������������������������������������������������������������3166-1-���������-2���������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "X3D VRML"@en , "C��digo del pa��s"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m018> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "application/pdf" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m001" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for PDF documents"@en , "El nombre completo, sin abreviar de la siguiente regi��n administrativa de menor jerarqu��a que Estado Provincia (condado, departamento, etc.) de la ubicaci��n."@es , "���������������������������/������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Condado"@es , "PDF"@en , "���/���"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m019> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "text/plain" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m005" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for plain text"@en , "Las medidas adoptadas para que los datos compartidos sean menos espec��ficos o completos que en su forma original.��Sugiere que datos alternativos de mayor calidad pueden estar disponibles bajo petici��n."@es , "���������������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "plain text"@en , "Generalizaci��n de los datos"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m020> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "application/msword" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m001" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for Microsoft Word (2003 and before) documents"@en , "Un identificador para el conjunto de datos.��Puede ser un identificador ��nico global o un identificador espec��fico de una colecci��n o instituci��n."@es , "���������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "ID del conjunto de datos"@es , "Word (pre-2003) document"@en , "���������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m021> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "application/vnd.openxmlformats-officedocument.wordprocessingml.document" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m001" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for Microsoft Word (2007 and after) documents"@en , "El nombre que identifica el conjunto de datos del cual se deriv�� el registro.  "@es , "������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Nombre del conjunto de datos"@es , "Word (post-2007) document"@en , "���������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m022> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "image/x-adobe-dng" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+
+<http://rs.tdwg.org/format/values/m032> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for OGG audio"@en , "Puede corresponder a: a) un indicador de la existencia de, b) una referencia a (publicaci��n, URI), o c) el texto de las notas tomadas en campo sobre el evento."@es , "������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Periodo temprano o sistema inferior"@es , "OGG audio"@en , "���������������������������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m033> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "video/ogg" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for OGG video"@en , "El ��ltimo d��a ordinal del a��o en que ocurri�� el evento (1 para el 1�� de enero, 365 para el 31 de diciembre, excepto en un a��o bisiesto, en cuyo caso es 366)."@es , "������������������������������������������������������366���������������1������1���1������365������12���31���������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "OGG video"@en , "D��a final del a��o"@es , "���������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m034> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "application/ogg" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m001" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for OGG multiplex"@en , "El proceso por el cual el individuo(s) biol��gico(s) representado en el Registro Biol��gico se estableci�� en el lugar.��La pr��ctica recomendada es el uso de un lenguaje controlado. "@es , "������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Medios de establecimiento"@es , "OGG multiplex"@en , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m035> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "image/x-photo-cd" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for Kodak Photo CD image"@en , """������������������������������������������������������������������������������������						������������������������������������������������������������������������������������ISO 8601:2004(E)���"""@zh-hans , "La fecha y hora o el intervalo durante el cual se produjo un evento.��Para los registros de especies, esta es la fecha y hora cuando el evento se registr��.��No es adecuado para un momento en un contexto geol��gico.��La pr��ctica recomendada es utilizar un esqu"@es ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Fecha del evento"@es , "Kodak Photo CD image"@en , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m036> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "image/vnd.adobe.photoshop" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for Photoshop images"@en , "Un identificador para el conjunto de la informaci��n asociada a un Evento (algo que ocurre en un lugar y tiempo).��Puede ser un identificador ��nico global o un identificador espec��fico para el conjunto de datos. "@es , "������������������������������������������������������������������������������������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "ID del evento"@es , "Photoshop"@en , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m037> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "video/vnd.dlna.mpeg-tts" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for extended MPEG-2 Transport Stream"@en , "Comentarios o anotaciones sobre el evento. "@es , "���������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Comentarios del evento"@es , "extended MPEG-2 Transport Stream"@en , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m038> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "audio/x-flac" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for Free Lossless Audio Codec audio"@en , "El tiempo o intervalo durante el cual se produjo un evento.��La pr��ctica recomendada es utilizar un esquema de codificaci��n, tales como ISO 8601:2004 (E). "@es , """���������������������������������			������������������������������������������������������ISO 			8601:2004(E)���"""@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Hora del evento"@es , "FLAC"@en , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m039> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "audio/x-ms-wma" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for Windows Media Audio"@en , "El nombre cient��fico completo de la familia en el que se clasifica el tax��n. "@es , "���������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Familia"@es , "WMA"@en , "���"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m040> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "video/x-ms-asf" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for Windows Media Video"@en , "Puede corresponder a: a) un indicador de la existencia de, b) una referencia a (publicaci��n, URI), o c) el texto de las notas tomadas en campo sobre el evento."@es , "������������������������������������a������������������b������������������������������������c������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "Notas de campo"@es , "WMV"@en , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m041> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "application/ms-asf" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m001" ;
+	<http://www.w3.org/2004/02/skos/core#definition> "media subtype for Advanced Systems Format"@en , "Un identificador dado en campo al evento.��A menudo sirve como un v��nculo entre las anotaciones de campo y el evento."@es , "���������������������������������������������������������������������"@zh-hans ;
+	<http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" ;
+	<http://www.w3.org/2004/02/skos/core#prefLabel> "ASF"@en , "N��mero de campo"@es , "������������"@zh-hans .
+
+<http://rs.tdwg.org/format/values/m042> a <http://www.w3.org/2004/02/skos/core#Concept> ;
+	rdf:value "image/svg+xml" ;
+	<http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
