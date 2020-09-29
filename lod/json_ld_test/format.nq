@@ -1,0 +1,1207 @@
+<http://rs.tdwg.org/format/values/e001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "txt" .
+<http://rs.tdwg.org/format/values/e001> <http://www.w3.org/2004/02/skos/core#definition> "El nombre de la isla en o cerca de la ubicación. La práctica recomendada es utilizar un identificador persistente de un lenguaje controlado como el Tesauro Getty de Nombres Geográficos."@es .
+<http://rs.tdwg.org/format/values/e001> <http://www.w3.org/2004/02/skos/core#definition> "file extension for palin text"@en .
+<http://rs.tdwg.org/format/values/e001> <http://www.w3.org/2004/02/skos/core#definition> "事件发生地点或附近的岛屿名称。建议最佳做法是使用一个控制性词汇，如地名盖蒂词库。"@zh-hans .
+<http://rs.tdwg.org/format/values/e001> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m019" .
+<http://rs.tdwg.org/format/values/e001> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e001> <http://www.w3.org/2004/02/skos/core#prefLabel> "Isla"@es .
+<http://rs.tdwg.org/format/values/e001> <http://www.w3.org/2004/02/skos/core#prefLabel> "plain text"@en .
+<http://rs.tdwg.org/format/values/e001> <http://www.w3.org/2004/02/skos/core#prefLabel> "岛屿"@zh-hans .
+<http://rs.tdwg.org/format/values/e002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "doc" .
+<http://rs.tdwg.org/format/values/e002> <http://www.w3.org/2004/02/skos/core#definition> "El nombre del grupo de islas de la ubicación. La práctica recomendada es utilizar un identificador persistente de un lenguaje controlado como el Tesauro Getty de Nombres Geográficos."@es .
+<http://rs.tdwg.org/format/values/e002> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Microsoft Word (2003 and before) documents"@en .
+<http://rs.tdwg.org/format/values/e002> <http://www.w3.org/2004/02/skos/core#definition> "事件发生地点的岛群名称。建议最佳做法是使用一个控制性词汇，如地名盖蒂词库。"@zh-hans .
+<http://rs.tdwg.org/format/values/e002> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m020" .
+<http://rs.tdwg.org/format/values/e002> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e002> <http://www.w3.org/2004/02/skos/core#prefLabel> "Grupo de islas"@es .
+<http://rs.tdwg.org/format/values/e002> <http://www.w3.org/2004/02/skos/core#prefLabel> "Word (pre-2003) document"@en .
+<http://rs.tdwg.org/format/values/e002> <http://www.w3.org/2004/02/skos/core#prefLabel> "岛群"@zh-hans .
+<http://rs.tdwg.org/format/values/e003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "docx" .
+<http://rs.tdwg.org/format/values/e003> <http://www.w3.org/2004/02/skos/core#definition> "El nombre científico completo del reino en el que se clasifica el taxón. "@es .
+<http://rs.tdwg.org/format/values/e003> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Microsoft Word (2007 and after) documents"@en .
+<http://rs.tdwg.org/format/values/e003> <http://www.w3.org/2004/02/skos/core#definition> "分类单元所属界的完整学名。"@zh-hans .
+<http://rs.tdwg.org/format/values/e003> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m021" .
+<http://rs.tdwg.org/format/values/e003> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e003> <http://www.w3.org/2004/02/skos/core#prefLabel> "Reino"@es .
+<http://rs.tdwg.org/format/values/e003> <http://www.w3.org/2004/02/skos/core#prefLabel> "Word (post-2007) document"@en .
+<http://rs.tdwg.org/format/values/e003> <http://www.w3.org/2004/02/skos/core#prefLabel> "界"@zh-hans .
+<http://rs.tdwg.org/format/values/e004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "png" .
+<http://rs.tdwg.org/format/values/e004> <http://www.w3.org/2004/02/skos/core#definition> "El nombre completo de la edad geocronológica más tardía posible o etapa cronoestratigráfica más alta, atribuible al horizonte estratigráfico donde se recolectó el objeto catalogado. "@es .
+<http://rs.tdwg.org/format/values/e004> <http://www.w3.org/2004/02/skos/core#definition> "file extension for portable network graphics images"@en .
+<http://rs.tdwg.org/format/values/e004> <http://www.w3.org/2004/02/skos/core#definition> "采集编目项所在地层地平线的可能最晚的地质年代或最高年代地层的完整名称。"@zh-hans .
+<http://rs.tdwg.org/format/values/e004> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m007" .
+<http://rs.tdwg.org/format/values/e004> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e004> <http://www.w3.org/2004/02/skos/core#prefLabel> "Edad tardía o estadío superior"@es .
+<http://rs.tdwg.org/format/values/e004> <http://www.w3.org/2004/02/skos/core#prefLabel> "PNG"@en .
+<http://rs.tdwg.org/format/values/e004> <http://www.w3.org/2004/02/skos/core#prefLabel> "最晚地质年代或最高年代地层"@zh-hans .
+<http://rs.tdwg.org/format/values/e005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "jpg" .
+<http://rs.tdwg.org/format/values/e005> <http://www.w3.org/2004/02/skos/core#definition> "El nombre completo del eón geocronológico más tardío o el eratema crono-estratigráfico más alto posible, o el nombre informal (\"Precámbrico\") atribuible al horizonte estratigráfico donde se recolectó el objeto catalogado. "@es .
+<http://rs.tdwg.org/format/values/e005> <http://www.w3.org/2004/02/skos/core#definition> "file extension for JPEG images"@en .
+<http://rs.tdwg.org/format/values/e005> <http://www.w3.org/2004/02/skos/core#definition> "采集编目项所在地层地平线的可能最晚的地质宙或最高地层宇或非正式名称（“前寒武纪”）的完整名称。"@zh-hans .
+<http://rs.tdwg.org/format/values/e005> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m008" .
+<http://rs.tdwg.org/format/values/e005> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e005> <http://www.w3.org/2004/02/skos/core#prefLabel> "Eón tardío o eonotema superior"@es .
+<http://rs.tdwg.org/format/values/e005> <http://www.w3.org/2004/02/skos/core#prefLabel> "JPEG"@en .
+<http://rs.tdwg.org/format/values/e005> <http://www.w3.org/2004/02/skos/core#prefLabel> "最晚地质宙或最高地层宇"@zh-hans .
+<http://rs.tdwg.org/format/values/e006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "pdf" .
+<http://rs.tdwg.org/format/values/e006> <http://www.w3.org/2004/02/skos/core#definition> "El nombre completo de la época geocronológica más tardía posible o la serie cronoestratigráfica más alta, atribuible al horizonte estratigráfico donde se recolectó el objeto catalogado."@es .
+<http://rs.tdwg.org/format/values/e006> <http://www.w3.org/2004/02/skos/core#definition> "file extension for PDF documents"@en .
+<http://rs.tdwg.org/format/values/e006> <http://www.w3.org/2004/02/skos/core#definition> "采集编目项所在地层地平线的可能最晚的地质世或最高地层统的完整名称。"@zh-hans .
+<http://rs.tdwg.org/format/values/e006> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m018" .
+<http://rs.tdwg.org/format/values/e006> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e006> <http://www.w3.org/2004/02/skos/core#prefLabel> "PDF"@en .
+<http://rs.tdwg.org/format/values/e006> <http://www.w3.org/2004/02/skos/core#prefLabel> "Época tardía o sistema superior"@es .
+<http://rs.tdwg.org/format/values/e006> <http://www.w3.org/2004/02/skos/core#prefLabel> "最晚地质世或最高地层统"@zh-hans .
+<http://rs.tdwg.org/format/values/e007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "tif" .
+<http://rs.tdwg.org/format/values/e007> <http://www.w3.org/2004/02/skos/core#definition> "El nombre completo de la era geocronológica más tardía o el eratema cronoestratigráfico más alto posible, atribuible al horizonte estratigráfico donde se recolectó el objeto catalogado."@es .
+<http://rs.tdwg.org/format/values/e007> <http://www.w3.org/2004/02/skos/core#definition> "file extension for TIFF images"@en .
+<http://rs.tdwg.org/format/values/e007> <http://www.w3.org/2004/02/skos/core#definition> "采集编目项所在地层地平线的可能最晚的地质代或最高地层界的完整名称。"@zh-hans .
+<http://rs.tdwg.org/format/values/e007> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m011" .
+<http://rs.tdwg.org/format/values/e007> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e007> <http://www.w3.org/2004/02/skos/core#prefLabel> "Era tardía o eratema superior"@es .
+<http://rs.tdwg.org/format/values/e007> <http://www.w3.org/2004/02/skos/core#prefLabel> "TIFF"@en .
+<http://rs.tdwg.org/format/values/e007> <http://www.w3.org/2004/02/skos/core#prefLabel> "最晚地质代或最高地层界"@zh-hans .
+<http://rs.tdwg.org/format/values/e008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "dng" .
+<http://rs.tdwg.org/format/values/e008> <http://www.w3.org/2004/02/skos/core#definition> "El nombre completo del período geocronológico más tardío posible o del sistema cronoestratigráfico más alto, atribuible al horizonte estratigráfico donde se recolectó el objeto catalogado."@es .
+<http://rs.tdwg.org/format/values/e008> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Digital Negative images"@en .
+<http://rs.tdwg.org/format/values/e008> <http://www.w3.org/2004/02/skos/core#definition> "采集编目项所在地层地平线的可能最晚的地质纪或最高地层系的完整名称。"@zh-hans .
+<http://rs.tdwg.org/format/values/e008> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m022" .
+<http://rs.tdwg.org/format/values/e008> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e008> <http://www.w3.org/2004/02/skos/core#prefLabel> "Digital Negative"@en .
+<http://rs.tdwg.org/format/values/e008> <http://www.w3.org/2004/02/skos/core#prefLabel> "Periodo tardío o sistema superior"@es .
+<http://rs.tdwg.org/format/values/e008> <http://www.w3.org/2004/02/skos/core#prefLabel> "最晚地质纪或最高地层系"@zh-hans .
+<http://rs.tdwg.org/format/values/e009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "cr2" .
+<http://rs.tdwg.org/format/values/e009> <http://www.w3.org/2004/02/skos/core#definition> "La clase etaria o etapa de vida del individuo(s) biológico(s) en el momento del Registro Biológico. La práctica recomendada es el uso de un lenguaje controlado."@es .
+<http://rs.tdwg.org/format/values/e009> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Canon Raw images"@en .
+<http://rs.tdwg.org/format/values/e009> <http://www.w3.org/2004/02/skos/core#definition> "事件记录时生物个体的年龄级或生命期。建议最佳做法是使用一个控制性词汇。"@zh-hans .
+<http://rs.tdwg.org/format/values/e009> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m023" .
+<http://rs.tdwg.org/format/values/e009> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e009> <http://www.w3.org/2004/02/skos/core#prefLabel> "Canon Raw"@en .
+<http://rs.tdwg.org/format/values/e009> <http://www.w3.org/2004/02/skos/core#prefLabel> "Etapa de vida"@es .
+<http://rs.tdwg.org/format/values/e009> <http://www.w3.org/2004/02/skos/core#prefLabel> "生命期"@zh-hans .
+<http://rs.tdwg.org/format/values/e010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "jp2" .
+<http://rs.tdwg.org/format/values/e010> <http://www.w3.org/2004/02/skos/core#definition> "La combinación de todos los nombres litoestratigráficos de la roca de donde se colectó el objeto catalogado. "@es .
+<http://rs.tdwg.org/format/values/e010> <http://www.w3.org/2004/02/skos/core#definition> "file extension for JPEG 2000 images"@en .
+<http://rs.tdwg.org/format/values/e010> <http://www.w3.org/2004/02/skos/core#definition> "采集编目项所在岩石的所有岩性地层名称的组合。"@zh-hans .
+<http://rs.tdwg.org/format/values/e010> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m024" .
+<http://rs.tdwg.org/format/values/e010> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e010> <http://www.w3.org/2004/02/skos/core#prefLabel> "JPEG 2000"@en .
+<http://rs.tdwg.org/format/values/e010> <http://www.w3.org/2004/02/skos/core#prefLabel> "Términos litoestratigráficos"@es .
+<http://rs.tdwg.org/format/values/e010> <http://www.w3.org/2004/02/skos/core#prefLabel> "岩性地层"@zh-hans .
+<http://rs.tdwg.org/format/values/e011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "wav" .
+<http://rs.tdwg.org/format/values/e011> <http://www.w3.org/2004/02/skos/core#definition> "La descripción específica del lugar. Información geográfica de menor especificidad puede ser provista en otros elementos geográficos (Geografía Superior, Continente, País, Estado Provincia, Condado, Municipio, Cuerpo de Agua, Isla, Grupo Islas). Este elem"@es .
+<http://rs.tdwg.org/format/values/e011> <http://www.w3.org/2004/02/skos/core#definition> "file extension for WAVE audio"@en .
+<http://rs.tdwg.org/format/values/e011> <http://www.w3.org/2004/02/skos/core#definition> "地点的具体描述。其它的地理术语几乎不提供具体地理信息（高级地域，大陆，国家，州/省，县，自治市，水体，岛屿，群岛）。这个术语可能包含由最初修改而来的信息，以纠正理解错误或规范描述。"@zh-hans .
+<http://rs.tdwg.org/format/values/e011> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m025" .
+<http://rs.tdwg.org/format/values/e011> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e011> <http://www.w3.org/2004/02/skos/core#prefLabel> "Localidad"@es .
+<http://rs.tdwg.org/format/values/e011> <http://www.w3.org/2004/02/skos/core#prefLabel> "WAVE"@en .
+<http://rs.tdwg.org/format/values/e011> <http://www.w3.org/2004/02/skos/core#prefLabel> "地点"@zh-hans .
+<http://rs.tdwg.org/format/values/e012> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e012> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "mp3" .
+<http://rs.tdwg.org/format/values/e012> <http://www.w3.org/2004/02/skos/core#definition> "La información sobre la fuente de la información de ubicación. Podría ser una publicación (gacetero), institución o grupo de individuos."@es .
+<http://rs.tdwg.org/format/values/e012> <http://www.w3.org/2004/02/skos/core#definition> "ffle extension for MP3 audio"@en .
+<http://rs.tdwg.org/format/values/e012> <http://www.w3.org/2004/02/skos/core#definition> "地点信息源的信息，可能是出版物（地名），机构，或者团队个体。"@zh-hans .
+<http://rs.tdwg.org/format/values/e012> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m016" .
+<http://rs.tdwg.org/format/values/e012> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e012> <http://www.w3.org/2004/02/skos/core#prefLabel> "MP3"@en .
+<http://rs.tdwg.org/format/values/e012> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ubicación de acuerdo con"@es .
+<http://rs.tdwg.org/format/values/e012> <http://www.w3.org/2004/02/skos/core#prefLabel> "地点依据"@zh-hans .
+<http://rs.tdwg.org/format/values/e013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "nef" .
+<http://rs.tdwg.org/format/values/e013> <http://www.w3.org/2004/02/skos/core#definition> "Un identificador para el conjunto de información de la ubicación (los datos asociados a Ubicación). Puede ser un identificador único global o un identificador específico para el conjunto de datos. "@es .
+<http://rs.tdwg.org/format/values/e013> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Nikon NEF Raw images"@en .
+<http://rs.tdwg.org/format/values/e013> <http://www.w3.org/2004/02/skos/core#definition> "地点信息集（与dcterms:Location有关的数据）的标识符，可能是一个全局唯一标识符或者是一个特定数据集的标识符。"@zh-hans .
+<http://rs.tdwg.org/format/values/e013> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m026" .
+<http://rs.tdwg.org/format/values/e013> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e013> <http://www.w3.org/2004/02/skos/core#prefLabel> "ID de la ubicación"@es .
+<http://rs.tdwg.org/format/values/e013> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nikon NEF Raw"@en .
+<http://rs.tdwg.org/format/values/e013> <http://www.w3.org/2004/02/skos/core#prefLabel> "地点编号"@zh-hans .
+<http://rs.tdwg.org/format/values/e014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "m4a" .
+<http://rs.tdwg.org/format/values/e014> <http://www.w3.org/2004/02/skos/core#definition> "Comentarios o anotaciones sobre la ubicación. "@es .
+<http://rs.tdwg.org/format/values/e014> <http://www.w3.org/2004/02/skos/core#definition> "file extension for MP4 audio"@en .
+<http://rs.tdwg.org/format/values/e014> <http://www.w3.org/2004/02/skos/core#definition> "关于地点的评论或记录。"@zh-hans .
+<http://rs.tdwg.org/format/values/e014> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m015" .
+<http://rs.tdwg.org/format/values/e014> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e014> <http://www.w3.org/2004/02/skos/core#prefLabel> "Comentarios de la ubicación"@es .
+<http://rs.tdwg.org/format/values/e014> <http://www.w3.org/2004/02/skos/core#prefLabel> "MP4 audio"@en .
+<http://rs.tdwg.org/format/values/e014> <http://www.w3.org/2004/02/skos/core#prefLabel> "地点备注"@zh-hans .
+<http://rs.tdwg.org/format/values/e015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "mp4" .
+<http://rs.tdwg.org/format/values/e015> <http://www.w3.org/2004/02/skos/core#definition> "El nombre completo de la zona geológica bioestratigráfica más baja posible del horizonte estratigráfico donde se recolectó el objeto catalogado. "@es .
+<http://rs.tdwg.org/format/values/e015> <http://www.w3.org/2004/02/skos/core#definition> "file extension for MP4 video"@en .
+<http://rs.tdwg.org/format/values/e015> <http://www.w3.org/2004/02/skos/core#definition> "采集编目项所在地层地平线的可能最低的地质生物地层学区的完整名称。"@zh-hans .
+<http://rs.tdwg.org/format/values/e015> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m012" .
+<http://rs.tdwg.org/format/values/e015> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e015> <http://www.w3.org/2004/02/skos/core#prefLabel> "MP4 video"@en .
+<http://rs.tdwg.org/format/values/e015> <http://www.w3.org/2004/02/skos/core#prefLabel> "Zona bioestatigráfica inferior"@es .
+<http://rs.tdwg.org/format/values/e015> <http://www.w3.org/2004/02/skos/core#prefLabel> "最低生物地层区"@zh-hans .
+<http://rs.tdwg.org/format/values/e016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "gif" .
+<http://rs.tdwg.org/format/values/e016> <http://www.w3.org/2004/02/skos/core#definition> "La mayor profundidad de un rango de profundidad por debajo de la superficie local, en metros."@es .
+<http://rs.tdwg.org/format/values/e016> <http://www.w3.org/2004/02/skos/core#definition> "file extension for GIF images"@en .
+<http://rs.tdwg.org/format/values/e016> <http://www.w3.org/2004/02/skos/core#definition> "在地表一定深度范围以下的更深的深度，以“米”作单位。"@zh-hans .
+<http://rs.tdwg.org/format/values/e016> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m010" .
+<http://rs.tdwg.org/format/values/e016> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e016> <http://www.w3.org/2004/02/skos/core#prefLabel> "GIF"@en .
+<http://rs.tdwg.org/format/values/e016> <http://www.w3.org/2004/02/skos/core#prefLabel> "Profundidad máxima en metros"@es .
+<http://rs.tdwg.org/format/values/e016> <http://www.w3.org/2004/02/skos/core#prefLabel> "最大深度（米）"@zh-hans .
+<http://rs.tdwg.org/format/values/e017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "bmp" .
+<http://rs.tdwg.org/format/values/e017> <http://www.w3.org/2004/02/skos/core#definition> "La mayor distancia en un rango de distancia desde una superficie de referencia en dirección vertical, en metros. Utilice valores positivos para las ubicaciones por encima de la superficie, valores negativos para las ubicaciones por debajo. Si las medidas "@es .
+<http://rs.tdwg.org/format/values/e017> <http://www.w3.org/2004/02/skos/core#definition> "file extension for bitmap images"@en .
+<http://rs.tdwg.org/format/values/e017> <http://www.w3.org/2004/02/skos/core#definition> "在垂直方向，距离参考表面更大的一个距离范围内，以米作为单位。使用正值代表表面以上的位置，负值代表表面以下的位置。如果已经给出深度的测量值，那么参考表面的位置由深度确定，否则参考表面的位置由海拔确定。"@zh-hans .
+<http://rs.tdwg.org/format/values/e017> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m009" .
+<http://rs.tdwg.org/format/values/e017> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e017> <http://www.w3.org/2004/02/skos/core#prefLabel> "BMP"@en .
+<http://rs.tdwg.org/format/values/e017> <http://www.w3.org/2004/02/skos/core#prefLabel> "Máxima distancia de la superficie metros"@es .
+<http://rs.tdwg.org/format/values/e017> <http://www.w3.org/2004/02/skos/core#prefLabel> "参考表面以上的最大距离（米）"@zh-hans .
+<http://rs.tdwg.org/format/values/e018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "m4v" .
+<http://rs.tdwg.org/format/values/e018> <http://www.w3.org/2004/02/skos/core#definition> "El límite superior del rango de elevación (altitud, generalmente por encima del nivel del mar), en metros. "@es .
+<http://rs.tdwg.org/format/values/e018> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Apple M4V videos"@en .
+<http://rs.tdwg.org/format/values/e018> <http://www.w3.org/2004/02/skos/core#definition> "海拔（海平面以上的高度）范围的上限，以“米”为单位。"@zh-hans .
+<http://rs.tdwg.org/format/values/e018> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m027" .
+<http://rs.tdwg.org/format/values/e018> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e018> <http://www.w3.org/2004/02/skos/core#prefLabel> "Elevación máxima en metros"@es .
+<http://rs.tdwg.org/format/values/e018> <http://www.w3.org/2004/02/skos/core#prefLabel> "M4V"@en .
+<http://rs.tdwg.org/format/values/e018> <http://www.w3.org/2004/02/skos/core#prefLabel> "最高海拔（米）"@zh-hans .
+<http://rs.tdwg.org/format/values/e019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "ply" .
+<http://rs.tdwg.org/format/values/e019> <http://www.w3.org/2004/02/skos/core#definition> "La descripción de los errores potenciales asociados con Valor de la medición. "@es .
+<http://rs.tdwg.org/format/values/e019> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Polygon File Format"@en .
+<http://rs.tdwg.org/format/values/e019> <http://www.w3.org/2004/02/skos/core#definition> "与测量值相关的潜在误差的描述。"@zh-hans .
+<http://rs.tdwg.org/format/values/e019> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e019> <http://www.w3.org/2004/02/skos/core#prefLabel> "PLY"@en .
+<http://rs.tdwg.org/format/values/e019> <http://www.w3.org/2004/02/skos/core#prefLabel> "Precisión de la medición"@es .
+<http://rs.tdwg.org/format/values/e019> <http://www.w3.org/2004/02/skos/core#prefLabel> "测量精度"@zh-hans .
+<http://rs.tdwg.org/format/values/e020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "stl" .
+<http://rs.tdwg.org/format/values/e020> <http://www.w3.org/2004/02/skos/core#definition> "Una lista (concatenada y separada) de los nombres de las personas, grupos u organizaciones que determinan el valor de Medición o Hecho. "@es .
+<http://rs.tdwg.org/format/values/e020> <http://www.w3.org/2004/02/skos/core#definition> "file extension for steriolithography files"@en .
+<http://rs.tdwg.org/format/values/e020> <http://www.w3.org/2004/02/skos/core#definition> "确定“测量或事实”值的人名，群体或组织的列表（连接的或分开的）。"@zh-hans .
+<http://rs.tdwg.org/format/values/e020> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m055" .
+<http://rs.tdwg.org/format/values/e020> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e020> <http://www.w3.org/2004/02/skos/core#prefLabel> "Medición determinada por"@es .
+<http://rs.tdwg.org/format/values/e020> <http://www.w3.org/2004/02/skos/core#prefLabel> "STL"@en .
+<http://rs.tdwg.org/format/values/e020> <http://www.w3.org/2004/02/skos/core#prefLabel> "确定测量结果者"@zh-hans .
+<http://rs.tdwg.org/format/values/e021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "3gp" .
+<http://rs.tdwg.org/format/values/e021> <http://www.w3.org/2004/02/skos/core#definition> "La fecha en que se realizó Medición o Hecho. La práctica recomendada es utilizar un esquema de codificación, como ISO 8601:2004 (E). "@es .
+<http://rs.tdwg.org/format/values/e021> <http://www.w3.org/2004/02/skos/core#definition> "file extension for 3GPP video"@en .
+<http://rs.tdwg.org/format/values/e021> <http://www.w3.org/2004/02/skos/core#definition> "制定“测量或事实”的日期，建议最佳做法是使用一个编码方案，例如ISO 8601:2004(E)。"@zh-hans .
+<http://rs.tdwg.org/format/values/e021> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m028" .
+<http://rs.tdwg.org/format/values/e021> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e021> <http://www.w3.org/2004/02/skos/core#prefLabel> "3GPP"@en .
+<http://rs.tdwg.org/format/values/e021> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fecha de la determinación de la medición"@es .
+<http://rs.tdwg.org/format/values/e021> <http://www.w3.org/2004/02/skos/core#prefLabel> "确定测量结果日期"@zh-hans .
+<http://rs.tdwg.org/format/values/e022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "zvi" .
+<http://rs.tdwg.org/format/values/e022> <http://www.w3.org/2004/02/skos/core#definition> "Un identificador para Medición o hecho (la información relativa a las mediciones, hechos, características o aseveraciones). Puede ser un identificador único global o un identificador específico para el conjunto de datos. "@es .
+<http://rs.tdwg.org/format/values/e022> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Zeiss Vision Image images"@en .
+<http://rs.tdwg.org/format/values/e022> <http://www.w3.org/2004/02/skos/core#definition> "测量或事实（关于测量，事实，特征或推断的信息）的标识符，可能是一个全局唯一标识符或者一个数据集特有的标识符。"@zh-hans .
+<http://rs.tdwg.org/format/values/e022> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m054" .
+<http://rs.tdwg.org/format/values/e022> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e022> <http://www.w3.org/2004/02/skos/core#prefLabel> "ID de la medición"@es .
+<http://rs.tdwg.org/format/values/e022> <http://www.w3.org/2004/02/skos/core#prefLabel> "ZVI"@en .
+<http://rs.tdwg.org/format/values/e022> <http://www.w3.org/2004/02/skos/core#prefLabel> "测量编号"@zh-hans .
+<http://rs.tdwg.org/format/values/e023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "avi" .
+<http://rs.tdwg.org/format/values/e023> <http://www.w3.org/2004/02/skos/core#definition> "Una descripción o referencia (publicación, URI) del método o protocolo utilizado para determinar la medición, hecho, característica o aseveración. "@es .
+<http://rs.tdwg.org/format/values/e023> <http://www.w3.org/2004/02/skos/core#definition> "file extension for AVI video"@en .
+<http://rs.tdwg.org/format/values/e023> <http://www.w3.org/2004/02/skos/core#definition> "用来确定测量，事实，特征或者推断的方法或草案的描述或者参考。"@zh-hans .
+<http://rs.tdwg.org/format/values/e023> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m029" .
+<http://rs.tdwg.org/format/values/e023> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e023> <http://www.w3.org/2004/02/skos/core#prefLabel> "AVI"@en .
+<http://rs.tdwg.org/format/values/e023> <http://www.w3.org/2004/02/skos/core#prefLabel> "Método de medición"@es .
+<http://rs.tdwg.org/format/values/e023> <http://www.w3.org/2004/02/skos/core#prefLabel> "测量方法"@zh-hans .
+<http://rs.tdwg.org/format/values/e024> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e024> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "amr" .
+<http://rs.tdwg.org/format/values/e024> <http://www.w3.org/2004/02/skos/core#definition> "Comentarios o anotaciones que acompañan a Medición o hecho. "@es .
+<http://rs.tdwg.org/format/values/e024> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Adaptive Multi-Rate audio"@en .
+<http://rs.tdwg.org/format/values/e024> <http://www.w3.org/2004/02/skos/core#definition> "附在“测量或事实”上的评论和注释。"@zh-hans .
+<http://rs.tdwg.org/format/values/e024> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m030" .
+<http://rs.tdwg.org/format/values/e024> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e024> <http://www.w3.org/2004/02/skos/core#prefLabel> "AMR"@en .
+<http://rs.tdwg.org/format/values/e024> <http://www.w3.org/2004/02/skos/core#prefLabel> "Comentarios de la medición"@es .
+<http://rs.tdwg.org/format/values/e024> <http://www.w3.org/2004/02/skos/core#prefLabel> "测量备注"@zh-hans .
+<http://rs.tdwg.org/format/values/e025> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e025> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "aiff" .
+<http://rs.tdwg.org/format/values/e025> <http://www.w3.org/2004/02/skos/core#definition> "La naturaleza de la medición, hecho, característica o aseveración. La práctica recomendada es el uso de un lenguaje controlado. "@es .
+<http://rs.tdwg.org/format/values/e025> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Audio Interchange File Format audio"@en .
+<http://rs.tdwg.org/format/values/e025> <http://www.w3.org/2004/02/skos/core#definition> "测量，事实，特征，和推断的性质。最好的做法是使用一个控制性词汇。"@zh-hans .
+<http://rs.tdwg.org/format/values/e025> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m031" .
+<http://rs.tdwg.org/format/values/e025> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e025> <http://www.w3.org/2004/02/skos/core#prefLabel> "AIFF"@en .
+<http://rs.tdwg.org/format/values/e025> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tipo de medición"@es .
+<http://rs.tdwg.org/format/values/e025> <http://www.w3.org/2004/02/skos/core#prefLabel> "测量类型"@zh-hans .
+<http://rs.tdwg.org/format/values/e026> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e026> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "ogg" .
+<http://rs.tdwg.org/format/values/e026> <http://www.w3.org/2004/02/skos/core#definition> "Las unidades asociadas con Valor de la Medición. La práctica recomendada es utilizar el Sistema Internacional de Unidades (SI). "@es .
+<http://rs.tdwg.org/format/values/e026> <http://www.w3.org/2004/02/skos/core#definition> "file extension for OGG audio"@en .
+<http://rs.tdwg.org/format/values/e026> <http://www.w3.org/2004/02/skos/core#definition> "与测量值相关的单位最好采用国际单位系统（SI）。"@zh-hans .
+<http://rs.tdwg.org/format/values/e026> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m032" .
+<http://rs.tdwg.org/format/values/e026> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e026> <http://www.w3.org/2004/02/skos/core#prefLabel> "OGG audio"@en .
+<http://rs.tdwg.org/format/values/e026> <http://www.w3.org/2004/02/skos/core#prefLabel> "Unidad de medición"@es .
+<http://rs.tdwg.org/format/values/e026> <http://www.w3.org/2004/02/skos/core#prefLabel> "测量单位"@zh-hans .
+<http://rs.tdwg.org/format/values/e027> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e027> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "ogv" .
+<http://rs.tdwg.org/format/values/e027> <http://www.w3.org/2004/02/skos/core#definition> "El valor de la medición, hecho, característica o aseveración. "@es .
+<http://rs.tdwg.org/format/values/e027> <http://www.w3.org/2004/02/skos/core#definition> "file extension for OGG video"@en .
+<http://rs.tdwg.org/format/values/e027> <http://www.w3.org/2004/02/skos/core#definition> "测量，事实，特征，和推断的值。"@zh-hans .
+<http://rs.tdwg.org/format/values/e027> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m033" .
+<http://rs.tdwg.org/format/values/e027> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e027> <http://www.w3.org/2004/02/skos/core#prefLabel> "OGG video"@en .
+<http://rs.tdwg.org/format/values/e027> <http://www.w3.org/2004/02/skos/core#prefLabel> "Valor de la medición"@es .
+<http://rs.tdwg.org/format/values/e027> <http://www.w3.org/2004/02/skos/core#prefLabel> "测量值"@zh-hans .
+<http://rs.tdwg.org/format/values/e028> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e028> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "ogx" .
+<http://rs.tdwg.org/format/values/e028> <http://www.w3.org/2004/02/skos/core#definition> "El nombre completo del miembro litoestratigráfico del cual se colectó el elemento catalogado. "@es .
+<http://rs.tdwg.org/format/values/e028> <http://www.w3.org/2004/02/skos/core#definition> "file extension for OGG multiplex"@en .
+<http://rs.tdwg.org/format/values/e028> <http://www.w3.org/2004/02/skos/core#definition> "采集编目项所在地层成员的完整名称。"@zh-hans .
+<http://rs.tdwg.org/format/values/e028> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m034" .
+<http://rs.tdwg.org/format/values/e028> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e028> <http://www.w3.org/2004/02/skos/core#prefLabel> "Miembro"@es .
+<http://rs.tdwg.org/format/values/e028> <http://www.w3.org/2004/02/skos/core#prefLabel> "OGG multiplex"@en .
+<http://rs.tdwg.org/format/values/e028> <http://www.w3.org/2004/02/skos/core#prefLabel> "成员"@zh-hans .
+<http://rs.tdwg.org/format/values/e029> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e029> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "pcd" .
+<http://rs.tdwg.org/format/values/e029> <http://www.w3.org/2004/02/skos/core#definition> "La menor profundidad de un rango de profundidad por debajo de la superficie local, en metros. "@es .
+<http://rs.tdwg.org/format/values/e029> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Kodak Photo CD image"@en .
+<http://rs.tdwg.org/format/values/e029> <http://www.w3.org/2004/02/skos/core#definition> "地表以下较低的深度，以“米”为单位。"@zh-hans .
+<http://rs.tdwg.org/format/values/e029> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m035" .
+<http://rs.tdwg.org/format/values/e029> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e029> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kodak Photo CD image"@en .
+<http://rs.tdwg.org/format/values/e029> <http://www.w3.org/2004/02/skos/core#prefLabel> "Profundidad mínima en metros"@es .
+<http://rs.tdwg.org/format/values/e029> <http://www.w3.org/2004/02/skos/core#prefLabel> "最小深度（米）"@zh-hans .
+<http://rs.tdwg.org/format/values/e030> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e030> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "mov" .
+<http://rs.tdwg.org/format/values/e030> <http://www.w3.org/2004/02/skos/core#definition> "La menor distancia en un rango de distancia desde una superficie de referencia en dirección vertical, en metros. Utilice valores positivos para las ubicaciones por encima de la superficie, valores negativos para ubicaciones por debajo. Si las medidas de p"@es .
+<http://rs.tdwg.org/format/values/e030> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Apple QuickTime video"@en .
+<http://rs.tdwg.org/format/values/e030> <http://www.w3.org/2004/02/skos/core#definition> "在垂直方向，距离参考表面较小的距离范围内的距离，以“米”为单位。使用正值代表表面以上的位置，负值代表表面以下的位置。如果已经给出深度的测量值，那么参考表面的位置由深度确定，否则参考表面的位置由海拔确定。"@zh-hans .
+<http://rs.tdwg.org/format/values/e030> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m014" .
+<http://rs.tdwg.org/format/values/e030> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e030> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mínima distancia de la superficie en metros"@es .
+<http://rs.tdwg.org/format/values/e030> <http://www.w3.org/2004/02/skos/core#prefLabel> "QuickTime"@en .
+<http://rs.tdwg.org/format/values/e030> <http://www.w3.org/2004/02/skos/core#prefLabel> "参考表面以上的最小距离（米）"@zh-hans .
+<http://rs.tdwg.org/format/values/e031> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e031> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "psd" .
+<http://rs.tdwg.org/format/values/e031> <http://www.w3.org/2004/02/skos/core#definition> "El límite inferior del rango de elevación (altitud, generalmente por encima del nivel del mar), en metros. "@es .
+<http://rs.tdwg.org/format/values/e031> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Photoshop images"@en .
+<http://rs.tdwg.org/format/values/e031> <http://www.w3.org/2004/02/skos/core#definition> "海拔（海平面以上的高度）范围的下限，以“米”为单位。"@zh-hans .
+<http://rs.tdwg.org/format/values/e031> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m036" .
+<http://rs.tdwg.org/format/values/e031> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e031> <http://www.w3.org/2004/02/skos/core#prefLabel> "Elevación mínima en metros"@es .
+<http://rs.tdwg.org/format/values/e031> <http://www.w3.org/2004/02/skos/core#prefLabel> "Photoshop"@en .
+<http://rs.tdwg.org/format/values/e031> <http://www.w3.org/2004/02/skos/core#prefLabel> "最低海拔（米）"@zh-hans .
+<http://rs.tdwg.org/format/values/e032> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e032> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "flac" .
+<http://rs.tdwg.org/format/values/e032> <http://www.w3.org/2004/02/skos/core#definition> "El mes ordinal en que ocurrió el evento. "@es .
+<http://rs.tdwg.org/format/values/e032> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Free Lossless Audio Codec audio"@en .
+<http://rs.tdwg.org/format/values/e032> <http://www.w3.org/2004/02/skos/core#definition> "事件发生的月份序号。"@zh-hans .
+<http://rs.tdwg.org/format/values/e032> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m038" .
+<http://rs.tdwg.org/format/values/e032> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e032> <http://www.w3.org/2004/02/skos/core#prefLabel> "FLAC"@en .
+<http://rs.tdwg.org/format/values/e032> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mes"@es .
+<http://rs.tdwg.org/format/values/e032> <http://www.w3.org/2004/02/skos/core#prefLabel> "月份"@zh-hans .
+<http://rs.tdwg.org/format/values/e033> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e033> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "wma" .
+<http://rs.tdwg.org/format/values/e033> <http://www.w3.org/2004/02/skos/core#definition> "El nombre completo, sin abreviar de la siguiente región administrativa de menor jerarquía que condado (ciudad, municipio, etc.) en el que la ubicación se produce. No utilice este elemento para el nombre de un lugar cercano que no contiene la ubicación rea"@es .
+<http://rs.tdwg.org/format/values/e033> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Windows Media Audio"@en .
+<http://rs.tdwg.org/format/values/e033> <http://www.w3.org/2004/02/skos/core#definition> "事件发生的完整、未缩写的地点名称，比县（市、自治区等）更小的行政区域。对于附近不包含实际地点的已命名地区不要使用这个词语。"@zh-hans .
+<http://rs.tdwg.org/format/values/e033> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m039" .
+<http://rs.tdwg.org/format/values/e033> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e033> <http://www.w3.org/2004/02/skos/core#prefLabel> "MWA"@en .
+<http://rs.tdwg.org/format/values/e033> <http://www.w3.org/2004/02/skos/core#prefLabel> "Municipio"@es .
+<http://rs.tdwg.org/format/values/e033> <http://www.w3.org/2004/02/skos/core#prefLabel> "自治市"@zh-hans .
+<http://rs.tdwg.org/format/values/e034> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e034> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "wmv" .
+<http://rs.tdwg.org/format/values/e034> <http://www.w3.org/2004/02/skos/core#definition> "La referencia a la fuente en la que está definida o implícita la circunscripción conceptual del taxón - tradicionalmente representado por el Latín \"sensu\" o \"sec.\" (de secundum, que significa \"según\"). Para los taxones que resultan de las identificaciones"@es .
+<http://rs.tdwg.org/format/values/e034> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Windows Media Video"@en .
+<http://rs.tdwg.org/format/values/e034> <http://www.w3.org/2004/02/skos/core#definition> "参考源中定义或暗示了具体类群的概念界限，照惯例表示为拉丁语\"sensu\"或\"sec.\"（按照依据，意思是“根据”）。对于一个鉴定结果的类群，应给出参考关键词，专题论文，专家及其他资源。"@zh-hans .
+<http://rs.tdwg.org/format/values/e034> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m040" .
+<http://rs.tdwg.org/format/values/e034> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e034> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nombre de acuerdo con"@es .
+<http://rs.tdwg.org/format/values/e034> <http://www.w3.org/2004/02/skos/core#prefLabel> "WMV"@en .
+<http://rs.tdwg.org/format/values/e034> <http://www.w3.org/2004/02/skos/core#prefLabel> "名称依据"@zh-hans .
+<http://rs.tdwg.org/format/values/e035> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e035> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "asf" .
+<http://rs.tdwg.org/format/values/e035> <http://www.w3.org/2004/02/skos/core#definition> "Un identificador de la fuente en la que está definida o implícita la circunscripción conceptual del taxón específico. Ver Nombre de acuerdo con. Ejemplo: \"doi:10.1016/S0269-915X(97)80026-2\"."@es .
+<http://rs.tdwg.org/format/values/e035> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Advanced Systems Format"@en .
+<http://rs.tdwg.org/format/values/e035> <http://www.w3.org/2004/02/skos/core#definition> "参考源中定义或暗示具体类群概念界限的标识符，参见“名称依据”。"@zh-hans .
+<http://rs.tdwg.org/format/values/e035> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m041" .
+<http://rs.tdwg.org/format/values/e035> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e035> <http://www.w3.org/2004/02/skos/core#prefLabel> "ASF"@en .
+<http://rs.tdwg.org/format/values/e035> <http://www.w3.org/2004/02/skos/core#prefLabel> "ID nombre de acuerdo con"@es .
+<http://rs.tdwg.org/format/values/e035> <http://www.w3.org/2004/02/skos/core#prefLabel> "名称依据编号"@zh-hans .
+<http://rs.tdwg.org/format/values/e036> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e036> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "svg" .
+<http://rs.tdwg.org/format/values/e036> <http://www.w3.org/2004/02/skos/core#definition> "Una referencia para la publicación en que se estableció originalmente Nombre Científico bajo las reglas del Código Nomenclatural asociado. "@es .
+<http://rs.tdwg.org/format/values/e036> <http://www.w3.org/2004/02/skos/core#definition> "file extension for SVG images"@en .
+<http://rs.tdwg.org/format/values/e036> <http://www.w3.org/2004/02/skos/core#definition> "在相关的命名规则下，确定最初学名的出版参考物。"@zh-hans .
+<http://rs.tdwg.org/format/values/e036> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m042" .
+<http://rs.tdwg.org/format/values/e036> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e036> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nombre publicado en  "@es .
+<http://rs.tdwg.org/format/values/e036> <http://www.w3.org/2004/02/skos/core#prefLabel> "SVG"@en .
+<http://rs.tdwg.org/format/values/e036> <http://www.w3.org/2004/02/skos/core#prefLabel> "发布名称"@zh-hans .
+<http://rs.tdwg.org/format/values/e037> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e037> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "obj" .
+<http://rs.tdwg.org/format/values/e037> <http://www.w3.org/2004/02/skos/core#definition> "Un identificador de la publicación en que se estableció originalmente Nombre científico bajo las reglas del Código nomenclatural asociado. "@es .
+<http://rs.tdwg.org/format/values/e037> <http://www.w3.org/2004/02/skos/core#definition> "file extension for OBJ"@en .
+<http://rs.tdwg.org/format/values/e037> <http://www.w3.org/2004/02/skos/core#definition> "在相关的命名规则下，确定最初学名的出版物标识符。"@zh-hans .
+<http://rs.tdwg.org/format/values/e037> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m062" .
+<http://rs.tdwg.org/format/values/e037> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e037> <http://www.w3.org/2004/02/skos/core#prefLabel> "ID del nombre publicado en"@es .
+<http://rs.tdwg.org/format/values/e037> <http://www.w3.org/2004/02/skos/core#prefLabel> "OBJ"@en .
+<http://rs.tdwg.org/format/values/e037> <http://www.w3.org/2004/02/skos/core#prefLabel> "名称发布编号"@zh-hans .
+<http://rs.tdwg.org/format/values/e038> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e038> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "glb" .
+<http://rs.tdwg.org/format/values/e038> <http://www.w3.org/2004/02/skos/core#definition> "El año de cuatro dígitos en el que se publicó el Nombre científico. "@es .
+<http://rs.tdwg.org/format/values/e038> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Binary GL Transmission Format"@en .
+<http://rs.tdwg.org/format/values/e038> <http://www.w3.org/2004/02/skos/core#definition> "学名发布的四位公历年份。"@zh-hans .
+<http://rs.tdwg.org/format/values/e038> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m063" .
+<http://rs.tdwg.org/format/values/e038> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e038> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nombre publicado en año"@es .
+<http://rs.tdwg.org/format/values/e038> <http://www.w3.org/2004/02/skos/core#prefLabel> "gLTF binary"@en .
+<http://rs.tdwg.org/format/values/e038> <http://www.w3.org/2004/02/skos/core#prefLabel> "名称发布年份"@zh-hans .
+<http://rs.tdwg.org/format/values/e039> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e039> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "gltf" .
+<http://rs.tdwg.org/format/values/e039> <http://www.w3.org/2004/02/skos/core#definition> "El código de nomenclatura (o códigos en el caso de un nombre ambireinal) en virtud del cual se construye el Nombre Científico. La práctica recomendada es el uso de un lenguaje controlado. "@es .
+<http://rs.tdwg.org/format/values/e039> <http://www.w3.org/2004/02/skos/core#definition> "file extension for GL Transmission Format"@en .
+<http://rs.tdwg.org/format/values/e039> <http://www.w3.org/2004/02/skos/core#definition> "创建学名所遵循的命名准则。建议最佳做法是使用一个控制性词汇。"@zh-hans .
+<http://rs.tdwg.org/format/values/e039> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m064" .
+<http://rs.tdwg.org/format/values/e039> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e039> <http://www.w3.org/2004/02/skos/core#prefLabel> "Código nomenclatural"@es .
+<http://rs.tdwg.org/format/values/e039> <http://www.w3.org/2004/02/skos/core#prefLabel> "gLTF"@en .
+<http://rs.tdwg.org/format/values/e039> <http://www.w3.org/2004/02/skos/core#prefLabel> "命名准则"@zh-hans .
+<http://rs.tdwg.org/format/values/e040> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e040> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "wrl" .
+<http://rs.tdwg.org/format/values/e040> <http://www.w3.org/2004/02/skos/core#definition> "El estatus relacionado con la publicación original del nombre y su conformidad con las normas pertinentes de nomenclatura. Se basa esencialmente en un algoritmo de acuerdo a las reglas de negociación del código. No requiere opinión taxonómica. "@es .
+<http://rs.tdwg.org/format/values/e040> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Virtual Reality Modeling Language"@en .
+<http://rs.tdwg.org/format/values/e040> <http://www.w3.org/2004/02/skos/core#definition> "与名称的最初出版物相关的状态及与命名相关规则的一致性。本质上基于一个根据业务规则代码的算法，不需要分类的意见。"@zh-hans .
+<http://rs.tdwg.org/format/values/e040> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m065" .
+<http://rs.tdwg.org/format/values/e040> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e040> <http://www.w3.org/2004/02/skos/core#prefLabel> "Estado nomenclatural"@es .
+<http://rs.tdwg.org/format/values/e040> <http://www.w3.org/2004/02/skos/core#prefLabel> "VRML"@en .
+<http://rs.tdwg.org/format/values/e040> <http://www.w3.org/2004/02/skos/core#prefLabel> "命名状态"@zh-hans .
+<http://rs.tdwg.org/format/values/e041> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e041> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "dcm" .
+<http://rs.tdwg.org/format/values/e041> <http://www.w3.org/2004/02/skos/core#definition> "Un identificador del Registro biológico (a cambio de un registro digital particular del Registro biológico). En ausencia de un identificador único global persistente, se debe construir uno a partir de una combinación de identificadores en el registro de m"@es .
+<http://rs.tdwg.org/format/values/e041> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Digital Imaging and Communications in Medicine"@en .
+<http://rs.tdwg.org/format/values/e041> <http://www.w3.org/2004/02/skos/core#definition> "一个事件的标识符（并非一个事件的具体数字记录）。在缺乏全局唯一标识符的情况下，从最接近全局唯一事件编号的记录中构建一个标识符。"@zh-hans .
+<http://rs.tdwg.org/format/values/e041> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m066" .
+<http://rs.tdwg.org/format/values/e041> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e041> <http://www.w3.org/2004/02/skos/core#prefLabel> "DICOM"@en .
+<http://rs.tdwg.org/format/values/e041> <http://www.w3.org/2004/02/skos/core#prefLabel> "ID del registro biológico"@es .
+<http://rs.tdwg.org/format/values/e041> <http://www.w3.org/2004/02/skos/core#prefLabel> "事件编号"@zh-hans .
+<http://rs.tdwg.org/format/values/e042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "mtl" .
+<http://rs.tdwg.org/format/values/e042> <http://www.w3.org/2004/02/skos/core#definition> "Comentarios o anotaciones sobre el Registro Biológico. "@es .
+<http://rs.tdwg.org/format/values/e042> <http://www.w3.org/2004/02/skos/core#definition> "file extension for OBJ Material Template Library"@en .
+<http://rs.tdwg.org/format/values/e042> <http://www.w3.org/2004/02/skos/core#definition> "关于这个事件的评论和注释。"@zh-hans .
+<http://rs.tdwg.org/format/values/e042> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m067" .
+<http://rs.tdwg.org/format/values/e042> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e042> <http://www.w3.org/2004/02/skos/core#prefLabel> "Comentarios del registro biológico"@es .
+<http://rs.tdwg.org/format/values/e042> <http://www.w3.org/2004/02/skos/core#prefLabel> "MTL"@en .
+<http://rs.tdwg.org/format/values/e042> <http://www.w3.org/2004/02/skos/core#prefLabel> "事件备注"@zh-hans .
+<http://rs.tdwg.org/format/values/e043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "x3dv" .
+<http://rs.tdwg.org/format/values/e043> <http://www.w3.org/2004/02/skos/core#definition> "Una declaración sobre la presencia o ausencia de un taxón en una ubicación. La práctica recomendada es el uso de un lenguaje controlado. "@es .
+<http://rs.tdwg.org/format/values/e043> <http://www.w3.org/2004/02/skos/core#definition> "file extension for X3D VRML models"@en .
+<http://rs.tdwg.org/format/values/e043> <http://www.w3.org/2004/02/skos/core#definition> "关于一个类群在一个地点存在或者不存在的声明。建议最佳做法是使用一个控制性词汇。"@zh-hans .
+<http://rs.tdwg.org/format/values/e043> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m017" .
+<http://rs.tdwg.org/format/values/e043> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e043> <http://www.w3.org/2004/02/skos/core#prefLabel> "Estado del registro biológico"@es .
+<http://rs.tdwg.org/format/values/e043> <http://www.w3.org/2004/02/skos/core#prefLabel> "X3D VRML"@en .
+<http://rs.tdwg.org/format/values/e043> <http://www.w3.org/2004/02/skos/core#prefLabel> "事件状态"@zh-hans .
+<http://rs.tdwg.org/format/values/e044> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e044> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "x3d" .
+<http://rs.tdwg.org/format/values/e044> <http://www.w3.org/2004/02/skos/core#definition> "El nombre científico completo del orden en el que se clasifica el taxón. "@es .
+<http://rs.tdwg.org/format/values/e044> <http://www.w3.org/2004/02/skos/core#definition> "file extension for X3D XML models"@en .
+<http://rs.tdwg.org/format/values/e044> <http://www.w3.org/2004/02/skos/core#definition> "分类单元所属目的完整学名。"@zh-hans .
+<http://rs.tdwg.org/format/values/e044> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m068" .
+<http://rs.tdwg.org/format/values/e044> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e044> <http://www.w3.org/2004/02/skos/core#prefLabel> "Orden"@es .
+<http://rs.tdwg.org/format/values/e044> <http://www.w3.org/2004/02/skos/core#prefLabel> "X3D XML"@en .
+<http://rs.tdwg.org/format/values/e044> <http://www.w3.org/2004/02/skos/core#prefLabel> "目"@zh-hans .
+<http://rs.tdwg.org/format/values/e045> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e045> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "crw" .
+<http://rs.tdwg.org/format/values/e045> <http://www.w3.org/2004/02/skos/core#definition> "El nombre del taxón, con información de autoría y fecha si se conoce, tal como apareció originalmente cuando se estableció por primera vez bajo las reglas del Código Nomenclatural asociadas. El basiónimo (botánica) o basiónimo (bacteriología) de Nombre Ci"@es .
+<http://rs.tdwg.org/format/values/e045> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Camera Image File Format raw image"@en .
+<http://rs.tdwg.org/format/values/e045> <http://www.w3.org/2004/02/skos/core#definition> "在相关的命名规则下第一次被建立的最初出现的类群名称，如果知道的话，附作者和日期信息。学名的异名或基名，或用来替换名称的同音词。"@zh-hans .
+<http://rs.tdwg.org/format/values/e045> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m069" .
+<http://rs.tdwg.org/format/values/e045> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e045> <http://www.w3.org/2004/02/skos/core#prefLabel> "CIFF raw image"@en .
+<http://rs.tdwg.org/format/values/e045> <http://www.w3.org/2004/02/skos/core#prefLabel> "Uso del nombre original"@es .
+<http://rs.tdwg.org/format/values/e045> <http://www.w3.org/2004/02/skos/core#prefLabel> "最初使用名称"@zh-hans .
+<http://rs.tdwg.org/format/values/e046> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e046> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "cr3" .
+<http://rs.tdwg.org/format/values/e046> <http://www.w3.org/2004/02/skos/core#definition> "Un identificador para el uso del nombre (significado documentado del nombre de acuerdo a una fuente) en el que se estableció originalmente, el elemento terminal de Nombre Científico bajo las reglas del Código Nomenclatural asociado. "@es .
+<http://rs.tdwg.org/format/values/e046> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Canon Raw 3 image"@en .
+<http://rs.tdwg.org/format/values/e046> <http://www.w3.org/2004/02/skos/core#definition> "学名在相关命名规则下最初建立时，学名的末端组成上的名称使用标识符。"@zh-hans .
+<http://rs.tdwg.org/format/values/e046> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m070" .
+<http://rs.tdwg.org/format/values/e046> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e046> <http://www.w3.org/2004/02/skos/core#prefLabel> "CR3 raw image"@en .
+<http://rs.tdwg.org/format/values/e046> <http://www.w3.org/2004/02/skos/core#prefLabel> "ID del uso del nombre original"@es .
+<http://rs.tdwg.org/format/values/e046> <http://www.w3.org/2004/02/skos/core#prefLabel> "最初使用名称编号"@zh-hans .
+<http://rs.tdwg.org/format/values/e047> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e047> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "arw" .
+<http://rs.tdwg.org/format/values/e047> <http://www.w3.org/2004/02/skos/core#definition> "Una lista (concatenada y separada) de números de catálogos anteriores o alternativos, calificados, u otros identificadores de uso humano para el mismo Registro Biológico, ya sea en el actual o cualquier otro conjunto de datos o colección. "@es .
+<http://rs.tdwg.org/format/values/e047> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Sony raw image"@en .
+<http://rs.tdwg.org/format/values/e047> <http://www.w3.org/2004/02/skos/core#definition> "无论在当前或其他任何数据集，同一事件中以前或备用的完全合格的目录号或其他人使用的标识符列表（连接的或分开的）。"@zh-hans .
+<http://rs.tdwg.org/format/values/e047> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m071" .
+<http://rs.tdwg.org/format/values/e047> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e047> <http://www.w3.org/2004/02/skos/core#prefLabel> "ARW raw image"@en .
+<http://rs.tdwg.org/format/values/e047> <http://www.w3.org/2004/02/skos/core#prefLabel> "Otros números de catálogo"@es .
+<http://rs.tdwg.org/format/values/e047> <http://www.w3.org/2004/02/skos/core#prefLabel> "其它目录编号"@zh-hans .
+<http://rs.tdwg.org/format/values/e048> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/e048> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "rw2" .
+<http://rs.tdwg.org/format/values/e048> <http://www.w3.org/2004/02/skos/core#definition> "El nombre (o acrónimo) en uso por la institución que tiene la propiedad del objeto(s) o información referida en el registro. "@es .
+<http://rs.tdwg.org/format/values/e048> <http://www.w3.org/2004/02/skos/core#definition> "file extension for Panasonic raw image"@en .
+<http://rs.tdwg.org/format/values/e048> <http://www.w3.org/2004/02/skos/core#definition> "记录中显示的对物品或信息享有所有权的机构名称（或缩写）。"@zh-hans .
+<http://rs.tdwg.org/format/values/e048> <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/format/values/m072" .
+<http://rs.tdwg.org/format/values/e048> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/e" .
+<http://rs.tdwg.org/format/values/e048> <http://www.w3.org/2004/02/skos/core#prefLabel> "Código de la institución propietaria"@es .
+<http://rs.tdwg.org/format/values/e048> <http://www.w3.org/2004/02/skos/core#prefLabel> "RW2 raw image"@en .
+<http://rs.tdwg.org/format/values/e048> <http://www.w3.org/2004/02/skos/core#prefLabel> "所有者机构代码"@zh-hans .
+<http://rs.tdwg.org/format/values/e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://rs.tdwg.org/format/values/e> <http://www.w3.org/2004/02/skos/core#definition> "Un identificador para el nombre en uso (significado del nombre, documentado de acuerdo con alguna fuente) del taxón actualmente válido (zoológico) o aceptado (botánico).   "@es .
+<http://rs.tdwg.org/format/values/e> <http://www.w3.org/2004/02/skos/core#definition> "concept scheme based on conventional file extensions for media types"@en .
+<http://rs.tdwg.org/format/values/e> <http://www.w3.org/2004/02/skos/core#definition> "目前有效（动物学）的或公认（植物学）的分类单元的名称使用（根据来源所取名称的存档记录方法）标识符。"@zh-hans .
+<http://rs.tdwg.org/format/values/e> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nombre aceptado en uso - ID"@es .
+<http://rs.tdwg.org/format/values/e> <http://www.w3.org/2004/02/skos/core#prefLabel> "file extensions concept scheme"@en .
+<http://rs.tdwg.org/format/values/e> <http://www.w3.org/2004/02/skos/core#prefLabel> "公认使用名称编号"@zh-hans .
+<http://rs.tdwg.org/format/values/m001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "application" .
+<http://rs.tdwg.org/format/values/m001> <http://www.w3.org/2004/02/skos/core#definition> "Una lista (concatenada o delimitada) de identificadores (publicación, identificador único global, URI) de los medios asociados con el registro biológico."@es .
+<http://rs.tdwg.org/format/values/m001> <http://www.w3.org/2004/02/skos/core#definition> "media type for application"@en .
+<http://rs.tdwg.org/format/values/m001> <http://www.w3.org/2004/02/skos/core#definition> "发现媒介的（发表、全局唯一标识符、统一资源标识符等）标识符之（连接的或分开的）列表。"@zh-hans .
+<http://rs.tdwg.org/format/values/m001> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m001> <http://www.w3.org/2004/02/skos/core#prefLabel> "Medios asociados"@es .
+<http://rs.tdwg.org/format/values/m001> <http://www.w3.org/2004/02/skos/core#prefLabel> "application"@en .
+<http://rs.tdwg.org/format/values/m001> <http://www.w3.org/2004/02/skos/core#prefLabel> "相关媒介"@zh-hans .
+<http://rs.tdwg.org/format/values/m002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "audio" .
+<http://rs.tdwg.org/format/values/m002> <http://www.w3.org/2004/02/skos/core#definition> "Una lista (concatenada y separada) de los identificadores de otros registros biológicos y su relación con este Registro Biológico. "@es .
+<http://rs.tdwg.org/format/values/m002> <http://www.w3.org/2004/02/skos/core#definition> "media type for audio"@en .
+<http://rs.tdwg.org/format/values/m002> <http://www.w3.org/2004/02/skos/core#definition> "其他发现记录及其与发现信息相关联的标识符之（连接的或分开的）列表。"@zh-hans .
+<http://rs.tdwg.org/format/values/m002> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m002> <http://www.w3.org/2004/02/skos/core#prefLabel> "Registros biológicos asociados"@es .
+<http://rs.tdwg.org/format/values/m002> <http://www.w3.org/2004/02/skos/core#prefLabel> "audio"@en .
+<http://rs.tdwg.org/format/values/m002> <http://www.w3.org/2004/02/skos/core#prefLabel> "相关事件"@zh-hans .
+<http://rs.tdwg.org/format/values/m003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "image" .
+<http://rs.tdwg.org/format/values/m003> <http://www.w3.org/2004/02/skos/core#definition> "Una lista (concatenada y separada) de los identificadores (publicación, referencia bibliográfica, identificador único global, URI) de la literatura asociada con el Registro Biológico. "@es .
+<http://rs.tdwg.org/format/values/m003> <http://www.w3.org/2004/02/skos/core#definition> "media type for image"@en .
+<http://rs.tdwg.org/format/values/m003> <http://www.w3.org/2004/02/skos/core#definition> "与发现情况相关之文献的（发表、参考文献、全局唯一标识符、统一资源标识符等）标识符之（连接的或分开的）列表。"@zh-hans .
+<http://rs.tdwg.org/format/values/m003> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m003> <http://www.w3.org/2004/02/skos/core#prefLabel> "Referencias asociadas"@es .
+<http://rs.tdwg.org/format/values/m003> <http://www.w3.org/2004/02/skos/core#prefLabel> "image"@en .
+<http://rs.tdwg.org/format/values/m003> <http://www.w3.org/2004/02/skos/core#prefLabel> "相关参考"@zh-hans .
+<http://rs.tdwg.org/format/values/m004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "model" .
+<http://rs.tdwg.org/format/values/m004> <http://www.w3.org/2004/02/skos/core#definition> "Una lista (concatenada y separada) de los identificadores (publicación, identificador único global, URI) de la información de la secuencia genética asociada con el Registro Biológico. "@es .
+<http://rs.tdwg.org/format/values/m004> <http://www.w3.org/2004/02/skos/core#definition> "media type for model"@en .
+<http://rs.tdwg.org/format/values/m004> <http://www.w3.org/2004/02/skos/core#definition> "与发现情况相关之基因序列信息的（发表、全局唯一标识符、统一资源标识符等）标识符之（连接的或分开的）列表。"@zh-hans .
+<http://rs.tdwg.org/format/values/m004> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m004> <http://www.w3.org/2004/02/skos/core#prefLabel> "Secuencias asociadas"@es .
+<http://rs.tdwg.org/format/values/m004> <http://www.w3.org/2004/02/skos/core#prefLabel> "model"@en .
+<http://rs.tdwg.org/format/values/m004> <http://www.w3.org/2004/02/skos/core#prefLabel> "相关序列"@zh-hans .
+<http://rs.tdwg.org/format/values/m005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "text" .
+<http://rs.tdwg.org/format/values/m005> <http://www.w3.org/2004/02/skos/core#definition> "Una lista (concatenada y separada) de los identificadores o nombres de taxones y su asociación con el Registro Biológico."@es .
+<http://rs.tdwg.org/format/values/m005> <http://www.w3.org/2004/02/skos/core#definition> "media type for text"@en .
+<http://rs.tdwg.org/format/values/m005> <http://www.w3.org/2004/02/skos/core#definition> "与发现情况相关的标识符或分类单元名称之（连接的或分开的）列表。"@zh-hans .
+<http://rs.tdwg.org/format/values/m005> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m005> <http://www.w3.org/2004/02/skos/core#prefLabel> "Taxones asociados"@es .
+<http://rs.tdwg.org/format/values/m005> <http://www.w3.org/2004/02/skos/core#prefLabel> "text"@en .
+<http://rs.tdwg.org/format/values/m005> <http://www.w3.org/2004/02/skos/core#prefLabel> "相关类群"@zh-hans .
+<http://rs.tdwg.org/format/values/m006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "video" .
+<http://rs.tdwg.org/format/values/m006> <http://www.w3.org/2004/02/skos/core#definition> "La naturaleza específica del registro de datos - un subtipo de Tipo. La práctica recomendada es el uso de lenguaje controlado como el vocabulario controlado para Tipo de Darwin Core (http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm). "@es .
+<http://rs.tdwg.org/format/values/m006> <http://www.w3.org/2004/02/skos/core#definition> "media type for video"@en .
+<http://rs.tdwg.org/format/values/m006> <http://www.w3.org/2004/02/skos/core#definition> "数据记录的特有属性——dcterms:type的子类。建议最好使用控制性词汇，如达尔文核心类型词汇（http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm）。"@zh-hans .
+<http://rs.tdwg.org/format/values/m006> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m006> <http://www.w3.org/2004/02/skos/core#prefLabel> "Base del registro"@es .
+<http://rs.tdwg.org/format/values/m006> <http://www.w3.org/2004/02/skos/core#prefLabel> "video"@en .
+<http://rs.tdwg.org/format/values/m006> <http://www.w3.org/2004/02/skos/core#prefLabel> "记录基础"@zh-hans .
+<http://rs.tdwg.org/format/values/m007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "image/png" .
+<http://rs.tdwg.org/format/values/m007> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m007> <http://www.w3.org/2004/02/skos/core#definition> "El nombre completo de la capa litoestratigráfica de la cual se colectó el elemento catalogado. "@es .
+<http://rs.tdwg.org/format/values/m007> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for portable network graphics images"@en .
+<http://rs.tdwg.org/format/values/m007> <http://www.w3.org/2004/02/skos/core#definition> "采集收录对象的岩床的全称。"@zh-hans .
+<http://rs.tdwg.org/format/values/m007> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m007> <http://www.w3.org/2004/02/skos/core#prefLabel> "Capa"@es .
+<http://rs.tdwg.org/format/values/m007> <http://www.w3.org/2004/02/skos/core#prefLabel> "PNG"@en .
+<http://rs.tdwg.org/format/values/m007> <http://www.w3.org/2004/02/skos/core#prefLabel> "岩床"@zh-hans .
+<http://rs.tdwg.org/format/values/m008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "image/jpeg" .
+<http://rs.tdwg.org/format/values/m008> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m008> <http://www.w3.org/2004/02/skos/core#definition> "Una descripción de la conducta mostrada por el sujeto en el momento del Registro Biológico. La práctica recomendada es el uso de un lenguaje controlado."@es .
+<http://rs.tdwg.org/format/values/m008> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for JPEG images"@en .
+<http://rs.tdwg.org/format/values/m008> <http://www.w3.org/2004/02/skos/core#definition> "对记录发现过程中目标行为的描述。建议最好使用控制性词汇。"@zh-hans .
+<http://rs.tdwg.org/format/values/m008> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m008> <http://www.w3.org/2004/02/skos/core#prefLabel> "Comportamiento"@es .
+<http://rs.tdwg.org/format/values/m008> <http://www.w3.org/2004/02/skos/core#prefLabel> "JPEG"@en .
+<http://rs.tdwg.org/format/values/m008> <http://www.w3.org/2004/02/skos/core#prefLabel> "行为"@zh-hans .
+<http://rs.tdwg.org/format/values/m009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "image/bmp" .
+<http://rs.tdwg.org/format/values/m009> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m009> <http://www.w3.org/2004/02/skos/core#definition> "Un identificador (preferiblemente único) para el registro dentro del conjunto de datos o colección. "@es .
+<http://rs.tdwg.org/format/values/m009> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for bitmap images"@en .
+<http://rs.tdwg.org/format/values/m009> <http://www.w3.org/2004/02/skos/core#definition> "数据集或保藏信息中的记录标识符（最好是唯一的）。"@zh-hans .
+<http://rs.tdwg.org/format/values/m009> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m009> <http://www.w3.org/2004/02/skos/core#prefLabel> "BMP"@en .
+<http://rs.tdwg.org/format/values/m009> <http://www.w3.org/2004/02/skos/core#prefLabel> "Número de catálogo"@es .
+<http://rs.tdwg.org/format/values/m009> <http://www.w3.org/2004/02/skos/core#prefLabel> "目录编号"@zh-hans .
+<http://rs.tdwg.org/format/values/m010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "image/gif" .
+<http://rs.tdwg.org/format/values/m010> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m010> <http://www.w3.org/2004/02/skos/core#definition> "El nombre científico completo de la clase en la que se clasifica el taxón."@es .
+<http://rs.tdwg.org/format/values/m010> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for GIF images"@en .
+<http://rs.tdwg.org/format/values/m010> <http://www.w3.org/2004/02/skos/core#definition> "分类单元所属纲的完整学名。"@zh-hans .
+<http://rs.tdwg.org/format/values/m010> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m010> <http://www.w3.org/2004/02/skos/core#prefLabel> "Clase"@es .
+<http://rs.tdwg.org/format/values/m010> <http://www.w3.org/2004/02/skos/core#prefLabel> "GIF"@en .
+<http://rs.tdwg.org/format/values/m010> <http://www.w3.org/2004/02/skos/core#prefLabel> "纲"@zh-hans .
+<http://rs.tdwg.org/format/values/m011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "image/tiff" .
+<http://rs.tdwg.org/format/values/m011> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m011> <http://www.w3.org/2004/02/skos/core#definition> "El nombre, acrónimo, coden, o iniciales que identifican la colección o conjunto de datos del que procede el registro. "@es .
+<http://rs.tdwg.org/format/values/m011> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for TIFF images"@en .
+<http://rs.tdwg.org/format/values/m011> <http://www.w3.org/2004/02/skos/core#definition> "标识生成记录的保藏信息或数据集的名称、首字母缩略词、分类编号或词起首字母"@zh-hans .
+<http://rs.tdwg.org/format/values/m011> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m011> <http://www.w3.org/2004/02/skos/core#prefLabel> "Código de la colección"@es .
+<http://rs.tdwg.org/format/values/m011> <http://www.w3.org/2004/02/skos/core#prefLabel> "TIFF"@en .
+<http://rs.tdwg.org/format/values/m011> <http://www.w3.org/2004/02/skos/core#prefLabel> "保藏代码"@zh-hans .
+<http://rs.tdwg.org/format/values/m012> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m012> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "video/mp4" .
+<http://rs.tdwg.org/format/values/m012> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" .
+<http://rs.tdwg.org/format/values/m012> <http://www.w3.org/2004/02/skos/core#definition> "Un identificador de la colección o conjunto de datos del que procede el registro. Para especímenes físicos, la práctica recomendada es utilizar el identificador de un índice de colección tal como el Índice de Colecciones de Biodiversidad (http://www.biodi"@es .
+<http://rs.tdwg.org/format/values/m012> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for MP4 videos"@en .
+<http://rs.tdwg.org/format/values/m012> <http://www.w3.org/2004/02/skos/core#definition> "生成记录的保藏信息或数据集的标识符。针对实体标本，建议最好使用保藏注册标识符，如生物多样性保藏索引(http://www.biodiversitycollectionsindex.org/)。"@zh-hans .
+<http://rs.tdwg.org/format/values/m012> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m012> <http://www.w3.org/2004/02/skos/core#prefLabel> "ID de la colección"@es .
+<http://rs.tdwg.org/format/values/m012> <http://www.w3.org/2004/02/skos/core#prefLabel> "MP4 video"@en .
+<http://rs.tdwg.org/format/values/m012> <http://www.w3.org/2004/02/skos/core#prefLabel> "保藏编号"@zh-hans .
+<http://rs.tdwg.org/format/values/m013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "video/mpeg" .
+<http://rs.tdwg.org/format/values/m013> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" .
+<http://rs.tdwg.org/format/values/m013> <http://www.w3.org/2004/02/skos/core#definition> "El nombre del continente en el que la ubicación ocurre. La práctica recomendada es el uso de un lenguaje controlado, como la norma ISO 3166 de códigos de Continente. "@es .
+<http://rs.tdwg.org/format/values/m013> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for MPEG videos"@en .
+<http://rs.tdwg.org/format/values/m013> <http://www.w3.org/2004/02/skos/core#definition> "发现地点所在的大洲名。建议最好使用控制性词汇，如盖提地理名称索引典或国际标准化组织3166洲代码。"@zh-hans .
+<http://rs.tdwg.org/format/values/m013> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m013> <http://www.w3.org/2004/02/skos/core#prefLabel> "Continente"@es .
+<http://rs.tdwg.org/format/values/m013> <http://www.w3.org/2004/02/skos/core#prefLabel> "MPEG"@en .
+<http://rs.tdwg.org/format/values/m013> <http://www.w3.org/2004/02/skos/core#prefLabel> "洲"@zh-hans .
+<http://rs.tdwg.org/format/values/m014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "video/quicktime" .
+<http://rs.tdwg.org/format/values/m014> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" .
+<http://rs.tdwg.org/format/values/m014> <http://www.w3.org/2004/02/skos/core#definition> "Una representación decimal de la precisión de las coordenadas provistas en Latitud Decimal y Longitud Decimal. "@es .
+<http://rs.tdwg.org/format/values/m014> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for QuickTime videos"@en .
+<http://rs.tdwg.org/format/values/m014> <http://www.w3.org/2004/02/skos/core#definition> "精确到小数的纬度和经度坐标的小数示数。"@zh-hans .
+<http://rs.tdwg.org/format/values/m014> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m014> <http://www.w3.org/2004/02/skos/core#prefLabel> "Precisión de las coordenadas"@es .
+<http://rs.tdwg.org/format/values/m014> <http://www.w3.org/2004/02/skos/core#prefLabel> "QuickTime"@en .
+<http://rs.tdwg.org/format/values/m014> <http://www.w3.org/2004/02/skos/core#prefLabel> "坐标精度"@zh-hans .
+<http://rs.tdwg.org/format/values/m015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "audio/mp4" .
+<http://rs.tdwg.org/format/values/m015> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" .
+<http://rs.tdwg.org/format/values/m015> <http://www.w3.org/2004/02/skos/core#definition> "La distancia horizontal (en metros) de la Latitud Decimal y Longitud Decimal provistas describiendo el círculo más pequeño que contiene la totalidad de la ubicación. Deje el valor vacío si la incertidumbre es desconocida, no se puede estimar, o no es apli"@es .
+<http://rs.tdwg.org/format/values/m015> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for MP4 audio"@en .
+<http://rs.tdwg.org/format/values/m015> <http://www.w3.org/2004/02/skos/core#definition> "到涵盖整个地点的最小圆形区域的小数纬度和经度的水平距离（以“米”为单位）。若未知、无法估算或不适用（由于没有坐标），则值为空。此项中0不是有效值。"@zh-hans .
+<http://rs.tdwg.org/format/values/m015> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m015> <http://www.w3.org/2004/02/skos/core#prefLabel> " Incertidumbre de las coordenadas en metros"@es .
+<http://rs.tdwg.org/format/values/m015> <http://www.w3.org/2004/02/skos/core#prefLabel> "MP4 audio"@en .
+<http://rs.tdwg.org/format/values/m015> <http://www.w3.org/2004/02/skos/core#prefLabel> "坐标不确定性（以米为单位）"@zh-hans .
+<http://rs.tdwg.org/format/values/m016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "audio/mpeg" .
+<http://rs.tdwg.org/format/values/m016> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" .
+<http://rs.tdwg.org/format/values/m016> <http://www.w3.org/2004/02/skos/core#definition> "El nombre del país o unidad administrativa de mayor jerarquía de la ubicación. La práctica recomendada es utilizar un identificador persistente de un lenguaje controlado como el Tesauro Getty de Nombres Geográficos. "@es .
+<http://rs.tdwg.org/format/values/m016> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for MP3 audio"@en .
+<http://rs.tdwg.org/format/values/m016> <http://www.w3.org/2004/02/skos/core#definition> "发现地点的国家或主要行政区划名称。建议最好使用控制性词汇，如盖提地理名称索引。"@zh-hans .
+<http://rs.tdwg.org/format/values/m016> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m016> <http://www.w3.org/2004/02/skos/core#prefLabel> "MP3"@en .
+<http://rs.tdwg.org/format/values/m016> <http://www.w3.org/2004/02/skos/core#prefLabel> "País"@es .
+<http://rs.tdwg.org/format/values/m016> <http://www.w3.org/2004/02/skos/core#prefLabel> "国家"@zh-hans .
+<http://rs.tdwg.org/format/values/m017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "model/x3d-vrml" .
+<http://rs.tdwg.org/format/values/m017> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m004" .
+<http://rs.tdwg.org/format/values/m017> <http://www.w3.org/2004/02/skos/core#definition> "El código estándar para el país de la ubicación. La práctica recomendada es el uso de ISO 3166-1-alfa-2 de códigos de países. "@es .
+<http://rs.tdwg.org/format/values/m017> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for X3D VRML models"@en .
+<http://rs.tdwg.org/format/values/m017> <http://www.w3.org/2004/02/skos/core#definition> "发现地点的标准国家代码。建议最好使用国际标准化组织3166-1-阿尔法-2国家代码。"@zh-hans .
+<http://rs.tdwg.org/format/values/m017> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m017> <http://www.w3.org/2004/02/skos/core#prefLabel> "Código del país"@es .
+<http://rs.tdwg.org/format/values/m017> <http://www.w3.org/2004/02/skos/core#prefLabel> "X3D VRML"@en .
+<http://rs.tdwg.org/format/values/m017> <http://www.w3.org/2004/02/skos/core#prefLabel> "国家代码"@zh-hans .
+<http://rs.tdwg.org/format/values/m018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "application/pdf" .
+<http://rs.tdwg.org/format/values/m018> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m001" .
+<http://rs.tdwg.org/format/values/m018> <http://www.w3.org/2004/02/skos/core#definition> "El nombre completo, sin abreviar de la siguiente región administrativa de menor jerarquía que Estado Provincia (condado, departamento, etc.) de la ubicación."@es .
+<http://rs.tdwg.org/format/values/m018> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for PDF documents"@en .
+<http://rs.tdwg.org/format/values/m018> <http://www.w3.org/2004/02/skos/core#definition> "发现地点所在的除州/省之外的次一级行政区划（县、郡、行政区等）。"@zh-hans .
+<http://rs.tdwg.org/format/values/m018> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m018> <http://www.w3.org/2004/02/skos/core#prefLabel> "Condado"@es .
+<http://rs.tdwg.org/format/values/m018> <http://www.w3.org/2004/02/skos/core#prefLabel> "PDF"@en .
+<http://rs.tdwg.org/format/values/m018> <http://www.w3.org/2004/02/skos/core#prefLabel> "郡/县"@zh-hans .
+<http://rs.tdwg.org/format/values/m019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "text/plain" .
+<http://rs.tdwg.org/format/values/m019> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m005" .
+<http://rs.tdwg.org/format/values/m019> <http://www.w3.org/2004/02/skos/core#definition> "Las medidas adoptadas para que los datos compartidos sean menos específicos o completos que en su forma original. Sugiere que datos alternativos de mayor calidad pueden estar disponibles bajo petición."@es .
+<http://rs.tdwg.org/format/values/m019> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for plain text"@en .
+<http://rs.tdwg.org/format/values/m019> <http://www.w3.org/2004/02/skos/core#definition> "为使共享数据较之其原始形式不那么精确或完整所采取的行动。建议以更高质量的替代数据备索。"@zh-hans .
+<http://rs.tdwg.org/format/values/m019> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m019> <http://www.w3.org/2004/02/skos/core#prefLabel> "Generalización de los datos"@es .
+<http://rs.tdwg.org/format/values/m019> <http://www.w3.org/2004/02/skos/core#prefLabel> "plain text"@en .
+<http://rs.tdwg.org/format/values/m019> <http://www.w3.org/2004/02/skos/core#prefLabel> "数据概括"@zh-hans .
+<http://rs.tdwg.org/format/values/m020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "application/msword" .
+<http://rs.tdwg.org/format/values/m020> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m001" .
+<http://rs.tdwg.org/format/values/m020> <http://www.w3.org/2004/02/skos/core#definition> "Un identificador para el conjunto de datos. Puede ser un identificador único global o un identificador específico de una colección o institución."@es .
+<http://rs.tdwg.org/format/values/m020> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for Microsoft Word (2003 and before) documents"@en .
+<http://rs.tdwg.org/format/values/m020> <http://www.w3.org/2004/02/skos/core#definition> "数据集的标识符。可能是一个全局唯一标识符或一个保藏中心或研究机构的特定标识符。"@zh-hans .
+<http://rs.tdwg.org/format/values/m020> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m020> <http://www.w3.org/2004/02/skos/core#prefLabel> "ID del conjunto de datos"@es .
+<http://rs.tdwg.org/format/values/m020> <http://www.w3.org/2004/02/skos/core#prefLabel> "Word (pre-2003) document"@en .
+<http://rs.tdwg.org/format/values/m020> <http://www.w3.org/2004/02/skos/core#prefLabel> "数据集编号"@zh-hans .
+<http://rs.tdwg.org/format/values/m021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "application/vnd.openxmlformats-officedocument.wordprocessingml.document" .
+<http://rs.tdwg.org/format/values/m021> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m001" .
+<http://rs.tdwg.org/format/values/m021> <http://www.w3.org/2004/02/skos/core#definition> "El nombre que identifica el conjunto de datos del cual se derivó el registro.  "@es .
+<http://rs.tdwg.org/format/values/m021> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for Microsoft Word (2007 and after) documents"@en .
+<http://rs.tdwg.org/format/values/m021> <http://www.w3.org/2004/02/skos/core#definition> "标识生成记录的数据集的名称。"@zh-hans .
+<http://rs.tdwg.org/format/values/m021> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m021> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nombre del conjunto de datos"@es .
+<http://rs.tdwg.org/format/values/m021> <http://www.w3.org/2004/02/skos/core#prefLabel> "Word (post-2007) document"@en .
+<http://rs.tdwg.org/format/values/m021> <http://www.w3.org/2004/02/skos/core#prefLabel> "数据集名称"@zh-hans .
+<http://rs.tdwg.org/format/values/m022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "image/x-adobe-dng" .
+<http://rs.tdwg.org/format/values/m022> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m022> <http://www.w3.org/2004/02/skos/core#definition> "La fecha en que fue identificado el sujeto como representativo del taxón. La práctica recomendada es utilizar un esquema de codificación, como ISO 8601:2004 (E). "@es .
+<http://rs.tdwg.org/format/values/m022> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for Digital Negative images"@en .
+<http://rs.tdwg.org/format/values/m022> <http://www.w3.org/2004/02/skos/core#definition> "涉及被视为代表分类单元的主体的数据。建议最好使用编码方案，如ISO 8601:2004(E)。"@zh-hans .
+<http://rs.tdwg.org/format/values/m022> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m022> <http://www.w3.org/2004/02/skos/core#prefLabel> "Digital Negative"@en .
+<http://rs.tdwg.org/format/values/m022> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fecha de identificación"@es .
+<http://rs.tdwg.org/format/values/m022> <http://www.w3.org/2004/02/skos/core#prefLabel> "鉴定日期"@zh-hans .
+<http://rs.tdwg.org/format/values/m023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "image/x-canon-cr2" .
+<http://rs.tdwg.org/format/values/m023> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m023> <http://www.w3.org/2004/02/skos/core#definition> "El día en números enteros, del mes en que ocurrió el evento. "@es .
+<http://rs.tdwg.org/format/values/m023> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for Canon Raw images"@en .
+<http://rs.tdwg.org/format/values/m023> <http://www.w3.org/2004/02/skos/core#definition> "事件发生的整数天。"@zh-hans .
+<http://rs.tdwg.org/format/values/m023> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m023> <http://www.w3.org/2004/02/skos/core#prefLabel> "CR2"@en .
+<http://rs.tdwg.org/format/values/m023> <http://www.w3.org/2004/02/skos/core#prefLabel> "Día"@es .
+<http://rs.tdwg.org/format/values/m023> <http://www.w3.org/2004/02/skos/core#prefLabel> "天"@zh-hans .
+<http://rs.tdwg.org/format/values/m024> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m024> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "image/jp2" .
+<http://rs.tdwg.org/format/values/m024> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m024> <http://www.w3.org/2004/02/skos/core#definition> "La latitud geográfica (en grados decimales, utilizando el sistema de referencia espacial provisto en Datum Geodésico) del centro geográfico de una ubicación. Los valores positivos se encuentran al norte del ecuador, los valores negativos están al sur del "@es .
+<http://rs.tdwg.org/format/values/m024> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for JPEG 2000 images"@en .
+<http://rs.tdwg.org/format/values/m024> <http://www.w3.org/2004/02/skos/core#definition> "地点的地理中心的纬度（以小数表示，采用大地基准中提供的空间参照系统）。正值代表赤道以北，负值代表赤道以南。法定值介于-90至90（含）之间。"@zh-hans .
+<http://rs.tdwg.org/format/values/m024> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m024> <http://www.w3.org/2004/02/skos/core#prefLabel> "JPEG 2000"@en .
+<http://rs.tdwg.org/format/values/m024> <http://www.w3.org/2004/02/skos/core#prefLabel> "Latitud decimal"@es .
+<http://rs.tdwg.org/format/values/m024> <http://www.w3.org/2004/02/skos/core#prefLabel> "十进制纬度"@zh-hans .
+<http://rs.tdwg.org/format/values/m025> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m025> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "audio/vnd.wave" .
+<http://rs.tdwg.org/format/values/m025> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" .
+<http://rs.tdwg.org/format/values/m025> <http://www.w3.org/2004/02/skos/core#definition> "La longitud geográfica (en grados decimales, mediante el sistema de referencia espacial provisto en Datum Geodésico) del centro geográfico de un lugar. Los valores positivos se encuentran al este del meridiano de Greenwich, los valores negativos se encuen"@es .
+<http://rs.tdwg.org/format/values/m025> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for WAVE audio"@en .
+<http://rs.tdwg.org/format/values/m025> <http://www.w3.org/2004/02/skos/core#definition> "地点的地理中心的经度（以小数表示，采用大地基准中提供的空间参照系统）。正值代表格林威治子午线以西，负值代表格林威治子午线以东。法定值介于-180至180（含）之间。"@zh-hans .
+<http://rs.tdwg.org/format/values/m025> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m025> <http://www.w3.org/2004/02/skos/core#prefLabel> "Longitud decimal"@es .
+<http://rs.tdwg.org/format/values/m025> <http://www.w3.org/2004/02/skos/core#prefLabel> "WAVE"@en .
+<http://rs.tdwg.org/format/values/m025> <http://www.w3.org/2004/02/skos/core#prefLabel> "十进制经度"@zh-hans .
+<http://rs.tdwg.org/format/values/m026> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m026> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "image/x-nikon-nef" .
+<http://rs.tdwg.org/format/values/m026> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m026> <http://www.w3.org/2004/02/skos/core#definition> "El estado actual de un espécimen con respecto a la colección identificada en Código de la Colección o ID de la Colección. La práctica recomendada es el uso de un lenguaje controlado. "@es .
+<http://rs.tdwg.org/format/values/m026> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for Nikon NEF Raw images"@en .
+<http://rs.tdwg.org/format/values/m026> <http://www.w3.org/2004/02/skos/core#definition> "与确定了保藏代码或保藏识别码的保藏物相关的标本的当前状态。推荐使用控制词表。"@zh-hans .
+<http://rs.tdwg.org/format/values/m026> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m026> <http://www.w3.org/2004/02/skos/core#prefLabel> "Disposición"@es .
+<http://rs.tdwg.org/format/values/m026> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nikon NEF Raw"@en .
+<http://rs.tdwg.org/format/values/m026> <http://www.w3.org/2004/02/skos/core#prefLabel> "寄存"@zh-hans .
+<http://rs.tdwg.org/format/values/m027> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m027> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "video/x-m4v" .
+<http://rs.tdwg.org/format/values/m027> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" .
+<http://rs.tdwg.org/format/values/m027> <http://www.w3.org/2004/02/skos/core#definition> "Una lista (concatenada y separada) de las medidas, hechos, características, o aseveraciones adicionales sobre el registro. Su intención es proporcionar un mecanismo para contenido estructurado como pares de valor.  "@es .
+<http://rs.tdwg.org/format/values/m027> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for Apple M4V videos"@en .
+<http://rs.tdwg.org/format/values/m027> <http://www.w3.org/2004/02/skos/core#definition> "关于记录的其他测量、情况、特征、判定等信息的（连接的或分开的）列表。意在为诸如键值对等的结构化内容设立机制。"@zh-hans .
+<http://rs.tdwg.org/format/values/m027> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m027> <http://www.w3.org/2004/02/skos/core#prefLabel> "M4V"@en .
+<http://rs.tdwg.org/format/values/m027> <http://www.w3.org/2004/02/skos/core#prefLabel> "Propiedades dinámicas"@es .
+<http://rs.tdwg.org/format/values/m027> <http://www.w3.org/2004/02/skos/core#prefLabel> "动态属性"@zh-hans .
+<http://rs.tdwg.org/format/values/m028> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m028> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "‎video/3gpp" .
+<http://rs.tdwg.org/format/values/m028> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" .
+<http://rs.tdwg.org/format/values/m028> <http://www.w3.org/2004/02/skos/core#definition> "El nombre completo de la edad geocronológica más temprana posible o la etapa cronoestratigráfica más baja, atribuible al horizonte estratigráfico donde se recolectó el objeto catalogado. "@es .
+<http://rs.tdwg.org/format/values/m028> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for 3GPP video"@en .
+<http://rs.tdwg.org/format/values/m028> <http://www.w3.org/2004/02/skos/core#definition> "编目项所采集的地层层位所属之可能的最早的地质年代或最低的年代地层的全称。"@zh-hans .
+<http://rs.tdwg.org/format/values/m028> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m028> <http://www.w3.org/2004/02/skos/core#prefLabel> "3GPP"@en .
+<http://rs.tdwg.org/format/values/m028> <http://www.w3.org/2004/02/skos/core#prefLabel> "Edad temprana o estadío inferior"@es .
+<http://rs.tdwg.org/format/values/m028> <http://www.w3.org/2004/02/skos/core#prefLabel> "最早地质年代或最低年代地层"@zh-hans .
+<http://rs.tdwg.org/format/values/m029> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m029> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "video/vnd.avi" .
+<http://rs.tdwg.org/format/values/m029> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" .
+<http://rs.tdwg.org/format/values/m029> <http://www.w3.org/2004/02/skos/core#definition> "El nombre completo del eón geocronológico más temprano o el eratema crono-estratigráfico más bajo, o el nombre informal (\"Precámbrico\") atribuible al horizonte estratigráfico donde se recolectó el objeto catalogado. "@es .
+<http://rs.tdwg.org/format/values/m029> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for AVI video"@en .
+<http://rs.tdwg.org/format/values/m029> <http://www.w3.org/2004/02/skos/core#definition> "编目项所采集的地层层位所属之可能的最早的地质宙或最低的地层宇的全称或非正式名称（“前寒武纪”）。"@zh-hans .
+<http://rs.tdwg.org/format/values/m029> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m029> <http://www.w3.org/2004/02/skos/core#prefLabel> "AVI"@en .
+<http://rs.tdwg.org/format/values/m029> <http://www.w3.org/2004/02/skos/core#prefLabel> "Eón temprano o eonotema inferior"@es .
+<http://rs.tdwg.org/format/values/m029> <http://www.w3.org/2004/02/skos/core#prefLabel> "最早地质宙或最低地层宇"@zh-hans .
+<http://rs.tdwg.org/format/values/m030> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m030> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "audio/AMR" .
+<http://rs.tdwg.org/format/values/m030> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" .
+<http://rs.tdwg.org/format/values/m030> <http://www.w3.org/2004/02/skos/core#definition> "El nombre completo de la época geocronológica más temprana o la serie cronoestratigráfica más baja posible, atribuible al horizonte estratigráfico donde se recolectó el objeto catalogado. "@es .
+<http://rs.tdwg.org/format/values/m030> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for Adaptive Multi-Rate audio"@en .
+<http://rs.tdwg.org/format/values/m030> <http://www.w3.org/2004/02/skos/core#definition> "编目项所采集的地层层位所属之可能的最早的地质世或最低的地层统的全称。"@zh-hans .
+<http://rs.tdwg.org/format/values/m030> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m030> <http://www.w3.org/2004/02/skos/core#prefLabel> "AMR"@en .
+<http://rs.tdwg.org/format/values/m030> <http://www.w3.org/2004/02/skos/core#prefLabel> "Época temprana o serie inferior"@es .
+<http://rs.tdwg.org/format/values/m030> <http://www.w3.org/2004/02/skos/core#prefLabel> "最早地质世或最低地层统"@zh-hans .
+<http://rs.tdwg.org/format/values/m031> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m031> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "audio/x-aiff" .
+<http://rs.tdwg.org/format/values/m031> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" .
+<http://rs.tdwg.org/format/values/m031> <http://www.w3.org/2004/02/skos/core#definition> "El nombre completo de la era geocronológica más temprana o el eratema crono-estratigráfico más bajo, atribuible al horizonte estratigráfico donde se recolectó el objeto catalogado. "@es .
+<http://rs.tdwg.org/format/values/m031> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for Audio Interchange File Format audio"@en .
+<http://rs.tdwg.org/format/values/m031> <http://www.w3.org/2004/02/skos/core#definition> "编目项所采集的地层层位所属之可能的最早的地质代或最低的地层界的全称。"@zh-hans .
+<http://rs.tdwg.org/format/values/m031> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m031> <http://www.w3.org/2004/02/skos/core#prefLabel> "AIFF"@en .
+<http://rs.tdwg.org/format/values/m031> <http://www.w3.org/2004/02/skos/core#prefLabel> "Era temprana o eratema inferior"@es .
+<http://rs.tdwg.org/format/values/m031> <http://www.w3.org/2004/02/skos/core#prefLabel> "最早地质代或最低地层界"@zh-hans .
+<http://rs.tdwg.org/format/values/m032> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m032> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "audio/ogg" .
+<http://rs.tdwg.org/format/values/m032> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" .
+<http://rs.tdwg.org/format/values/m032> <http://www.w3.org/2004/02/skos/core#definition> "Puede corresponder a: a) un indicador de la existencia de, b) una referencia a (publicación, URI), o c) el texto de las notas tomadas en campo sobre el evento."@es .
+<http://rs.tdwg.org/format/values/m032> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for OGG audio"@en .
+<http://rs.tdwg.org/format/values/m032> <http://www.w3.org/2004/02/skos/core#definition> "编目项所采集的地层层位所属之可能的最早的地质纪或最低的地层系的全称。"@zh-hans .
+<http://rs.tdwg.org/format/values/m032> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m032> <http://www.w3.org/2004/02/skos/core#prefLabel> "OGG audio"@en .
+<http://rs.tdwg.org/format/values/m032> <http://www.w3.org/2004/02/skos/core#prefLabel> "Periodo temprano o sistema inferior"@es .
+<http://rs.tdwg.org/format/values/m032> <http://www.w3.org/2004/02/skos/core#prefLabel> "最早地质纪或最低地层系"@zh-hans .
+<http://rs.tdwg.org/format/values/m033> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m033> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "video/ogg" .
+<http://rs.tdwg.org/format/values/m033> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" .
+<http://rs.tdwg.org/format/values/m033> <http://www.w3.org/2004/02/skos/core#definition> "El último día ordinal del año en que ocurrió el evento (1 para el 1º de enero, 365 para el 31 de diciembre, excepto en un año bisiesto, en cuyo caso es 366)."@es .
+<http://rs.tdwg.org/format/values/m033> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for OGG video"@en .
+<http://rs.tdwg.org/format/values/m033> <http://www.w3.org/2004/02/skos/core#definition> "事件发生当年的最新日期号（除了闰年有366天的情况，1代表1月1日，365代表12月31日）。"@zh-hans .
+<http://rs.tdwg.org/format/values/m033> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m033> <http://www.w3.org/2004/02/skos/core#prefLabel> "Día final del año"@es .
+<http://rs.tdwg.org/format/values/m033> <http://www.w3.org/2004/02/skos/core#prefLabel> "OGG video"@en .
+<http://rs.tdwg.org/format/values/m033> <http://www.w3.org/2004/02/skos/core#prefLabel> "当年结束日"@zh-hans .
+<http://rs.tdwg.org/format/values/m034> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m034> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "application/ogg" .
+<http://rs.tdwg.org/format/values/m034> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m001" .
+<http://rs.tdwg.org/format/values/m034> <http://www.w3.org/2004/02/skos/core#definition> "El proceso por el cual el individuo(s) biológico(s) representado en el Registro Biológico se estableció en el lugar. La práctica recomendada es el uso de un lenguaje controlado. "@es .
+<http://rs.tdwg.org/format/values/m034> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for OGG multiplex"@en .
+<http://rs.tdwg.org/format/values/m034> <http://www.w3.org/2004/02/skos/core#definition> "在采集地点确定生物个体在事件中表现的过程。建议最佳做法是使用一个控制性词汇。"@zh-hans .
+<http://rs.tdwg.org/format/values/m034> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m034> <http://www.w3.org/2004/02/skos/core#prefLabel> "Medios de establecimiento"@es .
+<http://rs.tdwg.org/format/values/m034> <http://www.w3.org/2004/02/skos/core#prefLabel> "OGG multiplex"@en .
+<http://rs.tdwg.org/format/values/m034> <http://www.w3.org/2004/02/skos/core#prefLabel> "确定方法"@zh-hans .
+<http://rs.tdwg.org/format/values/m035> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m035> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "image/x-photo-cd" .
+<http://rs.tdwg.org/format/values/m035> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m035> <http://www.w3.org/2004/02/skos/core#definition> "La fecha y hora o el intervalo durante el cual se produjo un evento. Para los registros de especies, esta es la fecha y hora cuando el evento se registró. No es adecuado para un momento en un contexto geológico. La práctica recomendada es utilizar un esqu"@es .
+<http://rs.tdwg.org/format/values/m035> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for Kodak Photo CD image"@en .
+<http://rs.tdwg.org/format/values/m035> <http://www.w3.org/2004/02/skos/core#definition> "事件发生的日期或间隔。对于已发生的事件这是被记录的日期。						不适合地质背景时间。建议最佳做法是使用一个编码方案，例如ISO 8601:2004(E)。"@zh-hans .
+<http://rs.tdwg.org/format/values/m035> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m035> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fecha del evento"@es .
+<http://rs.tdwg.org/format/values/m035> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kodak Photo CD image"@en .
+<http://rs.tdwg.org/format/values/m035> <http://www.w3.org/2004/02/skos/core#prefLabel> "事件日期"@zh-hans .
+<http://rs.tdwg.org/format/values/m036> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m036> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "image/vnd.adobe.photoshop" .
+<http://rs.tdwg.org/format/values/m036> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m036> <http://www.w3.org/2004/02/skos/core#definition> "Un identificador para el conjunto de la información asociada a un Evento (algo que ocurre en un lugar y tiempo). Puede ser un identificador único global o un identificador específico para el conjunto de datos. "@es .
+<http://rs.tdwg.org/format/values/m036> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for Photoshop images"@en .
+<http://rs.tdwg.org/format/values/m036> <http://www.w3.org/2004/02/skos/core#definition> "与事件相关的信息集标识符（发生在同一地点和时间）。可能是一个全局唯一标识符或特定的数据集标识符。"@zh-hans .
+<http://rs.tdwg.org/format/values/m036> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m036> <http://www.w3.org/2004/02/skos/core#prefLabel> "ID del evento"@es .
+<http://rs.tdwg.org/format/values/m036> <http://www.w3.org/2004/02/skos/core#prefLabel> "Photoshop"@en .
+<http://rs.tdwg.org/format/values/m036> <http://www.w3.org/2004/02/skos/core#prefLabel> "事件编号"@zh-hans .
+<http://rs.tdwg.org/format/values/m037> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m037> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "video/vnd.dlna.mpeg-tts" .
+<http://rs.tdwg.org/format/values/m037> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" .
+<http://rs.tdwg.org/format/values/m037> <http://www.w3.org/2004/02/skos/core#definition> "Comentarios o anotaciones sobre el evento. "@es .
+<http://rs.tdwg.org/format/values/m037> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for extended MPEG-2 Transport Stream"@en .
+<http://rs.tdwg.org/format/values/m037> <http://www.w3.org/2004/02/skos/core#definition> "关于事件的评论或记录。"@zh-hans .
+<http://rs.tdwg.org/format/values/m037> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m037> <http://www.w3.org/2004/02/skos/core#prefLabel> "Comentarios del evento"@es .
+<http://rs.tdwg.org/format/values/m037> <http://www.w3.org/2004/02/skos/core#prefLabel> "extended MPEG-2 Transport Stream"@en .
+<http://rs.tdwg.org/format/values/m037> <http://www.w3.org/2004/02/skos/core#prefLabel> "事件备注"@zh-hans .
+<http://rs.tdwg.org/format/values/m038> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m038> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "audio/x-flac" .
+<http://rs.tdwg.org/format/values/m038> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" .
+<http://rs.tdwg.org/format/values/m038> <http://www.w3.org/2004/02/skos/core#definition> "El tiempo o intervalo durante el cual se produjo un evento. La práctica recomendada es utilizar un esquema de codificación, tales como ISO 8601:2004 (E). "@es .
+<http://rs.tdwg.org/format/values/m038> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for Free Lossless Audio Codec audio"@en .
+<http://rs.tdwg.org/format/values/m038> <http://www.w3.org/2004/02/skos/core#definition> "事件发生的时间或间隔。			建议最佳做法是使用一个编码方案，例如ISO 			8601:2004(E)。"@zh-hans .
+<http://rs.tdwg.org/format/values/m038> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m038> <http://www.w3.org/2004/02/skos/core#prefLabel> "FLAC"@en .
+<http://rs.tdwg.org/format/values/m038> <http://www.w3.org/2004/02/skos/core#prefLabel> "Hora del evento"@es .
+<http://rs.tdwg.org/format/values/m038> <http://www.w3.org/2004/02/skos/core#prefLabel> "事件时间"@zh-hans .
+<http://rs.tdwg.org/format/values/m039> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m039> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "audio/x-ms-wma" .
+<http://rs.tdwg.org/format/values/m039> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" .
+<http://rs.tdwg.org/format/values/m039> <http://www.w3.org/2004/02/skos/core#definition> "El nombre científico completo de la familia en el que se clasifica el taxón. "@es .
+<http://rs.tdwg.org/format/values/m039> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for Windows Media Audio"@en .
+<http://rs.tdwg.org/format/values/m039> <http://www.w3.org/2004/02/skos/core#definition> "分类单元所属科的完整学名。"@zh-hans .
+<http://rs.tdwg.org/format/values/m039> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m039> <http://www.w3.org/2004/02/skos/core#prefLabel> "Familia"@es .
+<http://rs.tdwg.org/format/values/m039> <http://www.w3.org/2004/02/skos/core#prefLabel> "WMA"@en .
+<http://rs.tdwg.org/format/values/m039> <http://www.w3.org/2004/02/skos/core#prefLabel> "科"@zh-hans .
+<http://rs.tdwg.org/format/values/m040> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m040> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "video/x-ms-asf" .
+<http://rs.tdwg.org/format/values/m040> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" .
+<http://rs.tdwg.org/format/values/m040> <http://www.w3.org/2004/02/skos/core#definition> "Puede corresponder a: a) un indicador de la existencia de, b) una referencia a (publicación, URI), o c) el texto de las notas tomadas en campo sobre el evento."@es .
+<http://rs.tdwg.org/format/values/m040> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for Windows Media Video"@en .
+<http://rs.tdwg.org/format/values/m040> <http://www.w3.org/2004/02/skos/core#definition> "有关事件的现场记录之一：a）存在标志，b）出版物、网站资源参考，c）记录文本。"@zh-hans .
+<http://rs.tdwg.org/format/values/m040> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m040> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notas de campo"@es .
+<http://rs.tdwg.org/format/values/m040> <http://www.w3.org/2004/02/skos/core#prefLabel> "WMV"@en .
+<http://rs.tdwg.org/format/values/m040> <http://www.w3.org/2004/02/skos/core#prefLabel> "现场记录"@zh-hans .
+<http://rs.tdwg.org/format/values/m041> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m041> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "application/ms-asf" .
+<http://rs.tdwg.org/format/values/m041> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m001" .
+<http://rs.tdwg.org/format/values/m041> <http://www.w3.org/2004/02/skos/core#definition> "Un identificador dado en campo al evento. A menudo sirve como un vínculo entre las anotaciones de campo y el evento."@es .
+<http://rs.tdwg.org/format/values/m041> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for Advanced Systems Format"@en .
+<http://rs.tdwg.org/format/values/m041> <http://www.w3.org/2004/02/skos/core#definition> "现场事件标识符。通常作为现场记录和事件的联系。"@zh-hans .
+<http://rs.tdwg.org/format/values/m041> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m041> <http://www.w3.org/2004/02/skos/core#prefLabel> "ASF"@en .
+<http://rs.tdwg.org/format/values/m041> <http://www.w3.org/2004/02/skos/core#prefLabel> "Número de campo"@es .
+<http://rs.tdwg.org/format/values/m041> <http://www.w3.org/2004/02/skos/core#prefLabel> "现场编号"@zh-hans .
+<http://rs.tdwg.org/format/values/m042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "image/svg+xml" .
+<http://rs.tdwg.org/format/values/m042> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m042> <http://www.w3.org/2004/02/skos/core#definition> "La relación del área de footprint (WKT Footprint) y el área de la verdadera (original, o más específica) representación espacial de la ubicación. Los valores válidos son 0, mayor que o igual a 1, o indefinido. Un valor de 1 es una coincidencia exacta o su"@es .
+<http://rs.tdwg.org/format/values/m042> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for SVG images"@en .
+<http://rs.tdwg.org/format/values/m042> <http://www.w3.org/2004/02/skos/core#definition> "采集地点足迹区面积（footprintWKT）与真正（最初或最具体）所用空间面积的比率。合法值是0，或大于等于1，或未定义。值为1时表示两者精确匹配或100%重叠。值为0时表示给定的足迹区不完全包含最初地域。如果最初地域是一个点而给定的地理参考是另外一个点，那么足迹空间拟合值未定义（应该留白）。如果最初地域与给定的地理参考是同一个点，则足迹空间拟合值为1。"@zh-hans .
+<http://rs.tdwg.org/format/values/m042> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m042> <http://www.w3.org/2004/02/skos/core#prefLabel> "Ajuste espacial de footprint"@es .
+<http://rs.tdwg.org/format/values/m042> <http://www.w3.org/2004/02/skos/core#prefLabel> "SVG"@en .
+<http://rs.tdwg.org/format/values/m042> <http://www.w3.org/2004/02/skos/core#prefLabel> "足迹空间拟合"@zh-hans .
+<http://rs.tdwg.org/format/values/m043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Data-CD" .
+<http://rs.tdwg.org/format/values/m043> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m001" .
+<http://rs.tdwg.org/format/values/m043> <http://www.w3.org/2004/02/skos/core#definition> "Una representación Well-Known Text (WKT) del sistema de referencia espacial (SRS) para WKT Footprint de la ubicación. No utilice este elemento para describir el SRS de Latitud Decimal y Longitud Decimal, incluso si es la misma que para WKT Footprint - uti"@es .
+<http://rs.tdwg.org/format/values/m043> <http://www.w3.org/2004/02/skos/core#definition> "physical data compact disc"@en .
+<http://rs.tdwg.org/format/values/m043> <http://www.w3.org/2004/02/skos/core#definition> "采集地点足迹区空间参考系统的公认的文本表示。请勿使用这个词描述十进制经度和纬度的空间参考系统，即便它与足迹区公认文本表示相同，请用大地基准点代替。"@zh-hans .
+<http://rs.tdwg.org/format/values/m043> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m043> <http://www.w3.org/2004/02/skos/core#prefLabel> "SRS footprint"@es .
+<http://rs.tdwg.org/format/values/m043> <http://www.w3.org/2004/02/skos/core#prefLabel> "data CD"@en .
+<http://rs.tdwg.org/format/values/m043> <http://www.w3.org/2004/02/skos/core#prefLabel> "足迹空间参考系统"@zh-hans .
+<http://rs.tdwg.org/format/values/m044> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m044> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Audio-CD" .
+<http://rs.tdwg.org/format/values/m044> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" .
+<http://rs.tdwg.org/format/values/m044> <http://www.w3.org/2004/02/skos/core#definition> "Una representación Well-Known Text (WKT) de la forma (footprint, geometría) que define la ubicación. Una ubicación puede tener una representación de radio-punto (véase Latitud Decimal) y una representación de footprint, y pueden diferir entre sí. "@es .
+<http://rs.tdwg.org/format/values/m044> <http://www.w3.org/2004/02/skos/core#definition> "physical audio compact disc"@en .
+<http://rs.tdwg.org/format/values/m044> <http://www.w3.org/2004/02/skos/core#definition> "描述地点形状（足迹，几何）的公认文本表示。一个地点可能同时用点半径（看十进制纬度）和足迹区表示，而两者之间并不相同。"@zh-hans .
+<http://rs.tdwg.org/format/values/m044> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m044> <http://www.w3.org/2004/02/skos/core#prefLabel> "WKT footprint"@es .
+<http://rs.tdwg.org/format/values/m044> <http://www.w3.org/2004/02/skos/core#prefLabel> "audio CD"@en .
+<http://rs.tdwg.org/format/values/m044> <http://www.w3.org/2004/02/skos/core#prefLabel> "足迹公认文本"@zh-hans .
+<http://rs.tdwg.org/format/values/m045> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m045> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Video-CD" .
+<http://rs.tdwg.org/format/values/m045> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" .
+<http://rs.tdwg.org/format/values/m045> <http://www.w3.org/2004/02/skos/core#definition> "El nombre completo de la formación litoestratigráfica de la cual se colectó el objeto catalogado."@es .
+<http://rs.tdwg.org/format/values/m045> <http://www.w3.org/2004/02/skos/core#definition> "physical video compact disc"@en .
+<http://rs.tdwg.org/format/values/m045> <http://www.w3.org/2004/02/skos/core#definition> "采集编目项所在地层的完整名称。"@zh-hans .
+<http://rs.tdwg.org/format/values/m045> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m045> <http://www.w3.org/2004/02/skos/core#prefLabel> "Formación"@es .
+<http://rs.tdwg.org/format/values/m045> <http://www.w3.org/2004/02/skos/core#prefLabel> "video CD"@en .
+<http://rs.tdwg.org/format/values/m045> <http://www.w3.org/2004/02/skos/core#prefLabel> "地层"@zh-hans .
+<http://rs.tdwg.org/format/values/m046> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m046> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Data-DVD" .
+<http://rs.tdwg.org/format/values/m046> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m001" .
+<http://rs.tdwg.org/format/values/m046> <http://www.w3.org/2004/02/skos/core#definition> "El nombre científico completo del género en el que se clasifica el taxón. "@es .
+<http://rs.tdwg.org/format/values/m046> <http://www.w3.org/2004/02/skos/core#definition> "physical data DVD"@en .
+<http://rs.tdwg.org/format/values/m046> <http://www.w3.org/2004/02/skos/core#definition> "分类单元所属属的完整学名。"@zh-hans .
+<http://rs.tdwg.org/format/values/m046> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m046> <http://www.w3.org/2004/02/skos/core#prefLabel> "Género"@es .
+<http://rs.tdwg.org/format/values/m046> <http://www.w3.org/2004/02/skos/core#prefLabel> "data DVD"@en .
+<http://rs.tdwg.org/format/values/m046> <http://www.w3.org/2004/02/skos/core#prefLabel> "属"@zh-hans .
+<http://rs.tdwg.org/format/values/m047> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m047> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Audio-DVD" .
+<http://rs.tdwg.org/format/values/m047> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" .
+<http://rs.tdwg.org/format/values/m047> <http://www.w3.org/2004/02/skos/core#definition> "El elipsoide, datum geodésico, o sistema de referencia espacial (SRS) en el que se basan las coordenadas geográficas provistas en Latitud Decimal y Longitud Decimal. La práctica recomendada es usar el código EPSG como un lenguaje controlado para proporcio"@es .
+<http://rs.tdwg.org/format/values/m047> <http://www.w3.org/2004/02/skos/core#definition> "physical audio DVD"@en .
+<http://rs.tdwg.org/format/values/m047> <http://www.w3.org/2004/02/skos/core#definition> "椭圆体、大地基准点或空间参考系统的地理坐标以十进制经度和纬度为基础。建议最佳做法是如果已知EPSG编码，使用其作为控制性词汇规定一个空间参考系统。或者使用已知的控制性词汇作为大地基准点的名称或编码。或者使用已知的控制性词汇作为椭圆体的名称或编码。如果这些都未知，则使用“未知”值。"@zh-hans .
+<http://rs.tdwg.org/format/values/m047> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m047> <http://www.w3.org/2004/02/skos/core#prefLabel> "Datum geodésico"@es .
+<http://rs.tdwg.org/format/values/m047> <http://www.w3.org/2004/02/skos/core#prefLabel> "audio DVD"@en .
+<http://rs.tdwg.org/format/values/m047> <http://www.w3.org/2004/02/skos/core#prefLabel> "大地基准"@zh-hans .
+<http://rs.tdwg.org/format/values/m048> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m048> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Video-DVD-PAL" .
+<http://rs.tdwg.org/format/values/m048> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" .
+<http://rs.tdwg.org/format/values/m048> <http://www.w3.org/2004/02/skos/core#definition> "Un identificador para el conjunto de la información asociada con Contexto Geológico (la ubicación dentro de un contexto geológico, tal como la estratigrafía). Puede ser un identificador único global o un identificador específico para el conjunto de datos."@es .
+<http://rs.tdwg.org/format/values/m048> <http://www.w3.org/2004/02/skos/core#definition> "physical PAL video DVD"@en .
+<http://rs.tdwg.org/format/values/m048> <http://www.w3.org/2004/02/skos/core#definition> "与地质环境（有地质环境的地点，如地层）有关的信息集标识符。可能是一个全局唯一标识符或特定的数据集标识符。"@zh-hans .
+<http://rs.tdwg.org/format/values/m048> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m048> <http://www.w3.org/2004/02/skos/core#prefLabel> "ID del contexto geológico"@es .
+<http://rs.tdwg.org/format/values/m048> <http://www.w3.org/2004/02/skos/core#prefLabel> "PAL video DVD"@en .
+<http://rs.tdwg.org/format/values/m048> <http://www.w3.org/2004/02/skos/core#prefLabel> "地质环境编号"@zh-hans .
+<http://rs.tdwg.org/format/values/m049> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m049> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Video-DVD-NTSC" .
+<http://rs.tdwg.org/format/values/m049> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" .
+<http://rs.tdwg.org/format/values/m049> <http://www.w3.org/2004/02/skos/core#definition> "Una lista (concatenada y separada) de los nombres de las personas, grupos u organizaciones que determinan la georreferencia (representación espacial) para la ubicación. "@es .
+<http://rs.tdwg.org/format/values/m049> <http://www.w3.org/2004/02/skos/core#definition> "physical NTSC video DVD"@en .
+<http://rs.tdwg.org/format/values/m049> <http://www.w3.org/2004/02/skos/core#definition> "确定地点的地理参考（空间表述）的人名、群体或组织列表（连接的或分开的）。"@zh-hans .
+<http://rs.tdwg.org/format/values/m049> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m049> <http://www.w3.org/2004/02/skos/core#prefLabel> "Georreferenciado por"@es .
+<http://rs.tdwg.org/format/values/m049> <http://www.w3.org/2004/02/skos/core#prefLabel> "NTSC video DVD"@en .
+<http://rs.tdwg.org/format/values/m049> <http://www.w3.org/2004/02/skos/core#prefLabel> "确定地理参考者"@zh-hans .
+<http://rs.tdwg.org/format/values/m050> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m050> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "photographic slide" .
+<http://rs.tdwg.org/format/values/m050> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m050> <http://www.w3.org/2004/02/skos/core#definition> "La fecha en que fue georreferenciada la ubicación. La práctica recomendada es utilizar un esquema de codificación, tal como ISO 8601:2004 (E)."@es .
+<http://rs.tdwg.org/format/values/m050> <http://www.w3.org/2004/02/skos/core#definition> "physical photographic slide"@en .
+<http://rs.tdwg.org/format/values/m050> <http://www.w3.org/2004/02/skos/core#definition> "确定地点的地理参考的日期。建议最佳做法是使用一个编码方案，例如ISO 8601:2004(E)。"@zh-hans .
+<http://rs.tdwg.org/format/values/m050> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m050> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fecha de la georreferenciación"@es .
+<http://rs.tdwg.org/format/values/m050> <http://www.w3.org/2004/02/skos/core#prefLabel> "photographic slide"@en .
+<http://rs.tdwg.org/format/values/m050> <http://www.w3.org/2004/02/skos/core#prefLabel> "确定地理参考日期"@zh-hans .
+<http://rs.tdwg.org/format/values/m051> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m051> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "photographic print" .
+<http://rs.tdwg.org/format/values/m051> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m051> <http://www.w3.org/2004/02/skos/core#definition> "Una descripción o referencia a los métodos utilizados para determinar el footprint espacial, coordenadas, e incertidumbres. "@es .
+<http://rs.tdwg.org/format/values/m051> <http://www.w3.org/2004/02/skos/core#definition> "physical photographic print"@en .
+<http://rs.tdwg.org/format/values/m051> <http://www.w3.org/2004/02/skos/core#definition> "用来确定空间足迹、坐标和不确定性的方法描述或参考。"@zh-hans .
+<http://rs.tdwg.org/format/values/m051> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m051> <http://www.w3.org/2004/02/skos/core#prefLabel> "Protocolo de georreferenciación"@es .
+<http://rs.tdwg.org/format/values/m051> <http://www.w3.org/2004/02/skos/core#prefLabel> "photographic print"@en .
+<http://rs.tdwg.org/format/values/m051> <http://www.w3.org/2004/02/skos/core#prefLabel> "地理参考草案"@zh-hans .
+<http://rs.tdwg.org/format/values/m052> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m052> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Blu-ray" .
+<http://rs.tdwg.org/format/values/m052> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m006" .
+<http://rs.tdwg.org/format/values/m052> <http://www.w3.org/2004/02/skos/core#definition> "Anotaciones o comentarios acerca de la determinación de la descripción espacial, suposiciones explicativas adicionales o en oposición a las formalizadas en el método referido en Protocolo de Georreferenciación. "@es .
+<http://rs.tdwg.org/format/values/m052> <http://www.w3.org/2004/02/skos/core#definition> "physical Blu-ray video disc"@en .
+<http://rs.tdwg.org/format/values/m052> <http://www.w3.org/2004/02/skos/core#definition> "关于为补充或反对地理参考草案中提到的那些正式的方法所做的空间描述确定、解释假设的记录或评论。"@zh-hans .
+<http://rs.tdwg.org/format/values/m052> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m052> <http://www.w3.org/2004/02/skos/core#prefLabel> "Blu-ray video disc"@en .
+<http://rs.tdwg.org/format/values/m052> <http://www.w3.org/2004/02/skos/core#prefLabel> "Comentarios de la georreferenciación"@es .
+<http://rs.tdwg.org/format/values/m052> <http://www.w3.org/2004/02/skos/core#prefLabel> "地理参考备注"@zh-hans .
+<http://rs.tdwg.org/format/values/m053> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m053> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "physical artwork" .
+<http://rs.tdwg.org/format/values/m053> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m053> <http://www.w3.org/2004/02/skos/core#definition> "Una lista (concatenada y separada) de los mapas, gaceteros, u otros recursos utilizados para georreferenciar la ubicación, que se describe lo suficiente específicamente como para permitir que cualquier persona en el futuro utilice los mismos recursos. "@es .
+<http://rs.tdwg.org/format/values/m053> <http://www.w3.org/2004/02/skos/core#definition> "physical drawing or painting (non-photographic)"@en .
+<http://rs.tdwg.org/format/values/m053> <http://www.w3.org/2004/02/skos/core#definition> "用于对地点进行地理参考标识的地图、地名表或其他资源列表，描述具体，足以让将来任何人使用相同的资源。"@zh-hans .
+<http://rs.tdwg.org/format/values/m053> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m053> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fuentes de la georreferenciación"@es .
+<http://rs.tdwg.org/format/values/m053> <http://www.w3.org/2004/02/skos/core#prefLabel> "physical artwork"@en .
+<http://rs.tdwg.org/format/values/m053> <http://www.w3.org/2004/02/skos/core#prefLabel> "地理参考源"@zh-hans .
+<http://rs.tdwg.org/format/values/m054> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m054> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "image/zvi" .
+<http://rs.tdwg.org/format/values/m054> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m054> <http://www.w3.org/2004/02/skos/core#definition> "Una descripción categórica de la medida en que se ha verificado la georreferencia para representar, de la mejor manera, la descripción espacial. La práctica recomendada es el uso de un lenguaje controlado. "@es .
+<http://rs.tdwg.org/format/values/m054> <http://www.w3.org/2004/02/skos/core#definition> "unofficial media subtype for Zeiss Vision Image images"@en .
+<http://rs.tdwg.org/format/values/m054> <http://www.w3.org/2004/02/skos/core#definition> "一个已证实代表最好的空间描述的地理参考范围的分类描述。建议最佳做法是使用一个控制性词汇。"@zh-hans .
+<http://rs.tdwg.org/format/values/m054> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m054> <http://www.w3.org/2004/02/skos/core#prefLabel> "Estado de verificación de la georreferenciación"@es .
+<http://rs.tdwg.org/format/values/m054> <http://www.w3.org/2004/02/skos/core#prefLabel> "ZVI"@en .
+<http://rs.tdwg.org/format/values/m054> <http://www.w3.org/2004/02/skos/core#prefLabel> "地理参考确认状态"@zh-hans .
+<http://rs.tdwg.org/format/values/m055> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m055> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "model/stl" .
+<http://rs.tdwg.org/format/values/m055> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m004" .
+<http://rs.tdwg.org/format/values/m055> <http://www.w3.org/2004/02/skos/core#definition> "El nombre completo del grupo litoestratigráfico del cual se colectó el objeto catalogado. "@es .
+<http://rs.tdwg.org/format/values/m055> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for steriolithography files"@en .
+<http://rs.tdwg.org/format/values/m055> <http://www.w3.org/2004/02/skos/core#definition> "采集编目项所在地层组的完整名称。"@zh-hans .
+<http://rs.tdwg.org/format/values/m055> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m055> <http://www.w3.org/2004/02/skos/core#prefLabel> "Grupo"@es .
+<http://rs.tdwg.org/format/values/m055> <http://www.w3.org/2004/02/skos/core#prefLabel> "STL"@en .
+<http://rs.tdwg.org/format/values/m055> <http://www.w3.org/2004/02/skos/core#prefLabel> "组"@zh-hans .
+<http://rs.tdwg.org/format/values/m056> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m056> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "audio tape" .
+<http://rs.tdwg.org/format/values/m056> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" .
+<http://rs.tdwg.org/format/values/m056> <http://www.w3.org/2004/02/skos/core#definition> "Una categoría o la descripción del hábitat en el que ocurrió el evento."@es .
+<http://rs.tdwg.org/format/values/m056> <http://www.w3.org/2004/02/skos/core#definition> "physical analogue audio tape (reel-to-reel)"@en .
+<http://rs.tdwg.org/format/values/m056> <http://www.w3.org/2004/02/skos/core#definition> "事件发生的栖息地的类别或描述。"@zh-hans .
+<http://rs.tdwg.org/format/values/m056> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m056> <http://www.w3.org/2004/02/skos/core#prefLabel> "Hábitat"@es .
+<http://rs.tdwg.org/format/values/m056> <http://www.w3.org/2004/02/skos/core#prefLabel> "reel-to-reel audio tape"@en .
+<http://rs.tdwg.org/format/values/m056> <http://www.w3.org/2004/02/skos/core#prefLabel> "栖息地"@zh-hans .
+<http://rs.tdwg.org/format/values/m057> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m057> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "audio cassette" .
+<http://rs.tdwg.org/format/values/m057> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" .
+<http://rs.tdwg.org/format/values/m057> <http://www.w3.org/2004/02/skos/core#definition> "Una lista (concatenada y separada) de los nombres de los taxones que terminan en el nivel inmediatamente superior al del taxón de referencia en el registro del taxón. La práctica recomendada es ordenar la lista comenzando con el más alto nivel y separando"@es .
+<http://rs.tdwg.org/format/values/m057> <http://www.w3.org/2004/02/skos/core#definition> "physical analogue audio cassette"@en .
+<http://rs.tdwg.org/format/values/m057> <http://www.w3.org/2004/02/skos/core#definition> "优于分类记录中引用的类群、在等级排列中紧接在最后的类群名称列表（连接的或分开的）。建议最佳做法是从最高分类级别开始排列，用分号（\";\"）分隔每个等级名称。"@zh-hans .
+<http://rs.tdwg.org/format/values/m057> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m057> <http://www.w3.org/2004/02/skos/core#prefLabel> "Clasificación superior"@es .
+<http://rs.tdwg.org/format/values/m057> <http://www.w3.org/2004/02/skos/core#prefLabel> "audio cassette"@en .
+<http://rs.tdwg.org/format/values/m057> <http://www.w3.org/2004/02/skos/core#prefLabel> "较高级分类"@zh-hans .
+<http://rs.tdwg.org/format/values/m058> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m058> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "DAT" .
+<http://rs.tdwg.org/format/values/m058> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" .
+<http://rs.tdwg.org/format/values/m058> <http://www.w3.org/2004/02/skos/core#definition> "Una lista (concatenada y separada) de los nombres geográficos menos específicos que la información capturada en el elemento de Localidad."@es .
+<http://rs.tdwg.org/format/values/m058> <http://www.w3.org/2004/02/skos/core#definition> "physical digital audio tape (DAT)"@en .
+<http://rs.tdwg.org/format/values/m058> <http://www.w3.org/2004/02/skos/core#definition> "与在当地长期获得的信息相比不够具体的地名列表（连接的或分开的）。"@zh-hans .
+<http://rs.tdwg.org/format/values/m058> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m058> <http://www.w3.org/2004/02/skos/core#prefLabel> "Geografía superior"@es .
+<http://rs.tdwg.org/format/values/m058> <http://www.w3.org/2004/02/skos/core#prefLabel> "digital audio tape"@en .
+<http://rs.tdwg.org/format/values/m058> <http://www.w3.org/2004/02/skos/core#prefLabel> "较高一级地区"@zh-hans .
+<http://rs.tdwg.org/format/values/m059> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m059> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "MiniDisc" .
+<http://rs.tdwg.org/format/values/m059> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" .
+<http://rs.tdwg.org/format/values/m059> <http://www.w3.org/2004/02/skos/core#definition> "Un identificador de la región geográfica de la ubicación. La práctica recomendada es utilizar un identificador persistente de un lenguaje controlado como el Tesauro Getty de Nombres Geográficos. "@es .
+<http://rs.tdwg.org/format/values/m059> <http://www.w3.org/2004/02/skos/core#definition> "physical MiniDisc "@en .
+<http://rs.tdwg.org/format/values/m059> <http://www.w3.org/2004/02/skos/core#definition> "地点所在地理区域的标识符。建议最佳做法是使用一个控制性词汇中的持久标识符，如地名盖蒂词库。"@zh-hans .
+<http://rs.tdwg.org/format/values/m059> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m059> <http://www.w3.org/2004/02/skos/core#prefLabel> "ID de la geografía superior"@es .
+<http://rs.tdwg.org/format/values/m059> <http://www.w3.org/2004/02/skos/core#prefLabel> "MiniDisc"@en .
+<http://rs.tdwg.org/format/values/m059> <http://www.w3.org/2004/02/skos/core#prefLabel> "较高一级地区编号"@zh-hans .
+<http://rs.tdwg.org/format/values/m060> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m060> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "vinyl" .
+<http://rs.tdwg.org/format/values/m060> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m002" .
+<http://rs.tdwg.org/format/values/m060> <http://www.w3.org/2004/02/skos/core#definition> "El nombre completo de la zona geológica bioestratigráfica más alta posible del horizonte estratigráfico donde se recolectó el objeto catalogado. "@es .
+<http://rs.tdwg.org/format/values/m060> <http://www.w3.org/2004/02/skos/core#definition> "physical vinyl record"@en .
+<http://rs.tdwg.org/format/values/m060> <http://www.w3.org/2004/02/skos/core#definition> "采集编目项所在地层地平线的可能最高的地质生物地层区的完整名称。"@zh-hans .
+<http://rs.tdwg.org/format/values/m060> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m060> <http://www.w3.org/2004/02/skos/core#prefLabel> "Zona bioestratigráfica superior"@es .
+<http://rs.tdwg.org/format/values/m060> <http://www.w3.org/2004/02/skos/core#prefLabel> "vinyl record"@en .
+<http://rs.tdwg.org/format/values/m060> <http://www.w3.org/2004/02/skos/core#prefLabel> "最高生物地层区"@zh-hans .
+<http://rs.tdwg.org/format/values/m061> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m061> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Mixed-CD" .
+<http://rs.tdwg.org/format/values/m061> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m001" .
+<http://rs.tdwg.org/format/values/m061> <http://www.w3.org/2004/02/skos/core#definition> "Un identificador para la identificación (el cuerpo de la información asociada con la asignación de un nombre científico). Puede ser un identificador único global o un identificador específico para el conjunto de datos. "@es .
+<http://rs.tdwg.org/format/values/m061> <http://www.w3.org/2004/02/skos/core#definition> "physical compact disc containing both data and audio tracks"@en .
+<http://rs.tdwg.org/format/values/m061> <http://www.w3.org/2004/02/skos/core#definition> "鉴定标识符（与分配学名相关的信息主体）。可能是一个全局唯一标识符或特定的数据集标识符。\n"@zh-hans .
+<http://rs.tdwg.org/format/values/m061> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m061> <http://www.w3.org/2004/02/skos/core#prefLabel> "ID de la identificación"@es .
+<http://rs.tdwg.org/format/values/m061> <http://www.w3.org/2004/02/skos/core#prefLabel> "mixed CD (data and audio)"@en .
+<http://rs.tdwg.org/format/values/m061> <http://www.w3.org/2004/02/skos/core#prefLabel> "鉴定编号"@zh-hans .
+<http://rs.tdwg.org/format/values/m062> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m062> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "model/obj" .
+<http://rs.tdwg.org/format/values/m062> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m004" .
+<http://rs.tdwg.org/format/values/m062> <http://www.w3.org/2004/02/skos/core#definition> "Una breve frase o término estándar (\"cf.\" ,\"aff.\") para expresar las dudas del determinador sobre la identificación. "@es .
+<http://rs.tdwg.org/format/values/m062> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for OBJ 3D models"@en .
+<http://rs.tdwg.org/format/values/m062> <http://www.w3.org/2004/02/skos/core#definition> "鉴定者对结果表示疑虑的一个简单短语或一个标准术语(\"cf.\", \"aff.\")。"@zh-hans .
+<http://rs.tdwg.org/format/values/m062> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m062> <http://www.w3.org/2004/02/skos/core#prefLabel> "Calificador de la identificación"@es .
+<http://rs.tdwg.org/format/values/m062> <http://www.w3.org/2004/02/skos/core#prefLabel> "OBJ"@en .
+<http://rs.tdwg.org/format/values/m062> <http://www.w3.org/2004/02/skos/core#prefLabel> "鉴定合格者"@zh-hans .
+<http://rs.tdwg.org/format/values/m063> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m063> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "model/gltf-binary" .
+<http://rs.tdwg.org/format/values/m063> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m004" .
+<http://rs.tdwg.org/format/values/m063> <http://www.w3.org/2004/02/skos/core#definition> "Una lista (concatenada y separada) de las referencias (publicación, identificador único global, URI) utilizadas en la identificación. "@es .
+<http://rs.tdwg.org/format/values/m063> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for Binary GL Transmission Format"@en .
+<http://rs.tdwg.org/format/values/m063> <http://www.w3.org/2004/02/skos/core#definition> "鉴定中使用的参考（出版物，全球唯一标识符，网站资源）列表（连接的或分开的）。"@zh-hans .
+<http://rs.tdwg.org/format/values/m063> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m063> <http://www.w3.org/2004/02/skos/core#prefLabel> "Referencias de la identificación"@es .
+<http://rs.tdwg.org/format/values/m063> <http://www.w3.org/2004/02/skos/core#prefLabel> "gLTF binary"@en .
+<http://rs.tdwg.org/format/values/m063> <http://www.w3.org/2004/02/skos/core#prefLabel> "鉴定参考"@zh-hans .
+<http://rs.tdwg.org/format/values/m064> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m064> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "model/gltf+json" .
+<http://rs.tdwg.org/format/values/m064> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m004" .
+<http://rs.tdwg.org/format/values/m064> <http://www.w3.org/2004/02/skos/core#definition> "Comentarios o anotaciones sobre la identificación. "@es .
+<http://rs.tdwg.org/format/values/m064> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for GL Transmission Format"@en .
+<http://rs.tdwg.org/format/values/m064> <http://www.w3.org/2004/02/skos/core#definition> "有关鉴定的评论或记录。"@zh-hans .
+<http://rs.tdwg.org/format/values/m064> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m064> <http://www.w3.org/2004/02/skos/core#prefLabel> "Comentarios de la identificación"@es .
+<http://rs.tdwg.org/format/values/m064> <http://www.w3.org/2004/02/skos/core#prefLabel> "gLTF"@en .
+<http://rs.tdwg.org/format/values/m064> <http://www.w3.org/2004/02/skos/core#prefLabel> "鉴定备注"@zh-hans .
+<http://rs.tdwg.org/format/values/m065> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m065> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "model/vrml" .
+<http://rs.tdwg.org/format/values/m065> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m004" .
+<http://rs.tdwg.org/format/values/m065> <http://www.w3.org/2004/02/skos/core#definition> "Un indicador categórico del alcance de la verificación de la identificación taxonómica. La práctica recomendada es el uso de un lenguaje controlado."@es .
+<http://rs.tdwg.org/format/values/m065> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for Virtual Reality Modeling Language"@en .
+<http://rs.tdwg.org/format/values/m065> <http://www.w3.org/2004/02/skos/core#definition> "分类鉴定结果经核实为正确的确切范围指标。建议最佳做法是使用一个例如用在HISPID/ABCD中的控制性词汇。"@zh-hans .
+<http://rs.tdwg.org/format/values/m065> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m065> <http://www.w3.org/2004/02/skos/core#prefLabel> "Estado de la verificación de la identificación"@es .
+<http://rs.tdwg.org/format/values/m065> <http://www.w3.org/2004/02/skos/core#prefLabel> "VRML"@en .
+<http://rs.tdwg.org/format/values/m065> <http://www.w3.org/2004/02/skos/core#prefLabel> "鉴定确认状态"@zh-hans .
+<http://rs.tdwg.org/format/values/m066> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m066> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "application/dicom" .
+<http://rs.tdwg.org/format/values/m066> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m001" .
+<http://rs.tdwg.org/format/values/m066> <http://www.w3.org/2004/02/skos/core#definition> "Una lista (concatenada y separada) de los nombres de las personas, grupos u organizaciones que asignaron el taxón al sujeto. "@es .
+<http://rs.tdwg.org/format/values/m066> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for Digital Imaging and Communications in Medicine"@en .
+<http://rs.tdwg.org/format/values/m066> <http://www.w3.org/2004/02/skos/core#definition> "鉴定未知对象为相关类群的人名、群体或组织列表（连接的或分开的）。"@zh-hans .
+<http://rs.tdwg.org/format/values/m066> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m066> <http://www.w3.org/2004/02/skos/core#prefLabel> "DICOM"@en .
+<http://rs.tdwg.org/format/values/m066> <http://www.w3.org/2004/02/skos/core#prefLabel> "Identificado por"@es .
+<http://rs.tdwg.org/format/values/m066> <http://www.w3.org/2004/02/skos/core#prefLabel> "鉴定者"@zh-hans .
+<http://rs.tdwg.org/format/values/m067> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m067> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "model/mtl" .
+<http://rs.tdwg.org/format/values/m067> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m004" .
+<http://rs.tdwg.org/format/values/m067> <http://www.w3.org/2004/02/skos/core#definition> "El número de individuos representados presente en el momento del Registro Biológico. "@es .
+<http://rs.tdwg.org/format/values/m067> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for OBJ Material Template Library"@en .
+<http://rs.tdwg.org/format/values/m067> <http://www.w3.org/2004/02/skos/core#definition> "当前发生时间参加的个体数量。"@zh-hans .
+<http://rs.tdwg.org/format/values/m067> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m067> <http://www.w3.org/2004/02/skos/core#prefLabel> "Conteo de individuos"@es .
+<http://rs.tdwg.org/format/values/m067> <http://www.w3.org/2004/02/skos/core#prefLabel> "MTL"@en .
+<http://rs.tdwg.org/format/values/m067> <http://www.w3.org/2004/02/skos/core#prefLabel> "个体计数"@zh-hans .
+<http://rs.tdwg.org/format/values/m068> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m068> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "model/x3d+xml" .
+<http://rs.tdwg.org/format/values/m068> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m004" .
+<http://rs.tdwg.org/format/values/m068> <http://www.w3.org/2004/02/skos/core#definition> "Un identificador para un individuo o grupo de organismos individuales representados en el Registro Biológico. Destinado a alojar remuestreo del mismo individuo o grupo con fines de monitoreo. Puede ser un identificador único global o un identificador espe"@es .
+<http://rs.tdwg.org/format/values/m068> <http://www.w3.org/2004/02/skos/core#definition> "media subtype for X3D XML models"@en .
+<http://rs.tdwg.org/format/values/m068> <http://www.w3.org/2004/02/skos/core#definition> "事件中展现的个体标识符或生物个体命名组。为以后对相同个体或组群重新采样进行检测提供方便。可能是一个全局唯一标识符或特定数据集标识符。"@zh-hans .
+<http://rs.tdwg.org/format/values/m068> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m068> <http://www.w3.org/2004/02/skos/core#prefLabel> "ID del individuo"@es .
+<http://rs.tdwg.org/format/values/m068> <http://www.w3.org/2004/02/skos/core#prefLabel> "X3D XML"@en .
+<http://rs.tdwg.org/format/values/m068> <http://www.w3.org/2004/02/skos/core#prefLabel> "个体编号"@zh-hans .
+<http://rs.tdwg.org/format/values/m069> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m069> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "image/x-canon-crw" .
+<http://rs.tdwg.org/format/values/m069> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m069> <http://www.w3.org/2004/02/skos/core#definition> "Información adicional que existe, pero que no ha sido compartida en el registro dado. "@es .
+<http://rs.tdwg.org/format/values/m069> <http://www.w3.org/2004/02/skos/core#definition> "unofficial media subtype for Camera Image File Format raw image"@en .
+<http://rs.tdwg.org/format/values/m069> <http://www.w3.org/2004/02/skos/core#definition> "存在附加信息，但没有在给定记录中共享。"@zh-hans .
+<http://rs.tdwg.org/format/values/m069> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m069> <http://www.w3.org/2004/02/skos/core#prefLabel> "CIFF raw image"@en .
+<http://rs.tdwg.org/format/values/m069> <http://www.w3.org/2004/02/skos/core#prefLabel> "Información retenida"@es .
+<http://rs.tdwg.org/format/values/m069> <http://www.w3.org/2004/02/skos/core#prefLabel> "信息隐瞒"@zh-hans .
+<http://rs.tdwg.org/format/values/m070> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m070> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "image/x-canon-cr3" .
+<http://rs.tdwg.org/format/values/m070> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m070> <http://www.w3.org/2004/02/skos/core#definition> "El nombre del epíteto infraespecífico más bajo o terminal del Nombre Científico, excluyendo cualquier otra denominación de nivel. "@es .
+<http://rs.tdwg.org/format/values/m070> <http://www.w3.org/2004/02/skos/core#definition> "unofficial media subtype for Canon Raw 3 image"@en .
+<http://rs.tdwg.org/format/values/m070> <http://www.w3.org/2004/02/skos/core#definition> "学名的最低等级或末端的种内别名，不包括任何等级名称。"@zh-hans .
+<http://rs.tdwg.org/format/values/m070> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m070> <http://www.w3.org/2004/02/skos/core#prefLabel> "CR3 raw image"@en .
+<http://rs.tdwg.org/format/values/m070> <http://www.w3.org/2004/02/skos/core#prefLabel> "Epíteto infraespecífico"@es .
+<http://rs.tdwg.org/format/values/m070> <http://www.w3.org/2004/02/skos/core#prefLabel> "种内名称"@zh-hans .
+<http://rs.tdwg.org/format/values/m071> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m071> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "image/x-sony-arw" .
+<http://rs.tdwg.org/format/values/m071> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m071> <http://www.w3.org/2004/02/skos/core#definition> "El nombre (o acrónimo) en uso por la institución que tenga la custodia del objeto(s) o información mencionada en el registro. "@es .
+<http://rs.tdwg.org/format/values/m071> <http://www.w3.org/2004/02/skos/core#definition> "unofficial media subtype for Sony raw image"@en .
+<http://rs.tdwg.org/format/values/m071> <http://www.w3.org/2004/02/skos/core#definition> "记录中提到有保管的物品或资料的机构所使用的名称（或首字母缩略词）。"@zh-hans .
+<http://rs.tdwg.org/format/values/m071> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m071> <http://www.w3.org/2004/02/skos/core#prefLabel> "ARW raw image"@en .
+<http://rs.tdwg.org/format/values/m071> <http://www.w3.org/2004/02/skos/core#prefLabel> "Código de la institución"@es .
+<http://rs.tdwg.org/format/values/m071> <http://www.w3.org/2004/02/skos/core#prefLabel> "机构编码"@zh-hans .
+<http://rs.tdwg.org/format/values/m072> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://rs.tdwg.org/format/values/m072> <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "image/x-panasonic-rw2" .
+<http://rs.tdwg.org/format/values/m072> <http://www.w3.org/2004/02/skos/core#broader> "http://rs.tdwg.org/format/values/m003" .
+<http://rs.tdwg.org/format/values/m072> <http://www.w3.org/2004/02/skos/core#definition> "Un identificador de la institución que custodia el objeto(s) o información mencionada en el registro. "@es .
+<http://rs.tdwg.org/format/values/m072> <http://www.w3.org/2004/02/skos/core#definition> "unofficial media subtype for Panasonic raw image"@en .
+<http://rs.tdwg.org/format/values/m072> <http://www.w3.org/2004/02/skos/core#definition> "记录中提到有保管的物品或资料的机构的标识符。"@zh-hans .
+<http://rs.tdwg.org/format/values/m072> <http://www.w3.org/2004/02/skos/core#inScheme> "http://rs.tdwg.org/format/values/m" .
+<http://rs.tdwg.org/format/values/m072> <http://www.w3.org/2004/02/skos/core#prefLabel> "ID de la institución"@es .
+<http://rs.tdwg.org/format/values/m072> <http://www.w3.org/2004/02/skos/core#prefLabel> "RW2 raw image"@en .
+<http://rs.tdwg.org/format/values/m072> <http://www.w3.org/2004/02/skos/core#prefLabel> "机构编号"@zh-hans .
+<http://rs.tdwg.org/format/values/m> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://rs.tdwg.org/format/values/m> <http://www.w3.org/2004/02/skos/core#definition> "El nombre completo, con autoría e información de fecha si se conoce, del taxón actualmente válido (zoológico) o aceptado (botánico). "@es .
+<http://rs.tdwg.org/format/values/m> <http://www.w3.org/2004/02/skos/core#definition> "concept scheme for IANA media types and various physical media items"@en .
+<http://rs.tdwg.org/format/values/m> <http://www.w3.org/2004/02/skos/core#definition> "目前有效（动物学）的或公认（植物学）的分类单元全称，如已知来源和日期信息则需注明。"@zh-hans .
+<http://rs.tdwg.org/format/values/m> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nombre aceptado en uso"@es .
+<http://rs.tdwg.org/format/values/m> <http://www.w3.org/2004/02/skos/core#prefLabel> "media types and physical media concept scheme"@en .
+<http://rs.tdwg.org/format/values/m> <http://www.w3.org/2004/02/skos/core#prefLabel> "公认使用名称"@zh-hans .
