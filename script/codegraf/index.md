@@ -120,6 +120,8 @@ The following modules are currently available or under construction. More module
 
 This module introduces the RStudio interface and basic programming concepts of R
 
+Total video time: 3h 27m
+
 **Lessons included in the module:**
 
 [Vectors, vectorized computing, and packages](011) 50 minutes
@@ -127,6 +129,10 @@ This module introduces the RStudio interface and basic programming concepts of R
 [Lists and dataframes, tibbles](012) 33 minutes
 
 [Basic stats and plots, missing data](013) 47 minutes
+
+[Tidy Data and data wrangling](014a) 31 minutes
+
+[More data wrangling and piping](014b) 46 minutes
 
 ----
 
@@ -159,6 +165,6 @@ Total video time: 1h 42m
 
 ----
 
-Revised 2020-09-16
+Revised 2020-09-30
 
 If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)

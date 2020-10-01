@@ -27,8 +27,6 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 
 First cycle: Fridays from 1:00 - 2:00 PM Central (US) Time
 
-[Registration link](https://vanderbilt.zoom.us/meeting/register/tJwpc-6prjgrHd3M1Fps39PDg4Z8YpBWUYME). 
-
 Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
 
 | Working session date | Lesson | Topic | Web pages |
@@ -38,7 +36,7 @@ Instructor (Steve Baskauf) [office hours information](https://www.library.vander
 | Sep 18 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (33 min) |
 | Sep 25 | 4 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
 | Oct 2 | 5 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
-| Oct 9 | 6 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (x min) |
+| Oct 9 | 6 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (46 min) |
 
 Second cycle: Thursdays from 11:00 AM - noon Central (US) Time
 
@@ -46,12 +44,12 @@ Second cycle: Thursdays from 11:00 AM - noon Central (US) Time
 
 | Working session date | Lesson | Topic | Web pages |
 |---|---|---|---|
-| Oct 15 | 1 | Introduction, installation troubleshooting |  |
-| Oct 22 | 2 | Basics: Vectors and vectorized computing, packages |  |
-| Oct 29 | 3 | Lists and dataframes, tibbles |  |
-| Nov 5 | 4 | Missing data, basic stats, basic plots |  |
-| Nov 12 | 5 | Tidy Data and basic data wrangling |  |
-| Nov 19 | 6 | More data wrangling and piping |  |
+| Oct 15 | 1 | Introduction, installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (10 min) Stop on the page after the `Installing Anaconda` section. |
+| Oct 22 | 2 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (50 min) |
+| Oct 29 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (33 min) |
+| Nov 5 | 4 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
+| Nov 12 | 5 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
+| Nov 19 | 6 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (46 min)  |
 
 
 ## Intermediate Lessons (Introduction to statistical analysis) - Fall 2020
@@ -96,4 +94,4 @@ Check back later for future offerings.
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-09-28
+Revised 2020-09-30
