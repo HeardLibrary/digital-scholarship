@@ -83,13 +83,13 @@ Research IT <https://research.vanderbilt.edu/researchadministration/about/resear
 
 Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 
-## Software Carpentries (cosponsored by DiSC and Research IT)
+## Software Carpentries (cosponsored by DiSC, Office of the Vice Provost for Research, Research IT, ACCRE, and the Data Science Institute)
 
-Stay tuned for the next offering
+3 to 5 PM, November 2-5 and 9-12. Topics include the Unix shell, command line Git, and introductory Python. To register visit [this link](https://www.eventbrite.com/e/fall-2020-software-carpentries-tickets-122735971595).
 
 --------------------
 
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-09-15
+Revised 2020-10-02
