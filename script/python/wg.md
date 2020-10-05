@@ -46,12 +46,12 @@ Second cycle: Wednesdays from 1:00 - 2:00 PM Central (US) Time
 
 | Working session date | Lesson | Topic | Web page |
 |---|---|---|---|
-| Oct 14 | 1 | Introduction / Installation troubleshooting |  |
-| Oct 21 | 2 | Programming basics |  |
-| Oct 28 | 3 | Code libraries |  |
-| Nov 4 | 4 | List and dictionary objects |  |
-| Nov 11 | 5 | Loops |  |
-| Nov 18 | 6 | Conditional execution |  |
+| Oct 14 | 1 | Introduction / Installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (27 min)  |
+| Oct 21 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
+| Oct 28 | 3 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
+| Nov 4 | 4 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
+| Nov 11 | 5 | Loops | [lesson videos](../../codegraf/006b/) (33 min lessons, 61 min including demos) |
+| Nov 18 | 6 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
 
 
 ## Intermediate Lessons (Files and tables) - Fall 2020
@@ -92,4 +92,4 @@ Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-10-02
+Revised 2020-10-05
