@@ -25,24 +25,11 @@ The DiSC office also provides [lessons for learning R](http://vanderbi.lt/r) and
 
 ## Beginners Lessons - Fall 2020
 
-First cycle: Tuesdays from 10:00 - 11:00 AM Central (US) Time
-
-[Registration link](https://vanderbilt.zoom.us/meeting/register/tJUqfuCtrD8uG9AyWlJJdrDsWo-G_vzsXJTE). 
-
-Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
-
-| Working session date | Lesson | Topic | Pre-lesson web pages |
-|---|---|---|---|
-| Sep 1 | 1 | Introduction / Installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (27 min)  |
-| Sep 8 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
-| Sep 15 | 3 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
-| Sep 22 | 4 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
-| Sep 29 | 5 | Loops | [lesson videos](../../codegraf/006b/) (33 min lessons, 61 min including demos) |
-| Oct 6 | 6 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
-
 Second cycle: Wednesdays from 1:00 - 2:00 PM Central (US) Time
 
 [Registration link](https://vanderbilt.zoom.us/meeting/register/tJYoceCspzsrGNcKXFlxeuHUXj5kQpTRIXde). 
+
+Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
 
 | Working session date | Lesson | Topic | Web page |
 |---|---|---|---|
@@ -62,7 +49,7 @@ Tuesdays from 10:00 - 11:00 AM Central (US) Time
 
 | Working session date | Lesson | Topic | Web pages |
 |---|---|---|---|
-| Oct 13 | 1 | Data from files |  |
+| Oct 13 | 1 | Data from files | [lesson videos](../../codegraf/020/) (x min) |
 | Oct 20 | 2 | Dictionaries and "lists of dictionaries" tables |  |
 | Oct 27 | 3 | Nested FOR loops, working with lists of dictionaries |  |
 | Nov 3 | 4 | Pandas Series and DataFrames: vectorized programming |  |
@@ -92,4 +79,4 @@ Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-10-05
+Revised 2020-10-07
