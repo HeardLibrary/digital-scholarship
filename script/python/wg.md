@@ -49,7 +49,7 @@ Tuesdays from 10:00 - 11:00 AM Central (US) Time
 
 | Working session date | Lesson | Topic | Web pages |
 |---|---|---|---|
-| Oct 13 | 1 | Data from files | [lesson videos](../../codegraf/020/) (x min) |
+| Oct 13 | 1 | Data from files | [lesson videos](../../codegraf/020/) (estimated 55 min) |
 | Oct 20 | 2 | Dictionaries and "lists of dictionaries" tables |  |
 | Oct 27 | 3 | Nested FOR loops, working with lists of dictionaries |  |
 | Nov 3 | 4 | Pandas Series and DataFrames: vectorized programming |  |
