@@ -49,7 +49,7 @@ Fridays from 1:00 - 2:00 PM Central (US) Time
 
 | Working session date | Lesson | Topic | Web pages |
 |---|---|---|---|
-| Oct 16 | 1 | Factors and the t-test of means | [lesson videos](../../codegraf/026/) (x min) |
+| Oct 16 | 1 | Factors and the t-test of means | [lesson videos](../../codegraf/026/) (33 min) |
 | Oct 23 | 2 |  |  |
 | Oct 30 | 3 |  |  |
 | Nov 6 | 4 |  |  |
