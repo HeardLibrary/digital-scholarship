@@ -52,9 +52,9 @@ Tuesdays from 10:00 - 11:00 AM Central (US) Time
 | Oct 13 | 1 | Data from files | [lesson videos](../../codegraf/020/) (estimated 55 min) |
 | Oct 20 | 2 | Complex data structures and functions |  [lesson videos](../../codegraf/021/) (30 min)  |
 | Oct 27 | 3 | Reading and writing CSV files |  [lesson videos](../../codegraf/022/) (34 min)  |
-| Nov 3 | 4 | Pandas Series and DataFrames: vectorized programming |  |
-| Nov 10 | 5 | Loading and accessing data in Pandas DataFrames |  |
-| Nov 17 | 6 | Basic data wranging with Pandas DataFrames |  |
+| Nov 3 | 4 | Pandas Series and DataFrames: vectorized programming |  [lesson videos](../../codegraf/008/) (61 min but not all videos apply to every user)  |
+| Nov 10 | 5 | Basic data wranging with Pandas DataFrames (first half) |  [lesson videos](../../codegraf/009/) (75 min both halves)  |
+| Nov 17 | 6 | Basic data wranging with Pandas DataFrames (second half) | continue with previous videos |
 
 # Python Resources
 
@@ -79,4 +79,4 @@ Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-10-15
+Revised 2020-10-20

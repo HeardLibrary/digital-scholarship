@@ -126,7 +126,7 @@ Total video time: 3h 27m
 
 [Vectors, vectorized computing, and packages](011) 50 minutes
 
-[Lists and dataframes, tibbles](012) 33 minutes
+[Lists and dataframes, tibbles](012) 40 minutes
 
 [Basic stats and plots, missing data](013) 47 minutes
 
@@ -159,12 +159,12 @@ Total video time: 1h 42m
 
 [Markdown basics, commits, pull from/push to GitHub](017) 28 minutes
 
-[The work cycle](018) 40 minutes
+[The work cycle](018) 43 minutes
 
 [Using GitHub to recover from disasters](019) 18 minutes
 
 ----
 
-Revised 2020-09-30
+Revised 2020-10-20
 
 If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)

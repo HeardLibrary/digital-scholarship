@@ -35,7 +35,7 @@ Instructor (Steve Baskauf) [office hours information](https://www.library.vander
 |---|---|---|---|
 | Oct 15 | 1 | Introduction, installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (10 min) Stop on the page after the `Installing Anaconda` section. |
 | Oct 22 | 2 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (50 min) |
-| Oct 29 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (33 min) |
+| Oct 29 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
 | Nov 5 | 4 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
 | Nov 12 | 5 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
 | Nov 19 | 6 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (46 min)  |
@@ -83,4 +83,4 @@ Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-10-02
+Revised 2020-10-20

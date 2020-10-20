@@ -34,7 +34,7 @@ Instructor (Steve Baskauf) [office hours information](https://www.library.vander
 |---|---|---|---|
 | Sep 2 | 1 | Introduction and Desktop Client installation | [background information videos](../../../script/codegraf/015/) (17 min) / [setup](../../../script/codegraf/016/) (16 min) |
 | Sep 9 | 2 | Markdown basics, commits, pull from/push to GitHub | [lesson videos](../../../script/codegraf/017/) (28 min) |
-| Sep 16 | 3 | The work cycle | [lesson videos](../../../script/codegraf/018/) (40 min) |
+| Sep 16 | 3 | The work cycle | [lesson videos](../../../script/codegraf/018/) (43 min) |
 | Sep 23 | 4 | Using GitHub to recover from disasters | [lesson videos](../../../script/codegraf/019/) (18 min) |
 
 
@@ -57,4 +57,4 @@ The following pages provide information for developing basic skills with GitHub.
 [Managing a website with GitHub Pages](pages/)
 
 ----
-Revised 2020-08-31
+Revised 2020-10-20
