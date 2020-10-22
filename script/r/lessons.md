@@ -50,7 +50,7 @@ Fridays from 1:00 - 2:00 PM Central (US) Time
 | Working session date | Lesson | Topic | Web pages |
 |---|---|---|---|
 | Oct 16 | 1 | Factors and the t-test of means | [lesson videos](../../codegraf/026/) (33 min) |
-| Oct 23 | 2 |  |  |
+| Oct 23 | 2 | Transformations and non-parametric tests | [lesson videos](../../codegraf/027/) (25 min)  |
 | Oct 30 | 3 |  |  |
 | Nov 6 | 4 |  |  |
 | Nov 13 | 5 |  |  |
@@ -83,4 +83,4 @@ Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-10-20
+Revised 2020-10-22
