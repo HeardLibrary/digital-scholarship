@@ -68,6 +68,8 @@ Vanderbilt has a submscription to *O'Reilly for Higher Education* which provides
 
 If you are already familiar with basic statistical tests and want a jump start to doing those tests using R, [Basic Statistical Analysis Using the R Statistical Package](http://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/R/R-Manual/index.html) by Heeren and Milton of the Boston University School of Public Health is a good place to start.
 
+A great resource for developing models in R is [Tidy Modeling with R](https://www.tmwr.org/) by Max Kuhn and Julia Silge. It presupposes background statistical understanding as well as a general understanding of how R works -- particularly packages that are part of the *tidyverse*.
+
 For summaries of how to perform a variety of tasks using the RStudio IDE, see the [RStudio cheat sheets](https://www.rstudio.com/resources/cheatsheets/).
 
 To try out some simple R scripts for t-test of means, paired t-test, chi-squared goodness of fit, chi-squared contingency, regression, and ANOVA, visit [this page](stats/).
@@ -75,4 +77,4 @@ To try out some simple R scripts for t-test of means, paired t-test, chi-squared
 A few more beginner exercises for practice are on [this page](https://github.com/HeardLibrary/workshops/tree/master/R-Stats).
 
 ----
-Revised 2020-03-14
+Revised 2020-10-30
