@@ -53,8 +53,8 @@ Fridays from 1:00 - 2:00 PM Central (US) Time
 | Oct 23 | 2 | Transformations and non-parametric tests | [lesson videos](../../codegraf/027/) (25 min)  |
 | Oct 30 | 3 | Continuous bivariate data | [lesson videos](../../codegraf/028/) (47 min) |
 | Nov 6 | 4 | Analysis of variance (ANOVA) | [lesson videos](../../codegraf/029/) (63 min) |
-| Nov 13 | 5 |  |  |
-| Nov 20 | 6 |  |  |
+| Nov 13 | 5 | Multiple regression |  |
+| Nov 20 | 6 | Tests with discontinuous Y |  |
 
 # R Resources
 
@@ -83,4 +83,4 @@ Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-10-27
+Revised 2020-11-06
