@@ -12,11 +12,11 @@ breadcrumb: Docker
 
 *Docker Compose* is a feature of Docker that allows several containers to interact with each other in a pre-determined way.  It allows one to archive a complex setup of several applications in a way that others can easily deply them.
 
-[Introduction to Docker Compose](dockercompose/)
+[Introduction to Docker Compose](../dockercompose/)
 
 *Docker Machine* is a system for managing Docker containers on several servers.  This can include remote servers (such as those on Amazon Web Services or Digital Ocean), as well as a localhost server on your own computer.  You can switch between different servers, then interact with them in the same way (through Docker or Docker Compose commands) as you would with the default localhost server using generic Docker.
 
-[Introduction to Docker Machine](dockermachine/)
+[Introduction to Docker Machine](../dockermachine/)
 
 # Setting up and testing Docker
 

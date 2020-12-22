@@ -1,5 +1,5 @@
 ---
-permalink: /host/docker/dockercompose/
+permalink: /host/dockercompose/
 title: Docker Compose
 breadcrumb: Docker Compose
 ---

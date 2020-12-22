@@ -1,5 +1,5 @@
 ---
-permalink: /host/docker/dockermachine/
+permalink: /host/dockermachine/
 title: Docker Machine
 breadcrumb: Docker Machine
 ---
