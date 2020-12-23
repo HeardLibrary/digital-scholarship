@@ -133,3 +133,8 @@
 .template {
     display: none;
 }
+
+
+.qualifier, .ref-hash, .ref-prop {
+    width: 300px;
+}

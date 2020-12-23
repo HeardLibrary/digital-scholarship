@@ -73,6 +73,12 @@
                                             <option id="type-string">String</option>
                                             <option id="type-url">URL</option>
                                             <option id="type-date">Date</option>
+                                            <option id="type-globecoord">Globe Coordinate</option>
+                                            <option id="type-quantity">Quantity</option>
+                                            <option id="type-mlstring">Monolingual String</option>
+                                        </select>
+                                        <select class="languages-dropdown" hidden>
+                                            <option id="language-choose">Choose language</option>
                                         </select>
                                         <input type="text" class="statement-uuid" placeholder="Statement UUID">
                                     </div>
@@ -89,6 +95,12 @@
                                                         <option id="type-string">String</option>
                                                         <option id="type-url">URL</option>
                                                         <option id="type-date">Date</option>
+                                                        <option id="type-globecoord">Globe Coordinate</option>
+                                                        <option id="type-quantity">Quantity</option>
+                                                        <option id="type-mlstring">Monolingual String</option>
+                                                    </select>
+                                                    <select class="languages-dropdown" hidden>
+                                                        <option id="language-choose">Choose language</option>
                                                     </select>
                                                     <button type="button" class="delete-button fa fa-trash-o"></button>
                                                 </div>
@@ -116,6 +128,12 @@
                                                                             <option id="type-string">String</option>
                                                                             <option id="type-url">URL</option>
                                                                             <option id="type-date">Date</option>
+                                                                            <option id="type-globecoord">Globe Coordinate</option>
+                                                                            <option id="type-quantity">Quantity</option>
+                                                                            <option id="type-mlstring">Monolingual String</option>
+                                                                        </select>
+                                                                        <select class="languages-dropdown" hidden>
+                                                                            <option id="language-choose">Choose language</option>
                                                                         </select>
                                                                         <button type="button" class="delete-button fa fa-trash-o"></button>
                                                                     </div>
@@ -136,8 +154,8 @@
                             <p>Please enter the name of the property, the ID for that property, and the type of the column entries for this property.
                                 You can find the Property ID corresponding to your property name here: https://www.wikidata.org/wiki/Wikidata:List_of_properties.
                                 You must also include a column for Statement UUIDs corresponding to this property.
-                                *Any property, qualifier, or reference property with type Date will have three column headers automatically generated
-                                in order to allow for the specification of date/time precision.</p>
+                                *Any property, qualifier, or reference property with type Date, Quantity, or Globe Coordinate will have additional column headers automatically generated
+                                in order to allow for the specification of multiple values required for a full description.</p>
                         </div>
                         <button type="button" class="add-button">Add property</button>
                     </div>

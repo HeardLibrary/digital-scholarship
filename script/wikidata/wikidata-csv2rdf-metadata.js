@@ -1,7 +1,7 @@
 // Script to generate metadata JSON for mapping a CSV file to the Wikidata graph model according to the
 // W3C Generating RDF from Tabular Data on the Web Recommendation https://www.w3.org/TR/csv2rdf/
 // (c) 2020 Jessica K. Baskauf. 2020-08-23
-// This program is released under The MIT License https://opensource.org/licenses/MIT
+// This program is released under a GNU General Public License v3.0 http://www.gnu.org/licenses/gpl-3.0
 init()
 
 function init() {
@@ -14,16 +14,16 @@ function init() {
         // first section-item in a div of section-items must be a template
         $(".add-button").click(function() {
             setUpAddButtonOnClick($(this));
-        })
+        });
         setUpLanguagesDropdown();
         // set up on-click handler for the Create CSV button
         $("#create-csv").click(function() {
             createCSV();
-        })
+        });
         // set up on-click handler for the Create JSON button
         $("#create-json").click(function() {
             createJSON();
-        })
+        });
         // set up clipboard copy buttons
         new ClipboardJS('.clipboard-button');
     });
@@ -81,6 +81,13 @@ function setUpAddButtonOnClick(addButtonElement) {
             // is the deepest it goes), this will end recursion when no add buttons
             // are in the set of addButtons
             setUpAddButtonOnClick($(this));
+        })
+    });
+    // if there are type dropdowns, add on-select listeners to them
+    var typeDropowns = newItem.find(".type");
+    typeDropowns.each(function() {
+        $(this).change(function() {
+            setUpTypeDropdownOnSelect($(this));
         })
     });
     // if the new item is a property, set up the uuid field to have _uuid in it by default
@@ -144,6 +151,18 @@ function setUpAddButtonOnClick(addButtonElement) {
     })
 }
 
+// type dropdowns may need to be accompanied by language dropdowns, depending on type
+// when type Multilingual String selected, un-hide the language dropdown
+// when other type selected, hide language dropdown
+function setUpTypeDropdownOnSelect(element) {
+    var langDropdown = element.next();
+    if (element.children("option:selected").attr("id") == "type-mlstring") {
+        langDropdown.removeAttr("hidden");
+    } else {
+        langDropdown.attr("hidden", "");
+    }
+}
+
 function hasDuplicate(list) {
     var map = new Map();
     var hasDuplicate = false;
@@ -187,9 +206,15 @@ function createCSV() {
                 if ($(this).hasClass("property-name") || $(this).hasClass("qualifier") || $(this).hasClass("ref-prop")) {
                     var toAppend = ""
                     var typeId = $(this).siblings(".type").children("option:selected").attr("id");
-                    // if it is type date, more column headers need to be added for _nodeId, _val, and _prec
                     if (typeId == "type-date") {
+                        // if it is type date, more column headers need to be added for _nodeId, _val, and _prec
                         toAppend = $(this).val() + "_nodeId," + $(this).val() + "_val," + $(this).val() + "_prec,";
+                    } else if (typeId == "type-globecoord") {
+                        // if it is type globe coordinate, more column headers need to be added for _nodeId, _val, _long, and _prec
+                        toAppend = $(this).val() + "_nodeId," + $(this).val() + "_val," + $(this).val() + "_long," + $(this).val() + "_prec,";
+                    } else if (typeId == "type-quantity") {
+                        // if it is type quantity, more column headers need to be added for _nodeId, _val, and _unit
+                        toAppend = $(this).val() + "_nodeId," + $(this).val() + "_val," + $(this).val() + "_unit,";
                     } else {
                         toAppend = $(this).val() + ",";
                     }
@@ -399,29 +424,13 @@ function generatePropertyEntry(input, wikidataId) {
     if (propertyTypeId == "type-date") {
         // deal with type = dateTime separately - add a _nodeId, _val, and _prec entry
         // this is to allow you to add date precision
-        string += `
-                        {
-                            "titles": "${propertyName}_nodeId",
-                            "name": "${propertyName}_nodeId",
-                            "datatype": "string",
-                            "aboutUrl": "http://www.wikidata.org/entity/statement/{${wikidataId}}-{${statementUUID}}",
-                            "propertyUrl": "http://www.wikidata.org/prop/statement/value/${propertyId}",
-                            "valueUrl": "http://example.com/.well-known/genid/{${propertyName}_nodeId}"
-                        },
-                        {
-                            "titles": "${propertyName}_val",
-                            "name": "${propertyName}_val",
-                            "datatype": "dateTime",
-                            "aboutUrl": "http://example.com/.well-known/genid/{${propertyName}_nodeId}",
-                            "propertyUrl": "http://wikiba.se/ontology#timeValue"
-                        },
-                        {
-                            "titles": "${propertyName}_prec",
-                            "name": "${propertyName}_prec",
-                            "datatype": "integer",
-                            "aboutUrl": "http://example.com/.well-known/genid/{${propertyName}_nodeId}",
-                            "propertyUrl": "http://wikiba.se/ontology#timePrecision"
-                        },`
+        string += generateDateJSON(propertyName, wikidataId, statementUUID, propertyId, "statement", null);
+    } else if (propertyTypeId == "type-globecoord") {
+        // deal with type = globe coordinate separately - add a _nodeId, _val, _long, and _prec entry
+        string += generateGlobeCoordJSON(propertyName, wikidataId, statementUUID, propertyId, "statement", null);
+    } else if (propertyTypeId == "type-quantity") {
+        // deal with type = quantity separately - add a _nodeId, _val, and _unit entry
+        string += generateQuantityJSON(propertyName, wikidataId, statementUUID, propertyId, "statement", null);
     } else {
         string += `
                         {
@@ -438,11 +447,130 @@ function generatePropertyEntry(input, wikidataId) {
             string += `,
                             "valueUrl": "{+${propertyName}}"
                         },`
-        } else {
+        } else if (propertyTypeId == "type-mlstring") {
+            // get the currently selected option in the language dropdown
+            var languageDropdownSelectedId = input.siblings(".languages-dropdown").children("option:selected").attr("id");
+            if (languageDropdownSelectedId == "language-choose") {
+                alert(`You must choose a language for ${input.val()}.`);
+                return null;
+            } else {
+                string += `,
+                            "lang": "${languageDropdownSelectedId}"
+                        },`
+            }
+        }
+        else {
             string += `
                         },`
         }
     }
+    return string;
+}
+
+function generateQuantityJSON(name, wikidataId, statementUUID, id, propType, referenceHash) {
+    string = `
+                        {
+                            "titles": "${name}_nodeId",
+                            "name": "${name}_nodeId",
+                            "datatype": "string",
+                            `
+    if (propType == "reference") {
+        string += `"aboutUrl": "http://www.wikidata.org/reference/{${referenceHash}}",`
+    } else {
+        string += `"aboutUrl": "http://www.wikidata.org/entity/statement/{${wikidataId}}-{${statementUUID}}",`
+    }
+    string += `
+                            "propertyUrl": "http://www.wikidata.org/prop/${propType}/value/${id}",
+                            "valueUrl": "http://example.com/.well-known/genid/{${name}_nodeId}"
+                        },
+                        {
+                            "titles": "${name}_val",
+                            "name": "${name}_val",
+                            "datatype": "decimal",
+                            "aboutUrl": "http://example.com/.well-known/genid/{${name}_nodeId}",
+                            "propertyUrl": "http://wikiba.se/ontology#quantityAmount"
+                        },
+                        {
+                            "titles": "${name}_unit",
+                            "name": "${name}_unit",
+                            "datatype": "string",
+                            "aboutUrl": "http://example.com/.well-known/genid/{${name}_nodeId}",
+                            "propertyUrl": "http://wikiba.se/ontology#quantityUnit",
+                            "valueUrl": "http://www.wikidata.org/entity/{${name}_unit}"
+                        },`
+    return string;
+}
+
+function generateGlobeCoordJSON(name, wikidataId, statementUUID, id, propType, referenceHash) {
+    var string = `
+                        {
+                            "titles": "${name}_nodeId",
+                            "name": "${name}_nodeId",
+                            "datatype": "string",
+                            `
+    if (propType == "reference") {
+        string += `"aboutUrl": "http://www.wikidata.org/reference/{${referenceHash}}",`
+    } else {
+        string += `"aboutUrl": "http://www.wikidata.org/entity/statement/{${wikidataId}}-{${statementUUID}}",`
+    }
+    string += `
+                            "propertyUrl": "http://www.wikidata.org/prop/${propType}/value/${id}",
+                            "valueUrl": "http://example.com/.well-known/genid/{${name}_nodeId}"
+                        },
+                        {
+                            "titles": "${name}_val",
+                            "name": "${name}_val",
+                            "datatype": "float",
+                            "aboutUrl": "http://example.com/.well-known/genid/{${name}_nodeId}",
+                            "propertyUrl": "http://wikiba.se/ontology#geoLatitude"
+                        },
+                        {
+                            "titles": "${name}_long",
+                            "name": "${name}_long",
+                            "datatype": "float",
+                            "aboutUrl": "http://example.com/.well-known/genid/{${name}_nodeId}",
+                            "propertyUrl": "http://wikiba.se/ontology#geoLongitude"
+                        },
+                        {
+                            "titles": "${name}_prec",
+                            "name": "${name}_prec",
+                            "datatype": "float",
+                            "aboutUrl": "http://example.com/.well-known/genid/{${name}_nodeId}",
+                            "propertyUrl": "http://wikiba.se/ontology#geoPrecision"
+                        },`
+    return string;
+}
+
+function generateDateJSON(name, wikidataId, statementUUID, id, propType, referenceHash) {
+    var string = `
+                        {
+                            "titles": "${name}_nodeId",
+                            "name": "${name}_nodeId",
+                            "datatype": "string",
+                            `
+    if (propType == "reference") {
+        string += `"aboutUrl": "http://www.wikidata.org/reference/{${referenceHash}}",`
+    } else {
+        string += `"aboutUrl": "http://www.wikidata.org/entity/statement/{${wikidataId}}-{${statementUUID}}",`
+    }
+    string += `
+                            "propertyUrl": "http://www.wikidata.org/prop/${propType}/value/${id}",
+                            "valueUrl": "http://example.com/.well-known/genid/{${name}_nodeId}"
+                        },
+                        {
+                            "titles": "${name}_val",
+                            "name": "${name}_val",
+                            "datatype": "dateTime",
+                            "aboutUrl": "http://example.com/.well-known/genid/{${name}_nodeId}",
+                            "propertyUrl": "http://wikiba.se/ontology#timeValue"
+                        },
+                        {
+                            "titles": "${name}_prec",
+                            "name": "${name}_prec",
+                            "datatype": "integer",
+                            "aboutUrl": "http://example.com/.well-known/genid/{${name}_nodeId}",
+                            "propertyUrl": "http://wikiba.se/ontology#timePrecision"
+                        },`
     return string;
 }
 
@@ -471,30 +599,14 @@ function generateQualifierEntry(input, wikidataId) {
     }
     // deal with dateTime separately to add date precision entries
     if (qualifierTypeId == "type-date") {
-        string += `
-                        {
-                            "titles": "${qualifierName}_nodeId",
-                            "name": "${qualifierName}_nodeId",
-                            "datatype": "string",
-                            "aboutUrl": "http://www.wikidata.org/entity/statement/{${wikidataId}}-{${statementUUID}}",
-                            "propertyUrl": "http://www.wikidata.org/prop/qualifier/value/${qualifierId}",
-                            "valueUrl": "http://example.com/.well-known/genid/{${qualifierName}_nodeId}"
-                        },
-                        {
-                            "titles": "${qualifierName}_val",
-                            "name": "${qualifierName}_val",
-                            "datatype": "dateTime",
-                            "aboutUrl": "http://example.com/.well-known/genid/{${qualifierName}_nodeId}",
-                            "propertyUrl": "http://wikiba.se/ontology#timeValue"
-                        },
-                        {
-                            "titles": "${qualifierName}_prec",
-                            "name": "${qualifierName}_prec",
-                            "datatype": "integer",
-                            "aboutUrl": "http://example.com/.well-known/genid/{${qualifierName}_nodeId}",
-                            "propertyUrl": "http://wikiba.se/ontology#timePrecision"
-                        },`
-    } else {
+        string += generateDateJSON(qualifierName, wikidataId, statementUUID, qualifierId, "qualifier", null);
+    } else if (qualifierTypeId == "type-globecoord") {
+        string += generateGlobeCoordJSON(qualifierName, wikidataId, statementUUID, qualifierId, "qualifier", null);
+    } else if (qualifierTypeId == "type-quantity") {
+        // deal with type = quantity separately - add a _nodeId, _val, and _unit entry
+        string += generateQuantityJSON(qualifierName, wikidataId, statementUUID, qualifierId, "qualifier", null);
+    }
+    else {
         string += `
                         {
                             "titles": "${qualifierName}",
@@ -510,6 +622,17 @@ function generateQualifierEntry(input, wikidataId) {
             string += `,
                             "valueUrl": "{+${qualifierName}}"
                         },`
+        } else if (qualifierTypeId == "type-mlstring") {
+            // get the currently selected option in the language dropdown
+            var languageDropdownSelectedId = input.siblings(".languages-dropdown").children("option:selected").attr("id");
+            if (languageDropdownSelectedId == "language-choose") {
+                alert(`You must choose a language for ${input.val()}.`);
+                return null;
+            } else {
+                string += `,
+                            "lang": "${languageDropdownSelectedId}"
+                        },`
+            }
         } else {
             string += `
                         },`
@@ -554,30 +677,14 @@ function generateReferencePropertyEntry(input) {
     }
     // deal with dateTime type separately to add time precision
     if (refPropTypeId == "type-date") {
-        string += `
-                        {
-                            "titles": "${refPropName}_nodeId",
-                            "name": "${refPropName}_nodeId",
-                            "datatype": "string",
-                            "aboutUrl": "http://www.wikidata.org/reference/{${referenceHash}}",
-                            "propertyUrl": "http://www.wikidata.org/prop/reference/value/${refPropId}",
-                            "valueUrl": "http://example.com/.well-known/genid/{${refPropName}_nodeId}"
-                        },
-                        {
-                            "titles": "${refPropName}_val",
-                            "name": "${refPropName}_val",
-                            "datatype": "dateTime",
-                            "aboutUrl": "http://example.com/.well-known/genid/{${refPropName}_nodeId}",
-                            "propertyUrl": "http://wikiba.se/ontology#timeValue"
-                        },
-                        {
-                            "titles": "${refPropName}_prec",
-                            "name": "${refPropName}_prec",
-                            "datatype": "integer",
-                            "aboutUrl": "http://example.com/.well-known/genid/{${refPropName}_nodeId}",
-                            "propertyUrl": "http://wikiba.se/ontology#timePrecision"
-                        },`
-    } else {
+        string += generateDateJSON(refPropName, null, null, refPropId, "reference", referenceHash);
+    } else if (refPropTypeId == "type-globecoord") {
+        string += generateGlobeCoordJSON(refPropName, null, null, refPropId, "reference", referenceHash);
+    } else if (refPropTypeId == "type-quantity") {
+        // deal with type = quantity separately - add a _nodeId, _val, and _unit entry
+        string += generateQuantityJSON(refPropName, null, null, refPropId, "reference", referenceHash);
+    }
+    else {
         string += `
                         {
                             "titles": "${refPropName}",
@@ -593,6 +700,17 @@ function generateReferencePropertyEntry(input) {
             string += `,
                             "valueUrl": "{+${refPropName}}"
                         },`
+        } else if (refPropTypeId == "type-mlstring") {
+            // get the currently selected option in the language dropdown
+            var languageDropdownSelectedId = input.siblings(".languages-dropdown").children("option:selected").attr("id");
+            if (languageDropdownSelectedId == "language-choose") {
+                alert(`You must choose a language for ${input.val()}.`);
+                return null;
+            } else {
+                string += `,
+                            "lang": "${languageDropdownSelectedId}"
+                        },`
+            }
         } else {
             string += `
                         },`
