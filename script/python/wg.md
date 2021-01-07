@@ -23,38 +23,37 @@ The DiSC office also provides [lessons for learning R](http://vanderbi.lt/r) and
 [Archive of past lessons](../archive/)
 
 
-## Beginners Lessons - Fall 2020
+## Beginners Lessons - Spring 2021
 
-Second cycle: Wednesdays from 1:00 - 2:00 PM Central (US) Time
+First cycle: Wednesdays from 1:00 - 2:00 PM Central (US) Time
 
-[Registration link](https://vanderbilt.zoom.us/meeting/register/tJYoceCspzsrGNcKXFlxeuHUXj5kQpTRIXde). 
+[Registration link](https://vanderbilt.zoom.us/meeting/register/tJ). 
 
 Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
 
 | Working session date | Lesson | Topic | Web page |
 |---|---|---|---|
-| Oct 14 | 1 | Introduction / Installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (27 min)  |
-| Oct 21 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
-| Oct 28 | 3 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
-| Nov 4 | 4 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
-| Nov 11 | 5 | Loops | [lesson videos](../../codegraf/006b/) (33 min lessons, 61 min including demos) |
-| Nov 18 | 6 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
+| Feb 3 | 1 | Introduction / Installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (27 min)  |
+| Feb 10 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
+| Feb 17 | 3 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
+| Feb 24 | 4 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
+| Mar 3 | 5 | Loops | [lesson videos](../../codegraf/006b/) (33 min lessons, 61 min including demos) |
+| Mar 10 | 6 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
 
+Second cycle: Thursdays from 1:00 - 2:00 PM Central (US) Time
 
-## Intermediate Lessons (Files and tables) - Fall 2020
+[Registration link](https://vanderbilt.zoom.us/meeting/register/tJ). 
 
-Tuesdays from 10:00 - 11:00 AM Central (US) Time
-
-[Registration link](https://vanderbilt.zoom.us/meeting/register/tJwudu2oqzgsGNQzGjxodFLXeqU8LzjM26VC). 
-
-| Working session date | Lesson | Topic | Web pages |
+| Working session date | Lesson | Topic | Web page |
 |---|---|---|---|
-| Oct 13 | 1 | Data from files | [lesson videos](../../codegraf/020/) (estimated 55 min) |
-| Oct 20 | 2 | Complex data structures and functions |  [lesson videos](../../codegraf/021/) (30 min)  |
-| Oct 27 | 3 | Reading and writing CSV files |  [lesson videos](../../codegraf/022/) (34 min)  |
-| Nov 3 | 4 | Pandas Series and DataFrames: vectorized programming |  [lesson videos](../../codegraf/008/) (61 min but not all videos apply to every user)  |
-| Nov 10 | 5 | Basic data wranging with Pandas DataFrames (first half) |  [lesson videos](../../codegraf/009/) (75 min both halves)  |
-| Nov 17 | 6 | Basic data wranging with Pandas DataFrames (second half) | continue with previous videos |
+| Mar 18 | 1 | Introduction / Installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (27 min)  |
+| Mar 25 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
+| Apr 1 | 3 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
+| Apr 8 | 4 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
+| Apr 15 | 5 | Loops | [lesson videos](../../codegraf/006b/) (33 min lessons, 61 min including demos) |
+| Apr 22 | 6 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
+
+
 
 # Python Resources
 
@@ -72,11 +71,11 @@ Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 
 ## Software Carpentries (cosponsored by DiSC, Office of the Vice Provost for Research, Research IT, ACCRE, and the Data Science Institute)
 
-3 to 5 PM, November 2-5 and 9-12. Topics include the Unix shell, command line Git, and introductory Python. To register visit [this link](https://www.eventbrite.com/e/fall-2020-software-carpentries-tickets-122735971595).
+TBD
 
 --------------------
 
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-10-20
+Revised 2021-01-07

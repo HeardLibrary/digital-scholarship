@@ -23,38 +23,42 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 [Archive of past lessons](../archive/)
 
 
-## Beginners Lessons - Fall 2020
+## Beginners Lessons - Spring 2021
 
-Second cycle: Thursdays from 11:00 AM - noon Central (US) Time
+First cycle: Thursdays from 1:00 PM - 2:00 PM Central (US) Time
 
-[Registration link](https://vanderbilt.zoom.us/meeting/register/tJYodOqoqDwiH9JZ09_9-U2u8qyt75Am5Uwc). 
+[Registration link](https://vanderbilt.zoom.us/meeting/register/tJYo). 
 
 Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
 
 | Working session date | Lesson | Topic | Web pages |
 |---|---|---|---|
-| Oct 15 | 1 | Introduction, installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (10 min) Stop on the page after the `Installing Anaconda` section. |
-| Oct 22 | 2 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (50 min) |
-| Oct 29 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
-| Nov 5 | 4 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
-| Nov 12 | 5 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
-| Nov 19 | 6 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (46 min)  |
+| Feb 4 | 1 | Introduction, installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (10 min) Stop on the page after the `Installing Anaconda` section. |
+| Feb 11 | 2 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (50 min) |
+| Feb 18 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
+| Feb 25 | 4 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
+| Mar 4 | 5 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
+| Mar 11 | 6 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (46 min)  |
 
+Second cycle: Wednesdays from 1:00 PM - 2:00 PM Central (US) Time
 
-## Intermediate Lessons (Introduction to statistical analysis) - Fall 2020
+[Registration link](https://vanderbilt.zoom.us/meeting/register/tJYo). 
 
-Fridays from 1:00 - 2:00 PM Central (US) Time
-
-[Registration link](https://vanderbilt.zoom.us/meeting/register/tJAocOGhqjMrG9BuggcFEOjf8HnLBqyaVn3Q). 
+Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
 
 | Working session date | Lesson | Topic | Web pages |
 |---|---|---|---|
-| Oct 16 | 1 | Factors and the t-test of means | [lesson videos](../../codegraf/026/) (33 min) |
-| Oct 23 | 2 | Transformations and non-parametric tests | [lesson videos](../../codegraf/027/) (25 min)  |
-| Oct 30 | 3 | Continuous bivariate data | [lesson videos](../../codegraf/028/) (47 min) |
-| Nov 6 | 4 | Analysis of variance (ANOVA) | [lesson videos](../../codegraf/029/) (63 min) |
-| Nov 13 | 5 | Multiple regression |  |
-| Nov 20 | 6 | Tests with discontinuous Y |  |
+| Mar 17 | 1 | Introduction, installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (10 min) Stop on the page after the `Installing Anaconda` section. |
+| Mar 24 | 2 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (50 min) |
+| Mar 31 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
+| Apr 7 | 4 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
+| Apr 14 | 5 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
+| Apr 21 | 6 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (46 min)  |
+
+
+## Intermediate Lessons (Introduction to data visualization with ggplot) - Spring 2021
+
+TBD second half of semester
 
 # R Resources
 
@@ -76,11 +80,11 @@ Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 
 ## Software Carpentries (cosponsored by DiSC, Office of the Vice Provost for Research, Research IT, ACCRE, and the Data Science Institute)
 
-3 to 5 PM, November 2-5 and 9-12. Topics include the Unix shell, command line Git, and introductory Python. To register visit [this link](https://www.eventbrite.com/e/fall-2020-software-carpentries-tickets-122735971595).
+TBD
 
 --------------------
 
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-11-06
+Revised 2021-01-07
