@@ -22,20 +22,16 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 
 Before starting the lessons, you need to create a free GitHub account.  To open an account, go to <https://github.com/> and follow the directions.
 
-## Beginners Lessons - Fall 2020
-
-Wednesdays from 1:00 - 2:00 PM Central (US) Time
-
-[Registration link](https://vanderbilt.zoom.us/meeting/register/tJYqduCrqT4rE91PCaL55R8yoeV3B_Xv6aB5). 
+## Beginners Lessons - not offered in spring of 2021 
 
 Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
 
 | Working session date | Lesson | Topic | Pre-lesson web pages |
 |---|---|---|---|
-| Sep 2 | 1 | Introduction and Desktop Client installation | [background information videos](../../../script/codegraf/015/) (17 min) / [setup](../../../script/codegraf/016/) (16 min) |
-| Sep 9 | 2 | Markdown basics, commits, pull from/push to GitHub | [lesson videos](../../../script/codegraf/017/) (28 min) |
-| Sep 16 | 3 | The work cycle | [lesson videos](../../../script/codegraf/018/) (43 min) |
-| Sep 23 | 4 | Using GitHub to recover from disasters | [lesson videos](../../../script/codegraf/019/) (18 min) |
+|  | 1 | Introduction and Desktop Client installation | [background information videos](../../../script/codegraf/015/) (17 min) / [setup](../../../script/codegraf/016/) (16 min) |
+|  | 2 | Markdown basics, commits, pull from/push to GitHub | [lesson videos](../../../script/codegraf/017/) (28 min) |
+|  | 3 | The work cycle | [lesson videos](../../../script/codegraf/018/) (43 min) |
+|  | 4 | Using GitHub to recover from disasters | [lesson videos](../../../script/codegraf/019/) (18 min) |
 
 
 # GitHub resources
@@ -57,4 +53,4 @@ The following pages provide information for developing basic skills with GitHub.
 [Managing a website with GitHub Pages](pages/)
 
 ----
-Revised 2020-10-20
+Revised 2021-01-07
