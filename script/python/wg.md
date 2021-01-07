@@ -27,7 +27,7 @@ The DiSC office also provides [lessons for learning R](http://vanderbi.lt/r) and
 
 First cycle: Wednesdays from 1:00 - 2:00 PM Central (US) Time
 
-[Registration link](https://vanderbilt.zoom.us/meeting/register/tJ). 
+Registration not yet open. 
 
 Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
 
@@ -42,7 +42,7 @@ Instructor (Steve Baskauf) [office hours information](https://www.library.vander
 
 Second cycle: Thursdays from 1:00 - 2:00 PM Central (US) Time
 
-[Registration link](https://vanderbilt.zoom.us/meeting/register/tJ). 
+Registration not yet open. 
 
 | Working session date | Lesson | Topic | Web page |
 |---|---|---|---|
