@@ -56,9 +56,21 @@ Dr. Mishra recommends the book *Python for Data Analysis - Data Wrangling with P
 | Nov 22 | 4 | Scraping with Beautiful Soup | [Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/lesson4-scrape.ipynb) |
 | Dec 6 | 5 | Project | [Jupyter notebook for Twitter location search project](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/twitter_location_search.ipynb) |
 
+
+## Intermediate Lessons (Files and tables) - Fall 2020
+
+| Working session date | Lesson | Topic | Web pages |
+|---|---|---|---|
+| Oct 13 | 1 | Data from files | [lesson videos](../../codegraf/020/) (estimated 55 min) |
+| Oct 20 | 2 | Complex data structures and functions |  [lesson videos](../../codegraf/021/) (30 min)  |
+| Oct 27 | 3 | Reading and writing CSV files |  [lesson videos](../../codegraf/022/) (34 min)  |
+| Nov 3 | 4 | Pandas Series and DataFrames: vectorized programming |  [lesson videos](../../codegraf/008/) (61 min but not all videos apply to every user)  |
+| Nov 10 | 5 | Basic data wranging with Pandas DataFrames (first half) |  [lesson videos](../../codegraf/009/) (75 min both halves)  |
+| Nov 17 | 6 | Basic data wranging with Pandas DataFrames (second half) | continue with previous videos |
+
 --------------------
 
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-08-18
+Revised 2021-01-13
