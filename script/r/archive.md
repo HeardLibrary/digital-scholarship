@@ -6,7 +6,7 @@ breadcrumb: Archive
 
 # DiSC R lessons archive
 
-## Archive of Beginners Lessons - Spring 2020
+## Beginners Lessons - Spring 2020
 
 To download an R script, click on the link.  Then:
 
@@ -23,10 +23,20 @@ To download an R script, click on the link.  Then:
 | Apr 17 | 6 | Data visualization with ggplot | [lesson video](https://youtu.be/51ZbsobTQwE) / [lesson R script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson6-viz.R) / [lesson slides](../presentations/lesson6-viz.pdf) |
 | Apr 24 | 7 | Optional practice lesson working with ICPSR data | [lesson video](https://youtu.be/GiAVbtx_B_c) / [download instructions for ICPSR data](../nlsaah/) /  [practice lesson R script (with answers)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls-answers.R) / [practice starter script (no answers)](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/wrangle-nls.R) / [lesson slides](../presentations/lesson7-wrangle3.pdf) |
 
+## Intermediate Lessons (Introduction to statistical analysis) - Fall 2020
+
+| Working session date | Lesson | Topic | Web pages |
+|---|---|---|---|
+| Oct 16 | 1 | Factors and the t-test of means | [lesson videos](../../codegraf/026/) (33 min) |
+| Oct 23 | 2 | Transformations and non-parametric tests | [lesson videos](../../codegraf/027/) (25 min)  |
+| Oct 30 | 3 | Continuous bivariate data | [lesson videos](../../codegraf/028/) (47 min) |
+| Nov 6 | 4 | Analysis of variance (ANOVA) | [lesson videos](../../codegraf/029/) (63 min) |
+| Nov 13 | 5 | Multiple regression | not available |
+| Nov 20 | 6 | Tests with discontinuous Y | not available |
 
 --------------------
 
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2020-08-18
+Revised 2021-01-13
