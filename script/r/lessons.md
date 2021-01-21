@@ -27,7 +27,7 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 
 First cycle: Thursdays from 1:00 PM - 2:00 PM Central (US) Time
 
-Registration not yet open. 
+[Registration link](https://vanderbilt.zoom.us/meeting/register/tJ0kdO6vrjovG9YxjjjsNW7COJX7sx8IKi7Y) 
 
 Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
 
@@ -42,7 +42,7 @@ Instructor (Steve Baskauf) [office hours information](https://www.library.vander
 
 Second cycle: Wednesdays from 1:00 PM - 2:00 PM Central (US) Time
 
-Registration not yet open.
+[Registration link](https://vanderbilt.zoom.us/meeting/register/tJwodO6orj0oHtLKjo1HzNkFvrSSxMpTXziy)
 
 Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
 
@@ -87,4 +87,4 @@ TBD
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2021-01-07
+Revised 2021-01-21
