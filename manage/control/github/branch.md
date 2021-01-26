@@ -6,6 +6,10 @@ breadcrumb: branching
 
 [previous page: Cloning and the GitHub desktop client](../clone/)
 
+**Important note:** In order to foster more inclusive terminology, [as of October 2020](https://www.zdnet.com/article/github-to-replace-master-with-main-starting-next-month/) GitHub has changed the default name for the primary version of repositories from `master` to `main`. In a future version of this page, it will be revised to use this terminology. For now, just recognize that when text and screenshots talk about the `master` branch, new repositories will actually use the name `main`. 
+
+For information about renaming the default branch of existing repositories from `master` to `main`, see [this page](https://github.com/github/renaming).
+
 # Branching and the Shared Repository Model
 
 ## Branches
@@ -211,4 +215,4 @@ Usually, one would develop a document using a working branch on a local computer
 [next page: managing projects](../projects/)
 
 ----
-Revised 2019-10-07
+Revised 2021-01-26
