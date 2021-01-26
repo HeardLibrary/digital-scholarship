@@ -216,7 +216,7 @@ Usually, one would develop a document using a working branch on a local computer
 
 The instructions above assume that all collaborators have unrestricted push access to the repository. In order to add a degree of protection to the `main` branch (or any other branch), it can be *protected* by adding additional requirements that make it more difficult to change. 
 
-There are a number of [rules that can be put into place](https://docs.github.com/en/github/administering-a-repository/about-protected-branches) to protect a branch. One of the simplest and easiest to implement is [requiring a review](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/approving-a-pull-request-with-required-reviews) befor merging. 
+There are a number of [rules that can be put into place](https://docs.github.com/en/github/administering-a-repository/about-protected-branches) to protect a branch. One of the simplest and easiest to implement is [requiring a review](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/approving-a-pull-request-with-required-reviews) before merging. 
 
 <img src="../images-branch/protect-rules.png" style="border:1px solid black">
 
@@ -254,7 +254,7 @@ In the previous examples, editing was done using the web editor. If editing is d
 
 <img src="../images-branch/desktop-protected-notification.png" style="border:1px solid black">
 
-This does not prevent the user from making commits to the protected branch (`main` in this example). 
+This does not prevent the user from trying to make commits to the protected branch (`main` in this example). 
 
 <img src="../images-branch/desktop-protected-error.png" style="border:1px solid black">
 
@@ -262,13 +262,13 @@ However, if the user tries to push, an error will be generated. In that case, th
 
 <img src="../images-branch/desktop-protected-new-branch.png" style="border:1px solid black">
 
-Create a new branch. 
+Instead of pushing to the `main` branch, create a new branch. 
 
 <img src="../images-branch/desktop-error-create-branch.png" style="border:1px solid black">
 
-Enter a name.
+Enter a name, then click `Create Branch`.
 
-<img src="../images-branch/desktop-error-pull-request.png" style="border:1px solid black">
+<img src="../images-branch/new-branch-pull-request.png" style="border:1px solid black">
 
 Now the user can create a pull request for the new branch. Clicking the `Create Pull Request` button will go to the GitHub website, where the pull request will proceed as in the examples above.
 
