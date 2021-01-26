@@ -6,6 +6,8 @@ breadcrumb: Manage Projects
 
 [previous page: branching and the shared repository model](../branch/)
 
+**Note:** as of 2021-01-26, teams can now have private repositories. However, there are still other restrictions on teams in unpaid accounts, such as inability to protect branches.
+
 # Managing Projects with GitHub
 
 In addition to the tools that allow GitHub to carry out its core functions (commits, branching, pull requests, forking), GitHub has a number of other tools that make it possible for organizations to plan and track the work that they are doing on document-based projects. On this page we'll introduce several important ones.
