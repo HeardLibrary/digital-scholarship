@@ -9,7 +9,7 @@ breadcrumb: GitHub
 
 The following modules are currently available or under construction. More modules will be available in the future.
 
-[Introduction to GitHub module](../intro)
+[Introduction to GitHub module](intro)
 
 ----
 
