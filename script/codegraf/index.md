@@ -102,8 +102,7 @@ Begin with the START entry point and work your way through the lessons. Each les
 </div>
 <!-- End Save for Web Slices -->
 
-
---
+----
 
 ## Getting started with coding module
 
@@ -246,6 +245,6 @@ Total video time: 1h 42m
 
 ----
 
-Revised 2020-10-20
+Revised 2021-01-29
 
 If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
