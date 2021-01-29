@@ -4,7 +4,7 @@ title: CodeGraf - Introduction to stats with R
 breadcrumb: stats
 ---
 
-# CodeGraf - Introduction to stats with R
+# CodeGraf - Introduction to stats with R module
 
 [Factors and the t-test of means](../../026) 33 minutes
 

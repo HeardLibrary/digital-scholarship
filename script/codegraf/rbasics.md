@@ -4,7 +4,7 @@ title: CodeGraf - R programming basics
 breadcrumb: basics
 ---
 
-# CodeGraf - R programming basics
+# CodeGraf - R programming basics module
 
 This module introduces the RStudio interface and basic programming concepts of R
 
