@@ -23,7 +23,7 @@ Begin with the START entry point and work your way through the lessons. Each les
 [Link to additional book and online resources](https://heardlibrary.github.io/digital-scholarship/script/python/#for-more-information)
 
 <!-- Save for Web Slices (overall-graph.psd) -->
-<div style="position:absolute; left:0px; top:0px; width:581px; height:312px;">
+<div style="position:static; left:0px; top:0px; width:581px; height:312px;">
 	<div style="position:absolute; left:0px; top:0px; width:581px; height:22px;">
 		<img src="images/overall-graph_01.gif" width="581" height="22" alt="">
 	</div>
