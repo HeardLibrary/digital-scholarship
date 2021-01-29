@@ -12,7 +12,7 @@ This module introduces two kinds of two-dimensional data structures used in data
 
 Total video time: 3h 09m
 
-![Two-dimensional data structures diagram](../2-d-data-structures-diagram.png)
+![Two-dimensional data structures diagram](../../2-d-data-structures-diagram.png)
 
 **Lessons included in the module:**
 
