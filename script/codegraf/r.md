@@ -8,7 +8,7 @@ breadcrumb: R
 
 The following modules are currently available or under construction. More modules will be available in the future.
 
-[R programming basics](programming-basics)
+[R programming basics](basics)
 
 [Introduction to stats with R](stats)
 

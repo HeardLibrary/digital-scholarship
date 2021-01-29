@@ -16,11 +16,11 @@ Total video time: 3h 09m
 
 **Lessons included in the module:**
 
-[NumPy arrays](007) 53 minutes
+[NumPy arrays](../../007) 53 minutes
 
-[Pandas data frames](008) 61 minutes
+[Pandas data frames](../../008) 61 minutes
 
-[Data wrangling](009) 75 minutes
+[Data wrangling](../../009) 75 minutes
 
 ----
 
