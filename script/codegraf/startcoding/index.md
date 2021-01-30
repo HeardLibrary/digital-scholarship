@@ -95,7 +95,7 @@ Total video time: 1h 36m
 
 [Installing an environment](../003) 27 minutes
 
-From here, continue with the Python or R modules
+From here, continue with the [Python](../python) or [R modules](../r)
 
 
 ----
