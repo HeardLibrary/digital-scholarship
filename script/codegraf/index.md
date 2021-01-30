@@ -104,6 +104,18 @@ Begin with the START entry point and work your way through the lessons. Each les
 
 ----
 
+## Modules
+
+[Getting started coding module](startcoding)
+
+[Python modules](python)
+
+[R modules](r)
+
+[GitHub modules](github)
+
+----
+
 ## Getting started with coding module
 
 This is a general introduction to both Python and R, although much of the video is focused on the variety of ways to code in Python. 
@@ -245,6 +257,6 @@ Total video time: 1h 42m
 
 ----
 
-Revised 2021-01-29
+Revised 2021-01-30
 
 If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)

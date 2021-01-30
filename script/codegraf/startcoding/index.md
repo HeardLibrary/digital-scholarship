@@ -87,7 +87,7 @@ Total video time: 1h 36m
 </div>
 <!-- End Save for Web Slices -->
 
-**Lessons included in the module:**
+## Lessons included in the module:
 
 [Basic terminology](../001) 18 minutes
 
@@ -100,6 +100,6 @@ From here, continue with the Python or R modules
 
 ----
 
-Revised 2021-01-29
+Revised 2021-01-30
 
 If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
