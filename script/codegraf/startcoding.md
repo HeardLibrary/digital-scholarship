@@ -11,7 +11,7 @@ This is a general introduction to both Python and R, although much of the video 
 Total video time: 1h 36m
 
 <!-- Save for Web Slices (getstart.psd) -->
-<div style="position:absolute; left:0px; top:0px; width:554px; height:273px;">
+<div style="position:relative; left:0px; top:0px; width:554px; height:273px;">
 	<div style="position:absolute; left:0px; top:0px; width:554px; height:19px;">
 		<img src="images/getstart_01.gif" width="554" height="19" alt="">
 	</div>
