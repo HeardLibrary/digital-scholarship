@@ -6,7 +6,7 @@ breadcrumb: viz
 
 # CodeGraf - Data visualization with Python module
 
-[Introduction to plotting](010) 63 minutes
+[Introduction to plotting](../../010) 63 minutes
 
 Other lessons may be added at some point in the future.
 

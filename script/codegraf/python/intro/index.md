@@ -110,19 +110,19 @@ Total video time: 3h 30m
 
 **Lessons included in the module:**
 
-[Python programming basics](004) 67 minutes
+[Python programming basics](../../004) 67 minutes
 
-[Using code libraries](005) 34 minutes
+[Using code libraries](../../005) 34 minutes
 
-[List and dictionary objects](006a) 32 minutes
+[List and dictionary objects](../../006a) 32 minutes
 
-[Loops](006b) 33 minutes (lesson videos only, 61 minutes with live coding examples)
+[Loops](../../006b) 33 minutes (lesson videos only, 61 minutes with live coding examples)
 
-[Conditional execution](006c) 44 minutes
+[Conditional execution](../../006c) 44 minutes
 
 
 ----
 
-Revised 2021-01-29
+Revised 2021-01-31
 
 If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
