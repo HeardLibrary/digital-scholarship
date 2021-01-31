@@ -21,7 +21,7 @@ Total video time: 3h 30m
 		<img src="images/intropython_02.gif" width="26" height="515" alt="">
 	</div>
 	<div style="position:absolute; left:26px; top:11px; width:214px; height:62px;">
-		<a href="#"
+		<a href="../../startcoding"
 			onmouseover="window.status='Start coding module';  return true;"
 			onmouseout="window.status='';  return true;">
 			<img src="images/intropython_03.gif" width="214" height="62" border="0" alt="Start coding module"></a>
