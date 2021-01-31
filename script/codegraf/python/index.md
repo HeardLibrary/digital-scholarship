@@ -77,7 +77,7 @@ The following modules are currently available or under construction. More module
 			onmouseout="window.status='';  return true;">
 			<img src="images/python_17.gif" width="290" height="65" border="0" alt="Procedural programming with Python module"></a>
 	</div>
-	<div style="position:absolute; left:279px; top:324px; width:290px; height:13px;">
+	<div style="position:absolute; left:279px; top:325px; width:290px; height:13px;">
 		<img src="images/python_18.gif" width="290" height="13" alt="">
 	</div>
 </div>
