@@ -20,7 +20,9 @@ Total video time: 3h 09m
 
 [Pandas data frames](../../008) 61 minutes
 
-[Data wrangling](../../009) 75 minutes
+[DataFrame manipulation](../../009a) 40 minutes
+
+[Rearranging and combining DataFrames](../../009b) 35 minutes
 
 ----
 
