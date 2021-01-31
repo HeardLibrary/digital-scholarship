@@ -10,7 +10,7 @@ breadcrumb: Python
 The following modules are currently available or under construction. More modules will be available in the future.
 
 <!-- Save for Web Slices (python.psd) -->
-<div style="position:absolute; left:0px; top:0px; width:585px; height:341px;">
+<div style="position:relative; left:0px; top:0px; width:585px; height:341px;">
 	<div style="position:absolute; left:0px; top:0px; width:585px; height:20px;">
 		<img src="images/python_01.gif" width="585" height="20" alt="">
 	</div>
@@ -95,6 +95,6 @@ The following modules are currently available or under construction. More module
 
 ----
 
-Revised 2021-01-29
+Revised 2021-01-30
 
 If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
