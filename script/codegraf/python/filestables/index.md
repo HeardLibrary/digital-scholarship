@@ -77,7 +77,7 @@ Total video time: 5h 25m for all parts, but most users will spend about 4h
 		<img src="images/filestables_15.gif" width="44" height="121" alt="">
 	</div>
 	<div style="position:absolute; left:217px; top:262px; width:182px; height:66px;">
-		<a href="../.../008"
+		<a href="../../008"
 			onmouseover="window.status='Pandas Series and DataFrames lesson';  return true;"
 			onmouseout="window.status='';  return true;">
 			<img src="images/filestables_16.gif" width="182" height="66" border="0" alt="Pandas Series and DataFrames lesson"></a>
