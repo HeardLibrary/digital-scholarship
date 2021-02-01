@@ -16,7 +16,7 @@ The beginners lessons generally cycle twice per semester.  See the schedule belo
 
 Each lesson includes of a series of videos with a practice scripts and homework assignments. The live Zoom working sessions are not class sessions. Rather, they provide an opportunity for participants to ask questions about the lesson videos and homework, or to work on the homework with assistance. 
 
-You are also welcome to work through the lessons on your own at any time (no registration required).
+The lessons are part of a free, online learning system called [CodeGraf](../../codegraf). You are welcome to work through these lessons or any of the other lesson modules available in CodeGraf on your own at any time (no registration required). To explore all of the lesson modules that are available, visit the [CodeGraf landing page](../../codegraf). 
 
 The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/py) and [getting started with GitHub](http://vanderbi.lt/github) in a similar format.
 
