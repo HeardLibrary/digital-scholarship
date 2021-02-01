@@ -47,7 +47,7 @@ The following modules are currently available or under construction. More module
 
 [Introduction to GitHub module](intro)
 
-Collaborative project management (future module, perhaps fall 2021) - see [this page]() for notes on the subject.
+Collaborative project management (future module, perhaps fall 2021) - see [this page](../../../manage/control/github/branch/) for notes on the subject.
 
 GitHub pages websites (future module, perhaps fall 2021)
 

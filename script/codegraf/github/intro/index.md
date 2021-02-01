@@ -15,7 +15,7 @@ Total video time: 1h 42m
 
 [Background](../../015) 17 minutes
 
-[Setup a repository](../../016) 16 minutes
+[Setting up a repository](../../016) 16 minutes
 
 [Markdown basics, commits, pull from/push to GitHub](../../017) 28 minutes
 
@@ -23,8 +23,14 @@ Total video time: 1h 42m
 
 [Using GitHub to recover from disasters](../../019) 18 minutes
 
+**Note:** The modules shown on the diagram are planned for the future
+
+Collaborative project management (future module, perhaps fall 2021) - see [this page](../../../../manage/control/github/branch/) for notes on the subject.
+
+GitHub pages websites (future module, perhaps fall 2021)
+
 ----
 
-Revised 2021-01-29
+Revised 2021-01-31
 
 If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
