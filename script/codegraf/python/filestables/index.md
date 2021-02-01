@@ -131,7 +131,7 @@ Total video time: 5h 25m for all parts, but most users will spend about 4h
 <!-- End Save for Web Slices -->
 
 
-**Lessons included in the module:**
+## Lessons included in this module:
 
 [Data from files](../../020) estimated 55 minutes
 

@@ -87,7 +87,7 @@ Total video time: 1h 36m
 </div>
 <!-- End Save for Web Slices -->
 
-## Lessons included in the module:
+## Lessons included in this module:
 
 [Basic terminology](../001) 18 minutes
 

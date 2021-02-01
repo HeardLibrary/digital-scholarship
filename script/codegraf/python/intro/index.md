@@ -108,7 +108,7 @@ Total video time: 3h 30m
 <!-- End Save for Web Slices -->
 
 
-**Lessons included in the module:**
+## Lessons included in the module:
 
 [Python programming basics](../../004) 67 minutes
 

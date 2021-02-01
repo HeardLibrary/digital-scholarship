@@ -106,7 +106,7 @@ Total video time: 3h 27m
 <!-- End Save for Web Slices -->
 
 
-## Lessons included in the module:
+## Lessons included in this module:
 
 [Vectors, vectorized computing, and packages](../../011) 50 minutes
 

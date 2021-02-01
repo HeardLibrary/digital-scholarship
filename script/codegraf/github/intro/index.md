@@ -97,7 +97,7 @@ Total video time: 1h 42m
 <!-- End Save for Web Slices -->
 
 
-## Lessons included in the module:
+## Lessons included in this module:
 
 [Background](../../015) 17 minutes
 

@@ -93,7 +93,7 @@ Total video time: not yet determined
 </div>
 <!-- End Save for Web Slices -->
 
-## Lessons included in the module:
+## Lessons included in this module:
 
 [Factors and the t-test of means](../../026) 33 minutes
 
