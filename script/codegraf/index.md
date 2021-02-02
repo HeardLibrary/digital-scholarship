@@ -8,6 +8,8 @@ breadcrumb: CodeGraf
 
 A short link to this page is [vanderbi.lt/codegraf](http://vanderbi.lt/codegraf)
 
+If you are looking for guided lessons using this material, see the [Python](http://vanderbi.lt/py) or [R lessons](http://vanderbi.lt/r) pages.
+
 ## What is CodeGraf?
 
 CodeGraph is a program to allow you to choose your own path through learning to code. Depending on your needs, you can learn different skills and focus on different programming languages. The "Graf" part of the name comes from the concept of a mathematical graph where items are linked and you can follow any path through the network of connections. As CodeGraf is built, you'll be able to focus on either Python or R and learn basic coding, data wrangling, data visualization, web interfacing, and managing your code and data using GitHub.
@@ -115,6 +117,6 @@ Begin with the START entry point and work your way through the lessons. Each les
 
 ----
 
-Revised 2021-01-31
+Revised 2021-02-02
 
 If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
