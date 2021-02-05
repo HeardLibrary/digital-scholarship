@@ -16,7 +16,7 @@ In addition to the tools that allow GitHub to carry out its core functions (comm
 
 Once you embark on collaborative work, you will probably need to set up infrastructure that is not dependent on your personal GitHub account. One key is to set up an organization.  Creating an organization allows repositories to be jointly owned by several people, so if an organizer leaves the organization, that person can be disentangled from the repositories without having to remove material from their personal repository.  
 
-Anyone can create an organization for free.  However, at this point in time, the organization can only have public repositories.  So for operations like labs that might want to have private repos, you'd need to use the P.I.'s account to create a private repo.
+Anyone can create an organization for free.  As of February 2021, free accounts can have unlimited public and private repositories, and unlimited colaborators. There doesn't seem to be a hard limit of size, but less than 5 GB per repository is recommended.
 
 <img src="../images-projects/new-organization.png" style="border:1px solid black">
 
@@ -170,4 +170,4 @@ An additional feature is reviews.  One can request a review of a pull request.  
 [next page: forking and the Open Source model](../fork/)
 
 ----
-Revised 2019-10-07
+Revised 2021-02-05
