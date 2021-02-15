@@ -40,5 +40,7 @@ Two commonly used tools that are used to facilitate programming are [Anaconda](a
 
 For a comprehensive guide to text and data mining, see [this guide](https://researchguides.library.vanderbilt.edu/textmining).
 
+[Introductory text analysis with Python by JSTOR](https://www.tdm-pilot.org/). 
+
 ----
 Revised 2021-02-15
