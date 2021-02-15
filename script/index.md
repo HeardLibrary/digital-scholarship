@@ -38,5 +38,7 @@ XQuery is a functional programming language that excells at processing XML.  It 
 
 Two commonly used tools that are used to facilitate programming are [Anaconda](anaconda/) and [Jupyter notebooks](jupyter/).  They are used with both Python and R.
 
+For a comprehensive guide to text and data mining, see [this guide](https://researchguides.library.vanderbilt.edu/textmining).
+
 ----
-Revised 2021-01-31
+Revised 2021-02-15
