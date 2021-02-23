@@ -1,4 +1,3 @@
-# Load the CSV from a URL
 library(tidyverse) # if you load this, you don't need to load the other libraries
 library(readr)
 library(ggplot2)
