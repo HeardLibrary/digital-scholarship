@@ -34,7 +34,7 @@ Other presentations
 
 # Statistical analysis resources
 
-[Lesson series on statistics with R]()../script/codegraf/026/)
+[Lesson series on statistics with R (under construction)](../script/codegraf/026/)
 
 [Instructions for accessing SPSS and STATA (Vanderbilt Users only)](https://libanswers.library.vanderbilt.edu/faq/290980)
 
