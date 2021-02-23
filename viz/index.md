@@ -1,7 +1,7 @@
 ---
 permalink: /viz/
-title: Data visualization
-breadcrumb: Visualizations
+title: Data visualization and analysis
+breadcrumb: Visualization/analysis
 ---
 
 # Data Visualization Resources
@@ -13,6 +13,8 @@ breadcrumb: Visualizations
 ## R and ggplot
 
 [go to the ggplot2 website](https://ggplot2.tidyverse.org/index.html)
+
+[Lesson series on ggplot (under construction)](../script/codegraf/032/)
 
 # Other resources
 
@@ -30,5 +32,11 @@ Other presentations
 
 [Introduction to Data Visualization using Python and R - Steve Baskauf (9 MB, download in .pptx format) March 29, 2019](resource/viz-workshop.pptx)
 
+# Statistical analysis resources
+
+[Lesson series on statistics with R]()../script/codegraf/026/)
+
+[Instructions for accessing SPSS and STATA (Vanderbilt Users only)](https://libanswers.library.vanderbilt.edu/faq/290980)
+
 ----
-Revised 2019-04-04
+Revised 2021-02-23

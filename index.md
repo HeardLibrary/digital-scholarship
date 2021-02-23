@@ -40,7 +40,7 @@ Getting started on AWS [http://vanderbi.lt/learnaws](http://vanderbi.lt/learnaws
 
 [Data management](manage/) - There are many tools available to help you manage your data throughout the research life cycle, including data management planning, version control, and deposit of data and publications in a repository, such as Vanderbilt's Institutional Repository.  
 
-[Data visualization](viz/) - Tableau Public is a commonly used tool for visualizing data on the fly.  There are also powerful visualization libraries that can be used with R and Python.
+[Data visualization and analysis](viz/) - Tableau Public is a commonly used tool for visualizing data on the fly.  There are also powerful visualization libraries that can be used with R and Python. This link also leads to some resources related to statistical analysis.
 
 [Digital privacy and security](privacy/) - Being in control of the privacy and security of your work and data until you are ready to make it public is an important aspect of the scholarly process. Explore some of the useful tools that can help you in this area.
 
@@ -61,4 +61,4 @@ Getting started on AWS [http://vanderbi.lt/learnaws](http://vanderbi.lt/learnaws
 [Go to the site map](map/)
 
 ----
-Revised 2020-03-31
+Revised 2021-02-23
