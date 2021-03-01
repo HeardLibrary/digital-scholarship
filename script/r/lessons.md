@@ -56,9 +56,9 @@ Instructor (Steve Baskauf) [office hours information](https://www.library.vander
 | Apr 21 | 6 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (46 min)  |
 
 
-## Intermediate Lessons (Introduction to data visualization with ggplot) - Spring 2021
+## Intermediate Lessons (Introduction to data visualization with ggplot) - Fall 2021
 
-TBD second half of semester
+TBD
 
 # R Resources
 
