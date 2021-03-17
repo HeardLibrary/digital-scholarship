@@ -25,21 +25,6 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 
 ## Beginners Lessons - Spring 2021
 
-First cycle: Thursdays from 1:00 PM - 2:00 PM Central (US) Time
-
-[Registration link](https://vanderbilt.zoom.us/meeting/register/tJ0kdO6vrjovG9YxjjjsNW7COJX7sx8IKi7Y) 
-
-Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
-
-| Working session date | Lesson | Topic | Web pages |
-|---|---|---|---|
-| Feb 4 | 1 | Introduction, installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (10 min) Stop on the page after the `Installing Anaconda` section. |
-| Feb 11 | 2 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (50 min) |
-| Feb 18 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
-| Feb 25 | 4 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
-| Mar 4 | 5 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
-| Mar 11 | 6 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (46 min)  |
-
 Second cycle: Wednesdays from 1:00 PM - 2:00 PM Central (US) Time
 
 [Registration link](https://vanderbilt.zoom.us/meeting/register/tJwodO6orj0oHtLKjo1HzNkFvrSSxMpTXziy)
