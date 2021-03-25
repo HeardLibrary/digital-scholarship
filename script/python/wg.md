@@ -25,24 +25,11 @@ The DiSC office also provides [lessons for learning R](http://vanderbi.lt/r) and
 
 ## Beginners Lessons - Spring 2021
 
-First cycle: Wednesdays from 1:00 - 2:00 PM Central (US) Time
-
-[Registration link](https://vanderbilt.zoom.us/meeting/register/tJAqdO2hrTgjHNaF2tssETGovFozm_b0muCY)
-
 Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
-
-| Working session date | Lesson | Topic | Web page |
-|---|---|---|---|
-| Feb 3 | 1 | Introduction / Installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (27 min)  |
-| Feb 10 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
-| Feb 17 | 3 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
-| Feb 24 | 4 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
-| Mar 3 | 5 | Loops | [lesson videos](../../codegraf/006b/) (33 min lessons, 61 min including demos) |
-| Mar 10 | 6 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
 
 Second cycle: Thursdays from 1:00 - 2:00 PM Central (US) Time
 
-[Registration link]( https://vanderbilt.zoom.us/meeting/register/tJIqde2rrj4rHNMtk5qxblnFOdJrHG8jqmi-) 
+[Registration link](https://vanderbilt.zoom.us/meeting/register/tJIqde2rrj4rHNMtk5qxblnFOdJrHG8jqmi-) 
 
 | Working session date | Lesson | Topic | Web page |
 |---|---|---|---|
@@ -78,4 +65,4 @@ TBD
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2021-01-21
+Revised 2021-03-25
