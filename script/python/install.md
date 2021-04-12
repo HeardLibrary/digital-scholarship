@@ -67,6 +67,10 @@ Continue to click on the Continue button until you reach the Install stage.  A l
 
 <img src="../images/install5mac.png" style="border:1px solid black">
 
+7\. If you will be using Python to communicate through the Internet, you may have problems if you do not install security certificates. When the installation process completes, a Finder window will open to the installation directory. To install security certificates, double click on the file named `Install Certificates` (or `Install Certificates.command` if your system displays file extensions). When the certificates installation is complete, you can close the popup Terminal window. 
+
+<img src="../images/install_certificates.png" style="border:1px solid black">
+
 At the end of the installation, you will be given an option to delete the Installer file from the Downloads folder.  You won't need it any more, so you can allow that.
 
 ## Starting Python on a Mac
@@ -189,4 +193,4 @@ Alternatively, you can enter the command `quit()`, which has the same effect.
 Although issuing Python commands one line at a time is fine for learing how commands work, it is easier to develop Python scripts as a whole by writing them in a code editor, or using an integrated development environment (IDE).  The Thonny IDE was mentioned at the top of this page.  Instructions for developing code using a code editor are on [this page](../editor/).
 
 ----
-Revised 2019-01-12
+Revised 2021-04-12
