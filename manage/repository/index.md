@@ -38,7 +38,7 @@ The [Inter-University Consortium for Political and Social Research (ICPSR)](http
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VsU5dlnSPv8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Data can be deposited for free, although there is a fee for curated deposits.
+Data can be deposited for free, although there is a fee for curated deposits. Using the [openICPSR](https://www.openicpsr.org/) system, researchers can self-deposit raw data without going through the full ICPSR data review process.
 
 For more information about ICPSR, visit [this research guide](https://researchguides.library.vanderbilt.edu/icpsr).
 
@@ -55,4 +55,4 @@ If you are using Github to manage a project, you can easily archive dataset rele
 [Go to the Zenodo website](https://zenodo.org/)
 
 ----
-Revised 2019-09-07
+Revised 2021-05-03
