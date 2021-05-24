@@ -10,6 +10,8 @@ breadcrumb: vanderbot
 
 [First blog post](http://baskauf.blogspot.com/2021/03/writing-your-own-data-to-wikidata-using.html)
 
+[VanderBot landing page](http://vanderbi.lt/vanderbot)
+
 ## Before starting
 
 This session will focus on the Wikidata side of things and not on programming, command line, etc. As is the case with many "follow-along" workshops, the biggest hazard is running into technical issues at the start and not being able to "keep up" because of getting stuck with installation issues, getting lost, etc. Therefore, if you don't already have Python 3 installed on your computer, don't know how to get to the command line, don't know where your home directory is, etc., you can do some up-front legwork to avoid these hazards.
