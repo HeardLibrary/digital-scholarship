@@ -38,7 +38,13 @@ breadcrumb: vanderbot
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/dHBv5IzBsQU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Credentials file template:
 
+```
+endpointUrl=https://test.wikidata.org
+username=User@bot
+password=465jli90dslhgoiuhsaoi9s0sj5ki3lo
+```
 -----
 
 ## Creating a mapping schema file
