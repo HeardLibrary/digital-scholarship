@@ -53,6 +53,17 @@ password=465jli90dslhgoiuhsaoi9s0sj5ki3lo
 
 [Mapping schema builder webpage](https://heardlibrary.github.io/digital-scholarship/script/wikidata/wikidata-csv2rdf-metadata.html)
 
+Properties and values to use:
+
+```
+P17 country (Item value, used as a statement property)
+P87 start date (Point in time value, used as a qualifier property for P17)
+Q346 France (Item, used as a value for P17)
+Q53079 Mexico (Item, used as a value for P17)
+P18 Date of birth (Point in time value, used as a statement property)
+P93 reference URL (URL value, used as a reference property)
+```
+
 -----
 
 ## Creating the data CSV
