@@ -18,7 +18,13 @@ breadcrumb: vanderbot
 
 
 
+-----
+
 # test.wikidata.org
+
+[Wikidata test instance (playground)](https://test.wikidata.org/)
+
+-----
 
 ## Creating a bot password
 
@@ -43,7 +49,7 @@ breadcrumb: vanderbot
 
 -----
 
-## Creating a mapping schema file
+## Creating the data CSV
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/ug8ivQkyt4c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -59,7 +65,7 @@ breadcrumb: vanderbot
 
 -----
 
-## Writing to the WikiData API
+## Writing to the test WikiData API
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/EyadhJmA_nM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -76,6 +82,14 @@ breadcrumb: vanderbot
 -----
 
 # Writing to Wikidata sandbox items
+
+Test items in the "real" Wikidata:
+
+- [Sandbox page 1](https://www.wikidata.org/wiki/Q4115189)
+- [Sandbox page 2](https://www.wikidata.org/wiki/Q13406268)
+- [Sandbox page 3](https://www.wikidata.org/wiki/Q15397819)
+
+-----
 
 ## Switching to the "real" Wikidata
 
