@@ -45,7 +45,7 @@ breadcrumb: vanderbot
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/6AlsPEr1mWs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
+[Mapping schema builder webpage](https://heardlibrary.github.io/digital-scholarship/script/wikidata/wikidata-csv2rdf-metadata.html)
 
 -----
 
@@ -61,7 +61,7 @@ breadcrumb: vanderbot
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/d9OHt5oDU8w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
+[VanderBot python script (for downloading)](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/vanderbot.py)
 
 -----
 
@@ -103,7 +103,9 @@ Test items in the "real" Wikidata:
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/0iJ9z1ea2QU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+[Practice configuration file for sandbox pages](https://gist.github.com/baskaufs/25a19cbb0edf9fcd16423bf231645939)
 
+[Script to convert simplified configuration file into a schema](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert_json_to_metadata_schema.py)
 
 -----
 
