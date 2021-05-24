@@ -354,7 +354,7 @@ function createJSON() {
     $("#output-json-contents").text(string);
     // trigger file download - added by Mark Denning - 2021-04-19
     document.getElementById("json-download").setAttribute("href","data:application/text," + string)
-    document.getElementById("json-download").setAttribute("download",document.getElementById("csv-filename").value+".json")
+    document.getElementById("json-download").setAttribute("download","csv-metadata.json")
     document.getElementById("json-download").click()
     // un-hide copy to clipboard button if it is hidden
     $("#json-clip").removeAttr('hidden');
