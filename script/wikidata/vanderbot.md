@@ -88,7 +88,7 @@ P93 reference URL (URL value, used as a reference property)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/EyadhJmA_nM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
+Use `Terminal` on Mac or `Command prompt` on Windows
 
 -----
 
