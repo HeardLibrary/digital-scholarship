@@ -8,8 +8,6 @@ breadcrumb: vanderbot
 
 ## Links
 
-[Session prep notes](https://www.wikidata.org/wiki/Wikidata:WikiProject_LD4_Wikidata_Affinity_Group/Wikidata_Working_Hours/2021-May-24_Wikidata_Working_Hour#In_Preparation_for_the_Session)
-
 [First blog post](http://baskauf.blogspot.com/2021/03/writing-your-own-data-to-wikidata-using.html)
 
 ## Before starting
