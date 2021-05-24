@@ -28,9 +28,9 @@ If the console responds with something like `Python 3.7.2`... or some other numb
 
 If you didn't get a message like `Python 3.7.2`, then try entering
 
-python3
+`python3`
 
-If the console responds with something like Python 3.7.2... or some other number starting with "3", then you are good to go, but you need to remember that in the future, any time the instructions tell you type `python`..., you need to instead type `python3`... (usually the case for Mac users who haven't installed Anaconda). If you get an error message after trying both of these things, then you don't have Python 3 and need to install it.
+If the console responds with something like `Python 3.7.2`... or some other number starting with "3", then you are good to go, but you need to remember that in the future, any time the instructions tell you type `python`..., you need to instead type `python3`... (usually the case for Mac users who haven't installed Anaconda). If you get an error message after trying both of these things, then you don't have Python 3 and need to install it.
 
 If you got into either Python 2 or Python 3, you can get out of it by holding down on the `Ctrl` key and pressing the `Z` key (or just close the console window).
 
@@ -76,7 +76,7 @@ You should see the file you downloaded in the listing. Sometimes in Windows weir
 
 -----
 
-# test.wikidata.org
+# Writing to test.wikidata.org
 
 [Wikidata test instance (playground)](https://test.wikidata.org/)
 
@@ -86,6 +86,7 @@ You should see the file you downloaded in the listing. Sometimes in Windows weir
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/NZP6lB7l8c8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
 [bot password page](https://www.wikidata.org/wiki/Special:BotPasswords)
 
 -----
@@ -93,6 +94,7 @@ You should see the file you downloaded in the listing. Sometimes in Windows weir
 ## Creating a credentials file
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/dHBv5IzBsQU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 Use `TextEdit` for Mac or `Notepad` for Windows
 
@@ -110,6 +112,7 @@ Save the credentials file in your home directory under the name `wikibase_creden
 ## Creating a mapping schema file
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/6AlsPEr1mWs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 [Mapping schema builder webpage](https://heardlibrary.github.io/digital-scholarship/script/wikidata/wikidata-csv2rdf-metadata.html)
 
@@ -139,6 +142,7 @@ P93 reference URL (URL value, used as a reference property)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/d9OHt5oDU8w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
 [VanderBot python script (for downloading)](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/vanderbot.py)
 
 -----
@@ -146,6 +150,7 @@ P93 reference URL (URL value, used as a reference property)
 ## Writing to the test WikiData API
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/EyadhJmA_nM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 Use `Terminal` on Mac or `Command prompt` on Windows
 
@@ -160,6 +165,7 @@ Use `Terminal` on Mac or `Command prompt` on Windows
 -----
 
 # Writing to Wikidata sandbox items
+
 
 Test items in the "real" Wikidata:
 
@@ -180,6 +186,7 @@ Test items in the "real" Wikidata:
 ## Setup using a configuration file
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/0iJ9z1ea2QU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 [Practice configuration file for sandbox pages](https://gist.github.com/baskaufs/25a19cbb0edf9fcd16423bf231645939)
 
