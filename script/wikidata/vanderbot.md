@@ -38,6 +38,8 @@ breadcrumb: vanderbot
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/dHBv5IzBsQU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Use `TextEdit` for Mac or `Notepad` for Windows
+
 Credentials file template:
 
 ```
