@@ -107,6 +107,7 @@ password=465jli90dslhgoiuhsaoi9s0sj5ki3lo
 ```
 
 Save the credentials file in your home directory under the name `wikibase_credentials.txt`
+
 -----
 
 ## Creating a mapping schema file
