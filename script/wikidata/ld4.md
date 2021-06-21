@@ -108,23 +108,6 @@ Save the credentials file in your home directory under the name `wikibase_creden
 
 -----
 
-## Writing to the test WikiData API
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/EyadhJmA_nM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-Use `Terminal` on Mac or `Command prompt` on Windows
-
------
-
-## Adding statements and references to existing items
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/aG-OljIYkbE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-
------
-
 # Writing to Wikidata sandbox items
 
 
@@ -181,6 +164,26 @@ Test items in the "real" Wikidata:
 
 
 ----
+
+## Writing to the test WikiData API
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/EyadhJmA_nM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Use `Terminal` on Mac or `Command prompt` on Windows
+
+-----
+
+## Adding statements and references to existing items
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/aG-OljIYkbE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+-----
+
+
+
 For more information, [email Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 Revised 2021-05-25
