@@ -119,7 +119,7 @@ Test items in the "real" Wikidata:
 
 -----
 
-## Switching to the "real" Wikidata
+## What are sandbox items?
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/Zv9rMzOczv8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
