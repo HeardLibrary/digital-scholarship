@@ -184,7 +184,7 @@ Use `Terminal` on Mac or `Command prompt` on Windows
 
 [Simple configuration file for university faculty](https://gist.github.com/baskaufs/6a37c39f70a228d38d5ebda28651ffca)
 
-[Bluffton University](https://www.bluffton.edu/catalog/officers/faculty.aspx)
+[Bluffton University faculty information webpage](https://www.bluffton.edu/catalog/officers/faculty.aspx)
 
 [Script to acquire existing metadata from Wikidata](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata_metadata.py)
 
