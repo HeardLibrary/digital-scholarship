@@ -178,7 +178,21 @@ Use `Terminal` on Mac or `Command prompt` on Windows
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/aG-OljIYkbE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+# Writing real Wikidata items
 
+## Downloading existing data
+
+[Simple configuration file for university faculty](https://gist.github.com/baskaufs/6a37c39f70a228d38d5ebda28651ffca)
+
+[Bluffton University](https://www.bluffton.edu/catalog/officers/faculty.aspx)
+
+[Script to acquire existing metadata from Wikidata](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata_metadata.py)
+
+Graph pattern for employees of Bluffton University (Q886141).
+
+```
+?qid wdt:P108 wd:Q886141.
+```
 
 -----
 
@@ -186,4 +200,4 @@ Use `Terminal` on Mac or `Command prompt` on Windows
 
 For more information, [email Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
-Revised 2021-05-25
+Revised 2021-06-23
