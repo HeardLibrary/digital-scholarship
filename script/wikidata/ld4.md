@@ -87,6 +87,8 @@ You should see the file you downloaded in the listing. Sometimes in Windows weir
 
 [bot password page](https://www.wikidata.org/wiki/Special:BotPasswords)
 
+
+
 -----
 
 ## Creating a credentials file
@@ -106,9 +108,13 @@ password=465jli90dslhgoiuhsaoi9s0sj5ki3lo
 
 Save the credentials file in your home directory under the name `wikibase_credentials.txt`
 
+
+
 -----
 
-# Writing to Wikidata sandbox items
+## What are sandbox items?
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/nvWkaCcEEHA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 Test items in the "real" Wikidata:
@@ -117,41 +123,89 @@ Test items in the "real" Wikidata:
 - [Sandbox page 2](https://www.wikidata.org/wiki/Q13406268)
 - [Sandbox page 3](https://www.wikidata.org/wiki/Q15397819)
 
------
-
-## What are sandbox items?
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/Zv9rMzOczv8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 
 -----
 
-## Setup using a configuration file
+## Create folders prior to preparing data for upload
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/0iJ9z1ea2QU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/X_uO-OmrJqM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+-----
+
+# Writing to Wikidata sandbox items
+
+-----
+
+## What is a metadata description file?
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/YStUeWbrzoM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+The default name for metadata description files used by VanderBot is `csv-metadata.json`.
+
+
+
+-----
+
+## Downloading and examining a simple configuration file
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/XG_JbEri8ns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 [Practice configuration file for sandbox pages](https://gist.github.com/baskaufs/25a19cbb0edf9fcd16423bf231645939)
 
-[Script to convert simplified configuration file into a schema](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert_json_to_metadata_schema.py)
+The default name for configuration files used by VanderBot is `config.json`.
+
+
+
+-----
+
+## Transforming a configuration file to a metadata description file
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/4DdDzjVx6no" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+[Script to convert simplified configuration file into a schema](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert_json_to_metadata_schema.py). The script is named `convert_json_to_metadata_schema.py`.
+
+To prevent overwriting any existing CSV files, the generated ones have `h` prepended to their name. This `h` needs to be removed before the spreadsheets are used.
+
+
+
+-----
+
+## Adding data to the spreadsheet prior to upload
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/BWQOyd1M0So" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 
 -----
 
 ## Downloading the VanderBot script
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/d9OHt5oDU8w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/yKC2evfxfE8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-[VanderBot python script (for downloading)](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/vanderbot.py)
+[VanderBot Python script (for downloading)](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/vanderbot.py)
 
 
 
 -----
 
-## Adding data to a sandbox item
+## Writing new claims to a sandbox item
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/ME-gx8UUdzE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/9fC3oXvQfqI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+-----
+
+## Adding a reference to an existing claim
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/lXgMKHdyY6k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
@@ -159,34 +213,32 @@ Test items in the "real" Wikidata:
 
 ## Adding multiple values for a property
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/OZnv2dPQR6w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/y-FB7rSW2Ks" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-
-----
-
-## Writing to the test WikiData API
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/EyadhJmA_nM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-Use `Terminal` on Mac or `Command prompt` on Windows
 
 -----
 
-## Adding statements and references to existing items
+## Cleaning up the sandbox
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/aG-OljIYkbE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/7GypaiRI1Uo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-# Writing real Wikidata items
 
-## Downloading existing data
+
+-----
+
+# Creating real Wikidata items
+
+-----
+
+## Setting up a configuration file for university faculty
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/iHHQfJKl4OE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 [Simple configuration file for university faculty](https://gist.github.com/baskaufs/6a37c39f70a228d38d5ebda28651ffca)
 
 [Bluffton University faculty information webpage](https://www.bluffton.edu/catalog/officers/faculty.aspx)
-
-[Script to acquire existing metadata from Wikidata](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata_metadata.py)
 
 Graph pattern for employees of Bluffton University (Q886141).
 
@@ -194,10 +246,40 @@ Graph pattern for employees of Bluffton University (Q886141).
 ?qid wdt:P108 wd:Q886141.
 ```
 
+
+
+-----
+
+## Download and clean existing data from Wikidata about faculty
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/ophQmKE0Ksc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+[Script to acquire existing metadata from Wikidata](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata_metadata.py). The script is named `acquire_wikidata_metadata.py`.
+
+
+
+
+-----
+
+## Adding statements about existing faculty items
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/zxIDeFjM0R4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+-----
+
+## Creating a new faculty item
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/fu68LM5NicM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
 -----
 
 
 
 For more information, [email Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
-Revised 2021-06-23
+Revised 2021-06-24
