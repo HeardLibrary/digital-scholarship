@@ -6,6 +6,8 @@ breadcrumb: LD4 vanderbot
 
 # LD4 VanderBot tutorial
 
+Total video times: 57 minutes, 24 seconds
+
 ## Links
 
 [Earlier tutorial focused on creating metadata description files from scratch and writing to the test Wikidata instance](https://heardlibrary.github.io/digital-scholarship/script/wikidata/vanderbot/)
@@ -80,7 +82,7 @@ You should see the file you downloaded in the listing. Sometimes in Windows weir
 
 6\. **Using a text editor**. At several points in the session, we will need to edit plain text files. Those are files that don't have all of the extra "invisible" information that is saved in word processing documents. Both Macs and Windows computers have built-in text editors that you can use: TextEdit on Macs and Notepad on Windows. If you have installed a code editor like Atom or Visual Studio Code on your computer, you can use that instead, but that's overkill. If you don't know about text editors or don't know how to find one on your computer, there are [some videos on the topic you can watch here](https://heardlibrary.github.io/digital-scholarship/script/codegraf/020/#text-editors-and-code-editors-2m13s). NOTE: If this is the first time you have used TextEdit on a Mac to edit plain text, make sure that you have set it to default to plain text rather than rich text. See [these instructions](https://heardlibrary.github.io/digital-scholarship/script/codegraf/020/#textedit-text-editor-for-mac-2m08s) for more details. 
 
-## Introduction
+## Introduction (56s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/xMvEBgpjJt0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -92,18 +94,23 @@ You should see the file you downloaded in the listing. Sometimes in Windows weir
 
 -----
 
-## Creating a bot password
+## Creating a bot password (2m 24s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/NZP6lB7l8c8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 [bot password page](https://www.wikidata.org/wiki/Special:BotPasswords)
 
+Check the following:
+- Edit existing pages
+- Create, edit, and move pages
+- Delete pages, revisions, and log entries
+
 
 
 -----
 
-## Creating a credentials file
+## Creating a credentials file (2m 46s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/dHBv5IzBsQU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -124,7 +131,7 @@ Save the credentials file in your home directory under the name `wikibase_creden
 
 -----
 
-## What are sandbox items?
+## What are sandbox items? (2m 09s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/nvWkaCcEEHA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -139,7 +146,7 @@ Test items in the "real" Wikidata:
 
 -----
 
-## Create folders prior to preparing data for upload
+## Create folders prior to preparing data for upload (1m 49s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/X_uO-OmrJqM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -151,18 +158,18 @@ Test items in the "real" Wikidata:
 
 -----
 
-## What is a metadata description file?
+## What is a metadata description file? (1m 18s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/YStUeWbrzoM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 The default name for metadata description files used by VanderBot is `csv-metadata.json`.
 
-
+[Web tool for generating metadata description files from scratch (not necessary for this tutorial)](https://heardlibrary.github.io/digital-scholarship/script/wikidata/wikidata-csv2rdf-metadata.html)
 
 -----
 
-## Downloading and examining a simple configuration file
+## Downloading and examining a simple configuration file (5m 18s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/XG_JbEri8ns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -175,7 +182,7 @@ The default name for configuration files used by VanderBot is `config.json`.
 
 -----
 
-## Transforming a configuration file to a metadata description file
+## Transforming a configuration file to a metadata description file (4m 08s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/4DdDzjVx6no" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -188,15 +195,16 @@ To prevent overwriting any existing CSV files, the generated ones have `h` prepe
 
 -----
 
-## Adding data to the spreadsheet prior to upload
+## Adding data to the spreadsheet prior to upload (5m 20s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/BWQOyd1M0So" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+[LibreOffice website](https://www.libreoffice.org/) LibreOffice is free, open source software. The LibreOffice Calc program is the recommended program for editing CSV files. It is better than Excel for some technical reasons, but Excel is OK for this exercise. **Note:** If you do not use LibreOffice, be sure to close the CSV file prior to running the VanderBot upload script.
 
 -----
 
-## Downloading the VanderBot script
+## Downloading the VanderBot script (54s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/yKC2evfxfE8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -207,7 +215,7 @@ To prevent overwriting any existing CSV files, the generated ones have `h` prepe
 
 -----
 
-## Writing new claims to a sandbox item
+## Writing new claims to a sandbox item (3m 48s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/9fC3oXvQfqI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -215,7 +223,7 @@ To prevent overwriting any existing CSV files, the generated ones have `h` prepe
 
 -----
 
-## Adding a reference to an existing claim
+## Adding a reference to an existing claim (1m 21s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/lXgMKHdyY6k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -223,7 +231,7 @@ To prevent overwriting any existing CSV files, the generated ones have `h` prepe
 
 -----
 
-## Adding multiple values for a property
+## Adding multiple values for a property (3m 52s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/y-FB7rSW2Ks" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -231,7 +239,7 @@ To prevent overwriting any existing CSV files, the generated ones have `h` prepe
 
 -----
 
-## Cleaning up the sandbox
+## Cleaning up the sandbox (39s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/7GypaiRI1Uo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -243,7 +251,7 @@ To prevent overwriting any existing CSV files, the generated ones have `h` prepe
 
 -----
 
-## Setting up a configuration file for university faculty
+## Setting up a configuration file for university faculty (6m 22s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/iHHQfJKl4OE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -258,23 +266,23 @@ Graph pattern for employees of Bluffton University (Q886141).
 ?qid wdt:P108 wd:Q886141.
 ```
 
-
-
------
-
-## Download and clean existing data from Wikidata about faculty
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/ophQmKE0Ksc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
 [Script to acquire existing metadata from Wikidata](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata_metadata.py). The script is named `acquire_wikidata_metadata.py`.
 
 
 
+-----
+
+## Download and clean existing data from Wikidata about faculty (4m 32s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/ophQmKE0Ksc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
 
 -----
 
-## Adding statements about existing faculty items
+## Adding statements about existing faculty items (5m 08s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/zxIDeFjM0R4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -282,7 +290,7 @@ Graph pattern for employees of Bluffton University (Q886141).
 
 -----
 
-## Creating a new faculty item
+## Creating a new faculty item (4m 40s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/fu68LM5NicM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
