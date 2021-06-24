@@ -8,6 +8,8 @@ breadcrumb: LD4 vanderbot
 
 ## Links
 
+[Earlier tutorial focused on creating metadata description files from scratch and writing to the test Wikidata instance](https://heardlibrary.github.io/digital-scholarship/script/wikidata/vanderbot/)
+
 [First blog post (setting up credentials)](http://baskauf.blogspot.com/2021/03/writing-your-own-data-to-wikidata-using.html)
 
 [Second blog post (describes configuration files)](http://baskauf.blogspot.com/2021/03/writing-your-own-data-to-wikidata-using_7.html)
@@ -18,9 +20,9 @@ breadcrumb: LD4 vanderbot
 
 [VanderBot landing page](http://vanderbi.lt/vanderbot)
 
-[Configuration file structure and scripts](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert-config.md)
+[Reference page for configuration file structure and conversion script](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert-config.md)
 
-[Download script detailed instructions](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata.md)
+[Reference page for download script with detailed instructions and options](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata.md)
 
 ## Before starting
 
