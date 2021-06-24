@@ -60,7 +60,7 @@ Once you have installed Python 3, you can go back to the last step and verify th
 pip install requests
 ```
 
-5\. **Figuring out where your downloaded files are**. If you don't typically navigate around your computer using the command line, it is possible to get lost. I recommend that you create a folder that is a subfolder of your Documents folder in which to put the files that we will be using (for example a folder called `vanderbot` or something else that is simple and doesn't have spaces in its name). Most people can easily get to such a folder, although Windows is particularly bad about making people confused about where files are. If you want to run a test ahead of time, try creating a subfolder of your `Documents` folder, download a file into it, then try the following commands in the console:
+5\. **Figuring out where your downloaded files are**. If you don't typically navigate around your computer using the command line, it is possible to get lost. I recommend that you create a folder that is a subfolder of your Documents folder in which to put the files that we will be using (in my examples I usa a folder called `wikidata_test`, but you can call it something else that is simple and doesn't have spaces in its name). Most people can easily get to such a folder, although Windows is particularly bad about making people confused about where files are. If you want to run a test ahead of time, try creating a subfolder of your `Documents` folder, download a file into it, then try the following commands in the console:
 
 ```
 cd Documents
@@ -72,7 +72,7 @@ then
 
 You should see the directory you created. Now change to the new folder and look for the file you downloaded by entering these commands:
 
-`cd vanderbot` (or whatever you called the folder)
+`cd wikidata_test` (or whatever you called the folder)
 
 then
 
