@@ -8,9 +8,19 @@ breadcrumb: LD4 vanderbot
 
 ## Links
 
-[First blog post](http://baskauf.blogspot.com/2021/03/writing-your-own-data-to-wikidata-using.html)
+[First blog post (setting up credentials)](http://baskauf.blogspot.com/2021/03/writing-your-own-data-to-wikidata-using.html)
+
+[Second blog post (describes configuration files)](http://baskauf.blogspot.com/2021/03/writing-your-own-data-to-wikidata-using_7.html)
+
+[Third blog post (covers creating your own configuration file)](http://baskauf.blogspot.com/2021/03/writing-your-own-data-to-wikidata-using_11.html)
+
+[Fourth blog post (describes details of downloading existing data from Wikidata)](http://baskauf.blogspot.com/2021/03/writing-your-own-data-to-wikidata-using_18.html)
 
 [VanderBot landing page](http://vanderbi.lt/vanderbot)
+
+[Configuration file structure and scripts](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert-config.md)
+
+[Download script detailed instructions](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata.md)
 
 ## Before starting
 
