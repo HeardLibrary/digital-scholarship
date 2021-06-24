@@ -151,6 +151,9 @@ Test items in the "real" Wikidata:
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/X_uO-OmrJqM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+In my examples, I use a folder within the Documents folder called `wikidata_test`. Inside that folder, there is another folder called `data`.
+
+
 
 -----
 
