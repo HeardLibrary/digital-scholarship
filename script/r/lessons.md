@@ -65,11 +65,11 @@ Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 
 ## Software Carpentries (cosponsored by DiSC, Office of the Vice Provost for Research, Research IT, ACCRE, and the Data Science Institute)
 
-TBD
+August 19-20, 2021. Lessons on command line, Git, and R. [Event website](https://awesolek2.github.io/2021-08-19-SWC-R/). [Registration link](https://www.eventbrite.com/e/software-carpentris-rrstudio-tickets-163385563619).
 
 --------------------
 
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2021-01-21
+Revised 2021-07-22
