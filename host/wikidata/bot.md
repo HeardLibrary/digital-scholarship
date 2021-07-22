@@ -10,6 +10,8 @@ breadcrumb: bot
 
 ## Preliminaries
 
+NOTE: The bot script described on this page has not been updated. Current work (2021) has been focused on the [VanderBot script](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/README.md) that can be used to upload CSV data to any Wikibase instance (including Wikidata). 
+
 **What is a bot?**
 
 The term "bot" conjures up an image of a cool robot that can do your bidding.  Unfortunately, a bot is more mundane than that. A bot is simply a computer program (a.k.a. **script**) that can interact with Wikidata or Wikibase through the Internet using [Hypertext Transfer Protocol (HTTP)](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol).  The program can be written in any language that can communicate via HTTP, including Javascript and Python.  In this lesson we will use Python, but the principles will be similar in other languages.
@@ -360,4 +362,4 @@ A final important consideration when writing to the real Wikidata is *throttling
 Thanks to [Asaf Bartov](https://wikimediafoundation.org/profile/asaf-bartov/) and [Andrew Lih](https://en.wikipedia.org/wiki/Andrew_Lih) whose presentations and answers to my questions at the [2019 LD4P conference](http://bit.ly/ld4conference) cleared up the confusion that was keeping me from getting this to work. sjb
 
 ----
-Revised 2019-06-04
+Revised 2021-07-22
