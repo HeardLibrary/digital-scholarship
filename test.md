@@ -10,7 +10,11 @@ breadcrumb: data
 
 Steven J. Baskauf <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0001-9887-5224" href="https://orcid.org/0000-0001-9887-5224" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0003-4365-3135</a></div>
 
-Knowing how to use your computer effectively is a critical skill for success.  For a series of lessons to help you understand how to use your Mac or Windows computer visit <a href="https://heardlibrary.github.io/digital-scholarship/computer/">this page</a>.  Topics covered include: 
+Knowing how to use your computer effectively is a critical skill for success.  
+
+Steven J. Baskauf <a itemprop="sameAs" content="https://orcid.org/0000-0001-9887-5224" href="https://orcid.org/0000-0001-9887-5224" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0003-4365-3135</a>
+
+For a series of lessons to help you understand how to use your Mac or Windows computer visit <a href="https://heardlibrary.github.io/digital-scholarship/computer/">this page</a>.  Topics covered include: 
 <ul>
 <li>files and directories</li>
 <li>installing and uninstalling software</li>
