@@ -26,7 +26,7 @@ Before starting the lessons, you need to create a free GitHub account.  To open 
 
 ## Managing websites using GitHub - fall of 2021 
 
-Wednesdays from 1:00 PM - 2:00 PM Central (US) Time (starting Sep 7).
+Tuesdays from 1:00 PM - 2:00 PM Central (US) Time (starting Sep 7).
 
 This hands-on series of lessons will quickly get you started creating a free website using GitHub pages. These lessons assume that you have a basic understanding of GitHub. However, those with no background using GitHub are welcome to attend since they can quickly catch up by doing the first two beginner lessons below. 
 
