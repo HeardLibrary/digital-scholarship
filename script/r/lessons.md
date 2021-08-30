@@ -53,12 +53,14 @@ Please register using this Zoom registration link even if you plan to attend in-
 
 Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
 
-| Working session date | Lesson | Topic | Web pages |
+The topics below are provisional and subject to change
+
+| Working session date | Lesson | Topics | Web pages |
 |---|---|---|---|
-| Sep 3 | 1 | TBD |  |
-| Sep 10 | 2 | TBD |  |
-| Sep 17 | 3 | TBD |  |
-| Sep 24 | 4 | TBD |  |
+| Sep 3 | 1 | Grammar of Graphics, 3 common geoms, formatting | [lesson videos](../../codegraf/032/) (25 min) |
+| Sep 10 | 2 | controlling asthetics like color and size, labels |  |
+| Sep 17 | 3 | stats: binning, distributions, error bars |  |
+| Sep 24 | 4 | complex plots: faceting, overlaying, stacking |  |
 | Oct 1 | 5 | TBD |  |
 | Oct 8 | 6 | TBD |  |
 
@@ -90,4 +92,4 @@ TBD
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2021-08-23
+Revised 2021-08-30
