@@ -27,7 +27,9 @@ The DiSC office also provides [lessons for learning R](http://vanderbi.lt/r) and
 
 ## Beginners Lessons - Fall 2021
 
-Wednesdays from 1:00 PM - 2:00 PM Central (US) Time (starting Oct 20). Venue: Eskind Biomedical Library Training Room - EBL 010 (Lower Level)
+Wednesdays from 1:00 PM - 2:00 PM Central (US) Time (starting Oct 20). 
+
+**NOTE CHANGE OF VENUE:** Central Library Poetry Room - 612A
 
 Please register using this Zoom registration link even if you plan to attend in-person. This will give you the opportunity to participate by Zoom if you can't make one of the live sessions. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJUlcu2gqDosHtfmivBsEfJXfZrQ9z8_DRuk)
 
