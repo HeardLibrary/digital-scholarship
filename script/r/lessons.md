@@ -27,7 +27,9 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 
 ## Beginners Lessons - Fall 2021
 
-Wednesdays from 1:00 PM - 2:00 PM Central (US) Time (starting Sep 1). Venue: Eskind Biomedical Library Training Room - EBL 010 (Lower Level)
+Wednesdays from 1:00 PM - 2:00 PM Central (US) Time (starting Sep 1). 
+
+**NOTE CHANGE OF VENUE:** Central Library Poetry Room - 612A (Sep 1 through 29)
 
 Please register using this Zoom registration link even if you plan to attend in-person. This will give you the opportunity to participate by Zoom if you can't make one of the live sessions. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJItd-CgrDMoE9M5guUCPfxagVl0QEl1QpnT)
 
@@ -47,7 +49,9 @@ Instructor (Steve Baskauf) [office hours information](https://www.library.vander
 
 This hands-on lesson series will quickly get you started using the R library `ggplot` to create data visualizations. These lessons assume that you have a basic familiarity with R and RStudio. However, those with no background can still participate by trying and modifying the provided code examples. To visualize your own data, you will want to work through the beginner lessons (offered concurrently, see above) either on your own, or as part of the lesson cohort. 
 
-Fridays from 1:00 PM - 2:00 PM Central (US) Time (starting Sep 3). Venue: Eskind Biomedical Library Training Room - EBL 010 (Lower Level)
+Fridays from 1:00 PM - 2:00 PM Central (US) Time (starting Sep 3). 
+
+**NOTE CHANGE OF VENUE:** Central Library Poetry Room - 612A (Sep 3 - Oct 1)
 
 Please register using this Zoom registration link even if you plan to attend in-person. This will give you the opportunity to participate by Zoom if you can't make one of the live sessions. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJUuc-yorTsvGtBNHm9y74IFbHwTno6i2Zbo)
 
