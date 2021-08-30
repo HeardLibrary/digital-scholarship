@@ -29,7 +29,7 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 
 Wednesdays from 1:00 PM - 2:00 PM Central (US) Time (starting Sep 1). 
 
-**NOTE CHANGE OF VENUE:** Central Library Poetry Room - 612A (Sep 1 through 29)
+**NOTE CHANGE OF VENUE:** Central Library Poetry Room - 612A (Sep 1 through 29) and 
 Central Library room 800BB on October 6 ONLY.
 
 Please register using this Zoom registration link even if you plan to attend in-person. This will give you the opportunity to participate by Zoom if you can't make one of the live sessions. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJItd-CgrDMoE9M5guUCPfxagVl0QEl1QpnT)
@@ -43,7 +43,7 @@ Instructor (Steve Baskauf) [office hours information](https://www.library.vander
 | Sep 15 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
 | Sep 22 | 4 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
 | Sep 29 | 5 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
-| Oct 6 | 6 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (46 min)  |
+| Oct 6 (room 800BB) | 6 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (46 min)  |
 
 
 ## Introduction to data visualization with ggplot (Intermediate topic) - Fall 2021
@@ -52,7 +52,7 @@ This hands-on lesson series will quickly get you started using the R library `gg
 
 Fridays from 1:00 PM - 2:00 PM Central (US) Time (starting Sep 3). 
 
-**NOTE CHANGE OF VENUE:** Central Library Poetry Room - 612A (Sep 3 - Oct 1)
+**NOTE CHANGE OF VENUE:** Central Library Poetry Room - 612A (Sep 3 - Oct 1) and 
 Central Library room 800BB on October 8 ONLY.
 
 Please register using this Zoom registration link even if you plan to attend in-person. This will give you the opportunity to participate by Zoom if you can't make one of the live sessions. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJUuc-yorTsvGtBNHm9y74IFbHwTno6i2Zbo)
@@ -68,7 +68,7 @@ The topics below are provisional and subject to change
 | Sep 17 | 3 | stats: binning, distributions, error bars |  |
 | Sep 24 | 4 | complex plots: faceting, overlaying, stacking |  |
 | Oct 1 | 5 | TBD |  |
-| Oct 8 | 6 | TBD |  |
+| Oct 8 (room 800BB) | 6 | TBD |  |
 
 
 # R Resources
