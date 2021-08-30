@@ -76,5 +76,11 @@ The following pages provide information for developing basic skills with GitHub.
 
 [Managing a website with GitHub Pages](pages/)
 
+DH class:
+
+[terms and diagrams presentation](git_terms_diagrams_pages.pdf)
+
+[terms text](github_terms.pdf)
+
 ----
-Revised 2021-08-23
+Revised 2021-08-30
