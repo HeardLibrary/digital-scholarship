@@ -30,6 +30,7 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 Wednesdays from 1:00 PM - 2:00 PM Central (US) Time (starting Sep 1). 
 
 **NOTE CHANGE OF VENUE:** Central Library Poetry Room - 612A (Sep 1 through 29)
+Central Library room 800BB on October 6 ONLY.
 
 Please register using this Zoom registration link even if you plan to attend in-person. This will give you the opportunity to participate by Zoom if you can't make one of the live sessions. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJItd-CgrDMoE9M5guUCPfxagVl0QEl1QpnT)
 
@@ -52,6 +53,7 @@ This hands-on lesson series will quickly get you started using the R library `gg
 Fridays from 1:00 PM - 2:00 PM Central (US) Time (starting Sep 3). 
 
 **NOTE CHANGE OF VENUE:** Central Library Poetry Room - 612A (Sep 3 - Oct 1)
+Central Library room 800BB on October 8 ONLY.
 
 Please register using this Zoom registration link even if you plan to attend in-person. This will give you the opportunity to participate by Zoom if you can't make one of the live sessions. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJUuc-yorTsvGtBNHm9y74IFbHwTno6i2Zbo)
 
