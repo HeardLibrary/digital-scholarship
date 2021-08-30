@@ -30,7 +30,7 @@ Tuesdays from 1:00 PM - 2:00 PM Central (US) Time (starting Sep 7).
 
 This hands-on series of lessons will quickly get you started creating a free website using GitHub pages. These lessons assume that you have a basic understanding of GitHub. However, those with no background using GitHub are welcome to attend since they can quickly catch up by doing the first two beginner lessons below. 
 
-The lessons will be held in-person although remote participation via Zoom is welcome. Most lessons will be held in the Eskind Biomedical Library Training Room - EBL 010 (Lower Level), EXCEPT for lesson 2, which will be held in the Central Library Poetry Room (room 612A).
+The lessons will be held in-person although remote participation via Zoom is welcome. **NOTE CHANGE OF VENUE:** Central Library Poetry Room (room 612A).
 
 Please register using this Zoom registration link even if you plan to attend in-person. This will give you the opportunity to participate by Zoom if you can't make one of the live sessions. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJcuc-yhqz0uEtKkT5itfx22TC9AY9LX1OIV)
 
@@ -40,10 +40,10 @@ Instructor (Steve Baskauf) [office hours information](https://www.library.vander
 
 | Working session date | Lesson | Topic | Lesson web pages |
 |---|---|---|---|
-| Sep 7 EBL 010 | 1 | Setting up GitHub pages and basic Markdown |  |
-| Sep 14 Central 612A | 2 | Choosing a canned theme and HTML elements |  |
-| Sep 28 EBL 010 | 3 | Using remote themes and modifying the settings |  |
-| Oct 5 EBL 010 | 4 | Non-GitHub Pages sites stored on GitHub |  |
+| Sep 7 | 1 | Setting up GitHub pages and basic Markdown |  |
+| Sep 14 | 2 | Choosing a canned theme and HTML elements |  |
+| Sep 28 | 3 | Using remote themes and modifying the settings |  |
+| Oct 5 | 4 | Non-GitHub Pages sites stored on GitHub |  |
 
 
 ## Beginners Lessons - not offered in fall of 2021 
