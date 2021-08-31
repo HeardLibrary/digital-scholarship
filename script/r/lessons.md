@@ -34,11 +34,13 @@ Central Library room 800BB on October 6 ONLY.
 
 Please register using this Zoom registration link even if you plan to attend in-person. This will give you the opportunity to participate by Zoom if you can't make one of the live sessions. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJItd-CgrDMoE9M5guUCPfxagVl0QEl1QpnT)
 
+If you don't already have RStudio installed on your computer, I recommend starting with RStudio Cloud. It behaves exactly like RStudio desktop but does not require any installation. Create an account at <https://rstudio.cloud/> before the first lesson to save time.
+
 Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
 
 | Working session date | Lesson | Topic | Web pages |
 |---|---|---|---|
-| Sep 1 | 1 | Introduction, installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (10 min) Stop on the page after the `Installing Anaconda` section. |
+| Sep 1 | 1 | Introduction, installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (10 min) Stop on the page after the `Installing Anaconda` section. / [example script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/use_case_examples.R) |
 | Sep 8 | 2 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (50 min) |
 | Sep 15 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
 | Sep 22 | 4 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
