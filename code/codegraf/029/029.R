@@ -13,7 +13,7 @@ hist(resid)
 shapiro.test(resid)
 
 # test for homogeneity of variances
-plot(resid ~ ergDframe$color)
+plot(resid ~ as.factor(ergDframe$color))
 plot(model)
 
 bartlett.test(response ~ color, data = ergDframe)
@@ -30,7 +30,7 @@ resid_log <- residuals(model_log)
 hist(resid_log)
 shapiro.test(resid_log)
 
-plot(resid_log ~ ergDframe$color)
+plot(resid_log ~ as.factor(ergDframe$color))
 plot(model_log)
 
 bartlett.test(log ~ color, data = ergDframe)
