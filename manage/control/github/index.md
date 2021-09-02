@@ -40,7 +40,7 @@ Instructor (Steve Baskauf) [office hours information](https://www.library.vander
 
 | Working session date | Lesson | Topic | Lesson web pages |
 |---|---|---|---|
-| Sep 7 | 1 | Setting up GitHub pages and basic Markdown |  |
+| Sep 7 | 1 | Setting up GitHub pages and basic Markdown | [lesson webpage](pages/) |
 | Sep 14 | 2 | Choosing a canned theme and HTML elements |  |
 | Sep 28 | 3 | Using remote themes and modifying the settings |  |
 | Oct 5 | 4 | Non-GitHub Pages sites stored on GitHub |  |
@@ -83,4 +83,4 @@ DH class:
 [terms text](github_terms.pdf)
 
 ----
-Revised 2021-08-30
+Revised 2021-09-02
