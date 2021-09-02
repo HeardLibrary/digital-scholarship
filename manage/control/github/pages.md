@@ -127,7 +127,7 @@ Now if you look at GitHub Desktop again, you'll see the new `.gitignore` file yo
 
 <img src="../images-pages/ds_store_gone.png" style="border:1px solid black">
 
-Write a commit summary, then click `Commit to main`. 
+You can close the .gitignore tab in Atom since you won't need it any more. Write a commit summary, then click `Commit to main`. 
 
 <img src="../images-pages/ds_store_gone.png" style="border:1px solid black">
 
@@ -154,6 +154,51 @@ This is a very boring, vanilla website because we didn't select any theme. Howev
 The web page has been converted from Markdown to HTML for us. In this case, it just created an `<h1>` and a `<p>` element from the Markdown that we wrote in the source document. But it's easy to generate much more complex HTML from simple Markdown.
 
 ## Adding content to the web page
+
+Let's add a couple more elements to the page to make it better. If you don't know any Markdown, start by reviewing [some basic markup](https://heardlibrary.github.io/digital-scholarship/script/codegraf/017/#markdown-3m22s). I'm going to add some formatted text and a link to Wikipedia:
+
+```
+# A web page about star-nosed moles
+
+*Star nose moles* are one of the coolest creatures on the planet, so who wouldn't want to learn about them?
+
+You can read more about them by going to their [Wikipedia page](https://en.wikipedia.org/wiki/Star-nosed_mole).
+```
+
+We can see how this Markdown is rendered by looking at the Markdown preview.
+
+<img src="../images-pages/page_with_link.png" style="border:1px solid black">
+
+You can test that the link works by clicking on it in the preview. 
+
+Adding an image is very similar in format to adding a link. The main difference is that it's preceeded by an exclamation mark (`!`). The alt text goes in the square brackets and the direct link to the image goes in the parentheses. 
+
+[Wikimedia Commons](https://commons.wikimedia.org/) is a good place to look for images that can be freely used on your website. I searched for "star-nosed mole" and found a good picture: <https://commons.wikimedia.org/wiki/File:Condylura.jpg>. However, this URL is the URL to the web page about the picture, not the picture itself. To get the actual image URL, click the `Download` link above the picture, then click the link for the size of image you want. 
+
+<img src="../images-pages/commons_image_select.png" style="border:1px solid black">
+
+The image will open in a new tab.
+
+<img src="../images-pages/raw_image_url.png" style="border:1px solid black">
+
+The URL in the browser bar is the one you need to use to embed the image in your page. This image isn't under copyright, but I'll add an attribution link anyway, using the information provided in the popup Download dialog.
+
+Here's what the Markdown looks like for adding the image:
+
+```
+## Appearance
+
+Here's what a star-nosed mole looks like:
+
+![front view of a star-nosed mole](https://upload.wikimedia.org/wikipedia/commons/e/ef/Condylura.jpg)
+[US National Parks Service, Public domain, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Condylura.jpg)
+
+Isn't it adorable?!
+```
+
+The Markdown preview will give you a fairly good idea of what the page will look like and at least show you if you got the image URL right.
+
+<img src="../images-pages/final_page_rendered.png" style="border:1px solid black">
 
 
 
