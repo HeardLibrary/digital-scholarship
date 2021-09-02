@@ -52,7 +52,7 @@ The trick is to name the repository as the eventual subdomain name when the webs
 
 <https://github.com/baskaufs/baskaufs.github.io>
 
-If I want to go to the page that has the path [/civil-war/about.htm](https://github.com/baskaufs/baskaufs.github.io/blob/master/civil-war/about.htm) within that repository, I can simply use the URL <https://baskaufs.github.io/civil-war/about.htm>, that is, the subdomain followed directly by the path.
+If I want to go to the page within the repo that has the path [/civil-war/about.htm](https://github.com/baskaufs/baskaufs.github.io/blob/master/civil-war/about.htm) within that repository, I can simply use the URL <https://baskaufs.github.io/civil-war/about.htm>, that is, the subdomain name followed directly by the path.
 
 Since you can only have one repository named `account.github.io`, you can drop only drop the repository name for one website in the account.
 
@@ -75,7 +75,31 @@ Click on the `Settings` tab, then click on `Pages` in the left navigation menu.
 
 <img src="../images-pages/select_pages.png" style="border:1px solid black">
 
-### Setting up 
+### Setting up the source of the website
+
+Historically, there have been two typical ways to configure a GitHub Pages website: using the `docs` directory within the `main` branch, or using the root directory of a branch called `gh-pages`. You can use either method, but we recommend using the `docs` directory for a couple reasons. 
+
+One is that it does not require understanding anything about branches and how to switch between them. The other is that it allows you to simultaneously edit the website (within the `docs` directory) and other files in different directories of the default `main` branch. If you use the `gh-pages` branch for the website, you need to commit any changes to files before you switch between the `main` and `gh-pages` branches -- you can't work on files within and outside of the website at the same time. If your repository is only going to be used for a website, then it doesn't matter, but in some cases you might have data files, build scripts, etc. living in other parts of the repository outside of the 'docs' directory and the inability to edit them at the same time as the website can be annoying. 
+
+To use the `docs` directory of the `main` branch, do the following steps:
+
+Drop down the `Select branch` (defaulting to `None`) dropdown and select `main`.
+
+<img src="../images-pages/select_main.png" style="border:1px solid black">
+
+Drop down the `Select folder` (defaulting to `/(root)`) dropdown and select `docs`.
+
+<img src="../images-pages/select_docs.png" style="border:1px solid black">
+
+Then click the `Save` button. If successful, you should see a message saying that your website is ready to be published. For now, we will skip setting up the Theme Chooser and Custom domain. HTTPS is automatically enforced, so the URL will begin with `https://`.
+
+<img src="../images-pages/success.png" style="border:1px solid black">
+
+### Setting up the landing page for the website
+
+We are now ready to create the landing page for the website. In theory, you could do all of the editing using the online editor, but that would be annoying and not make use of the tools available with a good code editor. Making your edits locally and pushing them up to GitHub also lets you control when the changes become visible. You can edit the website using a number of commits and when it's the way you want, you can push them all to GitHub at once.
+
+Clone the new repository to your local drive. If you don't know how to do that, watch [this video](https://heardlibrary.github.io/digital-scholarship/script/codegraf/016/#cloning-a-repository-6m38s) and look at the accompanying screenshots.
 
 ## notes
 
