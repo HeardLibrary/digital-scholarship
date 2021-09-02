@@ -8,6 +8,8 @@ breadcrumb: Pages websites
 
 # Managing a website with GitHub Pages
 
+For further reference, read [GitHub's documentation about Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)
+
 ## The Big Picture
 
 ![relationships diagram](../images-pages/big_picture.png)
@@ -100,6 +102,60 @@ Then click the `Save` button. If successful, you should see a message saying tha
 We are now ready to create the landing page for the website. In theory, you could do all of the editing using the online editor, but that would be annoying and not make use of the tools available with a good code editor. Making your edits locally and pushing them up to GitHub also lets you control when the changes become visible. You can edit the website using a number of commits and when it's the way you want, you can push them all to GitHub at once.
 
 Clone the new repository to your local drive. If you don't know how to do that, watch [this video](https://heardlibrary.github.io/digital-scholarship/script/codegraf/016/#cloning-a-repository-6m38s) and look at the accompanying screenshots.
+
+Once you've cloned the repo, go to the repository folder and create a subfolder called `docs`. 
+
+<img src="../images-pages/create_docs_folder.png" style="border:1px solid black">
+
+Now open your code editor. We will use Atom since it's easy to use and has a Markdown preview. (To get rid of the `Project` pane at the left, go to the `View` menu and toggle `Toggle Tree View`.) Create a new file with a first level header line (`#` at the left margin), a blank line, and another line with text. Save the file as `index.md` in the `docs` folder you created. To see what the Markdown will look like when it's rendered, select `Markdown preview` and `Toggle preview` from the `Packages` menu.
+
+<img src="../images-pages/minimal_page_preview.png" style="border:1px solid black">
+
+If you look at the GitHub Desktop interface, you'll see the new page you created.
+
+<img src="../images-pages/desktop_index.png" style="border:1px solid black">
+
+If you are using a Mac, you may also see an annoying "invisible" file called `.DS_Store`. We don't really want our website mucked up with this file, so let's add it to a `.gitignore` file for the repository. Using your text editor, create a file in the root directory of the repository called `.gitignore` with a single line like this:
+
+```
+.DS_Store
+```
+
+<img src="../images-pages/edit_gitignore.png" style="border:1px solid black">
+
+Now if you look at GitHub Desktop again, you'll see the new `.gitignore` file you created, but the `.DS_Store` file is no longer visible since git is ignoring it.
+
+<img src="../images-pages/ds_store_gone.png" style="border:1px solid black">
+
+Write a commit summary, then click `Commit to main`. 
+
+<img src="../images-pages/ds_store_gone.png" style="border:1px solid black">
+
+If you click the `History` tab, you'll see your latest commit added to the history of the local repository. But the `1` by the `Push origin` tab shows that this commit has not yet been pushed to GitHub. 
+
+<img src="../images-pages/ready_to_push.png" style="border:1px solid black">
+
+Click the `Push origin` tab. 
+
+In the GitHub web interface, click the `Code` tab, then the `docs` folder, then the `index.md` file. You should immediately be able to see the rendered landing page Markdown file. 
+
+<img src="../images-pages/rendered_landing_page.png" style="border:1px solid black">
+
+To see the actual web page as converted by Jekyll, type the base URL for the website into your browser, using this form: `https://accountname.github.io/repository/`. In this example, it's `https://baskaufs.github.io/website/`.
+
+<img src="../images-pages/jekyll_landing_page.png" style="border:1px solid black">
+
+If you don't immediately see the web page, wait a minute and try again. Jekyll does not immediately render changes to GitHub pages websites -- sometimes there is a short delay. 
+
+This is a very boring, vanilla website because we didn't select any theme. However, if we right click the page and select `View page source`, we can see that Jekyll did do some "magic" for use. 
+
+<img src="../images-pages/view_page_source.png" style="border:1px solid black">
+
+The web page has been converted from Markdown to HTML for us. In this case, it just created an `<h1>` and a `<p>` element from the Markdown that we wrote in the source document. But it's easy to generate much more complex HTML from simple Markdown.
+
+## Adding content to the web page
+
+
 
 ## notes
 
