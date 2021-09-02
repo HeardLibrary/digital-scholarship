@@ -295,15 +295,5 @@ To link from the Virginia folklore to the Maine folklore page, use
 [folklore from Maine](../maine/)
 ```
 
-
-
-## notes
-
-[using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/) to render Jekyll pages offline.  The command to invoke is
-
-```
-bundle exec jekyll serve --watch --incremental
-```
-
 ----
 Revised 2021-09-02
