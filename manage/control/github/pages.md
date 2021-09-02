@@ -50,7 +50,7 @@ After Jekyll renders the website, it will have whatever styling has been applied
 
 **Note on case sensitivity:**
 
-Internet domains and subdomains are not case sensitive. Notice in the example above, the organizational account name is `HeardLibrary`. However, when that name is used as the subdomain, it can be in any case and still work, as in the URL above in all lower case. Thus, the URL <https://HeardLibrary.github.io/digital-scholarship/manage/control/github/projects/> will work, although it gets re-written in all lower case, (i.e. `heardlibrary`).
+Internet domains and subdomains are not case sensitive. Notice in the example above, the organizational account name is `HeardLibrary`. However, when that name is used as the subdomain, it can be in any case (upper or lower) and still work, as in the URL above in all lower case. Thus, the URL <https://HeardLibrary.github.io/digital-scholarship/manage/control/github/projects/> will work, although it gets re-written in all lower case, (i.e. `heardlibrary`).
 
 However, case sensitivity in parts of URLs after the domain name depends on the web server. The GitHub pages server IS case sensitive. So the URL <https://heardlibrary.github.io/Digital-Scholarship/manage/control/github/projects/> (with capitalization in the repository name) will NOT work.
 
@@ -143,7 +143,7 @@ Now if you look at GitHub Desktop again, you'll see the new `.gitignore` file yo
 
 You can close the .gitignore tab in Atom since you won't need it any more. Write a commit summary, then click `Commit to main`. 
 
-<img src="../images-pages/ds_store_gone.png" style="border:1px solid black">
+<img src="../images-pages/commit_landing_page.png" style="border:1px solid black">
 
 If you click the `History` tab, you'll see your latest commit added to the history of the local repository. But the `1` by the `Push origin` tab shows that this commit has not yet been pushed to GitHub. 
 
@@ -151,7 +151,7 @@ If you click the `History` tab, you'll see your latest commit added to the histo
 
 Click the `Push origin` tab. 
 
-In the GitHub web interface, click the `Code` tab, then the `docs` folder, then the `index.md` file. You should immediately be able to see the rendered landing page Markdown file. 
+In the GitHub web interface, click the `Code` tab, then the `docs` folder, then the `index.md` file. You should immediately be able to see the rendered landing page Markdown file (without styling). 
 
 <img src="../images-pages/rendered_landing_page.png" style="border:1px solid black">
 
@@ -161,11 +161,11 @@ To see the actual web page as converted by Jekyll, type the base URL for the web
 
 If you don't immediately see the web page, wait a minute and try again. Jekyll does not immediately render changes to GitHub pages websites -- sometimes there is a short delay. 
 
-This is a very boring, vanilla website because we didn't select any theme. However, if we right click the page and select `View page source`, we can see that Jekyll did do some "magic" for use. 
+This is a very boring, vanilla website because we didn't select any theme. However, if we right click the page and select `View page source`, we can see that Jekyll did do some "magic" for us. 
 
 <img src="../images-pages/view_page_source.png" style="border:1px solid black">
 
-The web page has been converted from Markdown to HTML for us. In this case, it just created an `<h1>` and a `<p>` element from the Markdown that we wrote in the source document. But it's easy to generate much more complex HTML from simple Markdown.
+The web page has been converted from Markdown to HTML. In this case, it just created an `<h1>` and a `<p>` element from the Markdown that we wrote in the source document. But it's easy to generate much more complex HTML from simple Markdown.
 
 ## Adding content to the web page
 
@@ -185,9 +185,7 @@ We can see how this Markdown is rendered by looking at the Markdown preview.
 
 You can test that the link works by clicking on it in the preview. 
 
-Adding an image is very similar in format to adding a link. The main difference is that it's preceeded by an exclamation mark (`!`). The alt text goes in the square brackets and the direct link to the image goes in the parentheses. 
-
-[Wikimedia Commons](https://commons.wikimedia.org/) is a good place to look for images that can be freely used on your website. I searched for "star-nosed mole" and found a good picture: <https://commons.wikimedia.org/wiki/File:Condylura.jpg>. However, this URL is the URL to the web page about the picture, not the picture itself. To get the actual image URL, click the `Download` link above the picture, then click the link for the size of image you want. 
+Let's add an image to make the page more interesting. [Wikimedia Commons](https://commons.wikimedia.org/) is a good place to look for images that can be freely used on your website. I searched for "star-nosed mole" and found a good picture: <https://commons.wikimedia.org/wiki/File:Condylura.jpg>. However, this URL is the URL to the web page about the picture, not the picture itself. To get the actual image URL, click the `Download` link above the picture, then click the link for the size of image you want. 
 
 <img src="../images-pages/commons_image_select.png" style="border:1px solid black">
 
@@ -195,7 +193,9 @@ The image will open in a new tab.
 
 <img src="../images-pages/raw_image_url.png" style="border:1px solid black">
 
-The URL in the browser bar is the one you need to use to embed the image in your page. This image isn't under copyright, but I'll add an attribution link anyway, using the information provided in the popup Download dialog.
+The URL in the browser bar is the one you need to use to embed the image in your page. The Markdown for adding an image is very similar in format to adding a link. The main difference is that it's preceeded by an exclamation mark (`!`). The alt text goes in the square brackets and the direct link to the image goes in the parentheses. 
+
+This image isn't under copyright, but I'll add an attribution link anyway, using the information provided in the popup Download dialog.
 
 Here's what the Markdown looks like for adding the image:
 
@@ -230,7 +230,7 @@ Child pages have URLs that extend via slashes (`/`) beyond the landing page URL.
 
 There are two methods for creating other pages below the landing page in the website hierarchy. I'll call them "named Markdown files" and "folder/index.md". 
 
-Your choice of method will depend primarily on your organizational style preferences and on whether you intend to have a complex page hierarchy represented in the site URLs. 
+Your choice of method will depend primarily on your organizational style preferences and on whether you intend to have a more complex page hierarchy represented in the site URLs. 
 
 **named Markdown files method**
 
@@ -245,7 +245,7 @@ https://baskaufs.github.io/website/habits/
 https://baskaufs.github.io/website/folklore/
 ```
 
-As you can see, the filename in front of `.md` is appended to the landing page URL. 
+As you can see, the filename in front of `.md` is appended to the landing page URL and followed by a slash. 
 
 **folder/index.md method**
 
@@ -253,7 +253,7 @@ The alternate method is to create a subfolder for each child page, called `habit
 
 <img src="../images-pages/folder_index_md.png" style="border:1px solid black">
 
-If you never want to have a structure that's more nested than one level below the landing page, either method is equally good. 
+If you never want to have a website structure that's more nested than one child level below the landing page, either method is equally good. 
 
 **Deeply nested child pages**
 
@@ -268,7 +268,7 @@ then you would need to create a `folklore` folder with an `index.md` file within
 
 ### Linking between parent, child, and sibling pages
 
-When creating linkes between pages on the site, it's best to use relative links. That makes the website more portable. Here's how to set up relative links between child pages, their parent pages, and sibling pages in the same level of the hierarchy. Note: the links are based on the URLs and are independent of the method used to actually create the pages.
+When creating links between pages on the site, it's best to use relative links. That makes the website more portable. Here's how to set up relative links between sibling pages in the same level of the hierarchy, child pages, and their parent pages. Note: the links are based only on the URL structure and are independent of the method used to actually create the pages.
 
 **linking to child pages**
 
