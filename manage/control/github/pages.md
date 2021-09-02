@@ -200,7 +200,13 @@ The Markdown preview will give you a fairly good idea of what the page will look
 
 <img src="../images-pages/final_page_rendered.png" style="border:1px solid black">
 
+Save the edited Markdown, then go to GitHub desktop, add a commit message, commit, and push the changes to GitHub.
 
+After waiting a few moments for Jekyll to re-render the page, go to the landing page tab and refresh the page. If the changes don't show up for a long time, make sure that you actually saved the file in Atom, that the commit with the changes shows up in the commit history, and that there isn't any little `1` in the `Fetch/Push origin` tab. 
+
+<img src="../images-pages/final_jekyll_page.png" style="border:1px solid black">
+
+There is still some room for improvement, but we'll work on that later.
 
 ## notes
 
