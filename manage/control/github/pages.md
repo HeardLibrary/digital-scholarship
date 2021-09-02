@@ -8,6 +8,8 @@ breadcrumb: Pages websites
 
 # Managing a website with GitHub Pages
 
+GitHub Pages is a system for creating free, non-commercial websites using GitHub. It's a static site generator, meaning that the content of every page is created manually (vs. dynamic sites where pages are generated from a database or based on user input).
+
 For further reference, read [GitHub's documentation about Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)
 
 ## The Big Picture
@@ -207,6 +209,93 @@ After waiting a few moments for Jekyll to re-render the page, go to the landing 
 <img src="../images-pages/final_jekyll_page.png" style="border:1px solid black">
 
 There is still some room for improvement, but we'll work on that later.
+
+## Subpages
+
+Subpages have URLs that extend via slashes (`/`) beyond the landing page URL.
+
+### Creating child pages
+
+There are two methods for creating other pages below the landing page in the website hierarchy. I'll call them "named Markdown files" and "folder/index.md". 
+
+Your choice of method will depend primarily on your organizational style preferences and on whether you intend to have a complex page hierarchy represented in the site URLs. 
+
+**named Markdown files method**
+
+Let's say that I want to have two child pages of the landing page called `habits` and `folklore`. Using the "named Markdown files" option, I would just create two Markdown files within the `docs` folder called `habits.md` and `folklore.md`. 
+
+<img src="../images-pages/named_markdown.png" style="border:1px solid black">
+
+When rendered by Jekyll, these pages would have the URLs
+
+```
+https://baskaufs.github.io/website/habits/
+https://baskaufs.github.io/website/folklore/
+```
+
+As you can see, the filename in front of `.md` is appended to the landing page URL. 
+
+**folder/index.md method**
+
+The alternate method is to create a subfolder for each child page, called `habits` and `folklore` respectively, and within each of those subfolders, create a Markdown file called `index.md`. 
+
+<img src="../images-pages/folder_index_md.png" style="border:1px solid black">
+
+If you never want to have a structure that's more nested than one level below the landing page, either method is equally good. 
+
+**Deeply nested child pages**
+
+However, if you wanted to have some lower level pages like
+
+```
+https://baskaufs.github.io/website/folklore/virginia/
+https://baskaufs.github.io/website/folklore/maine/
+```
+
+then you would need to create a `folklore` folder with an `index.md` file within it to handle the page `https://baskaufs.github.io/website/folklore/`, then place either named Markdown files for `virginia.md` and `maine.md` within the `folklore` folder, or create `virginia` and `main` subfolders of `folklore` and put an `index.md` file in each of them.
+
+### Linking between parent, child, and sibling pages
+
+When creating linkes between pages on the site, it's best to use relative links. That makes the website more portable. Here's how to set up relative links between child pages, their parent pages, and sibling pages in the same level of the hierarchy. Note: the links are based on the URLs and are independent of the method used to actually create the pages.
+
+**linking to child pages**
+
+In the parentheses for the hyperlink, place the name of the child page, followed by a slash. For example, to link from the landing page to the `folklore` page, use
+
+```
+[learn about folklore](folklore/)
+```
+
+To link from the `folklore` page to the `virginia` page, use
+
+```
+[folk stories from Virginia](virginia/)
+
+**Linking to parent pages**
+
+In the parentheses for the hyperlink, use the relative path for a parent element (`..`) followed by a slash. For example, to link from the folklore page to the landing page, use
+
+```
+[back to the landing page](../)
+```
+
+The link from the Virginia folklore page up to the general folklore page would be similar.
+
+**Linking to sibling pages**
+
+To link from one page to another page at the same level below the same page, use the parent element path as in the previous example, followed by the name of the sibling page followed by a slash. For example, to link from the `folklore` page to the `habits` page, use
+
+```
+[habits of the mole](../habits/)
+```
+
+To link from the Virginia folklore to the Maine folklore page, use
+
+```
+[folklore from Maine](../maine/)
+```
+
+
 
 ## notes
 
