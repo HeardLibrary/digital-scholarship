@@ -76,11 +76,27 @@ The following pages provide information for developing basic skills with GitHub.
 
 [Managing a website with GitHub Pages](pages/)
 
-DH class:
+**DH class:**
+
+Session 1
 
 [terms and diagrams presentation](git_terms_diagrams_pages.pdf)
 
 [terms text](github_terms.pdf)
 
+[Setup a GitHub repo](https://heardlibrary.github.io/digital-scholarship/script/codegraf/016/)
+
+[More info on commits, Markdown](https://heardlibrary.github.io/digital-scholarship/script/codegraf/017/) (review after class)
+
+Session 2
+
+[GitHub Pages intro](pages/) through "Setting up the landing page". Look at the rest if you are intersted in learning more about setting up a website.
+
+[Publishing Twine to GitHub Pages](https://heardlibrary.github.io/digital-scholarship/script/twine/github/)
+
+Invite collaborators to share a repo.
+
+[Using GitHub to manage projects](https://heardlibrary.github.io/digital-scholarship/manage/control/github/projects/)
+
 ----
-Revised 2021-09-02
+Revised 2021-09-03
