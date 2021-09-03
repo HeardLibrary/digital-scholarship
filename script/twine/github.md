@@ -16,6 +16,8 @@ Replace the story name with `index.html` and save in the root directory of your 
 
 In GitHub Desktop, you should see the new HTML file added to your website repository. Write a commit message and commit. Then click on the `Fetch origin` tab twice to push the commit to GitHub.
 
+<img src="../commit.png" style="border:1px solid black">
+
 Enter the URL of the landing page for your GitHub pages website and press `Enter`. The twine story should be loaded into the browser.
 
 <img src="../web_homepage.png" style="border:1px solid black">
