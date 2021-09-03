@@ -8,7 +8,7 @@ breadcrumb: GitHub Pages
 
 From within Twine, click on the popup menu by the story name and select `Publish to File`
 
-<img src="publish.png" style="border:1px solid black">
+<img src="../publish.png" style="border:1px solid black">
 
 
 
