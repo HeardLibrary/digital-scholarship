@@ -37,7 +37,7 @@ human_data <- read.csv("https://gist.githubusercontent.com/baskaufs/1a7a995c1b25
 str(human_data) 
 # Notice that characters were read in as factors (normal for generic dataframes but not tibbles)
 
-plot(human_data$height ~ human_data$grouping)
+plot(human_data$height ~ as.factor(human_data$grouping))
 
 # ggplot typically uses tibbles, but doesn't seem to have a problem with a generic data frame
 ggplot(data = human_data) +
