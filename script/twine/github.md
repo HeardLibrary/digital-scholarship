@@ -10,6 +10,9 @@ From within Twine, click on the popup menu by the story name and select `Publish
 
 <img src="../publish.png" style="border:1px solid black">
 
+Replace the story name with `index.html`
+
+<img src="../save_as.png" style="border:1px solid black">
 
 
 ----
