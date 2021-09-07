@@ -34,7 +34,7 @@ The lessons will be held in-person although remote participation via Zoom is wel
 
 Please register using this Zoom registration link even if you plan to attend in-person. This will give you the opportunity to participate by Zoom if you can't make one of the live sessions. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJcuc-yhqz0uEtKkT5itfx22TC9AY9LX1OIV)
 
-Prior to the first lesson, you should sign up for a [GitHub account](https://github.com/) if you don't already have one, and download the [GitHub Desktop software](https://desktop.github.com/) for your computer. 
+Prior to the first lesson, you should sign up for a [GitHub account](https://github.com/) if you don't already have one, and download the [GitHub Desktop software](https://desktop.github.com/) for your computer. You also need a text or code editor to use. I recommend [Atom](https://atom.io/) because of its Markdown preview, but it's fine to use a different one if you prefer.
 
 Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
 
