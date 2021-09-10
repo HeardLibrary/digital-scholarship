@@ -1,15 +1,14 @@
 # !!! Run once if you haven't already installed:
 install.packages("svglite") # adds SVG support to ggtext
 install.packages("openxlsx")
-# install.packages("ggtext")
+install.packages("ggtext")
 
 # For detailed information on color scales and legends, see
 # https://ggplot2-book.org/scale-colour.html
 
 # Run every time
 library(tidyverse)
-library(magrittr)
-library(openxlsx)
+library(magrittr) # enable piping
 
 schools_data <- read_csv("https://github.com/HeardLibrary/digital-scholarship/raw/master/data/gis/wg/Metro_Nashville_Schools.csv")
 
