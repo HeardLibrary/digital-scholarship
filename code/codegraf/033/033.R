@@ -43,7 +43,7 @@ ggplot(data = rel_data, mapping = aes(x = limited_proficiency, y = economically_
   geom_point(aes(color = as.factor(`School Level`))) + # not required to convert to factor if character
   geom_smooth(method = "lm", color = "black")
 
-# setting a colorblind-friendly palatte from http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/
+# setting an accessible palatte for color vision deficiency from http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/
 cbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "#999999")
 # To use for fills, add
 # scale_fill_manual(values=cbPalette)
@@ -66,7 +66,7 @@ ggplot(data = three_level, mapping = aes(x = limited_proficiency, y = economical
 ggplot(data = three_level, mapping = aes(x = limited_proficiency, y = economically_disadvantaged)) +
   geom_point(aes(color = percent_white))
 
-# Setting color based on magnitude, specify rainbo colors as a gradient
+# Setting color based on magnitude, specify rainbow colors as a gradient
 ggplot(data = three_level, mapping = aes(x = limited_proficiency, y = economically_disadvantaged)) +
   geom_point(aes(color = percent_white)) +
   scale_colour_gradientn(colours=rainbow(4)) # the number controls the number of colors included
@@ -299,7 +299,7 @@ ggplot(data = three_level) +
   )
 
 # ---------------
-# Saving plots for publications or presentations
+# Exporting plots for publications or presentations
 # ---------------
 
 library(ggtext)
