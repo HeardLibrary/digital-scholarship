@@ -128,7 +128,25 @@ which renders like this:
 
 <img src="../images-pages/screenshot.png" alt="screenshot from Wikipedia" style="border:1px solid black">
 
+**Tables**
 
+GitHub flavored Markdown can be use to construct tables. For example: 
+
+```
+First Header | Second Header
+------------ | -------------
+Content cell 1 | Content cell 2
+Content column 1 | Content column 2
+```
+
+Renders like this:
+
+First Header | Second Header
+------------ | -------------
+Content cell 1 | Content cell 2
+Content column 1 | Content column 2
+
+However, if you don't want the default formatting with lines around the cells, you can use HTML instead.
 
 
 ----
