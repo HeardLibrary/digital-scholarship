@@ -307,6 +307,7 @@ To link from the Virginia folklore to the Maine folklore page, use
 ```
 [folklore from Maine](../maine/)
 ```
+[next page: Using themes and HTML markup with GitHub Pages](../pages-themes/)
 
 ----
-Revised 2021-09-02
+Revised 2021-09-13
