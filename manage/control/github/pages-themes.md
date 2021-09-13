@@ -17,7 +17,7 @@ For that reason, Jekyll will support including HTML tags in the text of pages. I
 If you need superscripts in the page text, you can use the carat (`^`) character. It's supported in GitHub-flavored Markdown, but isn't part of basic Markdown. So the give the area of a circle, you can use
 
 ```
-A = pi * r^2^
+A = pi * r ^2^
 ```
 
 which will be rendered as 
