@@ -34,7 +34,9 @@ water is H<sub>2</sub>O
 
 A = pi * r<sup>2</sup> 
 
-In the last lesson, we saw that the Markdown that we used for the image caption didn't turn out well. Since text on adjacent lines (without an intervening newline) are mushed together, this markup:
+**Newlines (line breaks)**
+
+In the last lesson, we saw that the Markdown that we used for the image credit didn't turn out well. Since text on adjacent lines (without an intervening newline) are mushed together, this markup:
 
 ```
 ![front view of a star-nosed mole](https://upload.wikimedia.org/wikipedia/commons/e/ef/Condylura.jpg)
@@ -58,7 +60,22 @@ rendered like this:
 ![front view of a star-nosed mole](https://upload.wikimedia.org/wikipedia/commons/e/ef/Condylura.jpg)<br/>
 [US National Parks Service, Public domain, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Condylura.jpg)
 
+You could also force a newline by putting a blank line between the image and the credit line, but usually we want the credit to be small and right under the image.
+
 (It's also possible to force a newline at the end of the line by putting two trailing spaces at the end of a line, but one of the principles of Markdown is that you should easily be able to look at the raw text and know what's going on. So that's why putting an explicit break tag is probably better.)
+
+As we've marked this up now, the credit line is normal text. If we want it to be smaller, we can use the HTML tag `<small>`. That would change the markup to this:
+
+```
+![front view of a star-nosed mole](https://upload.wikimedia.org/wikipedia/commons/e/ef/Condylura.jpg)<br/>
+<small>[US National Parks Service, Public domain, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Condylura.jpg)</small>
+```
+
+rendered like this:
+
+![front view of a star-nosed mole](https://upload.wikimedia.org/wikipedia/commons/e/ef/Condylura.jpg)<br/>
+<small>[US National Parks Service, Public domain, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Condylura.jpg)</small>
+
 
 <img src="../images-pages/new_repo.png" style="border:1px solid black">
 
