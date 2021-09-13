@@ -76,8 +76,58 @@ rendered like this:
 ![front view of a star-nosed mole](https://upload.wikimedia.org/wikipedia/commons/e/ef/Condylura.jpg)<br/>
 <small>[US National Parks Service, Public domain, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Condylura.jpg)</small>
 
+A better approach would probably be to apply a style for credit lines using CSS, but that's too advanced for this lesson.
 
-<img src="../images-pages/new_repo.png" style="border:1px solid black">
+There are many places online to find HTML tags. the [W3 Schools HTML tutorial](https://www.w3schools.com/html/) is nice because it's "Try it Yourself" editor lets you see the results of your markup.
+
+## HTML markup to customize features available in Markdown
+
+Sometimes Markdown has markup for the page feature you want, but it doesn't work the way you want. 
+
+**Hyperlinks**
+
+For example, when we wanted to add a link, we used Markdown's link syntax like this:
+
+```
+You can read more about them by going to their [Wikipedia page](https://en.wikipedia.org/wiki/Star-nosed_mole).
+```
+
+rendered like this:
+
+You can read more about them by going to their [Wikipedia page](https://en.wikipedia.org/wiki/Star-nosed_mole).
+
+However, it can be annoying if a link leads you away from the page you are reading. If you want the link to open in a new tab, you need to use HTML to create the link using an anchor (<a>) element with a `target` attribute, like this:
+
+```
+You can read more about them by going to their <a href="https://en.wikipedia.org/wiki/Star-nosed_mole" target="_blank">Wikipedia page</a>.
+```
+
+rendered like this:
+
+You can read more about them by going to their <a href="https://en.wikipedia.org/wiki/Star-nosed_mole" target="_blank">Wikipedia page</a>.
+
+**Images**
+
+If we want to insert an image, we can use the Markdown markup for images like this:
+
+```
+![screenshot from Wikipedia](../images-pages/screenshot.png)
+```
+
+which renders like this:
+
+![screenshot from Wikipedia](../images-pages/screenshot.png)
+
+However, for images like screenshots, it can be confusing if the image isn't outlined. To add a black line around the image, we can use HTML markup:
+
+```
+<img src="../images-pages/screenshot.png" alt="screenshot from Wikipedia" style="border:1px solid black">
+```
+
+which renders like this:
+
+<img src="../images-pages/screenshot.png" alt="screenshot from Wikipedia" style="border:1px solid black">
+
 
 
 
