@@ -162,8 +162,8 @@ which renders like this
 
 <table style="border: none; max-width:100%;">
 <tr><th>First Header</th><th>Second Header</th></tr>
-<tr><td>Content cell 1</td><td>Content cell 2</td></tr>
-<tr><td>Content column 1</td><td>Content column 2</td></tr>
+<tr style="border: none;"><td style="border: none;">Content cell 1</td><td style="border: none;">Content cell 2</td></tr>
+<tr style="border: none;"><td style="border: none;">Content column 1</td><td style="border: none;">Content column 2</td></tr>
 </table>
 
 
