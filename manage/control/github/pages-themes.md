@@ -151,7 +151,7 @@ Content column 1 | Content column 2
 However, if you don't want the default formatting with lines around the cells, you can use HTML instead.
 
 ```
-<table>
+<table border="0">
 <tr><th>First Header</th><th>Second Header</th></tr>
 <tr><td>Content cell 1</td><td>Content cell 2</td></tr>
 <tr><td>Content column 1</td><td>Content column 2</td></tr>
@@ -160,7 +160,7 @@ However, if you don't want the default formatting with lines around the cells, y
 
 which renders like this
 
-<table>
+<table border="0">
 <tr><th>First Header</th><th>Second Header</th></tr>
 <tr><td>Content cell 1</td><td>Content cell 2</td></tr>
 <tr><td>Content column 1</td><td>Content column 2</td></tr>
