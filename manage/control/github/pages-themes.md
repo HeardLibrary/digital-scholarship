@@ -158,10 +158,10 @@ However, if you don't want the default formatting with lines around the cells, y
 </table>
 ```
 
-which renders like this x
+which renders like this
 
 <table style="border: none; max-width:100%;">
-<tr><th>First Header</th><th>Second Header</th></tr>
+<tr style="border: none;"><th style="border: none;">First Header</th><th style="border: none;">Second Header</th></tr>
 <tr style="border: none;"><td style="border: none;">Content cell 1</td><td style="border: none;">Content cell 2</td></tr>
 <tr style="border: none;"><td style="border: none;">Content column 1</td><td style="border: none;">Content column 2</td></tr>
 </table>
