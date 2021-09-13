@@ -78,7 +78,7 @@ rendered like this:
 
 A better approach would probably be to apply a style for credit lines using CSS, but that's too advanced for this lesson.
 
-There are many places online to find HTML tags. the [W3 Schools HTML tutorial](https://www.w3schools.com/html/) is nice because it's "Try it Yourself" editor lets you see the results of your markup.
+There are many places online to find HTML tags. the [W3 Schools HTML tutorial](https://www.w3schools.com/html/) is nice because its "Try it Yourself" editor lets you see the results of your markup.
 
 ## HTML markup to customize features available in Markdown
 
@@ -96,7 +96,7 @@ rendered like this:
 
 You can read more about them by going to their [Wikipedia page](https://en.wikipedia.org/wiki/Star-nosed_mole).
 
-However, it can be annoying if a link leads you away from the page you are reading. If you want the link to open in a new tab, you need to use HTML to create the link using an anchor (<a>) element with a `target` attribute, like this:
+However, it can be annoying if a link leads you away from the page you are reading. If you want the link to open in a new tab, you need to use HTML to create the link using an anchor (`<a>`) element with a `target` attribute, like this:
 
 ```
 You can read more about them by going to their <a href="https://en.wikipedia.org/wiki/Star-nosed_mole" target="_blank">Wikipedia page</a>.
@@ -105,6 +105,8 @@ You can read more about them by going to their <a href="https://en.wikipedia.org
 rendered like this:
 
 You can read more about them by going to their <a href="https://en.wikipedia.org/wiki/Star-nosed_mole" target="_blank">Wikipedia page</a>.
+
+and makes it more apparent where the screenshot begins and ends.
 
 **Images**
 
@@ -147,6 +149,23 @@ Content cell 1 | Content cell 2
 Content column 1 | Content column 2
 
 However, if you don't want the default formatting with lines around the cells, you can use HTML instead.
+
+```
+<table>
+<tr><th>First Header</th><th>Second Header</th></tr>
+<tr><td>Content cell 1</td><td>Content cell 2</td></tr>
+<tr><td>Content column 1</td><td>Content column 2</td></tr>
+</table>
+```
+
+which renders like this
+
+<table>
+<tr><th>First Header</th><th>Second Header</th></tr>
+<tr><td>Content cell 1</td><td>Content cell 2</td></tr>
+<tr><td>Content column 1</td><td>Content column 2</td></tr>
+</table>
+
 
 
 ----
