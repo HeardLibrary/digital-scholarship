@@ -17,12 +17,12 @@ For that reason, Jekyll will support including HTML tags in the text of pages. I
 If you need superscripts in the page text, you can use the carat (`^`) character. It's supported in GitHub-flavored Markdown, but isn't part of basic Markdown. So the give the area of a circle, you can use
 
 ```
-A = pi * r^2
+A = pi * r^2^
 ```
 
 which will be rendered as 
 
-A = pi * r^2
+A = pi * r^2^
 
 However, there is no Markdown markup for subscript. So if you want to give the formula of water, you have to use the HTML tags like this:
 
@@ -34,6 +34,9 @@ which will be rendered as
 
 water is H<sub>2</sub>O
 
+The HTML superscript tag can be used instead of the carat: `A = pi * r<sup>2</sup>` renders as 
+
+A = pi * r<sup>2</sup> 
 
 
 <img src="../images-pages/new_repo.png" style="border:1px solid black">
