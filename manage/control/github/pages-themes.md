@@ -14,30 +14,51 @@ For that reason, Jekyll will support including HTML tags in the text of pages. I
 
 ## HTML markup not available in Markdown
 
-If you need superscripts in the page text, you can use the carat (`^`) character. It's supported in GitHub-flavored Markdown, but isn't part of basic Markdown. So the give the area of a circle, you can use
+If you need superscripts in the page text, in some versions you can use the carat (`^`) character. So the give the area of a circle, you would use
 
 ```
-A = pi * r ^2^
+A = pi * r ^2
 ```
 
-which will be rendered as 
-
-A = pi * r^2^
-
-However, there is no Markdown markup for subscript. So if you want to give the formula of water, you have to use the HTML tags like this:
+However, carat is not supported in GitHub-flavored Markdown and there is no Markdown markup for subscript. So if you want to write the area of a circle or give the formula of water, you have to use the HTML tags like this:
 
 ```
+A = pi * r<sup>2</sup>
+
 water is H<sub>2</sub>O
 ```
 
 which will be rendered as 
 
-water is H<sub>2</sub>O
-
-The HTML superscript tag can be used instead of the carat: `A = pi * r<sup>2</sup>` renders as 
+water is H<sub>2</sub>O 
 
 A = pi * r<sup>2</sup> 
 
+In the last lesson, we saw that the Markdown that we used for the image caption didn't turn out well. Since text on adjacent lines (without an intervening newline) are mushed together, this markup:
+
+```
+![front view of a star-nosed mole](https://upload.wikimedia.org/wikipedia/commons/e/ef/Condylura.jpg)
+[US National Parks Service, Public domain, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Condylura.jpg)
+```
+
+rendered like this:
+
+![front view of a star-nosed mole](https://upload.wikimedia.org/wikipedia/commons/e/ef/Condylura.jpg)
+[US National Parks Service, Public domain, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Condylura.jpg)
+
+A simple solution to this problem is to follow the end of the line where you want the newline to occur with an HTML `<br/>` tag, like this:
+
+```
+![front view of a star-nosed mole](https://upload.wikimedia.org/wikipedia/commons/e/ef/Condylura.jpg)<br/>
+[US National Parks Service, Public domain, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Condylura.jpg)
+```
+
+rendered like this:
+
+![front view of a star-nosed mole](https://upload.wikimedia.org/wikipedia/commons/e/ef/Condylura.jpg)<br/>
+[US National Parks Service, Public domain, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Condylura.jpg)
+
+(It's also possible to force a newline at the end of the line by putting two trailing spaces at the end of a line, but one of the principles of Markdown is that you should easily be able to look at the raw text and know what's going on. So that's why putting an explicit break tag is probably better.)
 
 <img src="../images-pages/new_repo.png" style="border:1px solid black">
 
