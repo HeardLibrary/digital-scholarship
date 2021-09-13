@@ -158,7 +158,7 @@ However, if you don't want the default formatting with lines around the cells, y
 </table>
 ```
 
-which renders like this
+which renders like this x
 
 <table style="border: none; max-width:100%;">
 <tr><th>First Header</th><th>Second Header</th></tr>
