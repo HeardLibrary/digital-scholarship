@@ -14,13 +14,13 @@ For that reason, Jekyll will support including HTML tags in the text of pages. I
 
 ## HTML markup not available in Markdown
 
-If you need superscripts in the page text, in some versions you can use the carat (`^`) character. So the give the area of a circle, you would use
+If you need superscripts in the page text, in some versions of Markdown you can use the carat (`^`) character. So the give the area of a circle, you would use
 
 ```
 A = pi * r^2
 ```
 
-However, carat is not supported in GitHub-flavored Markdown and there is no Markdown markup for subscript. So if you want to write the area of a circle or give the formula of water, you have to use the HTML tags like this:
+However, carat for superscripts is not supported in GitHub-flavored Markdown and there is no Markdown markup at all for subscript. So if you want to write the area of a circle or give the formula of water, you have to use the HTML tags like this:
 
 ```
 A = pi * r<sup>2</sup>
@@ -30,9 +30,9 @@ water is H<sub>2</sub>O
 
 which will be rendered as 
 
-water is H<sub>2</sub>O 
-
 A = pi * r<sup>2</sup> 
+
+water is H<sub>2</sub>O 
 
 **Newlines (line breaks)**
 
@@ -43,7 +43,7 @@ In the last lesson, we saw that the Markdown that we used for the image credit d
 [US National Parks Service, Public domain, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Condylura.jpg)
 ```
 
-rendered like this:
+was rendered like this with the caption to the right of the image:
 
 ![front view of a star-nosed mole](https://upload.wikimedia.org/wikipedia/commons/e/ef/Condylura.jpg)
 [US National Parks Service, Public domain, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Condylura.jpg)
@@ -55,14 +55,14 @@ A simple solution to this problem is to follow the end of the line where you wan
 [US National Parks Service, Public domain, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Condylura.jpg)
 ```
 
-rendered like this:
+which will be rendered like this:
 
 ![front view of a star-nosed mole](https://upload.wikimedia.org/wikipedia/commons/e/ef/Condylura.jpg)<br/>
 [US National Parks Service, Public domain, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Condylura.jpg)
 
-You could also force a newline by putting a blank line between the image and the credit line, but usually we want the credit to be small and right under the image.
+You could also force a newline by putting a blank line between the image and the credit line, but usually we want the credit to be small and right under the image, and inserting an extra line will make a space between the image and the credit line.
 
-(It's also possible to force a newline at the end of the line by putting two trailing spaces at the end of a line, but one of the principles of Markdown is that you should easily be able to look at the raw text and know what's going on. So that's why putting an explicit break tag is probably better.)
+(It's also possible to force a newline at the end of the line by putting two trailing spaces at the end of a line, but one of the principles of Markdown is that you should easily be able to look at the raw text and know what's going on. Two trailing spaces are basically invisible. So that's why putting an explicit break tag is probably better.)
 
 As we've marked this up now, the credit line is normal text. If we want it to be smaller, we can use the HTML tag `<small>`. That would change the markup to this:
 
@@ -82,7 +82,7 @@ There are many places online to find HTML tags. the [W3 Schools HTML tutorial](h
 
 ## HTML markup to customize features available in Markdown
 
-Sometimes Markdown has markup for the page feature you want, but it doesn't work the way you want. 
+Sometimes Markdown has markup for the page feature you want, but it doesn't look or work the way you want. 
 
 **Hyperlinks**
 
@@ -92,31 +92,31 @@ For example, when we wanted to add a link, we used Markdown's link syntax like t
 You can read more about them by going to their [Wikipedia page](https://en.wikipedia.org/wiki/Star-nosed_mole).
 ```
 
-rendered like this:
+which will be rendered like this:
 
 You can read more about them by going to their [Wikipedia page](https://en.wikipedia.org/wiki/Star-nosed_mole).
 
-However, it can be annoying if a link leads you away from the page you are reading. If you want the link to open in a new tab, you need to use HTML to create the link using an anchor (`<a>`) element with a `target` attribute, like this:
+However, it can be annoying if a link leads you away from the page you are reading. (Try clicking on the link to see what happens.) If you want the link to open in a new tab, you need to use HTML to create the link using an anchor (`<a>`) element with a `target` attribute, like this:
 
 ```
 You can read more about them by going to their <a href="https://en.wikipedia.org/wiki/Star-nosed_mole" target="_blank">Wikipedia page</a>.
 ```
 
-rendered like this:
+which will be rendered like this:
 
 You can read more about them by going to their <a href="https://en.wikipedia.org/wiki/Star-nosed_mole" target="_blank">Wikipedia page</a>.
 
-and makes it more apparent where the screenshot begins and ends.
+If you click on the link above, you'll see that the link now opens in a new tab.
 
 **Images**
 
-If we want to insert an image, we can use the Markdown markup for images like this:
+If we want to insert an image, we can use the Markdown markup for images, which looks like this:
 
 ```
 ![screenshot from Wikipedia](../images-pages/screenshot.png)
 ```
 
-which renders like this:
+and renders like this:
 
 ![screenshot from Wikipedia](../images-pages/screenshot.png)
 
@@ -126,9 +126,12 @@ However, for images like screenshots, it can be confusing if the image isn't out
 <img src="../images-pages/screenshot.png" alt="screenshot from Wikipedia" style="border:1px solid black">
 ```
 
-which renders like this:
+which renders like this
 
 <img src="../images-pages/screenshot.png" alt="screenshot from Wikipedia" style="border:1px solid black">
+
+and makes it more apparent where the screenshot begins and ends.
+
 
 **Tables**
 
@@ -152,6 +155,8 @@ However, if you don't want the default formatting with lines around the cells, y
 
 NOTE: some aspects of tables, such as their default width, may be set by the CSS of the theme that's styling the page. For example, the CSS for the page theme on this website sets table widths to 100% of the page width, which is how it appears above. That won't be the case if you use the same code in an unstyled web page.
 
+Here's how to make a table using HTML tags:
+
 ```
 <table style="border: none; width: unset">
 <tr style="border: none;"><th style="border: none;">First Header</th><th style="border: none;">Second Header</th></tr>
@@ -160,7 +165,7 @@ NOTE: some aspects of tables, such as their default width, may be set by the CSS
 </table>
 ```
 
-which renders like this
+The table renders like this
 
 <table style="border: none; width: unset">
 <tr style="border: none;"><th style="border: none;">First Header</th><th style="border: none;">Second Header</th></tr>
@@ -168,9 +173,9 @@ which renders like this
 <tr style="border: none;"><td style="border: none;">Content column 1</td><td style="border: none;">Content column 2</td></tr>
 </table>
 
-In the style for the table element, I unset the width to remove the width setting set by the theme CSS.
+In the style for the table element, I unset the width to override the width setting set by the theme CSS.
 
-Although it is not a best practice for accessibility, borderless tables can be used to organize content on the page. Here's an example:
+Although it is not a best practice for accessibility, borderless tables like the one above can be used to organize content on the page. Here's an example:
 
 ```
 <table style="border: none; width: unset">
@@ -188,7 +193,7 @@ Although it is not a best practice for accessibility, borderless tables can be u
 </table>
 ```
 
-Rendered:
+Notice that it doesn't matter whether I put the tags on the same line or different lines. As rendered, it looks like this:
 
 <table style="border: none; width: unset">
 
@@ -204,7 +209,7 @@ Rendered:
 
 </table>
 
-Notice that when I put the images inside the table, I had to use HTML markup to display the image, not the Markdown markup.
+Notice that when I put the images inside the table, I had to use HTML markup to display the image, not the Markdown markup for displaying images.
 
 # Using a canned page theme
 
@@ -226,11 +231,11 @@ Here it is with the Architect theme:
 
 <img src="../images-pages/architect_theme.png" alt="Architect theme homepage" style="border:1px solid black">
 
-Since the page styling is all handled by the theme, it is very simple to just go back into the theme chooser and pick another one. Here's the page with the Merlot theme:
+Since the page styling is all handled by the theme, it is very simple to just go back into the theme chooser and pick another one. Here's the same page with the Merlot theme:
 
 <img src="../images-pages/merlot_theme.png" alt="Merlot theme homepage" style="border:1px solid black">
 
-If we examine the commit history, we see that selecting or changing the theme resulted in a commit that added or changed a file within the `docs` folder: `_config.yml`.
+If we examine the commit history, we see that selecting or changing the theme resulted in a commit that added or changed a file within the `docs` folder called `_config.yml`.
 
 <img src="../images-pages/add_config_yml.png" alt="config commit" style="border:1px solid black">
 
@@ -238,13 +243,13 @@ The theme and other configuration settings are controlled by this file.
 
 ## Editing site settings in _config.yml
 
-Since it is just a text file, you can edit it and [change the theme without going to the settings page](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll). The format of the settings page is [YAML](https://yaml.org/), which stands for "YAML Ain't Markup Language". It is a commonly used format for configuration files and is very simple. The settings generally include a `key` (or `variable`), then a colon, then the `value` for that key. For example:
+Since `_config.yml` is just a text file, you can edit it and [change the theme without going to the settings page](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll). The format of the settings page is [YAML](https://yaml.org/), which stands for "YAML Ain't Markup Language". It is a commonly used format for configuration files and is very simple. YAML settings generally include a `key` (or `variable`), then a colon, then the `value` for that key. For example:
 
 ```
-theme: architect
+theme: jekyll-theme-architect
 ```
 
-Depending on your theme, there may be other page settings that you can make to change the appearance of the site as well as site metadata. On the theme preview page in Settings, you can right-click on the `View project on GitHub` button and open the link in a new tab.
+Depending on your theme, there may be other settings that you can edit to change the appearance of the site as well as site metadata. On the theme preview page in Settings, you can right-click on the `View project on GitHub` button and open the link in a new tab.
 
 <img src="../images-pages/theme_link.png" alt="screenshot showing link to theme website" style="border:1px solid black">
 
@@ -260,13 +265,15 @@ You can also navigate to the theme's `_config.yml` file to see how the options a
 
 <img src="../images-pages/theme_config_example.png" alt="theme _config.yml file" style="border:1px solid black">
 
-Here's what it looked like when I edited my `_config.yml` file
+Here's what it looked like when I edited my `_config.yml` file using Atom
 
 <img src="../images-pages/editing_config_yml.png" alt="edited config file" style="border:1px solid black">
 
 After I committed and pushed the changed configuration file to GitHub, then waited a little while, here's how my homepage looked:
 
 <img src="../images-pages/configured_styled_homepage.png" alt="homepage after new configuration" style="border:1px solid black">
+
+You can see that the previous site name (taken from the repo name) was changed to the one I set in the configuration file and the site description was added below it.
 
 There are a lot of other things that we might want to change about the appearance of the website. We will look at ways to do that in the next lesson.
 
