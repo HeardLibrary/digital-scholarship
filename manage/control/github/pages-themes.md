@@ -212,23 +212,23 @@ When we turned on GitHub Pages in the repository settings, we opted not to set a
 
 When you click on one of the theme options at the top of the selection page, it will show you the style of the theme in the lower part of the page. Here's an example:
 
-![screenshot of Architect theme](../images-pages/theme_example.png)
+<img src="../images-pages/theme_example.png" alt="screenshot of Architect theme" style="border:1px solid black">
 
 Click on the `Select theme` button to apply it to your website. Here's how my home page looked without a theme:
 
-![no-theme homepage](../images-pages/no_theme.png)
+<img src="../images-pages/no_theme.png" alt="no-theme homepage" style="border:1px solid black">
 
 Here it is with the Architect theme:
 
-![Architect theme homepage](../images-pages/architect_theme.png)
+<img src="../images-pages/architect_theme.png" alt="Architect theme homepage" style="border:1px solid black">
 
 Since the page styling is all handled by the theme, it is very simple to just go back into the theme chooser and pick another one. Here's the page with the Merlot theme:
 
-![Merlot theme homepage](../images-pages/merlot_theme.png)
+<img src="../images-pages/merlot_theme.png" alt="Merlot theme homepage" style="border:1px solid black">
 
 If we examine the commit history, we see that selecting or changing the theme resulted in a commit that added or changed a file within the `docs` folder: `_config.yml`.
 
-![config commit](../images-pages/add_config_yml.png)
+<img src="../images-pages/add_config_yml.png" alt="config commit" style="border:1px solid black">
 
 
 ----
