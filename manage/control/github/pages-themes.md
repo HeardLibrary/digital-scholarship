@@ -174,13 +174,13 @@ Although it is not a best practice for accessibility, borderless tables can be u
 <table style="border: none; width: unset">
 
 <tr style="border: none;">
-<td style="border: none;">![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Two_hugging_cats.jpg/128px-Two_hugging_cats.jpg)</td>
-<td style="border: none;">![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Jezebel%2C_a_black_and_white_cat.jpg/128px-Jezebel%2C_a_black_and_white_cat.jpg)</td>
+<td style="border: none;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Two_hugging_cats.jpg/128px-Two_hugging_cats.jpg"></td>
+<td style="border: none;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Jezebel%2C_a_black_and_white_cat.jpg/128px-Jezebel%2C_a_black_and_white_cat.jpg"></td>
 </tr>
 
 <tr style="border: none;">
-<td style="border: none;">![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Cat_wearing_sunglasses.jpg/128px-Cat_wearing_sunglasses.jpg)</td>
-<td style="border: none;">![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Cat_portrait_%2829484396147%29.jpg/256px-Cat_portrait_%2829484396147%29.jpg)</td>
+<td style="border: none;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Cat_wearing_sunglasses.jpg/128px-Cat_wearing_sunglasses.jpg"></td>
+<td style="border: none;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Cat_portrait_%2829484396147%29.jpg/256px-Cat_portrait_%2829484396147%29.jpg"></td>
 </tr>
 
 </table>
@@ -191,13 +191,13 @@ Rendered:
 <table style="border: none; width: unset">
 
 <tr style="border: none;">
-<td style="border: none;">![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Two_hugging_cats.jpg/128px-Two_hugging_cats.jpg)</td>
-<td style="border: none;">![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Jezebel%2C_a_black_and_white_cat.jpg/128px-Jezebel%2C_a_black_and_white_cat.jpg)</td>
+<td style="border: none;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Two_hugging_cats.jpg/128px-Two_hugging_cats.jpg"></td>
+<td style="border: none;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Jezebel%2C_a_black_and_white_cat.jpg/128px-Jezebel%2C_a_black_and_white_cat.jpg"></td>
 </tr>
 
 <tr style="border: none;">
-<td style="border: none;">![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Cat_wearing_sunglasses.jpg/128px-Cat_wearing_sunglasses.jpg)</td>
-<td style="border: none;">![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Cat_portrait_%2829484396147%29.jpg/256px-Cat_portrait_%2829484396147%29.jpg)</td>
+<td style="border: none;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Cat_wearing_sunglasses.jpg/128px-Cat_wearing_sunglasses.jpg"></td>
+<td style="border: none;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Cat_portrait_%2829484396147%29.jpg/256px-Cat_portrait_%2829484396147%29.jpg"></td>
 </tr>
 
 </table>
