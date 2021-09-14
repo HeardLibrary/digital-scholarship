@@ -244,7 +244,7 @@ Since it is just a text file, you can edit it and [change the theme without goin
 theme: architect
 ```
 
-Depending on your theme, there may be other page settings that you can make to change the appearance of the site as well as site metadata. On the theme preview page in Settings, you can click on the small link for the theme.
+Depending on your theme, there may be other page settings that you can make to change the appearance of the site as well as site metadata. On the theme preview page in Settings, you can right-click on the `View project on GitHub` button and open the link in a new tab.
 
 <img src="../images-pages/theme_link.png" alt="screenshot showing link to theme website" style="border:1px solid black">
 
@@ -260,6 +260,13 @@ You can also navigate to the theme's `_config.yml` file to see how the options a
 
 <img src="../images-pages/theme_config_example.png" alt="theme _config.yml file" style="border:1px solid black">
 
+Here's what it looked like when I edited my `_config.yml` file
+
+<img src="../images-pages/editing_config_yml.png" alt="edited config file" style="border:1px solid black">
+
+After I committed and pushed the changed configuration file to GitHub, then waited a little while, here's how my homepage looked:
+
+<img src="../images-pages/configured_styled_homepage.png" alt="homepage after new configuration" style="border:1px solid black">
 
 
 ----
