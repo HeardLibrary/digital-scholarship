@@ -226,6 +226,10 @@ Since the page styling is all handled by the theme, it is very simple to just go
 
 ![Merlot theme homepage](../images-pages/merlot_theme.png)
 
+If we examine the commit history, we see that selecting or changing the theme resulted in a commit that added or changed a file within the `docs` folder: `_config.yml`.
+
+![config commit](../images-pages/add_config_yml.png)
+
 
 ----
 Revised 2021-09-13
