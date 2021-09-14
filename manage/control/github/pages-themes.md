@@ -148,25 +148,59 @@ First Header | Second Header
 Content cell 1 | Content cell 2
 Content column 1 | Content column 2
 
-However, if you don't want the default formatting with lines around the cells, you can use HTML instead.
+However, if you don't want the default formatting with lines around the cells, you can use HTML instead. NOTE: some aspects of tables, such as their default width, may be set by the CSS of the theme that's styling the page. For example, the CSS for the page theme on this website sets table widths to 100% of the page width. That won't be the case for an unstyled web page.
 
 ```
-<table style="border: none; max-width:100%;">
-<tr><th>First Header</th><th>Second Header</th></tr>
-<tr><td>Content cell 1</td><td>Content cell 2</td></tr>
-<tr><td>Content column 1</td><td>Content column 2</td></tr>
+<table style="border: none; width: unset">
+<tr style="border: none;"><th style="border: none;">First Header</th><th style="border: none;">Second Header</th></tr>
+<tr style="border: none;"><td style="border: none;">Content cell 1</td><td style="border: none;">Content cell 2</td></tr>
+<tr style="border: none;"><td style="border: none;">Content column 1</td><td style="border: none;">Content column 2</td></tr>
 </table>
 ```
 
-which renders like this x
+which renders like this
 
-<table style="border: none;">
+<table style="border: none; width: unset">
 <tr style="border: none;"><th style="border: none;">First Header</th><th style="border: none;">Second Header</th></tr>
 <tr style="border: none;"><td style="border: none;">Content cell 1</td><td style="border: none;">Content cell 2</td></tr>
 <tr style="border: none;"><td style="border: none;">Content column 1</td><td style="border: none;">Content column 2</td></tr>
 </table>
 
+In the style for the table element, I unset the width to remove the width setting set by the theme CSS.
 
+Although it is not a best practice for accessibility, borderless tables can be used to organize content on the page. Here's an example:
+
+```
+<table style="border: none; width: unset">
+
+<tr style="border: none;">
+<td style="border: none;">![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Two_hugging_cats.jpg/128px-Two_hugging_cats.jpg)</td>
+<td style="border: none;">![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Jezebel%2C_a_black_and_white_cat.jpg/128px-Jezebel%2C_a_black_and_white_cat.jpg)</td>
+</tr>
+
+<tr style="border: none;">
+<td style="border: none;">![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Cat_wearing_sunglasses.jpg/128px-Cat_wearing_sunglasses.jpg)</td>
+<td style="border: none;">![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Cat_portrait_%2829484396147%29.jpg/256px-Cat_portrait_%2829484396147%29.jpg)</td>
+</tr>
+
+</table>
+```
+
+Rendered:
+
+<table style="border: none; width: unset">
+
+<tr style="border: none;">
+<td style="border: none;">![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Two_hugging_cats.jpg/128px-Two_hugging_cats.jpg)</td>
+<td style="border: none;">![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Jezebel%2C_a_black_and_white_cat.jpg/128px-Jezebel%2C_a_black_and_white_cat.jpg)</td>
+</tr>
+
+<tr style="border: none;">
+<td style="border: none;">![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Cat_wearing_sunglasses.jpg/128px-Cat_wearing_sunglasses.jpg)</td>
+<td style="border: none;">![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Cat_portrait_%2829484396147%29.jpg/256px-Cat_portrait_%2829484396147%29.jpg)</td>
+</tr>
+
+</table>
 
 ----
 Revised 2021-09-13
