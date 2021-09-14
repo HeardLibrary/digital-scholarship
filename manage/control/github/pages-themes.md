@@ -268,6 +268,7 @@ After I committed and pushed the changed configuration file to GitHub, then wait
 
 <img src="../images-pages/configured_styled_homepage.png" alt="homepage after new configuration" style="border:1px solid black">
 
+There are a lot of other things that we might want to change about the appearance of the website. We will look at ways to do that in the next lesson.
 
 ----
 Revised 2021-09-13
