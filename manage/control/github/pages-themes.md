@@ -238,13 +238,28 @@ The theme and other configuration settings are controlled by this file.
 
 ## Editing site settings in _config.yml
 
-Since it is just a text file, you can edit it and [change the theme without going to the settings page](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll). The format of the settings page is [YAML](https://yaml.org/), which stands for "YAML Ain't Markup Language". It is a commonly used format for configuration files and is very simple. The settings generally include a `key`, then a colon, then the value for that key. For example:
+Since it is just a text file, you can edit it and [change the theme without going to the settings page](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll). The format of the settings page is [YAML](https://yaml.org/), which stands for "YAML Ain't Markup Language". It is a commonly used format for configuration files and is very simple. The settings generally include a `key` (or `variable`), then a colon, then the `value` for that key. For example:
 
 ```
 theme: architect
 ```
 
-There are a number of other page settings that you can make to change the 
+Depending on your theme, there may be other page settings that you can make to change the appearance of the site as well as site metadata. On the theme preview page in Settings, you can click on the small link for the theme.
+
+<img src="../images-pages/theme_link.png" alt="screenshot showing link to theme website" style="border:1px solid black">
+
+That will take you to the GitHub site where the theme is maintained. Scroll down the README.md page until you find the `Customizing` section. It will tell you what variables can be set to customize your theme.
+
+<img src="../images-pages/customizing_instructions.png" alt="instructions for customizing" style="border:1px solid black">
+
+Adding an `author` variable may also add that information to the page metadata in the HTML head section. 
+
+You can also navigate to the theme's `_config.yml` file to see how the options are listed there.
+
+<img src="../images-pages/theme_repo_files.png" alt="theme file list" style="border:1px solid black">
+
+<img src="../images-pages/theme_config_example.png" alt="theme _config.yml file" style="border:1px solid black">
+
 
 
 ----
