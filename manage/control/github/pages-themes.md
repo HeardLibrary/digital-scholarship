@@ -208,7 +208,11 @@ Notice that when I put the images inside the table, I had to use HTML markup to 
 
 # Using a canned page theme
 
-When we turned on GitHub Pages in the repository settings, we opted not to set a page theme. The easiest way to apply one of the canned GitHub Pages themes is to return to the settings page and select one of the themes. Go to Settings, then Pages, and click `Choose a theme` if you don't already have one or `Change theme` if you already have one and want to change it. See [these instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/adding-a-theme-to-your-github-pages-site-with-the-theme-chooser) if you need screenshots.
+When we turned on GitHub Pages in the repository settings, we opted not to set a page theme. The easiest way to apply one of the canned GitHub Pages themes is to return to the settings page and select one of the themes. 
+
+## Choosing a canned theme in Settings
+
+Go to Settings, then Pages, and click `Choose a theme` if you don't already have one or `Change theme` if you already have one and want to change it. See [these instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/adding-a-theme-to-your-github-pages-site-with-the-theme-chooser) if you need screenshots.
 
 When you click on one of the theme options at the top of the selection page, it will show you the style of the theme in the lower part of the page. Here's an example:
 
@@ -229,6 +233,18 @@ Since the page styling is all handled by the theme, it is very simple to just go
 If we examine the commit history, we see that selecting or changing the theme resulted in a commit that added or changed a file within the `docs` folder: `_config.yml`.
 
 <img src="../images-pages/add_config_yml.png" alt="config commit" style="border:1px solid black">
+
+The theme and other configuration settings are controlled by this file. 
+
+## Editing site settings in _config.yml
+
+Since it is just a text file, you can edit it and [change the theme without going to the settings page](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll). The format of the settings page is [YAML](https://yaml.org/), which stands for "YAML Ain't Markup Language". It is a commonly used format for configuration files and is very simple. The settings generally include a `key`, then a colon, then the value for that key. For example:
+
+```
+theme: architect
+```
+
+There are a number of other page settings that you can make to change the 
 
 
 ----
