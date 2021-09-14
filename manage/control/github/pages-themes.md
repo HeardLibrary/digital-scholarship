@@ -17,7 +17,7 @@ For that reason, Jekyll will support including HTML tags in the text of pages. I
 If you need superscripts in the page text, in some versions you can use the carat (`^`) character. So the give the area of a circle, you would use
 
 ```
-A = pi * r ^2
+A = pi * r^2
 ```
 
 However, carat is not supported in GitHub-flavored Markdown and there is no Markdown markup for subscript. So if you want to write the area of a circle or give the formula of water, you have to use the HTML tags like this:
@@ -148,7 +148,9 @@ First Header | Second Header
 Content cell 1 | Content cell 2
 Content column 1 | Content column 2
 
-However, if you don't want the default formatting with lines around the cells, you can use HTML instead. NOTE: some aspects of tables, such as their default width, may be set by the CSS of the theme that's styling the page. For example, the CSS for the page theme on this website sets table widths to 100% of the page width. That won't be the case for an unstyled web page.
+However, if you don't want the default formatting with lines around the cells, you can use HTML instead. 
+
+NOTE: some aspects of tables, such as their default width, may be set by the CSS of the theme that's styling the page. For example, the CSS for the page theme on this website sets table widths to 100% of the page width, which is how it appears above. That won't be the case if you use the same code in an unstyled web page.
 
 ```
 <table style="border: none; width: unset">
@@ -201,6 +203,29 @@ Rendered:
 </tr>
 
 </table>
+
+Notice that when I put the images inside the table, I had to use HTML markup to display the image, not the Markdown markup.
+
+# Using a canned page theme
+
+When we turned on GitHub Pages in the repository settings, we opted not to set a page theme. The easiest way to apply one of the canned GitHub Pages themes is to return to the settings page and select one of the themes. Go to Settings, then Pages, and click `Choose a theme` if you don't already have one or `Change theme` if you already have one and want to change it. See [these instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/adding-a-theme-to-your-github-pages-site-with-the-theme-chooser) if you need screenshots.
+
+When you click on one of the theme options at the top of the selection page, it will show you the style of the theme in the lower part of the page. Here's an example:
+
+![screenshot of Architect theme](../images-pages/theme_example.png)
+
+Click on the `Select theme` button to apply it to your website. Here's how my home page looked without a theme:
+
+![no-theme homepage](../images-pages/no_theme.png)
+
+Here it is with the Architect theme:
+
+![Architect theme homepage](../images-pages/architect_theme.png)
+
+Since the page styling is all handled by the theme, it is very simple to just go back into the theme chooser and pick another one. Here's the page with the Merlot theme:
+
+![Merlot theme homepage](../images-pages/merlot_theme.png)
+
 
 ----
 Revised 2021-09-13
