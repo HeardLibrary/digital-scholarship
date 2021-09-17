@@ -67,7 +67,7 @@ The topics below are provisional and subject to change
 |---|---|---|---|
 | Sep 3 | 1 | Grammar of Graphics, 3 common geoms, formatting | [lesson videos](../../codegraf/032/) (25 min) |
 | Sep 10 | 2 | controlling asthetics like color and size, labels | [lesson webpage](../../codegraf/033/) |
-| Sep 17 | 3 | stats: binning, distributions, error bars |  |
+| Sep 17 | 3 | stats: binning, distributions, error bars | [lesson webpage](../../codegraf/034/) |
 | Sep 24 | 4 | complex plots: faceting, overlaying, stacking |  |
 | Oct 1 | 5 | TBD |  |
 | Oct 8 (room 800BB) | 6 | TBD |  |
