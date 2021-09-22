@@ -86,10 +86,9 @@ hist(schools_data$Female)
 # A simple way to compare two categories of data is a box and whisker plot.
 # The category x is a discontinuous factor and the measurement y is a continuous variable. Use the form:
 # plot(y ~ x)
-# This only works for a data frame where characters are read in as factors, NOT for tibbles.
-# So read.csv() must be used, not read_csv(). More on this in future lessons.
+# This only works for a data frame where characters are converted to factors.
 
-plot(human_data$height ~ human_data$grouping)
+plot(human_data$height ~ as.factor(human_data$grouping))
 
 # It's easy to create an X,Y scatterplot of two continuous variables using the syntax:
 # plot(y ~ x)
