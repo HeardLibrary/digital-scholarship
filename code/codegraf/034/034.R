@@ -160,7 +160,7 @@ ggplot(graphing_data, aes(x=color, y=mean)) +
   labs(
     x = "color of incident light",
     y = "electroretinogram response (mV)",
-    title = "Sensitivity of cockroach eyes to varying colors (error bars: SEM)"
+    title = "Sensitivity of cockroach eyes to varying colors (error bars: 95% confidence limits)"
   ) +
   theme(legend.position = "none")
 
