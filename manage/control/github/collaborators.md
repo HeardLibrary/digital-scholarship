@@ -1,5 +1,5 @@
 ---
-permalink: /manage/control/github/collaborate/
+permalink: /manage/control/github/collaborators/
 title: Working with collaborators
 breadcrumb: Collaborate
 ---
