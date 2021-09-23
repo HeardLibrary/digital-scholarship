@@ -68,6 +68,8 @@ The following pages provide information for developing basic skills with GitHub.
 
 [Cloning to your local computer and the GitHub desktop client](clone/)
 
+[Invite collaborators to share a repo](collaborators/)
+
 [Branching and the Shared Repository model](branch/)
 
 [Using GitHub to manage projects](projects/)
@@ -76,9 +78,7 @@ The following pages provide information for developing basic skills with GitHub.
 
 [Managing a website with GitHub Pages](pages/)
 
-**DH class:**
-
-Session 1
+**DH fellows:**
 
 [terms and diagrams presentation](git_terms_diagrams_pages.pdf)
 
@@ -88,15 +88,9 @@ Session 1
 
 [More info on commits, Markdown](https://heardlibrary.github.io/digital-scholarship/script/codegraf/017/) (review after class)
 
-Session 2
-
-[GitHub Pages intro](pages/) through "Setting up the landing page". Look at the rest if you are intersted in learning more about setting up a website.
-
-[Publishing Twine to GitHub Pages](https://heardlibrary.github.io/digital-scholarship/script/twine/github/)
-
-Invite collaborators to share a repo.
+[Invite collaborators to share a repo](collaborators/)
 
 [Using GitHub to manage projects](https://heardlibrary.github.io/digital-scholarship/manage/control/github/projects/)
 
 ----
-Revised 2021-09-03
+Revised 2021-09-23
