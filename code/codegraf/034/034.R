@@ -1,3 +1,7 @@
+# !!! Run once if you haven't already installed:
+install.packages("Hmisc") # miscellaneous statistical functions
+
+# Run every time
 library(tidyverse)
 library(magrittr)
 
@@ -65,11 +69,12 @@ ggplot(hemoglobin_frame, aes(x = population, y = hemoglobin)) +
 
 erg_frame <- read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/color-anova-example.csv")
 erg_frame$color <- as.factor(erg_frame$color) # convert from character strings to factor (categories)
+erg_frame$block <- as.factor(erg_frame$block) # convert from character strings to factor (categories)
 
 # Calculate the mean for each color
 erg_mean_frame <- erg_frame %>% 
-  group_by(color) %>% 
-  summarize(mean_response = mean(response)) 
+  group_by(color) %>% # group_by() is from the dplyr package
+  summarize(mean_response = mean(response))  # summarize() also from dplyr
 
 # ---------------
 # Understanding "shortcut" geoms and the stat argument
@@ -121,25 +126,35 @@ ggplot(erg_frame, aes(x = color)) +
   geom_bar()
 
 # Adding error bars to a bar plot
-# In this case, we are using standard error of the mean (SEM)
-# NOTE: SEM is a measure of the uncertainty of the mean, NOT the variability of the data as in std. dev.
+# In this case, we are using 95% confidence limits (cl)
+# NOTE: cl is a measure of the uncertainty of the mean, NOT the variability of the data as in std. dev.
 
-# Create a function to calculate the SEM
-sem <- function(x){
-  sd(x)/sqrt(length(x))
-}
+# miscelaneous stat functions
+library("Hmisc")
 
-erg_sem_frame <- erg_frame %>% 
-  group_by(color) %>% 
-  summarize(sem_response = sem(response)) 
+# mean_cl_normal() calculates the mean and upper and lower 95% confidence intervals for a vector
+# See https://rdrr.io/cran/Hmisc/man/smean.sd.html for details
+erg_cl_frame <- erg_frame %>% 
+  group_by(color) %>% # group_by() is from the dplyr package
+  summarize(cl_response = mean_cl_normal(response))  # summarize() also from dplyr
 
-# put means and SE into same data frame
-graphing_data <- data.frame(mean = erg_mean_frame$mean_response, SE = erg_sem_frame$sem_response, color = erg_mean_frame$color)
+# Output is apparently a tibble
+erg_cl_frame
+
+# But effectively it's a list of a factor vector (color) and a dataframe (cl_response)
+erg_cl_frame$color
+erg_cl_frame$cl_response
+
+# We can access columns in the dataframe using this weird notation (column in a dataframe in a list)
+erg_cl_frame$cl_response$ymin
+
+# put means and cl's into a simple data frame that can be understood by ggplot
+graphing_data <- data.frame(mean = erg_cl_frame$cl_response$y, lower_cl = erg_cl_frame$cl_response$ymin, upper_cl = erg_cl_frame$cl_response$ymax, color = erg_cl_frame$color)
 
 # identity stat leaves the data the same. Normally geom_bar uses "count" as the stat
 ggplot(graphing_data, aes(x=color, y=mean)) +
   geom_bar(stat="identity", aes(fill = color)) + # same as geom_col(aes(fill = color))
-  geom_errorbar(aes(ymin=mean-SE, ymax=mean+SE),
+  geom_errorbar(aes(ymin = lower_cl, ymax = upper_cl),
                 width=.2) +
   scale_fill_manual(values=c("blue", "green", "red")) +
   labs(
