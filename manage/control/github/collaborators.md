@@ -64,7 +64,7 @@ To clone the newly shared repository using Desktop, Tomy should drop down the ar
 
 On the GitHub.com tab, he will scroll down past his own repositories until he sees his collaborator's account name. Under that account, he should see the newly shared repository. After he selects it and chooses the location in the directory where he wants it to go, he clicks the `Clone` button and starts using it.
 
-[next page: Branching](../branch/)
+[next page: branching and the shared repository model](../branch/)
 
 ----
 Revised 2021-09-23
