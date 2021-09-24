@@ -92,7 +92,7 @@ ggplot(ord, aes(x = Date, y = `Minutes of Delay per Flight`, color = `Carrier Na
   scale_shape_manual(values=shapes)
 
 # ---------------
-# Collapse one of the dimensions using summarize:
+# Collapse one of the dimensions using summarise:
 # ---------------
 
 # Graph all of the flights at all airports (eliminate airport as a factor), sorted by airline
@@ -100,13 +100,13 @@ ggplot(ord, aes(x = Date, y = `Minutes of Delay per Flight`, color = `Carrier Na
 all_airports_total_flights <- airline %>% 
   filter(`Ontime Category` == "Delayed by Late Aircraft") %>%
   group_by(`Carrier Name`, `Date`) %>% # group_by() is from the dplyr package
-  summarize(total_flights = sum(`Number of Flights`))  # summarize() also from dplyr
+  summarise(total_flights = sum(`Number of Flights`))  # summarise() also from dplyr
 head(all_airports_total_flights)
 
 all_airports_total_delays <- airline %>% 
   filter(`Ontime Category` == "Delayed by Late Aircraft") %>%
   group_by(`Carrier Name`, `Date`) %>% 
-  summarize(total_delay = sum(`Minutes of Delay`))
+  summarise(total_delay = sum(`Minutes of Delay`))
 head(all_airports_total_delays)
 
 mean_delay <- data.frame(carrier = all_airports_total_delays$`Carrier Name`, date = all_airports_total_delays$`Date`, mean_delay = all_airports_total_delays$total_delay/all_airports_total_flights$total_flights)

@@ -74,7 +74,7 @@ erg_frame$block <- as.factor(erg_frame$block) # convert from character strings t
 # Calculate the mean for each color
 erg_mean_frame <- erg_frame %>% 
   group_by(color) %>% # group_by() is from the dplyr package
-  summarize(mean_response = mean(response))  # summarize() also from dplyr
+  summarise(mean_response = mean(response))  # summarise() also from dplyr
 
 # ---------------
 # Understanding "shortcut" geoms and the stat argument
@@ -136,7 +136,7 @@ library("Hmisc")
 # See https://rdrr.io/cran/Hmisc/man/smean.sd.html for details
 erg_cl_frame <- erg_frame %>% 
   group_by(color) %>% # group_by() is from the dplyr package
-  summarize(cl_response = mean_cl_normal(response))  # summarize() also from dplyr
+  summarise(cl_response = mean_cl_normal(response))  # summarise() also from dplyr
 
 # Output is apparently a tibble
 erg_cl_frame
