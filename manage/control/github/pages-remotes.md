@@ -68,6 +68,26 @@ I've decided to change the homepage title from "Research" to "Scholarship", so I
 
 <img src="../images-pages/change_homepage_title.png" alt="change h3 header" style="border:1px solid black">
 
+Save the file and push the changes to GitHub.
+
+After a few moments, I see the change on the homepage.
+
+<img src="../images-pages/rendered_homepage_label.png" alt="home page with new label" style="border:1px solid black">
+
+There are two other major things that I want to fix on the home page. The content is still stuff from my practice website. To change that, I need to edit my `index.md` Markdown homepage file. I'll change it to this:
+
+```
+- Adventurer
+- Scholar
+- Ecologist
+- Data nerd
+```
+
+To change the image, I need to make an `assets` and `img` folder, then put my homepage image into it with the name `home.jpg` as specified in the homepage layout HTML file.
+
+<img src="../images-pages/homepage_image.png" alt="add splash image for homepage" style="border:1px solid black">
+
+Here's the result:
 
 
 
