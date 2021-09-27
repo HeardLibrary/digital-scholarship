@@ -18,10 +18,23 @@ In most cases, the theme info page will link to a demo page that will show you w
 
 ## Specifying a theme
 
+To switch to the remote theme, you need to change the `_config.yml` file to replace the built-in theme that you were using before. First, get the path to the remote theme. Go to the [GitHub site for the theme](https://github.com/LeNPaul/academic).
 
+<img src="../images-pages/remote_url.png" alt="URL for GitHub repo for remote theme" style="border:1px solid black">
 
+Copy the last part of the URL after `https://github.com/`. Open the `_config.yml` file, which should be located within the `docs` folder of your website repo. Delete the line for the theme you had before and replace it with the key `remote_theme` and paste the last part of the URL that you copied as the value.
 
-<img src="../images-pages/screenshot.png" alt="screenshot from Wikipedia" style="border:1px solid black">
+![YAML file with remote theme](../images-pages/remote_yaml.png)
+
+Save the file, then use GitHub Desktop to push the changes to GitHub. 
+
+After some time has passed, go to the website URL and refresh the page. Eventually, you should see the new theme applied to the web page you had before. 
+
+<img src="../images-pages/unmodified_remote_theme.png" alt="website rendered using remote theme" style="border:1px solid black">
+
+Since this theme has more features than just the styling, I will need to make additional changes to the configuration.
+
+## Configuring the theme
 
 
 
