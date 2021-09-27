@@ -284,11 +284,13 @@ In `_config.yml` I changed the skin setting to:
 skin: pinky
 ```
 
-and pushed the changed files to GitHub.
+and pushed the changed files to GitHub. Now the homepage looks like this:
 
+<img src="../images-pages/pink_background.png" alt="homepage with pink background" style="border:1px solid black">
 
+Probably needs a bit of work to be readable, but you get the idea.
 
-
+Not every theme will make it this easy to customize its style. But by carefully examining the documentation on the theme's GitHub page, you should have a pretty good idea of how much customization is possible with the theme.
 
 [next page: TBD](../pages-themes/)
 
