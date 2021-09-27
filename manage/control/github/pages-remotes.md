@@ -42,7 +42,7 @@ The general principle is that a file on your website will replace the content of
 
 Let's start with the home page. The usage information says that the file `_layouts/home.html` defines the homepage. If I navigate to [that page on GitHub](https://github.com/LeNPaul/academic/blob/gh-pages/_layouts/home.html), I see that most of the page is filled in by Jekyll using information from elsewhere (the stuff in curly brackets). For example, in this code:
 
-```
+```xml
 <div class="row g-5 mb-5">
   <div class="col-md-6">
     <h3 class="fw-bold">Research</h3>
