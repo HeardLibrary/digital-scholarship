@@ -99,7 +99,7 @@ The goal here is that once the website is set up, changes should easily be made 
 
 Metadata that's included in the site (email addresses, Twitter buttons, etc.) and the navigation structure are controlled by data in a YAML file rather than hard-coding it. The metadata are inserted in the appropriate spots when Jekyll builds the site. 
 
-The Usage instructions say that contact information is defined in the `_data/settings.yml` file. There is usually some YAML file like this in an obvious directory (e.g. "data") that controls such settings. As we did with the homepage layout file, create a `_data` folder, then download the `settings.yml` file [from the theme GitHub site](https://github.com/LeNPaul/academic/blob/gh-pages/_data/settings.yml). Open it with your text editor and change the settings to fit your circumstances.
+The Usage instructions say that contact information is defined in the `_data/settings.yml` file. In most remote themes, there is typically some YAML file like this in an obvious directory (e.g. "data") that controls such settings. As we did with the homepage layout file, create a `_data` folder, then download the `settings.yml` file [from the theme GitHub site](https://github.com/LeNPaul/academic/blob/gh-pages/_data/settings.yml). Open it with your text editor and change the settings to fit your circumstances.
 
 ```yaml
 menu:
@@ -126,7 +126,7 @@ Here's how the `contact` page looks after saving the settings and adding the ske
 
 <img src="../images-pages/rendered_contact_page.png" alt="add skeleton pages and contact image" style="border:1px solid black">
 
-According to the Usage instructions, publications can be defined using the `_data/publications.yml` file and PDFs can be served from the `publications` directory. The `index` section shows up on the `publications` page accessed through the `publications` tab. I think the `featured` category is supposed to show up on the homepage.
+According to the Usage instructions, publications can be defined using the `_data/publications.yml` file and PDFs can be served from the `publications` directory. (NOTE: for some reason, I didn't get the direct display of uploaded PDFs to work.)  The `index` section shows up on the `publications` page accessed through the `publications` tab. I think the `featured` category is supposed to show up on the homepage.
 
 ```yaml
 featured:
@@ -163,9 +163,9 @@ The final rendered homepage looks like this, with the publications and updates b
 
 Although every theme operates differently, the general principles shown here tend to apply to most remote themes. However, you will generally have to play around with the settings to get the theme to work the way you want. Before you commit to a theme and putting a lot of work into creating content for it, you should make sure that you can get its important features to work. If you can't figure out how to get them to work, you may want to change themes.
 
-One annoying aspect of the approach taken here was that we only downloaded the files that were needed to override the theme settings. It is possible to take the "nuclear option" and just download the entire theme locally on your computer. The advantage is that you will have every file that you need. One disadvangage is that there will be a lot of unnecessary files that will make it difficult to navigate around and change only the relevant files. Another disadvantage is that if the theme developer fixes bugs or improves the theme, you won't get the changes because you are overriding every file that the developer might change. That might be a good thing if you like the theme the way it is and don't want it to change, but it prevents improvements.
+One annoying aspect of the approach taken here was that we had to download each of the individual files that were needed to override the theme settings. It is possible to take the "nuclear option" and just download the entire theme locally on your computer. The advantage is that you will have every file that you need locally without having to download them one-by-one. One disadvangage is that there will be a lot of unnecessary files that will make it difficult to navigate around to find and change only the relevant files. Another disadvantage is that if the theme developer fixes bugs or improves the theme, you won't get the changes because you are overriding every file that the developer might change with the ones you include in the website repo. That might be a good thing if you like the theme the way it is and don't want it to change, but it prevents improvements.
 
-To download the entire theme, first fork the repository to your account using the `Fork` button at the upper right of the theme's GitHub repository. Navigate to the fork on your account and change its settings to have a GitHub Pages website. You can then clone the fork to your local drive, modify the files on your computer using a code editor, and push the changes to GitHub. (For more information on forking repositories, see [this page](https://heardlibrary.github.io/digital-scholarship/manage/control/github/fork/).)
+To download the entire theme, first fork the repository to your account using the `Fork` button at the upper right of the theme's GitHub repository. Navigate to where the repository is forked on your account and change its settings to make it a GitHub Pages website. You can then clone the fork to your local drive, modify the files on your computer using a code editor, and push the changes to GitHub. (For more information on forking repositories, see [this page](https://heardlibrary.github.io/digital-scholarship/manage/control/github/fork/).)
 
 # Changing the styling of a remote theme
 
