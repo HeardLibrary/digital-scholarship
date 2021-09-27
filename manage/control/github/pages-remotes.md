@@ -247,6 +247,17 @@ Finding the right file to change and digging into the CSS is not for the faint o
 
 ## Skins
 
+In some cases, the theme developers make it easy for you to customize the appearance of the theme by providing pre-set *themes*. A theme is a selectable style that can easily be switched by a simple configuration change. Here is an example from the [theme Hamilton](https://github.com/zivong/jekyll-theme-hamilton):
+
+<img src="../images-pages/hamilton_skins.png" alt="skin examples from Hamilton theme" style="border:1px solid black">
+
+I will switch to this them by changing the theme designation in my `_config.yml` file to
+
+```
+remote_theme: zivong/jekyll-theme-hamilton
+```
+
+
 
 
 [next page: TBD](../pages-themes/)
