@@ -277,5 +277,7 @@ You can see that the previous site name (taken from the repo name) was changed t
 
 There are a lot of other things that we might want to change about the appearance of the website. We will look at ways to do that in the next lesson.
 
+[next page: Remote themes and controlling CSS](../pages-remotes/)
+
 ----
-Revised 2021-09-13
+Revised 2021-09-27
