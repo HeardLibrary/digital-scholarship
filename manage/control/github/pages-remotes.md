@@ -118,6 +118,55 @@ Notice that since I don't have lab personnel or courses, I deleted that informat
 
 In order to get the `contact` page to work, I need to download the skeleton `contact.md` page. It only consists of a YAML header and the rest will be built from the contact page template and the data I provided in the `settings.yaml` file. Similarly, the `cv` page is built from `cv.md` using data from YAML files defined in the `_data/cv` directory. 
 
+<img src="../images-pages/add_necessary_files.png" alt="add skeleton pages and contact image" style="border:1px solid black">
+
+Here's how the `contact` page looks after saving the settings and adding the skeleton `contact.md` file.
+
+<img src="../images-pages/rendered_contact_page.png" alt="add skeleton pages and contact image" style="border:1px solid black">
+
+According to the Usage instructions, publications can be defined using the `_data/publications.yml` file and PDFs can be served from the `publications` directory. The `index` section shows up on the `publications` page accessed through the `publications` tab. I think the `featured` category is supposed to show up on the homepage.
+
+```yaml
+featured:
+- {name: 'Baskauf, SJ and JK Baskauf. 2021. Using the W3C Generating RDF from Tabular Data on the Web Recommendation to manage small Wikidata datasets. Semantic Web Journal (in press).', url: '/publications/swj2810.pdf'}
+- {name: 'Groom, Q, P Desmet, L Reyserhove, T Adriaens, D Oldoni, S Vanderhoeven, SJ Baskauf, A Chapman, M McGeoch, R Walls, J Wieczorek, JRU Wilson, PFF Zermoglio, A Simpson. 2020. Degree of Establishment Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG)', url: 'http://rs.tdwg.org/dwc/doc/doe/'}
+
+index:
+- {name: 'Baskauf, SJ and JK Baskauf. 2021. Using the W3C Generating RDF from Tabular Data on the Web Recommendation to manage small Wikidata datasets. Semantic Web Journal (in press).', url: '/publications/swj2810.pdf'}
+- {name: 'Groom, Q, P Desmet, L Reyserhove, T Adriaens, D Oldoni, S Vanderhoeven, SJ Baskauf, A Chapman, M McGeoch, R Walls, J Wieczorek, JRU Wilson, PFF Zermoglio, A Simpson. 2020. Degree of Establishment Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG)', url: 'http://rs.tdwg.org/dwc/doc/doe/'}
+```
+
+"Updates" can be provided by placing Markdown files named using a particular scheme demonstrated in the `_posts` directory (ISO date at beginning of filename). I can download and hack one of the example ones in order to get the correct YAML header, replacing the Lorem ipsum content with my own. Here's an example:
+
+Filenames:
+
+<img src="../images-pages/posts_directory.png" alt="add skeleton pages and contact image" style="border:1px solid black">
+
+Markdown:
+
+```
+---
+layout: post
+title: "VanderBot workshop"
+---
+
+I conducted a workshop at the LD4 Conference on Linked Data called "Writing data to Wikidata using spreadsheets". You can watch a [video of the presentation on YouTube](https://youtu.be/ZukSQB8fki8).
+```
+
+The final rendered homepage looks like this, with the publications and updates being summarized as links there.
+
+<img src="../images-pages/final_homepage.png" alt="final styled homepage" style="border:1px solid black">
+
+## Troubleshooting
+
+Although every theme operates differently, the general principles shown here tend to apply to most remote themes. However, you will generally have to play around with the settings to get the theme to work the way you want. Before you commit to a theme and putting a lot of work into creating content for it, you should make sure that you can get its important features to work. If you can't figure out how to get them to work, you may want to change themes.
+
+One annoying aspect of the approach taken here was that we only downloaded the files that were needed to override the theme settings. It is possible to take the "nuclear option" and just download the entire theme locally on your computer. The advantage is that you will have every file that you need. One disadvangage is that there will be a lot of unnecessary files that will make it difficult to navigate around and change only the relevant files. Another disadvantage is that if the theme developer fixes bugs or improves the theme, you won't get the changes because you are overriding every file that the developer might change. That might be a good thing if you like the theme the way it is and don't want it to change, but it prevents improvements.
+
+To download the entire theme, first fork the repository to your account using the `Fork` button at the upper right of the theme's GitHub repository. Navigate to the fork on your account and change its settings to have a GitHub Pages website. You can then clone the fork to your local drive, modify the files on your computer using a code editor, and push the changes to GitHub. (For more information on forking repositories, see [this page](https://heardlibrary.github.io/digital-scholarship/manage/control/github/fork/).)
+
+# Changing the styling of a remote theme
+
 
 
 
