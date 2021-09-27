@@ -14,7 +14,9 @@ The built-in themes provided by GitHub itself are few and not very sophisticated
 
 The [Jekyll documentation website](https://jekyllrb.com/) has a [themes page](https://jekyllrb.com/docs/themes/) that provides links to four other websites that have extensive galleries showing what available themes look like when they are rendered. 
 
-In most cases, the theme info page will link to a demo page that will show you what the theme looks like and will have a link to the GitHub site hosting the theme. For example, [academic](https://jamstackthemes.dev/theme/jekyll-academic/) is a theme for an academic website. There is a [demo page](https://jamstackthemes.dev/demo/theme/jekyll-academic/) and the [GitHub site](https://github.com/LeNPaul/academic) contains information about installing and configuring the site). We will use this site in the examples that follow.
+In most cases, the theme info page will link to a demo page that will show you what the theme looks like and will have a link to the GitHub site hosting the theme. For example, [academic](https://jamstackthemes.dev/theme/jekyll-academic/) is a theme for an academic website. It has a [demo page](https://jamstackthemes.dev/demo/theme/jekyll-academic/) and the [GitHub site](https://github.com/LeNPaul/academic) contains information about installing and configuring the site. We will use this site in the examples that follow.
+
+NOTE: to see the final configuration of the example files, see [this repository](https://github.com/baskaufs/example_website/). To see the website in rendered form go to [the homepage](https://baskaufs.github.io/example_website/).
 
 ## Specifying a theme
 
@@ -54,7 +56,7 @@ Let's start with the home page. The usage information says that the file `_layou
 </div>
 ```
 
-The level 3 header `Research` is hard-coded here, so I could change that in the file. I also see that the homepage image is supposed to be in a subfolder on the path `/assets/img/`. I'll start by going to Finder/File Explorer and creating a subdirectory of my `docs` directory called `_layouts`. 
+the level 3 header `Research` is hard-coded here, so I could change that in the file. I also see that the homepage image is supposed to be in a subfolder on the path `/assets/img/`. I'll start by going to Finder/File Explorer and creating a subdirectory of my `docs` directory called `_layouts`. 
 
 <img src="../images-pages/create_layouts_folder.png" alt="create layouts folder" style="border:1px solid black">
 
