@@ -255,7 +255,37 @@ I will switch to this them by changing the theme designation in my `_config.yml`
 
 ```
 remote_theme: zivong/jekyll-theme-hamilton
+title: Test website
 ```
+
+and adding a website title. Here's how it renders with the skin `sunrise`:
+
+<img src="../images-pages/default_skin.png" alt="Hamilton sunrise skin" style="border:1px solid black">
+
+To set a specific skin, change the setting in `_config.yml`. For example, to use the skin `midnight`, add:
+
+```
+skin: midnight
+```
+
+Here's how it changes:
+
+<img src="../images-pages/midnight_skin.png" alt="Hamilton midnight skin" style="border:1px solid black">
+
+According to the instructions on the GitHub site, you can change the skin by creating a copy of an existing skin under a different name and then changing colors as desired. I created a directory called `skins`, downloaded the `midnight` skin, and changed its name to `pinky.scss`.
+
+I went to the [W3Schools HTML Color Picker](https://www.w3schools.com/colors/colors_picker.asp) and clicked on Fuchsia, which has the code `#ff00ff`. I then edited the `$background-color` value in the `pinky.scss` file:
+
+<img src="../images-pages/change_background_pink.png" alt="change background to pink" style="border:1px solid black">
+
+In `_config.yml` I changed the skin setting to:
+
+```
+skin: pinky
+```
+
+and pushed the changed files to GitHub.
+
 
 
 
