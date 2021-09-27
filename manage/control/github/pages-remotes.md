@@ -89,7 +89,9 @@ To change the image, I need to make an `assets` and `img` folder, then put my ho
 
 Here's the result:
 
+<img src="../images-pages/redesigned_homepage.png" alt="add splash image for homepage" style="border:1px solid black">
 
+The goal here is that once the website is set up, changes should easily be made by just changing content (the Markdown pages and images) without having to actually change any of the page templates.
 
 [next page: TBD](../pages-themes/)
 
