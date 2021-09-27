@@ -36,6 +36,39 @@ Since this theme has more features than just the styling, I will need to make ad
 
 ## Configuring the theme
 
+The exact mechanism for controlling the appearance of the theme depends on the specific theme. The GitHub repository for the theme should include an explanation of the files that need to be modified to customize the theme. In the example, the [Usage section](https://github.com/LeNPaul/academic#Usage) of the README.md page explains how the various components are controlled. 
+
+The general principle is that a file on your website will replace the content of the corresponding file in the remote theme. So if I want to change something, I need to download the appropriate file from the theme repository and place it in the same place in the file navigation structure on my website repository.
+
+Let's start with the home page. The usage information says that the file `_layouts/home.html` defines the homepage. If I navigate to [that page on GitHub](https://github.com/LeNPaul/academic/blob/gh-pages/_layouts/home.html), I see that most of the page is filled in by Jekyll using information from elsewhere (the stuff in curly brackets). For example, in this code:
+
+```
+<div class="row g-5 mb-5">
+  <div class="col-md-6">
+    <h3 class="fw-bold">Research</h3>
+    {{ content }}
+  </div>
+  <div class="col-md-6">
+    <img src="{{ site.github.url }}/assets/img/home.jpg" alt="Home" width="100%">
+  </div>
+</div>
+```
+
+The level 3 header `Research` is hard-coded here, so I could change that in the file. I also see that the homepage image is supposed to be in a subfolder on the path `/assets/img/`. I'll start by going to Finder/File Explorer and creating a subdirectory of my `docs` directory called `_layouts`. 
+
+<img src="../images-pages/create_layouts_folder.png" alt="create layouts folder" style="border:1px solid black">
+
+On the `home.html` page in the remote theme GitHub site, right click on the `Raw` button, then selecte `Save Link As...`.
+
+<img src="../images-pages/home_layout_raw_button.png" alt="right-click raw button" style="border:1px solid black">
+
+Save the file in the `_layouts` folder you just created.
+
+I've decided to change the homepage title from "Research" to "Scholarship", so I opened the file and changed the `h3` text:
+
+<img src="../images-pages/change_homepage_title.png" alt="change h3 header" style="border:1px solid black">
+
+
 
 
 [next page: TBD](../pages-themes/)
