@@ -93,6 +93,35 @@ Here's the result:
 
 The goal here is that once the website is set up, changes should easily be made by just changing content (the Markdown pages and images) without having to actually change any of the page templates.
 
+## Changing included data
+
+Metadata that's included in the site (email addresses, Twitter buttons, etc.) and the navigation structure are controlled by data in a YAML file rather than hard-coding it. The metadata are inserted in the appropriate spots when Jekyll builds the site. 
+
+The Usage instructions say that contact information is defined in the `_data/settings.yml` file. There is usually some YAML file like this in an obvious directory (e.g. "data") that controls such settings. As we did with the homepage layout file, create a `_data` folder, then download the `settings.yml` file [from the theme GitHub site](https://github.com/LeNPaul/academic/blob/gh-pages/_data/settings.yml). Open it with your text editor and change the settings to fit your circumstances.
+
+```yaml
+menu:
+- {name: 'publications', url: '/publications'}
+- {name: 'cv', url: '/cv'}
+- {name: 'contact', url: '/contact'}
+
+social:
+- {icon: 'github', link: 'https://github.com/baskaufs'}
+- {icon: 'twitter', link: 'https://twitter.com/baskaufs'}
+- {icon: 'instagram', link: 'https://instagram.com/baskaufs'}
+
+contacts:
+- {name: 'Steve Baskauf', title: 'Data Science and Data Curation Specialist', department: 'Digital Scholarship and Communications (DiSC)', institution: 'Vanderbilt University Libraries', institution_address: 'Nashville, Tennessee, USA', phone: '(615) 123-4567', email: 'steve.baskauf@vanderbilt.edu', office: 'Eskind Biometical Library 111', image: 'assets/img/contact.jpg'}
+```
+
+Notice that since I don't have lab personnel or courses, I deleted that information from the data. Similarly, I don't use LinkedIn, so I deleted that line from the `social` settings.
+
+In order to get the `contact` page to work, I need to download the skeleton `contact.md` page. It only consists of a YAML header and the rest will be built from the contact page template and the data I provided in the `settings.yaml` file. Similarly, the `cv` page is built from `cv.md` using data from YAML files defined in the `_data/cv` directory. 
+
+
+
+
+
 [next page: TBD](../pages-themes/)
 
 ----
