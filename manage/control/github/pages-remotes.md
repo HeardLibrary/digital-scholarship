@@ -46,7 +46,7 @@ Let's start with the home page. The usage information says that the file `_layou
 <div class="row g-5 mb-5">
   <div class="col-md-6">
     <h3 class="fw-bold">Research</h3>
-    {{ content }}
+    {% raw  %} {{ content }} {% endraw  %}
   </div>
   <div class="col-md-6">
     <img src="{{ site.github.url }}/assets/img/home.jpg" alt="Home" width="100%">
