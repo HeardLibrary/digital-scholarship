@@ -169,7 +169,9 @@ To download the entire theme, first fork the repository to your account using th
 
 # Changing the styling of a remote theme
 
+One of the reasons for creating a GitHub Pages website is to be able to pick a theme that already has the styling you want and avoid coding CSS yourself. However, sometimes a theme may be almost exactly what you want but needs a slight tweek to the styling, such as changing the default font or colors for the theme.
 
+For example, this website is built using the built-in theme 
 
 
 
