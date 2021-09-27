@@ -171,7 +171,81 @@ To download the entire theme, first fork the repository to your account using th
 
 One of the reasons for creating a GitHub Pages website is to be able to pick a theme that already has the styling you want and avoid coding CSS yourself. However, sometimes a theme may be almost exactly what you want but needs a slight tweek to the styling, such as changing the default font or colors for the theme.
 
-For example, this website is built using the built-in theme 
+For example, this website is built using the built-in theme [Leap Day](https://github.com/pages-themes/leap-day). However, if you look at [the theme preview], you will see that there are a number of changes that have been made to the theme -- most obviously the theme colors and font.  
+
+Here is a simple homepage using the Leap Day theme that I'll use in the following examples:
+
+<img src="../images-pages/bare_leap_day.png" alt="bare bones Leap Day homepage" style="border:1px solid black">
+
+## Modifying the default stylesheet
+
+The exact way to change the CSS depends on how complicated the theme is. The default styles are typically in a directory called `_sass`. There may be a number of files within that directory having `.sass` file extensions, so it can be a challenge to figure out which one to change. In the case of the Leap Day theme, there are relatively few in the [_sass directory](https://github.com/pages-themes/leap-day/tree/master/_sass) and the one that actually controlls things is [
+jekyll-theme-leap-day.scss](https://github.com/pages-themes/leap-day/blob/master/_sass/jekyll-theme-leap-day.scss). 
+
+To override the defaults, I add CSS code to a file in the [/assets/css/ directory](https://github.com/pages-themes/leap-day/blob/master/assets/css). In the case of Leap Day, there is only one file: [style.scss](https://github.com/pages-themes/leap-day/blob/master/assets/css/style.scss), so the choice is easy. 
+
+The file as it currently stands has very little code in it:
+
+```
+---
+---
+
+@import 'jekyll-theme-leap-day';
+```
+
+I'll download a copy of it locally in the same directory structure. 
+
+<img src="../images-pages/downloaded_scss.png" alt="location of downloaded scss file" style="border:1px solid black">
+
+then edit it using my code editor. You can use the "inspect" feature of your browser to figure out what part of the CSS controls the different sections of the page.
+
+<img src="../images-pages/edit_scss.png" alt="change default colors" style="border:1px solid black">
+
+I chose the Vanderbilt brand colors black (#000000) and gold (#D8AB4C). After pushing the changes and reloading the page, the colors have changed.
+
+<img src="../images-pages/homepage_new_colors.png" alt="homepage rendered with new colors" style="border:1px solid black">
+
+If you want to change a value, you can set a new value in this file and it will override the defaults. However, if you want to remove a setting entirely, you need to use an `unset` value. For example, I think the font used in the body is hard to read. I can unset the font and leave it to the browser default, then change the font color to black using this CSS:
+
+```
+body {
+    font: unset;
+    color: #000000;
+}
+```
+
+Now the page looks like this:
+
+<img src="../images-pages/homepage_better_font.png" alt="homepage rendered with plain black font" style="border:1px solid black">
+
+The entire CSS file now looks like this:
+
+```
+---
+---
+
+@import 'jekyll-theme-leap-day';
+
+body {
+    font: unset;
+    color: #000000;
+}
+
+header {   
+    background: #000000; 
+    h1 {
+        color: #D8AB4C;
+    }
+}
+
+#banner { 
+    background: #D8AB4C;
+}
+```
+
+Finding the right file to change and digging into the CSS is not for the faint of heart. But if you can get help from someone with a little web design experience, it's possible to make small changes like this.
+
+## Skins
 
 
 
