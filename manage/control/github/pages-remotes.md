@@ -179,7 +179,7 @@ Here is a simple homepage using the Leap Day theme that I'll use in the followin
 
 ## Modifying the default stylesheet
 
-The exact way to change the CSS depends on how complicated the theme is. The default styles are typically in a directory called `_sass`. There may be a number of files within that directory having `.sass` file extensions, so it can be a challenge to figure out which one to change. In the case of the Leap Day theme, there are relatively few in the [_sass directory](https://github.com/pages-themes/leap-day/tree/master/_sass) and the one that actually controlls things is [
+The exact way to change the CSS depends on how complicated the theme is. The default styles are typically in a directory called `_sass`. There may be a number of files within that directory having `.scss` file extensions, so it can be a challenge to figure out which one to change. In the case of the Leap Day theme, there are relatively few in the [_sass directory](https://github.com/pages-themes/leap-day/tree/master/_sass) and the one that actually controlls things is [
 jekyll-theme-leap-day.scss](https://github.com/pages-themes/leap-day/blob/master/_sass/jekyll-theme-leap-day.scss). 
 
 To override the defaults, I add CSS code to a file in the [/assets/css/ directory](https://github.com/pages-themes/leap-day/blob/master/assets/css). In the case of Leap Day, there is only one file: [style.scss](https://github.com/pages-themes/leap-day/blob/master/assets/css/style.scss), so the choice is easy. 
@@ -197,7 +197,9 @@ I'll download a copy of it locally in the same directory structure.
 
 <img src="../images-pages/downloaded_scss.png" alt="location of downloaded scss file" style="border:1px solid black">
 
-then edit it using my code editor. You can use the "inspect" feature of your browser to figure out what part of the CSS controls the different sections of the page.
+then edit it using my code editor. You can use the "inspect" feature of your browser to figure out what part of the CSS controls the different sections of the page. Once you've identified the HTML element you need to change, click on the element name and look in the CSS description for that element to see what setting needs to be changed. In most browsers, you can check or uncheck a box to turn settings on and off. 
+
+In this case, I see that the `header` element is the top bar with a level 1 (h1) header, and the `#banner` is the yellow bar below it. I can change their colors like this:
 
 <img src="../images-pages/edit_scss.png" alt="change default colors" style="border:1px solid black">
 
@@ -251,14 +253,14 @@ In some cases, the theme developers make it easy for you to customize the appear
 
 <img src="../images-pages/hamilton_skins.png" alt="skin examples from Hamilton theme" style="border:1px solid black">
 
-I will switch to this them by changing the theme designation in my `_config.yml` file to
+I will switch to this theme by changing the theme designation in my `_config.yml` file to
 
 ```
 remote_theme: zivong/jekyll-theme-hamilton
 title: Test website
 ```
 
-and adding a website title. Here's how it renders with the skin `sunrise`:
+and adding a website title. The `Hamilton` theme is interesting because it changes the skin dynamically depending on the time of day. Here's how it renders in the morning with the skin `sunrise`:
 
 <img src="../images-pages/default_skin.png" alt="Hamilton sunrise skin" style="border:1px solid black">
 
@@ -268,11 +270,13 @@ To set a specific skin, change the setting in `_config.yml`. For example, to use
 skin: midnight
 ```
 
-Here's how it changes:
+Here's how it looks after the change:
 
 <img src="../images-pages/midnight_skin.png" alt="Hamilton midnight skin" style="border:1px solid black">
 
 According to the instructions on the GitHub site, you can change the skin by creating a copy of an existing skin under a different name and then changing colors as desired. I created a directory called `skins`, downloaded the `midnight` skin, and changed its name to `pinky.scss`.
+
+<img src="../images-pages/skins_path.png" alt="path to skins directory" style="border:1px solid black">
 
 I went to the [W3Schools HTML Color Picker](https://www.w3schools.com/colors/colors_picker.asp) and clicked on Fuchsia, which has the code `#ff00ff`. I then edited the `$background-color` value in the `pinky.scss` file:
 
@@ -292,7 +296,7 @@ Probably needs a bit of work to be readable, but you get the idea.
 
 Not every theme will make it this easy to customize its style. But by carefully examining the documentation on the theme's GitHub page, you should have a pretty good idea of how much customization is possible with the theme.
 
-[next page: TBD](../pages-themes/)
+[next page: setting up a custom domain](../pages-domain/)
 
 ----
 Revised 2021-09-27
