@@ -274,7 +274,7 @@ Here's how it looks after the change:
 
 <img src="../images-pages/midnight_skin.png" alt="Hamilton midnight skin" style="border:1px solid black">
 
-According to the instructions on the GitHub site, you can change the skin by creating a copy of an existing skin under a different name and then changing colors as desired. I created a directory called `skins`, downloaded the `midnight` skin, and changed its name to `pinky.scss`.
+According to the instructions on the GitHub site, you can change the skin by creating a copy of an existing skin under a different name and then changing colors as desired. I created a directory called `skins` in the path `/docs/_sass/hamilton/skins/`, downloaded the `midnight` skin, and changed its name to `pinky.scss`.
 
 <img src="../images-pages/skins_path.png" alt="path to skins directory" style="border:1px solid black">
 
