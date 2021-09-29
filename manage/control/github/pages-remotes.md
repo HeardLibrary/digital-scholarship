@@ -296,7 +296,7 @@ Probably needs a bit of work to be readable, but you get the idea.
 
 Not every theme will make it this easy to customize its style. But by carefully examining the documentation on the theme's GitHub page, you should have a pretty good idea of how much customization is possible with the theme.
 
-[next page: setting up a custom domain](../pages-domain/)
+[next page: controlling the site URL](../pages-urls/)
 
 ----
-Revised 2021-09-27
+Revised 2021-09-29
