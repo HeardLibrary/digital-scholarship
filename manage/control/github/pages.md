@@ -59,24 +59,7 @@ Because the repository name and directory structure will be used to form the eve
 - all lower case
 - alphabetic only (although names with numerals, underscores `_`, and hyphens `-` are allowable)
 
-
-**Simplifying the URL by dropping the repository name**
-
-As you can see above, the normal URL pattern is for the repository name to immediately follow the subdomain name as the first part of the URL hierarchy. There is a special trick that you can use to eliminate the repository name from the URL and have the path follow immediately after the subdomain name. 
-
-The trick is to name the repository as the eventual subdomain name when the website is rendered. Here is an example. I have a repository named `baskaufs.github.io`: 
-
-<https://github.com/baskaufs/baskaufs.github.io>
-
-If I want to go to the page within the repo that has the path [/civil-war/about.htm](https://github.com/baskaufs/baskaufs.github.io/blob/master/civil-war/about.htm) within that repository, I can simply use the URL <https://baskaufs.github.io/civil-war/about.htm>, that is, the subdomain name followed directly by the path.
-
-Since you can only have one repository named `account.github.io`, you can drop only drop the repository name for one website in the account.
-
-**What if I have purchased my own domain name?**
-
-If you have purchased your own domain name, then it doesn't matter what your account and repository names are. When you set up the redirect, it will point directly to the website's source directory and the custom domain name will be followed immediately by the path. So you should still try to follow the rules above about directory names to keep the URL simple.
-
-Mapping to a custom domain is an advanced topic and won't be covered in this lesson. However, even if you map your domain name to the website, the default URLs described above will still work. So if you stop paying for the domain name, your website will still work as long as you link to the default URLs.
+We will see how to simplify the URL and use custom domain names in a later lesson.
 
 
 ## Setting up Pages for a GitHub repository
@@ -310,4 +293,4 @@ To link from the Virginia folklore to the Maine folklore page, use
 [next page: Using themes and HTML markup with GitHub Pages](../pages-themes/)
 
 ----
-Revised 2021-09-13
+Revised 2021-09-30
