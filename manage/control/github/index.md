@@ -43,7 +43,7 @@ Instructor (Steve Baskauf) [office hours information](https://www.library.vander
 | Sep 7 | 1 | Setting up GitHub pages and basic Markdown | [lesson webpage](pages/) |
 | Sep 14 | 2 | Choosing a canned theme and HTML elements | [lesson webpage](pages-themes/) |
 | Sep 28 | 3 | Using remote themes and modifying the CSS | [lesson webpage](pages-remotes/) |
-| Oct 5 | 4 | Setting up a custom domain and build-your-website work session |  |
+| Oct 5 | 4 | Setting up a custom domain and build-your-website work session | [lesson webpage](pages-urls/) |
 
 
 ## Beginners Lessons - not offered in fall of 2021 
@@ -93,4 +93,4 @@ The following pages provide information for developing basic skills with GitHub.
 [Using GitHub to manage projects](https://heardlibrary.github.io/digital-scholarship/manage/control/github/projects/)
 
 ----
-Revised 2021-09-23
+Revised 2021-09-30

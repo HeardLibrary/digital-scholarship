@@ -14,11 +14,11 @@ Creating an effective website is only one important aspect of reaching your audi
 
 **Domain name** The domain name is the last two pieces in the first part of a URL. For example, `vanderbilt.edu` is the domain name for Vanderbilt University's websites and it's composed of the *primary domain* `vanderbilt` and the *top-level domain* `.edu`.
 
-**Subdomain** A subdomain is an optional third piece in the first part of a URL. For example, the subdomain `library` is a subdomain of `vanderbilt.edu` used to form the subdomain name `library.vanderbilt.edu`. A common subdomain for websites is `www` (for World Wide Web) and it usually is used for the primary website of an organization, for example `www.vanderbilt.edu`. Domain name owners have the ability to create many subdomains. In the GitHub pages system, the subdomain is assigned as the user account name and appended to `github.io`. 
+**Subdomain** A subdomain is an optional third piece in the first part of a URL. For example, the subdomain `library` is a subdomain of `vanderbilt.edu` used to form the subdomain name `library.vanderbilt.edu`. A common subdomain for websites is `www` (for World Wide Web) and it usually is used for the primary website of an organization, for example `www.vanderbilt.edu`. Domain name owners have the ability to create many subdomains. In the GitHub pages system, the subdomain is assigned as the user account name and prepended to `github.io`. 
 
-**DNS** DNS stands for Domain Name System. It's a decentralized system that associates domain and subdomain names with Internet Protocol (IP) addresses. Because the system is decentralized, it may take some time (up to an hour) for changes made by your DNS provider to proliferate throughout the network. Thus, changes that you make will not immediately be visible when you test them in a browser.
+**DNS** DNS stands for Domain Name System. It's a decentralized system that associates domain and subdomain names with Internet Protocol (IP) addresses. Because the system is decentralized, it may take some time (up to an hour) for changes made by your DNS provider to proliferate throughout the network. Thus, changes that you make may not immediately be visible when you test them in a browser.
 
-**DNS provider** A DNS provider is a company that manages domain names for users. When you "buy" a domain name, your DNS provider takes care of the technical details of associating your domain name and any subdomains with the actual place where the website is hosted. For example, you may have acquired a domain name from GoDaddy and are hosting your website on GitHub. You would go into the GoDaddy system to map your domain name to the actual website location at GitHub. In some cases, the same provider will host the website and manage the DNS. 
+**DNS provider** A DNS provider is a company that manages domain names for users. When you "buy" a domain name, your DNS provider takes care of the technical details of associating your domain name and any subdomains with the actual place where the website is hosted. For example, you may have acquired a domain name from GoDaddy and are hosting your website on GitHub. You would go into the GoDaddy system to map your domain name to the actual website location at GitHub. In some cases, the same provider will both host the website and manage the DNS. 
 
 # Site URL options
 
@@ -40,7 +40,7 @@ Website URL pattern `https://accountname.github.io/repository/path`
 
 The implication is that if you are going to have a meaningful URL for your site without paying for a custom domain, you would like to have both account and repository names that tell the users something about your site. For example, if your name was Junita Schmidt and you were creating you lab website, you might try to get the GitHub account name "schmidtresearch" and set up your website in a repo named "lab". That would make the URL for your web homepage: `https://schmidtresearch.github.io/lab/`.
 
-This is not optimal, since it requires users to include the subpath `/lab/` in addition to the subdomain name.
+This URL isn't great, since it requires users to include the subpath `/lab/` in addition to the subdomain name.
 
 ## Simplifying the URL by dropping the repository name
 
@@ -56,6 +56,7 @@ Since you can only have one repository named `account.github.io`, you can drop o
 
 If you are using this method, then you would want to have a GitHub account name that is memorable for users. In the previous lab website, Dr. Schmidt might try to set up a GitHub account named `schmidtlab` so that her website homepage could be at the URL `https://schmidtlab.github.io`.
 
+Unfortunately, the great repository name that you want to use might already have been taken by another user. In that case, you need to think of another good name that isn't taken (the free option) or pay for a custom domain name.
 
 ## Using a custom domain name
 
@@ -63,11 +64,11 @@ If you have purchased your own domain name, then it doesn't matter what your acc
 
 It is a common practice to map both the apex domain name and the `www` subdomain so that they will lead to the home page of the website. The typical behavior is that if a user enters `example.com` into a browser, they are automatically redirected to `www.example.com`. Try it with <https://vanderbilt.edu> and <https://google.com>. It is highly recommended that you configure your GitHub pages site to behave in this way, unless you plan to use a subdomain other than `www` for your website (e.g. `blog.example.com`). 
 
-The [instructions for using a custom domain name with a GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) give the complete setup details. The particular details for configuring the `www` subdomain and the apex domain to point to the same page are [here]. 
+The [instructions for using a custom domain name with a GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) give the complete setup details. The particular details for configuring the `www` subdomain and the apex domain to point to the same page are [here](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain-and-the-www-subdomain-variant). 
 
 ** NOTE:** *The following instructions are boiled down from the GitHub Pages help pages and have not been thoroughly tested. So if things don't work as described below, please fall back to the full GitHub pages instructions linked above.*
 
-In brief, after you have set up your GitHub pages website, go through the following steps. As an example, we will assume that our researcher has purchased the domain name `junitaschmidt.info` to use with the GitHub pages site set up in the `lab` repo of her `schmidtresearch` GitHub account. NOTE: Do the setup on GitHub first before you make any changes at your DNS provider's site.
+In brief, after you have set up your GitHub pages website, go through the following steps. As an example, we will assume that our researcher has purchased the domain name `junitaschmidt.info` to use with the GitHub pages site set up in the `lab` repo of her `schmidtresearch` GitHub account. NOTE: Be sure to do the setup on GitHub (steps 1 and 2) first before you make any changes at your DNS provider's site (steps 3 to 5).
 
 1\. Go to the settings page for your website's repository and click on the `Pages` link in the left navigation bar (the same place you went to set up the site in the first place.)
 
@@ -91,11 +92,11 @@ After this step, your apex domain should be connected to your GitHub site (i.e. 
 
 5\. To enable the `www` subdomain, continue editing records in your DNS provider's website. Create a `CNAME` record with a value that is the subdomain of the site. Juanita would use `schmidtresearch.github.io` (without the repo name subpath). After this is complete, both `junitaschmidt.info` and `www.junitaschmidt.info` should cause the user to land on the GitHub pages site at `schmidtresearch.github.io/lab/`. 
 
-6\. Go to GitHub Desktop and pull the repository to get the DNS configuration updated on your local drive.
+6\. Go to GitHub Desktop and pull the repository to download the DNS configuration file to your local drive.
 
 7\. You should enable *secure HTTP* (HTTPS) for your website. Near the bottom of the GitHub Pages settings page, there is a checkbox for `Enforce HTTPS`. When you first set up the custom domain, this option will be grayed out. After about an hour or so, it should become available. At that point check the box to enable it.  Typically, users just type the domain (or subdomain) name into a browser, but if they include the protocol prefix, they will use `https://` instead of `http://` once this option is enabled.
 
-You may be wondering how the connection is made to the correct repository if it wasn't specified in the information given to the DNS provider. The information given to the DNS provider direct the user to the general GitHub pages server. That server uses information that it has internally (provided from the settings web page) to direct the traffic to the correct user account and repository. Look in the `docs` directory of your site repository. You should see a file called `CNAME` (with no file extension). This file contains your custom domain name and was created when you provided it on the GitHub website. Do not delete or modify this file or your custom domain will stop working. 
+You may be wondering how the connection is made to the correct repository if it wasn't specified in the information given to the DNS provider. The information given to the DNS provider routes the browser to the general GitHub pages server. That server uses information that it has internally (provided from the settings web page) to direct the traffic to the correct user account and repository. Look in the `docs` directory of your site repository. You should see a file called `CNAME` (with no file extension). That file contains your custom domain name and was created when you provided it on the GitHub website. Do not delete or modify this file or your custom domain will stop working. 
 
 ## Troubleshooting
 
