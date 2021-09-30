@@ -6,7 +6,11 @@ breadcrumb: Pages URLs
 
 [previous page: Remote themes and controlling CSS](../pages-remotes/)
 
-# Terminology
+# Controlling the URL of your GitHub pages site
+
+Creating an effective website is only one important aspect of reaching your audience. The URL of your website is part of its branding and makes it easier for users to access the site. A good URL for a website is both memorable and easy to type. In this lesson, we'll talk about ideas for creating a good URL for your GitHub Pages website.
+
+## Terminology
 
 **Domain name** The domain name is the last two pieces in the first part of a URL. For example, `vanderbilt.edu` is the domain name for Vanderbilt University's websites and it's composed of the *primary domain* `vanderbilt` and the *top-level domain* `.edu`.
 
@@ -18,8 +22,13 @@ breadcrumb: Pages URLs
 
 # Site URL options
 
-A good URL for a website is both memorable and easy to type. In this lesson, we'll talk about ideas for creating a good URL for your GitHub Pages website.
+There are three options for controlling the URL of your GitHub Pages website:
 
+- Using the default URL based on the repository name.
+- Using a special repository name that allows you to drop the repository name from the URL.
+- Using a custom domain name that you have purchased from a DNS provider.
+
+Each of these options will be discussed below.
 
 ## The default site URL
 
@@ -48,7 +57,7 @@ Since you can only have one repository named `account.github.io`, you can drop o
 If you are using this method, then you would want to have a GitHub account name that is memorable for users. In the previous lab website, Dr. Schmidt might try to set up a GitHub account named `schmidtlab` so that her website homepage could be at the URL `https://schmidtlab.github.io`.
 
 
-# Using a custom domain name
+## Using a custom domain name
 
 If you have purchased your own domain name, then it doesn't matter what your account and repository names are. When you set up the redirect, it will point directly to the website's source directory and the custom domain name will be followed immediately by the path. 
 
