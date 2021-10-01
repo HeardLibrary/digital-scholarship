@@ -65,11 +65,11 @@ co2$State <- as.factor(co2$State)
 
 # Create bar plots for each state in a separate facet
 ggplot(data = co2, aes(x= "", y=metric_tons, fill = sector)) + # The x variable is a dummy variable
-  geom_bar(stat = "identity", width = 1, color = "black", position = "fill") + # "fill" makes the bars fractional
+  geom_col(width = 1, color = "black", position = "fill") + # "fill" makes the bars fractional
   facet_wrap(~State)
 
 ggplot(data = co2, aes(x= "", y=metric_tons, fill = sector)) +
-  geom_bar(stat = "identity", width = 1, color = "black", position = "fill") +
+  geom_col(width = 1, color = "black", position = "fill") +
   coord_polar(theta = "y") + # use the y variable for the polar coordinate
   facet_wrap(~State) +
   theme_void() # add this to get rid of distracting background and labels
