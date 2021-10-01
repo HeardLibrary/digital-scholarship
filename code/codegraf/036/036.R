@@ -199,7 +199,6 @@ text_labels <- data.frame(date = date_vector, video_index, text = text_vector)
 
 ggplot(data = filtered, aes(x = date, y = video_index)) + 
   geom_tile(aes(fill = video_views)) +
-  #scale_fill_continuous(trans = "log") +
   scale_fill_gradientn(colours=rainbow(6), trans = "log") +
   geom_hline(yintercept=c(29, 82, 129, 167), color = "black") +
   scale_x_date(date_breaks = "1 months", date_labels = "%B") +
