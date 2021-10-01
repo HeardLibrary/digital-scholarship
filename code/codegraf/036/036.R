@@ -13,7 +13,7 @@ library(magrittr)
 
 # Reversing axes
 
-lion_noses <- read_csv("https://whitlockschluter.zoology.ubc.ca/wp-content/data/chapter17/chap17e1LionNoses.csv")
+lion_noses <- read.csv("https://whitlockschluter.zoology.ubc.ca/wp-content/data/chapter17/chap17e1LionNoses.csv")
 
 ggplot(data = lion_noses, aes(x = proportionBlack, y = ageInYears)) +
   geom_point() +
