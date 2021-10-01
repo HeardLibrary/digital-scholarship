@@ -1,6 +1,7 @@
 # Run once only
 install.packages("maps")
 
+# Run every time
 library(tidyverse)
 library(magrittr)
 
