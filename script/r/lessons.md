@@ -70,7 +70,7 @@ The topics below are provisional and subject to change
 | Sep 17 | 3 | stats: binning, distributions, error bars | [lesson webpage](../../codegraf/034/) |
 | Sep 24 | 4 | displaying complex data: arranging plots, grouping, and facets | [lesson webpage](../../codegraf/035/) |
 | Oct 1 | 5 | maps, coordinate systems, axis transformations | [lesson webpage](../../codegraf/036/)  |
-| Oct 8 (room 800BB) | 6 | interactive and online viz with Shiny |  |
+| Oct 8 (room 800BB) | 6 | interactive ggplots with Shiny | [lesson webpage](../../codegraf/037/)  |
 
 
 # R Resources
