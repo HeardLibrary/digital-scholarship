@@ -29,9 +29,7 @@ The DiSC office also provides [lessons for learning R](http://vanderbi.lt/r) and
 
 Wednesdays from 1:00 PM - 2:00 PM Central (US) Time (starting Oct 20). 
 
-**Due to the large number of registrants, we will be holding the first session in the Community Room of the Central Library.** Based on the number of attendees, I'll decide whether or not to hold the subsequent sessions in the Central Library Poetry Room (612A) as planned.
-
-To get to the Community Room, turn right after entering the front door of the Central Library building. Walk all the way to the end of the hall and the Community Room is the large room on your left. **Note:** I have been told that people with VUMC staff IDs are unable to swipe into the Central Library. (I think Medical School faculty, staff, and grad students can get in.)  If you are in this situation, you can participate by Zoom, or contact me at [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu) to figure out a method for you to get in.
+Venue: Central Library Poetry Room (612A). **Note:** I have been told that people with VUMC staff IDs are unable to swipe into the Central Library. (I think Medical School faculty, staff, and grad students can get in.)  If you are in this situation, you can participate by Zoom, or contact me at [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu) to figure out a method for you to get in.
 
 Please register using this Zoom registration link even if you plan to attend in-person. This will give you the opportunity to participate by Zoom if you can't make one of the live sessions. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJUlcu2gqDosHtfmivBsEfJXfZrQ9z8_DRuk)
 
@@ -72,4 +70,4 @@ TBD
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2021-08-23
+Revised 2021-10-20
