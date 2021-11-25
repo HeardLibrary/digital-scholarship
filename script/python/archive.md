@@ -65,12 +65,12 @@ Dr. Mishra recommends the book *Python for Data Analysis - Data Wrangling with P
 | Oct 20 | 2 | Complex data structures and functions |  [lesson videos](../../codegraf/021/) (30 min)  |
 | Oct 27 | 3 | Reading and writing CSV files |  [lesson videos](../../codegraf/022/) (34 min)  |
 | Nov 3 | 4 | Pandas Series and DataFrames: vectorized programming |  [lesson videos](../../codegraf/008/) (61 min but not all videos apply to every user)  |
-| Nov 10 | 5 | Basic data wranging with Pandas DataFrames (first half) |  [lesson videos](../../codegraf/009/) (75 min both halves)  |
-| Nov 17 | 6 | Basic data wranging with Pandas DataFrames (second half) | continue with previous videos |
+| Nov 10 | 5 | Basic data wranging with Pandas DataFrames (first half) |  [lesson videos](../../codegraf/009a/) (40 min)  |
+| Nov 17 | 6 | Basic data wranging with Pandas DataFrames (second half) |  [lesson videos](../../codegraf/009b/) (35 min) |
 
 --------------------
 
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2021-01-13
+Revised 2021-11-25
