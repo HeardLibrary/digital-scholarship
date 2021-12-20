@@ -22,25 +22,25 @@ Grant funding agencies are increasingly requiring applicants to submit a data ma
 
 ## Research data management at Vanderbilt
 
-There are a number of units around Vanderbilt that provide resources to aid in research data management. Here are descriptions of those units (based on information provided during a panel session hosted by the [Digital Commons](https://www.vanderbilt.edu/provost/1101-19th-ave/digital-commons/) on 2021-11-01:)
+There are a number of units around Vanderbilt that provide resources to aid in research data management. Here are descriptions of those units (based on information provided during a panel session hosted by the [Digital Commons](https://www.vanderbilt.edu/provost/1101-19th-ave/digital-commons/) on 2021-11-01):
 
-### Digital Scholarship and Scholarly Communications (DiSC) office of the Vanderbilt Libraries
+### [Digital Scholarship and Scholarly Communications (DiSC) office of the Vanderbilt Libraries](https://www.library.vanderbilt.edu/disc/)
 
 Provides [workshops and tutorials](https://www.library.vanderbilt.edu/disc/workshops) on data management best practices and tools such as GitHub, R, Python, Open Science Framework (OSF). Operates Vanderbilt's [Institutional Repository](https://ir.vanderbilt.edu/). Provides consultations on data management tools, data management plans, and on using the [DMPTool](https://heardlibrary.github.io/digital-scholarship/manage/planning/#data-management-plan-tool-dmp-tool). Can assist with the selection of an appropriate repository for your data.
 
-### Research IT and Vanderbilt IT
+### [Research IT](https://research.vanderbilt.edu/about/research-it/) and Vanderbilt IT
 
 [Research IT](https://research.vanderbilt.edu/about/research-it/) can assist with development of Data Use Agreements (DUA) in coordination with the [Sponsored Programs Administration](https://www.vanderbilt.edu/sponsoredprograms/) and [Vanderbilt Information Technology](https://it.vanderbilt.edu/). Can assist with access to dedicated work stations, on-premises storage through the [Advanced Computing Center for Research and Education (ACCRE) facility](https://www.vanderbilt.edu/accre/), and cloud storage via Amazon Web Services (AWS).
 
-### Data Science Institute
+### [Data Science Institute](https://www.vanderbilt.edu/datascience/)
 
 Faculty, staff and students can schedule a [one-hour consultation with DSI Data Scientists](https://calendly.com/dsi-data-science-team) to discuss research questions with [Data Science Institute](https://www.vanderbilt.edu/datascience/) consultants. Areas of focus: machine learning, deep learning, big data, data science. Provides [periodic workshops](https://www.vanderbilt.edu/datascience/events/data-science-workshops/) on data science tools and techniques. The DSI can also assist with setting up a public-facing machine-learning model.
 
-### Office of Data and Strategic Analytics
+### [Office of Data and Strategic Analytics](https://www.vanderbilt.edu/pie/)
 
 [Provides resources for public data visualization and analysis](https://www.vanderbilt.edu/pie/).
 
-### Redcap
+### [Redcap](https://projectredcap.org/)
 
 Secure survey and storage system free to all Vanderbilt and Meharry users. Visit [projectredcap.org](https://projectredcap.org/) for more information. 
 
