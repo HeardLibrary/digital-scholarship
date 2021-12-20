@@ -24,7 +24,7 @@ Grant funding agencies are increasingly requiring applicants to submit a data ma
 
 There are a number of units around Vanderbilt that provide resources to aid in research data management. Here are descriptions of those units (based on information provided during a panel session hosted by the [Digital Commons](https://www.vanderbilt.edu/provost/1101-19th-ave/digital-commons/) on 2021-11-01):
 
-### [Digital Scholarship and Scholarly Communications (DiSC) office of the Vanderbilt Libraries](https://www.library.vanderbilt.edu/disc/)
+### **[Digital Scholarship and Scholarly Communications (DiSC) office of the Vanderbilt Libraries](https://www.library.vanderbilt.edu/disc/)**
 
 Provides [workshops and tutorials](https://www.library.vanderbilt.edu/disc/workshops) on data management best practices and tools such as GitHub, R, Python, Open Science Framework (OSF). Operates Vanderbilt's [Institutional Repository](https://ir.vanderbilt.edu/). Provides consultations on data management tools, data management plans, and on using the [DMPTool](https://heardlibrary.github.io/digital-scholarship/manage/planning/#data-management-plan-tool-dmp-tool). Can assist with the selection of an appropriate repository for your data.
 
