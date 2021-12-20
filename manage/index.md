@@ -40,7 +40,7 @@ Faculty, staff and students can schedule a [one-hour consultation with DSI Data 
 
 Provides resources for public data visualization and analysis. [Link for more information](https://www.vanderbilt.edu/pie/).
 
- ### Redcap
+### Redcap
 
 Secure survey and storage system free to all Vanderbilt and Meharry users. [Link for more information](https://projectredcap.org/). 
 
