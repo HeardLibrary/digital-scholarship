@@ -16,8 +16,16 @@ Total video time: not yet determined
 
 [Introduction to ggplot](../../032) 25 minutes
 
+Lessons without videos:
+
+- [Controlling asthetics like color and size, labels](../../codegraf/033/)
+- [Stats: binning, distributions, error bars](../../codegraf/034/)
+- [Displaying complex data: arranging plots, grouping, and facets](../../codegraf/035/)
+- [Maps, coordinate systems, axis transformations](../../codegraf/036/)
+- [Interactive ggplots with Shiny](../../codegraf/037/)
+
 ----
 
-Revised 2021-02-25
+Revised 2022-01-02
 
 If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
