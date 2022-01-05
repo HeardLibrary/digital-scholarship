@@ -34,6 +34,21 @@ To download an R script, click on the link.  Then:
 | Nov 13 | 5 | Multiple regression | not available |
 | Nov 20 | 6 | Tests with discontinuous Y | not available |
 
+## Introduction to data visualization with ggplot (Intermediate topic) - Fall 2021
+
+This hands-on lesson series will quickly get you started using the R library `ggplot` to create data visualizations. These lessons assume that you have a basic familiarity with R and RStudio. However, those with no background can still participate by trying and modifying the provided code examples. To visualize your own data, you will want to work through the beginner lessons.
+
+| Working session date | Lesson | Topics | Web pages |
+|---|---|---|---|
+| Sep 3 | 1 | Grammar of Graphics, 3 common geoms, formatting | [lesson videos](../../codegraf/032/) (25 min) |
+| Sep 10 | 2 | controlling asthetics like color and size, labels | [lesson webpage](../../codegraf/033/) |
+| Sep 17 | 3 | stats: binning, distributions, error bars | [lesson webpage](../../codegraf/034/) |
+| Sep 24 | 4 | displaying complex data: arranging plots, grouping, and facets | [lesson webpage](../../codegraf/035/) |
+| Oct 1 | 5 | maps, coordinate systems, axis transformations | [lesson webpage](../../codegraf/036/)  |
+| Oct 8 | 6 | interactive ggplots with Shiny | [lesson webpage](../../codegraf/037/)  |
+
+
+
 --------------------
 
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
