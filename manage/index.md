@@ -22,7 +22,7 @@ Grant funding agencies are increasingly requiring applicants to submit a data ma
 
 ## Research data management at Vanderbilt
 
-There are a number of units around Vanderbilt that provide resources to aid in research data management. Here are descriptions of those units (based on information provided during a panel session hosted by the [Digital Commons](https://www.vanderbilt.edu/provost/1101-19th-ave/digital-commons/) on 2021-11-01):
+There are a number of units around Vanderbilt that provide resources to aid in research data management. Following are descriptions of those units (based on information provided during a panel session hosted by the [Digital Commons](https://www.vanderbilt.edu/provost/1101-19th-ave/digital-commons/) on 2021-11-01). To view videos from that session, visit [this page](https://www.vanderbilt.edu/provost/1101-19th-ave/digital-commons/digital-commons-on-demand-resources/#rdmintro)
 
 ### Digital Scholarship and Scholarly Communications (DiSC) office of the Vanderbilt Libraries
 

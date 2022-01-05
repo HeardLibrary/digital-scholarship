@@ -33,7 +33,7 @@ The DiSC office also provides [lessons for learning R](http://vanderbi.lt/r) and
 
 Because of the uncertainty related to COVID 19, all participants should register through Zoom so that they can participate remotely if necessary. After registering, you will receive a confirmation email containing information about joining the Zoom session. 
 
-[Registration link](https://vanderbilt.zoom.us/meeting/register/tJ0pcu6vrDopG9QzGCe42-KaLdxQA_fKsW-n)
+[Registration link](https://vanderbilt.zoom.us/meeting/register/tJUlcOyvqD0qH9f3v-rKfMFVkOHjcqF0Gur2)
 
 I will be presenting the lessons using Colab notebooks. They behaves very similarly to the popular Jupyter notebooks but do not require any installation. They do require you to have a Google account.
 
