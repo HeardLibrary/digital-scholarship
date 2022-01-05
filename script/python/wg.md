@@ -14,9 +14,7 @@ DiSC Python lessons are provided by the [Digital Scholarship and Communications 
 
 The beginners lessons are generally offered at least once per semester.  See the schedule below for session details.   
 
-During the fall of 2021, we are planning to offer the lessons in-person, although it is also possible to participate via Zoom. Advance registration is required to participate remotely. It is recommended, but not required to participate in-person. To register, go to the link at the appropriate schedule below. After registering, you will receive a confirmation email containing information about joining the Zoom session.
-
-Each lesson includes of a series of videos with a practice Jupyter notebook and homework assignments. The live working sessions provide an opportunity for participants to ask questions about the lesson videos and homework, or to work on the homework with assistance.  
+Each lesson includes of a series of videos with a practice Jupyter/Colab notebook and homework assignments. The live working sessions provide an opportunity for participants to ask questions about the lesson videos and homework, or to work on the homework with assistance.  
 
 The lessons are part of a free, online learning system called [CodeGraf](../../codegraf). You are welcome to work through these lessons or any of the other lesson modules available in CodeGraf on your own at any time (no registration required). To explore all of the lesson modules that are available, visit the [CodeGraf landing page](../../codegraf). 
 
@@ -25,26 +23,30 @@ The DiSC office also provides [lessons for learning R](http://vanderbi.lt/r) and
 [Archive of past lessons](../archive/)
 
 
-## Beginners Lessons - Fall 2021
+## Beginners Lessons - Spring 2022
 
-Wednesdays from 1:00 PM - 2:00 PM Central (US) Time (starting Oct 20). 
+Thursdays from 11:00 AM - noon Central (US) Time (starting March 17). 
 
-Venue: Central Library Poetry Room (612A). **Note:** I have been told that people with VUMC staff IDs are unable to swipe into the Central Library. (I think Medical School faculty, staff, and grad students can get in.)  If you are in this situation, you can participate by Zoom, or contact me at [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu) to figure out a method for you to get in.
+**In-person venue:** Central Library Poetry Room (room 612A). 
 
-Please register using this Zoom registration link even if you plan to attend in-person. This will give you the opportunity to participate by Zoom if you can't make one of the live sessions. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJUlcu2gqDosHtfmivBsEfJXfZrQ9z8_DRuk)
+**Instructor:** Steve Baskauf [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
 
-Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
+Because of the uncertainty related to COVID 19, all participants should register through Zoom so that they can participate remotely if necessary. After registering, you will receive a confirmation email containing information about joining the Zoom session. 
+
+[Registration link](https://vanderbilt.zoom.us/meeting/register/tJ0pcu6vrDopG9QzGCe42-KaLdxQA_fKsW-n)
+
+I will be presenting the lessons using Colab notebooks. They behaves very similarly to the popular Jupyter notebooks but do not require any installation. They do require you to have a Google account.
+
+You are welcome to use desktop Jupyter notebook if you already have it installed, but we will not be spending time going over the installation process. There are some [installation videos](../../codegraf/003/) that you are welcome to watch if you want to do an installation yourself. The practice notebooks are also available as downloadable Jupyter notebooks.
 
 | Working session date | Lesson | Topic | Web page |
 |---|---|---|---|
-| Oct 20 | 1 | Introduction / Installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [installation videos](../../codegraf/003/) (27 min)  |
-| Oct 27 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
-| Nov 3 | 3 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
-| Nov 10 | 4 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
-| Nov 17 | 5 | Loops | [lesson videos](../../codegraf/006b/) (33 min lessons, 61 min including demos) |
-| no session Nov 24 | | (Thanksgiving week) | |
-| Dec 1 | 6 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
-
+| Mar 17 | 1 | Introduction and examples | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) |
+| Mar 24 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
+| Mar 31 | 3 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
+| Apr 7 | 4 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
+| Apr 14 | 5 | Loops | [lesson videos](../../codegraf/006b/) (33 min lessons, 61 min including demos) |
+| Apr 21 | 6 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
 
 
 # Python Resources
@@ -61,7 +63,9 @@ Research IT <https://research.vanderbilt.edu/researchadministration/about/resear
 
 Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 
-## Software Carpentries (cosponsored by DiSC, Office of the Vice Provost for Research, Research IT, ACCRE, and the Data Science Institute)
+## Software Carpentries 
+
+Co-sponsored by DiSC, Office of the Vice Provost for Research, Research IT, ACCRE, and the Data Science Institute
 
 TBD
 
@@ -70,4 +74,4 @@ TBD
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2021-10-20
+Revised 2022-01-05
