@@ -25,11 +25,11 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 
 ## Beginners Lessons - Spring 2022
 
-Thursdays from 11:00 AM - noon Central (US) Time (starting January 20). 
+**Time:** Thursdays from 11:00 AM - noon Central (US) Time (starting January 20). 
 
-In-person venue (starting January 27 unless changed): Central Library Poetry Room - 612A
+**In-person venue** (starting January 27 unless changed): Central Library Poetry Room (room 612A)
 
-Instructor (Steve Baskauf) [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
+**Instructor:** Steve Baskauf [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
 
 Because of the uncertainty related to COVID 19, all participants should register through Zoom so that they can participate remotely if necessary. At least the first lesson will be remote. After that, you may choose to participate either remotely or in-person. After registering, you will receive a confirmation email containing information about joining the Zoom session. 
 
