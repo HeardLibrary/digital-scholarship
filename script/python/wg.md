@@ -25,7 +25,7 @@ The DiSC office also provides [lessons for learning R](http://vanderbi.lt/r) and
 
 ## Beginners Lessons - Spring 2022
 
-Thursdays from 11:00 AM - noon Central (US) Time (starting March 17). 
+**Time:** Thursdays from 11:00 AM - noon Central (US) Time (starting March 17). 
 
 **In-person venue:** Central Library Poetry Room (room 612A). 
 

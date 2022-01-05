@@ -1,43 +1,43 @@
 ---
 permalink: /host/wikidata/wg/
-title: Wikidata Working Group
-breadcrumb: Working Group
+title: Wikidata Workshops
+breadcrumb: workshops
 ---
 
-# Wikidata Working Group
+# DiSC Wikidata Workshops
 
 A shortened link to this page is [vanderbi.lt/wikidata](http://vanderbi.lt/wikidata)
 
-## About the group
+Wikidata is an increasingly popular online database that can be edited by anyone. Although it's related to Wikidata, it is now used as a data source by a wide variety of projects. In this workshop series, we'll learn more about how to edit Wikidata effectively and how to use its data for our own purposes. We will also introduce Wikibase, the platform that supports Wikidata and that can be customized specifically for any data project. 
 
-The Wikidata Working Group is working group of the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/).  This new group is starting up for the first time in the fall of 2019.
+Although this series is intended to be sequential, if you already have experience with some aspects of Wikidata, you are welcome to drop in on individual sessions that interest you.
 
-As a project this semester, we are going to upload Vanderbilt researcher information and publications to [Wikidata](https://www.wikidata.org/) so that it can be visualized using [Scholia](https://tools.wmflabs.org/scholia/).  All sessions are intended to be hands-on, so please bring a laptop.
+## Logistics
+
+**Time:** Thursdays from 1:00 PM - 2:00 PM Central (US) Time (starting March 24). 
+
+**In-person venue:** Central Library Poetry Room (room 612A). 
+
+**Facilitator:** Steve Baskauf [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
+
+Because of the uncertainty related to COVID 19, all participants should register through Zoom so that they can participate remotely if necessary. After registering, you will receive a confirmation email containing information about joining the Zoom session. 
+
+[Registration link](https://vanderbilt.zoom.us/meeting/register/tJ0pcu6vrDopG9QzGCe42-KaLdxQA_fKsW-n)
 
 
-## Venue and time
+## Session schedule - Spring 2022
 
-The Working Group meets on Mondays from 1:10 to 2:00 PM.  Meetings on Sep 30 and beyond will be held on the 6th floor in the Eskind Library Conference Room (room 113).
-
-## Schedule - Fall 2019
-
-| Date | Location | Session | Topic | Notes |
+| Date | Session | Topic | Notes |
 |---|---|---|
-| Sep 9 | Central 800FA | 1 | Introduction to Wikdata | [Notes](../intro/) |
-| Sep 16 | Central 800FA | 2 | Discuss properties and scope of project |  |
-| Sep 23 | N/A |  | **No session** |  |
-| Sep 30 | Eskind 113 | 3 | Build Wikidata schema for researchers |  |
-| Oct 7 | Eskind 113 | 4 | Upload data using OpenRefine | |
-| Oct 14 | Eskind 113 | 5 | TBD | |
-| Oct 21 |  N/A | | **No session** (October break week)| |
-| Oct 28 | Eskind 113 | 6 | TBD | |
-| Nov 4 | Eskind 113 | 7 | TBD | |
-| Nov 11 |  |  | probably no session (Wikiconference) | |
-| Nov 18 | Eskind 113 | 8 | TBD | |
+| Mar 24 | 1 | Editing with the graphical user interface | webpage |
+| Mar 31 | 2 | Use cases and example projects | webpage |
+| Apr 7 | 3 | Beginner SPARQL queries and visualizations | webpage |
+| Apr 14 | 4 | Computer assist tools: Scholia and /missing, QuickStatements, and OpenRefine | webpage |
+| Apr 21 | 5 | Wikibase and WBStack | webpage |
 
 ## Resources
 
 [Links to some Wikidata resources](../)
 
 ----
-Revised 2019-09-17
+Revised 2022-01-05
