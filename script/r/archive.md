@@ -54,4 +54,4 @@ This hands-on lesson series will quickly get you started using the R library `gg
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2021-01-13
+Revised 2022-01-05
