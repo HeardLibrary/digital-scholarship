@@ -41,7 +41,7 @@ You are welcome to use desktop RStudio if you already have it installed, but we 
 
 | Working session date | Lesson | Topic | Web pages |
 |---|---|---|---|
-| Jan 20 | 1 | Introduction, installation troubleshooting | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [example script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/use_case_examples.R) |
+| Jan 20 | 1 | Introduction and examples | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [example script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/use_case_examples.R) |
 | Jan 27 | 2 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (50 min) |
 | Mar 3 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
 | Mar 10 | 4 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
@@ -55,7 +55,7 @@ Here's a [page of R resources](../) that include a number of online lessons for 
 
 [O’Reilly for Higher Education](http://www.library.vanderbilt.edu/eres?id=1676) books and videos (Vanderbilt sign-in required)
 
-[ggplot lessons](../archive/)
+[ggplot lessons](../archive/#introduction-to-data-visualization-with-ggplot-intermediate-topic---fall-2021)
 
 [ICPSR data example](../nlsaah/)
 
@@ -69,7 +69,9 @@ Research IT <https://research.vanderbilt.edu/researchadministration/about/resear
 
 Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 
-## Software Carpentries (cosponsored by DiSC, Office of the Vice Provost for Research, Research IT, ACCRE, and the Data Science Institute)
+## Software Carpentries 
+
+Cosponsored by DiSC, Office of the Vice Provost for Research, Research IT, ACCRE, and the Data Science Institute
 
 TBD
 
