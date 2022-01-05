@@ -30,7 +30,7 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 
 Because of the uncertainty related to COVID 19, all participants should register through Zoom so that they can participate remotely if necessary. At least the first lesson will be remote. After that, you may choose to participate either remotely or in-person. After registering, you will receive a confirmation email containing information about joining the Zoom session. 
 
-[Registration link](https://vanderbilt.zoom.us/meeting/register/tJcuc-yhqz0uEtKkT5itfx22TC9AY9LX1OIV)
+[Registration link](https://vanderbilt.zoom.us/meeting/register/tJUvceqsqjwsH9AQn7LTAXYNJH3i_dDB9Ck-)
 
 Prior to the first lesson, you should sign up for a [GitHub account](https://github.com/) if you don't already have one, and download the [GitHub Desktop software](https://desktop.github.com/) for your computer. You also need a text or code editor to use. I recommend [Atom](https://atom.io/) because of its Markdown preview, but it's fine to use a different one if you prefer.
 
