@@ -41,7 +41,7 @@ You are welcome to use desktop RStudio if you already have it installed, but we 
 
 | Working session date | Lesson | Topic | Web pages |
 |---|---|---|---|
-| Jan 20 | 1 | Introduction and examples | [terminology](../../codegraf/001/) (18 min) / [programming environments](../../codegraf/002/) (50 min) / [example script](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/use_case_examples.R) |
+| Jan 20 | 1 | Introduction and examples | [terminology](../../codegraf/001/) recommended, but optional (18 min) / [programming environments](../../codegraf/002/) recommended, but optional (50 min) / [RStudio Cloud quickstart](../../codegraf/003b/) required ()  |
 | Jan 27 | 2 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (50 min) |
 | Mar 3 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
 | Mar 10 | 4 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
@@ -80,4 +80,4 @@ TBD
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2022-01-05
+Revised 2022-01-06
