@@ -39,7 +39,7 @@ I will be presenting the lessons using Colab notebooks. They behaves very simila
 
 You are welcome to use desktop Jupyter notebook if you already have it installed, but we will not be spending time going over the installation process. There are some [installation videos](../../codegraf/003/) that you are welcome to watch if you want to do an installation yourself. The practice notebooks are also available as downloadable Jupyter notebooks.
 
-| Working session date | Lesson | Topic | Web page |
+| Working session date | Lesson | Topic | Web page (times are total video length) |
 |---|---|---|---|
 | Mar 17 | 1 | Introduction and examples | [terminology](../../codegraf/001/) recommended, but optional (18 min) / [programming environments](../../codegraf/002/) recommended, but optional (50 min) / [Colab quickstart](../../codegraf/003a/) required (14 min) |
 | Mar 24 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
@@ -74,4 +74,4 @@ TBD
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2022-01-06
+Revised 2022-01-07
