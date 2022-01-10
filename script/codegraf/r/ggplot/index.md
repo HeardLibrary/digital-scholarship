@@ -18,14 +18,14 @@ Total video time: not yet determined
 
 Lessons without videos:
 
-- [Controlling asthetics like color and size, labels](../../codegraf/033/)
+- [Controlling asthetics like color and size, labels](../../033/)
 - [Stats: binning, distributions, error bars](../../codegraf/034/)
-- [Displaying complex data: arranging plots, grouping, and facets](../../codegraf/035/)
-- [Maps, coordinate systems, axis transformations](../../codegraf/036/)
-- [Interactive ggplots with Shiny](../../codegraf/037/)
+- [Displaying complex data: arranging plots, grouping, and facets](../../035/)
+- [Maps, coordinate systems, axis transformations](../../036/)
+- [Interactive ggplots with Shiny](../../037/)
 
 ----
 
-Revised 2022-01-02
+Revised 2022-01-10
 
 If you have any questions about these lessons, please contact Steve Baskauf at [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
