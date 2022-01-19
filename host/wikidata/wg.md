@@ -8,7 +8,7 @@ breadcrumb: workshops
 
 A shortened link to this page is [vanderbi.lt/wikidata](http://vanderbi.lt/wikidata)
 
-Wikidata is an increasingly popular online database that can be edited by anyone. Although it's related to Wikidata, it is now used as a data source by a wide variety of projects. In this workshop series, we'll learn more about how to edit Wikidata effectively and how to use its data for our own purposes. We will also introduce Wikibase, the platform that supports Wikidata and that can be customized specifically for any data project. 
+Wikidata is an increasingly popular online database that can be edited by anyone. Although it's related to Wikipedia, it is now used as a data source by a wide variety of projects. In this workshop series, we'll learn more about how to edit Wikidata effectively and how to use its data for our own purposes. We will also introduce Wikibase, the platform that supports Wikidata and that can be customized specifically for any data project. 
 
 Although this series is intended to be sequential, if you already have experience with some aspects of Wikidata, you are welcome to drop in on individual sessions that interest you.
 
@@ -40,4 +40,4 @@ Because of the uncertainty related to COVID 19, all participants should register
 [Links to some Wikidata resources](../)
 
 ----
-Revised 2022-01-05
+Revised 2022-01-19
