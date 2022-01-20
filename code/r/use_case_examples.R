@@ -94,6 +94,7 @@ library(car)
 
 # Load the data and fit a model to it
 ergDframe <- read.csv(file="https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/r/color-anova-example.csv")
+head(ergDframe)
 # Visualize data
 ggplot(ergDframe, aes(color, response)) + 
   geom_boxplot()
@@ -113,7 +114,7 @@ leveneTest(response ~ color, data=ergDframe, center=mean) # Levene's test
 # perform log transformation and fit model to new data
 ergDframe$log <- log(ergDframe$response)
 head(ergDframe)
-model_log <- lm(log ~ color, data = ergDframe)  # fit a linear model to the data
+model_log <- lm(log ~ as.factor(color), data = ergDframe)  # fit a linear model to the data
 
 # test the transformed data for normality
 resid_log <- residuals(model_log)
