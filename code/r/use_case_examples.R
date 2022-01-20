@@ -108,8 +108,13 @@ shapiro.test(resid)
 
 # examine and test for homogeneity of variances
 plot(resid ~ as.factor(ergDframe$color))
+# This next command generates several plots in the Plot pane. You must put your cursor in the Console window
+# and press Enter to advance through all of the plots before moving on to putting your cursor on the next line of code!
 plot(model)
-leveneTest(response ~ color, data=ergDframe, center=mean) # Levene's test
+
+# NOTE! Before running the next line, make sure the Console pane shows the ">" prompt indicating that you have finished 
+# displaying all of the plots.
+leveneTest(response ~ as.factor(color), data=ergDframe, center=mean) # Levene's test
 
 # perform log transformation and fit model to new data
 ergDframe$log <- log(ergDframe$response)
@@ -123,7 +128,10 @@ shapiro.test(resid_log)
 
 # examine transformed data for homogeneity of variances
 plot(resid_log ~ as.factor(ergDframe$color))
+# The same warning applies here as before: you must advance through displaying all of the plots before moving on to the next line.
 plot(model_log)
+
+# Check that the ">" prompt is visible in the Console before running the next line.
 leveneTest(log ~ color, data=ergDframe, center=mean) # Levene's test
 
 # Satisfied with the transformation, so run the ANOVA on the model
