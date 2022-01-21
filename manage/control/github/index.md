@@ -37,7 +37,7 @@ Prior to the first lesson, you should sign up for a [GitHub account](https://git
 | Working session date | Lesson | Topic | Pre-lesson web pages |
 |---|---|---|---|
 | Jan 20 | 1 | Introduction and installation | [background information videos](../../../script/codegraf/015/) (17 min) / [setup](../../../script/codegraf/016/) (16 min) |
-| Jan 27 | 2 | The work cycle | [lesson videos](../../../script/codegraf/018/) (35 min) |
+| Jan 27 | 2 | The work cycle | [lesson videos](../../../script/codegraf/018/) (52 min) |
 | Feb 3 | 3 | Using GitHub to recover from disasters | [lesson videos](../../../script/codegraf/019/) (18 min) |
 | Feb 10 | 4 |  |  |
 | Feb 17 | 5 | Project management | [lesson webpage](projects/)|
