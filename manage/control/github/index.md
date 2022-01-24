@@ -39,8 +39,8 @@ Prior to the first lesson, you should sign up for a [GitHub account](https://git
 | Jan 20 | 1 | Introduction and installation | [background information videos](../../../script/codegraf/015/) (17 min) / [setup](../../../script/codegraf/016/) (16 min) |
 | Jan 27 | 2 | The work cycle | [lesson videos](../../../script/codegraf/018/) (52 min) |
 | Feb 3 | 3 | Using GitHub to recover from disasters | [lesson videos](../../../script/codegraf/019/) (18 min) |
-| Feb 10 | 4 |  |  |
-| Feb 17 | 5 | Project management | [lesson webpage](projects/)|
+| Feb 10 | 4 | Project management I: The issues tracker | lesson webpage |
+| Feb 17 | 5 | Project management II: Colaboration | [lesson webpage](projects/)|
 | Feb 24 | 6 | Building a website with GitHub Pages | [lesson webpage](pages/) |
 
 
