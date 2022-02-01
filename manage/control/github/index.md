@@ -39,8 +39,8 @@ Prior to the first lesson, you should sign up for a [GitHub account](https://git
 | Jan 20 | 1 | Introduction and installation | [background information videos](../../../script/codegraf/015/) (17 min) / [setup](../../../script/codegraf/016/) (16 min) |
 | Jan 27 | 2 | The work cycle | [lesson videos](../../../script/codegraf/018/) (52 min) |
 | Feb 3 | 3 | Using GitHub to recover from disasters | [lesson videos](../../../script/codegraf/019/) (18 min) |
-| Feb 10 | 4 | Project management I: The issues tracker | lesson webpage |
-| Feb 17 | 5 | Project management II: Colaboration | [lesson webpage](projects/)|
+| Feb 10 | 4 | Project management I: The issues tracker | [lesson videos](../../../script/codegraf/041/) (25 min) |
+| Feb 17 | 5 | Project management II: Colaboration | lesson webpage|
 | Feb 24 | 6 | Building a website with GitHub Pages | [lesson webpage](pages/) |
 
 
@@ -62,8 +62,6 @@ The following pages provide information for developing basic skills with GitHub.
 
 [Branching and the Shared Repository model](branch/)
 
-[Using GitHub to manage projects](projects/)
-
 [Forking a repo and the Open Source model](fork/)
 
 ## Managing a website with GitHub Pages
@@ -74,4 +72,4 @@ The following pages provide information for developing basic skills with GitHub.
 - Setting up a custom domain: [lesson webpage](pages-urls/)
 
 ----
-Revised 2022-01-21
+Revised 2022-01-31
