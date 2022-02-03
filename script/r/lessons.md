@@ -43,10 +43,10 @@ You are welcome to use desktop RStudio if you already have it installed, but we 
 |---|---|---|---|
 | Jan 20 | 1 | Introduction and examples | [terminology](../../codegraf/001/) recommended, but optional (18 min) / [programming environments](../../codegraf/002/) recommended, but optional (50 min) / [RStudio Cloud quickstart](../../codegraf/003b/) required (8 min)  |
 | Jan 27 | 2 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (45 min) |
-| Mar 3 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
-| Mar 10 | 4 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
-| Mar 17 | 5 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
-| Mar 24 | 6 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (46 min)  |
+| Feb 3 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
+| Feb 10 | 4 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
+| Feb 17 | 5 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
+| Feb 24 | 6 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (46 min)  |
 
 
 # R Resources
@@ -80,4 +80,4 @@ he March Carpentries event will focus on introductory R and R Studio, followed b
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2022-02-02
+Revised 2022-02-03
