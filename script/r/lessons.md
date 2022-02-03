@@ -71,13 +71,13 @@ Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 
 ## Software Carpentries 
 
-Cosponsored by DiSC, Office of the Vice Provost for Research, Research IT, ACCRE, and the Data Science Institute
+In coordination with the Office of the Vice Provost for Research, Research IT Services, Data Science Institute, and ACCRE, the DiSC office is co-sponsoring another Software Carpentries event to be held on March 10th and 11th. The Carpentries are designed to teach faculty and students introductory research computing skills, reproducible research, and data visualization and analysis. The full-day events are hands-on in nature, as students follow along live-coding exercises that progressively build.
 
-TBD
+he March Carpentries event will focus on introductory R and R Studio, followed by Geographic Information Systems with R/RStudio. Registration is free, but attendees should plan to be present for the entire workshop as the content builds on itself. [Additional information and registration are available here.](https://www.eventbrite.com/e/software-carpentries-reproducible-research-with-r-tickets-243058403227)
 
 --------------------
 
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2022-01-07
+Revised 2022-02-02
