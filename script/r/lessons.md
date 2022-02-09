@@ -27,11 +27,11 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 
 **Time:** Thursdays from 11:00 AM - noon Central (US) Time (starting January 20). 
 
-**In-person venue** (starting January 27 unless changed): Central Library Poetry Room (room 612A). **Note:** I have been told that people with VUMC staff IDs are unable to swipe into the Central Library. (I think Medical School faculty, staff, and grad students can get in.)  If you are in this situation, you can participate by Zoom, or [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu) to figure out a method for you to get in.
+**Venue** As of February 10, these lessons are being offered only remotely via Zoom. 
 
 **Instructor:** Steve Baskauf [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
 
-Because of the uncertainty related to COVID 19, all participants should register through Zoom so that they can participate remotely if necessary. At least the first lesson will be remote. After that, you may choose to participate either remotely or in-person. After registering, you will receive a confirmation email containing information about joining the Zoom session. 
+After registering, you will receive a confirmation email containing information about joining the Zoom session. 
 
 [Registration link](https://vanderbilt.zoom.us/meeting/register/tJ0pcu6vrDopG9QzGCe42-KaLdxQA_fKsW-n)
 
@@ -80,4 +80,4 @@ he March Carpentries event will focus on introductory R and R Studio, followed b
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2022-02-03
+Revised 2022-02-09
