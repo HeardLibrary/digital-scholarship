@@ -20,7 +20,7 @@ The other major reason for forking is as a means to contribute to a project for 
 
 <img src="../images-ways/open-source-model.png" alt="open source model diagram"/>
 
-In this model, you fork the project repository to your own account using the GitHub website.  You can then clone the forked repository to your desktop as you would any other repo.  Typically you would create a working branch on the local copy of the repo, edit the documents, then push the changes to GitHub.  From the GitHub website, you can then create pull requests asking the repository owners to consider pulling your recommended changes back into the original project. The request can be to pull the changes from a branch of the fork into the master of the organizational repo, although there are other possibilities depending on what's conventional practice for the organization.  In the simplified example below, the online editor is used to directly edit a file on the master of the fork.  
+In this model, you fork the project repository to your own account using the GitHub website.  You can then clone the forked repository to your desktop as you would any other repo.  Typically you would create a working branch on the local copy of the repo, edit the documents, then push the changes to GitHub.  From the GitHub website, you can then create pull requests asking the repository owners to consider pulling your recommended changes back into the original project. The request can be to pull the changes from a branch of the fork into the main branch of the organizational repo, although there are other possibilities depending on what's conventional practice for the organization.  In the simplified example below, the online editor is used to directly edit a file on the main branch of the fork.  
 
 Because this process involves forking followed by pull requests, it's known as the ["fork and pull" model](https://help.github.com/articles/about-collaborative-development-models/) of collaboration.
 
@@ -50,7 +50,7 @@ In order to make a pull reqest, we need to switch from the GitHub site of the fo
 
 <img src="../images-fork/compare-changes.png" style="border:1px solid black">
 
-Creating a pull request from a fork is a bit more complicated than a pull request from a branch because we can choose to merge from any branch in the forked repository to any branch in any other repository (including another fork) that's based on the same original repo.  In this case the situation is simple, since we are pulling from the master branch in the fork to the master branch in the original repo.  If the edits were made in a working branch (more typical for a major development), at this point you would make a selection of the appropriate branch from the dropdowns.  
+Creating a pull request from a fork is a bit more complicated than a pull request from a branch because we can choose to merge from any branch in the forked repository to any branch in any other repository (including another fork) that's based on the same original repo.  In this case the situation is simple, since we are pulling from the main branch in the fork to the main branch in the original repo.  If the edits were made in a working branch (more typical for a major development), at this point you would make a selection of the appropriate branch from the dropdowns.  
 
 The term *head* is used for the source branch/repo/account and *base* is used for the target branch/repo/account.  To avoid any confusion, pay attention to the direction that the arrow is pointing in the dropdowns used to select branches and repos.  Click the `Create pull request` button to begin the pull request.
 
@@ -83,4 +83,4 @@ FYI for Good Place fans, this is a forking page...
 <iframe src="https://giphy.com/embed/l3mZhWr9Eltm4c4xi" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/thegoodplace-season-1-episode-5-l3mZhWr9Eltm4c4xi">via GIPHY</a></p>
 
 ----
-Revised 2019-10-07
+Revised 2022-02-09
