@@ -4,7 +4,7 @@ title: Forking a repo and the Open Source model
 breadcrumb: forking
 ---
 
-[previous page: managing projects](../projects/)
+[return to collaborative project management on GitHub](../../../script/codegraf/042/)
 
 # Forking a Repo and the Open Source Model
 
@@ -76,11 +76,11 @@ Note that deleting the fork will have no effect on the original repository.  Cau
 
 In summary, the process of making pull requests to move changes into the organizational repository from a forked repository is very similar to pulling in changes from a fork within the same repository.  The main difference is that there are more options for selecting the repository and forks to be used both at the head and base of the merge.
 
-[next page: GitHub Pages websites](../pages/)
+[return to collaborative project management on GitHub](../../../script/codegraf/042/)
 
 FYI for Good Place fans, this is a forking page...
 
 <iframe src="https://giphy.com/embed/l3mZhWr9Eltm4c4xi" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/thegoodplace-season-1-episode-5-l3mZhWr9Eltm4c4xi">via GIPHY</a></p>
 
 ----
-Revised 2022-02-09
+Revised 2022-02-10
