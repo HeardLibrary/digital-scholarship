@@ -4,7 +4,7 @@ title: Protected branches on GitHub
 breadcrumb: protected
 ---
 
-[return to collaborative project management on GitHub](../../../script/codegraf/042/)
+[return to collaborative project management on GitHub](../../../../script/codegraf/042/)
 
 ## Protected branches
 
@@ -80,7 +80,7 @@ The code owner is designated in a file called `CODEOWNERS` that can be placed in
 
 When code owner reviews are required, pull requests are flagged as requiring code owner review. The code owner is automatically selected as the reviewer. However, administrators can bypass the code owner review requirement (other users cannot).
 
-[return to collaborative project management on GitHub](../../../script/codegraf/042/)
+[return to collaborative project management on GitHub](../../../../script/codegraf/042/)
 
 ----
 Revised 2022-02-10

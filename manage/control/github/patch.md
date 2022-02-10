@@ -4,7 +4,7 @@ title: Creating a patch branch online
 breadcrumb: patch
 ---
 
-[back to Branching and the Shared Repository model](../branch/)
+[return to collaborative project management on GitHub](../../../../script/codegraf/042/)
 
 # Creating and merging a patch branch
 
@@ -61,7 +61,7 @@ This merges the modified, unconflicted branch into the patch branch.  You'll the
 In this example, the conflict arose because I had made edits directly to the master branch.  However, if a team is working on several working branches, it's possible that merging one of the branches into the master will generate a conflict later on when another working branch is ready to be merged.  Although these sorts of conflicts are nearly impossible to avoid altogether, they can be minimized if the features that are being worked on in one branch primarily involve different sets of files than features being developed in a different branch.
 
 
-[back to Branching and the Shared Repository model](../branch/)
+[return to collaborative project management on GitHub](../../../../script/codegraf/042/)
 
 ----
-Revised 2019-10-03
+Revised 2022-02-10
