@@ -8,8 +8,6 @@ breadcrumb: protected
 
 ## Protected branches
 
-The instructions above assume that all collaborators have unrestricted push access to the repository. In order to add a degree of protection to the `main` branch (or any other branch), it can be *protected* by adding additional requirements that make it more difficult to change. For more details, go to [this page](../protected/).
-
 There are a number of [rules that can be put into place](https://docs.github.com/en/github/administering-a-repository/about-protected-branches) to protect a branch. One of the simplest and easiest to implement is [requiring a review](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/approving-a-pull-request-with-required-reviews) before merging. 
 
 <img src="../images-branch/protect-rules.png" style="border:1px solid black">
