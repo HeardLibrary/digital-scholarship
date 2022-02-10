@@ -1,3 +1,9 @@
+---
+permalink: /script/python/projects/ideas/
+title: project ideas
+breadcrumb: ideas
+---
+
 # Generic project ideas
 
 1. Create a game that involves the computer generating a string or numeric value and the user has to guess what it is based on some kind of clues given by the computer.
