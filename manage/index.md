@@ -78,6 +78,8 @@ In response, grant funding agencies in the United States, including the [Nationa
 
 [U.S. Government Open Data](https://www.data.gov/)
 
+[Data infrastructure for social sciences](https://www.nsf.gov/news/special_reports/announcements/020422.jsp)
+
 ## Citation Outcomes
 
 Researchers who share datasets are also seeing increased citations to their work.  One recent study found that
