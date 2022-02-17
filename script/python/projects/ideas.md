@@ -48,3 +48,8 @@ Cli click add to cart. Then click on cart in upper right.
 7. Add your email address, then click Submit Order.
 8. Check your email. First you should get a notification that your order was submitted. In a few minutes, you should get another email saying that you order is complete. Click the `Download` link in the email and save the file somewhere you can find it.
 
+## Plot types
+
+mean rainfall by year, mean temperature by year (scatterplots)
+
+mean rainfall by month (bar plot), mean max/min temp by month ("range" plot)
