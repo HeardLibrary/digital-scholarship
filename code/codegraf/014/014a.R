@@ -108,6 +108,15 @@ select(schools_tibble, starts_with("Grade"))
 # Create an additional total_students column at the end by adding males and females
 mutate(schools_tibble, total_students = Male + Female)
 
+# The console display doesn't show all the columns.
+# So to see whether it worked, we can assign the new table to another dataframe and look at it.
+table_with_totals <- mutate(schools_tibble, total_students = Male + Female)
+View(table_with_totals)
+
+# NOTE: we could add the column to the original tibble using generic R commands:
+schools_tibble$'total_students' <-  schools_tibble$Male + schools_tibble$Female
+View(schools_tibble)
+
 # Create a new tibble containing only the new column and others
 small_dataset <- transmute(schools_tibble, `School Name`, total_students = Male + Female, `Economically Disadvantaged`)
 small_dataset
