@@ -43,7 +43,7 @@ wide <- pivot_wider(erg_tidy, names_from = "light_color", values_from = "respons
 # Same as originally downloaded file
 View(wide)
 # Save on local drive
-write_csv(wide, "wide_erg_data.csv", na = "NA", append = FALSE, col_names = TRUE, quote_escape = "double")
+write_csv(wide, "wide_erg_data.csv", na = "NA", append = FALSE, col_names = TRUE, escape = "double")
 
 # This is the other possible form one might use in a notebook
 more_wide <- pivot_wider(erg_tidy, names_from = "block", values_from = "response_voltage")
