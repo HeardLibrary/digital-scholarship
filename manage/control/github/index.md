@@ -50,26 +50,9 @@ Prior to the first lesson, you should sign up for a [GitHub account](https://git
 
 [Terms text description (PDF)](github_terms.pdf)
 
-The following pages provide information for developing basic skills with GitHub.  The first five pages should be studied in order.  The last two are optional extensions. **Note:** these pages repeat content found in the lessons above.
-
-[Ways to use GitHub](ways/)
-
-[Introduction to Git and GitHub](intro/)
-
-[Cloning to your local computer and the GitHub desktop client](clone/)
-
-[Invite collaborators to share a repo](collaborators/)
-
-[Branching and the Shared Repository model](branch/)
+The following page provides supplemental information about an advanced topic not covered in the lessons above.
 
 [Forking a repo and the Open Source model](fork/)
-
-## Managing a website with GitHub Pages
-
-- Setting up GitHub pages and basic Markdown: [lesson webpage](pages/)
-- Choosing a canned theme and HTML elements: [lesson webpage](pages-themes/)
-- Using remote themes and modifying the CSS: [lesson webpage](pages-remotes/)
-- Setting up a custom domain: [lesson webpage](pages-urls/)
 
 ----
 Revised 2022-02-23
