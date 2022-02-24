@@ -38,7 +38,7 @@ Repository URL pattern `https://github.com/accountname/repository/blob/branch/pa
 
 Website URL pattern `https://accountname.github.io/repository/path`
 
-The implication is that if you are going to have a meaningful URL for your site without paying for a custom domain, you would like to have both account and repository names that tell the users something about your site. For example, if your name was Junita Schmidt and you were creating you lab website, you might try to get the GitHub account name "schmidtresearch" and set up your website in a repo named "lab". That would make the URL for your web homepage: `https://schmidtresearch.github.io/lab/`.
+The implication is that if you are going to have a meaningful URL for your site without paying for a custom domain, you would like to have both account and repository names that tell the users something about your site. For example, if your name were Juanita Schmidt and you were creating you lab website, you might try to get the GitHub account name "schmidtresearch" and set up your website in a repo named "lab". That would make the URL for your web homepage: `https://schmidtresearch.github.io/lab/`.
 
 This URL isn't great, since it requires users to include the subpath `/lab/` in addition to the subdomain name.
 
@@ -66,13 +66,11 @@ It is a common practice to map both the apex domain name and the `www` subdomain
 
 The [instructions for using a custom domain name with a GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) give the complete setup details. The particular details for configuring the `www` subdomain and the apex domain to point to the same page are [here](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain-and-the-www-subdomain-variant). 
 
-** NOTE:** *The following instructions are boiled down from the GitHub Pages help pages and have not been thoroughly tested. So if things don't work as described below, please fall back to the full GitHub pages instructions linked above.*
-
 In brief, after you have set up your GitHub pages website, go through the following steps. As an example, we will assume that our researcher has purchased the domain name `junitaschmidt.info` to use with the GitHub pages site set up in the `lab` repo of her `schmidtresearch` GitHub account. NOTE: Be sure to do the setup on GitHub (steps 1 and 2) first before you make any changes at your DNS provider's site (steps 3 to 5).
 
 1\. Go to the settings page for your website's repository and click on the `Pages` link in the left navigation bar (the same place you went to set up the site in the first place.)
 
-2\. In the `Custom domain` section, enter your domain name (without `www`). Juanita would enter `junitaschmidt.info`. Then click `Save`.
+2\. In the `Custom domain` section, enter your domain name (without `www`). Juanita would enter `juanitaschmidt.info`. Then click `Save`.
 
 3\. Log in to your DNS provider. Navigate to the place where you can manage your DNS (page names will differ depending on the provider). 
 
@@ -88,9 +86,9 @@ In brief, after you have set up your GitHub pages website, go through the follow
 185.199.111.153
 ```
 
-After this step, your apex domain should be connected to your GitHub site (i.e. `junitaschmidt.info` should lead to the website at `schmidtresearch.github.io/lab/`)
+After this step, your apex domain should be connected to your GitHub site (i.e. `juanitaschmidt.info` should lead to the website at `schmidtresearch.github.io/lab/`)
 
-5\. To enable the `www` subdomain, continue editing records in your DNS provider's website. Create a `CNAME` record with a value that is the subdomain of the site. Juanita would use `schmidtresearch.github.io` (without the repo name subpath). After this is complete, both `junitaschmidt.info` and `www.junitaschmidt.info` should cause the user to land on the GitHub pages site at `schmidtresearch.github.io/lab/`. 
+5\. To enable the `www` subdomain, continue editing records in your DNS provider's website. Create a `CNAME` record with a value that is the subdomain of the site. Juanita would use `schmidtresearch.github.io` (without the repo name subpath). After this is complete, both `junitaschmidt.info` and `www.juanitaschmidt.info` should cause the user to land on the GitHub pages site at `schmidtresearch.github.io/lab/`. 
 
 6\. Go to GitHub Desktop and pull the repository to download the DNS configuration file to your local drive.
 
@@ -117,4 +115,4 @@ Even if you map a custom domain name to the website, the default URLs we have be
 For example, if Juanita stops paying for `junitaschmidt.info`, her website will still be available at `schmidtresearch.github.io/lab/`
 
 ----
-Revised 2021-09-30
+Revised 2022-02-23

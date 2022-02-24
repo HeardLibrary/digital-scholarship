@@ -41,7 +41,7 @@ Prior to the first lesson, you should sign up for a [GitHub account](https://git
 | Feb 3 | 3 | Using GitHub to recover from disasters | [lesson videos](../../../script/codegraf/019/) (17 min) |
 | Feb 10 | 4 | Project management I: The issues tracker | [lesson videos](../../../script/codegraf/041/) (25 min) |
 | Feb 17 | 5 | Project management II: Colaboration | [lesson videos](../../../script/codegraf/042/) (16 min) |
-| Feb 24 | 6 | Building a website with GitHub Pages | [lesson webpage](pages/) |
+| Feb 24 | 6 | Building a website with GitHub Pages | [lesson videos](../../../script/codegraf/043/) ( min) |
 
 
 # GitHub resources
@@ -72,4 +72,4 @@ The following pages provide information for developing basic skills with GitHub.
 - Setting up a custom domain: [lesson webpage](pages-urls/)
 
 ----
-Revised 2022-02-09
+Revised 2022-02-23
