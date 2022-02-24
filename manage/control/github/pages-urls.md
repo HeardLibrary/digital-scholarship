@@ -1,64 +1,12 @@
 ---
 permalink: /manage/control/github/pages-urls/
-title: Controlling the URL of your GitHub pages site
-breadcrumb: Pages URLs
+title: Using a custom domain name with your GitHub pages site
+breadcrumb: custom URL
 ---
 
-[previous page: Remote themes and controlling CSS](../pages-remotes/)
+[return to: Creating a website with GitHub pages](../../../script/codegraf/043/)
 
-# Controlling the URL of your GitHub pages site
-
-Creating an effective website is only one important aspect of reaching your audience. The URL of your website is part of its branding and makes it easier for users to access the site. A good URL for a website is both memorable and easy to type. In this lesson, we'll talk about ideas for creating a good URL for your GitHub Pages website.
-
-## Terminology
-
-**Domain name** The domain name is the last two pieces in the first part of a URL. For example, `vanderbilt.edu` is the domain name for Vanderbilt University's websites and it's composed of the *primary domain* `vanderbilt` and the *top-level domain* `.edu`.
-
-**Subdomain** A subdomain is an optional third piece in the first part of a URL. For example, the subdomain `library` is a subdomain of `vanderbilt.edu` used to form the subdomain name `library.vanderbilt.edu`. A common subdomain for websites is `www` (for World Wide Web) and it usually is used for the primary website of an organization, for example `www.vanderbilt.edu`. Domain name owners have the ability to create many subdomains. In the GitHub pages system, the subdomain is assigned as the user account name and prepended to `github.io`. 
-
-**DNS** DNS stands for Domain Name System. It's a decentralized system that associates domain and subdomain names with Internet Protocol (IP) addresses. Because the system is decentralized, it may take some time (up to an hour) for changes made by your DNS provider to proliferate throughout the network. Thus, changes that you make may not immediately be visible when you test them in a browser.
-
-**DNS provider** A DNS provider is a company that manages domain names for users. When you "buy" a domain name, your DNS provider takes care of the technical details of associating your domain name and any subdomains with the actual place where the website is hosted. For example, you may have acquired a domain name from GoDaddy and are hosting your website on GitHub. You would go into the GoDaddy system to map your domain name to the actual website location at GitHub. In some cases, the same provider will both host the website and manage the DNS. 
-
-# Site URL options
-
-There are three options for controlling the URL of your GitHub Pages website:
-
-- Using the default URL based on the repository name.
-- Using a special repository name that allows you to drop the repository name from the URL.
-- Using a custom domain name that you have purchased from a DNS provider.
-
-Each of these options will be discussed below.
-
-## The default site URL
-
-In the first lesson, we saw that there was a relationship between the repository name and the URL at which the website pages will be displayed. Here's the pattern:
-
-Repository URL pattern `https://github.com/accountname/repository/blob/branch/path`
-
-Website URL pattern `https://accountname.github.io/repository/path`
-
-The implication is that if you are going to have a meaningful URL for your site without paying for a custom domain, you would like to have both account and repository names that tell the users something about your site. For example, if your name were Juanita Schmidt and you were creating you lab website, you might try to get the GitHub account name "schmidtresearch" and set up your website in a repo named "lab". That would make the URL for your web homepage: `https://schmidtresearch.github.io/lab/`.
-
-This URL isn't great, since it requires users to include the subpath `/lab/` in addition to the subdomain name.
-
-## Simplifying the URL by dropping the repository name
-
-It's possible to use only the subdomain name as the root URL for the website, and eliminate the subpath for the repository name. 
-
-The trick is to name the repository as the eventual subdomain name when the website is rendered. Here is an example. I have a repository named `baskaufs.github.io`: 
-
-<https://github.com/baskaufs/baskaufs.github.io>
-
-To go to the website homepage, I can simply enter <https://baskaufs.github.io> without any additional path.  If I want to go to the page within the repo that has the path [/civil-war/about.htm](https://github.com/baskaufs/baskaufs.github.io/blob/master/civil-war/about.htm) within that repository, I can simply use the URL <https://baskaufs.github.io/civil-war/about.htm>, that is, the subdomain name followed directly by the path.
-
-Since you can only have one repository named `account.github.io`, you can drop only drop the repository name for one website in the account. 
-
-If you are using this method, then you would want to have a GitHub account name that is memorable for users. In the previous lab website, Dr. Schmidt might try to set up a GitHub account named `schmidtlab` so that her website homepage could be at the URL `https://schmidtlab.github.io`.
-
-Unfortunately, the great repository name that you want to use might already have been taken by another user. In that case, you need to think of another good name that isn't taken (the free option) or pay for a custom domain name.
-
-## Using a custom domain name
+# Using a custom domain name with your GitHub Pages website
 
 If you have purchased your own domain name, then it doesn't matter what your account and repository names are. When you set up the redirect, it will point directly to the website's source directory and the custom domain name will be followed immediately by the path. 
 
@@ -113,6 +61,10 @@ dig cname www.junitaschmidt.info
 Even if you map a custom domain name to the website, the default URLs we have been using all along will still work. So if you stop paying for the domain name, your website will still work as long as you link to the default URLs. 
 
 For example, if Juanita stops paying for `junitaschmidt.info`, her website will still be available at `schmidtresearch.github.io/lab/`
+
+----
+
+[return to: Creating a website with GitHub pages](../../../script/codegraf/043/)
 
 ----
 Revised 2022-02-23
