@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>My life closed twice before its close (96)</title>
+                <author>Dickinson, Emily</author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>X-Query Working Group</publisher>
+                <pubPlace>Nashville, TN</pubPlace>
+                <date>09-14-2018</date>
+            </publicationStmt>
+            <sourceDesc>
+                <p>From poetry.org</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <head>My life closed twice before its close (96)</head>
+            <lg type="stanza" n="1">
+                <lg type="quatrain" rhyme="abcb">
+                    <l>My life closed twice before its <rhyme label="a">close—</rhyme></l>
+                    <l>It yet remains to <rhyme label="b">see</rhyme></l>
+                    <l>If Immortality <rhyme label="c">unveil</rhyme></l>
+                    <l>A third event to <rhyme label="b">me</rhyme></l>
+                </lg>
+            </lg>
+            <lg type="stanza" n="2" >
+                <lg type="quatrain" rhyme="abcb">
+                    <l>So huge, so hopeless to <rhyme label="a">conceive</rhyme></l>
+                    <l>As these that twice <rhyme label="b">befell.</rhyme></l>
+                    <l>Parting is all we know of <rhyme label="c">heaven,</rhyme></l>
+                    <l>And all we need of <rhyme label="b">hell.</rhyme></l>
+                </lg>
+            </lg>
+        </body>
+    </text>
+</TEI>

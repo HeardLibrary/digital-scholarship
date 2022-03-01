@@ -1,0 +1,403 @@
+---
+title: "Lesson 2: Data structures"
+output: html_notebook
+---
+
+# R Markdown
+
+*R Markdown* is a tool for *literate programming*. Literate programming is a paradigm where execuatable code blocks are mixed with an explanation of how the code works.  Although it's possible to achieve some degree of literate programming by just including comments in your code, tools like R Markdown and Jupyter notebooks allow programmers to include richer content (like images and clickable hyperlinks) in their explanatory content.  
+
+## Viewing R Markdown in RStudio
+
+This document is itself an [R Markdown](http://rmarkdown.rstudio.com) Notebook. To download it, go to [this page](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/r/lesson2.Rmd).
+
+![](https://github.com/HeardLibrary/digital-scholarship/raw/gh-pages/script/r/images/r-markdown-notebook-download.png) 
+
+Right click on the `Raw` button and select `Save link as ...`. Save the notebook somewhere where you can find it.  In R Studio, click the Open button or select the `Open File` option from the `File` menu. Navigate to the place where you saved the file and open it.
+
+When you load the notebook into the editor pane of RStudio, you see the Markdown document markup, which isn't that easy to read.  However, you can render the Markdown in a viewer pane.  
+
+![Selecting Preview in Viewer Pane](https://github.com/HeardLibrary/digital-scholarship/raw/gh-pages/script/r/images/preview-in-viewer.png) 
+
+Drop down the little gear icon to the right of the `Preview` button and select `Preview in Viewer Pant`.  If necessary, click the `Preview` button.  You should see the pretty version of the text in the Viewer pane at the right.  
+
+<img src="https://github.com/HeardLibrary/digital-scholarship/raw/gh-pages/script/r/images/click-to-expand.png" style="border:1px solid black" />
+
+When viewing an R Markdown notebook, the editor pane and Viewer pane are expanded to make them easier to see and the Environment and Console panes are collapsed.  If you want to expand them to see what's going on there, click on the expand icon at the right of their header.
+
+## Running code in an R Markdown notebook
+
+To execute a code chunk, click on the `Run` button (triangle) at the right of the chunk, or place the cursor in the chunk and hold `Command`+`Shift` then press `Return` on Mac or hold `Ctrl`+`Shift` then press `Enter` on Windows.  To execute a single line, place the cursor on the line and press `Command` `Return` (`Ctrl` `Enter`) without pressing the `Shift` key.  
+
+When you execute code within the notebook, the results appear beneath the code. Try executing this example.
+
+```{r}
+animal <- c("frog", "spider", "worm", "bee")
+animal[1]
+```
+
+If configured correctly, R Markdown can also execute chunks of Python code:
+
+```{python}
+string = 'hey dude!'
+print(string)
+```
+
+and console commands:
+
+```{bash}
+ls *.Rmd
+```
+
+The type of command is indicated after the triple backticks above the code block.  
+
+Separate chunks of R code "remember"" what's in the environment from the execution of a previous chunk.  If I've previously run the chunk above that assigns values to `animal`, I can recall a value when I run this chunk:
+
+```{r}
+animal[3]
+```
+
+You can edit the code in a chunk and re-run it to see the effect of your changes. (If you are used to Jupyter notebooks, this behavior is similar to the behavior of code cells in a notebook.)
+
+To clear the output of one or all chunks, go to the `Edit` menu and select `Clear Output` or `Clear All Output`.
+
+To add a new chunk, click the `Insert` button on the toolbar and select `R`.
+
+To refresh the preview of the code in the Viewer pane, click the `Preview` button again.
+
+# R data basics
+
+## Categorizing objects in R
+
+There are two main ways of categorizing objects in R.  Obhects can be categorized by their mode, which represents how they are stored.  Common modes are: numeric, character, list, and functions. We can find the mode of an object using the `mode()` function:
+
+```{r}
+pet <- "rover"
+pie <- 3.14159
+animal <- c("frog", "spider", "worm", "bee")
+mode(pet)
+mode(pie)
+mode(animal)
+```
+
+Objects can also be characterized by their class, which determines how R will process those objects.  
+
+## Sequences
+
+You can generate a sequence of numbers like this:
+
+```{r}
+1:5
+```
+
+Using this simple notation the sequence steps by ones.  You can have the sequence count down by putting the larger number in front of the colon:
+
+```{r}
+10:-2
+```
+
+If you are used to Python, you should notice that the sequence does not end at one value before the final number as it does in Python ranges.
+
+# R data structures
+
+R has a number of data structures that vary by the kinds of things that can be stored in them and their dimensionality (1 dimensional, 2 dimensional, etc.).  We'll learn about four: vectors, lists, data frames, and tibbles.
+
+## Vectors
+
+![Diagram of a vector](https://heardlibrary.github.io/digital-scholarship/script/r/images/vector-diagram.png)
+
+A *vector* is a one-dimensional data structure consisting of items of the same mode.  In R, all data structures are "one based" (counting starts with one) as opposed to "zero-based" languages like Python.
+
+Here's how to assign values to a vector using the "construct" function:
+
+```{r}
+animal <- c("frog", "spider", "worm", "bee")
+```
+
+Expand the Environment pane so that you can see the values in the vector.  Note: in R, it is conventional to use double quotes to define string literals, although single quotes are allowed. 
+
+You can also create a vector of numbers:
+
+```{r}
+myNumbers <- c(1, 3, 6, 10, 15)
+```
+
+When you create a sequence using the colon notation, the result is a vector that is the same as if you used the construct function:
+
+```{r}
+firstVector <- 1:5
+secondVector <- c(1:5)
+
+firstVector
+secondVector
+```
+
+To find the number of items in a vector, use the `length()` function:
+
+```{r}
+length(animal)
+```
+
+
+To append another item to a vector, include the previous vector in the construct function:
+
+```{r}
+animal <- c(animal,"monkey")
+
+animal
+length(animal)
+```
+
+To replace a particular item, reference it by its index:
+
+```{r}
+animal[2] <- "arachnid"
+```
+
+You can refer to part of a vector using a subvector reference like this:
+
+```{r}
+animal[2:4]
+```
+
+The items in the vector that you are extracting are specified by the sequence you put in the square brackets.  (Aside for Python users: unlike Python slices, the last number in the sequence is included in the subvector.  Also remember that that the first item in the vector is 1, not 0 as in Python.)
+
+You can explicitly construct the sequence of items by listing the item numbers.  You can also assign the sequence to a variable and specifiy the items to be extracted with it.
+
+```{r}
+animal[c(4, 1, 3)]
+indexSequence <- 4:1
+animal[indexSequence]
+```
+
+One somewhat surprising thing about R is that individual items are actually vectors with lengths of one. The result is the same whether the item is assigned directly to a variable or assigned by the construct function.  
+
+```{r}
+thingOne <- c("thing")
+thingTwo <- "thing"
+
+thingOne
+thingOne[1]
+thingTwo
+thingTwo[1]
+
+length(thingOne)
+length(thingOne[1])
+length(thingTwo)
+```
+
+R has two built-in values to indicate that something is wrong: `NA` and `NULL`.  
+
+`NA` is used for missing values.  It is an indicator that a value is missing and it can be assigned to a vector as a value.  It has a length of one and you can think of it as a sort of empty item. 
+
+```{r}
+animal[2] <- NA
+animal
+```
+
+`NULL` is used to indicate that there is no value.  It can't be assigned to a vector as a value.  It has a length of zero and and you can think of it as the case of an item that isn't there.
+
+```{r}
+animal[3] <- NULL
+animal
+```
+
+## Lists
+
+![Diagram of a list](https://heardlibrary.github.io/digital-scholarship/script/r/images/list-diagram.png)
+
+A *list* is also a one-dimensional data structure, like a vector. However, the items in a list can be heterogeneous (different modes of items).  In the example above, the list contains two character strings, one number, and one vector. 
+
+Assuming that the `animal` vector is in your environment,  the following command will create the list diagrammed above:
+
+```{r}
+thing <- list(fruitKind="apple", euler=2.71828, vectorData=animal, curse="!@#$%")
+```
+
+Notice that in this list I've assigned the items to the list by name. (It is also possbile to assign names to vector items but that is less common.)
+
+Because the list is complicated, the items composing it are not shown in the Environment pane.  To see all of the list's parts, I can either click on the `thing` entry in the Environment pane, or issue the command:
+
+```{r}
+View(thing)
+```
+
+When I view the list, the description opens as a new tabl in the same pane as the editor.
+
+Items in a list can viewed by either their position or their name.  In contrast to vectors, the index is put in double square brackets.
+
+```{r}
+thing[[3]]
+thing[["euler"]]
+```
+
+A commonly used shorthand method for referring to list items by their names is by separating the list from the name by a dollar sign:
+
+```{r}
+thing$euler
+thing$vectorData
+```
+
+## Factors
+
+A *factor* is a data structure for categorizing data. Its origin comes from experimental design terminology.  In an experiment, each category into which an experimental trial can fall is called a *level*. A factor consists of all of the possible levels that are used to group trials based on that factor. Here is an example of an experiment where plants were grown in wet or dry soil:
+
+| water factor | height (cm) |
+|--------------|-------------|
+| wet          | 25          |
+| wet          | 21          |
+| dry          | 14          |
+| wet          | 13          |
+| dry          | 10          |
+| wet          | 18          |
+
+We can create a vector containing all of the water conditions and another vector containing the heights:
+
+```{r}
+waterConditions <- c("wet", "wet", "dry", "wet", "dry", "wet")
+height <- c(25, 21, 14, 13, 10, 18)
+
+waterConditions
+height
+```
+
+To convert the `weatherConditions` vector into a factor, use the `factor()` function:
+
+```{r}
+waterFactor <- factor(waterConditions)
+
+waterFactor
+```
+
+When we run the code chunk above, we can see two ways that `waterFactor` is different from `waterConditions`:
+
+- the `waterFactor` items are not in quotation marks
+- below the list of items is a summary of the levels, showing that there are only two different categories into which the experimental trials can be grouped.
+
+![Factor vs. vector in the Environment](https://heardlibrary.github.io/digital-scholarship/script/r/images/factor-vs-vector.png)
+
+We can also see by looking at the Environment pane that `waterConditions` is identified as a vector of character strings, while `waterFactor` is identified as a Factor with two levels.  
+
+Factors are stored and processed more efficiently than characters and play a special role as *grouping variables* in statistical tests that require the data to be placed into categorical groups.
+
+## Data frames
+
+![Structure of a data frame](https://heardlibrary.github.io/digital-scholarship/script/r/images/data-frame-diagram.png)
+
+*Data frames* are two dimensional data structures and are one of the most widely used data types in R. One can think of a data frame as a table with rows and columns, with the top row containing column headers that are names describing what's in the columns.
+
+It is helpful to think of a data frame as a sort of combination of lists and vectors. The values in a particular column are like a vector, with the column header for that column containing the vector's name. The set of columns is like a list whose items are vectors.
+
+We can actually create a data frame by first constructing a vector for each column:
+
+```{r}
+group <- c("reptile", "arachnid", "annelid", "insect")  # vector of strings
+animal <- c("frog", "spider", "worm", "bee")
+numberLegs <- c(4,8,0,6)  # vector of numbers
+```
+
+then loading the vectors into the data frame:
+
+```{r}
+organismInfo <- data.frame(group, animal, numberLegs)
+
+organismInfo
+```
+
+By default, R will use the name of each vector as the name for the column in the data frame. Expand the Environment pane to see what happened when you created the vectors and data frame, and click on the data frame listing to see its structure.
+
+We can refer to a particular cell in the table by listing its row followed by its column in brackets, like this:
+
+```{r}
+organismInfo[2,1]
+```
+
+Because the columns of a data frame behave somewhat like list items, the notation for referring to list items by name (dollar sign followed by name) can also be used to refer to columns in a data frame:
+
+```{r}
+organismInfo$animal
+```
+
+and items in that column can be referred to by their position from the top of the column:
+
+```{r}
+organismInfo$animal[4]
+```
+
+One thing that you may have noticed is that when we list values in the data frame that came from the vector of character strings, they are not in quotes and have levels listed below them.  This is because when character data vectors are loaded into a data frame, they are automatically converted to factors.  We can see this by asking about the class of the objects we have been working with:
+
+```{r}
+class(organismInfo)
+class(organismInfo$animal)
+class(organismInfo$numberLegs)
+```
+
+We can also see that the values of the factor are actually not stored as strings, but as numbers:
+
+```{r}
+organismInfo[2,1]
+class(organismInfo[2,1])
+mode(organismInfo[2,1])
+```
+
+By storing the factors as numbers, they can be ordered.  The order of the factors is important in some analyses.
+
+## Tibbles
+
+More recently, the use of R has expanded far beyond statistics, so automatically trasforming character data into a form that is optimal for statistics (i.e. factors) is no longer necessarily desirable in every case. Another two-dimensional data structure, called a tibble, was developed to broaden the use of data frames. When data are read into a tibble, there is never a conversion of data types (strings remain strings). 
+
+Tibbles are not part of the standard R distribution, so to use them you need to load a library called `tidyverse`.  You can create a tibble using the `tibble()` function:
+
+```{r}
+library(tidyverse)
+organismTibble <- tibble(group, animal, numberLegs)
+
+organismTibble
+```
+
+If you compare the output of the `organismTibble` tibble with the output of the `organismInfo` data frame, the column type listed below the column header is `chr` for the tibble and `fctr` for the data frame.  So we can see that when the vectors were loaded into the tibble, their class was NOT changed.  
+
+```{r}
+class(organismTibble)
+class(organismTibble$animal)
+class(organismTibble$numberLegs)
+```
+
+The class of the tibble is listed as both `tbl` (tibble) and `data.frame` (data frame) because a tibble is considered a special kind of data frame. You can also see that the animal column remained characters and was not converted to a factor as was the case when we created the data frame.
+
+# Applying functions
+
+A function is like a machine that transforms what we put into it into something different that comes out.  We pass *arguments* into the function and the function returns values.
+
+![Nykamp DQ, "Function machine f." From Math Insight. http://mathinsight.org/image/function_machine_f  CC BY-NC-SA](https://mathinsight.org/media/image/image/function_machine_f.png)
+
+There are many built-in functions in R. For example, I can take the square root of a number by passing it into the `sqrt()` function. 
+
+```{r}
+x <- 2
+sqrt(x)
+```
+In this case, I passed a single numeric value into the function and got out a single value.  However, recall that in R a variable containing a single value is the same as a vector with a length of one.  What that means is that for many functions, I can pass in a vector containing many items and the function will be applied to every item in the vector.  The output returned from the function is also a vector whose items are in the same order as the input vector.
+
+```{r}
+sqrt(organismInfo$numberLegs)
+```
+
+Other functions may expect a vector input, but output only a single number. The `mean()` function takes the average of the items in a vector and returns a single value.
+
+```{r}
+mean(organismInfo$numberLegs)
+```
+
+R differs from some other languages like Python in that it can automatically perform functions on an entire vector of values without requiring that the code iterate through each item in the vector.
+
+Here is another example using the `nchar()` function that counts the number of characters in a string:
+
+```{r}
+# list the words in the animal column
+organismTibble$animal
+
+# list the count of characters in each word in the column
+nchar(organismTibble$animal)
+```
+

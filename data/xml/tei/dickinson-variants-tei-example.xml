@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>"Tie the strings to my life, my Lord"</title>
+                <author>Dickinson, Emily</author>
+                <editor>Taylor, Michelle</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>XQuery Working Group</publisher>
+                <pubPlace>Nashville, TN</pubPlace>
+                <date>09-21-2018</date>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Information about variants obtained from R. W. Franklin's Poems of Emily
+                    Dickinson: Variorum Edition. Cambridge: Harvard UP, 1998.</p>
+                <witList>
+                    <witness id="#MS">Dickinson, Emily. Fascicle 16 (H53).</witness>
+                    <witness id="#P1896">
+                        <title>Poems by Emily Dickinson</title>
+                        <author>Dickinson, Emily</author>
+                        <pubPlace>Boston, MA</pubPlace>
+                        <date>1896</date>
+                    </witness>
+                </witList>
+            </sourceDesc>
+            <extent>
+                <p>4 quatrains</p>
+            </extent>
+        </fileDesc>
+        <encodingDesc>
+            <p>This poem and its variants were encoded for the purposes of an exercise for the Fall
+                2018 XQuery working group.</p>
+        </encodingDesc>
+    </teiHeader>
+        <text>
+            <body>
+                <lg type="stanza">
+                    <lg type="quatrain" n="1">
+                        <l>Tie the strings to my Life, my Lord,</l>
+                        <l>Then, I am ready to go!</l>
+                        <l>Just a look at the Horses -</l>
+                        <l>Rapid! That will do!</l>
+                    </lg>
+                </lg>
+                <lg type="stanza">
+                    <lg type="quatrain" n="2">
+                        <l>Put me in on the <app><lemma wit="#ms">firmest ></lemma><rdg wit="#ms"
+                                    >tightest </rdg><rdg wit="#ms">highest - </rdg></app>side -</l>
+                        <l>So I shall never fall -</l>
+                        <l>For we must ride to the Judgment -</l>
+                        <l><app><lemma wit="#ms">And it's partly, </lemma><rdg wit="#ms">And it's
+                                    many a mile - </rdg></app>down Hill -</l>
+                    </lg>
+                </lg>
+                <lg type="stanza" n="3">
+                    <lg type="quatrain">
+                        <l>But never I mind the <app><lemma wit="#ms">steepest -</lemma><rdg wit="#ms"
+                                    >Bridges -</rdg></app></l>
+                        <l>And never I mind the Sea -</l>
+                        <l>Held fast in Everlasting Race -</l>
+                        <l>By my own Choice, and Thee -</l>
+                    </lg>
+                </lg>
+                <lg type="stanza" n="4">
+                    <lg type="quatrain">
+                        <l>Good bye to the Life I used to live -</l>
+                        <l>And the World I used to know -</l>
+                        <l>
+                            <app>
+                                <lemma wit="#ms">And kiss the Hills, for me, just once -</lemma>
+                                <rdg wit="#ms">Here's a keepsake for the Hills</rdg>
+                            </app>
+                        </l>
+                        <l><app><lemma wit="#ms">Then </lemma><rdg wit="#ms">Now </rdg><rdg wit="#ms"
+                                    >Then Now </rdg></app>- I am ready to go!</l>
+                    </lg>
+                </lg>
+            </body>
+        </text>
+</TEI>

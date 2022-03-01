@@ -1,0 +1,13 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix orcid: <http://orcid.org/> .
+@prefix mads: <http://www.loc.gov/mads/rdf/v1#> .
+
+orcid:0000-0002-3178-0201 dcterms:created "2014-12-22T22:25:56.900Z"^^xsd:dateTime;
+                          mads:hasAffiliation <http://www.grid.ac/institutes/grid.152326.1>;
+                          rdf:type foaf:Person;
+                          rdfs:label "Julian Hillyer".
+                          

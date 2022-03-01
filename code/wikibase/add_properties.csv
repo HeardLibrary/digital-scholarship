@@ -1,0 +1,7 @@
+Property Label,Datatype,Property Description
+instance of,wikibase-item,rdf type
+project,wikibase-item,What project does this enitiy belong to
+wikidata ID,string,The QID of equvilent Q or P number in wikidata
+dbpedia ID,string,The DBpedia slug id
+LJ Slug ID,string,Legacy LJ identiier 
+LJ square image,url,Square image of person

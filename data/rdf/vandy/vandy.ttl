@@ -1,0 +1,93 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix grid: <http://www.grid.ac/ontology/>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#>.
+@prefix bibo: <http://purl.org/ontology/bibo/>.
+
+<http://orcid.org/0000-0003-2360-0589>
+     madsrdf:hasAffiliation <http://www.grid.ac/institutes/grid.152326.1>;
+     rdfs:label "Shaul Kelner";
+     foaf:givenName "Shaul";
+     foaf:familyName "Kelner";
+     dcterms:created "2017-05-24T13:47:09.768Z"^^xsd:dateTime;
+     dcterms:modified "2017-05-24T13:56:27.187Z"^^xsd:dateTime;
+     a foaf:Person.
+
+<http://orcid.org/0000-0002-3178-0201>
+     madsrdf:hasAffiliation <http://www.grid.ac/institutes/grid.152326.1>;
+     rdfs:label "Julian Hillyer";
+     foaf:givenName "Julian";
+     foaf:familyName "Hillyer";
+     dcterms:created "2014-12-22T22:25:56.900Z"^^xsd:dateTime;
+     dcterms:modified "2017-08-11T21:51:34.631Z"^^xsd:dateTime;
+     a foaf:Person.
+
+<http://dx.doi.org/10.1002/9781118663202.wberen606>
+     dcterms:creator <http://orcid.org/0000-0003-2360-0589>;
+     rdfs:label "Jews in the United States"@en;
+     dcterms:title "Jews in the United States"@en;
+     dcterms:date "2015-12-30";
+     bibo:pageStart "1";
+     bibo:pageEnd "4";
+     a foaf:Document.
+
+<http://dx.doi.org/10.1177/1536504211418463>
+     dcterms:creator <http://orcid.org/0000-0003-2360-0589>;
+     rdfs:label "Let My People Go"@en;
+     dcterms:title "Let My People Go"@en;
+     dcterms:date "2011-08";
+     bibo:volume "10";
+     bibo:pageStart "72";
+     bibo:pageEnd "73";
+     a foaf:Document.
+
+<http://dx.doi.org/10.1353/ajh.2014.0012>
+     dcterms:creator <http://orcid.org/0000-0003-2360-0589>;
+     rdfs:label "Ethnographers and History"@en;
+     dcterms:title "Ethnographers and History"@en;
+     dcterms:date "2014";
+     bibo:volume "98";
+     bibo:pageStart "17";
+     bibo:pageEnd "22";
+     a foaf:Document.
+
+<http://dx.doi.org/10.1016/j.dci.2015.12.006>
+     dcterms:creator <http://orcid.org/0000-0002-3178-0201>;
+     rdfs:label "Insect immunology and hematopoiesis"@en;
+     dcterms:title "Insect immunology and hematopoiesis"@en;
+     dcterms:date "2016-05";
+     bibo:volume "58";
+     bibo:pageStart "102";
+     bibo:pageEnd "118";
+     a foaf:Document.
+
+<http://dx.doi.org/10.1016/j.jinsphys.2017.06.013>
+     dcterms:creator <http://orcid.org/0000-0002-3178-0201>;
+     rdfs:label "Mosquito aging modulates the heart rate and the proportional directionality of heart contractions"@en;
+     dcterms:title "Mosquito aging modulates the heart rate and the proportional directionality of heart contractions"@en;
+     dcterms:date "2017-08";
+     bibo:volume "101";
+     bibo:pageStart "47";
+     bibo:pageEnd "56";
+     a foaf:Document.
+
+<http://www.grid.ac/institutes/grid.152326.1>
+     rdf:type <http://www.grid.ac/ontology/Education>;
+     rdfs:label "Vanderbilt University";
+     grid:establishedYear "1873"^^xsd:gYear;
+     grid:hasWikidataId <http://www.wikidata.org/entity/Q29052>;
+     grid:wikipediaPage <http://en.wikipedia.org/wiki/Vanderbilt_University>;
+     skos:altLabel "Vandy";
+     foaf:homepage <http://www.vanderbilt.edu/>;
+     grid:cityName "Nashville";
+     grid:countryCode "US";
+     grid:countryName "United States";
+     geo:lat "36.144937"^^xsd:float;
+     geo:long "-86.802687"^^xsd:float;
+     a foaf:Organization.
