@@ -25,7 +25,7 @@ In this lesson we introduce a second complex object: *dictionaries*. A dictionar
 - build a list by repeatedly appending additional items to an empty list.
 - describe the actions that occur when several methods are attached sequentially.
 
-Total video time: 33m 13s (60m 57s when practice live coding videos are included)
+Total video time: m s (m s when practice live coding videos are included)
 
 ## Links
 
@@ -34,7 +34,7 @@ Total video time: 33m 13s (60m 57s when practice live coding videos are included
 
 # Dictionaries
 
-![diagram of a dictionary](dictionary.png)
+![diagram of a dictionary](../dictionary.png)
 
 ## Introduction to dictionaries (6m51s)
 
