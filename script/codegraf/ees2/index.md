@@ -277,6 +277,8 @@ where an object is assigned to a variable named `something`, then it is a method
 
 # Practice assignment
 
+**Instructions:** Go to the [practice assignment Colab notebook](https://colab.research.google.com/drive/1EEc8D-hBvXAh9tkZu83fR0jZFQDI2DnM?usp=sharing) and make a copy in your own drive as you did the practice notebook. Put you name in the first text cell and save the notebook.
+
 1. Import the `cos()` function from the math module so that you don't have to specify the module name when you want to use the function. Also import `pi` from the math module in the same way. Write a script to calculate the cosine of pi and also the circumference of a circle with a diameter of 3. If you don't remember how to calculate circumference, Google it.
 2. Modify the previous script to allow the user to input their own diameter. Don't forget that the `input()` function returns strings, not numbers.
 3. When describing angles, Python measures angles in radians, where 180 degrees = pi radian. That is, divide the angle in degrees by 180, then multiply by pi. Since most people aren't familiar with radians, write a script that will allow a user to input an angle in degrees, convert the degrees to radians, then calculate the cosine of the input angle. Test your script with 45 degrees, whose cosine is 0.70710678118 .

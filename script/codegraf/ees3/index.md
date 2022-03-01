@@ -174,6 +174,8 @@ This basically serves as a utility for us and documenting how all of its pieces 
 
 **Practice exercises (without video help)**
 
+**Instructions:** Go to the [practice assignment Colab notebook](https://colab.research.google.com/drive/1wOBPS-Bn17J0YKtXjRcwf-_y8qZHGaj4?usp=sharing) and make a copy in your own drive as you did the practice notebook. Put you name in the first text cell and save the notebook.
+
 1. Create a list that contains the days of the week. Using a `for` loop, print the days of the week.
 2. Use `range()` with a `for` loop that counts by 10 from 10 to 200. Make sure that your first number is 10 and your last number is 200.
 3. Create two lists. The first list should contain the names of the month in order and the second list should contain the number of days in each month in order. Create a `for` loop using `range()` that will step through the numbers 0 to 11. As you iterate through each number, print the corresponding name and number of days for each month, using the index of the list item (for example `name[month_number]` where `month_number` is the iterated index number).
