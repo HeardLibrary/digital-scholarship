@@ -447,11 +447,11 @@ print(too_many)
 
 ## Practice assignment:
 
-**Instructions:**  
-
-
+**Instructions:** Go to the [practice assignment Colab notebook](https://colab.research.google.com/drive/1s7UIiAsfqhb8E3JqEX1zx6eQzwi-qdzs?usp=sharing) and make a copy in your own drive as you did the practice notebook. Put you name in the first text cell and save the notebook.
 
 In each of the scripts that you write, for each variable in the script use a meaningful name that follows the PEP 8 style ("snake case").
+
+When you've finished the script, be sure to save a final time. Click on the Share button in the upper right, and change the `Get link` value to `Anyone on the internet with this lik can view`.  Click on `Copy link` and submit the link to Brightspace as instructed.
 
 1. Create a code cell that assigns a string to a variable, then prints the length of the string.
 2. Create a code cell that allows the user to input two numbers, then prints the difference between them. Don't forget that the `input()` function produces a string that must be turned into a number before subtracting. Write this script two ways: one where the input strings are assigned to variables, then converted into numbers using separate statements, and another where the number conversion is done directly on the output of the `input()` function by nesting the two functions.
