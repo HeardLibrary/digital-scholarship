@@ -23,7 +23,7 @@ Total video time: 33m 35s
 
 ## Links
 
-[Lesson Colab notebook](https://colab.research.google.com/drive/1YxO98U9HbbQsNzeTVmLsWnh0DD8bHxSC)
+[Lesson Colab notebook](https://colab.research.google.com/drive/1SI83Hg3GuTm72nvA61AFQCgFuIdCcDCS?usp=sharing)
 
 
 # The import statement

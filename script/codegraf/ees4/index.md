@@ -22,11 +22,7 @@ Total video time: 44 m 08 s
 
 ## Links
 
-[Lesson Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/006/006c.ipynb)
-
-[Lesson Colab notebook](https://colab.research.google.com/drive/1p7Z2MQQtwQ2QkietCe-lMz11AC__5ngd)
-
-[Lesson slides](../slides/lesson006c.pdf)
+[Lesson Colab notebook](https://colab.research.google.com/drive/1euO9JyAfVD4pUHjquQbgJjf8cKT4iB6L?usp=sharing)
 
 
 # Procedural vs. vectorized paradigm (4m 10s)

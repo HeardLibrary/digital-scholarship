@@ -26,11 +26,7 @@ Total video time: 33m 13s (60m 57s when practice live coding videos are included
 
 ## Links
 
-[Lesson Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/006/006b.ipynb)
-
-[Lesson Colab notebook](https://colab.research.google.com/drive/1sPO7Uib0Aa0Ut-10RD_tDMwGCgTa58AB)
-
-[Lesson slides](../slides/lesson006b.pdf)
+[Lesson Colab notebook](https://colab.research.google.com/drive/1SCvpoi9bp_NiZ4tg0aroI6x1hYg6L4cP?usp=sharing)
 
 
 # Loops
