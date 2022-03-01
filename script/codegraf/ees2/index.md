@@ -8,7 +8,7 @@ Previous lesson: [Python programming basics](../ees1)
 
 # Using code libraries and lists - EES 2580
 
-This lesson explains how to import modules from the Python Standard Library. It introduces the concept of methods associated with a class.
+This lesson explains how to import modules from the Python Standard Library. It introduces the concept of methods associated with a class. We also introduce a complex object: *lists*. A list is a named one-dimensional data structure that allows us to store any number of items and reference them by an *index*. The lesson describes several ways lists are created. It also introduces some ways to manipulate and edit lists. 
 
 **Learning objectives** At the end of this lesson, the learner will:
 - import functions from a module in three ways
@@ -18,8 +18,16 @@ This lesson explains how to import modules from the Python Standard Library. It 
 - explain the syntax for writing methods of an object
 - use the `.upper()` method to turn a string to all uppercase letters.
 - instantiate time and datetime objects and express them as ISO 8601 and formatted strings
+- describe a list object.
+- construct a list by specifying its members.
+- refer to a list item by its index.
+- create lists using functions and methods.
+- extract part of a list by slicing.
+- randomize or order (alphabetize) a list.
+- randomly select an item from a list.
+- modify, remove, or add a list item.
 
-Total video time: 33m 35s
+Total video time: m s
 
 ## Links
 
@@ -275,6 +283,210 @@ where an object is assigned to a variable named `something`, then it is a method
 
 ----
 
+# Lists
+
+## Introduction to lists (5m48s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/AhkagcbtDw4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+A list is a sequence of objects.  The objects may be the same or different, but often are the same.  The order of the list is important and items can be referenced by their position in the list, numbered from zero.  
+
+A list is created by putting the sequence in square brackets, separated by commas.  In the following example, a list is assigned to a variable:
+
+```python
+basket = ['apple', 'orange', 'banana', 'lemon', 'lime']
+```
+
+To reference a particular item, write the variable name followed by square brackets containing the index (position) of the object in the sequence: `basket[2]`.
+
+To determine the count of items in a list, use the `len()` function.  In this example, it would be `len(basket)`, which would have a value of 5.  
+
+
+----
+
+## Lists as output of functions (5m44s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/X1lSuOQbliA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+`listdir()` (list directory) function from `os` module.
+
+```
+from os import listdir
+
+items_in_working_directory = listdir() # no argument for current working directory
+print(items_in_working_directory)
+```
+
+`sample()` function from random module
+
+[`random` module documentation](https://docs.python.org/3.3/library/random.html)
+
+```
+import random
+
+population = int(input('How many items in hat? '))
+n = int(input('How many items to draw from hat? '))
+# sample without replacement
+pull_from_hat = random.sample(range(population), n) # first argument is a range object, second is number of samples
+print(pull_from_hat)
+```
+
+`.split()` string method
+
+```
+my_sentence = 'It was a dark and stormy night.'
+words_list = my_sentence.split(' ')
+print(words_list)
+```
+
+----
+
+## Slicing a list (5m07s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/mGnQCI6RcCk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+A *slice* of the list can be referenced using the following notation: `basket[1:4]`.  **Important note: in Python, when ranges are specified, for some reason, the last number in the range is one greater than the actual position in the range.**  So in this example, items 1 through 3 will be included. Since counting in Python is zero based, that means that the slice will contain the second through fourth items.
+
+```
+basket = ['apple', 'orange', 'banana', 'lemon', 'lime']
+a_slice = basket[1:4]
+print(a_slice)
+
+# Slicing from the beginning
+print(basket[:4])
+
+# Slicing to the end
+print(basket[2:])
+
+# Slice relative to the end
+print(basket[-2:])
+```
+
+Retrieving parts of strings uses the same notation as lists.  (You can essentially think of a string as a list of characters.)  So to get a particular character:
+
+```python
+nobelPeacePrize = 'Dag Hammarskj\u00f6ld'
+print(nobelPeacePrize[2])
+```
+
+and to get part of a string, use a slice:
+
+```python
+nobelPeacePrize = 'Dag Hammarskj\u00f6ld'
+print(len(nobelPeacePrize))
+print(nobelPeacePrize[12:15])
+```
+
+Notice that escaped characters count as a single character even if we write them as an escape sequence using several characters.
+
+
+----
+
+## Manipulating lists (4m15s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/E4DgTGHn0S8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+**Randomize** a list. Use the `shuffle()` function from the `random` module.
+
+Pass in the list to be randomized as the argument.
+
+There is no return value.
+
+```
+import random as r
+
+cards = ['Ac', '2c', 'Jc', 'Qc', 'Kc', 'Ah', '2h', '3h']
+# Shuffle acts on the list object. It does not return a list.
+r.shuffle(cards)
+print(cards)
+```
+
+**Sort** a list. Use the `.sort()` list method. 
+
+No argument is required, although the argument `reverse=True` can be passed to sort descending (or reverse alphabetical order).
+
+There is no return value
+
+```
+day_list = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+# Sort acts on the list item. It does not return a list.
+day_list.sort()
+print(day_list)
+day_list.sort(reverse=True)
+print(day_list)
+```
+
+Pick a **random item** from a list. Use the `choice()` function from the `random` module.
+
+The list to pick from is passed in as an argument.
+
+The return value is the selected list item.
+
+```
+day_list = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+# Choice returns a single item from a list
+print(day_list)
+picked_day = r.choice(day_list)
+print(picked_day)
+```
+
+----
+
+## Modifying a list (4m20s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/d5CWyyg_vQ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+To add an item to a list, use the `.append()` method.  Here is an example:
+
+```python
+basket.append('durian')
+```
+
+Notice that there is no assignment with this method -- you simply apply it and the list itself is changed. 
+
+A list can also be empty.  You can create an empty list like this:
+
+```python
+hungry = []
+```
+
+You can then add items to the list using the `.append()` method. 
+
+To change an item in a list, just assign a new value to that item:
+
+```python
+basket[1] = 'tangerine'
+```
+
+To find the position of an item in the list, use the `.index()` method. You can combine this with the previously described statement to replace an item. This is useful if you don't know the position of an item in the list.
+
+```python
+basket[basket.index('banana')] = 'plantain'
+```
+
+To remove an item from the list using its value, use the `.remove()` method:
+
+```python
+basket.remove('banana')
+```
+
+You can also delete an item using its index number:
+
+```python
+del basket[3]
+```
+
+To insert an item at a particular position in the list, use the `.insert()` method. The first argument is the position and the second is the item to be inserted.
+
+```python
+basket.insert(1, 'applesauce')
+```
+
+Two lists can be combined using the `+` operator.  
+
+----
+
 # Practice assignment
 
 **Instructions:** Go to the [practice assignment Colab notebook](https://colab.research.google.com/drive/1EEc8D-hBvXAh9tkZu83fR0jZFQDI2DnM?usp=sharing) and make a copy in your own drive as you did the practice notebook. Put you name in the first text cell and save the notebook.
@@ -287,6 +499,13 @@ where an object is assigned to a variable named `something`, then it is a method
 6. Import the `time.sleep()` function to use without a prefix. Then make the script wait (sleep) for one second. If you get stuck, you can watch video below.
 7. Import the datetime module abbreviated as `dt`. Instantiate `now` as a date and as a datetime using the abbreviation, and print the value of `now`. You will probably need to look at the examples. If you get stuck, you can watch the video below.
 8. The `time()` funtion (no arguments) from the time (NOT datetime) module gives the number of seconds since the midnight before January 1, 1970. Time how long it takes the user to enter something (or just press the `Enter`/`return` key) by finding the difference in time from before the input statement and after it. You can turn this into a reaction time tester by having one person click the run button and another person press the `Enter` key as soon as they see or hear the first person click run. You can also see how long it takes Python to execute a line of code by just not having an input statement.
+1. Create a list containing the names of the days of the week. Print the list item for Tuesday. 
+2. Assign a URL (including the `http://` or `https://` part) to a variable, then use the `.split()` method to break the URL into pieces based on the position of `/` characters. Note: select and copy a URL from the URL bar of a browser to get the full URL. Which list item contains the domain name (e.g. `vanderbilt.edu` or `calendar.google.com`)? Will that always be the same? Write an expression for the domain name, and print it.
+3. If you have a domain name like `vanderbilt.edu`, `www.library.vanderbilt.edu`, or `calendar.google.com`, how can you determine how many parts it has that are separated by periods (dots)? (Hint: first split it into a list.) How can you write a general expression for the last part of any domain name? Modify your script from the last exercise to allow a user to paste in a full URL copied from a browser bar, then tell the user the kind of domain (`com`, `edu`, `org`, etc.) for the URL. Note: copy the URL from the browser bar so that it will have the `http://` or `https://` part of the URL.
+4. Write a script that instantiates the fruit basket list, allows a user to type in a fruit, then add the fruit they typed in to the end of the list.
+5. Modify the previous script to pick a random fruit from the modified list and print it.
+6. Modify the previous script to pick a random fruit from the list, remove it from the list, tell the user that they can't have that fruit, then print the new list without the fruit you removed.
+7. Let the user type their full name with spaces between the name parts. Split the name into parts. For the first and last name, extract the first letter of each, convert them to lower case, and concatenate those initials into a single string. Print the resulting string and tell the user that it is their initials.
 
 ## Practice script 6 (1m12s)
 

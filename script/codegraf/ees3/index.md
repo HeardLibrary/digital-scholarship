@@ -8,9 +8,12 @@ Previous lesson: [Code libraries and lists](../ees2)
 
 # Dictionaries and loops - EES 2580
 
-In this lesson we introduce two kinds of *loops*, which are ways to step through *iterable* objects like lists or to repeat an action many times.
+In this lesson we introduce a second complex object: *dictionaries*. A dictionary is a one-dimensional data structure like a list, but its elements are referenced by name using a *key* rather than by index number. We also introduce two kinds of *loops*, which are ways to step through *iterable* objects like lists or to repeat an action many times.
 
 **Learning objectives** At the end of this lesson, the learner will be able to:
+- create a dictionary by specifying the items it contains.
+- add or change dictionary values.
+- remove a dictionary value.
 - print the items on a list using a `for` loop.
 - explain how an *indented code block* is used to define sections of code.
 - use a `range()` object to perform action a fixed number of times.
@@ -28,6 +31,40 @@ Total video time: 33m 13s (60m 57s when practice live coding videos are included
 
 [Lesson Colab notebook](https://colab.research.google.com/drive/1SCvpoi9bp_NiZ4tg0aroI6x1hYg6L4cP?usp=sharing)
 
+
+# Dictionaries
+
+![diagram of a dictionary](dictionary.png)
+
+## Introduction to dictionaries (6m51s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/DjOhhv6LHAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Dictionaries are written as a series of key:value pairs, separated by commas, within curly brackets.
+
+```
+catalog = {'1008':'widget', '2149':'flange', '19x5':'smoke shifter', '992':'poiuyt'}
+```
+
+An empty dictionary can be created using curly brackets with nothing inside them
+
+```
+traits = {}
+```
+
+Both creating and changing a value in the dictionary are done by assigning a value by designated key
+
+```
+traits['height'] = 12
+```
+
+An item can be removed using the del command
+
+```
+del traits['eye color']
+```
+
+---
 
 # Loops
 
@@ -176,6 +213,9 @@ This basically serves as a utility for us and documenting how all of its pieces 
 
 **Instructions:** Go to the [practice assignment Colab notebook](https://colab.research.google.com/drive/1wOBPS-Bn17J0YKtXjRcwf-_y8qZHGaj4?usp=sharing) and make a copy in your own drive as you did the practice notebook. Put you name in the first text cell and save the notebook.
 
+8. Create a dictionary where the keys are the names of months and the values are the number of days in that month. Allow a user to enter the name of a month and print the number of days in that month. Create appropriate prompts and print statements so the user knows what to do and can interpret the response.
+9. Copy the statement that creates the dictionary that is a catolog of items. Create another dictionary with exactly the same items and keys, but for which the values are prices as decimal numbers. Let the user type in a catalog number, then print the name of the item and its price. Prepend a dollar sign `$` to the price before printing, but don't include the dollar sign in the dictionary.
+10. Modify the last program to convert the price of the selected item to euros (you may need to look up the exchange rate). Add an additional statement to print the price in euros, prepending the Unicode string for the euro sign (`\u20AC`) to the numeric price. Can you make the print statement work so that there is no space between the euro sign and the price?
 1. Create a list that contains the days of the week. Using a `for` loop, print the days of the week.
 2. Use `range()` with a `for` loop that counts by 10 from 10 to 200. Make sure that your first number is 10 and your last number is 200.
 3. Create two lists. The first list should contain the names of the month in order and the second list should contain the number of days in each month in order. Create a `for` loop using `range()` that will step through the numbers 0 to 11. As you iterate through each number, print the corresponding name and number of days for each month, using the index of the list item (for example `name[month_number]` where `month_number` is the iterated index number).
