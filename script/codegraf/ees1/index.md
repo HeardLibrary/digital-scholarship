@@ -4,11 +4,13 @@ title: CodeGraf - Python programming basics
 breadcrumb: ees1
 ---
 
+To get to this page, go to <https://tinyurl.com/4tjupkx4>
+
 Previous lesson: 
 
 Go back to: [Quickstart guide for running Python in a Colab notebook](../003a)
 
-# Python programming basics
+# Python programming basics - EES 2580
 
 This lesson is focused on developing familiarity with core statements and functions that are frequently used in Python scripts.
 
@@ -24,7 +26,7 @@ This lesson is focused on developing familiarity with core statements and functi
 - define *concatenation*.
 - list six operators that produce boolean outputs.
 
-Total video time: 66m 40s
+Total video time: 53m 8s (66m 40s with optional practice script videos)
 
 ## Links
 
