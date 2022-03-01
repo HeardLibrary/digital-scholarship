@@ -1,6 +1,6 @@
 ---
 permalink: /script/codegraf/ees1/
-title: CodeGraf - Python programming basics
+title: EES 2580 - Python programming basics
 breadcrumb: ees1
 ---
 
