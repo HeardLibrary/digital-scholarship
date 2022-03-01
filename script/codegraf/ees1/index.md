@@ -6,10 +6,7 @@ breadcrumb: ees1
 
 Previous lesson: 
 
-If you weren't sure how you were going to be running your code: [Installing a programming environment](../003)
-
-If you wanted to start coding Python as quickly as possible: [Quickstart guide for running Python in a Colab notebook](../003a)
-
+Go back to: [Quickstart guide for running Python in a Colab notebook](../003a)
 
 # Python programming basics
 
@@ -31,11 +28,7 @@ Total video time: 66m 40s
 
 ## Links
 
-[Lesson Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/004/004.ipynb)
-
-[Lesson Colab notebook](https://colab.research.google.com/drive/1wjmvmlwHhgMCUf-UJ95YHqMjg1NqnLlu)
-
-[Lesson slides](../slides/lesson004.pdf)
+[Lesson Colab notebook](https://colab.research.google.com/drive/1QfitXEOc_3gxq8USPX6S00hHkit8UJN2?usp=sharing)
 
 # The = assignment operator
 
@@ -378,7 +371,9 @@ print('First animal the same as second animal?', same_animal)
 
 ----
 
-# Practice
+# Optional Practice scripts
+
+Look at the scripts in the lesson Colab notebook and try to explain what they do before you run them. Then try running the to see if what you predicted was correct. If you don't understand what happened, you can watch the following videos.
 
 ## Practice instructions (0m47s)
 
@@ -452,16 +447,20 @@ print(too_many)
 
 ## Practice assignment:
 
+**Instructions:**  
+
+
+
 In each of the scripts that you write, for each variable in the script use a meaningful name that follows the PEP 8 style ("snake case").
 
 1. Create a code cell that assigns a string to a variable, then prints the length of the string.
-2. Create a code cell that allows the user to input two numbers, then prints the difference between them. Don't forget that the `input()` function produces a string that must be turned into a number before subtrating. Write this script two ways: one where the input strings are assigned to variables, then converted into numbers using separate statements, and another where the number conversion is done directly on the output of the `input()` function by nesting the two functions.
-3. Create a code cell where the user enters a string. The script concatenates 'Simon says: ' to the front of their string and prints the result for the user.
+2. Create a code cell that allows the user to input two numbers, then prints the difference between them. Don't forget that the `input()` function produces a string that must be turned into a number before subtracting. Write this script two ways: one where the input strings are assigned to variables, then converted into numbers using separate statements, and another where the number conversion is done directly on the output of the `input()` function by nesting the two functions.
+3. Create code where the user enters a string. The script concatenates 'Simon says: ' to the front of their string and prints the result for the user.
 4. Create a variation of the previous script where the entered string is not concatenated to 'Simon says: ', but rather is printed as a second argument of the `print()` function aling with the 'Simon says:' string. How can you make the output be exactly the same as before (having a single space between the `:` and the string they entered)? What have you learned about the spacing of the output when `print()` has several arguments?
 5. Create a number guessing game. Set the value of the secret number using an assignment statement. Then let the user enter a number. Print two feedback statements. The first one should tell the user whether the guess was correct (`True` or `False`). The second print statement should tell the user whether the guess was too high (`True` or `False`). The user will need to re-run the cell with each guess.
 
 
-Next lesson: [Using code libraries](../005)
+Next lesson: [Code libraries and lists](../ees2)
 
 ----
-Revised 2022-01-06
+Revised 2022-02-28
