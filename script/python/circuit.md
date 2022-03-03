@@ -14,7 +14,7 @@ A shortened link to this page is [vanderbi.lt/circuitpython](http://vanderbi.lt/
 
 Are you interested in learning how to program a tiny computer to read a sensor? Join us in this three-session workshop series, and we’ll go through with you how to program a microcontroller (QT Py RP2040) the size of your thumbnail with CircuitPython, leading to a rocket launch with the microcontroller! 
 
-In these workshops, we’ll demonstrate the versatility of this small computing hardware and simplified code editors for the goal of getting more people interested in coding. No experience is required to attend. We encourage anyone interested in learning more about how hardware and code communicate with one another to register, and there will be plenty of time for questions. On the surface, this workshop event aims to teach CircuitPython for microcontrollers. However, the events are structured to get more people to learn about computing and digital making, and to use that knowledge to increase their comfort level with computers. 
+In these workshops, we’ll demonstrate the versatility of this small computing hardware and simplified code editors with the goal of getting more people interested in coding. No experience is required to attend. We encourage anyone interested in learning more about how hardware and code communicate with one another to register, and there will be plenty of time for questions. On the surface, this workshop event aims to teach CircuitPython for microcontrollers. However, the events are structured to get more people to learn about computing and digital making, and to use that knowledge to increase their comfort level with computers. 
 
 Each session is structured to function as a stand-alone workshop, but we recommend attending all three if possible as they supplement one another. Open to Vanderbilt faculty, staff, students, and postdocs. 
 
@@ -34,7 +34,9 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 
 **In-person venue:** Stevenson Science and Engineering Library seminar room (SC3211). 
 
-[Lesson web page](../codegraf/038/)
+[Registration]()
+
+[Lesson web page](../../codegraf/038/)
 
 The first session on will introduce the hardware and CircuitPython, providing a succinct description of the equipment involved in this event to better prepare the attendees for the following sessions. This session will provide the necessary background information for the minimum coding knowledge you’ll need to start playing with the microcontrollers.  
 
@@ -48,7 +50,9 @@ The first session on will introduce the hardware and CircuitPython, providing a 
 
 **In-person venue:** Stevenson Science and Engineering Library seminar room (SC3211). 
 
-[Lesson web page](../codegraf/039/)
+[Registration]()
+
+[Lesson web page](../../codegraf/039/)
 
 The second session is hands-on and in-person. Participants will set up and program the microcontrollers themselves by connecting the boards to their laptops via USB. This session will demonstrate and provide attendees with the opportunity to program the microcontrollers in real-time and supports Mac and Windows. As a reminder, please bring your laptops to this session. 
 
@@ -64,7 +68,9 @@ The second session is hands-on and in-person. Participants will set up and progr
 
 **In-person venue:** TBA. 
 
-[Lesson web page](../codegraf/040/)
+[Registration]()
+
+[Lesson web page](../../codegraf/040/)
 
 The third session is an in-person practical field demonstration of the microcontroller outside on Vanderbilt campus. In this session, we will launch a rocket containing a battery-powered microcontroller. We will use two sensors to record altitude and motion, saving data to the onboard memory for later analysis.
 
