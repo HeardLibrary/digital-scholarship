@@ -4,7 +4,7 @@ title: DiSC/SEL Microcontrollers with CircuitPython workshops
 breadcrumb: CircuitPython
 ---
 
-# DiSC/SEL Microcontrollers with CircuitPython workshops
+# DiSC/SEL QT Py Computer Workshop Series: Microcontrollers with CircuitPython
 
 A shortened link to this page is [vanderbi.lt/circuitpython](http://vanderbi.lt/circuitpython).
 
@@ -38,7 +38,7 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 
 [Lesson web page](../../codegraf/038/)
 
-The first session on will introduce the hardware and CircuitPython, providing a succinct description of the equipment involved in this event to better prepare the attendees for the following sessions. This session will provide the necessary background information for the minimum coding knowledge you’ll need to start playing with the microcontrollers.  
+The first session will introduce the hardware and CircuitPython, providing a succinct description of the equipment involved in this event to better prepare the attendees for the following sessions. This session will provide the necessary background information for the minimum coding knowledge you’ll need to start playing with the microcontrollers.  
 
 ----
 
