@@ -6,7 +6,7 @@ breadcrumb: CircuitPython
 
 # DiSC/SEL Microcontrollers with CircuitPython workshops
 
-A shortened link to this page is [vanderbi.lt/](http://vanderbi.lt/).
+A shortened link to this page is [vanderbi.lt/circuitpython](http://vanderbi.lt/circuitpython).
 
 ![QT Py RP2040 and humidity sensor](images/qt_py_sensor.png)
 
@@ -24,6 +24,8 @@ This workshop series is sponsored by the [Digital Scholarship and Communications
 
 The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/py) at least once per semester.
 
+----
+
 ## Session 1 - Microcontroller board and Python background (lesson format)
 
 ![QT Py system architecture](images/qt_py_diagram.png)
@@ -35,6 +37,8 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 [Lesson web page](../codegraf/038/)
 
 The first session on will introduce the hardware and CircuitPython, providing a succinct description of the equipment involved in this event to better prepare the attendees for the following sessions. This session will provide the necessary background information for the minimum coding knowledge you’ll need to start playing with the microcontrollers.  
+
+----
 
 ## Session 2 - Connecting a microcontroller board and programming with CircuitPython (hands-on format)
 
@@ -49,6 +53,8 @@ The first session on will introduce the hardware and CircuitPython, providing a 
 The second session is hands-on and in-person. Participants will set up and program the microcontrollers themselves by connecting the boards to their laptops via USB. This session will demonstrate and provide attendees with the opportunity to program the microcontrollers in real-time and supports Mac and Windows. As a reminder, please bring your laptops to this session. 
 
 **NOTE: this session is limited to 20 participants.**
+
+----
 
 ## Session 3 - Launch a rocket with a microcontroller and record flight data (in-person demonstration)
 
