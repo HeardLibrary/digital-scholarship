@@ -16,7 +16,7 @@ Are you interested in learning how to program a tiny computer to read a sensor? 
 
 In these workshops, we’ll demonstrate the versatility of this small computing hardware and simplified code editors with the goal of getting more people interested in coding. No experience is required to attend. We encourage anyone interested in learning more about how hardware and code communicate with one another to register, and there will be plenty of time for questions. On the surface, this workshop event aims to teach CircuitPython for microcontrollers. However, the events are structured to get more people to learn about computing and digital making, and to use that knowledge to increase their comfort level with computers. 
 
-Each session is structured to function as a stand-alone workshop, but we recommend attending all three if possible as they supplement one another. Open to Vanderbilt faculty, staff, students, and postdocs. **Registration is required.** See each session below for a registration link.
+Each session is structured to function as a stand-alone workshop, but we recommend attending all three if possible as they supplement one another. Open to Vanderbilt faculty, staff, students, and postdocs. **Separate registration is required for each session.** See each session below for a registration link.
 
 **Instructors:** Steve Baskauf [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) and Francisco Juarez [francisco.d.juarez@vanderbilt.edu](mailto:francisco.d.juarez@vanderbilt.edu).
 
@@ -34,7 +34,7 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 
 **In-person venue:** Stevenson Science and Engineering Library seminar room (SC3211). 
 
-[Registration]()
+[Registration](https://vanderbilt.zoom.us/meeting/register/tJElf-GhqzkvGtCYdMWPHqaZlP7DskJ_2E3B)
 
 [Lesson web page](../../codegraf/038/)
 
@@ -50,7 +50,7 @@ The first session will introduce the hardware and CircuitPython, providing a suc
 
 **In-person venue:** Stevenson Science and Engineering Library seminar room (SC3211). 
 
-[Registration]()
+[Registration](https://forms.gle/SU6UgxnnttLfiAZ26)
 
 [Lesson web page](../../codegraf/039/)
 
@@ -68,7 +68,7 @@ The second session is hands-on and in-person. Participants will set up and progr
 
 **In-person venue:** TBA. 
 
-[Registration]()
+[Registration](https://forms.gle/F9KSEAVeH1uynugG9)
 
 [Lesson web page](../../codegraf/040/)
 
