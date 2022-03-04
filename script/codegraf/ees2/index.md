@@ -13,7 +13,6 @@ This lesson explains how to import modules from the Python Standard Library. It 
 **Learning objectives** At the end of this lesson, the learner will:
 - import functions from a module in three ways
 - print the current time and delay the execution of a script
-- assign the path of the current working directory to a string
 - describe the relationship between methods and functions
 - explain the syntax for writing methods of an object
 - use the `.upper()` method to turn a string to all uppercase letters.
@@ -119,22 +118,6 @@ Note that some functions return a value, as in the first example where the curre
 
 ----
 
-## The os (operating system) module (3m12s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/NHy1a6KhihU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Example:
-```
-import os
-
-working_directory = os.getcwd()
-print(working_directory)
-print(os.listdir()) # no argument gets working directory
-# print(os.listdir(working_directory + '/Documents'))
-```
-
-----
-
 ## What if a module isn't in the Standard Library?
 
 In the examples we have used so far, the modules we have wanted to import have been included in the Standard Library, so we have been able to load them using an `import` statement. However, sometimes when you try to import a module that you've seen in code examples, you will receive an error message saying that the module can't be found. In that case, the library containing that module isn't downloaded to your computer and it must be installed. (Note: we will use "package" and "library" interchangeably and ignore their technical differences.)
@@ -209,57 +192,6 @@ print(ee_cummings)
 my_book = my_message.title()
 print(my_book)
 ```
-
-----
-
-## The datetime module (9m08s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/RSRLhxu9_Ek" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-The datetime module defines several kinds of objects. Two of them are: `date` and `datetime`.
-
-*Date* objects can be instantiated by specifying their year, month, and day: `datetime.date(2001,9,11)`. They can also be instantiated using the `.today()` method: `datetime.date.today()`.
-
-Example:
-```
-import datetime
-
-# Instantiate two date objects, numeric arguments required.
-sep_11 = datetime.date(2001,9,11)
-this_day = datetime.date.today() # method sets the date value as today
-print(type(sep_11))
-
-# Create various string representations of the date objects
-print(sep_11.isoformat()) # use ISO 8601 format
-print(sep_11.weekday()) # numeric value; Monday is 0
-print(sep_11.strftime('%A')) # '%A' is a string format code for the day
-print()
-print(this_day.isoformat())
-print(this_day.weekday())
-print(this_day.strftime('%A'))
-```
-
-*DateTime* objects can be instantitated using the current UTC (i.e. Greenwich Mean Time) time using the `.utcnow()` method: `datetime.datetime.utcnow()`.
-
-Example:
-```
-import datetime
-
-# Instantiate a dateTime object
-# The dateTime will be expressed as Universal Coordinated Time (UTC)
-# a.k.a. Greenwich Mean Time (GMT)
-right_now = datetime.datetime.utcnow()
-print(type(right_now))
-
-# Create string representations of the datetime object
-print(right_now.isoformat())
-# See the datetime module documentation for the string format codes
-print(right_now.strftime('%B %d, %Y %I:%M %p'))
-```
-
-Both `date` and `datetime` objects are abstract and don't have any particular representation. They can be represented as strings using several methods. The `.isoformat()` method represents them as strings according to the ISO 8601 standard. The `.strftime()` method represents them as strings based on user-defined string format codes.  
-
-Notice how this differs from the `strftime()` function from the `time` module. The `strftime()` function returns a string object. It does not create an instance of any abstract object. In contrast, abstract `date` and `datetime` objects are created by the `datetime` module. They are not strings, but string representations of them can be created by several methods.
 
 ----
 
@@ -496,9 +428,7 @@ Two lists can be combined using the `+` operator.
 3. When describing angles, Python measures angles in radians, where 180 degrees = pi radian. That is, divide the angle in degrees by 180, then multiply by pi. Since most people aren't familiar with radians, write a script that will allow a user to input an angle in degrees, convert the degrees to radians, then calculate the cosine of the input angle. Test your script with 45 degrees, whose cosine is 0.70710678118 .
 4. Write a script that lets a user enter a string. Then convert what they entered into all caps, all lower case, and title case.
 5. **Case insensitivity**. It is often useful to check a user's input without concern for capitalization. The easiest way to do that is to convert what the user entered into all lower case, then check for equivalence with an all lower-case string. Write a script that lets the user input a string, then print the boolean result for comparing whether their string was equal to 'sister' with any kind of capitalization. 
-6. Import the `time.sleep()` function to use without a prefix. Then make the script wait (sleep) for one second. If you get stuck, you can watch video below.
-7. Import the datetime module abbreviated as `dt`. Instantiate `now` as a date and as a datetime using the abbreviation, and print the value of `now`. You will probably need to look at the examples. If you get stuck, you can watch the video below.
-8. The `time()` funtion (no arguments) from the time (NOT datetime) module gives the number of seconds since the midnight before January 1, 1970. Time how long it takes the user to enter something (or just press the `Enter`/`return` key) by finding the difference in time from before the input statement and after it. You can turn this into a reaction time tester by having one person click the run button and another person press the `Enter` key as soon as they see or hear the first person click run. You can also see how long it takes Python to execute a line of code by just not having an input statement.
+6. Import the `time.sleep()` function to use without a prefix. Then make the script wait (sleep) for one second. 
 1. Create a list containing the names of the days of the week. Print the list item for Tuesday. 
 2. Assign a URL (including the `http://` or `https://` part) to a variable, then use the `.split()` method to break the URL into pieces based on the position of `/` characters. Note: select and copy a URL from the URL bar of a browser to get the full URL. Which list item contains the domain name (e.g. `vanderbilt.edu` or `calendar.google.com`)? Will that always be the same? Write an expression for the domain name, and print it.
 3. If you have a domain name like `vanderbilt.edu`, `www.library.vanderbilt.edu`, or `calendar.google.com`, how can you determine how many parts it has that are separated by periods (dots)? (Hint: first split it into a list.) How can you write a general expression for the last part of any domain name? Modify your script from the last exercise to allow a user to paste in a full URL copied from a browser bar, then tell the user the kind of domain (`com`, `edu`, `org`, etc.) for the URL. Note: copy the URL from the browser bar so that it will have the `http://` or `https://` part of the URL.
@@ -507,19 +437,93 @@ Two lists can be combined using the `+` operator.
 6. Modify the previous script to pick a random fruit from the list, remove it from the list, tell the user that they can't have that fruit, then print the new list without the fruit you removed.
 7. Let the user type their full name with spaces between the name parts. Split the name into parts. For the first and last name, extract the first letter of each, convert them to lower case, and concatenate those initials into a single string. Print the resulting string and tell the user that it is their initials.
 
-## Practice script 6 (1m12s)
+----
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/kQdCeEQTHfg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+# Optional videos
+
+The following videos cover content that is not required, but you might find them useful.
+
+## The os (operating system) module (3m12s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/NHy1a6KhihU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Example:
+```
+import os
+
+working_directory = os.getcwd()
+print(working_directory)
+print(os.listdir()) # no argument gets working directory
+# print(os.listdir(working_directory + '/Documents'))
+```
 
 ----
 
-## Practice script 7 (3m41s)
+## The datetime module (9m08s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/RSRLhxu9_Ek" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The datetime module defines several kinds of objects. Two of them are: `date` and `datetime`.
+
+*Date* objects can be instantiated by specifying their year, month, and day: `datetime.date(2001,9,11)`. They can also be instantiated using the `.today()` method: `datetime.date.today()`.
+
+Example:
+```
+import datetime
+
+# Instantiate two date objects, numeric arguments required.
+sep_11 = datetime.date(2001,9,11)
+this_day = datetime.date.today() # method sets the date value as today
+print(type(sep_11))
+
+# Create various string representations of the date objects
+print(sep_11.isoformat()) # use ISO 8601 format
+print(sep_11.weekday()) # numeric value; Monday is 0
+print(sep_11.strftime('%A')) # '%A' is a string format code for the day
+print()
+print(this_day.isoformat())
+print(this_day.weekday())
+print(this_day.strftime('%A'))
+```
+
+*DateTime* objects can be instantitated using the current UTC (i.e. Greenwich Mean Time) time using the `.utcnow()` method: `datetime.datetime.utcnow()`.
+
+Example:
+```
+import datetime
+
+# Instantiate a dateTime object
+# The dateTime will be expressed as Universal Coordinated Time (UTC)
+# a.k.a. Greenwich Mean Time (GMT)
+right_now = datetime.datetime.utcnow()
+print(type(right_now))
+
+# Create string representations of the datetime object
+print(right_now.isoformat())
+# See the datetime module documentation for the string format codes
+print(right_now.strftime('%B %d, %Y %I:%M %p'))
+```
+
+Both `date` and `datetime` objects are abstract and don't have any particular representation. They can be represented as strings using several methods. The `.isoformat()` method represents them as strings according to the ISO 8601 standard. The `.strftime()` method represents them as strings based on user-defined string format codes.  
+
+Notice how this differs from the `strftime()` function from the `time` module. The `strftime()` function returns a string object. It does not create an instance of any abstract object. In contrast, abstract `date` and `datetime` objects are created by the `datetime` module. They are not strings, but string representations of them can be created by several methods.
+
+----
+
+**Optional practice** (if you want to practice using the datetime and time modules):
+
+1. Import the datetime module abbreviated as `dt`. Instantiate `now` as a date and as a datetime using the abbreviation, and print the value of `now`. You will probably need to look at the examples. If you get stuck, you can watch the video below.
+2. The `time()` funtion (no arguments) from the time (NOT datetime) module gives the number of seconds since the midnight before January 1, 1970. Time how long it takes the user to enter something (or just press the `Enter`/`return` key) by finding the difference in time from before the input statement and after it. You can turn this into a reaction time tester by having one person click the run button and another person press the `Enter` key as soon as they see or hear the first person click run. You can also see how long it takes Python to execute a line of code by just not having an input statement.
+
+
+## Optional practice script 1 (3m41s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/rYqBBtQ0xgs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ----
 
+
 Next lesson: [Dictionaries and loops](../ees3)
 
 ----
-Revised 2022-08-28
+Revised 2022-03-04
