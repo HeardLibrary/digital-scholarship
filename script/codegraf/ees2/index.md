@@ -121,7 +121,7 @@ Note that some functions return a value, as in the first example where the curre
 
 In the examples we have used so far, the modules we have wanted to import have been included in the Standard Library, so we have been able to load them using an `import` statement. However, sometimes when you try to import a module that you've seen in code examples, you will receive an error message saying that the module can't be found. In that case, the library containing that module isn't downloaded to your computer and it must be installed. (Note: we will use "package" and "library" interchangeably and ignore their technical differences.)
 
-The libraries that are installed automatically will depend at least partly on how you installed and are using Python. If you are using Jupyter notebooks installed as part of an Anaconda distribution, many of the commonly used modules not included in the Standard Library will be available to you without needing to install them. The same is true with Colab. If you did a stand-alone installation of Jupyter notebooks, you are more likely to need to install additional libraries. 
+The libraries that are installed automatically will depend at least partly on how you installed and are using Python. If you are using Jupyter notebooks installed as part of an Anaconda distribution or Colab notebooks, many of the commonly used modules not included in the Standard Library will be available to you without needing to install them. The same is true with Colab. If you did a stand-alone installation of Jupyter notebooks, you are more likely to need to install additional libraries. 
 
 There are two common installation methods. The standard method uses `pip`. If you are using Anaconda, it comes with its own package manager, `conda`. Both of these applications are used in the console (`Command prompte` on Windows or `Terminal` on Mac.) Here is an example of how to install a commonly used package: `requests`. In the console, enter the following:
 
@@ -150,6 +150,34 @@ from bs4 import BeautifulSoup
 ```
 
 where `bs4` is the actual module name. Check the documentation for the library to make sure what the name is of the library before installing (for example [this](https://pypi.org/project/beautifulsoup4/) for BeautifulSoup).
+
+----
+
+## The `requests` module
+
+The `requests` module is a super-useful module that allows us to retrieve information from the web. Although the `requests` module is not part of the Standard Library, it is already installed in Colab. So we can use it in a Colab notebook just by importing it.
+
+```
+import requests
+```
+
+The `get()` function of the `requests` module retrieves a web document. If the document is an HTML web page, it's not that useful, but if the document contains data, it's an easy way to access those data. The argument passed into the function is the URL of the document.
+
+We can retrieve the text of the U.S. Declaration of Indepencence from [this GitHub document](https://github.com/Veraticus/cryptolalia/blob/master/test/fixtures/Declaration%20of%20Independence.txt):
+
+```
+url = 'https://raw.githubusercontent.com/Veraticus/cryptolalia/master/test/fixtures/Declaration%20of%20Independence.txt'
+reply = requests.get(url)
+print(type(reply))
+```
+
+This code shows us that the `reply` variable contains a custom `Response` object. We can examine some attributes of the response like this:
+
+```
+print(reply.text)
+print()
+print(reply.status_code) # 200 = OK, 404 = not found
+```
 
 ----
 
@@ -239,14 +267,7 @@ To determine the count of items in a list, use the `len()` function.  In this ex
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/X1lSuOQbliA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-`listdir()` (list directory) function from `os` module.
-
-```
-from os import listdir
-
-items_in_working_directory = listdir() # no argument for current working directory
-print(items_in_working_directory)
-```
+`listdir()` function is part of the optional content.
 
 `sample()` function from random module
 
@@ -269,6 +290,17 @@ my_sentence = 'It was a dark and stormy night.'
 words_list = my_sentence.split(' ')
 print(words_list)
 ```
+
+Using data retrieved from the web:
+
+```
+path = 'https://raw.githubusercontent.com/Veraticus/cryptolalia/master/test/fixtures/Declaration%20of%20Independence.txt'
+response = requests.get(path)
+file_text = response.text
+lower_case = file_text.lower() # Turn all of the text into lower case
+lower_case.split('\n') # Split by newlines to get each line as a list item.
+```
+
 
 ----
 
@@ -346,6 +378,15 @@ day_list.sort()
 print(day_list)
 day_list.sort(reverse=True)
 print(day_list)
+```
+
+Sort all of the words in the Declartion of Independence:
+
+```
+sorted_words = lower_case.split(' ') # Split by spaces to get each word as a list item.
+print(sorted_words)
+sorted_words.sort()
+print(sorted_words)
 ```
 
 Pick a **random item** from a list. Use the `choice()` function from the `random` module.
