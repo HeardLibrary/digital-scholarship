@@ -20,6 +20,8 @@ The lessons are part of a free, online learning system called [CodeGraf](../../c
 
 The DiSC office also provides [lessons for learning R](http://vanderbi.lt/r) and [getting started with GitHub](http://vanderbi.lt/github) in a similar format.
 
+**Special note for spring 2022:** We are offering a new workshop series on [QT Py Computer Workshop Series: Microcontrollers with CircuitPython](http://vanderbi.lt/circuitpython), which teaches you how to program microcontroller boards with CircuitPython. 
+
 [Archive of past lessons](../archive/)
 
 
@@ -74,4 +76,4 @@ TBD
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2022-01-07
+Revised 2022-03-04
