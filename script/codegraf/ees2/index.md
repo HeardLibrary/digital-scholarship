@@ -16,7 +16,6 @@ This lesson explains how to import modules from the Python Standard Library. It 
 - describe the relationship between methods and functions
 - explain the syntax for writing methods of an object
 - use the `.upper()` method to turn a string to all uppercase letters.
-- instantiate time and datetime objects and express them as ISO 8601 and formatted strings
 - describe a list object.
 - construct a list by specifying its members.
 - refer to a list item by its index.
