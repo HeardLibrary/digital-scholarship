@@ -25,7 +25,7 @@ This lesson explains how to import modules from the Python Standard Library. It 
 - randomly select an item from a list.
 - modify, remove, or add a list item.
 
-Total video time: m s
+Total video time: 41 m 36 s (plus 16 m optional)
 
 ## Links
 
@@ -476,6 +476,8 @@ Two lists can be combined using the `+` operator.
 5. Modify the previous script to pick a random fruit from the modified list and print it.
 6. Modify the previous script to pick a random fruit from the list, remove it from the list, tell the user that they can't have that fruit, then print the new list without the fruit you removed.
 7. Let the user type their full name with spaces between the name parts. Split the name into parts. For the first and last name, extract the first letter of each, convert them to lower case, and concatenate those initials into a single string. Print the resulting string and tell the user that it is their initials.
+8. The file [mesa_prcp_by_month.txt](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/codegraf/mesa_prcp_by_month.txt) contains the average precipitation by month in mm for Mesa, Arizona, with each value on a separate line terminated by a newline character. Use the `get()` function from the `requests` module to retrieve the data and extract the text into a variable containing a single text string. Split the string by newline (`\n`) characters into a list that contains each value. Can you use the `max()` function to determine the maximum value in the list?
+
 
 ----
 
