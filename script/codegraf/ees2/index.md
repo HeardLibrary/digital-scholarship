@@ -13,11 +13,9 @@ This lesson explains how to import modules from the Python Standard Library. It 
 **Learning objectives** At the end of this lesson, the learner will:
 - import functions from a module in three ways
 - print the current time and delay the execution of a script
-- assign the path of the current working directory to a string
 - describe the relationship between methods and functions
 - explain the syntax for writing methods of an object
 - use the `.upper()` method to turn a string to all uppercase letters.
-- instantiate time and datetime objects and express them as ISO 8601 and formatted strings
 - describe a list object.
 - construct a list by specifying its members.
 - refer to a list item by its index.
@@ -27,7 +25,7 @@ This lesson explains how to import modules from the Python Standard Library. It 
 - randomly select an item from a list.
 - modify, remove, or add a list item.
 
-Total video time: m s
+Total video time: 41 m 36 s (plus 16 m optional)
 
 ## Links
 
@@ -119,27 +117,11 @@ Note that some functions return a value, as in the first example where the curre
 
 ----
 
-## The os (operating system) module (3m12s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/NHy1a6KhihU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Example:
-```
-import os
-
-working_directory = os.getcwd()
-print(working_directory)
-print(os.listdir()) # no argument gets working directory
-# print(os.listdir(working_directory + '/Documents'))
-```
-
-----
-
 ## What if a module isn't in the Standard Library?
 
 In the examples we have used so far, the modules we have wanted to import have been included in the Standard Library, so we have been able to load them using an `import` statement. However, sometimes when you try to import a module that you've seen in code examples, you will receive an error message saying that the module can't be found. In that case, the library containing that module isn't downloaded to your computer and it must be installed. (Note: we will use "package" and "library" interchangeably and ignore their technical differences.)
 
-The libraries that are installed automatically will depend at least partly on how you installed and are using Python. If you are using Jupyter notebooks installed as part of an Anaconda distribution, many of the commonly used modules not included in the Standard Library will be available to you without needing to install them. The same is true with Colab. If you did a stand-alone installation of Jupyter notebooks, you are more likely to need to install additional libraries. 
+The libraries that are installed automatically will depend at least partly on how you installed and are using Python. If you are using Jupyter notebooks installed as part of an Anaconda distribution or Colab notebooks, many of the commonly used modules not included in the Standard Library will be available to you without needing to install them. The same is true with Colab. If you did a stand-alone installation of Jupyter notebooks, you are more likely to need to install additional libraries. 
 
 There are two common installation methods. The standard method uses `pip`. If you are using Anaconda, it comes with its own package manager, `conda`. Both of these applications are used in the console (`Command prompte` on Windows or `Terminal` on Mac.) Here is an example of how to install a commonly used package: `requests`. In the console, enter the following:
 
@@ -168,6 +150,34 @@ from bs4 import BeautifulSoup
 ```
 
 where `bs4` is the actual module name. Check the documentation for the library to make sure what the name is of the library before installing (for example [this](https://pypi.org/project/beautifulsoup4/) for BeautifulSoup).
+
+----
+
+## The `requests` module
+
+The `requests` module is a super-useful module that allows us to retrieve information from the web. Although the `requests` module is not part of the Standard Library, it is already installed in Colab. So we can use it in a Colab notebook just by importing it.
+
+```
+import requests
+```
+
+The `get()` function of the `requests` module retrieves a web document. If the document is an HTML web page, it's not that useful, but if the document contains data, it's an easy way to access those data. The argument passed into the function is the URL of the document.
+
+We can retrieve the text of the U.S. Declaration of Indepencence from [this GitHub document](https://github.com/Veraticus/cryptolalia/blob/master/test/fixtures/Declaration%20of%20Independence.txt):
+
+```
+url = 'https://raw.githubusercontent.com/Veraticus/cryptolalia/master/test/fixtures/Declaration%20of%20Independence.txt'
+reply = requests.get(url)
+print(type(reply))
+```
+
+This code shows us that the `reply` variable contains a custom `Response` object. We can examine some attributes of the response like this:
+
+```
+print(reply.text)
+print()
+print(reply.status_code) # 200 = OK, 404 = not found
+```
 
 ----
 
@@ -209,57 +219,6 @@ print(ee_cummings)
 my_book = my_message.title()
 print(my_book)
 ```
-
-----
-
-## The datetime module (9m08s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/RSRLhxu9_Ek" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-The datetime module defines several kinds of objects. Two of them are: `date` and `datetime`.
-
-*Date* objects can be instantiated by specifying their year, month, and day: `datetime.date(2001,9,11)`. They can also be instantiated using the `.today()` method: `datetime.date.today()`.
-
-Example:
-```
-import datetime
-
-# Instantiate two date objects, numeric arguments required.
-sep_11 = datetime.date(2001,9,11)
-this_day = datetime.date.today() # method sets the date value as today
-print(type(sep_11))
-
-# Create various string representations of the date objects
-print(sep_11.isoformat()) # use ISO 8601 format
-print(sep_11.weekday()) # numeric value; Monday is 0
-print(sep_11.strftime('%A')) # '%A' is a string format code for the day
-print()
-print(this_day.isoformat())
-print(this_day.weekday())
-print(this_day.strftime('%A'))
-```
-
-*DateTime* objects can be instantitated using the current UTC (i.e. Greenwich Mean Time) time using the `.utcnow()` method: `datetime.datetime.utcnow()`.
-
-Example:
-```
-import datetime
-
-# Instantiate a dateTime object
-# The dateTime will be expressed as Universal Coordinated Time (UTC)
-# a.k.a. Greenwich Mean Time (GMT)
-right_now = datetime.datetime.utcnow()
-print(type(right_now))
-
-# Create string representations of the datetime object
-print(right_now.isoformat())
-# See the datetime module documentation for the string format codes
-print(right_now.strftime('%B %d, %Y %I:%M %p'))
-```
-
-Both `date` and `datetime` objects are abstract and don't have any particular representation. They can be represented as strings using several methods. The `.isoformat()` method represents them as strings according to the ISO 8601 standard. The `.strftime()` method represents them as strings based on user-defined string format codes.  
-
-Notice how this differs from the `strftime()` function from the `time` module. The `strftime()` function returns a string object. It does not create an instance of any abstract object. In contrast, abstract `date` and `datetime` objects are created by the `datetime` module. They are not strings, but string representations of them can be created by several methods.
 
 ----
 
@@ -308,14 +267,7 @@ To determine the count of items in a list, use the `len()` function.  In this ex
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/X1lSuOQbliA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-`listdir()` (list directory) function from `os` module.
-
-```
-from os import listdir
-
-items_in_working_directory = listdir() # no argument for current working directory
-print(items_in_working_directory)
-```
+`listdir()` function is part of the optional content.
 
 `sample()` function from random module
 
@@ -338,6 +290,17 @@ my_sentence = 'It was a dark and stormy night.'
 words_list = my_sentence.split(' ')
 print(words_list)
 ```
+
+Using data retrieved from the web:
+
+```
+path = 'https://raw.githubusercontent.com/Veraticus/cryptolalia/master/test/fixtures/Declaration%20of%20Independence.txt'
+response = requests.get(path)
+file_text = response.text
+lower_case = file_text.lower() # Turn all of the text into lower case
+lower_case.split('\n') # Split by newlines to get each line as a list item.
+```
+
 
 ----
 
@@ -415,6 +378,15 @@ day_list.sort()
 print(day_list)
 day_list.sort(reverse=True)
 print(day_list)
+```
+
+Sort all of the words in the Declartion of Independence:
+
+```
+sorted_words = lower_case.split(' ') # Split by spaces to get each word as a list item.
+print(sorted_words)
+sorted_words.sort()
+print(sorted_words)
 ```
 
 Pick a **random item** from a list. Use the `choice()` function from the `random` module.
@@ -496,30 +468,107 @@ Two lists can be combined using the `+` operator.
 3. When describing angles, Python measures angles in radians, where 180 degrees = pi radian. That is, divide the angle in degrees by 180, then multiply by pi. Since most people aren't familiar with radians, write a script that will allow a user to input an angle in degrees, convert the degrees to radians, then calculate the cosine of the input angle. Test your script with 45 degrees, whose cosine is 0.70710678118 .
 4. Write a script that lets a user enter a string. Then convert what they entered into all caps, all lower case, and title case.
 5. **Case insensitivity**. It is often useful to check a user's input without concern for capitalization. The easiest way to do that is to convert what the user entered into all lower case, then check for equivalence with an all lower-case string. Write a script that lets the user input a string, then print the boolean result for comparing whether their string was equal to 'sister' with any kind of capitalization. 
-6. Import the `time.sleep()` function to use without a prefix. Then make the script wait (sleep) for one second. If you get stuck, you can watch video below.
-7. Import the datetime module abbreviated as `dt`. Instantiate `now` as a date and as a datetime using the abbreviation, and print the value of `now`. You will probably need to look at the examples. If you get stuck, you can watch the video below.
-8. The `time()` funtion (no arguments) from the time (NOT datetime) module gives the number of seconds since the midnight before January 1, 1970. Time how long it takes the user to enter something (or just press the `Enter`/`return` key) by finding the difference in time from before the input statement and after it. You can turn this into a reaction time tester by having one person click the run button and another person press the `Enter` key as soon as they see or hear the first person click run. You can also see how long it takes Python to execute a line of code by just not having an input statement.
-1. Create a list containing the names of the days of the week. Print the list item for Tuesday. 
-2. Assign a URL (including the `http://` or `https://` part) to a variable, then use the `.split()` method to break the URL into pieces based on the position of `/` characters. Note: select and copy a URL from the URL bar of a browser to get the full URL. Which list item contains the domain name (e.g. `vanderbilt.edu` or `calendar.google.com`)? Will that always be the same? Write an expression for the domain name, and print it.
-3. If you have a domain name like `vanderbilt.edu`, `www.library.vanderbilt.edu`, or `calendar.google.com`, how can you determine how many parts it has that are separated by periods (dots)? (Hint: first split it into a list.) How can you write a general expression for the last part of any domain name? Modify your script from the last exercise to allow a user to paste in a full URL copied from a browser bar, then tell the user the kind of domain (`com`, `edu`, `org`, etc.) for the URL. Note: copy the URL from the browser bar so that it will have the `http://` or `https://` part of the URL.
-4. Write a script that instantiates the fruit basket list, allows a user to type in a fruit, then add the fruit they typed in to the end of the list.
-5. Modify the previous script to pick a random fruit from the modified list and print it.
-6. Modify the previous script to pick a random fruit from the list, remove it from the list, tell the user that they can't have that fruit, then print the new list without the fruit you removed.
-7. Let the user type their full name with spaces between the name parts. Split the name into parts. For the first and last name, extract the first letter of each, convert them to lower case, and concatenate those initials into a single string. Print the resulting string and tell the user that it is their initials.
+6. Import the `time.sleep()` function to use without a prefix. Then make the script wait (sleep) for one second. 
+7. Create a list containing the names of the days of the week. Print the list item for Tuesday by specifying its index. 
+8. Assign a URL (including the `http://` or `https://` part) to a variable, then use the `.split()` method to break the URL into pieces based on the position of `/` characters. Note: select and copy a URL from the URL bar of a browser to get the full URL. Which list item contains the domain name (e.g. `vanderbilt.edu` or `calendar.google.com`)? Will that always be the same? Write an expression for the domain name, and print it.
+9. If you have a domain name like `vanderbilt.edu`, `www.library.vanderbilt.edu`, or `calendar.google.com`, how can you determine how many parts it has that are separated by periods (dots)? (Hint: first split it into a list.) How can you write a general expression for the last part of any domain name? Modify your script from the last exercise to allow a user to paste in a full URL copied from a browser bar, then tell the user the kind of domain (`com`, `edu`, `org`, etc.) for the URL. Note: copy the URL from the browser bar so that it will have the `http://` or `https://` part of the URL.
+10. Write a script that instantiates the fruit basket list, allows a user to type in a fruit, then add the fruit they typed in to the end of the list. Print the list after adding their fruit.
+11. Modify the previous script to pick a random fruit from the modified list and print it.
+12. Modify the previous script to pick a random fruit from the list, remove it from the list, tell the user that they can't have that fruit, then print the new list without the fruit you removed.
+13. The file [mesa_prcp_by_month.txt](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/codegraf/mesa_prcp_by_month.txt) contains the average precipitation by month in mm for Mesa, Arizona, with each value on a separate line terminated by a newline character. Use the `get()` function from the `requests` module to retrieve the data and extract the text into a variable containing a single text string. Split the string by newline (`\n`) characters into a list that contains each value. *Non-rhetorical question:* Can you use the `max()` function to determine the number in the list? If so, do it in your script. If not, explain why in a comment in the script. The URL to access the data is:
 
-## Practice script 6 (1m12s)
+```
+url = 'https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/codegraf/mesa_prcp_by_month.txt'
+```
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/kQdCeEQTHfg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ----
 
-## Practice script 7 (3m41s)
+# Optional videos
+
+The following videos cover content that is not required, but you might find them useful.
+
+## The os (operating system) module (3m12s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/NHy1a6KhihU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Example:
+```
+import os
+
+working_directory = os.getcwd()
+print(working_directory)
+print(os.listdir()) # no argument gets working directory
+# print(os.listdir(working_directory + '/Documents'))
+```
+
+----
+
+## The datetime module (9m08s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/RSRLhxu9_Ek" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The datetime module defines several kinds of objects. Two of them are: `date` and `datetime`.
+
+*Date* objects can be instantiated by specifying their year, month, and day: `datetime.date(2001,9,11)`. They can also be instantiated using the `.today()` method: `datetime.date.today()`.
+
+Example:
+```
+import datetime
+
+# Instantiate two date objects, numeric arguments required.
+sep_11 = datetime.date(2001,9,11)
+this_day = datetime.date.today() # method sets the date value as today
+print(type(sep_11))
+
+# Create various string representations of the date objects
+print(sep_11.isoformat()) # use ISO 8601 format
+print(sep_11.weekday()) # numeric value; Monday is 0
+print(sep_11.strftime('%A')) # '%A' is a string format code for the day
+print()
+print(this_day.isoformat())
+print(this_day.weekday())
+print(this_day.strftime('%A'))
+```
+
+*DateTime* objects can be instantitated using the current UTC (i.e. Greenwich Mean Time) time using the `.utcnow()` method: `datetime.datetime.utcnow()`.
+
+Example:
+```
+import datetime
+
+# Instantiate a dateTime object
+# The dateTime will be expressed as Universal Coordinated Time (UTC)
+# a.k.a. Greenwich Mean Time (GMT)
+right_now = datetime.datetime.utcnow()
+print(type(right_now))
+
+# Create string representations of the datetime object
+print(right_now.isoformat())
+# See the datetime module documentation for the string format codes
+print(right_now.strftime('%B %d, %Y %I:%M %p'))
+```
+
+Both `date` and `datetime` objects are abstract and don't have any particular representation. They can be represented as strings using several methods. The `.isoformat()` method represents them as strings according to the ISO 8601 standard. The `.strftime()` method represents them as strings based on user-defined string format codes.  
+
+Notice how this differs from the `strftime()` function from the `time` module. The `strftime()` function returns a string object. It does not create an instance of any abstract object. In contrast, abstract `date` and `datetime` objects are created by the `datetime` module. They are not strings, but string representations of them can be created by several methods.
+
+----
+
+**Optional practice** (if you want to practice using the datetime and time modules):
+
+1. Import the datetime module abbreviated as `dt`. Instantiate `now` as a date and as a datetime using the abbreviation, and print the value of `now`. You will probably need to look at the examples. If you get stuck, you can watch the video below.
+2. The `time()` funtion (no arguments) from the time (NOT datetime) module gives the number of seconds since the midnight before January 1, 1970. Time how long it takes the user to enter something (or just press the `Enter`/`return` key) by finding the difference in time from before the input statement and after it. You can turn this into a reaction time tester by having one person click the run button and another person press the `Enter` key as soon as they see or hear the first person click run. You can also see how long it takes Python to execute a line of code by just not having an input statement.
+
+
+## Optional practice script 1 (3m41s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/rYqBBtQ0xgs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ----
 
+
 Next lesson: [Dictionaries and loops](../ees3)
 
 ----
-Revised 2022-08-28
+Revised 2022-03-04
