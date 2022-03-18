@@ -1,12 +1,12 @@
 ---
 permalink: /script/codegraf/ees3/
-title: EES 2580 - Dictionaries and loops
+title: EES 2580 - Dictionaries, loops, and complex data structures
 breadcrumb: ees3
 ---
 
 Previous lesson: [Code libraries and lists](../ees2)
 
-# Dictionaries and loops - EES 2580
+# Dictionaries, loops, and complex data structures - EES 2580
 
 In this lesson we introduce a second complex object: *dictionaries*. A dictionary is a one-dimensional data structure like a list, but its elements are referenced by name using a *key* rather than by index number. 
 
@@ -35,7 +35,7 @@ We also introduce two kinds of *loops*, which are ways to step through *iterable
 - build a list by repeatedly appending additional items to an empty list.
 - describe the actions that occur when several methods are attached sequentially.
 
-Total video time: m s
+Total video time: 50 m 09 s (additional time for optional live coding videos)
 
 ## Links
 
@@ -240,9 +240,9 @@ print('Your list is:', word_list)
 
 ----
 
-## Aside: Applying methods sequentially (6m17s)
+Applying methods sequentially (6m17s)
 
-This optional section describes two approaches to carring out methods sequentially.
+This section describes two approaches to carring out methods sequentially.
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/Lx0HGUmfX-g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -264,7 +264,7 @@ This basically serves as a utility for us and documenting how all of its pieces 
 
 # Practice
 
-**Practice exercises (without video help)**
+**Practice assignment**
 
 **Instructions:** Go to the [practice assignment Colab notebook](https://colab.research.google.com/drive/1wOBPS-Bn17J0YKtXjRcwf-_y8qZHGaj4?usp=sharing) and make a copy in your own drive as you did the practice notebook. Put you name in the first text cell and save the notebook.
 
