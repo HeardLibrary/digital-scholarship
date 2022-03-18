@@ -8,12 +8,22 @@ Previous lesson: [Code libraries and lists](../ees2)
 
 # Dictionaries and loops - EES 2580
 
-In this lesson we introduce a second complex object: *dictionaries*. A dictionary is a one-dimensional data structure like a list, but its elements are referenced by name using a *key* rather than by index number. We also introduce two kinds of *loops*, which are ways to step through *iterable* objects like lists or to repeat an action many times.
+In this lesson we introduce a second complex object: *dictionaries*. A dictionary is a one-dimensional data structure like a list, but its elements are referenced by name using a *key* rather than by index number. 
+
+We can build more complex objects by nesting one object inside another. Two examples we examine are lists of lists and lists of dictionaries.
+
+We also introduce two kinds of *loops*, which are ways to step through *iterable* objects like lists or to repeat an action many times.
 
 **Learning objectives** At the end of this lesson, the learner will be able to:
 - create a dictionary by specifying the items it contains.
 - add or change dictionary values.
 - remove a dictionary value.
+- create a complex Python data structure by creating a list that contains lists or dictionaries as list items.
+- describe how a list of lists can be compared to cells of a table.
+- reference an item in a list of lists by correctly placing index numbers in square brackets.
+- describe how a list of dictionaries can be compared to cells of a table.
+- reference an item in a list of dictionaries by correctly placing the row index number and column key string in square brackets.
+- describe how ordering of columns differs between a list of lists and a list of dictionaries.
 - print the items on a list using a `for` loop.
 - explain how an *indented code block* is used to define sections of code.
 - use a `range()` object to perform action a fixed number of times.
@@ -25,7 +35,7 @@ In this lesson we introduce a second complex object: *dictionaries*. A dictionar
 - build a list by repeatedly appending additional items to an empty list.
 - describe the actions that occur when several methods are attached sequentially.
 
-Total video time: m s (m s when practice live coding videos are included)
+Total video time: m s
 
 ## Links
 
@@ -63,6 +73,51 @@ An item can be removed using the del command
 ```
 del traits['eye color']
 ```
+
+----
+
+# Complex data structures
+
+For a more detailed look at this topic that repeats some of this content, go to [this page](../021/)
+
+## Lists of lists (5m05s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/UP3K-EiG9gU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+A list can contain any object, including other lists.  In some programming languages, there are two-dimensional structures called *arrays*.  To create an array-like structure in Python, we can make a list of lists.  Here's an example:
+
+```python
+firstRow = [3, 5, 7, 9]
+secondRow = [4, 11, -1, 5]
+thirdRow = [-99, 0, 45, 0]
+data = [firstRow, secondRow, thirdRow]
+```
+
+An equivalent way to have created this list of lists would have been:
+
+```python
+data = [[3, 5, 7, 9], [4, 11, -1, 5], [-99, 0, 45, 0]]
+```
+
+We can think of a list of lists like a table where the first index represents the row and the second index represents the column.
+
+![list of lists as a table](list-of-lists.png)
+
+To reference an item in a list of lists, first reference the outer list position, then the inner position.  For example, to refer to the first item in the third list, use `data[2][0]`. In the table model, we can think of the indexing as `data[column][row]`.
+
+----
+
+## Lists of dictionaries (4m58s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/1w7Cuog4LbQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Example code:
+
+```
+characters = [{'name':'Mickey Mouse', 'company':'Disney', 'gender': 'male'}, {'name':'Daisy Duck', 'company':'Disney', 'gender': 'female'}, {'name':'Daffy Duck', 'company':'Warner Brothers', 'gender': 'male'},  {'name':'Fred Flintstone', 'company':'Hanna Barbera', 'gender': 'male'}, {'name':'WALL-E', 'company':'Pixar', 'gender': 'neutral'}, {'name':'Fiona', 'company':'DreamWorks', 'gender': 'female'}]
+```
+
+![list of dictionaries as a table](list-of-dictionaries.png)
 
 ---
 
@@ -213,16 +268,16 @@ This basically serves as a utility for us and documenting how all of its pieces 
 
 **Instructions:** Go to the [practice assignment Colab notebook](https://colab.research.google.com/drive/1wOBPS-Bn17J0YKtXjRcwf-_y8qZHGaj4?usp=sharing) and make a copy in your own drive as you did the practice notebook. Put you name in the first text cell and save the notebook.
 
-8. Create a dictionary where the keys are the names of months and the values are the number of days in that month. Allow a user to enter the name of a month and print the number of days in that month. Create appropriate prompts and print statements so the user knows what to do and can interpret the response.
-9. Copy the statement that creates the dictionary that is a catolog of items. Create another dictionary with exactly the same items and keys, but for which the values are prices as decimal numbers. Let the user type in a catalog number, then print the name of the item and its price. Prepend a dollar sign `$` to the price before printing, but don't include the dollar sign in the dictionary.
-10. Modify the last program to convert the price of the selected item to euros (you may need to look up the exchange rate). Add an additional statement to print the price in euros, prepending the Unicode string for the euro sign (`\u20AC`) to the numeric price. Can you make the print statement work so that there is no space between the euro sign and the price?
-1. Create a list that contains the days of the week. Using a `for` loop, print the days of the week.
-2. Use `range()` with a `for` loop that counts by 10 from 10 to 200. Make sure that your first number is 10 and your last number is 200.
-3. Create two lists. The first list should contain the names of the month in order and the second list should contain the number of days in each month in order. Create a `for` loop using `range()` that will step through the numbers 0 to 11. As you iterate through each number, print the corresponding name and number of days for each month, using the index of the list item (for example `name[month_number]` where `month_number` is the iterated index number).
-4. Using the list of month names from the previous exercise, use a `for` loop to print the index number generated by `range()` and following it, the month name. (In other words, generate a numbered list of months.) Make sure that your numbered list numbers January as 1 and December as 12. Now let ask the user to enter the number of the month they want to choose. Convert what they input into an integer, then print the name of the month and the number of days in that month. Make your script user friendly so that the user knows what they are supposed to do and also make the final printout say something like `March has 31 days.` rather than just printing a name and a number.
-5. Create an empty list called `friends`. Set the value of the variable `counter` to zero. Using a `while` loop, ask the user to enter the name of a friend. In each loop, append the name of the friend to the `friends` list and increment (add one to) the `counter` variable. End the `while` loop when the user presses the `Enter` (or `Return`) key without entering a name. When the loop ends, use a `for` loop to print the list of the user's friends and also tell the user the total number of friends that they have.
+1. Create a dictionary where the keys are the names of months and the values are the number of days in that month. Allow a user to enter the name of a month and print the number of days in that month. Create appropriate prompts and print statements so the user knows what to do and can interpret the response.
+2. Copy the statement that creates the dictionary that is a catolog of items. Create another dictionary with exactly the same items and keys, but for which the values are prices as decimal numbers. Let the user type in a catalog number, then print the name of the item and its price. Prepend a dollar sign `$` to the price before printing, but don't include the dollar sign in the dictionary.
+3. Modify the last program to convert the price of the selected item to euros (you may need to look up the exchange rate). Add an additional statement to print the price in euros, prepending the Unicode string for the euro sign (`\u20AC`) to the numeric price. Can you make the print statement work so that there is no space between the euro sign and the price?
+4. Create a list that contains the days of the week. Using a `for` loop, print the days of the week.
+5. Use `range()` with a `for` loop that counts by 10 from 10 to 200. Make sure that your first number is 10 and your last number is 200.
+6. Create two lists. The first list should contain the names of the month in order and the second list should contain the number of days in each month in order. Create a `for` loop using `range()` that will step through the numbers 0 to 11. As you iterate through each number, print the corresponding name and number of days for each month, using the index of the list item (for example `name[month_number]` where `month_number` is the iterated index number).
+7. Using the list of month names from the previous exercise, use a `for` loop to print the index number generated by `range()` and following it, the month name. (In other words, generate a numbered list of months.) Make sure that your numbered list numbers January as 1 and December as 12. Now let ask the user to enter the number of the month they want to choose. Convert what they input into an integer, then print the name of the month and the number of days in that month. Make your script user friendly so that the user knows what they are supposed to do and also make the final printout say something like `March has 31 days.` rather than just printing a name and a number.
+8. Create an empty list called `friends`. Set the value of the variable `counter` to zero. Using a `while` loop, ask the user to enter the name of a friend. In each loop, append the name of the friend to the `friends` list and increment (add one to) the `counter` variable. End the `while` loop when the user presses the `Enter` (or `Return`) key without entering a name. When the loop ends, use a `for` loop to print the list of the user's friends and also tell the user the total number of friends that they have.
 
-**Practice with video help (See videos below for live coding)**
+**Optional practice with video help (See videos below for live coding)**
 
 These practice problems are a bit more challenging, so there are video "walk-thoughs" for each one.
 
@@ -288,4 +343,4 @@ Next lesson: [Contitional execution](../ees4)
 
 ----
 
-Revised 2022-02-28
+Revised 2022-03-18
