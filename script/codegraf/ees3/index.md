@@ -8,12 +8,22 @@ Previous lesson: [Code libraries and lists](../ees2)
 
 # Dictionaries and loops - EES 2580
 
-In this lesson we introduce a second complex object: *dictionaries*. A dictionary is a one-dimensional data structure like a list, but its elements are referenced by name using a *key* rather than by index number. We also introduce two kinds of *loops*, which are ways to step through *iterable* objects like lists or to repeat an action many times.
+In this lesson we introduce a second complex object: *dictionaries*. A dictionary is a one-dimensional data structure like a list, but its elements are referenced by name using a *key* rather than by index number. 
+
+We can build more complex objects by nesting one object inside another. Two examples we examine are lists of lists and lists of dictionaries.
+
+We also introduce two kinds of *loops*, which are ways to step through *iterable* objects like lists or to repeat an action many times.
 
 **Learning objectives** At the end of this lesson, the learner will be able to:
 - create a dictionary by specifying the items it contains.
 - add or change dictionary values.
 - remove a dictionary value.
+- create a complex Python data structure by creating a list that contains lists or dictionaries as list items.
+- describe how a list of lists can be compared to cells of a table.
+- reference an item in a list of lists by correctly placing index numbers in square brackets.
+- describe how a list of dictionaries can be compared to cells of a table.
+- reference an item in a list of dictionaries by correctly placing the row index number and column key string in square brackets.
+- describe how ordering of columns differs between a list of lists and a list of dictionaries.
 - print the items on a list using a `for` loop.
 - explain how an *indented code block* is used to define sections of code.
 - use a `range()` object to perform action a fixed number of times.
@@ -25,7 +35,7 @@ In this lesson we introduce a second complex object: *dictionaries*. A dictionar
 - build a list by repeatedly appending additional items to an empty list.
 - describe the actions that occur when several methods are attached sequentially.
 
-Total video time: m s (m s when practice live coding videos are included)
+Total video time: m s
 
 ## Links
 
@@ -63,6 +73,51 @@ An item can be removed using the del command
 ```
 del traits['eye color']
 ```
+
+----
+
+# Complex data structures
+
+For a more detailed look at this topic that repeats some of this content, go to [this page](../021/)
+
+## Lists of lists (5m05s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/UP3K-EiG9gU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+A list can contain any object, including other lists.  In some programming languages, there are two-dimensional structures called *arrays*.  To create an array-like structure in Python, we can make a list of lists.  Here's an example:
+
+```python
+firstRow = [3, 5, 7, 9]
+secondRow = [4, 11, -1, 5]
+thirdRow = [-99, 0, 45, 0]
+data = [firstRow, secondRow, thirdRow]
+```
+
+An equivalent way to have created this list of lists would have been:
+
+```python
+data = [[3, 5, 7, 9], [4, 11, -1, 5], [-99, 0, 45, 0]]
+```
+
+We can think of a list of lists like a table where the first index represents the row and the second index represents the column.
+
+![list of lists as a table](list-of-lists.png)
+
+To reference an item in a list of lists, first reference the outer list position, then the inner position.  For example, to refer to the first item in the third list, use `data[2][0]`. In the table model, we can think of the indexing as `data[column][row]`.
+
+----
+
+## Lists of dictionaries (4m58s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/1w7Cuog4LbQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Example code:
+
+```
+characters = [{'name':'Mickey Mouse', 'company':'Disney', 'gender': 'male'}, {'name':'Daisy Duck', 'company':'Disney', 'gender': 'female'}, {'name':'Daffy Duck', 'company':'Warner Brothers', 'gender': 'male'},  {'name':'Fred Flintstone', 'company':'Hanna Barbera', 'gender': 'male'}, {'name':'WALL-E', 'company':'Pixar', 'gender': 'neutral'}, {'name':'Fiona', 'company':'DreamWorks', 'gender': 'female'}]
+```
+
+![list of dictionaries as a table](list-of-dictionaries.png)
 
 ---
 
