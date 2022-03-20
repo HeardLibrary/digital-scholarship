@@ -240,7 +240,7 @@ print('Your list is:', word_list)
 
 ----
 
-Applying methods sequentially (6m17s)
+# Applying methods sequentially (6m17s)
 
 This section describes two approaches to carring out methods sequentially.
 
