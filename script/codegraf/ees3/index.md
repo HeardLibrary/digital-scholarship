@@ -328,7 +328,11 @@ After you add up all of the values, print the value of the average precipitation
 - stepping through the list using a `for` loop, converting each string into a number, and appending it to a new list
 - using the `max()` function to find the largest value on the new, numeric list.
 
-The line of code with the URL from which you can retrieve the data is provided. 
+The line of code with the URL from which you can retrieve the data is:
+
+```
+url = 'https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/codegraf/mesa_prcp_by_month.txt'
+```
 
 **Optional practice with video help (See videos below for live coding)**
 
