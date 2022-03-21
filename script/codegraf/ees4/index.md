@@ -260,7 +260,7 @@ print("It's been a pleasure doing business with you!")
 
 # Plotting with Matplotlib
 
-Matplotlib (<https://matplotlib.org/>) is a plotting library for Python that is built on the NumPy extension. One part of the library, `pyplot`, is designed to operate in a fashion that is familiar to users of MATLAB. Typically, the input data for creating plots with Matplotlib are NumPy arrays, which we have not studied, but generic lists of numbers are also accepted as input. There are two interfaces for using Matplotlib. We will use the object-oriented interface, but you may see some examples that look quite different because they use the other interface. 
+Matplotlib (<https://matplotlib.org/>) is a plotting library for Python that is built on the NumPy extension. One part of the library, `pyplot`, is designed to operate in a fashion that is familiar to users of MATLAB. Typically, the input data for creating plots with Matplotlib are NumPy arrays, which we have not studied, but generic lists of numbers are also accepted as input. There are two interfaces for using Matplotlib. We will use the object-oriented interface, but you sometimes may see examples that look quite different because they use the other interface. 
 
 To import Pyplot, it is conventional to use:
 
@@ -281,10 +281,12 @@ Each corresponding item in the lists represents a particular data point (e.g. av
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/4Xt2MHlh7qI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+.
+
 Creating a *figure* instance sets aside space for all of the plots in the figure. The `figsize=` argument can be used to set the width and height of the figure. Example:
 
 ```
-fig = plt.figure(figsize=(10,10))
+fig = plt.figure(figsize=(10, 10))
 ```
 
 One to many *subplot* instances can be inserted into the figure. Example:
@@ -303,6 +305,12 @@ If we just want to create a single plot, we can use
 ax = fig.add_subplot(1, 1, 1)
 ```
 
+The `show` function is not needed in Jupyter notebooks, but is required in stand-alone Python installations to display the plot.
+
+```
+plt.show()
+```
+
 ----
 
 ## Plot types and appearance
@@ -310,13 +318,15 @@ ax = fig.add_subplot(1, 1, 1)
 Matplotlib provides methods to generate simple two-dimensional plot types. The first two arguments are the variables to be plotted as `(x, y)`.
 
 ```
-ax.scatter(stories_fallen, injury_rate, color='r') # dot plot (scatterplot), color: red
+ax.scatter(stories_fallen, injury_rate, color='r') # dot plot (scatterplot) with red color
 ax.plot(stories_fallen, injury_rate) # line plot (points connected by lines)
 ax.bar(stories_fallen, injury_rate) # bar plot
 
 # error bar plot with dot markers
 ax.errorbar(stories_fallen, injury_rate, yerr=[lower_deviation, upper_deviation], fmt='o')
 ```
+
+`lower_deviation` and `upper_deviation` are one-dimensional data structures (e.g. lists) that have the same length as the data list, with corresponding items.
 
 Axis labels are generated using two methods:
 
