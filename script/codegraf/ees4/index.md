@@ -258,9 +258,15 @@ print("It's been a pleasure doing business with you!")
 
 ----
 
-# Plotting with MatplolLib
+# Plotting with Matplotlib
 
-Matplotlib (<https://matplotlib.org/>) is a plotting library for Python that is built on the NumPy extension. It is designed to operate in a fashion that is familiar to users of MATLAB. Typically, the input data for creating plots with Matplotlib are NumPy arrays, which we have not studied, but generic lists of numbers are also accepted as input. There are two interfaces for using Matplotlib. We will use the object-oriented interface, but you may see some examples that look quite different because they use the other interface. 
+Matplotlib (<https://matplotlib.org/>) is a plotting library for Python that is built on the NumPy extension. One part of the library, `pyplot`, is designed to operate in a fashion that is familiar to users of MATLAB. Typically, the input data for creating plots with Matplotlib are NumPy arrays, which we have not studied, but generic lists of numbers are also accepted as input. There are two interfaces for using Matplotlib. We will use the object-oriented interface, but you may see some examples that look quite different because they use the other interface. 
+
+To import Pyplot, it is conventional to use:
+
+```
+import matplotlib.pyplot as plt
+```
 
 We will plot some interesting data described in Example 1.2 of [Whitlock and Schluter](https://whitlockschluter.zoology.ubc.ca/) about injuries sustained by cats falling out of apartment building windows. The data are from vet office records (not an experimental manipulation!) and look like this:
 
