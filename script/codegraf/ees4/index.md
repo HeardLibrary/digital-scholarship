@@ -370,6 +370,31 @@ ax.plot(stories_fallen, p(stories_fallen))
 
 8. **Part 3.** The code we created in the last exercise is a bit rude because you must either correctly enter a number, or be forced to keep trying again and again until you get it right. A more "polite" script would give the user an option to quit without entering any number. Modify your code from the previous exercise by adding after the input statement an `if` statement that checks whether the user entered an empty string (`''`) by pressing the `Return` or `Enter` key without typing anything. Since the `if` statement is in the middle of a `while` loop, we have to break out of the loop. You can do that by issuing the single word statement `break`. Unfortunately, if you break out of the loop without entering anything, your statement printing the circumference of the circle won't make sense. So before the `break` statement, you could set another flag called something like `no_print` equal to `True`. (Of course, that would mean that at the start of the script you would need to set `no_print` equal to `False`.) Then at the end of the script, you can make the printing of the circumference conditional depending on whether `no_print` were `True` or not.
 
+9. Create three empty lists called `abbrev`, `precip`, and `temp`. Loop through each month in the 1879 Mesa, Arizona `climate` list of dictionaries provided below and in each loop, append the month abbreviation, average precipitation, and average temperatures in that month's dictionary to each of the three lists you created. When you are done, print each of the three lists to make sure the script did what you wanted.
+
+```
+climate = [
+    {'month': 'Jan', 'ppt': 92.8, 'tavg': 12.1},
+    {'month': 'Feb', 'ppt': 19.1, 'tavg': 10.1},
+    {'month': 'Mar', 'ppt': 18.2, 'tavg': 11.8},
+    {'month': 'Apr', 'ppt': 0, 'tavg': 19.2},
+    {'month': 'May', 'ppt': 4.1, 'tavg': 25},
+    {'month': 'Jun', 'ppt': 0, 'tavg': 28.1},
+    {'month': 'Jul', 'ppt': 8.3, 'tavg': 32.4},
+    {'month': 'Aug', 'ppt': 41.8, 'tavg': 32.2},
+    {'month': 'Sep', 'ppt': 34.1, 'tavg': 28.2},
+    {'month': 'Oct', 'ppt': 2.5, 'tavg': 19.5},
+    {'month': 'Nov', 'ppt': 0, 'tavg': 14.5},
+    {'month': 'Dec', 'ppt': 7.6, 'tavg': 8.7}    
+]
+```
+
+10\. Create a Pyplot scatterplot with average precipitation on the X axis and average temperature on the Y axis. Lable the axes appropriately, including the units (mm for precipitation and degrees C for temperature). 
+
+11\. Create another scatterplot using the same variables as above, but add a first order polynomial best fit line (trendline) to the graph. Make the scatterplot markers and trendline different colors and make sure your axes are labeled.
+
+12\. Create a bar chart with the month abbreviation on the X axis and the average precipitation on the Y axis. Label your axes appropriately.
+
 ----
 
 # Optional topics
@@ -476,4 +501,4 @@ Continue to the intermediate series on [files and tables](../020)
 
 ----
 
-Revised 2022-02-28
+Revised 2022-03-21
