@@ -326,7 +326,7 @@ After you add up all of the values, print the value of the average precipitation
 - loading the data from the Internet
 - splitting it into a list based on newline characters
 - stepping through the list using a `for` loop, converting each string into a number, and appending it to a new list
-- using the `max()` function to find the largest value on the new, numeric list.
+- using the `max()` function to find the largest value of the new, numeric list.
 
 The line of code with the URL from which you can retrieve the data is:
 
