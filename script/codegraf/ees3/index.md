@@ -240,7 +240,7 @@ print('Your list is:', word_list)
 
 ----
 
-Applying methods sequentially (6m17s)
+# Applying methods sequentially (6m17s)
 
 This section describes two approaches to carring out methods sequentially.
 
@@ -300,10 +300,13 @@ Use the `type()` function to answer the following questions:
 - what class of object is `climate[2]`?
 - what class of object is `climate[2]['month']`?
 - what class of object is `climate[2]['ppt']`?
+
 10\. Write the expressions to print the following:
 - the average temperture for July 1879.
 - the data dictionary for December 1879. 
+
 11\. Using a single `for` loop, print the month abbreviation and average temperature for each month in 1879 together on the same line.
+
 12\. Create a variable called `sum` and set its value to zero. Create a `for` loop that steps through each month and adds the precipitation value for each month to the `sum` variable. Recall that 
 
 ```
@@ -317,14 +320,19 @@ sum = sum + number
 ```
 
 After you add up all of the values, print the value of the average precipitation for all months of the year. (Don't worry about weighting the monthly values by the length of the month.)
+
 13\. In question 13 last week, we loaded data from a file on the Internet, turned its data into a list, but failed to correctly find the maximum numeric value because the values in our list were strings. Solve the problem by: 
 - creating an empty list to hold numbers
 - loading the data from the Internet
 - splitting it into a list based on newline characters
 - stepping through the list using a `for` loop, converting each string into a number, and appending it to a new list
-- using the `max()` function to find the largest value on the new, numeric list.
+- using the `max()` function to find the largest value of the new, numeric list.
 
-The line of code with the URL from which you can retrieve the data is provided. 
+The line of code with the URL from which you can retrieve the data is:
+
+```
+url = 'https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/codegraf/mesa_prcp_by_month.txt'
+```
 
 **Optional practice with video help (See videos below for live coding)**
 
