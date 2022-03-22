@@ -17,8 +17,11 @@ In this lesson we will learn several ways to control the flow through statements
 - create names for variables to hold boolean values that indicate the state that the variables describe.
 - use a flag to determine whether a condition ever occurred during a loop, or whether a condition never occurred during a loop.
 - use `try` and `except` to control the behavior of a script when errors occur in particular lines of code.
+- create a scatter, line, bar, or errorbar plot using Matplotlib.
+- assign labels to axes in a plot.
+- overlay a best-fit polynomial curve.
 
-Total video time: 44 m 08 s
+Total video time: 51 m 42 s
 
 ## Links
 
@@ -255,6 +258,151 @@ print("It's been a pleasure doing business with you!")
 
 ----
 
+# Plotting with Matplotlib
+
+Matplotlib (<https://matplotlib.org/>) is a plotting library for Python that is built on the NumPy extension. One part of the library, `pyplot`, is designed to operate in a fashion that is familiar to users of MATLAB. Typically, the input data for creating plots with Matplotlib are NumPy arrays, which we have not studied, but generic lists of numbers are also accepted as input. There are two interfaces for using Matplotlib. We will use the object-oriented interface, but you sometimes may see examples that look quite different because they use the other interface. 
+
+To import Pyplot, it is conventional to use:
+
+```
+import matplotlib.pyplot as plt
+```
+
+We will plot some interesting data described in Example 1.2 of [Whitlock and Schluter](https://whitlockschluter.zoology.ubc.ca/) about injuries sustained by cats falling out of apartment building windows. The data are from vet office records (not an experimental manipulation!) and look like this:
+
+```
+average_injury_rate = [0.7, 1.0, 1.9, 2.0, 2.3, 2.4, 1.0]
+stories_fallen = [2, 3, 4, 5, 6, 8, 11]
+```
+
+Each corresponding item in the lists represents a particular data point (e.g. average injury rate for falling 2 stories was 0.7).
+
+## Pyplot figures and subplots (7m34s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/4Xt2MHlh7qI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+.
+
+Creating a *figure* instance sets aside space for all of the plots in the figure. The `figsize=` argument can be used to set the width and height of the figure. Example:
+
+```
+fig = plt.figure(figsize=(10, 10))
+```
+
+One to many *subplot* instances can be inserted into the figure. Example:
+
+```
+axes2 = fig.add_subplot(2, 1, 2)
+```
+
+creates two rows of plots with one plot in each row, and instantiates the second plot.
+
+"Axes" is often used to refer to the subplots, hence the use of `ax` as the name of a subplot object. This use of the term differs from the conventional use to indicate X and Y axes of the plot itself.
+
+If we just want to create a single plot, we can use
+
+```
+ax = fig.add_subplot(1, 1, 1)
+```
+
+The `show` function is not needed in Jupyter notebooks, but is required in stand-alone Python installations to display the plot.
+
+```
+plt.show()
+```
+
+----
+
+## Plot types and appearance
+
+Matplotlib provides methods to generate simple two-dimensional plot types. The first two arguments are the variables to be plotted as `(x, y)`.
+
+```
+ax.scatter(stories_fallen, injury_rate, color='r') # dot plot (scatterplot) with red color
+ax.plot(stories_fallen, injury_rate) # line plot (points connected by lines)
+ax.bar(stories_fallen, injury_rate) # bar plot
+
+# error bar plot with dot markers
+ax.errorbar(stories_fallen, injury_rate, yerr=[lower_deviation, upper_deviation], fmt='o')
+```
+
+`lower_deviation` and `upper_deviation` are one-dimensional data structures (e.g. lists) that have the same length as the data list, with corresponding items.
+
+Axis labels are generated using two methods:
+
+```
+ax.set_xlabel('stories fallen')
+ax.set_ylabel('average injury per cat')
+```
+
+## Fitting a polynomial curve
+
+To overlay a best-fit line or curve, you must calculate the function of the best-fit polynomial using numpy functions. 
+
+```
+z = np.polyfit(stories_fallen, injury_rate, 2) # third argument is the order, e.g. 1=linear, 2=quadratic, etc.
+p = np.poly1d(z)
+```
+
+The created function `p()` can be plotted as a function of the x variable:
+
+```
+ax.plot(stories_fallen, p(stories_fallen))
+```
+
+# Practice exercises
+
+**Instructions:** Go to the [practice assignment Colab notebook](https://colab.research.google.com/drive/1COsWYZ_32OXk3FZm_PxMXtDZ4TOh-V7M?usp=sharing) and make a copy in your own drive as you did the practice notebook. Put you name in the first text cell and save the notebook.
+
+1. Yale University has an awesome website known as "Is it chicken tenders day?".  The website is at <http://www.isitchickentendersday.com/> and you can read about it [here](https://yaledailynews.com/blog/2011/09/08/is-it-chicken-tenders-day-question-answered-in-new-website/).  Using the website, you can determine whether it is chicken tenders day (i.e. Thursday) in the Yale residential dining halls. The `date` object from the `datetime` module has a *method* that determines the day of the week as a number (0=Monday, 1=Tuesday, etc.).  It's `date.today().weekday()`. From the `datetime` module import the `date` object. Begin your script by printing the question "Is it chicken tenders day?". Then use `if` and `else` to print `yes` if it's chicken tenders day and`no` for any other day.
+
+2. Create a list containing the names of the days of the week. Start with Monday and end with Sunday to match the numbering produced by the `.weekday()` method. Modify the program above by adding a line to tell the user what the day of the week is today. You can use the output of the `.weekday()` method as the index number when referring to your list.
+
+3. Have the user input two numbers. Set the value of a flag called `is_zero` to have a boolean value of `True` if they entered a `0` character for the second number and `False` if they didn't. Convert the two numbers to a floating point number using the `float()` function. Calculate the first number multiplied by the second number and report the answer to the user. Calculate the first number divided by the second number.  Since dividing by zero generates an error, only print the result of this calculation if the value of `is_zero` is not `True`.  Note: you can test for the negative of a condition by saying `if not is_zero:`. Another alternative syntax is `if not(is_zero):`. Print the answer to the division only if it's not division by zero.
+
+4. Write a second version of the previous script. Instead of using a flag, let the error occur and handle it using `try ... except ...` . Enclose the division calculation in a `try:` code block. Handle the division by zero case in the `except:` code block.
+
+5. Create a flag called `has_dash` and set its value to boolean `False`. Ask the user to enter a name string like `Huang Li` or `Lord Baden-Powell`. Use a `for` loop to iterate through all of the characters in the string. For each character, check whether it is a dash or not. If a dash is discovered, change the value of the `has_dash` flag to true. At the end of the script, if the name includes a dash, print `That is a hyphenated name.`
+
+6. In the error trapping examples, we have "gracefully" handled user input errors by printing some kind of message rather than letting the script crash. However, it would be better to let the user try again to enter correctly. The next several exercises will give you a chance to develop "bullet-proof" input code that gives the user a do-over if they make a mistake. **Part 1.** Use an input statement to let the user enter a number as a string. In a `try:` code block, convert the entered string to a floating point number using `float()`. Follow the conversion statement with a statement that prints the number. In the `except:` code block, print a warning to the user that they didn't enter a number. 
+
+7. Important note: If you create an infinite loop in a cell of a Jupyter notebook, you can make it stop by clicking on the black square "stop" button at the top of the notebook. In a Colab notebook, a code cell that is running can be stopped by clicking again on the same button you used to start the cell running. While it is running, that button should have a "stop" square in the middle of it. **Part 2.** We can use a `while` loop to keep repeating code blocks until some condition changes from `True` to `False`. In this example, the code block to be repeated is the input code that you just wrote. It should be repeated an indefinite number of times until the user enters correctly. Set up the while loop by highlighting the code you've already written, then press `tab` to indent the whole block 4 spaces. The condition we will evaluate is the state of a flag variable named `try_again`. Since the while loop will only be executed when a condition is true, set the value of `try_again` to be `True` at the top of your code. Then just before the indented code block, insert the statement `while try_again:`. As the code stands now, the indented code block will be executed an infinite number of times because the flag `try_again` has no way to change from `True` to `False`. When the code block is finished, execution will return to the `while` statement and since `try_again` hasn't changed, the indented code will be executed again (and again, and again, ...). So we need to insert `try_again = False` somewhere in the code. Where can we put it so that the flag will be changed after we know that the input was correct? After you've figured out where to put the `try_again = False` statement, test your code. When you are convinced that it works, delete the statement that prints the number. At the top of your code, add an statement that imports `pi` from the `math` module. At the end of your code, calculate and print the circumference assuming that the entered number is a diameter. 
+
+8. **Part 3.** The code we created in the last exercise is a bit rude because you must either correctly enter a number, or be forced to keep trying again and again until you get it right. A more "polite" script would give the user an option to quit without entering any number. Modify your code from the previous exercise by adding after the input statement an `if` statement that checks whether the user entered an empty string (`''`) by pressing the `Return` or `Enter` key without typing anything. Since the `if` statement is in the middle of a `while` loop, we have to break out of the loop. You can do that by issuing the single word statement `break`. Unfortunately, if you break out of the loop without entering anything, your statement printing the circumference of the circle won't make sense. So before the `break` statement, you could set another flag called something like `no_print` equal to `True`. (Of course, that would mean that at the start of the script you would need to set `no_print` equal to `False`.) Then at the end of the script, you can make the printing of the circumference conditional depending on whether `no_print` were `True` or not.
+
+9. Create three empty lists called `abbrev`, `precip`, and `temp`. Loop through each month in the 1879 Mesa, Arizona `climate` list of dictionaries provided below and in each loop, append the month abbreviation, average precipitation, and average temperatures in that month's dictionary to each of the three lists you created. When you are done, print each of the three lists to make sure the script did what you wanted.
+
+```
+climate = [
+    {'month': 'Jan', 'ppt': 92.8, 'tavg': 12.1},
+    {'month': 'Feb', 'ppt': 19.1, 'tavg': 10.1},
+    {'month': 'Mar', 'ppt': 18.2, 'tavg': 11.8},
+    {'month': 'Apr', 'ppt': 0, 'tavg': 19.2},
+    {'month': 'May', 'ppt': 4.1, 'tavg': 25},
+    {'month': 'Jun', 'ppt': 0, 'tavg': 28.1},
+    {'month': 'Jul', 'ppt': 8.3, 'tavg': 32.4},
+    {'month': 'Aug', 'ppt': 41.8, 'tavg': 32.2},
+    {'month': 'Sep', 'ppt': 34.1, 'tavg': 28.2},
+    {'month': 'Oct', 'ppt': 2.5, 'tavg': 19.5},
+    {'month': 'Nov', 'ppt': 0, 'tavg': 14.5},
+    {'month': 'Dec', 'ppt': 7.6, 'tavg': 8.7}    
+]
+```
+
+10\. Create a Pyplot scatterplot with average precipitation on the X axis and average temperature on the Y axis. Lable the axes appropriately, including the units (mm for precipitation and degrees C for temperature). 
+
+11\. Create another scatterplot using the same variables as above, but add a first order polynomial best fit line (trendline) to the graph. Make the scatterplot markers and trendline different colors and make sure your axes are labeled.
+
+12\. Create a bar chart with the month abbreviation on the X axis and the average precipitation on the Y axis. Label your axes appropriately.
+
+----
+
+# Optional topics
+
+The following topics introduce some additional concepts that are useful to know, but not critical for this lesson. 
+
+----
+
 # if ... in ... (optional)
 
 Another condition we can test for is whether a particular item is included in an iterable object using the `in` keyword. Consider the following code:
@@ -342,25 +490,6 @@ print("It's been a pleasure doing business with you!")
 ```
 
 
-# Practice exercises
-
-**Instructions:** Go to the [practice assignment Colab notebook](https://colab.research.google.com/drive/1COsWYZ_32OXk3FZm_PxMXtDZ4TOh-V7M?usp=sharing) and make a copy in your own drive as you did the practice notebook. Put you name in the first text cell and save the notebook.
-
-1. Yale University has an awesome website known as "Is it chicken tenders day?".  The website is at <http://www.isitchickentendersday.com/> and you can read about it [here](https://yaledailynews.com/blog/2011/09/08/is-it-chicken-tenders-day-question-answered-in-new-website/).  Using the website, you can determine whether it is chicken tenders day (i.e. Thursday) in the Yale residential dining halls. The `date` object from the `datetime` module has a *method* that determines the day of the week as a number (0=Monday, 1=Tuesday, etc.).  It's `date.today().weekday()`. From the `datetime` module import the `date` object. Begin your script by printing the question "Is it chicken tenders day?". Then use `if` and `else` to print `yes` if it's chicken tenders day and`no` for any other day.
-
-2. Create a list containing the names of the days of the week. Start with Monday and end with Sunday to match the numbering produced by the `.weekday()` method. Modify the program above by adding a line to tell the user what the day of the week is today. You can use the output of the `.weekday()` method as the index number when referring to your list.
-
-3. Have the user input two numbers. Set the value of a flag called `is_zero` to have a boolean value of `True` if they entered a `0` character for the second number and `False` if they didn't. Convert the two numbers to a floating point number using the `float()` function. Calculate the first number multiplied by the second number and report the answer to the user. Calculate the first number divided by the second number.  Since dividing by zero generates an error, only print the result of this calculation if the value of `is_zero` is not `True`.  Note: you can test for the negative of a condition by saying `if not is_zero:`. Another alternative syntax is `if not(is_zero):`. Print the answer to the division only if it's not division by zero.
-
-4. Write a second version of the previous script. Instead of using a flag, let the error occur and handle it using `try ... except ...` . Enclose the division calculation in a `try:` code block. Handle the division by zero case in the `except:` code block.
-
-5. Create a flag called `has_dash` and set its value to boolean `False`. Ask the user to enter a name string like `Huang Li` or `Lord Baden-Powell`. Use a `for` loop to iterate through all of the characters in the string. For each character, check whether it is a dash or not. If a dash is discovered, change the value of the `has_dash` flag to true. At the end of the script, if the name includes a dash, print `That is a hyphenated name.`
-
-6. In the error trapping examples, we have "gracefully" handled user input errors by printing some kind of message rather than letting the script crash. However, it would be better to let the user try again to enter correctly. The next several exercises will give you a chance to develop "bullet-proof" input code that gives the user a do-over if they make a mistake. **Part 1.** Use an input statement to let the user enter a number as a string. In a `try:` code block, convert the entered string to a floating point number using `float()`. Follow the conversion statement with a statement that prints the number. In the `except:` code block, print a warning to the user that they didn't enter a number. 
-
-7. Important note: If you create an infinite loop in a cell of a Jupyter notebook, you can make it stop by clicking on the black square "stop" button at the top of the notebook. In a Colab notebook, a code cell that is running can be stopped by clicking again on the same button you used to start the cell running. While it is running, that button should have a "stop" square in the middle of it. **Part 2.** We can use a `while` loop to keep repeating code blocks until some condition changes from `True` to `False`. In this example, the code block to be repeated is the input code that you just wrote. It should be repeated an indefinite number of times until the user enters correctly. Set up the while loop by highlighting the code you've already written, then press `tab` to indent the whole block 4 spaces. The condition we will evaluate is the state of a flag variable named `try_again`. Since the while loop will only be executed when a condition is true, set the value of `try_again` to be `True` at the top of your code. Then just before the indented code block, insert the statement `while try_again:`. As the code stands now, the indented code block will be executed an infinite number of times because the flag `try_again` has no way to change from `True` to `False`. When the code block is finished, execution will return to the `while` statement and since `try_again` hasn't changed, the indented code will be executed again (and again, and again, ...). So we need to insert `try_again = False` somewhere in the code. Where can we put it so that the flag will be changed after we know that the input was correct? After you've figured out where to put the `try_again = False` statement, test your code. When you are convinced that it works, delete the statement that prints the number. At the top of your code, add an statement that imports `pi` from the `math` module. At the end of your code, calculate and print the circumference assuming that the entered number is a diameter. 
-
-8. **Part 3.** The code we created in the last exercise is a bit rude because you must either correctly enter a number, or be forced to keep trying again and again until you get it right. A more "polite" script would give the user an option to quit without entering any number. Modify your code from the previous exercise by adding after the input statement an `if` statement that checks whether the user entered an empty string (`''`) by pressing the `Return` or `Enter` key without typing anything. Since the `if` statement is in the middle of a `while` loop, we have to break out of the loop. You can do that by issuing the single word statement `break`. Unfortunately, if you break out of the loop without entering anything, your statement printing the circumference of the circle won't make sense. So before the `break` statement, you could set another flag called something like `no_print` equal to `True`. (Of course, that would mean that at the start of the script you would need to set `no_print` equal to `False`.) Then at the end of the script, you can make the printing of the circumference conditional depending on whether `no_print` were `True` or not.
 
 ----
 
@@ -372,4 +501,4 @@ Continue to the intermediate series on [files and tables](../020)
 
 ----
 
-Revised 2022-02-28
+Revised 2022-03-21
