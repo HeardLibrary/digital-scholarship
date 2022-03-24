@@ -31,6 +31,7 @@ Total video time: 41 m 36 s (plus 16 m optional)
 
 [Lesson Colab notebook](https://colab.research.google.com/drive/1SI83Hg3GuTm72nvA61AFQCgFuIdCcDCS?usp=sharing)
 
+[lesson slides](ees2.pdf)
 
 # The import statement
 

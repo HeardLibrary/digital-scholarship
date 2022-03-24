@@ -41,6 +41,8 @@ Total video time: 50 m 09 s (additional time for optional live coding videos)
 
 [Lesson Colab notebook](https://colab.research.google.com/drive/1SCvpoi9bp_NiZ4tg0aroI6x1hYg6L4cP?usp=sharing)
 
+[lesson slides](ees3.pdf)
+
 
 # Dictionaries
 

@@ -32,6 +32,8 @@ Total video time: 53m 8s (66m 40s with optional practice script videos)
 
 [Lesson Colab notebook](https://colab.research.google.com/drive/1QfitXEOc_3gxq8USPX6S00hHkit8UJN2?usp=sharing)
 
+[lesson slides](ees1.pdf)
+
 # The = assignment operator
 
 ## Introduction to variable assignment (3m25s)
