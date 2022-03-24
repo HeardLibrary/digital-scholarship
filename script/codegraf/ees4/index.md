@@ -27,6 +27,8 @@ Total video time: 51 m 42 s
 
 [Lesson Colab notebook](https://colab.research.google.com/drive/1euO9JyAfVD4pUHjquQbgJjf8cKT4iB6L?usp=sharing)
 
+[lesson slides](ees4.pdf)
+
 
 # Procedural vs. vectorized paradigm (4m 10s)
 
