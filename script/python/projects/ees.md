@@ -4,7 +4,7 @@ title: EES project
 breadcrumb: ees
 ---
 
-# EES project ideas
+# EES Python data visualization project
 
 ## Project learning objectives:
 
@@ -62,7 +62,11 @@ The limits you choose will either be a range of months or years. The easiest way
 
 **2\.1.2 Extract year or month from date string if necessary**
 
-x
+The date strings are in ISO 8601 format: `2022-03-29` in the order of year-month-day. To get the year, you need to slice the first four characters. However, the loop variable is an integer, so to compare the loop variable to the extracted year you need to either make them both strings or both integers. For months, you also need to slice the date string, but if you are looping through a list of strings for the months, you can make the comparison directly.
+
+
+
+
 
 ## Project rubric:
 
@@ -76,20 +80,4 @@ x
 | 20 | a visualization using the `matplot.pyplot` module |
 | 20 | "does it work" points (i. e. to what extent does the script actually do the required task?) |
 
-## Data aquisition
 
-1. Go to <https://www.ncdc.noaa.gov/cdo-web/>
-2. Click on Search tools.
-3. Dataset: Global Summary of the Month. Date range: 1900-01-01 to 2022-02-01. Search for: Cities. Search term: (city of interest)
-4. If city shows up, click on `View Full Details`. Click on `Station List`. Find a station with a long time interval and good coverage. Click on the station link. Mesa 1896-2017
-Cli click add to cart. Then click on cart in upper right.
-5. On output format, choose CSV. You can adjust the date range to an earlier date at this time. Click continue.
-6. On custom outputs page, change units to metric. Select `Precipitation` and `Air Temperature` as output options. Click Continue.
-7. Add your email address, then click Submit Order.
-8. Check your email. First you should get a notification that your order was submitted. In a few minutes, you should get another email saying that you order is complete. Click the `Download` link in the email and save the file somewhere you can find it.
-
-## Plot types
-
-mean rainfall by year, mean temperature by year (scatterplots)
-
-mean rainfall by month (bar plot), mean max/min temp by month ("range" plot)
