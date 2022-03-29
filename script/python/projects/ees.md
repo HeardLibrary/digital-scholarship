@@ -55,7 +55,7 @@ You will be given a function to be inserted into your code that will get the dat
 
 Start with one factor and interval (mean rainfall by year) and after completing the code for that combination, change the code to handle different intervals and factors. 
 
-**2\.1 Step through all data in column for quantity and sum for period to be averaged**
+**2\.1 Step through all data in column for quantity and sum for period to be averaged**<br/>
 **2\.1.1 Determine the limits of the period for that analysis**
 
 The limits you choose will either be a range of months or years. The easiest way to loop through years is to treat them as numbers and use a `range()` object to generate them. The months are tricker, since they need to have leading zeros. So it's easier to create a list of strings like: `['01', '02', '03', ...'12']`. 
