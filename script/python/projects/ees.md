@@ -47,7 +47,7 @@ Much of the data wrangling code can be reused with modification after you comple
 1 Acquire data<br/>
 1\.1 Use script-defined function (provided) to load CSV from URL to a list of dictionaries<br/>
 
-2 Calculate means for desired quantity (rainfall, temperature)<br/>
+2 Calculate means for desired quantity (rainfall or temperature)<br/>
 2\.1 Step through all data in column for the quantity, then sum for period to be averaged<br/>
 2\.1.1 Extract year or month from date string if necessary<br/>
 2\.1.2 Screen whether a particular datum is from the correct time interval<br/>
@@ -78,7 +78,24 @@ The raw data will be provided as a file available from GitHub using a URL given 
 
 **1\.1 Use script-defined function (provided) to load CSV from URL to a list of dictionaries**
 
-You will be given a function to be inserted into your code that will get the data, convert it to a Python list of dictionaries, and return the list of dictionaries. The dictionaries are a special kind known as an *ordered dictionary*, but you can use them just like regular dictionaries.
+Use the function below as a starting point for your code. The function will get the data, convert it to a Python list of dictionaries, and return the list of dictionaries. The dictionaries are a special kind known as an *ordered dictionary*, but you can use them just like regular dictionaries.
+
+```
+import requests
+import csv
+import matplotlib.pyplot as plt
+import numpy as np
+
+def read_dicts_from_github_csv(path):
+    """read from a CSV file in GitHub into a tabular form. Pass in the URL, return a list of dictionaries."""
+    response = requests.get(path)
+    file_text = response.text.split('\n')
+    file_rows = csv.DictReader(file_text)
+    table = []
+    for row in file_rows:
+        table.append(row)
+    return table
+```
 
 **2 Calculate means for desired quantity (rainfall, temperature)**
 
