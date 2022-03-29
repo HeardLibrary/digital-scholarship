@@ -11,8 +11,36 @@ breadcrumb: ees
 The students will:
 - acquire data from a tabular data source and load it into a Python data structure (list of dictionaries).
 - extract necessary data from the data structure and wrangle it into a form usable in their analysis.
-- use the basic Python structures and statements they have learned: `if`, `for`, `input`, assignment, use a function from a module.
+- use the basic Python statements they have learned: `if`, `for`, assignment, use a function from a module, apply methods to an object.
+- manipulate lists and dictionaries by looping through list items, specifying dictionary items, and building lists by appending items.
 - create a simple visualization using `matplotlib.pyplot`. 
+
+## Overall goals
+
+We have monthly average climate data in tabular form acquired from the National Centers for Environmental Information <https://www.ncdc.noaa.gov/cdo-web/> for a number of locations around the U.S. The data look like this:
+
+![climate data table example](../input_table.png)
+
+In order to visualize these data, we need to summarize it by averaging values by year or by month. We also will need to deal with situations where values are missing.
+
+In the end, we want one list containing the time values to be plotted (the X values) and another list with the average values that correspond to those time values (the Y values). For example, here are two lists for yearly averages for rainfall (in mm):
+
+![example output lists](../output_lists.png)
+
+We can then visualize these data using Matplotlib. Here is an example for the data above:
+
+![example precipitation plot](../sample_viz.png)
+
+## Specific requirements
+
+Each plot must have descriptive axis labels, including units if appropriate. 
+
+1. Create an XY scatter plot of mean precipitation by year. Add a linear trendline (first-order polynomial) fit to the data.
+2. Create an XY scatter plot of mean temperature by year. Add a linear trendline (first-order polynomial) fit to the data.
+3. Create a bar plot of mean precipitation by month. 
+4. Create an error bar plot of the mean temperature by month with the error bars representing the mean maximum and mean minimum values for each month.
+
+Much of the data wrangling code can be reused with modification after you complete the first plot. 
 
 # Tasks and subtasks
 
