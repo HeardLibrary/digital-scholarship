@@ -8,7 +8,7 @@ breadcrumb: ees
 
 ## Project learning objectives:
 
-The students will:
+The learner will:
 - acquire data from a tabular data source and load it into a Python data structure (list of dictionaries).
 - extract necessary data from the data structure and wrangle it into a form usable in their analysis.
 - use the basic Python statements they have learned: `if`, `for`, assignment, use a function from a module, apply methods to an object.
@@ -23,7 +23,7 @@ We have monthly average climate data in tabular form acquired from the National 
 
 In order to visualize these data, we need to summarize it by averaging values by year or by month. We also will need to deal with situations where values are missing.
 
-In the end, we want one list containing the time values to be plotted (the X values) and another list with the average values that correspond to those time values (the Y values). For example, here are two lists for yearly averages for rainfall (in mm):
+In the end, we want one list containing the time values to be plotted (the X values) and another list with the average values that correspond to those time values (the Y values). For example, here are two lists for yearly averages for precipitation (in mm):
 
 ![example output lists](../output_lists.png)
 
@@ -45,7 +45,7 @@ Much of the data wrangling code can be reused with modification after you comple
 # Tasks and subtasks
 
 1 Acquire data<br/>
-1\.1 Use script-defined function (provided) to load CSV from URL to a list of dictionaries<br/>
+1\.1 Use a script-defined function (provided) to load CSV from URL to a list of dictionaries<br/>
 
 2 Calculate means for desired quantity (rainfall or temperature)<br/>
 2\.1 Step through all data in column for the quantity, then sum for period to be averaged<br/>
@@ -54,8 +54,8 @@ Much of the data wrangling code can be reused with modification after you comple
 2\.1.3 Skip missing data<br/>
 2\.1.4 Add screened data to sum<br/>
 2\.1.5 Count data that were summarized (exclude missing data)<br/>
-2\.2 Calculate the mean from the sum<br/>
-2\.3 Repeat the screening for every time interval to be graphed (year or month)
+2\.2 Calculate the mean from the sum and count<br/>
+2\.3 Repeat the screening for every time interval to be graphed (year or month)<br/>
 2\.3.1 Determine the limits of the period for that analysis<br/>
 2\.3.2 Append time point and mean to growing lists of summary data<br/>
 
@@ -76,7 +76,7 @@ For particular tasks, it is best to start with the narrowest subtasks and work y
 
 The raw data will be provided as a file available from GitHub using a URL given to you. 
 
-**1\.1 Use script-defined function (provided) to load CSV from URL to a list of dictionaries**
+**1\.1 Use a script-defined function (provided) to load CSV from URL to a list of dictionaries**
 
 Use the function below as a starting point for your code. The function will get the data, convert it to a Python list of dictionaries, and return the list of dictionaries. The dictionaries are a special kind known as an *ordered dictionary*, but you can use them just like regular dictionaries.
 
@@ -97,7 +97,13 @@ def read_dicts_from_github_csv(path):
     return table
 ```
 
-**2 Calculate means for desired quantity (rainfall, temperature)**
+To use the function, call it as you would any other function:
+
+```
+data = read_dicts_from_github_csv(url)
+```
+
+**2 Calculate means for desired quantity (rainfall or temperature)**
 
 Start with one factor and interval (mean rainfall by year) and after completing the code for that combination, change the code to handle different intervals and factors. 
 
@@ -112,15 +118,15 @@ for timepoint in range_of_time: # do the inner loop for each timepoint
     # Perform calculations using the sum of included data and append the calculated values to lists.
 ```
 
-We will build the inner loop first for a hard-coded timepoint value (a certain year or month), then build the outer loop to step through all timepoints.
+We will build the inner loop first for a hard-coded timepoint value (a certain year or month), then build the outer loop to step through all timepoints. 
 
 **2\.1 Step through all data in column for the quantity, then sum for period to be averaged**
 
-This will be a loop that includes all of the rows in the table
+This will be a loop that includes all of the rows in the table. Because the data structure is a list of dictionaries, the indices of the cells you will check will be in the form: `data[row][columm]`, where the row index is a number and the column is specified by a key. However, if you are looping through the rows (as in `for datum in data:`), the variable you will be working with is `datum[column]`. For any given script, the column key will be fixed. For example, if you are using precipitation (which has the column header `PRCP`), you would write `datum['PRCP']`.
 
 **2\.1.1 Extract year or month from date string if necessary**
 
-The date strings are in ISO 8601 format: `2022-03-29` in the order of year-month-day. To get the year, you need to slice the first four characters. However, the loop variable is an integer, so to compare the loop variable to the extracted year you need to either make them both strings or both integers. For months, you also need to slice the date string, but if you are looping through a list of strings for the months, you can make the comparison directly.
+The date strings are in ISO 8601 format: `2022-03` in the order of year-month. To get the year, you need to slice the first four characters. However, the loop variable is an integer, so to compare the loop variable to the extracted year you need to either make them both strings or both integers. For months, you also need to slice the date string, but if you are looping through a list of strings for the months, you can make the comparison directly.
 
 **2\.1.2 Screen whether a particular datum is from the correct time interval**
 
@@ -187,7 +193,7 @@ The plot setup should be fairly straightforward and be similar to examples we di
 **3\.1 Set up subplot<br/>
 3\.1.1 Create subplot**
 
-We should only need a single subplot ("ax") within each figure.
+We should only need a single subplot (`ax`) within each figure.
 
 **3\.1.2 Label axes**
 
