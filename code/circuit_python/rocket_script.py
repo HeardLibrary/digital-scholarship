@@ -1,4 +1,5 @@
 import time
+# Estimated time of flight, including recovery is less than 10 s with a B engine.
 seconds_to_run = 120
 measurements_per_second = 12.6 # determined emprically when running full speed, not imposed by sleep statement
 #delay_time = 1/ measurements_per_second # time to delay between multiple measurements
@@ -34,7 +35,10 @@ print('Sea level air pressure set to:', bar_sensor.sea_level_pressure/10, 'kPa')
 
 # See https://github.com/adafruit/Adafruit_CircuitPython_LSM6DS/blob/main/adafruit_lsm6ds/__init__.py for possible values
 
-acc_gyro_sensor.accelerometer_range = AccelRange.RANGE_16G # allowed values are 2G, 4G, 8G, and 16G
+# Note: maximum accleration rates for B engines with our rocket estimated around 35 m/s^2. 
+# With gravity producing acceleration in the opposite direction, the sensor could read up to 45 m/s^2.
+# So the range needs to be 8G to measure the peak reading.
+acc_gyro_sensor.accelerometer_range = AccelRange.RANGE_8G # allowed values are 2G, 4G, 8G, and 16G
 print("Accelerometer range set to: %d G" % AccelRange.string[acc_gyro_sensor.accelerometer_range])
 
 acc_gyro_sensor.gyro_range = GyroRange.RANGE_500_DPS
