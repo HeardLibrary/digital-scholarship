@@ -30,6 +30,7 @@ import adafruit_bmp280
 bar_sensor = adafruit_bmp280.Adafruit_BMP280_I2C(i2c)
 
 # Set the local air pressure, adjusted for sea level, in hectoPascals
+# This value isn't very important in this case where it's the relative altitude that we care about.
 bar_sensor.sea_level_pressure = 1011.1757554
 print('Sea level air pressure set to:', bar_sensor.sea_level_pressure/10, 'kPa')
 
