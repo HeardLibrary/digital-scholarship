@@ -52,7 +52,9 @@ The first session will introduce the hardware and CircuitPython, providing a suc
 
 [Registration](https://forms.gle/SU6UgxnnttLfiAZ26)
 
-[Lesson web page](../../codegraf/039/)
+[Lesson web page (Windows)](../../codegraf/039a)
+
+[Lesson web page (Mac)](../../codegraf/039b)
 
 The second session is hands-on and in-person. Participants will set up and program the microcontrollers themselves by connecting the boards to their laptops via USB. This session will demonstrate and provide attendees with the opportunity to program the microcontrollers in real-time and supports Mac and Windows. We will provide the necessary hardware, but please bring your laptop to this session. 
 
@@ -75,4 +77,4 @@ The second session is hands-on and in-person. Participants will set up and progr
 The third session is an in-person practical field demonstration of the microcontroller outside on Vanderbilt campus. In this session, we will launch a rocket containing a battery-powered microcontroller. We will use two sensors to record altitude and motion, saving data to the onboard memory for later analysis.
 
 ----
-Revised 2022-03-03
+Revised 2022-04-03
