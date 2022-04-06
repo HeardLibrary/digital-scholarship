@@ -28,3 +28,6 @@ temp_rh_with_display.py | [HTS221 temperature and humidity sensor](https://www.a
 |--------|-------|
 | led_flasher.py | Reads data output from `rocket_script.py` and plots various measured quantities |
 | MCP2221_Test.ipynb | experimental code to run STEMMA QT sensors directly from a laptop using the [MCP2221](https://www.adafruit.com/product/4471) USB to GPIO converter |
+
+-----
+Revised 2022-04-06
