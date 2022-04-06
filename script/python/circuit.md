@@ -56,6 +56,8 @@ The first session will introduce the hardware and CircuitPython, providing a suc
 
 [Lesson web page (Mac)](../../codegraf/039b)
 
+[Lesson Feedbacl page](https://tinyurl.com/QTPy-20220408)
+
 The second session is hands-on and in-person. Participants will set up and program the microcontrollers themselves by connecting the boards to their laptops via USB. This session will demonstrate and provide attendees with the opportunity to program the microcontrollers in real-time and supports Mac and Windows. We will provide the necessary hardware, but please bring your laptop to this session. 
 
 **NOTE: this session is limited to 20 participants.**
