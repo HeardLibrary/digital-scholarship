@@ -1,3 +1,6 @@
+# (c) 2022 Vanderbilt University. This program is released under a GNU General Public License v3.0 http://www.gnu.org/licenses/gpl-3.0
+# Author: Steve Baskauf 2022-04-08
+
 import time
 # Estimated time of flight, including recovery is less than 10 s with a B engine.
 seconds_to_run = 120
