@@ -45,7 +45,7 @@ print('Sea level air pressure set to:', bar_sensor.sea_level_pressure/10, 'kPa')
 acc_gyro_sensor.accelerometer_range = AccelRange.RANGE_8G # allowed values are 2G, 4G, 8G, and 16G
 print("Accelerometer range set to: %d G" % AccelRange.string[acc_gyro_sensor.accelerometer_range])
 
-acc_gyro_sensor.gyro_range = GyroRange.RANGE_500_DPS
+acc_gyro_sensor.gyro_range = GyroRange.RANGE_1000_DPS # allowed values are 125, 250, 500, 1000, 2000
 print("Gyro range set to: %d DPS" % GyroRange.string[acc_gyro_sensor.gyro_range])
 
 # acc_gyro_sensor.accelerometer_data_rate = Rate.RATE_1_66K_HZ
