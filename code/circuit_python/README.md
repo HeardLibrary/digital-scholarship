@@ -21,6 +21,10 @@ These scripts control devices or sensors connected to the QT Py board. Unless ot
 | rocket_script.py | [LIS3MDL+LSM6DS33 9 DoF inertial measurement unit sensor](https://www.adafruit.com/product/4485), neopixel LED on board, [BMP280 barometric pressure and altitude sensor](https://www.adafruit.com/product/2651) | modification of the script above to add altitude sensor and flash LED to indicate data collection has started |
 | boot.py | none | script to control read/write state of onboard 8 MB memory; do not change name -- used in conjunction with `code.py` and an external switch |
 
+## Rocket Launch Video
+
+[QT Py Computer Workshop Series: Microcontrollers with CircuitPython Session03: Rocket Launch](https://youtu.be/LdYFAb2e_14)
+
 ## Jupyter notebooks (Python)
 
 | script | notes |
