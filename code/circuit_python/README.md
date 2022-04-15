@@ -25,6 +25,9 @@ These scripts control devices or sensors connected to the QT Py board. Unless ot
 
 [QT Py Computer Workshop Series: Microcontrollers with CircuitPython Session03: Rocket Launch](https://youtu.be/LdYFAb2e_14)
 
+<iframe width="700" height="394" src="https://www.youtube.com/embed/LdYFAb2e_14" title="How to set the mode of a mu editor" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ## Jupyter notebooks (Python)
 
 | script | notes |
