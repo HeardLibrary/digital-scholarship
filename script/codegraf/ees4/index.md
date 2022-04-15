@@ -29,6 +29,8 @@ Total video time: 51 m 42 s
 
 [lesson slides](ees4.pdf)
 
+[feedback form](https://forms.gle/62Z5Ln9p2Qhsh7B9A)
+
 
 # Procedural vs. vectorized paradigm (4m 10s)
 
