@@ -25,6 +25,10 @@ These scripts control devices or sensors connected to the QT Py board. Unless ot
 
 [QT Py Computer Workshop Series: Microcontrollers with CircuitPython Session03: Rocket Launch](https://youtu.be/LdYFAb2e_14)
 
+[0.1x slo-mo video with overlaid altitude and acceleration component plots](https://youtu.be/PcNWg4LvNS4)
+
+[0.1x slo-mo video with overlaid net acceleration and rotation plots](https://youtu.be/b0dXk6lvcQ8)
+
 ## Jupyter notebooks (Python)
 
 | script | notes |
@@ -32,5 +36,13 @@ These scripts control devices or sensors connected to the QT Py board. Unless ot
 | led_flasher.py | Reads data output from `rocket_script.py` and plots various measured quantities |
 | MCP2221_Test.ipynb | experimental code to run STEMMA QT sensors directly from a laptop using the [MCP2221](https://www.adafruit.com/product/4471) USB to GPIO converter |
 
+## Flight data (CSV)
+
+| file | notes |
+|--------|-------|
+| motion.csv | Data collected during the workshop rocket launch and featured in the videos |
+| /test_flight_data.csv | Data collected during a test rocket launch where the sensors were ejected from the payload compartment |
+
+
 -----
-Revised 2022-04-06
+Revised 2022-04-18
