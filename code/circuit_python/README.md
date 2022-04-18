@@ -41,7 +41,7 @@ These scripts control devices or sensors connected to the QT Py board. Unless ot
 | file | notes |
 |--------|-------|
 | motion.csv | Data collected during the workshop rocket launch and featured in the videos |
-| /test_flight_data.csv | Data collected during a test rocket launch where the sensors were ejected from the payload compartment |
+| test_flight_data.csv | Data collected during a test rocket launch where the sensors were ejected from the payload compartment |
 
 
 -----
