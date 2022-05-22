@@ -68,7 +68,9 @@ In response, grant funding agencies in the United States, including the [Nationa
 
 [Data Sharing Policies by Federal Agency (from the SPARC website)](http://researchsharing.sparcopen.org/compare?ids=5&compare=data)
 
-[Effective Practices for Data (NSF Dear Colleague Letter, 2019](https://www.nsf.gov/pubs/2019/nsf19069/nsf19069.jsp)
+[Effective Practices for Data (NSF Dear Colleague Letter, 2019)](https://www.nsf.gov/pubs/2019/nsf19069/nsf19069.jsp)
+
+All National Institutes of Healty (NIH) applications submitted after January 25, 2023 will need to comply with the [NIH Data Management and Sharing Policy](https://sharing.nih.gov/data-management-and-sharing-policy/about-data-management-sharing-policy/data-management-and-sharing-policy-overview#after). This policy requires researchers to plan for how data will be preserved and shared. This expands the previous policy from requiring a data sharing plan to requiring a plan for both sharing and management of data.
 
 ## Federal Data Strategy
 
@@ -91,4 +93,4 @@ While these findings are specific to cancer clinical trials, we can expect to se
 Piwowar HA, Day RS, Fridsma DB (2007) Sharing Detailed Research Data Is Associated with Increased Citation Rate. PLoS ONE 2(3): e308. <http://dx.doi.org/10.1371/journal.pone.0000308>
 
 ----
-Revised 2021-12-20
+Revised 2022-05-22
