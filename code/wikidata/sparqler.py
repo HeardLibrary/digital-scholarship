@@ -259,10 +259,8 @@ FILTER(lang(?label)='en')
 user_agent = 'TestAgent/0.1 (mailto:email@domain.com)'
 wdqs = Sparqler(useragent=user_agent)
 data = wdqs.query(query_string)
-if wdqs.response[0] == '{':
-    print('no error')
+if data is None:
+    print("Error")
 else:
-    print('error')
-print()
-print(json.dumps(data, indent=2))
+    print(json.dumps(data, indent=2))
 #print(wdqs.response)
