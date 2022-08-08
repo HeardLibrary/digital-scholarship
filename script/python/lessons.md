@@ -43,8 +43,8 @@ You are welcome to use desktop Jupyter notebook if you already have it installed
 
 | Working session date | Lesson | Topic | Web page (times are total video length) |
 |---|---|---|---|
-| Mar 17 | 1 | Introduction and examples | [terminology](../../codegraf/001/) recommended, but optional (18 min) / [programming environments](../../codegraf/002/) recommended, but optional (50 min) / [Colab quickstart](../../codegraf/003a/) required (14 min) |
-| Mar 24 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
+| Aug 29 | 1 | Introduction and examples | [terminology](../../codegraf/001/) recommended, but optional (18 min) / [programming environments](../../codegraf/002/) recommended, but optional (50 min) / [Colab quickstart](../../codegraf/003a/) required (14 min) |
+| Sep 5 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
 | Mar 31 | 3 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
 | Apr 7 | 4 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
 | Apr 14 | 5 | Loops | [lesson videos](../../codegraf/006b/) (33 min lessons, 61 min including demos) |
@@ -76,4 +76,4 @@ TBD
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2022-03-04
+Revised 2022-08-16
