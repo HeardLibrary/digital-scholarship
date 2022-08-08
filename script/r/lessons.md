@@ -23,17 +23,13 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 [Archive of past lessons](../archive/)
 
 
-## Beginners Lessons - Spring 2022
+## Beginners Lessons - Fall 2022
 
-**Time:** Thursdays from 11:00 AM - noon Central (US) Time (starting January 20). 
+**Time:** Thursdays from 1:00-2:00 PMC entral (US) Time (starting October 27). 
 
-**Venue** As of February 10, these lessons are being offered only remotely via Zoom. 
+**Venue** Synchronously on Zoom. [Registration link](https://vanderbilt.zoom.us/meeting/register/). After registering, you will receive a confirmation email containing information about joining the Zoom session.
 
-**Instructor:** Steve Baskauf [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
-
-After registering, you will receive a confirmation email containing information about joining the Zoom session. 
-
-[Registration link](https://vanderbilt.zoom.us/meeting/register/tJ0pcu6vrDopG9QzGCe42-KaLdxQA_fKsW-n)
+**Instructor:** Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange a time to talk.
 
 I will be presenting the lessons using RStudio Cloud. It behaves almost exactly like RStudio desktop but does not require any installation. Create an account at <https://rstudio.cloud/> before the first lesson to save time.
 
@@ -41,12 +37,12 @@ You are welcome to use desktop RStudio if you already have it installed, but we 
 
 | Working session date | Lesson | Topic | Web pages (times are total video length) |
 |---|---|---|---|
-| Jan 20 | 1 | Introduction and examples | [terminology](../../codegraf/001/) recommended, but optional (18 min) / [programming environments](../../codegraf/002/) recommended, but optional (50 min) / [RStudio Cloud quickstart](../../codegraf/003b/) required (8 min)  |
-| Jan 27 | 2 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (45 min) |
-| Feb 3 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
-| Feb 10 | 4 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
-| Feb 17 | 5 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
-| Feb 24 | 6 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (46 min)  |
+| Oct 27 | 1 | Introduction and examples | [terminology](../../codegraf/001/) recommended, but optional (18 min) / [programming environments](../../codegraf/002/) recommended, but optional (50 min) / [RStudio Cloud quickstart](../../codegraf/003b/) required (8 min)  |
+| Nov 3 | 2 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (45 min) |
+| Nov 10 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
+| Nov 17 | 4 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
+| Dec 1 | 5 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
+| Dec 8 | 6 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (46 min)  |
 
 
 # R Resources
@@ -71,13 +67,15 @@ Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 
 ## Software Carpentries 
 
-In coordination with the Office of the Vice Provost for Research, Research IT Services, Data Science Institute, and ACCRE, the DiSC office is co-sponsoring another Software Carpentries event to be held on March 10th and 11th. The Carpentries are designed to teach faculty and students introductory research computing skills, reproducible research, and data visualization and analysis. The full-day events are hands-on in nature, as students follow along live-coding exercises that progressively build.
+Co-sponsored by DiSC, Office of the Vice Provost for Research, Research IT, ACCRE, and the Data Science Institute
 
-he March Carpentries event will focus on introductory R and R Studio, followed by Geographic Information Systems with R/RStudio. Registration is free, but attendees should plan to be present for the entire workshop as the content builds on itself. [Additional information and registration are available here.](https://www.eventbrite.com/e/software-carpentries-reproducible-research-with-r-tickets-243058403227)
+TBD
+
+
 
 --------------------
 
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2022-02-09
+Revised 2022-08-08

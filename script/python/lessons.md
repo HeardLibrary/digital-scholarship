@@ -20,22 +20,16 @@ The lessons are part of a free, online learning system called [CodeGraf](../../c
 
 The DiSC office also provides [lessons for learning R](http://vanderbi.lt/r) and [getting started with GitHub](http://vanderbi.lt/github) in a similar format.
 
-**Special note for spring 2022:** We are offering a new workshop series on [QT Py Computer Workshop Series: Microcontrollers with CircuitPython](http://vanderbi.lt/circuitpython), which teaches you how to program microcontroller boards with CircuitPython. 
-
 [Archive of past lessons](../archive/)
 
 
-## Beginners Lessons - Spring 2022
+## Beginners Lessons - Fall 2022
 
-**Time:** Thursdays from 11:00 AM - noon Central (US) Time (starting March 17). 
+**Time:** Thursdays from 1:00-2:00 PM Central (US) Time (starting September 1). 
 
-**In-person venue:** Central Library Poetry Room (room 612A). 
+**Venue:** Synchronously on Zoom. [Registration link](https://vanderbilt.zoom.us/meeting/register/). After registering, you will receive a confirmation email containing information about joining the Zoom session. 
 
-**Instructor:** Steve Baskauf [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
-
-Because of the uncertainty related to COVID 19, all participants should register through Zoom so that they can participate remotely if necessary. After registering, you will receive a confirmation email containing information about joining the Zoom session. 
-
-[Registration link](https://vanderbilt.zoom.us/meeting/register/tJUlcOyvqD0qH9f3v-rKfMFVkOHjcqF0Gur2)
+**Instructor:** Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange a time to talk.
 
 I will be presenting the lessons using Colab notebooks. They behaves very similarly to the popular Jupyter notebooks but do not require any installation. They do require you to have a Google account.
 
@@ -43,12 +37,36 @@ You are welcome to use desktop Jupyter notebook if you already have it installed
 
 | Working session date | Lesson | Topic | Web page (times are total video length) |
 |---|---|---|---|
-| Aug 29 | 1 | Introduction and examples | [terminology](../../codegraf/001/) recommended, but optional (18 min) / [programming environments](../../codegraf/002/) recommended, but optional (50 min) / [Colab quickstart](../../codegraf/003a/) required (14 min) |
-| Sep 5 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
-| Mar 31 | 3 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
-| Apr 7 | 4 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
-| Apr 14 | 5 | Loops | [lesson videos](../../codegraf/006b/) (33 min lessons, 61 min including demos) |
-| Apr 21 | 6 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
+| Sep 1 | 1 | Introduction and examples | [terminology](../../codegraf/001/) recommended, but optional (18 min) / [programming environments](../../codegraf/002/) recommended, but optional (50 min) / [Colab quickstart](../../codegraf/003a/) required (14 min) |
+| Sep 8 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
+| Sep 15 | 3 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
+| Sep 22 | 4 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
+| Sep 29 | 5 | Loops | [lesson videos](../../codegraf/006b/) (33 min lessons, 61 min including demos) |
+| Oct 6 | 6 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
+
+
+## Introduction to Pandas and Matplotlib - Fall 2022
+
+NOTE: scheduled times and dates are tentative, so check back later for details and a working registration link.
+
+**Time:** Tuesdays from 1:00-2:00 PM Central (US) Time (starting November 2). 
+
+**Venue:** In-person (location TBD) and Zoom. You should complete the Zoom registration even if you plan to attend in person. [Registration link](https://vanderbilt.zoom.us/meeting/register/). After registering, you will receive a confirmation email containing information about joining the Zoom session. 
+
+**Instructor:** Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange a time to talk.
+
+These lessons will introduce the key features of Pandas with an emphasis on reuasable code examples and the goal of enabling you to repurpose that code or other code you find online for your own use. This is an intermediate level series that assumes you have a basic understanding of how Python operates and of basic Python objects like lists and dictionaries. If you are new to Python, I recommend working through the beginner exercises (above), either on your own or as part of the synchronous lesson series. However, even without this background, you may be able to use the examples, although your understanding of what's going on will probably be hindered.
+
+The lessons may be done either with Colab (cloud-based) notebooks or locally-installed Jupyter notebooks. For information about installing the Jupyter notebook system, see the links in the Beginner lessons above. Since we want to be able to code using our own data files, it is helpful if you are familiar navigating and manipulating files in either Google Drive (if using Colab) or your own (Windows or Mac) operating system (if using local Jupyter notebooks).
+
+This is a new lesson series, so the exact content and lesson web pages below are subject to change.
+
+| Working session date | Lesson | Topic | Web page (times are total video length) |
+|---|---|---|---|
+| Nov 1 | 1 | Introduction to NumPy and Pandas | [lesson videos](../../codegraf/004/) (x min) |
+| Nov 8 | 2 | Pandas data wrangling and calculation examples | [lesson videos](../../codegraf/004/) (x min) |
+| Nov 15 | 3 | Introduction to Matplotlib paradigms | [lesson videos](../../codegraf/005/) (x min) |
+| Nov 29 | 4 | Matplotlib examples | [lesson videos](../../codegraf/006a/) (x min) |
 
 
 # Python Resources
@@ -76,4 +94,4 @@ TBD
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2022-08-16
+Revised 2022-08-08
