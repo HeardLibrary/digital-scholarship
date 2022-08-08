@@ -52,6 +52,8 @@ Getting started on AWS [http://vanderbi.lt/learnaws](http://vanderbi.lt/learnaws
 
 [Linked Open Data (LOD)](lod/) - Linked Data is a graph-based data representation that enables sharing and linking data among providers. Linked Open Data makes those data freely available. Querying LOD using SPARQL provides access to important datasets such as Wikidata.
 
+[Qualitative analysis](qual/) - Process, categorize, and analyze text, audio, and video data.
+
 [Scripting/programming languages](script/) - Our office provides support for three of the programming languages most commonly used in research: Python, R, and XQuery.  We provide links to do-it-yourself resources and support working groups where you can learn in person.
 
 [Understanding my computer](computer/) - This part of the site unveils the mysteries of your computer on subjects including files and directories, installing and managing software, backups, and the command line.
