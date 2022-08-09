@@ -49,7 +49,7 @@ You are welcome to use desktop Jupyter notebook if you already have it installed
 
 NOTE: scheduled times and dates are tentative, so check back later for details and a working registration link.
 
-**Time:** Tuesdays from 1:00-2:00 PM Central (US) Time (starting November 2). 
+**Time:** Wednesdays from 1:00-2:00 PM Central (US) Time (starting November 2). 
 
 **Venue:** In-person (location TBD) and Zoom. You should complete the Zoom registration even if you plan to attend in person. [Registration link](https://vanderbilt.zoom.us/meeting/register/). After registering, you will receive a confirmation email containing information about joining the Zoom session. 
 
@@ -63,10 +63,10 @@ This is a new lesson series, so the exact content and lesson web pages below are
 
 | Working session date | Lesson | Topic | Web page (times are total video length) |
 |---|---|---|---|
-| Nov 1 | 1 | Introduction to NumPy and Pandas | [lesson videos](../../codegraf/004/) (x min) |
-| Nov 8 | 2 | Pandas data wrangling and calculation examples | [lesson videos](../../codegraf/004/) (x min) |
-| Nov 15 | 3 | Introduction to Matplotlib paradigms | [lesson videos](../../codegraf/005/) (x min) |
-| Nov 29 | 4 | Matplotlib examples | [lesson videos](../../codegraf/006a/) (x min) |
+| Nov 2 | 1 | Introduction to NumPy and Pandas | [NumPy lesson videos](../../codegraf/007/) [Pandas intro lesson videos](../../codegraf/008/) (x min) |
+| Nov 9 | 2 | Pandas data wrangling and calculation examples | [lesson videos 1](../../codegraf/009a/) [lesson videos 1](../../codegraf/009b/) (x min) |
+| Nov 16 | 3 | Introduction to Matplotlib paradigms | [lesson videos](../../codegraf/ees4/) (x min) |
+| Nov 30 | 4 | Matplotlib examples | [lesson videos](../../codegraf/010/) (x min) |
 
 
 # Python Resources
@@ -94,4 +94,4 @@ TBD
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2022-08-08
+Revised 2022-08-09
