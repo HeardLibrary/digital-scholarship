@@ -27,7 +27,7 @@ The DiSC office also provides [lessons for learning R](http://vanderbi.lt/r) and
 
 **Time:** Thursdays from 1:00-2:00 PM Central (US) Time (starting September 1). 
 
-**Venue:** Synchronously on Zoom. [Registration link](https://vanderbilt.zoom.us/meeting/register/). After registering, you will receive a confirmation email containing information about joining the Zoom session. 
+**Venue:** Synchronously on Zoom. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJIsdO-tqDMrE9DPTCMCEzWKJ840Moz7QQ48). After registering, you will receive a confirmation email containing information about joining the Zoom session. 
 
 **Instructor:** Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange a time to talk.
 
