@@ -64,7 +64,7 @@ This is a new lesson series, so the exact content and lesson web pages below are
 | Working session date | Lesson | Topic | Web page (times are total video length) |
 |---|---|---|---|
 | Nov 2 | 1 | Introduction to NumPy and Pandas | [NumPy lesson videos](../../codegraf/007/) [Pandas intro lesson videos](../../codegraf/008/) (x min) |
-| Nov 9 | 2 | Pandas data wrangling and calculation examples | [lesson videos 1](../../codegraf/009a/) [lesson videos 1](../../codegraf/009b/) (x min) |
+| Nov 9 | 2 | Pandas data wrangling and calculation examples | [lesson videos 1](../../codegraf/009a/), [lesson videos 2](../../codegraf/009b/) (x min) |
 | Nov 16 | 3 | Introduction to Matplotlib paradigms | [lesson videos](../../codegraf/ees4/) (x min) |
 | Nov 30 | 4 | Matplotlib examples | [lesson videos](../../codegraf/010/) (x min) |
 
@@ -94,4 +94,4 @@ TBD
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2022-08-09
+Revised 2022-08-10
