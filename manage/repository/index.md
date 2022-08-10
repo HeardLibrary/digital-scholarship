@@ -17,14 +17,23 @@ There are several useful tools for finding data repositories that serve your fie
 - The [list of Open Access Data Repositories from Simmons College](http://oad.simmons.edu/oadwiki/Data_repositories) is grouped by discipline.
 - The [Registry of Research Data Repositories (re3data)](http://www.re3data.org/) is a searchable listing of data repositories worldwide.  Use it to identify data repositories serving your discipline and their policies regarding open access and data citations.
 - *Scientific Data* [Recommended Data Repositories](https://www.nature.com/sdata/policies/repositories) list
+- Open [domain specific data sharing repositories](https://www.nlm.nih.gov/NIHbmic/domain_specific_repositories.html) supported by the National Institutes of Health (NIH).
 
 # Important Data Repositories
+
+The National Institutes of Health (NIH) maintains a [list of generalist repositories](https://www.nlm.nih.gov/NIHbmic/generalist_repositories.html) that may be used if there is no domain-specific repository that is suitable for a particular dataset. Some of those repositories are described in the list below.
 
 ## Dataverse (Harvard) 
 
 Harvard Dataverse is a repository for research data and code. "The Harvard Dataverse is open to all scientific data from all disciplines worldwide. It includes the world's largest collection of social science research data. It is hosting data for projects, archives, researchers, journals, organizations, and institutions."
 
 [Go to the Dataverse website](https://dataverse.harvard.edu/)
+
+## Dryad
+
+Dryad was [originally created by a group of journals and scientific societies](https://datadryad.org/stash/our_mission) to create a location to archive data from their publications. It is flexible about data format and assigns citable DOIs to submissions. It is also committed to long-term preservation and access. Because of its integration with partner journal workflows, it may be a good choice in cases where journals require archiving of data prior to publication.
+
+[Go to the Dryad website](https://datadryad.org/)
 
 ## Figshare
 
@@ -55,4 +64,4 @@ If you are using Github to manage a project, you can easily archive dataset rele
 [Go to the Zenodo website](https://zenodo.org/)
 
 ----
-Revised 2021-05-03
+Revised 2022-08-10
