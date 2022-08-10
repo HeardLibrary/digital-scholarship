@@ -70,7 +70,7 @@ In response, grant funding agencies in the United States, including the [Nationa
 
 [Effective Practices for Data (NSF Dear Colleague Letter, 2019)](https://www.nsf.gov/pubs/2019/nsf19069/nsf19069.jsp)
 
-All National Institutes of Healty (NIH) applications submitted after January 25, 2023 will need to comply with the [NIH Data Management and Sharing Policy](https://sharing.nih.gov/data-management-and-sharing-policy/about-data-management-sharing-policy/data-management-and-sharing-policy-overview#after). This policy requires researchers to plan for how data will be preserved and shared. This expands the previous policy from requiring a data sharing plan to requiring a plan for both sharing and management of data.
+All National Institutes of Healty (NIH) applications submitted after January 25, 2023 will need to comply with the [NIH Data Management and Sharing Policy](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html). This policy requires researchers to plan for how data will be preserved and shared. This expands the previous policy from requiring a data sharing plan to requiring a plan for both sharing and management of data.
 
 ## Federal Data Strategy
 
