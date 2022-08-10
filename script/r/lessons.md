@@ -27,7 +27,7 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 
 **Time:** Thursdays from 1:00-2:00 PMC entral (US) Time (starting October 27). 
 
-**Venue** Synchronously on Zoom. [Registration link](https://vanderbilt.zoom.us/meeting/register/). After registering, you will receive a confirmation email containing information about joining the Zoom session.
+**Venue** Synchronously on Zoom. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJwucuGgpz0sHNNqpJkHUET_9xU_5ctAfnVw). After registering, you will receive a confirmation email containing information about joining the Zoom session.
 
 **Instructor:** Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange a time to talk.
 
