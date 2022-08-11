@@ -45,7 +45,7 @@ You are welcome to use desktop Jupyter notebook if you already have it installed
 | Oct 6 | 6 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
 
 
-## Introduction to Pandas and Matplotlib - Fall 2022
+## Introduction to pandas and Matplotlib - Fall 2022
 
 **Time:** Wednesdays from 1:00-2:00 PM Central (US) Time (starting November 2). 
 
@@ -53,7 +53,7 @@ You are welcome to use desktop Jupyter notebook if you already have it installed
 
 **Instructor:** Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange a time to talk.
 
-These lessons will introduce the key features of Pandas with an emphasis on reusable code examples and typical ways to create visualizations from DataFrames. This is an intermediate level series that assumes you have a basic understanding of how Python operates and of basic Python objects like lists and dictionaries. If you are new to Python, I recommend working through the beginner exercises (above), either on your own or as part of the synchronous lesson series. However, even without this background, you may be able to use the examples, although your understanding of what's going on will probably be hindered.
+These lessons will introduce the key features of pandas with an emphasis on reusable code examples and typical ways to create visualizations from DataFrames. This is an intermediate level series that assumes you have a basic understanding of how Python operates and of basic Python objects like lists and dictionaries. If you are new to Python, I recommend working through the beginner exercises (above), either on your own or as part of the synchronous lesson series. However, even without this background, you may be able to use the examples, although your understanding of what's going on will probably be hindered.
 
 The lessons may be done either with Colab (cloud-based) notebooks or locally-installed Jupyter notebooks. For information about installing the Jupyter notebook system, see the links in the Beginner lessons above. Since we want to be able to code using our own data files, it is helpful if you are familiar navigating and manipulating files in either Google Drive (if using Colab) or your own (Windows or Mac) operating system (if using local Jupyter notebooks).
 
@@ -61,8 +61,8 @@ This is a new lesson series, so the exact content and lesson web pages below are
 
 | Working session date | Lesson | Topic | Web page (times are total video length) |
 |---|---|---|---|
-| Nov 2 | 1 | Introduction to NumPy and Pandas | [NumPy lesson videos](../../codegraf/007/) [Pandas intro lesson videos](../../codegraf/008/) (x min) |
-| Nov 9 | 2 | Pandas data wrangling and calculation examples | [lesson videos 1](../../codegraf/009a/), [lesson videos 2](../../codegraf/009b/) (x min) |
+| Nov 2 | 1 | Introduction to NumPy and pandas | [NumPy lesson videos](../../codegraf/007/) [Pandas intro lesson videos](../../codegraf/008/) (x min) |
+| Nov 9 | 2 | pandas data wrangling and calculation examples | [lesson videos 1](../../codegraf/009a/), [lesson videos 2](../../codegraf/009b/) (x min) |
 | Nov 16 | 3 | Introduction to Matplotlib paradigms | [lesson videos](../../codegraf/ees4/) (x min) |
 | Nov 30 | 4 | Matplotlib examples | [lesson videos](../../codegraf/010/) (x min) |
 
