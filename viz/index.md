@@ -34,9 +34,10 @@ Other presentations
 
 # Statistical analysis resources
 
+[Stata Resources Guide](https://researchguides.library.vanderbilt.edu/stataResources). Includes instructions for accessing the software at Vanderbilt, links to tutorials and workshops, and links to documentation.
+
 [Lesson series on statistics with R (under construction)](../script/codegraf/026/)
 
-[Instructions for accessing SPSS and STATA (Vanderbilt Users only)](https://libanswers.library.vanderbilt.edu/faq/290980)
 
 ----
-Revised 2021-02-23
+Revised 2022-08-18
