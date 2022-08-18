@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Architecture of Chinese Temples</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/cosmo/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="tang-song.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+          <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                      data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Temple Buildings Search</a>
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                      <li class="active"><a href="http://rdf.library.vanderbilt.edu/main-article.docbook?view">Home <span class="sr-only"
+                              >(current)</span></a></li>
+                      <li><a href="http://as.vanderbilt.edu/historyart/people/miller.php">About</a></li>
+
+                  </ul>
+              </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+      </nav>
+
+    <div class="container" style="margin-bottom: 50px;">
+
+      <div class="starter-template">
+          <div class="bs-component">
+              <div class="jumbotron">
+                  <h2>Architecture of Chinese Temples</h2>
+                  <p><img class="img-responsive" src="http://hartsvr.cas.vanderbilt.edu/tangsong/dimli/images/medium/003109.jpg" style="float:left; margin-right:35px; margin-bottom: 20px; width:210px;" />Test web page for Tang-Song metadata.<br/>Linked images are (c) 2017 Tracy G. Miller CC BY-NC<br/>Click "About" for contact information.<br/>Read <a href="http://baskauf.blogspot.com/2016/11/sparql-based-web-app-to-find-chinese.html" target="_blank">this blog post</a> for details.</p>
+                  <p style="clear:left;"><a href="http://as.vanderbilt.edu/historyart/people/miller.php" class="btn btn-default btn-lg" role="button">another "about" button</a></p>
+              </div>
+          </div>
+      </div>
+
+    <h1>Find buildings at temple sites<br/>寻找在寺庙建筑</h1>
+    <div class="form-horizontal input-group-addon">
+    <!-- <form class="form-inline" role="form"> -->
+
+        <div class="form-group">
+            <label for="box0" class="col-sm-4 control-label">Language/语言</label>
+            <div class="col-sm-5">
+                <select name="languageDropdown" id="box0" class="form-control">
+                    <option value='en' selected='selected'>English</option>
+                    <option value='zh-hans' >中文</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="box1" class="col-sm-4 control-label">Province/省</label>
+            <div class="col-sm-5">
+                <select name="provinceDropdown" id="box1" class="form-control">
+                    <option value='?province' selected='selected'>Any province/任何省份</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="box3" class="col-sm-4 control-label">Dynasty/王朝</label>
+            <div class="col-sm-5">
+                <select name="dynastyDropdown" id="box3" class="form-control">
+                    <option value='?dynasty' selected='selected'>Any dynasty/任何一个朝代</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="box2" class="col-sm-4 control-label">Temple site/寺址</label>
+            <div class="col-sm-5">
+                <select name="siteDropdown" id="box2" class="form-control">
+                    <option value='?site' selected='selected'>Any temple/任何寺庙</option>
+                </select>
+            </div>
+        </div>
+<!-- 
+        <div class="form-group">
+            <label for="box4" class="col-sm-4 control-label">Category</label>
+            <div class="col-sm-5">
+                <select name="categoryDropdown" id="box4" class="form-control">
+                    <option value='?category' selected='selected'>Any Anatomical Feature</option>
+                </select>
+            </div>
+        </div>
+-->
+        <button type="submit" class="btn btn-default" id="searchButton">Search</button>
+        <i id="searchSpinner" class="fa fa-spinner fa-spin fa-lg"></i>
+    </div>
+
+    <!--Here is where the links get printed-->
+    <div id="div1"></div>
+
+    <!-- pagination -->
+    <nav id="bioimagesPagination" class="hidden">
+      <ul class="pagination">
+        <li>
+          <a href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+          <a href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    </div><!-- /.container -->
+
+    <footer class="footer">
+      <div class="container">
+        <p>Jean and Alexander Heard Library, Vanderbilt University</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
