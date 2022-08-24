@@ -75,11 +75,20 @@ Here's a [page of Python resources](../)
 
 ## Other sources of Python resources on Vanderbilt's campus
 
-Data Science Institute (DSI) <https://www.vanderbilt.edu/datascience/>
-
 Research IT <https://research.vanderbilt.edu/researchadministration/about/research-it/>
 
 Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
+
+Vanderbilt Data Science Institute (DSI) <https://www.vanderbilt.edu/datascience/>
+
+The DSI offers frequent workshops each semester. Here are a few sessions that might be of interest to Python learners in the fall of 2022:
+
+- Sep. 13 Essential Data Science Tools for Teaching and Research
+- Oct. 11 Fairness in AI
+- Oct. 23 Solving the Reproducibility Crisis
+
+For more information on all DSI events, visit the [DSI workshops page](https://www.vanderbilt.edu/datascience/events/data-science-workshops/). For registration, visit [this registration link](https://docs.google.com/forms/d/e/1FAIpQLSdHoJitkCQ1zXwTEQuLpGCqBGZvUYwLB4Nhcrs19t_-Wi_HCg/viewform?usp=sf_link).
+
 
 ## Software Carpentries 
 
@@ -92,4 +101,4 @@ TBD
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2022-08-11
+Revised 2022-08-23

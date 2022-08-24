@@ -22,15 +22,8 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 
 ## Beginners Lessons - Spring 2022 
 
-**Time:** Thursdays from 1:00 PM - 2:00 PM Central (US) Time (starting January 20).
+**Instructor:** Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
 
-**Venue** As of February 10, these lessons are being offered only remotely via Zoom. 
-
-**Instructor:** Steve Baskauf [office hours information](https://www.library.vanderbilt.edu/disc/officehours), or email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange another time to talk.
-
-After registering, you will receive a confirmation email containing information about joining the Zoom session. 
-
-[Registration link](https://vanderbilt.zoom.us/meeting/register/tJUvceqsqjwsH9AQn7LTAXYNJH3i_dDB9Ck-)
 
 Prior to the first lesson, you should sign up for a [GitHub account](https://github.com/) if you don't already have one, and download the [GitHub Desktop software](https://desktop.github.com/) for your computer. You also need a text or code editor to use. I recommend [Atom](https://atom.io/) because of its Markdown preview, but it's fine to use a different one if you prefer.
 
@@ -54,5 +47,16 @@ The following page provides supplemental information about an advanced topic not
 
 [Forking a repo and the Open Source model](fork/)
 
+**Vanderbilt Data Science Institute (DSI)** <https://www.vanderbilt.edu/datascience/>
+
+The DSI offers frequent workshops each semester. Here are a few sessions that might be of interest to Git/GitHub learners in the fall of 2022:
+
+- Sep. 1 Managing Your Research and Lab with GitHub Projects
+- Sep. 8 Git Basics
+- Sep. 15 Making GitHub Work for Teams
+
+For more information on all DSI events, visit the [DSI workshops page](https://www.vanderbilt.edu/datascience/events/data-science-workshops/). For registration, visit [this registration link](https://docs.google.com/forms/d/e/1FAIpQLSdHoJitkCQ1zXwTEQuLpGCqBGZvUYwLB4Nhcrs19t_-Wi_HCg/viewform?usp=sf_link).
+
+
 ----
-Revised 2022-02-23
+Revised 2022-08-23
