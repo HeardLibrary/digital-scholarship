@@ -1,5 +1,5 @@
 ---
-permalink: /manage/backup/aws
+permalink: /manage/backup/aws/
 title: Backing up files using AWS S3 buckets
 breadcrumb: AWS S3
 ---
