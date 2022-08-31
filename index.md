@@ -58,9 +58,13 @@ Getting started on AWS [http://vanderbi.lt/learnaws](http://vanderbi.lt/learnaws
 
 [Understanding my computer](computer/) - This part of the site unveils the mysteries of your computer on subjects including files and directories, installing and managing software, backups, and the command line.
 
+## Available software
+
+The Vanderbilt Libraries maintains [lists of hardware and software](https://www.library.vanderbilt.edu/technology/hardwaresoftware/) that are available to Vanderbilt users. There is also a [list of software available in the Peabody Learning Commons](https://www.library.vanderbilt.edu/peabody/lcsoftware), Room 304 of the Peabody Library.
+
 ## Site Map
 
 [Go to the site map](map/)
 
 ----
-Revised 2021-02-23
+Revised 2022-08-31
