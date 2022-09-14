@@ -14,7 +14,7 @@ breadcrumb: Visualization/analysis
 
 [go to the ggplot2 website](https://ggplot2.tidyverse.org/index.html)
 
-[Lesson series on ggplot (under construction)](../script/codegraf/032/)
+[Lesson series on ggplot](../script/codegraf/032/)
 
 # Other resources
 
@@ -40,4 +40,4 @@ Other presentations
 
 
 ----
-Revised 2022-08-18
+Revised 2022-09-14
