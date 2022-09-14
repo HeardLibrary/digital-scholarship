@@ -16,7 +16,7 @@ To access the additional resources made possible through the Vanderbilt Librarie
 
 1\. Go to the Constellate record in the libraries' catalog by searching `Constellate` from the [library home page](https://library.vanderbilt.edu/) or directly through [this link](https://catalog.library.vanderbilt.edu/permalink/01VAN_INST/6ll2l/alma991043895203303276).
 
-2\. Click on the `Constellate` link in the Full text availability section.
+2\. Click on the `Constellate` link in the `Full text availability` section.
 
 3\. Complete the SSO using your VUNet ID. You will then be connected to the Constellate website through Vanderbilt's proxy service. You should be able to see this in the URL.
 
