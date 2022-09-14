@@ -8,7 +8,7 @@ breadcrumb: Constellate
 
 A short link to this page is [vanderbi.lt/constellate](http://vanderbi.lt/constellate)
 
-To access the additional resources made possible through the Vanderbilt Libraries' subscription, you need to access the website either on campus or using single sign-on (SSO) through the libraries' proxy. 
+To access the additional resources made possible through the Vanderbilt Libraries' subscription, you need to access the website either on campus or using single sign-on (SSO) through the libraries' proxy. [Learn more about the enhanced resources available from the subscription](https://constellate.org/docs/library-participation).
 
 ## Access
 
@@ -49,6 +49,14 @@ Although it is possible to play around with the website without logging in, you 
 ## Next steps
 
 You can use the Constellate Lab to analyze your dataset by clicking on the `Analyze` link in the dataset box. You can also download the metadata and n-grams generated when the dataset was created, using the `Download` link. For more information, click on the `Help` link in the upper right.
+
+Constellate Lab uses Python and Jupyter notebooks to conduct analyses.
+
+To learn more about Jupyter notebooks, see [this video](https://youtu.be/jY5kaT35db0).
+
+To get started in Python on your own, see [this lesson series](https://heardlibrary.github.io/digital-scholarship/script/codegraf/startcoding/).
+
+To get started learning Python as part of a group, see [this web page](http://vanderbi.lt/py).
 
 ----
 Revised 2022-09-14
