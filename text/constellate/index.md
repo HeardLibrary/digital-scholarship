@@ -6,6 +6,8 @@ breadcrumb: Constellate
 
 # Getting started with the Constellate platform
 
+A short link to this page is [vanderbi.lt/constellate](http://vanderbi.lt/constellate)
+
 To access the additional resources made possible through the Vanderbilt Libraries' subscription, you need to access the website either on campus or using single sign-on (SSO) through the libraries' proxy. 
 
 ## Access

@@ -56,6 +56,8 @@ Getting started on AWS [http://vanderbi.lt/learnaws](http://vanderbi.lt/learnaws
 
 [Scripting/programming languages](script/) - Our office provides support for three of the programming languages most commonly used in research: Python, R, and XQuery.  We provide links to do-it-yourself resources and support working groups where you can learn in person.
 
+[Text analysis](text/) - Use tools to determine word frequencies, sentiment analysis, named entity recognition, and more.
+
 [Understanding my computer](computer/) - This part of the site unveils the mysteries of your computer on subjects including files and directories, installing and managing software, backups, and the command line.
 
 ## Available software
@@ -67,4 +69,4 @@ The Vanderbilt Libraries maintains [lists of hardware and software](https://www.
 [Go to the site map](map/)
 
 ----
-Revised 2022-08-31
+Revised 2022-09-14
