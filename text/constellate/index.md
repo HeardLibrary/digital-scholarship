@@ -46,9 +46,11 @@ Although it is possible to play around with the website without logging in, you 
 
 13\. The new dataset should appear in the `All datasets` section of the screen. It should indicate that the status of the dataset is `Building in progress`. When it has finished building, the status message will disappear and you can download or analyze the dataset. Note: large datasets can take many minutes or hours to build. If you leave the website, you can come back to check the status later by going to your dashboard.
 
-## Next steps
+## Analysis with Constellate Lab
 
-You can use the Constellate Lab to analyze your dataset by clicking on the `Analyze` link in the dataset box. You can also download the metadata and n-grams generated when the dataset was created, using the `Download` link. For more information, click on the `Help` link in the upper right.
+You can use the Constellate Lab to analyze your dataset by clicking on the `Analyze` link in the dataset box. You can also download the metadata and n-grams generated when the dataset was created, using the `Download` link. For more information, click on the `Help` link in the upper right. [Notes from a session on using these notebooks](notes_sesion2.pdf).
+
+### Jupyter notebook platform
 
 Constellate Lab uses Python and Jupyter notebooks to conduct analyses.
 
@@ -58,5 +60,27 @@ To get started in Python on your own, see [this lesson series](https://heardlibr
 
 To get started learning Python as part of a group, see [this web page](http://vanderbi.lt/py).
 
+### Notebook summary
+
+To see all of the available notebooks, click on the `Classes & Tutorials` link at the upper right. The tutorials page shows you a list of available Jupyter notebooks by experience level. To run a notebook, click on its link. That will take you to a rendered but un-runnable version of the notebook. Then click on the `Open in Constellate Lab` link at the upper right to open the notebook in the Jupyter platform.
+
+Here is a classification of notebooks by purpose:
+
+**Utilitarian notebooks**
+
+*Exploring Metadata and Pre-Processing* – basically wrangling of various forms using pandas. Creates a pre-processing filter to reduce the size of datasets and speed up analysis.
+
+*Creating a Stopwords List* – by default most notebooks use the NLTK stopwords, but here you can select built-in ones from NLTK, spaCy, or Gensim. Basically this short lesson puts a stopword list into a CSV file.
+
+*Exploring Word Frequencies* – get word counts after filtering with stop words, then visualize.
+
+**Real analysis notebooks**
+
+*Finding Significant Words using TF/IDF* - uses term frequency-inverse document frequency method to rank words in a document by significance. 
+
+*Sentiment Analysis with VADER* – uses a rule-based system to assign a sentiment score to small social media posts. The second part of the notebook uses scikit-learn to train a model to perform sentiment analysis.
+
+*LDA Topic modeling* – trains a Latent Dirichlet Allocation (LDA) modeling to find topics (groups of words that occur together).
+
 ----
-Revised 2022-09-14
+Revised 2022-09-20
