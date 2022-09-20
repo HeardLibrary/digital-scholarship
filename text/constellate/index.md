@@ -10,6 +10,10 @@ A short link to this page is [vanderbi.lt/constellate](http://vanderbi.lt/conste
 
 To access the additional resources made possible through the Vanderbilt Libraries' subscription, you need to access the website either on campus or using single sign-on (SSO) through the libraries' proxy. [Learn more about the enhanced resources available from the subscription](https://constellate.org/docs/library-participation).
 
+[Slides from first workshop on 2022-09-14](https://doi.org/10.6084/m9.figshare.21170638)
+
+[Slides from second workshop on 2022-09-21](https://doi.org/10.6084/m9.figshare.21170668)
+
 ## Access
 
 *If you are on campus, you should be able to simply go to <https://constellate.org> and skip the rest of this section.*
