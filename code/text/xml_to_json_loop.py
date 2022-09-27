@@ -6,6 +6,7 @@ hacked to hard code arguments by Steve Baskauf 2022-09-16
 
 import os
 import datetime
+import yaml
 
 from xml_to_json.convert_xml_to_json import convert_xml_to_json
 from join_jsonl import merge_jsonl
@@ -42,7 +43,17 @@ def convert_xml(target_directory):
             os.mkdir(output_directory)
         merge_jsonl(target_directory, final_output_name, output_directory)
 
+# Open the YAML file from the previous attempt
+with open('log_batch1.yaml', 'r') as file_object:
+    old_log = yaml.safe_load(file_object)
+log_dict = {}
+for directory_dict in old_log['directories']:
+    log_dict = {**log_dict, **directory_dict}
+
+
 # Create a YAML log file to record which directories have been completed (in case the script crashes)
+# Note: the way this is set up, there is a list of dicts (one dict per directory). Rather, each directory should
+# just be a key in a single dict. Change this before using it again. 
 start_time = datetime.datetime.now()
 with open('log.yaml', 'at', encoding='utf-8') as log_file_object:
     log_file_object.write('start_time: "' + start_time.isoformat() + '"\n')
@@ -63,6 +74,11 @@ for directory in directories[:2]: # delete the index (square brackets and conten
 
             # subdirectory inner loop
             for subdirectory in subdirectories[:2]: # delete the index (square brackets and contents) to do all
+                # Skip over subdirectories that are already done
+                if int(directory) in log_dict:
+                    if int(subdirectory) in log_dict[int(directory)]:
+                        continue
+
                 target_directory = base_path + '/' + directory + '/' + subdirectory
                 if os.path.isdir(target_directory):
                     try:
