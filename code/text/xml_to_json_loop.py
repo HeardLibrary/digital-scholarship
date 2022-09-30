@@ -82,7 +82,7 @@ for directory in directories[:2]: # delete the index (square brackets and conten
                 target_directory = base_path + '/' + directory + '/' + subdirectory
                 if os.path.isdir(target_directory):
                     try:
-                        #convert_xml(target_directory)
+                        convert_xml(target_directory)
                         with open('log.yaml', 'at', encoding='utf-8') as log_file_object:
                             log_file_object.write('    - ' + subdirectory + '\n')
 
