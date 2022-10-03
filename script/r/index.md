@@ -72,9 +72,11 @@ A great resource for developing models in R is [Tidy Modeling with R](https://ww
 
 For summaries of how to perform a variety of tasks using the RStudio IDE, see the [RStudio cheat sheets](https://www.rstudio.com/resources/cheatsheets/).
 
+[R Workflow for Reproducible Data Analysis and Reporting](https://hbiostat.org/rflow/) by Frank E. Harrel, Jr., Vanderbilt Department of Biostatistics
+
 To try out some simple R scripts for t-test of means, paired t-test, chi-squared goodness of fit, chi-squared contingency, regression, and ANOVA, visit [this page](stats/).
 
 A few more beginner exercises for practice are on [this page](https://github.com/HeardLibrary/workshops/tree/master/R-Stats).
 
 ----
-Revised 2020-10-30
+Revised 2022-10-02
