@@ -60,5 +60,11 @@ Coronavirus (Covid-19) Data in the United States <https://github.com/nytimes/cov
 
 U.S. data by date <https://github.com/nytimes/covid-19-data/blob/master/us.csv> (HTML rendering)
 
+## 2020 Population by state data
+
+From U.S. Census Bureau 2021 Annual population estimate <https://data.census.gov/cedsci/table?tid=PEPPOP2021.NST_EST2021_POP>
+
+Readable file: [Downloaded and edited to contain only 2020 data for states, DC, and PR](population_by_state_2020.csv)
+
 ----
-Revised 2020-05-17
+Revised 2022-10-06
