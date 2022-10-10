@@ -10,6 +10,8 @@ Research data management and publication are growing concerns for researchers in
 
 # Resources
 
+**NEW! Information about the NIH Data Management and Sharing Policy**
+
 ## Data management
 
 Grant funding agencies are increasingly requiring applicants to submit a data management plan as part of written proposals. Data management, however, goes beyond the plan submitted to a funding body to encompass the steps taken throughout the research process to ensure the longevity and usefulness of a data set.
@@ -70,7 +72,7 @@ In response, grant funding agencies in the United States, including the [Nationa
 
 [Effective Practices for Data (NSF Dear Colleague Letter, 2019)](https://www.nsf.gov/pubs/2019/nsf19069/nsf19069.jsp)
 
-All National Institutes of Healty (NIH) applications submitted after January 25, 2023 will need to comply with the [NIH Data Management and Sharing Policy](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html). This policy requires researchers to plan for how data will be preserved and shared. This expands the previous policy from requiring a data sharing plan to requiring a plan for both sharing and management of data.
+All National Institutes of Healty (NIH) applications submitted after January 25, 2023 will need to comply with the [NIH Data Management and Sharing Policy](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html). This policy requires researchers to plan for how data will be preserved and shared. This expands the previous policy from requiring a data sharing plan to requiring a plan for both sharing and management of data. For detailed information about the new policy, visit [this page](nih/).
 
 ## Federal Data Strategy
 
@@ -93,4 +95,4 @@ While these findings are specific to cancer clinical trials, we can expect to se
 Piwowar HA, Day RS, Fridsma DB (2007) Sharing Detailed Research Data Is Associated with Increased Citation Rate. PLoS ONE 2(3): e308. <http://dx.doi.org/10.1371/journal.pone.0000308>
 
 ----
-Revised 2022-08-10
+Revised 2022-10-10
