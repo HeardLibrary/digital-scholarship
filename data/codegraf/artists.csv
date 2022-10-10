@@ -1,4 +1,4 @@
-qid,label_en,description_en,birthdate_val,deathdate_val
+qid,name,description_en,birth_year,death_year
 Q105090034,Tōteki Unkoku,painter,1606,1664
 Q105090067,George Etta Brinkley Cohen,American artist and philanthropist,1854,1930
 Q105090184,Francisco Gutiérrez,printmaker,1915,1945
