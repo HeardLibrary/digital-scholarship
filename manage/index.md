@@ -10,7 +10,7 @@ Research data management and publication are growing concerns for researchers in
 
 # Resources
 
-**NEW! Information about the NIH Data Management and Sharing Policy**
+**NEW! [Information about the NIH Data Management and Sharing Policy](nih/)**
 
 ## Data management
 
