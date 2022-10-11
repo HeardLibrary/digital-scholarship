@@ -32,6 +32,8 @@ Other presentations
 
 [Introduction to Data Visualization using Python and R - Steve Baskauf (9 MB, download in .pptx format) March 29, 2019](resource/viz-workshop.pptx)
 
+[Duke University Libraries Online Learning - Data Visualization Tutorials](https://library.duke.edu/data/tutorials)
+
 # Statistical analysis resources
 
 [Stata Resources Guide](https://researchguides.library.vanderbilt.edu/stataResources). Includes instructions for accessing the software at Vanderbilt, links to tutorials and workshops, and links to documentation.
@@ -40,4 +42,4 @@ Other presentations
 
 
 ----
-Revised 2022-09-14
+Revised 2022-10-11

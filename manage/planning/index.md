@@ -38,5 +38,9 @@ Create a two page data management plan to include in your next grant application
 
 [Go to the DMP Tool](https://dmptool.org/)
 
+## External resources
+
+[Duke University Libraries Online Learning - Data Management Tutorials](https://library.duke.edu/data/tutorials)
+
 ----
-Revised 2019-01-12
+Revised 2022-10-11

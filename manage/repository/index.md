@@ -57,6 +57,12 @@ For more information about ICPSR, visit [this research guide](https://researchgu
 
 [Go to the OSF website](https://osf.io/)
 
+## REDCap (Research Electronic Data CAPture)
+
+Not exactly a data repository, REDCap is a system for building and managing online surveys and databases in a manner that is compliant with HIPPA, GDPR, and other data security requirements. 
+
+[Go to the REDCap website](https://www.project-redcap.org/)
+
 ## Zenodo
 
 If you are using Github to manage a project, you can easily archive dataset releases using Zenodo.  Zenodo assigns a digital object identifier (DOI) to the dataset, making it easier to cite the dataset in publications.
@@ -64,4 +70,4 @@ If you are using Github to manage a project, you can easily archive dataset rele
 [Go to the Zenodo website](https://zenodo.org/)
 
 ----
-Revised 2022-08-10
+Revised 2022-10-11

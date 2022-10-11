@@ -6,11 +6,11 @@ breadcrumb: Publish
 
 # Digital Publishing and Curation
 
-Text
+[Creating a free website using GitHub Pages](https://heardlibrary.github.io/digital-scholarship/script/codegraf/043/)
 
-## Header 2
+## External resources
 
-More text
+[Data Curation Primers (Data Curation Network)](https://datacurationnetwork.org/outputs/data-curation-primers/)
 
 ----
-Revised 2019-05-06
+Revised 2022-10-11

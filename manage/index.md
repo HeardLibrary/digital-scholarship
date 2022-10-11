@@ -6,7 +6,7 @@ breadcrumb: Manage
 
 # Research Data Management and Publication
 
-Research data management and publication are growing concerns for researchers in a number of disciplines.  With advances in computational techniques, the possibilities for data reuse have grown, while expectations for data sharing among grant funding agencies and within research communities have also increased.  The [Digital Scholarship and Scholarly Communications Team](https://www.library.vanderbilt.edu/scholarly/) is here to help you find the tools you need to develop a data management plan, follow best practices for data management throughout the life of your research project, and publish your datasets in an appropriate repository.
+Research data management and publication are growing concerns for researchers in a number of disciplines.  With advances in computational techniques, the possibilities for data reuse have grown, while expectations for data sharing among grant funding agencies and within research communities have also increased.  The [Digital Scholarship and Communications Office](https://www.library.vanderbilt.edu/disc/) is here to help you find the tools you need to develop a data management plan, follow best practices for data management throughout the life of your research project, and publish your datasets in an appropriate repository.
 
 # Resources
 
@@ -74,16 +74,6 @@ In response, grant funding agencies in the United States, including the [Nationa
 
 All National Institutes of Healty (NIH) applications submitted after January 25, 2023 will need to comply with the [NIH Data Management and Sharing Policy](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html). This policy requires researchers to plan for how data will be preserved and shared. This expands the previous policy from requiring a data sharing plan to requiring a plan for both sharing and management of data. For detailed information about the new policy, visit [this page](nih/).
 
-## Federal Data Strategy
-
-[Summary of the Federal Data Strategy](https://strategy.data.gov/)
-
-[Year 1 Action Plan (2019-20)](https://strategy.data.gov/action-plan/)
-
-[U.S. Government Open Data](https://www.data.gov/)
-
-[Data infrastructure for social sciences](https://www.nsf.gov/news/special_reports/announcements/020422.jsp)
-
 ## Citation Outcomes
 
 Researchers who share datasets are also seeing increased citations to their work.  One recent study found that
@@ -94,5 +84,25 @@ While these findings are specific to cancer clinical trials, we can expect to se
 
 Piwowar HA, Day RS, Fridsma DB (2007) Sharing Detailed Research Data Is Associated with Increased Citation Rate. PLoS ONE 2(3): e308. <http://dx.doi.org/10.1371/journal.pone.0000308>
 
+# References
+
+## Federal Data Strategy
+
+[Summary of the Federal Data Strategy](https://strategy.data.gov/)
+
+[Year 1 Action Plan (2019-20)](https://strategy.data.gov/action-plan/)
+
+[U.S. Government Open Data](https://www.data.gov/)
+
+[Data infrastructure for social sciences](https://www.nsf.gov/news/special_reports/announcements/020422.jsp)
+
+## General
+
+[Association of Research Libraries (ARL)/Canadian Association of Research Libraries (CARL) Joint Task Force on Research Data Services report](https://www.arl.org/arl-carl-joint-task-%20force-on-research-data-services/)
+
+[Implementing Effective Data Practices Toolkit (ARL)](https://www.arl.org/implementing-effective-data-practices/)
+
+[Strategy for Cultural Change (Center for Open Science)](https://www.cos.io/blog/strategy-for-culture-change) - discussion of steps to increase openness, integrity, and reproducibility of research
+
 ----
-Revised 2022-10-10
+Revised 2022-10-11
