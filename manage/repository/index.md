@@ -8,7 +8,7 @@ breadcrumb: Repository
 
 ## Selecting a Research Data Repository
 
-Selecting the best repository to house a dataset may be straightforward, if there is already a well-established subject based repository in your discipline, or it may take some research to determine the best place for your data.  Look for a research data repository with open licenses, to make your datasets more accessible (CC-0 is the least restrictive license). The repository should provide clear, persistent citations for datasets.  Repositories offer a range of services to depositors (from data validation to peer review) and to users (from in-browser data exploration to visualization and analysis tools), which may also influence your choice.  The [Digital Scholarship and Communications Office](https://www.library.vanderbilt.edu/disc/) is happy to assist you as you select an appropriate data repository.
+Selecting the best repository to house a dataset may be straightforward, if there is already a well-established subject based repository in your discipline, or it may take some research to determine the best place for your data.  Look for a research data repository with open licenses, to make your datasets more accessible (CC0 is the least restrictive license). The repository should provide clear, persistent citations for datasets.  Repositories offer a range of services to depositors (from data validation to peer review) and to users (from in-browser data exploration to visualization and analysis tools), which may also influence your choice.  The [Digital Scholarship and Communications Office](https://www.library.vanderbilt.edu/disc/) is happy to assist you as you select an appropriate data repository.
 
 ## Finding Research Data Repositories
 
