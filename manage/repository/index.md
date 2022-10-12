@@ -29,9 +29,9 @@ The National Institutes of Health (NIH) maintains a [list of generalist reposito
 | Repository | cost | limits | sustainability plan |
 | ---------- | ---- | ------ | ------------------- |
 | Harvard Dataverse | free | up to 1 TB per researcher, 2.5 GB per file | "permanent" (by Harvard) |
-| Dryad  | $120 DPC up to 50 GB, $50 per additional 10 GB | 300 GB per data publication or more | indefinite, "reasonable effort to move if closed |
-| Figshare | free up to 20 GB, sliding DPC for higher limits | up to 5 TB per file | legal minimum of 10 y, aims for indefinite |
-| Open Science Framework (OSF) | free | up to 50 GB for open data, linked external storage for more | preservation fund for 50+ years at current costs |
+| Dryad  | $120 DPC up to 50 GB, $50 per additional 10 GB | 300 GB per data publication or more | indefinite, "reasonable effort to move" if closed |
+| Figshare | free up to 20 GB, [sliding DPC for higher limits}(https://knowledge.figshare.com/plus#pricing) | up to 5 TB per file | legal minimum of 10 years, aims for indefinite |
+| Open Science Framework (OSF) | free | up to 50 GB for open data, linked external storage for more | preservation fund for 50+ years after closing at current costs |
 | Synapse | free | "modest" internal storage (10s of GB) | not discussed |
 | Zenodo | free | no upper limit, 50 GB per record | lifetime of CERN (at least 20 years) |
 
@@ -163,7 +163,7 @@ This repository is a product associated with the for-profit publisher Elsevier's
 
 [Mendeley Data information page](https://data.mendeley.com/about)
 
-# Vivli
+## Vivli
 
 Vivli is supported by a non-profit organization and is specifically geared towards archiving anonymized, patient-level data from clinical trials. It isn't freely accessible, since potential data users must request access to particular research datasets.  It has built in-features to index clinical trial data and report on data usage. 
 
