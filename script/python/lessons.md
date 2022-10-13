@@ -27,8 +27,6 @@ The DiSC office also provides [lessons for learning R](http://vanderbi.lt/r) and
 
 **Time:** Thursdays from 1:00-2:00 PM Central (US) Time (starting September 1). 
 
-**Venue:** Synchronously on Zoom. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJIsdO-tqDMrE9DPTCMCEzWKJ840Moz7QQ48). After registering, you will receive a confirmation email containing information about joining the Zoom session. 
-
 **Instructor:** Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange a time to talk.
 
 I will be presenting the lessons using Colab notebooks. They behaves very similarly to the popular Jupyter notebooks but do not require any installation. They do require you to have a Google account.
@@ -57,14 +55,14 @@ These lessons will introduce the key features of pandas with an emphasis on reus
 
 The lessons may be done either with Colab (cloud-based) notebooks or locally-installed Jupyter notebooks. For information about installing the Jupyter notebook system, see the links in the Beginner lessons above. Since we want to be able to code using our own data files, it is helpful if you are familiar navigating and manipulating files in either Google Drive (if using Colab) or your own (Windows or Mac) operating system (if using local Jupyter notebooks).
 
-This is a new lesson series, so the exact content and lesson web pages below are subject to change.
+This is a new lesson series, so the exact content below is subject to change.
 
 | Working session date | Lesson | Topic | Web page (times are total video length) |
 |---|---|---|---|
-| Nov 2 | 1 | Introduction to NumPy and pandas | [NumPy lesson videos](../../codegraf/007/) [Pandas intro lesson videos](../../codegraf/008/) (x min) |
-| Nov 9 | 2 | pandas data wrangling and calculation examples | [lesson videos 1](../../codegraf/009a/), [lesson videos 2](../../codegraf/009b/) (x min) |
-| Nov 16 | 3 | Introduction to Matplotlib paradigms | [lesson videos](../../codegraf/ees4/) (x min) |
-| Nov 30 | 4 | Matplotlib examples | [lesson videos](../../codegraf/010/) (x min) |
+| Nov 2 | 1 | Introduction to pandas Series |  |
+| Nov 9 | 2 | Introduction to pandas DataFrames: loading data and easy operations |  |
+| Nov 16 | 3 | Extracting and changing data in DataFrames |  |
+| Nov 30 | 4 | Introduction to Matplotlib |  |
 
 
 # Python Resources
