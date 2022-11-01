@@ -228,7 +228,56 @@ id_animal_series = pd.Series(animal_list, index=['a', 'b', 'c', 'd'])
 
 # Practice exercises
 
-Under construction
+The following exercises use data queried from Wikidata. To acquire the data, run the first cell in the example notebook: 
+
+```
+import requests
+
+def get_wikidata():
+    query_string = '''select distinct ?qid ?label where {
+  ?qid wdt:P195 wd:Q18563658. # must be in the collection Vanderbilt University Fine Arts Gallery
+  ?qid wdt:P18 ?image. # item must be depicted in Wikimedia Commons
+  ?qid rdfs:label ?label. # get the label
+  filter(lang(?label)='en') # filter the labels to include only English
+  }'''
+    
+    response = requests.get('https://query.wikidata.org/sparql', params={'query' : query_string}, headers={'Accept': 'application/sparql-results+json'})
+    data = response.json()
+    results = data['results']['bindings']
+    
+    urls = []
+    labels = []
+    for result in results:
+        urls.append(result['qid']['value'])
+        labels.append(result['label']['value'])
+    return urls, labels
+
+urls, labels = get_wikidata()
+```
+
+The result is a list of URLs and labels for artworks, which can be used to generate a series using the code in the second cell in the example notebook:
+
+```
+import pandas as pd
+labels_series = pd.Series(labels, index=urls)
+labels_series.head()
+```
+
+**NOTE:** In the notebook environment, the URLs should be hyperlinked. So you should be able to click on them to see what the artworks look like.
+
+1\. Determine how many items are in the series using the `len()` function. Display the first 10 and the last 10 items in the Series.
+
+2\. Use `.loc[]` to display the item that has the label index `http://www.wikidata.org/entity/Q105096111`. 
+
+3\. Use `.iloc[]` to slice the Series to include the 4th through 6th items in the series (should include 3 results). Pay attention to the fact that counting starts with zero and that the list integer index you specify isn't included in the range.
+
+4\. Slice the Series by boolean condition to include only labels that contain the word `jar`. The method for doing this is similar to the `.startswith()` method used in the examples: `.contains()`. You need to apply it to the `.str` attribute, like this: `.str.contains('jar')`. 
+
+5\. Make the results case insensitive by passing in a `case=False` argument into the `.contains()` method. How many additional results does this produce?
+
+6\. Create a copy of the slice and assign it the name `jars`. Sort the Series of jars by index and by value.
+
+7\. Create a script that allows the user to enter the string they would like to search for within the labels. Try your script with `soba` and `virgin`. 
 
 ----
 
@@ -237,4 +286,4 @@ Next lesson: [DataFrame manipulation](../009a)
 
 
 ----
-Revised 2022-10-28
+Revised 2022-11-01
