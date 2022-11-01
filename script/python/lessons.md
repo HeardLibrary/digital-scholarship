@@ -59,7 +59,7 @@ This is a new lesson series, so the exact content below is subject to change.
 
 | Working session date | Lesson | Topic | Web page (times are total video length) |
 |---|---|---|---|
-| Nov 2 | 1 | Introduction to pandas Series |  |
+| Nov 2 | 1 | Introduction to pandas Series | [optional lesson on NumPy](../../codegraf/007/) (53 min) / [lesson videos](../../codegraf/008/) (34 min) |
 | Nov 9 | 2 | Introduction to pandas DataFrames: loading data and easy operations |  |
 | Nov 16 | 3 | Extracting and changing data in DataFrames |  |
 | Nov 30 | 4 | Introduction to Matplotlib |  |
@@ -99,4 +99,4 @@ TBD
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2022-08-23
+Revised 2022-11-01
