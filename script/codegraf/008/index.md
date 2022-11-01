@@ -29,7 +29,7 @@ Total video time: 33m 36s
 
 [Lesson Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/008/008.ipynb)
 
-[Lesson Colab notebook](https://colab.research.google.com/drive/)
+[Lesson Colab notebook](https://colab.research.google.com/drive/1XSChbmjcl2PAGK1ODipHIV57XT-B0QdJ)
 
 [Lesson slides](../slides/lesson008.pdf)
 
