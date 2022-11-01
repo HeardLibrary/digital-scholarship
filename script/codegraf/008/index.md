@@ -263,7 +263,7 @@ labels_series = pd.Series(labels, index=urls)
 labels_series.head()
 ```
 
-**NOTE:** In the notebook environment, the URLs should be hyperlinked. So you should be able to click on them to see what the artworks look like.
+**NOTE:** In the notebook environment, the URLs in the output should be hyperlinked. So you should be able to click on them to see what the artworks look like.
 
 1\. Determine how many items are in the series using the `len()` function. Display the first 10 and the last 10 items in the Series.
 
