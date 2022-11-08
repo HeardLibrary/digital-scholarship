@@ -50,9 +50,19 @@ Total video time: m s
 
 # Loading a DataFrame from a file
 
+All users should watch the two videos. The remaining videos in this section demonstrate how to load files from three different file systems. Select the one(s) that applies to your situation if you want to load files directly from your file system. 
+
 ## Loading a spreadsheet as a pandas DataFrame via a URL (3m02s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/JVwKj7H8QU0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+----
+
+## Data types in DataFrames and missing values (4m39s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/3PNgkdfpeZs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
@@ -82,14 +92,6 @@ Total video time: m s
 ## Variation in the behavior of mounting Google Drive in Colab (3m05s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/zYHVzPV3djs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-----
-
-## Data types in DataFrames and missing values (4m39s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/3PNgkdfpeZs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 
 ----
