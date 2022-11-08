@@ -116,7 +116,19 @@ The `.index` returns the row label indices as a pandas Index object. Use the `li
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/3PNgkdfpeZs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+pandas tries to guess the datatype of a column based on the values it contains. To force it to load all cells as strings, use the `dtype=str` argument:
+
+```
+schools_df = pd.read_csv(url, dtype=str)
+```
+
 `NaN` ("not a number") is an NumPy object used by pandas to indicate missing data in a data frame. When data are loaded from a spreadsheet, by default empty cells are converted to `NaN` values.
+
+To force pandas to read empty cells in as empty strings (`''`) rather than `NaN`, use an `na_filter=False` argument. This can be combined with a `dtype=str` argument to read everything in as strings (including empty strings):
+
+```
+schools_df = pd.read_csv(url, na_filter=False, dtype=str)
+```
 
 ----
 
@@ -178,6 +190,8 @@ Example:
 state_co2_sector = state_co2_sector.set_index('State')
 ```
 
+In the example above, the original DataFrame was replaced by the new one with the index set. 
+
 ----
 
 # Manipulating DataFrames
@@ -186,7 +200,15 @@ state_co2_sector = state_co2_sector.set_index('State')
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/AZMlQlamTLM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Examples:
 
+```
+# Create a new column whose values are the sum of two columns
+schools_df['total'] = schools_df['Male'] + schools_df['Female']
+
+# Replace a column with its absolute values converted to percent
+schools_df['Limited English Proficiency'] = schools_df['Limited English Proficiency'] / schools_df['total'] * 100
+```
 
 ----
 
@@ -198,16 +220,26 @@ Sorting examples:
 
 ```
 # Ascending sort (smallest to largest):
-state_co2_fuel.sort_values(by='Total mmt')
+schools_df.sort_values(by=['Limited English Proficiency'])
 
 # Descending sort (largest to smallest):
-state_co2_fuel.sort_values(by='Total mmt', ascending=False)
+schools_df.sort_values(by=['Limited English Proficiency'], ascending=False)
 ```
-
 
 Summary of axes terminology:
 
 ![data frame axes diagram](dataframe-axes-diagram.png)
+
+
+Simple statistical methods:
+
+`.sum()` calculate the sum of a row or column
+
+`.mean()` calculate the average of a row or column
+
+`.std()` calculate the standard deviation of a row or column
+
+To specify whether to calculate the sum of the row values or the column values, use an `axis=rows` or `axis=columns` argument. Alternatively, the axis number can be used: `axis=0` .
 
 
 ----
