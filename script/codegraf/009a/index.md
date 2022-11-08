@@ -50,10 +50,38 @@ Total video time: m s
 
 # Loading a DataFrame from a file
 
-## Loading a spreadsheet as a pandas DataFrame (3m02s)
+## Loading a spreadsheet as a pandas DataFrame via a URL (3m02s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/JVwKj7H8QU0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
+
+----
+
+## Loading a data file into a local Jupyter notebook under Mac OS (4m54s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/pedaEJGIYI8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+----
+
+## Loading a data file into a local Jupyter notebook under Windows OS (5m54s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/MWONQtQHPzk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+----
+
+## Loading a data file in Google Colabs (5m08s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/hfOAyJw8Xfw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+----
+
+## Variation in the behavior of mounting Google Drive in Colab (3m05s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/zYHVzPV3djs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ----
@@ -110,7 +138,7 @@ Total video time: m s
 
 # Example workflow (3m12s)
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/M82rKuDuahk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/kw10CWo_oe4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 

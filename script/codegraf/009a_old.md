@@ -1,9 +1,3 @@
----
-permalink: /script/codegraf/009a/
-title: CodeGraf - DataFrame manipulation
-breadcrumb: OO9a
----
-
 Previous lesson: [Pandas data frames](../008)
 
 # DataFrame manipulation
