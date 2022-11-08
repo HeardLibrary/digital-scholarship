@@ -98,7 +98,14 @@ Total video time: m s
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/wiTiHR8leAU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+The `.set_index()` method changes one of the columns into the row label index. 
 
+The `.reset_index()` method changes a row label index into a regular column.
+
+Example:
+```
+state_co2_sector = state_co2_sector.set_index('State')
+```
 
 ----
 
@@ -116,6 +123,20 @@ Total video time: m s
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/-TrWy3q20LM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Sorting examples:
+
+```
+# Ascending sort (smallest to largest):
+state_co2_fuel.sort_values(by='Total mmt')
+
+# Descending sort (largest to smallest):
+state_co2_fuel.sort_values(by='Total mmt', ascending=False)
+```
+
+
+Summary of axes terminology:
+
+![data frame axes diagram](dataframe-axes-diagram.png)
 
 
 ----
@@ -124,6 +145,18 @@ Total video time: m s
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/4GZmPQj6hz0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+`.drop()` method examples:
+
+```
+# drop a single row
+state_co2_sector.drop('Total')
+
+# drop a list of rows
+state_co2_sector.drop(['Virginia', 'West Virginia', 'Wyoming'])
+
+# drop a column
+state_co2_sector.drop('Total', axis='columns')
+```
 
 
 ----
@@ -141,154 +174,6 @@ Total video time: m s
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/kw10CWo_oe4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-
-----
-
-
-
-
-
-
-
-
-
-
-
-
-## Setting labels (4m45s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/uXTpu-366QU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-The `.set_index()` method changes one of the columns into the row index. 
-
-The `.reset_index()` method changes a row index into a regular column.
-
-Example:
-```
-state_co2_sector.set_index('State', inplace=True)
-```
-
-----
-
-## Making changes persist (5m09s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/yRWjJHXPW0w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-**Options for making changes to a DataFrame:**
-
-Assign to a named view using the assignment operator `=`:
-```
-sorted_view = state_co2_fuel.sort_values(by='Total mmt')
-```
-
-Assign to a named copy using the `.copy()` method:
-```
-sorted_copy = state_co2_fuel.copy().sort_values(by='Total mmt')
-```
-
-Perform operation *inplace* using the `inplace=` argument:
-```
-state_co2_fuel.sort_values(by='Total mmt', inplace=True)
-```
-
-
-----
-
-## Removing rows and columns (4m52s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/wQwMnWUr-aQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Summary of axes terminology:
-
-![data frame axes diagram](dataframe-axes-diagram.png)
-
-`.drop()` method examples:
-
-```
-# drop a single row
-state_co2_sector.drop('Total')
-
-# drop a list of rows
-state_co2_sector.drop(['Virginia', 'West Virginia', 'Wyoming'])
-
-# drop a column
-state_co2_sector.drop('Total', axis='columns')
-```
-
-----
-
-## Missing data (5m44s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/tdMpI_FPSlA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Replacing missing values examples:
-
-```
-# replace all missing values in the DataFrame with the same value: the empty string ('')
-schools.fillna({'', inplace=True)
-
-# replace missing values on a single column with the same value: the number zero (0)
-schools.fillna({'Native Hawaiian or Other Pacific Islander': 0}, inplace=True)
-```
-
-Selecting rows that do not have missing values in a particular column of the DataFrame:
-
-```
-schools[schools['Grade PreK 3yrs'].notnull()]
-```
-
-----
-
-## Sorting rows (2m49s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/Izd4LGJ9hHE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Examples:
-
-```
-# Ascending sort (smallest to largest):
-state_co2_fuel.sort_values(by='Total mmt', inplace=True)
-
-# Descending sort (largest to smallest):
-state_co2_fuel.sort_values(by='Total mmt', ascending=False, inplace=True)
-```
-
-----
-
-# Subsetting data
-
-## Slicing rows and columns (6m12s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/q9LxaBz6GZ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Slicing the first four rows of a DataFrame using the integer index:
-
-```
-top_state_co2_fuel = state_co2_fuel.iloc[:4]
-```
-
-Note that it is only necessary to include one index (the first one) to slice rows.
-
-Slicing a sequence of cloumns of a DataFrame using index labels:
-
-```
-state_co2_fuel_fractions = state_co2_fuel.loc[:, 'Coal fraction': 'Natural Gas fraction']
-```
-
-Note that `:` in the first index position selects every row.
-
-----
-
-## Selecting rows (8m42s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/2bZqQq5TIys" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Example of selecting rows based on a boolean condition in one column:
-
-```
-state_co2_industrial = state_co2[state_co2['Sector']=='Industrial']
-```
-
 ----
 
 # Practice exercises
@@ -298,7 +183,7 @@ under construction
 ----
 
 
-Next lesson: [Rearranging and combining DataFrames](../009b)
+Next lesson: [Extracting and changing values in a DataFrame](../009b)
 
 ----
 Revised 2022-11-08
