@@ -44,6 +44,31 @@ Total video time: m s
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/zOk1LyaQOTo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Columns of a data frame can be referred to by their label in two ways:
+
+```
+states_df['capital']
+states_df.capital
+```
+
+The "dot notation" can only be used if the column label is a valid Python object name (i.e. can't have spaces). The resulting object is a series whose values are the values in the column labeled by the row label indices.
+
+Rows in a data frame can be referred to by either their index label (using `.loc[]`) or their integer position (using `.iloc[]`):
+
+```
+states_df.loc['AZ']
+states_df.iloc[1]
+```
+
+The resulting object is a series whose values are the values in the row labeled by the column headers.
+
+Cells in a data frame can be referred to by their row, column labels (using `.loc[]`):
+
+```
+states_df.loc['PA', 'population']
+```
+
+The resulting object has the type of the cell value.
 
 
 ----
@@ -52,7 +77,7 @@ Total video time: m s
 
 All users should watch the two videos. The remaining videos in this section demonstrate how to load files from three different file systems. Select the one(s) that applies to your situation if you want to load files directly from your file system. 
 
-## Loading a spreadsheet as a pandas DataFrame via a URL (3m02s)
+## Loading a spreadsheet via a URL (3m02s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/JVwKj7H8QU0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -68,28 +93,28 @@ All users should watch the two videos. The remaining videos in this section demo
 
 ----
 
-## Loading a data file into a local Jupyter notebook under Mac OS (4m54s)
+## Loading into a local Jupyter notebook - Mac OS (4m54s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/pedaEJGIYI8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ----
 
-## Loading a data file into a local Jupyter notebook under Windows OS (5m54s)
+## Loading into a local Jupyter notebook - Windows OS (5m54s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/MWONQtQHPzk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ----
 
-## Loading a data file in Google Colabs (5m08s)
+## Loading a data file in Google Colab (5m08s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/hfOAyJw8Xfw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ----
 
-## Variation in the behavior of mounting Google Drive in Colab (3m05s)
+## Variation in mounting Google Drive (3m05s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/zYHVzPV3djs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
