@@ -79,9 +79,36 @@ All users should watch the two videos. The remaining videos in this section demo
 
 ## Loading a spreadsheet via a URL (3m02s)
 
+Functions for reading and writing from spreadsheets to pandas DataFrames:
+
+`pd.read_csv()` read from a CSV file into a data frame.
+
+`pd.to_csv()` write from a data frame to a CSV file.
+
+`pd.read_excel()` read from an Excel file into a data frame.
+
+`pd.to_excel()` write from a data frame to an Excel file.
+
+For details about reading from particular sheets in an Excel file, delimiters other than commas, etc. see the [pandas User Guide](https://pandas.pydata.org/docs/user_guide/io.html).
+
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/JVwKj7H8QU0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Note: when loading files via a URL, be sure that the URL delivers the raw file, not an HTML representation of the file.
 
+**Examining the DataFrame**
+
+Use the `.head()` method to view only the first few lines of a DataFrame (default is 5 if `number_of_lines` argument omitted):
+```
+dataframe.head(number_of_lines)
+```
+
+The `.tail()` method is similar, but shows the last few lines of a DataFrame
+
+The `.shape` attribute returns a tuple of the number of rows and number of columns. 
+
+The `.columns` attribute returns the column names as a pandas Index object. Use the `list()` function to convert into a simple Python list.
+
+The `.index` returns the row label indices as a pandas Index object. Use the `list()` function to convert into a simple Python list.
 
 ----
 
@@ -89,6 +116,23 @@ All users should watch the two videos. The remaining videos in this section demo
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/3PNgkdfpeZs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+`NaN` ("not a number") is an NumPy object used by pandas to indicate missing data in a data frame. When data are loaded from a spreadsheet, by default empty cells are converted to `NaN` values.
+
+----
+
+**Loading a file from your file system**
+
+Variations on the following script are used in the next four videos to show how to load a spreadsheet from your local file system into a pandas DataFrame. The value of `working_directory` will be the directory from which the notebook was loaded. In the example, the data are in a subdirectory of the working directory called `data`.
+
+```
+import os
+working_directory = os.getcwd()
+print(working_directory)
+filename = 'co2_state_2016_fuel.xlsx'
+path = working_directory + '/data/' + filename
+fuel_type = pd.read_excel(path)
+print(fuel_type)
+```
 
 
 ----
