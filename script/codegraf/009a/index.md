@@ -248,6 +248,7 @@ To specify whether to calculate the sum of the row values or the column values, 
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/4GZmPQj6hz0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
 `.drop()` method examples:
 
 ```
@@ -261,6 +262,11 @@ state_co2_sector.drop(['Virginia', 'West Virginia', 'Wyoming'])
 state_co2_sector.drop('Total', axis='columns')
 ```
 
+To switch rows and columns, use the `.transpose()` method. As a shortcut, you can also use `.T` to transpose rows and columns.
+
+```
+state_co2_sector.transpose()
+```
 
 ----
 
@@ -268,7 +274,33 @@ state_co2_sector.drop('Total', axis='columns')
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/DsvkZfFF5H4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+**Concatenating two DataFrames**
 
+![diagram of concatenating two DataFrames](concat.png)
+
+To stack one DataFrame on top of another having the same column labels, use the `.concat()` method. The argument of the method is a list of the DataFrames to concatenate.
+
+```
+authors = pd.concat([authors1, authors2])
+```
+
+**Joining two DataFrames**
+
+To join two DataFrames by matching a values from a column in each, use the `.merge()` method. 
+
+Specify the columns to be used in the matching with a `left_on` and `right_on` arguments. The value of the arguments is a list of columns.
+
+To only include rows that have matching values (an inner join), use the `how=inner` argument. 
+
+```
+state_data_inner = pd.merge(state_populations_2020, state_co2_sector, left_on=['NAME'], right_on=['State'], how='inner')
+```
+
+To include all rows and fill non-matching rows with missing data (`NaN`) values, use the `how=outer` argument.
+
+```
+state_data_outer = pd.merge(state_populations_2020, state_co2_sector, left_on=['NAME'], right_on=['State'], how='outer')
+```
 
 ----
 
@@ -276,6 +308,23 @@ state_co2_sector.drop('Total', axis='columns')
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/kw10CWo_oe4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Example script:
+
+```
+url = 'https://github.com/HeardLibrary/digital-scholarship/raw/master/data/codegraf/co2_state_2016_sector_nototals.xlsx'
+state_co2_sector = pd.read_excel(url)
+state_co2_sector = state_co2_sector.set_index('State')
+state_co2_sector['total'] = state_co2_sector.sum(axis='columns')
+# After adding the total column, need to add the label index back in as a normal column to do the join.
+state_co2_sector['State'] = state_co2_sector.index
+url = 'https://github.com/HeardLibrary/digital-scholarship/raw/master/data/codegraf/population_by_state_2020.csv'
+state_populations_2020 = pd.read_csv(url)
+state_data_inner = pd.merge(state_populations_2020, state_co2_sector, left_on=['NAME'], right_on=['State'], how='inner')
+state_data_inner['per_capita'] = state_data_inner['total'] * 1000000 / state_data_inner['POP_2020']
+state_data_inner = state_data_inner.set_index('NAME')
+state_data_inner.sort_values('per_capita', ascending=False)
+state_data_inner.to_excel('state_data.xlsx')
+```
 
 ----
 
