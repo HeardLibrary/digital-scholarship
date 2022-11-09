@@ -337,6 +337,8 @@ state_data_inner.to_excel('state_data.xlsx')
 
 under construction
 
+You can perform these exercises using your own spreadsheet. If you don't have something handy to use, you can use [this one](https://github.com/HeardLibrary/digital-scholarship/raw/master/data/codegraf/mesa2880172.xlsx). It is NOAA weather data from the [Global Summary of the Month](https://www.ncdc.noaa.gov/cdo-web/search?datasetid=GSOM) for Mesa, Arizona. To practice using this spreadsheet, download it to your local computer. If you are using a local installation of Jupyter notebooks, move it to the folder where you put this week's practice notebook. If you are using Colab, upload it to the root directory of your Google Drive.
+
 ----
 
 
