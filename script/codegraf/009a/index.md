@@ -21,7 +21,7 @@ Preparing data for analysis and visualization can involve cleaning, reformatting
 - slice rows or columns by index labels using the `.loc()` method.
 - slice rows or columns by index integers using the `.iloc()` method.
 
-Total video time: m s
+Total video time: 55m 44s
 
 ## Links
 
