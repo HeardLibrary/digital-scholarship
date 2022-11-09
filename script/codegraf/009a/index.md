@@ -27,7 +27,7 @@ A DataFrame is the workhorse data object in pandas. In this lesson we will learn
 - join two DataFrames using the `.merge()` method.
 - describe the difference between an inner and outer merge.
 
-Total video time: 55m 44s
+Total video time: 55m 44s for all of the videos, but you don't need to watch the videos for file systems you don't use. So the actual total is probably closer to 45 minutes.
 
 ## Links
 
@@ -239,11 +239,11 @@ Summary of axes terminology:
 
 Simple statistical methods:
 
-`.sum()` calculate the sum of a row or column
+`.sum()` calculate the sum of rows or columns
 
-`.mean()` calculate the average of a row or column
+`.mean()` calculate the average of rows or columns
 
-`.std()` calculate the standard deviation of a row or column
+`.std()` calculate the standard deviation of rows or columns
 
 To specify whether to calculate the sum of the row values or the column values, use an `axis=rows` or `axis=columns` argument. Alternatively, the axis number can be used: `axis=0` .
 
@@ -335,9 +335,28 @@ state_data_inner.to_excel('state_data.xlsx')
 
 # Practice exercises
 
-under construction
+You can perform these exercises using your own spreadsheet. For best results, having one that has some string and some numeric columns would be best. If you don't have something handy to use, you can use [this one](https://github.com/HeardLibrary/digital-scholarship/raw/master/data/codegraf/mesa2880172.xlsx). It is NOAA weather data from the [Global Summary of the Month](https://www.ncdc.noaa.gov/cdo-web/search?datasetid=GSOM) for Mesa, Arizona. The key to column header abbreviations is [here](GSOM_documentation.pdf)
 
-You can perform these exercises using your own spreadsheet. If you don't have something handy to use, you can use [this one](https://github.com/HeardLibrary/digital-scholarship/raw/master/data/codegraf/mesa2880172.xlsx). It is NOAA weather data from the [Global Summary of the Month](https://www.ncdc.noaa.gov/cdo-web/search?datasetid=GSOM) for Mesa, Arizona. To practice using this spreadsheet, download it to your local computer. If you are using a local installation of Jupyter notebooks, move it to the folder where you put this week's practice notebook. If you are using Colab, upload it to the root directory of your Google Drive.
+To practice using this spreadsheet, download it to your local computer by clicking on [this link](https://github.com/HeardLibrary/digital-scholarship/raw/master/data/codegraf/mesa2880172.xlsx). On most browsers, that should cause it to be downloaded to the normal place where files download on your computer (usually your Downloads directory).
+
+If you are using a local installation of Jupyter notebooks, move it to the folder where you put this week's practice notebook. If you are using Colab, upload it to the root directory of your Google Drive.
+
+1\. Load your Excel spreadsheet as a Pandas DataFrame. There is a "starter" cell at the end of the practice notebook. NOTE: the process will be different depending on whether you are loading the spreadsheet from your local computer file system (local Jupyter notebook install) or from your Google Drive (Colab notbook). If you are using Colab, be sure that you follow the instructions on the [Loading a data file in Google Colab](#loading-a-data-file-in-google-colab-5m08s) video to mount your Google Drive first. Otherwise, you will get an error message. Use the `.head()` method to display the first lines of the DataFrame.
+
+2\. Use the `.shape` method to find out how many rows and columns there are in the DataFrame. 
+
+3\. Use the `.tail()` method to view the end of the DataFrame.
+
+4\. The `.read_excel()` method defaults to assigning a numeric row label index. Examine your data to see if there is a column that has unique values that could be used as a better row label index. A unique identifier for the row would be the best. If your data has such a column, set it as the row index. Don't forget to assign the output back to the same DataFrame name (or use `.copy()` if you want to give it a different name).
+
+5\. Delete some of the columns that don't seem useful at the moment. It might be good to assign a copy of the output to a new DataFrame so that you can still access the original.
+
+6\. Sort the DataFrame by one of the columns. Make the sort either ascending or descending depending on what makes the most sense. NOTE: if the column contains strings, you will be alphabetizing. If it contains numbers, it will be a numeric sort.
+
+7\. Create a new column by performing a calculation on one or more of the other columns. 
+
+8\. Extract the data from one of the rows using `.loc()` and display the resulting series.
+
 
 ----
 
