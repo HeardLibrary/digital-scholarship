@@ -8,18 +8,24 @@ Previous lesson: [pandas Series](../008)
 
 # pandas DataFrame
 
-Preparing data for analysis and visualization can involve cleaning, reformatting, summarizing, and changing the organization of the data. This first of two data-wranging lessons introduces basic data manipulations that may be required to "wrangle" your data into a usable form. It provides background for additional exploration of the data wrangling capabilities of pandas.
+A DataFrame is the workhorse data object in pandas. In this lesson we will learn about the basic characteristics of DataFrames, how to load them from files, and how to perform basic manipulations of them.
 
 **Learning objectives** At the end of this lesson, the learner will:
+- select a column by specifying its label.
+- select a row by label index using the `.loc()` method.
+- select a row by integer position using the `.iloc()` method.
+- load an Excel or CSV file into a DataFrame using the one of the read methods.
+- save a DataFrame as an Excel or CSV file using one of the write methods.
+- display the first or last several lines of a DataFrame.
+- state the name of the missing data indicator in pandas and list two situations where they are generated.
 - create row index labels from a generic column containing text strings using the `.set_index()` method.
-- make changes to a source data frame using the `inplace=` argument.
+- perform a vectorized calculation to create a new table column.
+- sort DataFrame rows using the `.sort_values()` method.
 - define *axis* and associate the two pandas DataFrame axes with rows and columns.
 - remove rows or columns using the `.drop()` method.
-- sort DataFrame rows using the `.sort_values()` method.
-- select rows for a view using the `.notnull()` or `.isnull()` methods.
-- select rows for a view using boolean conditions as index selectors.
-- slice rows or columns by index labels using the `.loc()` method.
-- slice rows or columns by index integers using the `.iloc()` method.
+- concatenate the rows of two DataFrames having the same column headers.
+- join two DataFrames using the `.merge()` method.
+- describe the difference between an inner and outer merge.
 
 Total video time: 55m 44s
 
