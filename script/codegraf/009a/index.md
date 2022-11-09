@@ -315,10 +315,9 @@ url = 'https://github.com/HeardLibrary/digital-scholarship/raw/master/data/codeg
 state_co2_sector = pd.read_excel(url)
 state_co2_sector = state_co2_sector.set_index('State')
 state_co2_sector['total'] = state_co2_sector.sum(axis='columns')
-# After adding the total column, need to add the label index back in as a normal column to do the join.
-state_co2_sector['State'] = state_co2_sector.index
 url = 'https://github.com/HeardLibrary/digital-scholarship/raw/master/data/codegraf/population_by_state_2020.csv'
 state_populations_2020 = pd.read_csv(url)
+# The label index can be used as an "on" column
 state_data_inner = pd.merge(state_populations_2020, state_co2_sector, left_on=['NAME'], right_on=['State'], how='inner')
 state_data_inner['per_capita'] = state_data_inner['total'] * 1000000 / state_data_inner['POP_2020']
 state_data_inner = state_data_inner.set_index('NAME')
