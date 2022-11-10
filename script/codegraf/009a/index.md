@@ -95,7 +95,7 @@ Functions for reading and writing from spreadsheets to pandas DataFrames:
 
 `pd.to_excel()` write from a data frame to an Excel file.
 
-For details about reading from particular sheets in an Excel file, delimiters other than commas, etc. see the [pandas User Guide](https://pandas.pydata.org/docs/user_guide/io.html).
+For details about reading from particular sheets in an Excel file, delimiters other than commas, etc. see the [pandas User Guide](https://pandas.pydata.org/docs/user_guide/io.html) and [this Stack Overflow post](https://stackoverflow.com/questions/26521266/using-pandas-to-pd-read-excel-for-multiple-worksheets-of-the-same-workbook).
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/JVwKj7H8QU0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
