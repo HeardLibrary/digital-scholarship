@@ -33,6 +33,10 @@ Total video time: 17m 34s
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/bSwEZPl92ps" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Grouping is used to group rows that have a common label index. Groups can then be used to collapse the table by summarizing grouped rows using a method like `.sum()`, `.mean()`, etc. 
+
+![grouping diagram](grouping.png)
+
 Examples:
 
 ```
@@ -75,6 +79,8 @@ column_df = year_total.unstack('Sector')
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/UVOGbyGrzjM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+![melt diagram](melt.png)
+
 Example of changing a "wide" DataFrame to a "long" DataFrame using the `melt()` function:
 
 ```
@@ -84,6 +90,8 @@ long = pd.melt(wide, ['State'])
 Notes:
 - The DataFrame name is the first argument
 - The columns to remaing as grouping variables (not data) are specified as a list in the second argument.
+
+![pivot diagram](pivot.png)
 
 Example of changing a "long" DataFrame to a "wide" DataFrame using the '.pivot()` method:
 
