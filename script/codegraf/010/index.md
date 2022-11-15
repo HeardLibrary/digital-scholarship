@@ -4,7 +4,9 @@ title: CodeGraf - Introduction to plotting
 breadcrumb: O10
 ---
 
-Previous lesson: [Rearranging and combining DataFrames](../009b)
+Previous regular lesson: [Extracting and changing DataFrame data](../009b)
+
+Previous optional lesson: [Summarizing and rearranging DataFrames](../009c)
 
 # Introduction to plotting
 
