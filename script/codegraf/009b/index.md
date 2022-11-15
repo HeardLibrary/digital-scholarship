@@ -331,17 +331,24 @@ Last week, we downloaded the file and opened it directly from our file system. T
 !pip install langdetect
 ```
 
-You can try to detect the language of a string by passing the string in as the argument of the `detect_langs` function from the `langdetect` module:
+You can try to detect the language of a string by passing the string in as the argument of the `detect_langs()` function from the `langdetect` module:
 
 ```
 from langdetect import detect_langs
 string = "S'il vous plaît, ne marchez pas sur l'herbe."
 lang_list = detect_langs(string)
 print(lang_list)
+lang_string = str(lang_list[0])
+print(lang_string)
 ```
 
-The function returns a list of strings, where the first two characters of the string are the language code and the characters after the third are a confidence score on a scale from 0 to 1. 
+The function returns a list of language objects, which can be turned into strings using the `str()` function. The first two characters of the string are the language code and the characters after the third are a confidence score on a scale from 0 to 1. 
 
+Look at [this table of multilingual publications](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/codegraf/publication_translations.csv). We want to determine the language of each title. Right click on the `Raw` button and copy the link (URL) to the raw file. Use the `pd.read_csv()` function to load the CSV table as a DataFrame.
+
+9\. Iterate through each row of the table and pass the `Title` value for that row into the `detect_langs()` function. From the returned list of strings, split the first string in the list on the colon (`:`) character, and print the language code and confidence score. 
+
+10\. Modify your script to insert the detected language code into the table as a new column.
 
 
 ----
