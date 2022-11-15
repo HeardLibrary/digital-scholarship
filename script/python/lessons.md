@@ -47,7 +47,7 @@ You are welcome to use desktop Jupyter notebook if you already have it installed
 
 **Time:** Wednesdays from 1:00-2:00 PM Central (US) Time (starting November 2). 
 
-**Venue:** In-person at Central Library Poetry Room (612A) and virtually via Zoom. You should complete the Zoom registration even if you plan to attend in person. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJYscOygrDsuHtZW57LmvcVL2PzPInvSTH50). After registering, you will receive a confirmation email containing information about joining the Zoom session. 
+**Venue:** Virtually via Zoom. **NOTE: the in-person option is no longer available.** [Registration link](https://vanderbilt.zoom.us/meeting/register/tJYscOygrDsuHtZW57LmvcVL2PzPInvSTH50). After registering, you will receive a confirmation email containing information about joining the Zoom session. 
 
 **Instructor:** Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange a time to talk.
 
