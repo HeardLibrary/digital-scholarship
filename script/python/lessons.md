@@ -61,7 +61,7 @@ This is a new lesson series, so the exact content below is subject to change.
 |---|---|---|---|
 | Nov 2 | 1 | Introduction to pandas Series | [optional lesson on NumPy](../../codegraf/007/) (53 min) / [lesson videos](../../codegraf/008/) (34 min) |
 | Nov 9 | 2 | Introduction to pandas DataFrames: loading data and easy operations | [lesson videos](../../codegraf/009a/) (56 min) |
-| Nov 16 | 3 | Extracting and changing data in DataFrames |  |
+| Nov 16 | 3 | Extracting and changing data in DataFrames | [lesson videos](../../codegraf/009b/) (25 min) / [optional lesson on summarizing and rearanging DataFrames](../../codegraf/009c/) (18 min) |
 | Nov 30 | 4 | Introduction to Matplotlib |  |
 
 
