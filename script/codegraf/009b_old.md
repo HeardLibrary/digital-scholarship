@@ -1,7 +1,5 @@
 ---
-permalink: /script/codegraf/009b/
 title: CodeGraf - Rearranging and combining DataFrames
-breadcrumb: OO9b
 ---
 
 Previous lesson: [DataFrame manipulation](../009a)

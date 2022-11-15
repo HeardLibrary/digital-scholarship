@@ -17,7 +17,7 @@ Preparing data for analysis and visualization can involve cleaning, reformatting
 - change a "wide" DataFrame to a "long" DataFrame using the `melt()` function.
 - change a "long" DataFrame to a "wide" DataFrame using the `.pivot()` method.
 
-Total video time: 17 m 34 s
+Total video time: 17m 34s
 
 ## Links
 
