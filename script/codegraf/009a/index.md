@@ -268,6 +268,8 @@ state_co2_sector.drop(['Virginia', 'West Virginia', 'Wyoming'])
 state_co2_sector.drop('Total', axis='columns')
 ```
 
+![transpose diagram](transpose.png)
+
 To switch rows and columns, use the `.transpose()` method. As a shortcut, you can also use `.T` to transpose rows and columns.
 
 ```
