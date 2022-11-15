@@ -63,6 +63,11 @@ A range of label indices can be passed into `.loc[]` or a range of integer posit
 ```
 e_countries = development.loc['Ecuador':'Ethiopia']
 integer_slice = development.iloc[1:4]
+```
+
+I can also pass in a list of label indices instead of a range:
+
+```
 non_states = development.loc[ ['American Samoa', 'Puerto Rico', 'Virgin Islands (U.S.)'] ]
 ```
 
@@ -240,13 +245,13 @@ print(websites_df)
 
 **Looking up values by matching row label indices**
 
-Sometimes we have a DataFrame that serves as a lookup table. In this example, each row of the following table provides information about some artists. The row label index is a unique identifier for each artist (the artist's Wikidata Q ID).
+Sometimes we have a DataFrame that serves as a lookup table. In this example, each row of the following table provides information about an artist. The row label index is a unique identifier for each artist (the artist's Wikidata Q ID).
 
 DataFrame named `artists`:
 
 ![artist lookup table](lookup_table.png)
 
-A second table with information about artworks refers to artists by their unique ID (essentially a foreign key to the lookup table). 
+A second table with information about artworks refers to artists by their unique ID in the `creator` column (essentially a foreign key to the lookup table). 
 
 DataFrame named `works`:
 
