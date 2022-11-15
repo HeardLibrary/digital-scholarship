@@ -307,7 +307,42 @@ print(works)
 
 # Practice exercises
 
-Under construction
+For this practice exercise, we will work on the NOAA weather data from the [Global Summary of the Month](https://www.ncdc.noaa.gov/cdo-web/search?datasetid=GSOM) for Mesa, Arizona. The key to column header abbreviations is [here](GSOM_documentation.pdf). Note: precipitation is in mm and temperatures are in degrees C.
+
+Last week, we downloaded the file and opened it directly from our file system. This week, we will load it directly from the URL to make things easier. The file is available on GitHub at [this page](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/codegraf/mesa2880172.xlsx). If you click on the `Download` button, the file will be downloaded to your local file system in the default download directory for your browser. If we want to open the file directly, we need to get the URL that directly accesses the file (not the URL to the web page about the file). We can get that by right-clicking on the `Download` button, and selecting `Copy link` or something similar depending on your particular browser. You can then paste the URL you copied into a cell in your code notebook and use it as the argument of the `pd.read_excel()` function.
+
+1\. Use the `pd.read_excel()` function to load the weather spreadsheet as a pandas DataFrame and assign it the name `mesa_weather`.
+
+2\. Delete the columns `STATION` and `NAME`, which are useless because they are the same in every row. See [this section](../009a/#dropping-and-transposing-1m39s) if you forgot how to drop a list of columns.
+
+3\. Assign the `DATE` column as the row label index.
+
+4\. Delete the range of columns from `CDSD` through `HDSD`.
+
+5\. How many months in the period of record had more than 100 mm of rain? (Find this by slicing). If you don't want to count manually, find the `.shape` attribute of the slice.
+
+6\. Delete any rows that have missing data for the `TAVG` column.
+
+7\. Sometimes the average temperature is determined by an actual average of temperatures all day. But often it is estimated by averaging the maximum and minimum temperatures. Create a new column in the DataFrame called `MMAVE` by calculating the average of the `TMAX` and `TMIN` columns. Compare this column with the `TAVE` column and decide how you think `TAVE` was calculated.
+
+8\. Install the `langdetect` module by running this command in an empty notebook cell:
+
+```
+!pip install langdetect
+```
+
+You can try to detect the language of a string by passing the string in as the argument of the `detect_langs` function from the `langdetect` module:
+
+```
+from langdetect import detect_langs
+string = "S'il vous plaît, ne marchez pas sur l'herbe."
+lang_list = detect_langs(string)
+print(lang_list)
+```
+
+The function returns a list of strings, where the first two characters of the string are the language code and the characters after the third are a confidence score on a scale from 0 to 1. 
+
+
 
 ----
 
