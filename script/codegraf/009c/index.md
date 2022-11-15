@@ -93,7 +93,7 @@ Notes:
 
 ![pivot diagram](pivot.png)
 
-Example of changing a "long" DataFrame to a "wide" DataFrame using the '.pivot()` method:
+Example of changing a "long" DataFrame to a "wide" DataFrame using the `.pivot()` method:
 
 ```
 state_wide = long.pivot('State', 'Sector', 'value')
@@ -111,4 +111,4 @@ Notes:
 Next lesson: [Introduction to plotting](../010)
 
 ----
-Revised 2022-11-14
+Revised 2022-11-15
