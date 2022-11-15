@@ -130,13 +130,11 @@ Slicing rows using logical conditions is similar to slicing by range or list, ex
 
 The usual Python boolean operators `==`, `>`, `<`, `>=`, and `<=` may be used. `not` and `!` aren't used for negation for vectorized boolean operations in pandas, nor are the keywords `and` and `or`. Instead these operators are used:
 
-```
 | pandas operator | boolean | evaluation |
 | --------------- | ------- | -------- |
 | & | and | `True` if all `True` |
 | \| | or | `True` if any `True` |
 | ~ | not | opposite value |
-```
 
 Examples of slicing by condition:
 
