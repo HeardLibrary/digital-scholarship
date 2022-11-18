@@ -174,15 +174,15 @@ In this example, the red bars of the second plot will partially cover the black 
 
 ----
 
-## Creating non-standard plots with Pyplot (3m19s)
+## Creating non-standard plots with pyplot (3m24s)
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/VzowOXwzCVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/tieS-QZ_Ito" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Pyplot gives you the ability to control the appearance and data sources of the plot very specifically and make it possible to use script statements to generate the features of the graph. However, this high degree of control is a tradeoff with the ease with which the plot can be generated. Creating complex Pyplot plots requires a more sophisticated understanding of programming and the structure of NumPy and pandas objects. Improved understanding will make it easier to follow template examples found online in places such as the [Matplotlib gallery](https://matplotlib.org/3.2.1/gallery/index.html). 
 
 ----
 
-## Creating a stacked bar chart with Pyplot (16m47s)
+## Creating a stacked bar chart with pyplot (16m47s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/Uic3-7uFgYg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
