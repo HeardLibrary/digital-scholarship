@@ -173,6 +173,7 @@ In this example, the red bars of the second plot will partially cover the black 
 
 
 ----
+# Optional exercises
 
 ## Creating non-standard plots with pyplot (2m48s)
 
