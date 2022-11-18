@@ -166,6 +166,14 @@ In this example, the red bars of the second plot will partially cover the black 
 
 ----
 
+## Creating subplots programmatically (3m06s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/L7jjHz41iyY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+----
+
 ## Creating non-standard plots with Pyplot (3m19s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/VzowOXwzCVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
