@@ -158,9 +158,10 @@ In this example, the red bars of the second plot will partially cover the black 
 
 ----
 
-## Scatterplot with best fit curve (mfs)
+## Scatterplot with best fit curve (3m38s)
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/VzowOXwzCVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/l1gFUpT50Fk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 
 ----
