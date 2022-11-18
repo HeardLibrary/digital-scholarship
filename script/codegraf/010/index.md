@@ -35,17 +35,14 @@ Total video time: 62m 54s
 
 [Lesson slides](../slides/lesson010.pdf)
 
-# Plotting with pandas
+# Introduction to plotting in Python (0m57s)
 
-The standard import statement for Pyplot from Matplotlib is:
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/yx2HCpE-5Y0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-```
-import matplotlib.pyplot as plt
-```
 
-## Line graph from a pandas DataFrame (6m57s)
+## Line plot from a pandas DataFrame (3m57s)
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/G5TrCBgox1A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/2qdgor4te1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 In order for a date string to display in a reasonable way on a pandas or Pyplot plot, they must be converted to datetime objects, then set as the row index. Example:
 
@@ -70,75 +67,52 @@ covid.plot(title = 'Covid 19 cases in the U.S.', subplots = True, figsize=(10,10
 
 ----
 
-## Other plot types from pandas DataFrames (1m55s)
+## Other plot types from pandas DataFrames (3m02s)
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/Q8Zk_8yXQRk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/F3HQ62C-zac" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Plot type options for pandas plots are: line, scatter, pie, bar, barh, and others.
 
-----
-
-## Scatterplot from a pandas DataFrame (0m54s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/QGxAEw-xWxY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-To generate a scatterplot from a pandas DataFrame, pass in the X column name as the first argument and the Y column name as the second. Example:
+To generate a scatterplot from a pandas DataFrame, use the `.plot()` method. Pass in the X column name as the first argument and the Y column name as the second. Example:
 
 ```
 covid.plot.scatter('x_column', 'y_column')
 ```
 
-----
-
-## Pie chart from a pandas DataFrame (7m54s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/Qv-4E8cpnE8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-One pie chart can only contain data from a single pandas series. That means that either a single column or row must be sliced from the DataFrame for input into the plot, or the `subplots=` argument must be set to `True`. Example:
+One pie chart can only contain data from a single pandas series. That means that a single column or row must be sliced from the DataFrame for input into the plot. Example:
 
 ```
-dataframe.plot(kind='pie', subplots=True)
+dataframe.plot(kind='pie')
 ```
-
-----
-
-## Bar chart from a pandas DataFrame (2m04s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/nKIGnDH5kZs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Bar charts can be generated from a series sliced from a pandas DataFrame column. The row index labels will be used for the X axis labels and the values in the column will be used to determine the Y axis scale. 
 
 For horizontal bar charts (`barh`), the row index labels will be used as the Y axis labels. The labels will be ascending from bottom to top, so if they are alphabetic, a sort with `ascending=False` must be performed on the rows before plotting to make the labels be in alphabetical order from the top.
 
-
 ----
 
 # pyplot from Matplotlib
 
-## What is pyplot? (1m46s)
+The standard import statement for pyplot from Matplotlib is:
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/xl4N5qjiZkw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+import matplotlib.pyplot as plt
+```
 
-pyplot is a subset of the commonly used Matplotlib library. It is used to generate "Matlab-style" plots. The input is generally in the form of NumPy arrays, but since a pandas series consists of a NumPy arrays plus an index, a series can also generally be used as input. Because the columns in pandas DataFrames are series, if they are sliced from the DataFrame, they can be used as input as well.
+## Matplotlib and pyplot (2m05s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/KG7-uGx1YZc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+pyplot is a submodule of the commonly used Matplotlib library. The input is generally in the form of NumPy arrays, but since a pandas series consists of a NumPy arrays plus an index, a series can also generally be used as input. Because the columns in pandas DataFrames are series, if they are sliced from the DataFrame, they can be used as input as well.
+
+pyplot has two application interfaces. One is object-oriented and can be used to build plots by creating and modifying plotting objects. The other is the "pyplot" interface that generates plots in a style that is familiar to Matlab users. This lesson will use the object-oriented interface, since that is most similar to the Python coding style used in previous lessons of this series.  
 
 ----
 
-## Pyplot plot function (5m45s)
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/mr8URVnVf5w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## Pyplot figures and subplots (4m52s)
 
-The `plt.plot()` function is the simplest way to generate basic plots using Pyplot. To make scatter or line plots, pass in the X and Y arrays (i.e. series) as the first and second arguments respectively. Color, line style, and marker type can also be specified by arguments. Examples:
-
-```
-plt.scatter(first_cases.cases, first_cases.deaths)
-plt.plot(first_cases.cases, first_cases.deaths, color='k', linestyle='dashed', marker='o')
-```
-
-----
-
-## Pyplot figures and subplots (7m34s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/4Xt2MHlh7qI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/Yz-Tv_29r4M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Creating a *figure* instance sets aside space for all of the plots in the figure. The `figsize=` argument can be used to set the width and height of the figure. Example:
 
@@ -154,12 +128,19 @@ axes2 = fig.add_subplot(2, 1, 2)
 
 "Axes" is often used to refer to the subplots, hence the use of `ax` as the name of a subplot object. This use of the term differs from the conventional use to indicate X and Y axes of the plot itself.
 
+When operating in a notebook environment (Jupyter or Colab), the plots will automatically display in the space below the cell. If using a stand-along Python installation, you will need to execute the
+
+```
+plt.show()
+```
+
+function to open a popup window to display the plot.
 
 ----
 
-## Plotting in a single Pyplot subplot (4m31s)
+## Plotting in a single Pyplot subplot (1m38s)
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/UYjzEOzNpgM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/UvxUzgjIuQg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 More than one plot can be inserted into the same subplot object. The more recently added plot will cover up earlier plots. Example:
 
@@ -173,6 +154,13 @@ ax.set_title('start of the COVID 19 pandemic in the U.S.')
 ```
 
 In this example, the red bars of the second plot will partially cover the black bars of the first plot.
+
+
+----
+
+## Scatterplot with best fit curve (mfs)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/VzowOXwzCVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ----
@@ -245,4 +233,4 @@ The text cell of each practice problem describes what to accomplish. Try to do t
 5. Compare the number of flights across airlines using a bar chart.
 
 ----
-Revised 2020-09-01
+Revised 2022-11-18
