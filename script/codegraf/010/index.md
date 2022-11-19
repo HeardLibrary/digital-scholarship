@@ -25,7 +25,7 @@ Creating plots may be the end point if you want to present the results of data c
 - overlay more than one plot within a subplot. 
 - extract data from the indices, columns, and rows of a pandas DataFrame and use those data to generate a stacked bar chart.
 
-Total video time: 62m 54s
+Total video time: 23m 15s (42m 50s with optional videos)
 
 ## Links
 
@@ -162,7 +162,7 @@ In this example, the red bars of the second plot will partially cover the black 
 
 
 ----
-# Optional exercises
+# Optional exercise
 
 ## Creating non-standard plots with pyplot (2m48s)
 
