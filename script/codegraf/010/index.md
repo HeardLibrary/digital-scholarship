@@ -10,20 +10,21 @@ Previous optional lesson: [Summarizing and rearranging DataFrames](../009c)
 
 # Introduction to plotting
 
-Creating plots may be the end point if you want to present the results of data collection, or it may be just the beginning of a cycle of data visualization, modeling, and additional data gathering and wrangling. Data visualization is a large topic, but it begins with formatting your data into a form that allows you to create a plot using software. In this lesson, we will start with the easiest methods for generating plots from pandas DataFrames and progress to building more complicated plots using Pyplot from the Matplotlib Python library.
+Creating plots may be the end point if you want to present the results of data collection, or it may be just the beginning of a cycle of data visualization, modeling, and additional data gathering and wrangling. Data visualization is a large topic, but it begins with formatting your data into a form that allows you to create a plot using software. In this lesson, we will start with the easiest methods for generating plots from pandas DataFrames and progress to building more complicated plots using pyplot from the Matplotlib Python library.
 
 **Learning objectives** At the end of this lesson, the learner will:
 - create a multiline plot directly from a pandas DataFrame
-- separate plot lines using the `subplots=` argument.
 - create a simple XY scatterplot from two numeric columns of a pandas DataFrame.
-- create one or more pie charts from slices of a pandas DataFrame.
-- create a bar chart using a pandas series sliced or summarized from a DataFrame.
-- use the Pyplot `plt.plot()` function to create XY line or scatterplots using pandas series sliced from a dataframe.
-- describe the organization of figure and subplot ("axes") objects in Pyplot.
+- create a pie chart from a slice of a pandas DataFrame.
+- create a bar chart using a pandas Series sliced or summarized from a DataFrame.
+- describe the difference between the two application interfaces in pyplot.
+- describe the organization of figure and subplot ("axes") objects in pyplot.
 - instantiate one or more subplots and specify their row and column organization.
 - format a plot within a subplot by specifying line, color, and point characteristics.
 - overlay more than one plot within a subplot. 
-- extract data from the indices, columns, and rows of a pandas DataFrame and use those data to generate a stacked bar chart.
+- generate a best-fit polynomial and overlay it on a scatterplot.
+- create a scatterplot with error bars.
+- create multiple subplots within a figure by looping in a script.
 
 Total video time: 23m 15s (42m 50s with optional videos)
 
