@@ -53,17 +53,6 @@ covid.set_index(['date'], inplace=True)
 
 For more on `datetime` objects, review [this lesson](../005/#the-datetime-module-9m08s).
 
-----
-
-## Subplots from a pandas DataFrame (3m28s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/4cyWVMOrOng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-To display line graphs from pandas DataFrame columns in separate subplots, set the `subplots` argument to `True`. The size of the plot can also be controlled usint the `figsize` argument. Example:
-
-```
-covid.plot(title = 'Covid 19 cases in the U.S.', subplots = True, figsize=(10,10))
-```
 
 ----
 
