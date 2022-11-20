@@ -36,15 +36,16 @@ Total video time: 23m 15s (42m 50s with optional videos)
 
 [Lesson slides](../slides/lesson010.pdf)
 
+[Matplotlib gallery](https://matplotlib.org/stable/gallery/index.html)
+
 # Introduction to plotting in Python (0m57s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/yx2HCpE-5Y0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Import statements used in this lesson
+To plot directly from a pandas DataFrame, you must include the pandas import statement:
 
 ```
-import pandas as pd # used for ploting directly from pandas DataFrames or for general DataFrame manipulations
-import matplotlib.pyplot as plt # used when plotting with the pyplot submodule of Matplotlib
+import pandas as pd
 ```
 
 ## Line plot from a pandas DataFrame (2m39s)
@@ -55,11 +56,24 @@ In order for a date string to display in a reasonable way on a pandas or Pyplot 
 
 ```
 covid['date'] = pd.to_datetime(covid['date'], format = '%Y-%m-%d') # converts string to datetime object
-covid.set_index(['date'], inplace=True)
+covid = covid.set_index(['date'])
 ```
 
 For more on `datetime` objects, review [this lesson](../005/#the-datetime-module-9m08s).
 
+The default type for plots made directly from a DataFrame is line. The `.plot()` method defaults to a line plot. Here is an example for a dataframe named `covid`:
+
+```
+covid.plot()
+```
+
+The plot type can be changed by passing in a `kind` keyword argument:
+
+```
+covid.plot(kind='line')
+```
+
+By default, the first column is used for the X axis and subsequent columns are plotted as additional data series on the Y axis.
 
 ----
 
@@ -69,7 +83,7 @@ For more on `datetime` objects, review [this lesson](../005/#the-datetime-module
 
 Plot type options for pandas plots are: line, scatter, pie, bar, barh, and others.
 
-To generate a scatterplot from a pandas DataFrame, use the `.plot()` method. Pass in the X column name as the first argument and the Y column name as the second. Example:
+To generate a scatterplot from a pandas DataFrame, use the `.scatter()` method. Pass in the X column name as the first argument and the Y column name as the second. Example:
 
 ```
 covid.plot.scatter('x_column', 'y_column')
@@ -81,9 +95,17 @@ One pie chart can only contain data from a single pandas series. That means that
 dataframe.plot(kind='pie')
 ```
 
+The values will be used as the data for generating the sectors and the label indices will be used as the sector labels.
+
 Bar charts can be generated from a series sliced from a pandas DataFrame column. The row index labels will be used for the X axis labels and the values in the column will be used to determine the Y axis scale. 
 
 For horizontal bar charts (`barh`), the row index labels will be used as the Y axis labels. The labels will be ascending from bottom to top, so if they are alphabetic, a sort with `ascending=False` must be performed on the rows before plotting to make the labels be in alphabetical order from the top.
+
+Example:
+
+```
+totals_by_state.sort_index(ascending=False).plot(kind='barh', figsize=(10,10))
+```
 
 ----
 
@@ -94,6 +116,9 @@ The standard import statement for pyplot from Matplotlib is:
 ```
 import matplotlib.pyplot as plt
 ```
+
+[Overview of common plot types](https://matplotlib.org/stable/plot_types/index.html)
+
 
 ## Matplotlib and pyplot (2m05s)
 
@@ -110,6 +135,8 @@ pyplot has two application interfaces. One is object-oriented and can be used to
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/Yz-Tv_29r4M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+**Figures and subplots**
+
 Creating a *figure* instance sets aside space for all of the plots in the figure. The `figsize=` argument can be used to set the width and height of the figure. Example:
 
 ```
@@ -124,13 +151,27 @@ axes2 = fig.add_subplot(2, 1, 2)
 
 "Axes" is often used to refer to the subplots, hence the use of `ax` as the name of a subplot object. This use of the term differs from the conventional use to indicate X and Y axes of the plot itself.
 
+The first argument in the `.add_subplot()` method is the number of rows of subplots, the second argument is the number of columns of subplots, and the third argument is the position of this particular subplot in the sequence of subplots.
+
 When operating in a notebook environment (Jupyter or Colab), the plots will automatically display in the space below the cell. If using a stand-along Python installation, you will need to execute the
 
 ```
 plt.show()
 ```
 
-function to open a popup window to display the plot.
+function to open a popup window to display the plot. **Important note:** In notebook interfaces (Jupyter and Colab), all of the code related to a particular plot must be included in a single cell. 
+
+**Plot method syntax**
+
+Here is an example of a statement that creates a line plot:
+
+```
+axes1.plot(first_cases.index, first_cases['cases'], color='k', linestyle='dashed', marker='o')
+```
+
+The first two arguments are the one-dimensional sequences used as data for the X and Y axes respectively. These sequences may be a pandas Series, a pandas DataFrame column, a Numpy array, or a row label index. Other keyword arguments may be used to specify the color, dash style of the line, and marker type. For more information, see the [color options](https://matplotlib.org/stable/gallery/color/named_colors.html), [line style options](https://matplotlib.org/stable/gallery/lines_bars_and_markers/linestyles.html), and [marker types](https://matplotlib.org/stable/api/markers_api.html). 
+
+Plot types other than line plots are created using methods other than `.plot()`. See the following sections for examples.
 
 ----
 
@@ -138,7 +179,7 @@ function to open a popup window to display the plot.
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/UvxUzgjIuQg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-More than one plot can be inserted into the same subplot object. The more recently added plot will cover up earlier plots. Example:
+More than one plot can be inserted into the same subplot object. The more recently added plot will cover up earlier plots. Bar plot example:
 
 ```
 fig = plt.figure(figsize=(10,10))
@@ -158,7 +199,76 @@ In this example, the red bars of the second plot will partially cover the black 
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/l1gFUpT50Fk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Scatter (or dot) plots are created using the `.scatter()` method:
 
+```
+ax.scatter(stories_fallen, injury_rate, color='r')
+```
+
+The first argument is the sequence of X values and the second argument is the sequence of Y values. 
+
+**Additional plot features**
+
+Additional features can be specified by adding additional statements. For example, the X and Y axis labels can be specified:
+
+```
+ax.set_xlabel('stories fallen')
+ax.set_ylabel('average injury per cat')
+```
+
+If the data series that are plotted on the same axes are labeled using the `label` keyword argument, they can be used to generate a legend that identifies each of the series:
+
+```
+ax.scatter(stories_fallen, injury_rate, label='injury data')
+ax.plot(stories_fallen, fit_y_values, color='r', linestyle='dashed', label='best fit line')
+ax.legend(loc='upper left')
+```
+
+**Fitting a trend curve**
+
+A best fit polynomial curve (including best fit line) can be fitted to the data using the Numpy `np.polyfit()` and `np.poly1d()` functions:
+
+```
+import numpy as np
+z = np.polyfit(stories_fallen, injury_rate, 2)
+p = np.poly1d(z)
+```
+
+The first argument in the polyfit function is the series of X values, the second argument is the series of Y values, and the third value is the order of the polynomial (1 for line, 2 for parabola, etc.). 
+
+The fit function (assigned the name `p` in the example above) can be used to generate predicted values for a sequence of X values passed into it. This function can be used as the sequence of Y values in the `.plot()` method:
+
+```
+ax.plot(stories_fallen, p(stories_fallen) )
+```
+
+If the X values are sparse, a curve with order greater than 1 will not be smooth. In that case a sequence of numbers at closer intervals should be passed into the fit function. The following code uses the Numpy `np.linspace()` function to generate 20 values ranging between the minimum and maximum X values in the data:
+
+```
+min_x = stories_fallen.min()
+max_x = stories_fallen.max()
+fit_x_values = np.linspace(min_x, max_x, num=20)
+```
+
+When those values are used to generate the best-fit curve, the code looks like this:
+
+```
+fig = plt.figure(figsize=(5,5))
+ax = fig.add_subplot(1, 1, 1)
+ax.scatter(stories_fallen, injury_rate, label='data')
+ax.plot(fit_x_values, p(fit_x_values), color='r', linestyle='dashed', label='fit')
+ax.legend(loc="upper left")
+```
+
+**Plotting error bars**
+
+The `.errorbar()` method will generate a scatterplot with error bars above and below the dots:
+
+```
+ax.errorbar(stories_fallen, injury_rate, yerr=[lower_deviation, upper_deviation], fmt='o')
+```
+
+The upper and lower bounds of the bars must be specified as a list of sequences to the `yerr` keyword argument. NOTE: these bounds represent the difference between the dots and the ends of the bars, not the absolute Y values of the bar ends.
 
 ----
 
@@ -166,7 +276,26 @@ In this example, the red bars of the second plot will partially cover the black 
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/L7jjHz41iyY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+The number of plots and their organization can be set dynamically by a variable:
 
+```
+number_of_states = int(input('How many states to plot? '))
+fig = plt.figure(figsize=(5, 4*number_of_states))
+ax = fig.subplots(number_of_states, 1)
+```
+
+The code above will create a single column with number of rows entered by the user. The `.subplots()` method generates multiple subplots ("axes" named here as `ax`) as a Numpy array whose items can be referenced by an index number. 
+
+One can then loop through the subplot array and generate each plot dynamically. The iterator in the example below is a sequence of integers that ranges from 0 to the last subplot. That iterator is used as an index for both the subplot objects and the rows in the source DataFrame that will be used to provide both the data, the sector labels, and the titles for the subplots. 
+
+```
+number_of_states = int(input('How many states to plot? '))
+fig = plt.figure(figsize=(5, 4*number_of_states))
+ax = fig.subplots(number_of_states, 1)
+for subplot in range(number_of_states):
+    ax[subplot].pie(decreasing.iloc[subplot], labels=decreasing.columns)
+    ax[subplot].set_title(decreasing.index[subplot])
+```
 
 ----
 # Optional exercise
