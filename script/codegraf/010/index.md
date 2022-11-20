@@ -218,19 +218,18 @@ plt.legend(column_labels)
 
 # Practice problems
 
-To do the practice problems, you need to download the large flight delay dataset from [this page](https://github.com/HeardLibrary/digital-scholarship/tree/master/data/codegraf). The dataset, On-Time: Reporting Carrier On-Time Performance (1987-present), is compressed in `.zip` format. After uncompressing the datafile (`flight_data_set.csv`), you will need to move it to the working directory of your environment. See the [Loading files from your file system](../008/#loading-files-from-your-file-system) section of the pandas data frames lesson for information about your specific cloud service or operating system.  
+To do the practice problems, you need to download the large flight delay dataset from [this page](https://github.com/HeardLibrary/digital-scholarship/tree/master/data/codegraf). The dataset, On-Time: Reporting Carrier On-Time Performance (1987-present), is compressed in `.zip` format. After uncompressing the datafile (`flight_data_set.csv`), you will need to move it to the working directory of your environment. See the [Loading files from your file system](../008/#loading-files-from-your-file-system) section of the pandas data frames lesson for information about your specific cloud service or operating system. 
 
-The text cell of each practice problem describes what to accomplish. Try to do the coding yourself before looking at the solution code in the cell below the description.
+This dataset has more information than can easily be visualized without simplifying the data. In this exercise, we'll make use of the `.group()` method to summarize categories of data and make it possible to plot the simplified data. See the ["Grouping and group operations" section of the optional "Summarizing and rearranging DataFrames" lesson](https://heardlibrary.github.io/digital-scholarship/script/codegraf/009c/#grouping-and-group-operations-5m13s) to understand how the `.groupby()` combined with statistical methods work to summarize data by a category.
 
-1. Calculate the average values for the carriers and slice out the Minutes of Delay per flight. Create a bar chart of the resulting series.
+Follow the prompts in the examples notebook to create the specified plots.
 
-2. Recreate the plot, but this time replace `NaN` values with zeros.
+1. Create a horizontal bar plot showing the average number of minutes of delay by carrier, in descending order.
 
-3. First, Convert date column to a datetime object and group by Carrier Name, then Slice only the Delta data and sum by date. Plot only the Minutes of Delay by date. 
+2. Create a plot of Minutes of Delay by date for Delta Airlines. 
 
-4. See if the pattern from the previous problem holds across airlines. First, group by both Carrier Name and Date rather than selecting only one airline. Limit output to Minutes of Delay data. Then unstack Carrier Name so that we get a column for each carrier. If we redo the plot, Pandas will plot a line for each carrier.
+3. Visualize the seasonal pattern of delays across airlines using plot with error bars showing the standard deviation of delays per flight.
 
-5. Compare the number of flights across airlines using a bar chart.
 
 ----
-Revised 2022-11-18
+Revised 2022-11-20
