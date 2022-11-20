@@ -52,15 +52,6 @@ import pandas as pd
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/L35ZmvCAWAQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-In order for a date string to display in a reasonable way on a pandas or Pyplot plot, they must be converted to datetime objects, then set as the row index. Example:
-
-```
-covid['date'] = pd.to_datetime(covid['date'], format = '%Y-%m-%d') # converts string to datetime object
-covid = covid.set_index(['date'])
-```
-
-For more on `datetime` objects, review [this lesson](../005/#the-datetime-module-9m08s).
-
 The default type for plots made directly from a DataFrame is line. The `.plot()` method defaults to a line plot. Here is an example for a dataframe named `covid`:
 
 ```
@@ -74,6 +65,17 @@ covid.plot(kind='line')
 ```
 
 By default, the first column is used for the X axis and subsequent columns are plotted as additional data series on the Y axis.
+
+**datetime objects**
+
+In order for a date string to display in a reasonable way on a pandas or Pyplot plot, they must be converted to datetime objects, then set as the row index. Example:
+
+```
+covid['date'] = pd.to_datetime(covid['date'], format = '%Y-%m-%d') # converts string to datetime object
+covid = covid.set_index(['date'])
+```
+
+For more on `datetime` objects, review [this lesson](../005/#the-datetime-module-9m08s).
 
 ----
 
