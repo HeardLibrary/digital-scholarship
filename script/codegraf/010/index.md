@@ -40,10 +40,16 @@ Total video time: 23m 15s (42m 50s with optional videos)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/yx2HCpE-5Y0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Import statements used in this lesson
 
-## Line plot from a pandas DataFrame (3m57s)
+```
+import pandas as pd # used for ploting directly from pandas DataFrames or for general DataFrame manipulations
+import matplotlib.pyplot as plt # used when plotting with the pyplot submodule of Matplotlib
+```
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/2qdgor4te1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## Line plot from a pandas DataFrame (2m39s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/L35ZmvCAWAQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 In order for a date string to display in a reasonable way on a pandas or Pyplot plot, they must be converted to datetime objects, then set as the row index. Example:
 
