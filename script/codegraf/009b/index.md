@@ -280,19 +280,19 @@ Here's the resulting DataFrame
 
 The strategy for looking up a value by a regular column value rather than a row label index is similar but slightly more complicated. Let's consider the case of looking up the artist birth year for an artwork by matching with values in the artist name column in the artwork DataFrame rather than rather than the artist unique ID (the label index).
 
-In that case, the row corresponding to an artist with a particular name would be found by a boolean condition rather than a direct lookup by the label index:
+In that case, the rows corresponding to an artist with a particular name (temporarily denoted here by the variable `name_of_artwork_artist`) would be found by a boolean condition (`artists['name']==name_of_artwork_artist`) rather than a direct lookup by the label index. The values for the `birth_year` column in those rows would be designated by: 
 
 ```
 artists.loc[artists['name']==name_of_artwork_artist, 'birth_year']
 ```
 
-The result is a series. If the artist names are unique in the artist lookup table, there will only be one item in the series. However, if there are several artists with the same name, the series will have more than one value. If we assume the artist names in the DataFrame are unique, we can just extract the first (integer position=0) value:
+The result is a series of `birth_year` values. If the artist names are unique in the artist lookup table, there will only be one item in the series. However, if there are several artists with the same name, the series will have more than one value. If we assume the artist names in the DataFrame are unique, we can just extract the first (integer position=0) value:
 
 ```
 artist_birth = artists.loc[artists['name']==name_of_artwork_artist, 'birth_year'][0]
 ```
 
-If we want to find the artist birth year for every row in the artwork table, we can set up a loop to look up the artist birth year for each row:
+If we want to find the artist birth year for every row in the artwork table, we can set up a loop to look up the artist birth year for each row. In this loop, I'm replacing the temporary variable name `name_of_artwork_artist` that I was using above with the expression for the artist name in a particular row: `work[artist]`.
 
 ```
 for accession_number, work in works.iterrows():
@@ -358,4 +358,4 @@ Optional lesson: [Summarizing and rearranging DataFrames](../009c)
 Next regular lesson: [Introduction to plotting](../010)
 
 ----
-Revised 2022-11-14
+Revised 2022-12-01
