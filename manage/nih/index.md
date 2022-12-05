@@ -28,6 +28,8 @@ Select a repository for your data according to these priorities:
 
 # For further information
 
+[Vanderbilt Research Integrity and Compliance office information page](https://www.vanderbilt.edu/researchintegrityandcompliance/nih-data-management-and-sharing-plans/) - comprehensive Vanderbilt-specific FAQs and advice.
+
 [Final NIH Policy for Data Management and Sharing](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html)
 
 [Council on Government Relations (COGR) NIH Data Management and Sharing Readiness Guide](https://www.cogr.edu/cogrs-nih-data-management-and-sharing-readiness-guide)
@@ -37,4 +39,4 @@ Select a repository for your data according to these priorities:
 [CORG/Association of Research Libraries NIH DMSP policy briefing sheet for institutional leadership](https://www.arl.org/wp-content/uploads/2022/05/NIH-2023-Data-Management-and-Sharing-Policy-Briefing-Document.pdf)
 
 ----
-Revised 2022-10-10
+Revised 2022-12-05
