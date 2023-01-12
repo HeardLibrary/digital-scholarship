@@ -6,6 +6,18 @@ breadcrumb: Archive
 
 # DiSC Python Lessons Archive
 
+## Introduction to pandas and Matplotlib - Fall 2022
+
+These lessons will introduce the key features of pandas with an emphasis on reusable code examples and typical ways to create visualizations from DataFrames. This is an intermediate level series that assumes you have a basic understanding of how Python operates and of basic Python objects like lists and dictionaries. 
+
+| Working session date | Lesson | Topic | Web page (times are total video length) |
+|---|---|---|---|
+| Nov 2 | 1 | Introduction to pandas Series | [optional lesson on NumPy](../../codegraf/007/) (53 min) / [lesson videos](../../codegraf/008/) (34 min) |
+| Nov 9 | 2 | Introduction to pandas DataFrames: loading data and easy operations | [lesson videos](../../codegraf/009a/) (56 min) |
+| Nov 16 | 3 | Extracting and changing data in DataFrames | [lesson videos](../../codegraf/009b/) (25 min) / [optional lesson on summarizing and rearanging DataFrames](../../codegraf/009c/) (18 min) |
+| Nov 30 | 4 | Introduction to Matplotlib | [lesson videos](../../codegraf/010/) (22 min, 42 min with optional videos) |
+
+
 ## Archive of Beginners Lessons - Spring 2020
 
 | Date | Session | Topic | Notes |
@@ -73,4 +85,4 @@ Dr. Mishra recommends the book *Python for Data Analysis - Data Wrangling with P
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2021-11-25
+Revised 2023-01-12

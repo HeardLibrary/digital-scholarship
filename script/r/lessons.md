@@ -23,26 +23,27 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 [Archive of past lessons](../archive/)
 
 
-## Beginners Lessons - Fall 2022
+## Beginners Lessons - Spring 2023
 
-**Time:** Thursdays from 1:00-2:00 PMC entral (US) Time (starting October 27). 
+**Time:** Wednesdays from 1:00-2:00 PM Central (US) Time (starting March 22). 
 
-**Venue** Synchronously on Zoom. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJwucuGgpz0sHNNqpJkHUET_9xU_5ctAfnVw). After registering, you will receive a confirmation email containing information about joining the Zoom session.
+**Venue** Synchronously on Zoom. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJYrcOmorTgsHtW74vWxpL-Ac2JWDiYUMIHj). After registering, you will receive a confirmation email containing information about joining the Zoom session.
 
 **Instructor:** Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange a time to talk.
 
-I will be presenting the lessons using RStudio Cloud. It behaves almost exactly like RStudio desktop but does not require any installation. Create an account at <https://rstudio.cloud/> before the first lesson to save time.
+I will be presenting the lessons using RStudio in the cloud using the "posit" platform. It behaves almost exactly like RStudio desktop but does not require any installation. Create an account at <https://posit.cloud/> before the first lesson to save time, then go through the [RStudio Cloud quickstart](../../codegraf/003b/) lesson if you haven't used RStudio before. It includes 8 minutes of videos.
 
 You are welcome to use desktop RStudio if you already have it installed, but we will not be spending time going over the installation process. There are some [installation videos](../../codegraf/003/) that you are welcome to watch if you want to do an installation yourself. Stop on the page after the `Installing Anaconda` section.
 
+If you have never programmed before, I recommend that you work through two optional lessons on your own: [terminology](../../codegraf/001/) (18 min) and [programming environments](../../codegraf/002/) (50 min). I will assume that you are familiar with the concepts and terms covered in these lessons as we work through the actual R lessons.
+
 | Working session date | Lesson | Topic | Web pages (times are total video length) |
 |---|---|---|---|
-| Oct 27 | 1 | Introduction and examples | [terminology](../../codegraf/001/) recommended, but optional (18 min) / [programming environments](../../codegraf/002/) recommended, but optional (50 min) / [RStudio Cloud quickstart](../../codegraf/003b/) required (8 min)  |
-| Nov 3 | 2 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (45 min) |
-| Nov 10 | 3 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
-| Nov 17 | 4 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
-| Dec 1 | 5 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
-| Dec 8 | 6 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (46 min)  |
+| Mar 22 | 1 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (45 min) |
+| Mar 29 | 2 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
+| Apr 5 | 3 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
+| Apr 12 | 4 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
+| Apr 19 | 5 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (46 min)  |
 
 
 # R Resources
@@ -78,4 +79,4 @@ TBD
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2022-08-08
+Revised 2023-01-12
