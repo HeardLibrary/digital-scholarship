@@ -27,10 +27,10 @@ Using a text editor (like TextEdit on Mac, Notepad on Windows, or your favorite 
 **Create a bot password**
 
 The screenshots here show how to create a bot on a Wikibase instance that was hosted on AWS (hence the `18.205.159.211:8181` IP address), but they are the same for any Wikibase.  Start by logging into whatever Wikibase you want to interact with. NOTE: API credentials go across the Wikimedia universe, so if you have an account for Wikipedia, Wikimedia Commons, or the real Wikidata, you can use it to log into any of them to create the credentials to write to any of those platforms (and the Wikidata test instance as well).
-https://heardlibrary.github.io/digital-scholarship/lod/images/main-page.png
-<img src="../../images/login-link.png" style="border:1px solid black">
 
-1\. Go to either the [Wikidata test instance](https://test.wikidata.org/) or the URL of your Wikibase instance (probably ending with port 8181), depending on the part of the exercise you are working on.  In the upper right, click on the login link.  If you've set up a local copy of Wikibase on your computer, the default administrator account is `admin` with password `adminpass`.  If you've been issued a username and password, use them.  You can also create your own account by clicking on the button under `Don't have an account?` (unless account creation has been disabled for the Wikibase instance you are using).
+<img src="../../../host/wikidata/images/login-link.png" style="border:1px solid black">
+
+1\. In the upper right, click on the login link. If you've set up an account on wikibase.cloud, as an administrator you should be able to create a user acount that's separate from your administrator account. You should use a regular user account when you set up the bot password. You can also create a user account by clicking on the button under `Don't have an account?`.
 
 <img src="../images/special-pages-link.png" style="border:1px solid black">
 
