@@ -46,7 +46,7 @@ The screenshots here show how to create a bot on a Wikibase instance that was ho
 
 <img src="../../../host/wikidata/images/4grants-page.png" style="border:1px solid black">
 
-5\. Check the boxes for permissions to give to your bot.  For the Wikidata test instance or a practice Wikibase instance, you can check all of the boxes.  For a real bot to edit something like Wikidata, you would need to read up on the options before choosing.  Click on the `Create` button. 
+5\. Check the boxes for permissions to give to your bot.  I think the important ones are `Edit existing pages`, `Create, edit, and move pages`, and `Delete pages, revisions, and log entries`. However, just in case, I also selected `High-volume editing`, and `View deleted files and pages` as well. Click on the `Create` button. 
 
 <img src="../../../host/wikidata/images/bot-pwd.png" style="border:1px solid black">
 
@@ -74,7 +74,7 @@ If a property that you want to assign to the items that you want to add doesn't 
 
 <img src="../../../host/wikidata/images/partner-property.png" style="border:1px solid black">
 
-In this example, .  
+In this example, I created a property to link items for Mickey and Minnie Mouse. Selecting the correct `Data type` is important. The following datatypes are supported by VanderBot: Item, String, URL, Monolingual text, Geographic coordinates, Point in time, and Quantity.
 
 <img src="../../../host/wikidata/images/partner-property-created.png" style="border:1px solid black">
 
