@@ -50,9 +50,36 @@ The screenshots here show how to create a bot on a Wikibase instance that was ho
 
 <img src="../../../host/wikidata/images/bot-pwd.png" style="border:1px solid black">
 
-6\. A password will be created for your bot.  As the text indicates, there are actually two versions of the username and password.  Use the first one where the username contains "@".
+6\. A password will be created for your bot.  As the text indicates, there are actually two versions of the username and password.  Use the first username where the username contains "@", along with its corresponding password.
 
-In the credentials file that you left open before, copy and paste your bot's username in place of `User@bot` in the credentials file.  Copy and paste your bot's password in place of the example password in the credentials file.  Make sure that you don't have any trailing spaces after the username and password, or between the equals sign and the text you pasted in.  Save this file.  There is no way to recover credentials once you leave the page, so it might be good to save another copy of the file under a different file name in case you accidentlly write over or delete this one. Of course, you can also just delete this bot password and generate a new one if necessary.
+**Save the credentials**
+
+In the credentials file that you left open before, copy and paste your bot's username in place of `User@bot` in the credentials file.  Copy and paste your bot's password in place of the example password in the credentials file.  Make sure that you don't have any trailing spaces after the username and password, or between the equals sign and the text you pasted in.  Save this file as plain text.  
+
+There is no way to recover credentials once you leave the page, so it might be good to save another copy of the file under a different file name in case you accidentlly write over or delete this one. Of course, you can also just delete this bot password and generate a new one if necessary.
+
+## Properties in the Wikibase
+
+If you are already familiar with properties in Wikidata, you may be annoyed to discover that there is not necessarily any relationship between property P IDs in any particular Wikibase and the familiar P IDs in Wikidata. For example, P31 ("instance of") is one of the most important properties in Wikidata. But a particular Wikibase may have a different P ID for "instance of" or the property may not exist at all.
+
+The development of tools to transfer some or all properties from Wikidata to a Wikibase is a topic of active interest as of 2023-02-07. For now, we will manually create the properties we need using the graphical interface.
+
+To see the available existing properties, go to `Special pages` then `List of properties` in the `Wikibase` section.
+
+<img src="../../../host/wikidata/images/list-properties.png" style="border:1px solid black">
+
+**Adding properties**
+
+If a property that you want to assign to the items that you want to add doesn't exist, you will need to create the property by going to `Special pages`, then `Create a new property` in the Wikibase section. 
+
+<img src="../../../host/wikidata/images/partner-property.png" style="border:1px solid black">
+
+In this example, .  
+
+<img src="../../../host/wikidata/images/partner-property-created.png" style="border:1px solid black">
+
+When I click `Create`, I see the page for the newly created property.
+
 
 
 
@@ -69,65 +96,8 @@ that is, "the universe is an instance of a cat".  Before you run the script, you
 
 
 
-## Preliminaries
 
-**Accessing Wikibase**
 
-If you don't have access to an online instance of Wikibase, you can install a local instance on your own computer using [these instructions](../../../lod/install/#using-docker-compose-to-create-an-instance-of-wikibase-on-your-local-computer).  After you have access to an instance, go back to the [instructions for creating a bot](#set-up-the-bot) and generate a bot username and password there as you did for the Wikidata test instance. Then change the credentials.txt file to username and password, and change the value of `endpointUrl` to the URL of your Wikibase instance.  If you are running it locally on your own computer, the URL will probably be `http://localhost:8181`.
-
-**Preparing the data to be added**
-
-Go to [this page](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikibase/cartoons.csv) and download the file `cartoons.csv` into the same directory where you downloaded the first bot script.
-
-Using your spreadsheet program, open the file.  
-
-<img src="../images/csv-file.png" style="border:1px solid black">
-
-In this table, each row represents an item that will be created in the Wikibase database.  When it is created, it will be assigned the next available item identifier (begins with `Q`).  Every item should have an English label (in the first column named `enLabel`) and an English description (in the second column named `enDescription`).  It is also possible to have zero to many additional labels and descriptions in other languages.  In this example, there is a second set of labels in Spanish in the `esLabel` column.  
-
-The other columns contain the values for the properties used as the column headers. To see the available properties, go to `Special pages` then `List of properties` in the `Wikibase` section.
-
-<img src="../images/list-properties.png" style="border:1px solid black">
-
-The column header for a property should consist only of the property identifier (`P` followed by a number) and nothing else.  In the example spreadsheet, the fourth column is headed by `P6` and comparison with the list of properties shows that `P6` is "instance of".  
-
-<img src="../images/instance-of.png" style="border:1px solid black">
-
-Clicking on the P6 link takes us to the page for the `instance of` property.  An important thing to notice is that the Data type of the property is `item`.  **The value used in the table must match the Data type of the property!** Since P6 requires an item, all of the values in the P6 column are item identifiers (starting with `Q`): `Q3058`. As the script is currently written, only items can be give as values of properties. However, the script could be easily modified to allow string values or other types of values.  More on this in the comments at the end.
-
-<img src="../images/search-box.png" style="border:1px solid black">
-
-Q3058 is "cartoon character" and we can see its entry by starting to type "cartoon" in the search box at the upper right.  
-
-<img src="../images/cartoon-character-page.png" style="border:1px solid black">
-
-Wnen we click on the entry we want, its page will come up.  You can find the page for any Q identifier by changing the end of its URL to the appropriate identifier.
-
-**Adding properties**
-
-If a property that you want to assign to the items that you are creating with your bot doesn't exist, you will need to create the property by going to `Special pages`, then `Create a new property` in the Wikibase section. 
-
-<img src="../images/partner-property.png" style="border:1px solid black">
-
-Above is an example of a property that I could use to link Mickey Mouse to Minnie Mouse.  
-
-<img src="../images/partner-property-created.png" style="border:1px solid black">
-
-When I click `Create`, I see the page for the newly created property.
-
-**Adding items**
-
-The reason that you are using the bot is because you want to create a lot of items.  However, you may want to manually create items to be used as the values of properties.  For example, in the spreadsheet, property P9 is "part of universe" and is used to connect a cartoon character to its "universe" (Disney = Q3070, Looney Tunes = Q3076, etc.).  If I want to add another universe, such as Marvel, I need to go to `Special pages` then `Create a new item` in the Wikibase section.  
-
-<img src="../images/create-new-item.png" style="border:1px solid black">
-
-If I want to add another universe, such as Marvel, I need to go to `Special pages` then `Create a new item` in the Wikibase section. 
-
-<img src="../images/marvel-universe.png" style="border:1px solid black">
-
-After I enter the information and click `Create` I'll see the page for the new item and can get the item's Q identifier (Q3340 in this case) to use in the column in the spreadsheet.
-
-**Note: be sure that you remember to save your spreadsheet in CSV format before moving on to the next section!**  If it was opened as a CSV, it should be saved in that format by default.
 
 
 
