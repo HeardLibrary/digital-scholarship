@@ -185,10 +185,14 @@ VanderBot uses the SPARQL
 If you used the default file names and if your credentials are in your home directory, you can just run the script in a termal window (changed to the directory in which the files are located) using the command
 
 ```
-python vanderbot.py
+python vanderbot.py -D false -A 0
 ```
 
-In some installations, it may be necessary to use `python3` instead of `python` in the above statement. If you deviated from any of the defaults or put the credentials file somewhere else, use [command line options](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/README.md#command-line-options) as necessary.
+In some installations, it may be necessary to use `python3` instead of `python` in the above statement. 
+
+The `-D` option suppresses checking for duplicate label/description combinations, which requires using the Wikibase SPARQL endpoint. (More on this later.) Providing a zero value for the `-A` option sets the API delay value to zero seconds. When writing to the Wikidata API, writing more than 50 edits per minute without a bot flag will cause you to be blocked for some period of time. When writing to your own Wikibase instance, there is no reason to observe any delay. 
+
+If you deviated from any of the defaults or put the credentials file somewhere else, use [command line options](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/README.md#command-line-options) as necessary.
 
 If the write to the API is successful, a new item will be created:
 
@@ -204,7 +208,23 @@ Notice that VanderBot has converted the simple ISO 3601 dates to the more comple
 
 ![right written data table](images/written_data3.png)
 
+## Using the SPARQL endpoint with VanderBot
 
+VanderBot has several functions that use the Wikibase SPARQL endpoint to perform data checks. The Query Service for a wikibase.cloud instance is much slower than the Wikidata Query Service, so using these functions can significantly slow down writing to the API and you might want to disable them. 
+
+If you do want to use those features, you need to provide the URL of your instance's endpoint. You can find the base URL by clicking on the `Query Service` link on the left panel. That will take you to a new URL of a form like this: `https://wbwh-test.wikibase.cloud/query/`. To form the SPARQL endpoint URL, append `sparql` to this URL. In this example the endpoint URL becomes `https://wbwh-test.wikibase.cloud/query/sparql`. 
+
+When using the checking features, add the `-E` option to the command for running VanderBot. In the following example, checking for duplicate label/description combinations is enabled by default (no `-D` option necessary):
+
+```
+python vanderbot.py -A 0 -E https://wbwh-test.wikibase.cloud/query/sparql
+```
+
+Note: checking for duplicates should NOT be disabled when working with Wikidata in order to avoid creating duplicate items.
+
+Another function that uses the Query Service is allowing automatic updating to labels and descriptions. By default, labels and descriptions are only written for new items. Labels and descriptions of existing items are left unchanged. If the `-U` option is set to `allow`, whatever labels and descriptions are present in the row will be written to the API. When updates are allowed, the script downloads all of the existing labels and descriptions so that it can determine whether they have changed or not.
+
+The third circumstance where the Query Service is used is in cases where aliases are included. This requires a hack to the `csv-metadata.json` file that isn't supported by this work flow, so most users can disregard this.
 
 
 ----
