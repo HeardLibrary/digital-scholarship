@@ -196,13 +196,13 @@ If the write to the API is successful, a new item will be created:
 
 If we re-open the CSV, we can see that the VanderBot script has filled in many IDs that were assigned by the API
 
-![left raw data table](images/raw_data1.png)
+![left written data table](images/written_data1.png)
 
-![middle raw data table](images/raw_data2.png)
+![middle written data table](images/written_data2.png)
 
 
 
-![right raw data table](images/raw_data3.png)
+![right written data table](images/written_data3.png)
 
 
 
