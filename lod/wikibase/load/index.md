@@ -166,11 +166,46 @@ The raw data can now be entered in the CSV
 
 ![left raw data table](images/raw_data1.png)
 
-
+Values that are items must be given as Q IDs (including the "Q").
 
 ![middle raw data table](images/raw_data2.png)
 
+Dates should be given as ISO 3601 dates in either YYYY-MM-DD, YYYY-MM, or YYYY format. The precision can be left blank and VanderBot will figure it out from the format you use. 
+
 ![right raw data table](images/raw_data3.png)
+
+Quantity value types must include a unit value given as a Q ID. That Q ID must be from the Wikibase being written to and not the Wikidata Q ID for the unit. The language of monolingual text values is not specified in the data CSV because it's given in the mapping file.
+
+# Uploading the data
+
+Once the data have been entered into the spreadsheet, make sure that it, the `csv-metadata.json` file, and the [VanderBot python script](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/vanderbot.py) are in the same directory. Open a terminal window and navigate to the directory where you put the files.
+
+VanderBot uses the SPARQL
+
+If you used the default file names and if your credentials are in your home directory, you can just run the script in a termal window (changed to the directory in which the files are located) using the command
+
+```
+python vanderbot.py
+```
+
+In some installations, it may be necessary to use `python3` instead of `python` in the above statement. If you deviated from any of the defaults or put the credentials file somewhere else, use [command line options](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/README.md#command-line-options) as necessary.
+
+If the write to the API is successful, a new item will be created:
+
+![right raw data table](images/created_item.png)
+
+If we re-open the CSV, we can see that the VanderBot script has filled in many IDs that were assigned by the API
+
+![left raw data table](images/raw_data1.png)
+
+![middle raw data table](images/raw_data2.png)
+
+
+
+![right raw data table](images/raw_data3.png)
+
+
+
 
 ----
 Revised 2023-02-07
