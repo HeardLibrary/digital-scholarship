@@ -58,7 +58,7 @@ In the credentials file that you left open before, copy and paste your bot's use
 
 There is no way to recover credentials once you leave the page, so it might be good to save another copy of the file under a different file name in case you accidentlly write over or delete this one. Of course, you can also just delete this bot password and generate a new one if necessary.
 
-## Properties in the Wikibase
+# Properties in the Wikibase
 
 If you are already familiar with properties in Wikidata, you may be annoyed to discover that there is not necessarily any relationship between property P IDs in any particular Wikibase and the familiar P IDs in Wikidata. For example, P31 ("instance of") is one of the most important properties in Wikidata. But a particular Wikibase may have a different P ID for "instance of" or the property may not exist at all.
 
@@ -74,32 +74,103 @@ If a property that you want to assign to the items that you want to add doesn't 
 
 <img src="../../../host/wikidata/images/partner-property.png" style="border:1px solid black">
 
-In this example, I created a property to link items for Mickey and Minnie Mouse. Selecting the correct `Data type` is important. The following datatypes are supported by VanderBot: Item, String, URL, Monolingual text, Geographic coordinates, Point in time, and Quantity.
+In this example, I created a property to link items for Mickey and Minnie Mouse. Selecting the correct `Data type` is important. The following datatypes are supported by VanderBot: `Item`, `String`, `URL`, `Monolingual text`, `Geographic coordinates`, `Point in time`, and `Quantity`.
 
 <img src="../../../host/wikidata/images/partner-property-created.png" style="border:1px solid black">
 
 When I click `Create`, I see the page for the newly created property.
 
+## The config.yaml mapping file
 
+The easiest way to create the mappings between the property IDs used to describe items and the columns in the CSV file containing the data is to create a `config.yaml` file. This file can be used both to generate appropriate column headers and to download existing data.
 
+**Describing the property/column header mappings**
 
-**Figuring out what statement we want to create**
-
-Since this lesson assumes that you already have some experience with editing Wikidata, it assumes that you already know about items and properties. Items have identifiers starting with "Q", like `Q2`.  In the real Wikidata, [the universe](https://www.wikidata.org/wiki/Q1) has the identifier `Q1`.  In the Wikidata test instance, [the universe](https://test.wikidata.org/wiki/Q188427) has the identifier `Q188427`.  Clearly, you cannot assume that there is any relationship between the identifiers assigned to an item in the real Wikidata and the test Wikidata instance.  The same is true for properties.  An important property in Wikidata is `P31` ([instance of](https://www.wikidata.org/wiki/Property:P31)), which is used to indicate what kind of thing the item is.  In the Wikidata test instance, [instance of](https://test.wikidata.org/wiki/Property:P82) is the property `P82`.  
-The example bot script is set up in lines 129-131 to create the statement
+Here is an example of a YAML mapping file, which can also be downloaded from [link here]():
 
 ```
-Q188427 P82 Q1917
+data_path: ''
+item_pattern_file: graph_pattern.txt
+item_source_csv: ''
+outfiles:
+- output_file_name: statues.csv
+  label_description_language_list:
+  - en
+  - fr
+  manage_descriptions: true
+  # Note: if no columns to ignore, you must omit the "ignore" key or provide an empty list value: []
+  ignore: []
+  prop_list:
+  - variable: instance_of
+    value_type: item
+    pid: P1
+    qual: []
+    ref: []
+  - variable: artist
+    value_type: item
+    pid: P2
+    qual: 
+      - variable: series_ordinal
+        value_type: string
+        pid: P3
+    ref: 
+    - variable: reference_url
+      value_type: uri
+      pid: P4
+    - variable: retrieved
+      value_type: date
+      pid: P8
+  - variable: height
+    value_type: quantity
+    pid: P5
+    qual: []
+    ref: []
+  - variable: gps
+    value_type: globecoordinate
+    pid: P6
+    qual: []
+    ref: []
+  - variable: title_en
+    value_type: monolingualtext
+    language: en
+    pid: P7
+    qual: []
+    ref: []
 ```
 
-that is, "the universe is an instance of a cat".  Before you run the script, you need to go to the Wikibase test instance and check whether someone else who has run this script has already asserted that the universe is a cat.  If so, you should manually delete the statement by clicking on the `edit` link, then selecting `remove`.  Alternatively, you can change the script to assert something different about the universe.  Whatever the case, you should make sure that the statement you plan to create does not already exist, then use a text editor to edit lines 129-131 so that the subject, property, and object (`sub`, `prop`, and `obj`) have the appropriate values for the statement you want to make.
+This example includes examples of all of the datatypes supported by VanderBot. For more details about formatting these files, see [this page](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert-config.md). For now, we can ignore the first three lines of the script. The mapping configuration file can support mapping multiple CSV files, but in this simplified example we are only using one (`statues.csv`). The important part here is the `prop_list` section, which describes a list of statement properties, each indicated with a dash. The `variable` key provides the root name for columns associated with that property. The `value_type` indicates which of the seven supported value types is required for that property. Depending on the type, there could be one to several columns necessary to fully describe the value. The `pid` is the P identifier that is appropriate for that particular Wikibase, which may differ from the P ID in Wikidata. No P ID can be represented more than once among the statement properties. 
+
+Each property may have zero to many qualifier and reference properties associated with it. Although it is possible to have multiple reference per statement (corresponding to a property here), for simplicity this mapping system only supports one reference per property. If a given statement property has no qualifier properties or no reference properties, an empty array (`[]`) must be given as the value. 
+
+**Generating column headers and the csv-metadata.json file**
+
+Once the `config.yaml` file has been created, it can be used to generate two files needed to do the upload to the API. One file is the more complex `csv-metadata.json` file used to describe the table according the the W3C [Generating RDF from Tabular Data on the Web](https://www.w3.org/TR/csv2rdf/) Recommendation. This file is require by VanderBot. The other file is the CSV that contains the data. Both the `csv-metadata.json` file and column headers for the CSV can be generated from the `config.yaml` file using the script [convert_config_to_metadata_schema.py](convert_config_to_metadata_schema.py) described [here](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert-config.md). 
+
+Running that script with the example file above generates the `csv-metadata.json` file and the file `hstatues.csv`. The latter file name differs from the file name given for the `output_file_name` in the `config.yaml` file by having an "h" (for headers) prepended to the name. This is to avoid overwriting any existing data files with the same name. If you are starting a new file, just remove the "h" from the name.
+
+![leftmost column headers](images/headers1.png)
+
+When I open the file with a reliable CSV editor (like [Libre Office](https://www.libreoffice.org/) which for technical reasons is the only one I recommend to use), I see that the left side of the spreadsheet has columns for labels and descriptions in the languages I specified. In addition to the `instance_of` and `artist` columns that I specified, there are two columns used to store the statement UUID identifiers that will be generated when the data are uploaded to the API. The `artist_series_ordinal` column holds the value for the series ordinal qualifer that I associated with the `artist` property.
+
+![reference column headers](images/headers2.png)
+
+The column headers associated with the artist reference that I described in the mapping configuration are more complicated because the API generates an identifier specifically for the reference (`artist_ref1_hash`), and because the datatype (date) is a complex value type that requires two values (`artist_ref1_retrieved_val` and `artist_ref1_retrieved_prec`) to describe the time and precision of the date. A node ID (`artist_ref1_retrieved_nodeId`) for the complex value will be filled in by the script. 
+
+![rightmost column headers](images/headers3.png)
+
+Values for the `height` and `gps` properties are similarly complex, requiring two values to describe the magnitude and units for height and three values for gps (to describe the latitude, longitude, and precision). 
+
+**Entering the data**
+
+The raw data can now be entered in the CSV
+
+![left raw data table](images/raw_data1.png)
 
 
 
+![middle raw data table](images/raw_data2.png)
 
-
-
-
+![right raw data table](images/raw_data3.png)
 
 ----
 Revised 2023-02-07
