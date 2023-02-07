@@ -200,7 +200,7 @@ If we re-open the CSV, we can see that the VanderBot script has filled in many I
 
 ![middle written data table](images/written_data2.png)
 
-
+Notice that VanderBot has converted the simple ISO 3601 dates to the more complex values required by the API and added an appropriate precision for the date in the `artist_ref1_retrieved_prec` column.
 
 ![right written data table](images/written_data3.png)
 
