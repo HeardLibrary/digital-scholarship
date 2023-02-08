@@ -89,9 +89,9 @@ The easiest way to create the mappings between the property IDs used to describe
 Here is an example of a YAML mapping file, which can also be downloaded from [link here]():
 
 ```
-data_path: ''
+data_path: ""
 item_pattern_file: graph_pattern.txt
-item_source_csv: ''
+item_source_csv: ""
 outfiles:
 - output_file_name: statues.csv
   label_description_language_list:
@@ -180,8 +180,6 @@ Quantity value types must include a unit value given as a Q ID. That Q ID must b
 
 Once the data have been entered into the spreadsheet, make sure that it, the `csv-metadata.json` file, and the [VanderBot python script](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/vanderbot.py) are in the same directory. Open a terminal window and navigate to the directory where you put the files.
 
-VanderBot uses the SPARQL
-
 If you used the default file names and if your credentials are in your home directory, you can just run the script in a termal window (changed to the directory in which the files are located) using the command
 
 ```
@@ -214,7 +212,7 @@ VanderBot has several functions that use the Wikibase SPARQL endpoint to perform
 
 If you do want to use those features, you need to provide the URL of your instance's endpoint. You can find the base URL by clicking on the `Query Service` link on the left panel. That will take you to a new URL of a form like this: `https://wbwh-test.wikibase.cloud/query/`. To form the SPARQL endpoint URL, append `sparql` to this URL. In this example the endpoint URL becomes `https://wbwh-test.wikibase.cloud/query/sparql`. 
 
-When using the checking features, add the `-E` option to the command for running VanderBot. In the following example, checking for duplicate label/description combinations is enabled by default (no `-D` option necessary):
+When using the features that need to check the Query Service, add the `-E` option to the command for running VanderBot. In the following example, checking for duplicate label/description combinations is enabled by default (no `-D` option necessary):
 
 ```
 python vanderbot.py -A 0 -E https://wbwh-test.wikibase.cloud/query/sparql
@@ -222,10 +220,96 @@ python vanderbot.py -A 0 -E https://wbwh-test.wikibase.cloud/query/sparql
 
 Note: checking for duplicates should NOT be disabled when working with Wikidata in order to avoid creating duplicate items.
 
-Another function that uses the Query Service is allowing automatic updating to labels and descriptions. By default, labels and descriptions are only written for new items. Labels and descriptions of existing items are left unchanged. If the `-U` option is set to `allow`, whatever labels and descriptions are present in the row will be written to the API. When updates are allowed, the script downloads all of the existing labels and descriptions so that it can determine whether they have changed or not.
+Another function that uses the Query Service is allowing automatic updating to labels and descriptions. By default, labels and descriptions are only written for new items. Labels and descriptions of existing items are left unchanged. If the `-U` option is set to `allow`, any changed labels or descriptions will be written to the API. In this case, the script downloads all of the existing labels and descriptions so that it can determine whether they have changed or not.
 
 The third circumstance where the Query Service is used is in cases where aliases are included. This requires a hack to the `csv-metadata.json` file that isn't supported by this work flow, so most users can disregard this.
 
+# Downloading existing data
+
+The `config.yaml` mapping file can also be used to download existing data from a Wikibase. This can be done with the [acquire_wikidata_metadata.py script](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata_metadata.py), which is described in detail [here](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata.md).  The strategy that we will follow here is to create a second `config.yaml` file whose P IDs are the ones from Wikidata that are analogous to the ones we created in our Wikibase and have used in the first `config.yaml` file. To keep the two files straight, I'm calling the second one `config_wikidata.yaml`.
+
+Here's what that mapping file would look like:
+
+```
+data_path: ""
+item_pattern_file: ""
+item_source_csv: qids.csv
+outfiles:
+- output_file_name: statues_downloaded.csv
+  label_description_language_list:
+  - en
+  - fr
+  manage_descriptions: true
+  # Note: if no columns to ignore, you must omit the "ignore" key or provide an empty list value: []
+  ignore: []
+  prop_list:
+  - variable: instance_of
+    value_type: item
+    pid: P31
+    qual: []
+    ref: []
+  - variable: artist
+    value_type: item
+    pid: P170 # creator
+    qual: 
+      - variable: series_ordinal
+        value_type: string
+        pid: P1545
+    ref: 
+    - variable: reference_url
+      value_type: uri
+      pid: P854
+    - variable: retrieved
+      value_type: date
+      pid: P813
+  - variable: height
+    value_type: quantity
+    pid: P2048
+    qual: []
+    ref: []
+  - variable: gps
+    value_type: globecoordinate
+    pid: P625 # coordinate location
+    qual: []
+    ref: []
+  - variable: title_en
+    value_type: monolingualtext
+    language: en
+    pid: P1476
+    qual: []
+    ref: []
+```
+
+In addition to having P IDs from Wikidata, the `item_pattern_file` value is set to an empty string and the `item_source_csv` value designates a CSV spreadsheet. This spreadsheet must contain a column whose header is `qid`. Any other columns will be ignored. In this case, the `qids.csv` file contains the Q IDs of some famous statues:
+
+![Q IDs to download](images/qids_csv.png)
+
+I also changed the `output_file_name` to `statues_downloaded.csv` to avoid damaging the existing `statues.csv` file. The script will create it since it doesn't already exist.
+
+To run the `acquire_wikidata_metadata.py` script using the second configuration file, use the command:
+
+```
+python acquire_wikidata_metadata.py -C config_wikidata.yaml
+```
+
+using the `-C` option to specify a configuration file name different from the default `config.yaml`. Here's what I get:
+
+![downloaded data about statues](images/statues_downloaded.png)
+
+You can see that there were multiple results for several of the statues. That's because the SPARQL query results include every combination of values. Venus de Milo has two "instance of" values and the Lion Capital of Asoka has three. Since I'm going to assign my own "instance of" (P1) value in my Wikibase, I don't care about the multiple values so I'll just delete the multiples.
+
+![data about statues with one type](images/statues_downloaded1.png)
+
+Scrolling to the reference URL, I see that two were provided for the Lion Capital of Asoka. I only want one, so I'll pick the one I want to use and delete the other line.
+
+Because the column headers match my original table exactly, I'll copy and paste the downloaded cells into my original table. 
+
+![downloaded statues data pasted in](images/statues_pasted.png)
+
+To upload into my Wikibase, I need to delete all of the Wikidata-assigned identifiers: the item qid, the claim UUIDs, the reference hashes, and the node IDs for complex values. I will paste `Q3` in all of the `instance_of` cells. I don't have an item for Michelangelo in my Wikibase, so I need to create that and substitute it for `Q5592` in the `artist` column. The blank node identifiers for the anonymous artists are OK, so I will leave them (see [this](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/README.md#somevalue-claims-blank-nodes) for more details about modeling anonymous artists). Here's what the spreadsheet looks like when it's ready to upload:
+
+![additional statues data ready to upload](images/statues_ready.png)
+
 
 ----
-Revised 2023-02-07
+Revised 2023-02-08
