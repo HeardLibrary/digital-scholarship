@@ -306,10 +306,19 @@ Because the column headers match my original table exactly, I'll copy and paste 
 
 ![downloaded statues data pasted in](images/statues_pasted.png)
 
-To upload into my Wikibase, I need to delete all of the Wikidata-assigned identifiers: the item qid, the claim UUIDs, the reference hashes, and the node IDs for complex values. I will paste `Q3` in all of the `instance_of` cells. I don't have an item for Michelangelo in my Wikibase, so I need to create that and substitute it for `Q5592` in the `artist` column. The blank node identifiers for the anonymous artists are OK, so I will leave them (see [this](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/README.md#somevalue-claims-blank-nodes) for more details about modeling anonymous artists). Here's what the spreadsheet looks like when it's ready to upload:
+To upload into my Wikibase, I need to:
+- delete all of the Wikidata-assigned identifiers: the item qid, the claim UUIDs, the reference hashes, and the node IDs for complex values. 
+- I will paste `Q3` in all of the `instance_of` cells. 
+- I don't have an item for Michelangelo in my Wikibase, so I need to create that and substitute it for `Q5592` in the `artist` column. The blank node identifiers for the anonymous artists are OK, so I will leave them (see [this](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/README.md#somevalue-claims-blank-nodes) for more details about modeling anonymous artists). 
+- The `height_unit` values from Wikidata are the Q ID for centimeters, so I need to create an item for that and change the Q IDs to the centimeter item in my Wikibase.
+
+Here's what the spreadsheet looks like when it's ready to upload:
 
 ![additional statues data ready to upload](images/statues_ready.png)
 
+I can now use VanderBot to do the upload as I did previously. Here's the result for Venus de Milo:
+
+![Venus de Milo item page](images/venus.png)
 
 ----
 Revised 2023-02-08
