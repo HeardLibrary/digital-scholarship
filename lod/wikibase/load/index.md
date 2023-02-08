@@ -316,9 +316,9 @@ Here's what the spreadsheet looks like when it's ready to upload:
 
 ![additional statues data ready to upload](images/statues_ready.png)
 
-I can now use VanderBot to do the upload as I did previously. Here's the result for Venus de Milo:
+I can now use VanderBot to do the upload as I did previously. Here's the result for Lion Capital of Asoka:
 
-![Venus de Milo item page](images/venus.png)
+![Lion Capital of Asoka item page](images/lion.png)
 
 ----
 Revised 2023-02-08
