@@ -86,7 +86,7 @@ The easiest way to create the mappings between the property IDs used to describe
 
 **Describing the property/column header mappings**
 
-Here is an example of a YAML mapping file, which can also be downloaded from [link here]():
+Here is an example of a YAML mapping file, which can also be downloaded from [here](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/config.yaml):
 
 ```
 data_path: ""
@@ -146,7 +146,7 @@ Each property may have zero to many qualifier and reference properties associate
 
 Once the `config.yaml` file has been created, it can be used to generate two files needed to do the upload to the API. One file is the more complex `csv-metadata.json` file used to describe the table according the the W3C [Generating RDF from Tabular Data on the Web](https://www.w3.org/TR/csv2rdf/) Recommendation. This file is require by VanderBot. The other file is the CSV that contains the data. Both the `csv-metadata.json` file and column headers for the CSV can be generated from the `config.yaml` file using the script [convert_config_to_metadata_schema.py](convert_config_to_metadata_schema.py) described [here](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert-config.md). 
 
-Running that script with the example file above generates the `csv-metadata.json` file and the file `hstatues.csv`. The latter file name differs from the file name given for the `output_file_name` in the `config.yaml` file by having an "h" (for headers) prepended to the name. This is to avoid overwriting any existing data files with the same name. If you are starting a new file, just remove the "h" from the name.
+Running that script with the example file above generates the [csv-metadata.json](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/csv-metadata.json) file and the file [hstatues.csv](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/hstatues.csv). The latter file name differs from the file name given for the `output_file_name` in the `config.yaml` file by having an "h" (for headers) prepended to the name. This is to avoid overwriting any existing data files with the same name. If you are starting a new file, just remove the "h" from the name.
 
 ![leftmost column headers](images/headers1.png)
 
@@ -174,7 +174,7 @@ Dates should be given as ISO 3601 dates in either YYYY-MM-DD, YYYY-MM, or YYYY f
 
 ![right raw data table](images/raw_data3.png)
 
-Quantity value types must include a unit value given as a Q ID. That Q ID must be from the Wikibase being written to and not the Wikidata Q ID for the unit. The language of monolingual text values is not specified in the data CSV because it's given in the mapping file.
+Quantity value types must include a unit value given as a Q ID. That Q ID must be from the Wikibase being written to and not the Wikidata Q ID for the unit. The language of monolingual text values is not specified in the data CSV because it's given in the mapping file. Here's a [link to the CSV with the raw data](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/statues_raw.csv).
 
 # Uploading the data
 
@@ -226,7 +226,7 @@ The third circumstance where the Query Service is used is in cases where aliases
 
 # Downloading existing data
 
-The `config.yaml` mapping file can also be used to download existing data from a Wikibase. This can be done with the [acquire_wikidata_metadata.py script](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata_metadata.py), which is described in detail [here](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata.md).  The strategy that we will follow here is to create a second `config.yaml` file whose P IDs are the ones from Wikidata that are analogous to the ones we created in our Wikibase and have used in the first `config.yaml` file. To keep the two files straight, I'm calling the second one `config_wikidata.yaml`.
+The `config.yaml` mapping file can also be used to download existing data from a Wikibase. This can be done with the [acquire_wikidata_metadata.py script](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata_metadata.py), which is described in detail [here](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata.md).  The strategy that we will follow here is to create a second `config.yaml` file whose P IDs are the ones from Wikidata that are analogous to the ones we created in our Wikibase and have used in the first `config.yaml` file. To keep the two files straight, I'm calling the second one [config_wikidata.yaml](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/config_wikidata.yaml).
 
 Here's what that mapping file would look like:
 
@@ -280,7 +280,7 @@ outfiles:
     ref: []
 ```
 
-In addition to having P IDs from Wikidata, the `item_pattern_file` value is set to an empty string and the `item_source_csv` value designates a CSV spreadsheet. This spreadsheet must contain a column whose header is `qid`. Any other columns will be ignored. In this case, the `qids.csv` file contains the Q IDs of some famous statues:
+In addition to having P IDs from Wikidata, the `item_pattern_file` value is set to an empty string and the `item_source_csv` value designates a CSV spreadsheet. This spreadsheet must contain a column whose header is `qid`. Any other columns will be ignored. In this case, the [qids.csv](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/qids.csv) file contains the Q IDs of some famous statues:
 
 ![Q IDs to download](images/qids_csv.png)
 
@@ -300,7 +300,7 @@ You can see that there were multiple results for several of the statues. That's 
 
 ![data about statues with one type](images/statues_downloaded1.png)
 
-Scrolling to the reference URL, I see that two were provided for the Lion Capital of Asoka. I only want one, so I'll pick the one I want to use and delete the other line.
+Scrolling to the reference URL, I see that two were provided for the Lion Capital of Asoka. I only want one, so I'll pick the one I want to use and delete the other line. Here's a [link to what the CSV looks like with the extraneous rows removed](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/statues_downloaded.csv).
 
 Because the column headers match my original table exactly, I'll copy and paste the downloaded cells into my original table. 
 
@@ -312,13 +312,17 @@ To upload into my Wikibase, I need to:
 - I don't have an item for Michelangelo in my Wikibase, so I need to create that and substitute it for `Q5592` in the `artist` column. The blank node identifiers for the anonymous artists are OK, so I will leave them (see [this](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/README.md#somevalue-claims-blank-nodes) for more details about modeling anonymous artists). 
 - The `height_unit` values from Wikidata are the Q ID for centimeters, so I need to create an item for that and change the Q IDs to the centimeter item in my Wikibase.
 
-Here's what the spreadsheet looks like when it's ready to upload:
+Here's what the [spreadsheet looks like when it's ready to upload](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/statues_added_ready.csv):
 
 ![additional statues data ready to upload](images/statues_ready.png)
 
 I can now use VanderBot to do the upload as I did previously. Here's the result for Lion Capital of Asoka:
 
 ![Lion Capital of Asoka item page](images/lion.png)
+
+Here's a [link to the CSV after the upload](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/statues.csv) where all of the identifiers assigned by the API have been added to the table.
+
+
 
 ----
 Revised 2023-02-08
