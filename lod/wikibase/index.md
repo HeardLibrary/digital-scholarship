@@ -1,31 +1,59 @@
 ---
 permalink: /lod/wikibase/
-title: Wikibase
-breadcrumb: Wikibase
+title: generic wikibase tutorial
+breadcrumb: wikibase
 ---
-**Note:** This tutorial assumes that you have a basic understanding of basic Linked Data, RDF terminology, and SPARQL.  If necessary, review the lessons on [graphs, URIs, and triples](../graphs/), [serilizations and triplestores](../serialization/), and [SPARQL](../sparql/) before proceeding.  If you have not installed Wikibase on your computer and want to, see the lessons on [installing and using Docker](../..//host/docker/) and [Installing Wikibase on your local computer](../install/#using-docker-compose-to-create-an-instance-of-wikibase-on-your-local-computer)
+# About this tutorial
+
+This totorial is intended to be an introduction to any wikibase instance. That means that it not only applies to the most well-known instance, [Wikidata](https://www.wikidata.org/), but also to [Structured Data on Commons](https://commons.wikimedia.org/wiki/Commons:Structured_data), or any generic wikibase, such as those hosted on [wikibase.cloud](https://www.wikibase.cloud/). (When this was originally written in January of 2020, installing Wikibase was only feasible for most people using a Docker image. This was beyond the technical capabilities of most users, so now that wikibase.cloud is available, I recommend that since it only takes a few button clicks to set up a wikibase. For historical reasons, I will maintain a link here to lessons on [installing and using Docker](../..//host/docker/) and [Installing Wikibase on your local computer](../install/#using-docker-compose-to-create-an-instance-of-wikibase-on-your-local-computer).)
+
+This tutorial demonstrates how to create a new item and property using the graphical interface, but is focused on the underlying wikibase model. So it shows graph diagrams for each of the parts of the wikibase data model that are involved. Understanding this model will help you to understand what's going on if you do mass uploads and deletions, and will also give you the understanding necessary to carry out SPARQL queries on data in the wikibase.
+
+This tutorial assumes that you have a basic understanding of basic Linked Data, RDF terminology, and SPARQL.  If necessary, review the lessons on [graphs, IRIs, and triples](../graphs/), [serilizations and triplestores](../serialization/), and [SPARQL](../sparql/) before proceeding.
+
+In addition to this general introduction, there are several related tutorials that describe other aspects of interacting with any generic wikibase. They are:
+
+- [Loading large amounts of data into a wikibase using the VanderBot Python script](load/)
+- [Deleting many statements or references from a wikibase using the VanderDeleteBot Python script](delete/)
+- [Mass creation of properties in a non-Wikimedia wikibase using the VanderPropertyBot Python script](properties/)
+- [Querying a generic wikibase using SPARQL](sparql/)
 
 # Wikibase
 
-You may already be familiar with [Wikidata](https://www.wikidata.org/), the database that supports the structured data used in Wikipedia.  Wikibase is the underlying platform on which Wikidata is built.  Anyone can [install Wikibase](../install/#using-docker-compose-to-create-an-instance-of-wikibase-on-your-local-computer) on their own computer or server and essentially build their own personal version of Wikidata.  
-
-For additional background reading, I recommend [Bob DuCharme's blog post](http://www.snee.com/bobdc.blog/2018/06/running-and-querying-my-own-wi.html) related to what we're doing in this lesson.
+You may already be familiar with [Wikidata](https://www.wikidata.org/), the database that supports the structured data used in Wikipedia.  Wikibase is the underlying platform on which Wikidata is built.  If you create a wikibase on a platform like wikibase.cloud, you can use it to essentially build your own personal version of Wikidata.  
 
 # The Wikidata data model
 
-The data model on which Wikidata is based is baked into the Wikibase platform.  So anyone who uses Wikibase to host their own data needs to have a general idea about the Wikidata data model, since that is the data model they will be using.  The [technical details](https://www.mediawiki.org/wiki/Wikibase/DataModel) of the Wikidata model are a bit complex, but there is a [data model primer](https://www.mediawiki.org/wiki/Wikibase/DataModel/Primer) that is more accessible.
+The wikibase data model is a model that applies to all wikibase instances, including Wikidata.  The [technical details](https://www.mediawiki.org/wiki/Wikibase/DataModel) of the wikidata model are a bit complex, but there is a [data model primer](https://www.mediawiki.org/wiki/Wikibase/DataModel/Primer) that is more accessible.
+
+![diagram of the wikibase RDF model](rdf_model_diagram.png)
+
+Diagram of the wikibase RDF data model (from <https://www.mediawiki.org/wiki/Wikibase/Indexing/RDF_Dump_Format>)
 
 ## Namespaces
 
-In the material that follows, these namespace abbreviations will be used (defined in the format appropriate for SPARQL prologues):
+The diagram above uses the standard namespace abbreviations that are applied to every wikibase instance. The list below shows IRIs that correspond to the abbreviations in the diagram above. However, the specific IRI that they map to varies among wikibase installations. The domain name `http://wikibase.svc` shown in the IRIs below is used if you install wikibase from a Docker image.
 
-```sparql
+```
 PREFIX wd: <http://wikibase.svc/entity/>
 PREFIX wds: <http://wikibase.svc/entity/statement/>
 PREFIX wdt: <http://wikibase.svc/prop/direct/>
+PREFIX wdv: <http://wikibase.svc/value/>
+PREFIX wdref: <http://wikibase.svc/reference/>
 PREFIX p: <http://wikibase.svc/prop/>
+PREFIX pq: <http://wikibase.svc/prop/qualifier/>
 PREFIX pr: <http://wikibase.svc/prop/reference/>
 PREFIX ps: <http://wikibase.svc/prop/statement/>
+PREFIX pqv: <http://wikibase.svc/prop/qualifier/value/>
+PREFIX prv: <http://wikibase.svc/prop/reference/value/>
+PREFIX psv: <http://wikibase.svc/prop/statement/value/>
+```
+
+However, in any particular wikibase installation, the domain name will change. So for example, in Wikidata `wd:` abbreviates `http://www.wikidata.org/entity/`. However, in the custom wikibase set up at <https://wbwh-test.wikibase.cloud/>, `wd:` abbreviates `https://wbwh-test.wikibase.cloud/entity/`. 
+
+The following namespaces are used in the wikibase data model, but do not vary among installations:
+
+```
 PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX schema: <http://schema.org/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -34,13 +62,15 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 ```
 
+When discussing linked data triples from a wikibase, we can usually get away with ignoring the exact definition of the namespace abbreviations. And when using the [Wikidata Query Service](https://query.wikidata.org/), we do not have to provide the namespace abbreviations in a prolog of a SPARQL query. However, if we use the Query Service of a custom wikibase, we must provide these namespace abbreviations for any prefixes that we use in our queries (with the correct domain name for the wikibase substituted for `http://wikibase.svc`). 
+
 To run example SPARQL queries from this lesson, you need to first paste in these lines as the prologue of the query.
 
-**Important note: these abbreviations are the standard ones used by Wikidata's query service, <https://query.wikidata.org/>.  However, the domain name for the Wikidata namespace URIs (`http://www.wikidata.org/`) is NOT the same as the default namespace for generic Wikibase installations (`http://wikibase.svc/`).  So if you experiment with running analogous queries on Wikidata, you will need to change the namespace URIs in the prologue of your query to the Wikidata domain name.**  See the [Wikidata Query Service User Manual](https://www.mediawiki.org/wiki/Wikidata_Query_Service/User_Manual) for more details.
+See the [Wikidata Query Service User Manual](https://www.mediawiki.org/wiki/Wikidata_Query_Service/User_Manual) for even more details.
 
 ## Creating a Wikibase "triple"
 
-To create items and properties, launch Wikibase and enter `localhost:8181/` in a browser.  From the main page, select the `Special pages` link from the menu on the left.  
+To create items and properties manually, launch your wikibase graphical interface in a browser.  Depending on your installation, you may see direct links for creating items and properties in the menu on the left. Otherwise, select the `Special pages` link from the menu on the left.  
 
 <img src="../images/main-page.png" style="border:1px solid black">
 
@@ -52,9 +82,9 @@ Enter a label and a description of some property that might link two items, and 
 
 <img src="../images/nbc-page.png" style="border:1px solid black">
 
-In this example, the statement that we've created is, in English: "NBC broadcasts show NBC Nightly News".  In Wikibase URIs, the statement is the single triple:
+In this example, the statement that we've created is, in English: "NBC broadcasts show NBC Nightly News".  Using abbreviated wikibase IRIs, the statement is the single triple:
 
-```turtle
+```
 wd:Q2 wdt:P2 wd:Q3.
 ```
 
@@ -68,7 +98,7 @@ We can diagram this as we typically do for RDF triples:
 
 <img src="../images/wikidata-simple-triple.png" style="border:1px solid black">
 
-The predicate of this triple is a Wikidata *direct property*, that is, it makes a direct connection between a subject and an object.
+The predicate of this triple is a Wikidata *direct property* (technically a "truthy" property). That is, it makes a direct connection between a subject and an object.
 
 ## Statement instances
 
@@ -78,17 +108,19 @@ Another deficiency is that there is no direct way in RDF to make statements abou
 
 Wikidata gets around these problems by the design of its data model.  Wikidata avoids questions of deep meaning by having only two kinds of entities in its model: *items* and *properties*.  The definition of "item" is simply that it is something of interest - in particular, something that we might potentially want to write a Wikipedia article about.  Items form the subjects and objects in Wikidata (and therefore Wikibase) triples.  In contrast to most of the RDF world, Wikidata does not make `rdf:type` assertions about items. (There is a Wikidata property (P31) for "instance of", but the object of a P31 triple is another item, not an `rdfs:Class`.)  
 
-The problem of making statements about statements is handled by creating a "statement" instance for every assertion that is made using a direct property.  Here is a diagram illustrating the situation with the triple we saw above:
+The problem of making statements about statements is handled by creating a "statement" instance for every assertion that is made using a direct property.  (In the wikibase model, statements are also referred to as "claims" and we can consider these two terms to mean the same thing.) Here is a diagram illustrating the situation with the triple we saw above:
 
 <img src="../images/wikidata-statement-instance.png" style="border:1px solid black">
 
 For every direct property attached to a subject item, there is also a simple *property* that connects the subject to a statement instance.  That statement instance is then connected to the object of the direct property by a *property statement*.  The direct property, simple property, and property statement for a particular property all share the same local name (`P2` in this example), but have different namespaces to differentiate them.  
 
-In a nutshell, the [Wikibase model requires](https://www.mediawiki.org/wiki/Wikibase/DataModel/Primer#Statements) "that 'Wikibase will not be about the truth, but about statements and their references.' This means that in Wikibase we do not actually model the items themselves, but statements about them."  As we can see from the structure diagrammed above, Wikibase is more focused in describing and documenting statements than it is describing the somewhat vague "items".  
+In a nutshell, the [Wikibase model requires](https://www.mediawiki.org/wiki/Wikibase/DataModel/Primer#Statements) "that 'Wikibase will not be about the truth, but about statements and their references.' This means that in Wikibase we do not actually model the items themselves, but statements about them."  As we can see from the structure diagrammed above, Wikibase is more focused in describing and documenting statements than it is describing the somewhat vague "items". 
+
+You can also see that the statement node has been assigned a unique IRI identifier, shown in its bubble in the diagram. That identifier was created by appending a UUID ([Universally unique identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)) to the `wds:` namespace. Every statement has an associated UUID, which can be used to acquire information about it (using SPARQL) or to delete it using the API associated with the wikibase instance.
 
 ## References
 
-Because the statement instance is a URI-identified resource, we can now say things about it, such as when it was last modified or what references support it.  Supporting references are a key component built in to the Wikidata model.  Under each statement displayed in the Wikibase GUI, there is an "add reference" link that allows a contributor to add reference information to the database.  The generic Wikibase implementation does not come with any built-in reference properties that can be used to link to reference sources, so they must be created as with any other property (i.e. go to Special Pages and Create a new property).  Here is an example of a refence property that we created in our Wikibase instance to mimic the "reference URL" property that already exists in Wikidata:
+Because the statement instance is a IRI-identified resource, we can now say things about it, such as when it was last modified or what references support it.  Supporting references are a key component built in to the Wikidata model.  Under each statement displayed in the Wikibase GUI, there is an "add reference" link that allows a contributor to add reference information to the database.  The generic Wikibase implementation does not come with any built-in reference properties that can be used to link to reference sources, so they must be created as with any other property (i.e. go to Special Pages and Create a new property).  Here is an example of a refence property that we created in our Wikibase instance to mimic the "reference URL" property that already exists in Wikidata:
 
 <img src="../images/reference-property.png" style="border:1px solid black">
 
@@ -102,7 +134,9 @@ After we have added the reference, here's a diagram of what the RDF looks like:
 
 <img src="../images/wikidata-statement-reference.png" style="border:1px solid black">
 
-We can see that Wikibase has now created a reference instance that is linked to the statement instance by `prov:wasDerivedFrom`.  Since the reference instance is a URI identified resource, we can say additional things about it.  The most important thing we want to describe is the source of the reference itself.  That connection is made by the reference property that we created (`P3`, "reference URL").  The connection is made to the URL that we provided as the value of the reference (`https://www.nbcnews.com/nightly-news`).
+We can see that Wikibase has now created a reference instance that is linked to the statement instance by `prov:wasDerivedFrom` and that it has been assigned an IRI identifier that's shown in its bubble in the diagram. This IRI was created by generating a hash from the information in the reference and appending the hash string to the `wdref:` namespace. Every unique reference has its own hash, which can be used to refer to it unambiguously. However, each use of a reference does not have a unique identifier -- all references that contain the same information have the same hash identifier regardless of which statement they support. Thus "deleting" a reference linked to a statement doesn't really destroy it; it simply de-links the reference from that particular statement. The reference may still be linked to other statements.
+
+Since the reference instance is a IRI identified resource, we can say additional things about it.  The most important thing we want to describe is the source of the reference itself.  That connection is made by the reference property that we created (`P3`, "reference URL").  The connection is made to the URL that we provided as the value of the reference (`https://www.nbcnews.com/nightly-news`).
 
 ## Qualifiers
 
@@ -118,13 +152,19 @@ Qualifiers statements are added in the graphical interface directly below the va
 
 <img src="../images/wikidata-qualifier-instance.png" style="border:1px solid black">
 
-This diagram shows how the qualifier is represented as Linked Data. In this example, the qualifier value can be expressed as a literal string, so a `pq:` namespace version of the property is used to link to the literal value "2004-01-01T00:00:00Z".  For some qualifier properties, a second link is created to a non-literal qualifier instance. That makes it possible to create additional statements about the qualifier value itself. In this example, the qualifier value is a date, so the qualifier value instance has a `wikibase:timeCalendarModel` link to the calendar used for the date.  
+This diagram shows how the qualifier is represented as Linked Data. In this example, the qualifier value can be expressed as a literal string, so a `pq:` namespace version of the property is used to link to the literal value "2004-01-01T00:00:00Z".  
+
+!!! Todo: fix this to explain value nodes.
+
+For some qualifier properties, a second link is created to a non-literal qualifier instance. That makes it possible to create additional statements about the qualifier value itself. In this example, the qualifier value is a date, so the qualifier value instance has a `wikibase:timeCalendarModel` link to the calendar used for the date.  
 
 If you compared the graph diagram to the GUI, you'll notice that the date entered in the GUI was "2004", but the date expressed in the graph was "2004-01-01T00:00:00Z". If you are wondering how Wikidata distinguishes between the year 2004 and 1 January 2004, it's determined by the value of `wikibase:timePrecision` assigned to the qualifier value instance (see [this page](https://en.wikibooks.org/wiki/SPARQL/WIKIDATA_Precision,_Units_and_Coordinates) for details). This approach allows all time values to be expressed as `xsd:dateTime` datatyped strings.  
 
 Not every qualifier has a link to a non-literal qualifier instance.  For example, "series ordinal" (P1545) has an integer value that is used to indicate the position in a series. The numeric literal value is sufficient to do that without further description of the qualifier instance.
 
-There are many other properties associated with entities, statement instances, qualifiers, and reference instances.  For a complete listing for this example, see [this annotated dump](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/wikibase/wikibase-dump.ttl) of the Wikibase dataset after the items and properties discussed above had been created.  We also are ingoring [statement ranks](https://www.mediawiki.org/wiki/Wikibase/DataModel#Ranks_of_Statements). These details are beyond the scope of this exercise.  However, there is one more bit that we need to know in order to examine what's going on in our Wikibase database.
+There are many other properties associated with entities, statement instances, qualifiers, and reference instances.  For a complete listing for this example, see [this annotated dump](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/wikibase/wikibase-dump.ttl) of the Wikibase dataset after the items and properties discussed above had been created.  We also are ingoring [statement ranks](https://www.mediawiki.org/wiki/Wikibase/DataModel#Ranks_of_Statements). Statement ranks can be important because they determine whether an indirect statement link also has a direct (truthy) link. Statements with deprecated ranks do not generate direct links and therefore won't be part of the solution of queries that only involve truthy (`wdt:`) properties.
+
+There additional details of the model are beyond the scope of this exercise.  However, there is one more bit that we need to know in order to examine what's going on in our Wikibase database.
 
 ## Property labels
 
@@ -162,7 +202,9 @@ and as a diagram:
 
 ## Using the model to query
 
-If you have created these or similar properties and items, you can retrieve information about them using the Blazegraph SPARQL query interface that is built-in to the Wikibase application.  Make sure that Wikibase is running, then enter `http://localhost:8989/bigdata/` in a browser tab.  In the query text box, paste the namespace abbreviations listed at the top of the page.  You really only need to include the ones that you are going to use, but it doesn't hurt anything to paste them all in.  
+If you have created these or similar properties and items, you can retrieve information about them using the Query Service interface that is built-in to the wikibase application. There is usually a link to the Query Service in the left panel of each page.
+
+If you are using a generic wikibase, you will need to paste the namespace abbreviations listed near the top of this page (in the "Namespaces" section) into the query text box as a query prolog.  You really only need to include the ones that you are going to use, but it doesn't hurt anything to paste them all in.  
 
 Here is a query that asks what properties are associated with the "NBC" item we created:
 
@@ -202,6 +244,5 @@ Note that we had to include the `wikibase:reference` link to the generic propert
 
 In this example, the schema for the Access to Biological Collections Data (ABCD) standard has been loaded into a Wikibase instance.  You can view the data from the [main MediaWiki page](https://wiki.bgbm.org/bdidata/index.php/BDI_Data:Main_Page) or use the [Query Service GUI interface](https://wiki.bgbm.org/bdidata/query/).  Note: the Wikidata namespaces have been mapped to different IRIs - see the [useful queries page](https://wiki.bgbm.org/bdidata/index.php/BDI_Data:Useful_Queries) for the specific prefixes. The data can also be accessed programatically through the endpoint <https://wiki.bgbm.org/proxy/wdqs/bigdata/namespace/bdi/sparql>.
 
-[go to the page on building a bot to load data into Wikidata](../../host/wikidata/bot/)
 ----
-Revised 2020-01-15
+Revised 2023-02-09
