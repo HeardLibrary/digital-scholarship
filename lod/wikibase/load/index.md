@@ -1,22 +1,22 @@
 ---
 permalink: /lod/wikibase/load/
-title: Loading data into a Wikibase
+title: Loading data into a wikibase
 breadcrumb: load
 ---
 
-# Loading data into a Wikibase using the VanderBot tool
+# Loading data into a wikibase using the VanderBot tool
 
-[VanderBot](http://vanderbi.lt/vanderbot) is a Python script that can be used to upload CSV data to Wikidata or any other Wikibase instance. There are [several blog posts and tutorials](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/README.md#how-it-works) that explain how to use VanderBot to write data to the Wikidata test instance and to Wikidata itself. The focus of this page is using VanderBot to write to other Wikibase instances, such as those on [wikibase.cloud](https://www.wikibase.cloud/) or [Structured data on Commons](https://commons.wikimedia.org/wiki/Commons:Structured_data). 
+[VanderBot](http://vanderbi.lt/vanderbot) is a Python script that can be used to upload CSV data to Wikidata or any other wikibase instance. There are [several blog posts and tutorials](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/README.md#how-it-works) that explain how to use VanderBot to write data to the Wikidata test instance and to Wikidata itself. The focus of this page is using VanderBot to write to other wikibase instances, such as those on [wikibase.cloud](https://www.wikibase.cloud/) or [Structured data on Commons](https://commons.wikimedia.org/wiki/Commons:Structured_data). 
 
-With the advent of wikibase.cloud, the barrier to entry for setting up your own Wikibase instance has been significantly lowered over setting one up yourself using Docker. With only a few button clicks, you can have a fully functioning Wikibase with a functional Query Service to query its data. However, one of the drawbacks of setting up your own Wikibase is that it starts out empty, meaning that you need to create all of the properties and items yourself. The main purpose of this page is to show you how you can quickly create large numbers of items with VanderBot using data in a spreadsheet.
+With the advent of wikibase.cloud, the barrier to entry for setting up your own wikibase instance has been significantly lowered over setting one up yourself using Docker. With only a few button clicks, you can have a fully functioning wikibase with a functional Query Service to query its data. However, one of the drawbacks of setting up your own wikibase is that it starts out empty, meaning that you need to create all of the properties and items yourself. The main purpose of this page is to show you how you can quickly create large numbers of items with VanderBot using data in a spreadsheet.
 
 # The MediaWiki API
 
-One of the reasons people like the Wikidata/Wikibase ecosystem so much is that it has a really great graphical interface for editing. However, it requires many button clicks to edit, so for mass editing many users graduate to some other tool like QuickStatements or OpenRefine. These tools all write to the underlying database that supports Wikibase via the [MediaWiki API](https://www.mediawiki.org/wiki/Wikibase/API) that exists for all Wikibase instances. It is quite painful to interact directly with the API without some software tool, but if you are interested in those sorts of details, see "The MediaWiki API" section of [this blog post](http://baskauf.blogspot.com/2019/06/putting-data-into-wikidata-using.html). We will avoid some of that pain by using the VanderBot script, which mediates the interactions with the API for you. (Another alternative is to use the Pywikibot Python library.  For more information about that option and the problems associated with it, see [this page](../pywikibot/))
+One of the reasons people like the Wikidata/wikibase ecosystem so much is that it has a really great graphical interface for editing. However, it requires many button clicks to edit, so for mass editing many users graduate to some other tool like QuickStatements or OpenRefine. These tools all write to the underlying database that supports wikibase via the [MediaWiki API](https://www.mediawiki.org/wiki/wikibase/API) that exists for all wikibase instances. It is quite painful to interact directly with the API without some software tool, but if you are interested in those sorts of details, see "The MediaWiki API" section of [this blog post](http://baskauf.blogspot.com/2019/06/putting-data-into-wikidata-using.html). We will avoid some of that pain by using the VanderBot script, which mediates the interactions with the API for you. (Another alternative is to use the Pywikibot Python library.  For more information about that option and the problems associated with it, see [this page](../../../host/wikidata/pywikibot/))
 
 ## Set up a bot password
 
-To write to any Wikibase, you need to have credentials that can be used to give you write permissions. The process of acquiring these credentials is called "creating a bot password" because they are used by people who create autonomous bots to perform automated editing. Even though we aren't performing automated editing, the process of generating those credentials is the same. NOTE: a bot password gives anyone the ability to make edits under your account! So never include the password in code that you publish or push the credentials to a public repository like GitHub. The advantage of using bot password can be revoked if it's compromised without having to shut down your whole account.
+To write to any wikibase, you need to have credentials that can be used to give you write permissions. The process of acquiring these credentials is called "creating a bot password" because they are used by people who create autonomous bots to perform automated editing. Even though we aren't performing automated editing, the process of generating those credentials is the same. NOTE: a bot password gives anyone the ability to make edits under your account! So never include the password in code that you publish or push the credentials to a public repository like GitHub. The advantage of using bot password can be revoked if it's compromised without having to shut down your whole account.
 
 **Downloading the template credentials file**
 
@@ -26,7 +26,7 @@ Using a text editor (like TextEdit on Mac, Notepad on Windows, or your favorite 
 
 **Create a bot password**
 
-The screenshots here show how to create a bot on a Wikibase instance that was hosted on AWS (hence the `18.205.159.211:8181` IP address), but they are the same for any Wikibase.  Start by logging into whatever Wikibase you want to interact with. NOTE: API credentials go across the Wikimedia universe, so if you have an account for Wikipedia, Wikimedia Commons, or the real Wikidata, you can use it to log into any of them to create the credentials to write to any of those platforms (and the Wikidata test instance as well).
+The screenshots here show how to create a bot on a wikibase instance that was hosted on AWS (hence the `18.205.159.211:8181` IP address), but they are the same for any wikibase.  Start by logging into whatever wikibase you want to interact with. NOTE: API credentials go across the Wikimedia universe, so if you have an account for Wikipedia, Wikimedia Commons, or the real Wikidata, you can use it to log into any of them to create the credentials to write to any of those platforms (and the Wikidata test instance as well).
 
 <img src="../../../host/wikidata/images/login-link.png" style="border:1px solid black">
 
@@ -54,15 +54,19 @@ The screenshots here show how to create a bot on a Wikibase instance that was ho
 
 **Save the credentials**
 
-In the credentials file that you left open before, copy and paste your bot's username in place of `User@bot` in the credentials file.  Copy and paste your bot's password in place of the example password in the credentials file.  Make sure that you don't have any trailing spaces after the username and password, or between the equals sign and the text you pasted in.  Save this file as plain text.  
+In the credentials file that you left open before, copy and paste your bot's username in place of `User@bot` in the credentials file.  Copy and paste your bot's password in place of the example password in the credentials file.  Make sure that you don't have any trailing spaces after the username and password, or between the equals sign and the text you pasted in. 
+
+The first line of the file contains the base URL for the wikibase instance that you used to create the bot password. In the example file, the URL is `https://wbwh-test.wikibase.cloud`. If you are also running a wikibase out of wikibase.cloud, your URL will have a subdomain that's different from `wbwh-test`. When you replace this URL in the file, make sure that you DO NOT include a trailing slash or any trailing spaces. 
+
+Save this file as plain text. If you downloaded it into your home directory, it should already be in the right place.
 
 There is no way to recover credentials once you leave the page, so it might be good to save another copy of the file under a different file name in case you accidentlly write over or delete this one. Of course, you can also just delete this bot password and generate a new one if necessary.
 
-# Properties in the Wikibase
+# Properties in the wikibase
 
-If you are already familiar with properties in Wikidata, you may be annoyed to discover that there is not necessarily any relationship between property P IDs in any particular Wikibase and the familiar P IDs in Wikidata. For example, P31 ("instance of") is one of the most important properties in Wikidata. But a particular Wikibase may have a different P ID for "instance of" or the property may not exist at all.
+If you are already familiar with properties in Wikidata, you may be annoyed to discover that there is not necessarily any relationship between property P IDs in any particular wikibase and the familiar P IDs in Wikidata. For example, P31 ("instance of") is one of the most important properties in Wikidata. But a particular wikibase may have a different P ID for "instance of" or the property may not exist at all.
 
-The development of tools to transfer some or all properties from Wikidata to a Wikibase is a topic of active interest as of 2023-02-07. For now, we will manually create the properties we need using the graphical interface.
+The development of tools to transfer some or all properties from Wikidata to a wikibase is a topic of active interest as of 2023-02-07. For now, we will manually create the properties we need using the graphical interface. For information about a tool to create properties in a generic wikibase see [this page](../properties/).
 
 To see the available existing properties, go to `Special pages` then `List of properties` in the `Wikibase` section.
 
@@ -70,7 +74,7 @@ To see the available existing properties, go to `Special pages` then `List of pr
 
 **Adding properties**
 
-If a property that you want to assign to the items that you want to add doesn't exist, you will need to create the property by going to `Special pages`, then `Create a new property` in the Wikibase section. 
+If a property that you want to assign to the items that you want to add doesn't exist, you will need to create the property by going to `Special pages`, then `Create a new property` in the `Wikibase` section. 
 
 <img src="../../../host/wikidata/images/partner-property.png" style="border:1px solid black">
 
@@ -138,15 +142,15 @@ outfiles:
     ref: []
 ```
 
-This example includes examples of all of the datatypes supported by VanderBot. For more details about formatting these files, see [this page](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert-config.md). For now, we can ignore the first three lines of the script. The mapping configuration file can support mapping multiple CSV files, but in this simplified example we are only using one (`statues.csv`). The important part here is the `prop_list` section, which describes a list of statement properties, each indicated with a dash. The `variable` key provides the root name for columns associated with that property. The `value_type` indicates which of the seven supported value types is required for that property. Depending on the type, there could be one to several columns necessary to fully describe the value. The `pid` is the P identifier that is appropriate for that particular Wikibase, which may differ from the P ID in Wikidata. No P ID can be represented more than once among the statement properties. 
+This example includes examples of all of the datatypes supported by VanderBot. For more details about formatting these files, see [this page](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert-config.md). For now, we can ignore the first three lines of the script. The mapping configuration file can support mapping multiple CSV files, but in this simplified example we are only using one (`statues.csv`). The important part here is the `prop_list` section, which describes a list of statement properties, each indicated with a dash. The `variable` key provides the root name for columns associated with that property. The `value_type` indicates which of the seven supported value types is required for that property. (Note that there are slight differences in the spelling and capitalization from the dropdown list in the graphical interface.) Depending on the type, there could be one to several columns necessary to fully describe the value. The `pid` is the P identifier that is appropriate for that particular wikibase, which may differ from the P ID in Wikidata. No P ID may be represented more than once among the statement properties. 
 
-Each property may have zero to many qualifier and reference properties associated with it. Although it is possible to have multiple reference per statement (corresponding to a property here), for simplicity this mapping system only supports one reference per property. If a given statement property has no qualifier properties or no reference properties, an empty array (`[]`) must be given as the value. 
+Each property may have zero to many qualifier and reference properties associated with it. Although it is theoretically possible to have multiple reference per statement (corresponding to a property here), for simplicity this mapping system only supports one reference per property. If a given statement property has no qualifier properties or no reference properties, an empty array (`[]`) must be given as the value. 
 
 **Generating column headers and the csv-metadata.json file**
 
-Once the `config.yaml` file has been created, it can be used to generate two files needed to do the upload to the API. One file is the more complex `csv-metadata.json` file used to describe the table according the the W3C [Generating RDF from Tabular Data on the Web](https://www.w3.org/TR/csv2rdf/) Recommendation. This file is require by VanderBot. The other file is the CSV that contains the data. Both the `csv-metadata.json` file and column headers for the CSV can be generated from the `config.yaml` file using the script [convert_config_to_metadata_schema.py](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert_config_to_metadata_schema.py) described [here](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert-config.md). 
+Once the `config.yaml` file has been created, it can be used to generate two files needed to do the upload to the API. One file is the more complex `csv-metadata.json` file used to describe the table according the the W3C [Generating RDF from Tabular Data on the Web](https://www.w3.org/TR/csv2rdf/) Recommendation. This file is require by VanderBot. The other file is the CSV that contains the data. Both the `csv-metadata.json` file and column headers for the CSV can be generated from the `config.yaml` file using the script [convert_config_to_metadata_schema.py](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert_config_to_metadata_schema.py) described [here](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert-config.md#details-of-script-to-convert-configuration-data-to-metadata-description-and-csv-files). 
 
-Running that script with the example file above generates the [csv-metadata.json](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/csv-metadata.json) file and the file [hstatues.csv](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/hstatues.csv). The latter file name differs from the file name given for the `output_file_name` in the `config.yaml` file by having an "h" (for headers) prepended to the name. This is to avoid overwriting any existing data files with the same name. If you are starting a new file, just remove the "h" from the name.
+Running that script with the example file above generates the [csv-metadata.json](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/csv-metadata.json) file and the file [hstatues.csv](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/hstatues.csv). The latter file name differs from the file name given for the `output_file_name` in the `config.yaml` file by having an "h" (for headers) prepended to the name. This is to avoid overwriting any existing data files with the same name. If you are creating a new CSV that you want to fill in with data, just remove the "h" from the filename.
 
 ![leftmost column headers](images/headers1.png)
 
@@ -174,11 +178,11 @@ Dates should be given as ISO 3601 dates in either YYYY-MM-DD, YYYY-MM, or YYYY f
 
 ![right raw data table](images/raw_data3.png)
 
-Quantity value types must include a unit value given as a Q ID. That Q ID must be from the Wikibase being written to and not the Wikidata Q ID for the unit. The language of monolingual text values is not specified in the data CSV because it's given in the mapping file. Here's a [link to the CSV with the raw data](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/statues_raw.csv).
+Quantity value types must include a unit value given as a Q ID. That Q ID must be from the wikibase being written to and not the Wikidata Q ID for the unit. The language of monolingual text values is not specified in the data CSV because it's given in the mapping file. Here's a [link to the CSV with the raw data](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/statues_raw.csv).
 
 **Some datasets to play with uploading**
 
-There are two directories that have `config.yaml` mapping files and some raw data to populate generated CSVs with: [chemical element data](https://github.com/HeardLibrary/linked-data/tree/master/wikibase/vanderbot/elements) and [data about states in the United States](https://github.com/HeardLibrary/linked-data/tree/master/wikibase/vanderbot/states). Before uploading these data as items in your own Wikibase, you will need to create properties with appropriate value types to match those listed in the mapping files, and change the P IDs in the mapping file to match those properties. 
+There are two directories that have `config.yaml` mapping files and some raw data to populate generated CSVs with: [chemical element data](https://github.com/HeardLibrary/linked-data/tree/master/wikibase/vanderbot/elements) and [data about states in the United States](https://github.com/HeardLibrary/linked-data/tree/master/wikibase/vanderbot/states). Before uploading these data as items in your own wikibase, you will need to create properties with appropriate value types to match those listed in the mapping files, and change the P IDs in the mapping file to match those properties. 
 
 You also will need to create items to use as values for some of the properties that require items as values. Notably, the capital column in the states table requires item values. So first you should use the `config_capital.yaml` file to create corresponding capital items, then paste their Q IDs into the `capital` column of the states table.
 
@@ -194,7 +198,7 @@ python vanderbot.py -D false -A 0
 
 In some installations, it may be necessary to use `python3` instead of `python` in the above statement. 
 
-The `-D` option suppresses checking for duplicate label/description combinations, which requires using the Wikibase SPARQL endpoint. (More on this later.) Providing a zero value for the `-A` option sets the API delay value to zero seconds. When writing to the Wikidata API, writing more than 50 edits per minute without a bot flag will cause you to be blocked for some period of time. When writing to your own Wikibase instance, there is no reason to observe any delay. 
+The `-D` option suppresses checking for duplicate label/description combinations, which requires using the wikibase SPARQL endpoint. (More on this later.) Providing a zero value for the `-A` option sets the API delay value to zero seconds. When writing to the Wikidata API, writing more than 50 edits per minute without a bot flag will cause you to be blocked for some period of time. When writing to your own wikibase instance, there is no reason to observe any delay. 
 
 If you deviated from any of the defaults or put the credentials file somewhere else, use [command line options](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/README.md#command-line-options) as necessary.
 
@@ -214,7 +218,7 @@ Notice that VanderBot has converted the simple ISO 3601 dates to the more comple
 
 ## Using the SPARQL endpoint with VanderBot
 
-VanderBot has several functions that use the Wikibase SPARQL endpoint to perform data checks. The Query Service for a wikibase.cloud instance is much slower than the Wikidata Query Service, so using these functions can significantly slow down writing to the API and you might want to disable them. 
+VanderBot has several functions that use the wikibase SPARQL endpoint to perform data checks. The Query Service for a wikibase.cloud instance is much slower than the Wikidata Query Service, so using these functions can significantly slow down writing to the API and you might want to disable them. 
 
 If you do want to use those features, you need to provide the URL of your instance's endpoint. You can find the base URL by clicking on the `Query Service` link on the left panel. That will take you to a new URL of a form like this: `https://wbwh-test.wikibase.cloud/query/`. To form the SPARQL endpoint URL, append `sparql` to this URL. In this example the endpoint URL becomes `https://wbwh-test.wikibase.cloud/query/sparql`. 
 
@@ -224,15 +228,15 @@ When using the features that need to check the Query Service, add the `-E` optio
 python vanderbot.py -A 0 -E https://wbwh-test.wikibase.cloud/query/sparql
 ```
 
-Note: checking for duplicates should NOT be disabled when working with Wikidata in order to avoid creating duplicate items.
+Note: checking for duplicates should NOT be disabled when working with Wikidata because you must take care to not create duplicate items.
 
-Another function that uses the Query Service is allowing automatic updating to labels and descriptions. By default, labels and descriptions are only written for new items. Labels and descriptions of existing items are left unchanged. If the `-U` option is set to `allow`, any changed labels or descriptions will be written to the API. In this case, the script downloads all of the existing labels and descriptions so that it can determine whether they have changed or not.
+Another function that uses the Query Service is allowing automatic updating to labels and descriptions. By default, labels and descriptions are only written for new items. Labels and descriptions of existing items are left unchanged. If the `-U` option is set to `allow`, any changed labels or descriptions will be written to the API. In that case, the script uses a SPARQL query to download all of the existing labels and descriptions so that it can determine whether they have changed or not. So for non-Wikidata wikibases, the `-E` option must be used to specify the SPARQL endpoint in order for the `-U` option to work.
 
 The third circumstance where the Query Service is used is in cases where aliases are included. This requires a hack to the `csv-metadata.json` file that isn't supported by this work flow, so most users can disregard this.
 
 # Downloading existing data
 
-The `config.yaml` mapping file can also be used to download existing data from a Wikibase. This can be done with the [acquire_wikidata_metadata.py script](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata_metadata.py), which is described in detail [here](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata.md).  The strategy that we will follow here is to create a second `config.yaml` file whose P IDs are the ones from Wikidata that are analogous to the ones we created in our Wikibase and have used in the first `config.yaml` file. To keep the two files straight, I'm calling the second one [config_wikidata.yaml](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/config_wikidata.yaml).
+The `config.yaml` mapping file can also be used to download existing data from a wikibase. This can be done with the [acquire_wikidata_metadata.py script](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata_metadata.py), which is described in detail [here](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata.md).  The strategy that we will follow here is to create a second `config.yaml` file whose P IDs are the ones from Wikidata that are analogous to the ones we created in our wikibase and have used in the first `config.yaml` file. To keep the two files straight, I'm calling the second one [config_wikidata.yaml](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/config_wikidata.yaml).
 
 Here's what that mapping file would look like:
 
@@ -286,7 +290,7 @@ outfiles:
     ref: []
 ```
 
-In addition to having P IDs from Wikidata, the `item_pattern_file` value is set to an empty string and the `item_source_csv` value designates a CSV spreadsheet. This spreadsheet must contain a column whose header is `qid`. Any other columns will be ignored. In this case, the [qids.csv](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/qids.csv) file contains the Q IDs of some famous statues:
+If you look carefully, you will see that this file is slightly different from the original `config.yaml` file. In addition to having P IDs that come from Wikidata, the `item_pattern_file` value is set to an empty string and the `item_source_csv` value designates a CSV spreadsheet that indicates the items for which metadata is to be downloaded. This spreadsheet must contain a column whose header is `qid`. Any other columns will be ignored. In this case, the [qids.csv](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/qids.csv) file contains the Q IDs of some famous statues:
 
 ![Q IDs to download](images/qids_csv.png)
 
@@ -299,7 +303,7 @@ Another alternative to explicitly providing the Q IDs in a spreadsheet is to spe
 
 The first triple pattern requires that the item be an instance of sculpture. The second triple pattern requires that the item be part of the Vanderbilt Fine Arts Gallery collection. If you use this method, the pattern must be saved in a plain text file and the file name provided as the value of `item_pattern_file`. For details see [this page](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata.md).
 
-I also changed the `output_file_name` to `statues_downloaded.csv` to avoid damaging the existing `statues.csv` file. The script will create it since it doesn't already exist.
+In the `config_wikidata.yaml` file, I also changed the `output_file_name` to `statues_downloaded.csv` to avoid damaging the existing `statues.csv` file that contains my original data on the Statue of Liberty. The script will create `statues_downloaded.csv` since it doesn't already exist.
 
 To run the `acquire_wikidata_metadata.py` script using the second configuration file, use the command:
 
@@ -311,7 +315,7 @@ using the `-C` option to specify a configuration file name different from the de
 
 ![downloaded data about statues](images/statues_downloaded.png)
 
-You can see that there were multiple results for several of the statues. That's because the SPARQL query results include every combination of values. Venus de Milo has two "instance of" values and the Lion Capital of Asoka has three. Since I'm going to assign my own "instance of" (P1) value in my Wikibase, I don't care about the multiple values so I'll just delete the multiples.
+You can see that there were multiple results for several of the statues. That's because the SPARQL query results include every combination of values. Venus de Milo has two "instance of" values and the Lion Capital of Asoka has three. Since I'm going to assign my own "instance of" (P1) value in my wikibase, I don't care about the multiple values so I'll just delete the multiples.
 
 ![data about statues with one type](images/statues_downloaded1.png)
 
@@ -321,11 +325,11 @@ Because the column headers match my original table exactly, I'll copy and paste 
 
 ![downloaded statues data pasted in](images/statues_pasted.png)
 
-To upload into my Wikibase, I need to:
+To upload into my wikibase, I need to:
 - delete all of the Wikidata-assigned identifiers: the item qid, the claim UUIDs, the reference hashes, and the node IDs for complex values. 
 - I will paste `Q3` in all of the `instance_of` cells. 
-- I don't have an item for Michelangelo in my Wikibase, so I need to create that and substitute it for `Q5592` in the `artist` column. The blank node identifiers for the anonymous artists are OK, so I will leave them (see [this](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/README.md#somevalue-claims-blank-nodes) for more details about modeling anonymous artists). 
-- The `height_unit` values from Wikidata are the Q ID for centimeters, so I need to create an item for that and change the Q IDs to the centimeter item in my Wikibase.
+- I don't have an item for Michelangelo in my wikibase, so I need to create that and substitute it for `Q5592` in the `artist` column. The blank node identifiers for the anonymous artists are OK, so I will leave them (see [this](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/README.md#somevalue-claims-blank-nodes) for more details about modeling anonymous artists). 
+- The `height_unit` values from Wikidata are the Q ID for centimeters, so I need to create an item for that and change the Q IDs to the centimeter item in my wikibase.
 
 Here's what the [spreadsheet looks like when it's ready to upload](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/statues_added_ready.csv):
 
@@ -340,4 +344,4 @@ Here's a [link to the CSV after the upload](https://github.com/HeardLibrary/link
 
 
 ----
-Revised 2023-02-08
+Revised 2023-02-09
