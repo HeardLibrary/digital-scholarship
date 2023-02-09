@@ -144,7 +144,7 @@ Each property may have zero to many qualifier and reference properties associate
 
 **Generating column headers and the csv-metadata.json file**
 
-Once the `config.yaml` file has been created, it can be used to generate two files needed to do the upload to the API. One file is the more complex `csv-metadata.json` file used to describe the table according the the W3C [Generating RDF from Tabular Data on the Web](https://www.w3.org/TR/csv2rdf/) Recommendation. This file is require by VanderBot. The other file is the CSV that contains the data. Both the `csv-metadata.json` file and column headers for the CSV can be generated from the `config.yaml` file using the script [convert_config_to_metadata_schema.py](convert_config_to_metadata_schema.py) described [here](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert-config.md). 
+Once the `config.yaml` file has been created, it can be used to generate two files needed to do the upload to the API. One file is the more complex `csv-metadata.json` file used to describe the table according the the W3C [Generating RDF from Tabular Data on the Web](https://www.w3.org/TR/csv2rdf/) Recommendation. This file is require by VanderBot. The other file is the CSV that contains the data. Both the `csv-metadata.json` file and column headers for the CSV can be generated from the `config.yaml` file using the script [convert_config_to_metadata_schema.py](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert_config_to_metadata_schema.py) described [here](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert-config.md). 
 
 Running that script with the example file above generates the [csv-metadata.json](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/csv-metadata.json) file and the file [hstatues.csv](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/hstatues.csv). The latter file name differs from the file name given for the `output_file_name` in the `config.yaml` file by having an "h" (for headers) prepended to the name. This is to avoid overwriting any existing data files with the same name. If you are starting a new file, just remove the "h" from the name.
 
@@ -175,6 +175,12 @@ Dates should be given as ISO 3601 dates in either YYYY-MM-DD, YYYY-MM, or YYYY f
 ![right raw data table](images/raw_data3.png)
 
 Quantity value types must include a unit value given as a Q ID. That Q ID must be from the Wikibase being written to and not the Wikidata Q ID for the unit. The language of monolingual text values is not specified in the data CSV because it's given in the mapping file. Here's a [link to the CSV with the raw data](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/statues_raw.csv).
+
+**Some datasets to play with uploading**
+
+There are two directories that have `config.yaml` mapping files and some raw data to populate generated CSVs with: [chemical element data](https://github.com/HeardLibrary/linked-data/tree/master/wikibase/vanderbot/elements) and [data about states in the United States](https://github.com/HeardLibrary/linked-data/tree/master/wikibase/vanderbot/states). Before uploading these data as items in your own Wikibase, you will need to create properties with appropriate value types to match those listed in the mapping files, and change the P IDs in the mapping file to match those properties. 
+
+You also will need to create items to use as values for some of the properties that require items as values. Notably, the capital column in the states table requires item values. So first you should use the `config_capital.yaml` file to create corresponding capital items, then paste their Q IDs into the `capital` column of the states table.
 
 # Uploading the data
 
@@ -283,6 +289,15 @@ outfiles:
 In addition to having P IDs from Wikidata, the `item_pattern_file` value is set to an empty string and the `item_source_csv` value designates a CSV spreadsheet. This spreadsheet must contain a column whose header is `qid`. Any other columns will be ignored. In this case, the [qids.csv](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/qids.csv) file contains the Q IDs of some famous statues:
 
 ![Q IDs to download](images/qids_csv.png)
+
+Another alternative to explicitly providing the Q IDs in a spreadsheet is to specify a SPARQL graph pattern that will bind a set of Q IDs based on criteria expressed in the pattern. Here is an example:
+
+```
+?qid wdt:P31 wd:Q860861.
+?qid wdt:P195 wd:Q18563658.
+```
+
+The first triple pattern requires that the item be an instance of sculpture. The second triple pattern requires that the item be part of the Vanderbilt Fine Arts Gallery collection. If you use this method, the pattern must be saved in a plain text file and the file name provided as the value of `item_pattern_file`. For details see [this page](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/acquire_wikidata.md).
 
 I also changed the `output_file_name` to `statues_downloaded.csv` to avoid damaging the existing `statues.csv` file. The script will create it since it doesn't already exist.
 
