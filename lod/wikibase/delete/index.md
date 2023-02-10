@@ -34,6 +34,24 @@ Let's imagine that [IUPAC](https://iupac.org/) has assigned names and abbreviati
 
 The column containing the UUIDs for the statements to be deleted is called `abbreviation_uuid`.
 
+To perform the deletions, download the script. Go to [its GitHub page](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/vanderdeletebot.py), then right-click on the `raw` button and select `Save Link As...`. Save the script in the directory where you `deletions.csv` file is located. 
+
+Open a terminal window and navigate to the directory where you saved the script and CSV. Assuming that you used the defaults for naming and saving your credentials file, run the script by issuing the following command:
+
+```
+python vanderdeletebot.py -N abbreviation_uuid
+```
+
+where `abbreviation_uuid` is the name of the column containing the UUID identifiers for the statements you want to delete. 
+
+The script has a default delay of 1.25 seconds between API calls to stay under the rate limit of the Wikidata API. However, if you are writing to your wikibase, there is no rate limit. So you can set the delay to zero seconds by setting the `-A` option:
+
+```
+python vanderdeletebot.py -A 0 -N abbreviation_uuid
+```
+
+After the script runs, 
+
 [back to the wikibase model](../)
 
 [loading data into a wikibase](../load/)
