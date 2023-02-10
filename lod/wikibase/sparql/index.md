@@ -41,7 +41,7 @@ You actually only need to include the prefixes that you are using in your query,
 
 It is relatively simple to acquire the labels associated with items. However, since there are many namespace variants for properties, there are not separate labels associated with each variant. Rather, there is a single multilingual set of labels associated with a generic property entity in the `wd:` namespace. By extension, that set of labels applies to all of the namespace variants. This relationship can be seen in the following diagram:
 
-![links from a generic property to variants](../../images/reference-property.png)
+![links from a generic property to variants](../../images/generic-prop-relationships.png)
 
 Here is a query that asks what properties are associated with the "NBC" item in the diagram:
 
