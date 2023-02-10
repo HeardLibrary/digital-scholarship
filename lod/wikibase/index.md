@@ -209,7 +209,7 @@ In order to construct queries that take advantage of all of the complex informat
 
 For more information about querying generic wikibase Query Services, visit the [SPARQL queries page](sparql/).
 
-# Example installation of a generic wikibase: Access to Biological Collections Data
+# Example installation of a generic wikibase
 
 In this example, the schema for the Access to Biological Collections Data (ABCD) standard has been loaded into a wikibase.  You can view the data from the [main MediaWiki page](https://wiki.bgbm.org/bdidata/index.php/BDI_Data:Main_Page) or use the [Query Service GUI interface](https://wiki.bgbm.org/bdidata/query/).  Note: the Wikidata namespaces have been mapped to different IRIs - see the [useful queries page](https://wiki.bgbm.org/bdidata/index.php/BDI_Data:Useful_Queries) for the specific prefixes. The data can also be accessed programatically through the endpoint <https://wiki.bgbm.org/proxy/wdqs/bigdata/namespace/bdi/sparql>.
 
