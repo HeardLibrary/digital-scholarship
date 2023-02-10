@@ -50,7 +50,7 @@ The script has a default delay of 1.25 seconds between API calls to stay under t
 python vanderdeletebot.py -A 0 -N abbreviation_uuid
 ```
 
-![screenshot of script running](images/script_running.png)
+<img src="images/script_running.png" style="border:1px solid black">
 
 After the script runs, if I refresh the item page, I can see that the abbreviation claim is gone.
 
@@ -58,11 +58,44 @@ After the script runs, if I refresh the item page, I can see that the abbreviati
 
 The script doesn't automatically change anything in any CSV files, so you will probably want to delete the information about those statements and their associated references from the original spreadsheet:
 
-![original spreadsheet with deletions](images/.png)
+![original spreadsheet with deletions](images/deleted_csv.png)
+
 
 ## Deleting references
 
-The process for deleting references is similar
+The process for deleting references is similar to that of deleting statements. Let's imagine that you want to replace some references because the URL for the existing discovery date references were broken and you want to upload new ones.
+
+<img src="images/gui_pre_ref_deletion.png" style="border:1px solid black">
+
+The screenshot above shows the graphical interface with the reference we want to delete.
+
+![rows showing references](images/ref_table.png)
+
+In the table above, you can see the column that contains the identifier for the references: `discovery_date_ref1_hash`. It denotes the reference node that is linked to two sources: the reference URL and the retrieved date. You will notice that the hash is the same for all of the references shown. That's because the sources are exactly the same for each row. Clearly this isn't enough information for the API to know which reference to delete. Therefore, the API requires not only the reference hash, but also the UUID for the statement it's associated with, plus the Q ID column. The content of these three columns specify the reference unambiguously, so all three must be in the table.
+
+The script expects you to supply the name of the reference hash column. Based on having `_hash` in the name, it knows that you want to delete references and it will figure out the name of the corresponding statement UUID column by looking at the descriptive first part of the column name (`discovery_date` in this case). 
+
+As before, I'll create a copy of the CSV and name it `deletions.csv`, then delete all rows except for the ones that contain the references I want to delete:
+
+![rows with references to be deleted](images/ref_rows_to_delete.png)
+
+This time I'll issue the command specifying the reference column:
+
+```
+python vanderdeletebot.py -A 0 -N discovery_date_ref1_hash
+```
+
+<img src="images/script_deleting_refs.png" style="border:1px solid black">
+
+Now if I reload the page, I can see the result of the deletion:
+
+<img src="images/gui_post_ref_deletion.png" style="border:1px solid black">
+
+I can see that the `date of discovery` statement now has zero references. As with the deletion of the statements, I should go back to my original data table and delete the section that contains information about the references I deleted:
+
+![rows showing deleted references](images/rows_showing_deleted_refs.png)
+
+I can then paste in the data for the new references in the `discovery_date_ref1_reference_url` and `discovery_date_ref1_retrieved_val` columns, then run VanderBot to upload the changed references.
 
 ----
 
