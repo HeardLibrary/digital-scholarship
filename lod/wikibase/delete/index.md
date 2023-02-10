@@ -26,7 +26,7 @@ The screenshot above shows part of a CSV that was used to load information about
 
 The `abbreviation_uuid` column contains the unique UUID identifiers for each of the statements. The `abbreviation_ref1_hash` column contains the hash identifiers generated from the references. Notice that all of the references that contain the same information (reference URL and retrieved date) have the same identifier.
 
-# Deleting a statement
+# Deleting statements
 
 Let's imagine that [IUPAC](https://iupac.org/) has assigned names and abbreviations to the last six elements in the row and I want to delete the abbreviations so that I can upload new ones. I need to provide the VanderDeleteBot script with the list of statement UUIDs and their corresponding Q IDs. The easiest way to do this is to just make a copy of the CSV and call it `deletions.csv`, then delete all of the rows except for the ones containing the statements I want to delete.
 
@@ -36,13 +36,13 @@ The column containing the UUIDs for the statements to be deleted is called `abbr
 
 To perform the deletions, download the script. Go to [its GitHub page](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/vanderdeletebot.py), then right-click on the `raw` button and select `Save Link As...`. Save the script in the directory where you `deletions.csv` file is located. 
 
-Open a terminal window and navigate to the directory where you saved the script and CSV. Assuming that you used the defaults for naming and saving your credentials file, run the script by issuing the following command:
+Open a terminal window and navigate to the directory where you saved the script and CSV. Assuming that you used the defaults for naming and saving your credentials file, you can run the script by issuing the following command:
 
 ```
 python vanderdeletebot.py -N abbreviation_uuid
 ```
 
-where `abbreviation_uuid` is the name of the column containing the UUID identifiers for the statements you want to delete. 
+where `abbreviation_uuid` is the name of the column containing the UUID identifiers for the statements you want to delete. (In some instalations it is necessary to use `python3` instead of `python` in the command.)
 
 The script has a default delay of 1.25 seconds between API calls to stay under the rate limit of the Wikidata API. However, if you are writing to your wikibase, there is no rate limit. So you can set the delay to zero seconds by setting the `-A` option:
 
@@ -50,7 +50,21 @@ The script has a default delay of 1.25 seconds between API calls to stay under t
 python vanderdeletebot.py -A 0 -N abbreviation_uuid
 ```
 
-After the script runs, 
+![screenshot of script running](images/script_running.png)
+
+After the script runs, if I refresh the item page, I can see that the abbreviation claim is gone.
+
+![screenshot of item after deletion](images/finished_gui.png)
+
+The script doesn't automatically change anything in any CSV files, so you will probably want to delete the information about those statements and their associated references from the original spreadsheet:
+
+![original spreadsheet with deletions](images/.png)
+
+## Deleting references
+
+The process for deleting references is similar
+
+----
 
 [back to the wikibase model](../)
 
