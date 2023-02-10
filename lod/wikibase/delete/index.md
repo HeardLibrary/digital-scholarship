@@ -20,7 +20,15 @@ Before you can use this script, you need to have a credentials for the wikibase 
 
 ## Identifiers
 
-The screenshot above shows part of a CSV that was used to load information about elements into a wikibase. 
+The screenshot above shows part of a CSV that was used to load information about elements into a wikibase. The abbreviation column contains the information that I used to create the `abbreviation` statement visible in the graphical interface:
+
+![GUI interface view of statement and reference](images/identifiers_gui.png)
+
+
+
+# Deleting a statement
+
+Let's imagine that [IUPAC](https://iupac.org/) has assigned names and abbreviations to the last six elements in the row and I want to delete the abbreviations so that 
 
 [back to the wikibase model](../)
 
