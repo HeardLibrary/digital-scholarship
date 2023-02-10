@@ -214,4 +214,14 @@ For more information about querying generic wikibase Query Services, visit the [
 In this example, the schema for the Access to Biological Collections Data (ABCD) standard has been loaded into a wikibase.  You can view the data from the [main MediaWiki page](https://wiki.bgbm.org/bdidata/index.php/BDI_Data:Main_Page) or use the [Query Service GUI interface](https://wiki.bgbm.org/bdidata/query/).  Note: the Wikidata namespaces have been mapped to different IRIs - see the [useful queries page](https://wiki.bgbm.org/bdidata/index.php/BDI_Data:Useful_Queries) for the specific prefixes. The data can also be accessed programatically through the endpoint <https://wiki.bgbm.org/proxy/wdqs/bigdata/namespace/bdi/sparql>.
 
 ----
+
+[loading data into a wikibase](../load/)
+
+[deleting statements and references](../delete/)
+
+[creating properties using a script](../properties/)
+
+[querying a wikibase with SPARQL](../sparql/)
+
+----
 Revised 2023-02-09
