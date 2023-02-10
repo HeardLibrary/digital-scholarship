@@ -20,15 +20,19 @@ Before you can use this script, you need to have a credentials for the wikibase 
 
 ## Identifiers
 
-The screenshot above shows part of a CSV that was used to load information about elements into a wikibase. The abbreviation column contains the information that I used to create the `abbreviation` statement visible in the graphical interface:
+The screenshot above shows part of a CSV that was used to load information about elements into a wikibase. The `abbreviation` column contains the information that I used to create the `abbreviation` statement visible in the graphical interface:
 
 ![GUI interface view of statement and reference](images/identifiers_gui.png)
 
-
+The `abbreviation_uuid` column contains the unique UUID identifiers for each of the statements. The `abbreviation_ref1_hash` column contains the hash identifiers generated from the references. Notice that all of the references that contain the same information (reference URL and retrieved date) have the same identifier.
 
 # Deleting a statement
 
-Let's imagine that [IUPAC](https://iupac.org/) has assigned names and abbreviations to the last six elements in the row and I want to delete the abbreviations so that 
+Let's imagine that [IUPAC](https://iupac.org/) has assigned names and abbreviations to the last six elements in the row and I want to delete the abbreviations so that I can upload new ones. I need to provide the VanderDeleteBot script with the list of statement UUIDs and their corresponding Q IDs. The easiest way to do this is to just make a copy of the CSV and call it `deletions.csv`, then delete all of the rows except for the ones containing the statements I want to delete.
+
+![rows with statements to be deleted](images/deletions_csv.png)
+
+The column containing the UUIDs for the statements to be deleted is called `abbreviation_uuid`.
 
 [back to the wikibase model](../)
 
