@@ -1,6 +1,6 @@
 ---
 permalink: /lod/wikibase/
-title: generic wikibase tutorial
+title: The wikibase model
 breadcrumb: wikibase
 ---
 # About this tutorial
@@ -205,47 +205,13 @@ and as a diagram:
 
 ## Using the model to query
 
-If you have created these or similar properties and items, you can retrieve information about them using the Query Service interface that is built-in to the wikibase application. There is usually a link to the Query Service in the left panel of each page.
+In order to construct queries that take advantage of all of the complex information stored in Wikidata or any other wikibase, it is necessary to understand the links within the wikibase model. Each of the triple patterns included in the graph pattern that defines the query represents one link (represented as an arrow in the diagrams on this page). Thus the task in defining a query is to specify the path through the graph model that satisfies the restrictions that you want to place on potential solutions. 
 
-If you are using a generic wikibase, you will need to paste the namespace abbreviations listed near the top of this page (in the "Namespaces" section) into the query text box as a query prolog.  You really only need to include the ones that you are going to use, but it doesn't hurt anything to paste them all in.  
+For more information about querying generic wikibase Query Services, visit the [SPARQL queries page](sparql/).
 
-Here is a query that asks what properties are associated with the "NBC" item we created:
+# Example installation of a generic wikibase: Access to Biological Collections Data
 
-```sparql
-SELECT DISTINCT ?directProp ?label
-WHERE {
-  wd:Q2 ?directProp ?value.
-  ?prop wikibase:directClaim ?directProp.
-  ?prop rdfs:label ?label.
-  }
-  ```
-
-  Notice that in order to differentiate between the direct property that I care about and other flavors of properties, I include the triple pattern:
-
-  ```sparql
-    ?prop wikibase:directClaim ?directProp.
-  ```
-
-  which only applies to direct properties.  That also serves the purpose of including in my graph pattern a link to the generic property so that I can access the property label.
-
-  Here is a query that returns all of the references associated with a particular kind of statement made about NBC:
-
-  ```sparql
-SELECT DISTINCT ?refInstance ?refProp ?label ?value
-WHERE {
-  wd:Q2 p:P2 ?statementInstance.
-  ?statementInstance prov:wasDerivedFrom ?refInstance.
-  ?refInstance ?refProp ?value.
-  ?refEntity wikibase:reference ?refProp.
-  ?refEntity rdfs:label ?label.
-  }
-  ```
-
-Note that we had to include the `wikibase:reference` link to the generic property entity in order to get the label.
-
-# Example installation: Access to Biological Collections Data
-
-In this example, the schema for the Access to Biological Collections Data (ABCD) standard has been loaded into a Wikibase instance.  You can view the data from the [main MediaWiki page](https://wiki.bgbm.org/bdidata/index.php/BDI_Data:Main_Page) or use the [Query Service GUI interface](https://wiki.bgbm.org/bdidata/query/).  Note: the Wikidata namespaces have been mapped to different IRIs - see the [useful queries page](https://wiki.bgbm.org/bdidata/index.php/BDI_Data:Useful_Queries) for the specific prefixes. The data can also be accessed programatically through the endpoint <https://wiki.bgbm.org/proxy/wdqs/bigdata/namespace/bdi/sparql>.
+In this example, the schema for the Access to Biological Collections Data (ABCD) standard has been loaded into a wikibase.  You can view the data from the [main MediaWiki page](https://wiki.bgbm.org/bdidata/index.php/BDI_Data:Main_Page) or use the [Query Service GUI interface](https://wiki.bgbm.org/bdidata/query/).  Note: the Wikidata namespaces have been mapped to different IRIs - see the [useful queries page](https://wiki.bgbm.org/bdidata/index.php/BDI_Data:Useful_Queries) for the specific prefixes. The data can also be accessed programatically through the endpoint <https://wiki.bgbm.org/proxy/wdqs/bigdata/namespace/bdi/sparql>.
 
 ----
 Revised 2023-02-09
