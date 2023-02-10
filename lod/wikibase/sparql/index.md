@@ -4,6 +4,8 @@ title: SPARQL queries to a generic wikibase
 breadcrumb: sparql
 ---
 
+[back to the wikibase model](../)
+
 # SPARQL queries to a generic wikibase
 
 You can retrieve information about statements and references in a wikibase using the Query Service interface that is built-in to the wikibase application. There is usually a link to the Query Service in the left panel of each page.
@@ -36,6 +38,12 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 If you are using your own wikibase, you will need to paste the namespace abbreviations, listed above, into the query text box as a query prolog.  Replace the domain name `http://wikibase.svc` with the domain name of your wikibase. For example, if you've set up a wikibase at wikibase.cloud named `wbwh-test`, you would replace the domain name with `https://wbwh-test.wikibase.cloud/entity/`.
 
 You actually only need to include the prefixes that you are using in your query, but it doesn't hurt anything to paste them all in.  
+
+------
+
+this part still under construction
+
+------
 
 ## Querying for label information
 
@@ -79,7 +87,12 @@ WHERE {
   }
   ```
 
+[back to the wikibase model](../)
+
+[deleting statements and references](../delete/)
+
+[loading data into a wikibase](../load/)
 
 ----
-Revised 2023-02-09
+Revised 2023-02-10
 

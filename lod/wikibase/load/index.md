@@ -4,6 +4,8 @@ title: Loading data into a wikibase
 breadcrumb: load
 ---
 
+[back to the wikibase model](../)
+
 # Loading data into a wikibase using the VanderBot tool
 
 [VanderBot](http://vanderbi.lt/vanderbot) is a Python script that can be used to upload CSV data to Wikidata or any other wikibase instance. There are [several blog posts and tutorials](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/README.md#how-it-works) that explain how to use VanderBot to write data to the Wikidata test instance and to Wikidata itself. The focus of this page is using VanderBot to write to other wikibase instances, such as those on [wikibase.cloud](https://www.wikibase.cloud/) or [Structured data on Commons](https://commons.wikimedia.org/wiki/Commons:Structured_data). 
@@ -341,7 +343,15 @@ I can now use VanderBot to do the upload as I did previously. Here's the result 
 
 Here's a [link to the CSV after the upload](https://github.com/HeardLibrary/linked-data/blob/master/wikibase/vanderbot/statues.csv) where all of the identifiers assigned by the API have been added to the table.
 
+----
 
+[back to the wikibase model](../)
+
+[deleting statements and references](../delete/)
+
+[creating properties using a script](../properties/)
+
+[querying a wikibase with SPARQL](../sparql/)
 
 ----
 Revised 2023-02-09
