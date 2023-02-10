@@ -143,9 +143,9 @@ Sometimes a value is too complex to be described by a single literal string or i
 
 <img src="../images/value_node.png" style="border:1px solid black">
 
-The value node itself is assigned an identifier, which is a hash string appended to the `wdv:` namespace. That node is linked to the simple values by wikibase ontology properties that are specific for the type of simple value (`wikibase:timeValue`, `wikibase:timePrecision`, and `wikibase:timeCalendarModel` in the example above). 
-
 A value node can be linked from either a statement node (as a statement value or qualifier value) or from a reference node (as a reference value). Each of these kinds of links uses a property from a different namespace (`pqv:`, `prv:`, or `psv`).
+
+The value node itself is assigned an identifier, which is a hash string appended to the `wdv:` namespace. That node is linked to the simple values by wikibase ontology properties that are specific for the type of simple value (`wikibase:timeValue`, `wikibase:timePrecision`, and `wikibase:timeCalendarModel` in the example above). In addition to time, other value types that require value nodes are quantity (requiring a magnitude and a unit) and globe coordinates (requiring latitude, longitude, precision, and the target globe such as earth or the moon).
 
 ## Qualifiers
 
@@ -161,13 +161,9 @@ Qualifiers statements are added in the graphical interface directly below the va
 
 <img src="../images/wikidata-qualifier-instance.png" style="border:1px solid black">
 
-This diagram shows how the qualifier is represented as Linked Data. In this example, the qualifier value can be expressed as a literal string, so a `pq:` namespace version of the property is used to link to the literal value "2004-01-01T00:00:00Z".  
+This diagram shows how the qualifier is represented as Linked Data. In this example, the qualifier property for "start time" (P580) should have a date as its value. Since a date is a complex value, there is a `pqv:P580`    link to the value node that joins the simple values needed to fully describe a date (for simplicity, only one simple value, calendar model, is shown here). For ease of querying, there is a simplified value (consisting of only the time string "2004-01-01T00:00:00Z") that is linked by the `pq:` namespace version of the property (`pq:P580`).  
 
-For some qualifier properties, a second link is created to a non-literal qualifier instance. That makes it possible to create additional statements about the qualifier value itself. In this example, the qualifier value is a date, so the qualifier value instance has a `wikibase:timeCalendarModel` link to the calendar used for the date.  
-
-If you compared the graph diagram to the GUI, you'll notice that the date entered in the GUI was "2004", but the date expressed in the graph was "2004-01-01T00:00:00Z". If you are wondering how Wikidata distinguishes between the year 2004 and 1 January 2004, it's determined by the value of `wikibase:timePrecision` assigned to the qualifier value instance (see [this page](https://en.wikibooks.org/wiki/SPARQL/WIKIDATA_Precision,_Units_and_Coordinates) for details). This approach allows all time values to be expressed as `xsd:dateTime` datatyped strings.  
-
-Not every qualifier has a link to a non-literal qualifier instance.  For example, "series ordinal" (P1545) has an integer value that is used to indicate the position in a series. The numeric literal value is sufficient to do that without further description of the qualifier instance.
+Not every qualifier has a link to a complex value node.  For example, "series ordinal" (P1545) has an integer value that is used to indicate the position in a series. The numeric literal value is sufficient to do that on its own.
 
 There are many other properties associated with entities, statement instances, qualifiers, and reference instances.  For a complete listing for this example, see [this annotated dump](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/rdf/wikibase/wikibase-dump.ttl) of the Wikibase dataset after the items and properties discussed above had been created.  We also are ingoring [statement ranks](https://www.mediawiki.org/wiki/Wikibase/DataModel#Ranks_of_Statements). Statement ranks can be important because they determine whether an indirect statement link also has a direct (truthy) link. Statements with deprecated ranks do not generate direct links and therefore won't be part of the solution of queries that only involve truthy (`wdt:`) properties.
 
