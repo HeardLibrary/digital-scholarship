@@ -18,11 +18,10 @@ In addition to this general introduction, there are several related tutorials th
 - [Mass creation of properties in a non-Wikimedia wikibase using the VanderPropertyBot Python script](properties/)
 - [Querying a generic wikibase using SPARQL](sparql/)
 
-# Wikibase
+
+# The Wikibase data model
 
 You may already be familiar with [Wikidata](https://www.wikidata.org/), the database that supports the structured data used in Wikipedia.  Wikibase is the underlying platform on which Wikidata is built.  If you create a wikibase on a platform like wikibase.cloud, you can use it to essentially build your own personal version of Wikidata.  
-
-# The Wikidata data model
 
 The wikibase data model is a model that applies to all wikibase instances, including Wikidata.  The [technical details](https://www.mediawiki.org/wiki/Wikibase/DataModel) of the wikidata model are a bit complex, but there is a [data model primer](https://www.mediawiki.org/wiki/Wikibase/DataModel/Primer) that is more accessible.
 
@@ -138,9 +137,19 @@ We can see that Wikibase has now created a reference instance that is linked to 
 
 Since the reference instance is a IRI identified resource, we can say additional things about it.  The most important thing we want to describe is the source of the reference itself.  That connection is made by the reference property that we created (`P3`, "reference URL").  The connection is made to the URL that we provided as the value of the reference (`https://www.nbcnews.com/nightly-news`).
 
+## Value nodes
+
+Sometimes a value is too complex to be described by a single literal string or item. For example, to be fully described, a date needs the time value, the calendar model (Gregorian, Julian, etc.), and the precision of the measurement (nearest year, nearest month, nearest day, etc.). In these cases, the wikibase model creates an additional node, called a "value node" that is used to link the multiple simple values that are required to describe the complex value. 
+
+<img src="../images/value_node.png" style="border:1px solid black">
+
+The value node itself is assigned an identifier, which is a hash string appended to the `wdv:` namespace. That node is linked to the simple values by wikibase ontology properties that are specific for the type of simple value (`wikibase:timeValue`, `wikibase:timePrecision`, and `wikibase:timeCalendarModel` in the example above). 
+
+A value node can be linked from either a statement node (as a statement value or qualifier value) or from a reference node (as a reference value). Each of these kinds of links uses a property from a different namespace (`pqv:`, `prv:`, or `psv`).
+
 ## Qualifiers
 
-The other major piece of the Wikibase model is *qualifiers* that are used to provide non-reference information about the statement instance. 
+The last major piece of the Wikibase model is *qualifiers* that are used to provide non-reference information about the statement instance. 
 
 <img src="../images/wikidata-qualifier.png" style="border:1px solid black">
 
@@ -153,8 +162,6 @@ Qualifiers statements are added in the graphical interface directly below the va
 <img src="../images/wikidata-qualifier-instance.png" style="border:1px solid black">
 
 This diagram shows how the qualifier is represented as Linked Data. In this example, the qualifier value can be expressed as a literal string, so a `pq:` namespace version of the property is used to link to the literal value "2004-01-01T00:00:00Z".  
-
-!!! Todo: fix this to explain value nodes.
 
 For some qualifier properties, a second link is created to a non-literal qualifier instance. That makes it possible to create additional statements about the qualifier value itself. In this example, the qualifier value is a date, so the qualifier value instance has a `wikibase:timeCalendarModel` link to the calendar used for the date.  
 
