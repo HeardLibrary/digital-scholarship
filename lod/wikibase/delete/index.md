@@ -22,7 +22,7 @@ Before you can use this script, you need to have a credentials for the wikibase 
 
 The screenshot above shows part of a CSV that was used to load information about elements into a wikibase. The `abbreviation` column contains the information that I used to create the `abbreviation` statement visible in the graphical interface:
 
-![GUI interface view of statement and reference](images/identifiers_gui.png)
+<img src="images/identifiers_gui.png" style="border:1px solid black">
 
 The `abbreviation_uuid` column contains the unique UUID identifiers for each of the statements. The `abbreviation_ref1_hash` column contains the hash identifiers generated from the references. Notice that all of the references that contain the same information (reference URL and retrieved date) have the same identifier.
 
@@ -54,7 +54,7 @@ python vanderdeletebot.py -A 0 -N abbreviation_uuid
 
 After the script runs, if I refresh the item page, I can see that the abbreviation claim is gone.
 
-![screenshot of item after deletion](images/finished_gui.png)
+<img src="images/finished_gui.png" style="border:1px solid black">
 
 The script doesn't automatically change anything in any CSV files, so you will probably want to delete the information about those statements and their associated references from the original spreadsheet:
 
@@ -95,7 +95,7 @@ I can see that the `date of discovery` statement now has zero references. As wit
 
 ![rows showing deleted references](images/rows_showing_deleted_refs.png)
 
-I can then paste in the data for the new references in the `discovery_date_ref1_reference_url` and `discovery_date_ref1_retrieved_val` columns, then run VanderBot to upload the changed references.
+I can then paste in the data for the new references in the `discovery_date_ref1_reference_url` and `discovery_date_ref1_retrieved_val` columns of the original spreadsheet, then run VanderBot to upload the changed references. 
 
 ----
 
