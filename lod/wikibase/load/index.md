@@ -218,6 +218,16 @@ Notice that VanderBot has converted the simple ISO 3601 dates to the more comple
 
 ![right written data table](images/written_data3.png)
 
+## Adding data to existing items
+
+The VanderBot script can also create new statements for items that have already been created. In rows having a value in the `qid` column, if data are added to a property column that had previously been empty, the script will create a statement for that property. If reference columns associated with that property column also have data, those references will be created at the same time as the statement.
+
+References can be added in cases where a reference column was previously empty while the corresponding property column had a value. Simply add the reference data and run the script again.
+
+In the case where statement values or reference values need to be changed, they must first be [removed using VanderDeleteBot](../delete/). Then the new values or references can be added.
+
+Qualifiers cannot be added independently of their associated statements. To add or change qualifiers, delete the statement using VanderDeleteBot and recreate the statement with the new qualifier data.
+
 ## Using the SPARQL endpoint with VanderBot
 
 VanderBot has several functions that use the wikibase SPARQL endpoint to perform data checks. The Query Service for a wikibase.cloud instance is much slower than the Wikidata Query Service, so using these functions can significantly slow down writing to the API and you might want to disable them. 
@@ -354,4 +364,4 @@ Here's a [link to the CSV after the upload](https://github.com/HeardLibrary/link
 [querying a wikibase with SPARQL](../sparql/)
 
 ----
-Revised 2023-02-09
+Revised 2023-02-11
