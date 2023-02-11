@@ -8,7 +8,9 @@ breadcrumb: sparql
 
 # SPARQL queries to a generic wikibase
 
-You can retrieve information about statements and references in a wikibase using the Query Service interface that is built-in to the wikibase application. There is usually a link to the Query Service in the left panel of each page.
+You can retrieve information about statements and references in a wikibase using the Query Service interface that is built-in to the wikibase application. There is usually a link to the Query Service in the left panel of each page. 
+
+It is also possible to perform SPARQL queries programatically using the SPARQL endpoint associated with the Query Service. The endpoint URI is formed by adding `sparql` to the end of the URL of the Query Service. So for example, the Query Service URL for the custom wikibase <https://wbwh-test.wikibase.cloud/> is <https://wbwh-test.wikibase.cloud/query/>. So the SPARQL endpoint URL for that Query Service would be `https://wbwh-test.wikibase.cloud/query/sparql`.
 
 ## Namespace prolog
 
@@ -35,13 +37,73 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 ```
 
-If you are using your own wikibase, you will need to paste the namespace abbreviations, listed above, into the query text box as a query prolog.  Replace the domain name `http://wikibase.svc` with the domain name of your wikibase. For example, if you've set up a wikibase at wikibase.cloud named `wbwh-test`, you would replace the domain name with `https://wbwh-test.wikibase.cloud/entity/`.
+If you are using your own wikibase, you will need to paste the namespace abbreviations, listed above, into the query text box as a query prolog.  Replace the domain name `http://wikibase.svc` with the domain name of your wikibase. For example, if you've set up a wikibase at wikibase.cloud named `wbwh-test`, you would replace the domain name with `https://wbwh-test.wikibase.cloud`.
 
 You actually only need to include the prefixes that you are using in your query, but it doesn't hurt anything to paste them all in.  
 
-------
+# Wikibase SPARQL graph pattern variants
 
-this part still under construction
+Performing a successful SPARQL query often depends on constructing a graph pattern that connects resources based on some path through nodes whose relationship is defined by the underlying graph model for the dataset. In the case of wikibase queries, that means understanding how various entities are linked within the wikibase graph model. If you aren't familiar with the wikibase graph model, it may be beneficial to review the [graph model tutorial](../) associated with this lesson series. If you aren't familiar with SPARQL queries and the terminology associated with it, you may wish to study [this tutorial](../../sparql/) or one of the many other resources available on the subject. 
+
+In the following examples, be aware that they omit the prolog statements that define the namespace abbreviations. See the previous section for detatils.
+
+## Querying via direct properties
+
+![direct property link](../../images/wikidata-simple-triple.png)
+
+This simplest way to query a wikibase is to follow links that are defined by direct properties (also known as "truthy" properties). Direct properties begin with the namespace abbreviation `wdt:`. Based on the diagram above, here is a simple query that finds all news shows broadcast by the NBC network:
+
+```
+select distinct ?show where {
+    wd:Q2 wdt:P2 ?show.
+}
+```
+
+The graph pattern is the part of the query between the curly braces.
+
+If shows were linked to their anchors by an "anchor" property, P25, we could find all anchors that work for NBC by adding another triple pattern (representing a link) to the graph pattern:
+
+```
+select distinct ?show ?anchor where {
+    wd:Q2 wdt:P2 ?show.
+    ?show wdt:P20 ?anchor.
+}
+```
+
+The result would produce the Q IDs for all of the anchors along with the Q IDs of the shows they were associated with.
+
+## Querying via statement nodes
+
+![links via a statement node](../../images/wikidata-statement-instance.png)
+
+We can also create a graph pattern that connects two resources through an indirect path that connects the resources through a statement node. For example, the first query in the previous section could also be written:
+
+```
+select distinct ?show where {
+    wd:Q2 p:P2 ?statementNode.
+    ?statementNode ps:P2 ?show.
+}
+```
+
+The results would be the same as before. Why would we want to use this more complicated path? There are two circumstances where this might be necessary. 
+
+Statements can have "ranks": `preferred`, `normal`, and `deprecated`. Truthy (direct) links are not generated for statements with deprecated ranks. So for example, there may be an incorrect statement asserting that a show was broadcast by NBC. Although it is incorrect, it may have been asserted by someone and documented with a reference. In that case, the statement could be assigned a rank of `deprecated`. In that case, the results of a query using direct properties would not include that show in the results, whereas a query through the statement node would.
+
+![links via a statement node](../../images/wikidata-qualifier-instance.png)
+
+Another situation where one needs to query via the statement node is if a qualifier of the statement is involved in the query. For example, one might query for authors (P50) of a work, but only be interested in first authors. In Wikidata, the order of authorship is indicated using a series ordinal qualifier (P1545). Since qualifiers are attached to the statement node, we would need to construct the query with a graph pattern including the statement node like this:
+
+```
+select distinct ?work ?author where {
+    ?work p:P50 ?statementNode.
+    ?statementNode pq:P1545 "1".
+    ?statementNode ps:P50 ?author.
+}
+```
+
+## Querying references
+
+
 
 ------
 
@@ -93,6 +155,8 @@ WHERE {
 
 [loading data into a wikibase](../load/)
 
+[creating properties using a script](../properties/)
+
 ----
-Revised 2023-02-10
+Revised 2023-02-11
 
