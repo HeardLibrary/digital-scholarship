@@ -128,7 +128,7 @@ select distinct ?url where {
 
 ## Queries that involve value nodes
 
-![link to a reference via a statement node](../images/value_node_diagram.png)
+![diagram of statement and value nodes](images/value_node_diagram.png)
 
 Certain value types are more complex than others. Dates, quantities, and geocoordinates cannot be represented as a single simple value. For example, in the wikibase model, completely describing a date requires not only the time, but the precision of that time, and the calendar model for the date. 
 
