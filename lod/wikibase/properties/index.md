@@ -35,6 +35,7 @@ Each property is restricted to a specific types of value that can be used with i
 | Musical notation | musical-notation | |
 
 <sup>*</sup> Types with no value in this column are not currently supported by VanderBot.
+
 <sup>**</sup> Supported by VanderBot, but under special conditions. See the [VanderBot documentation](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/README.md#the-wikidata-image-property-p18-and-image-file-identification) for more information.
 
 # The source CSV file
@@ -49,9 +50,9 @@ The remaining columns should contain pairs consisting of a label and description
 
 Here is an example of a correctly labeled table with labels and descriptions in English and French:
 
-![CSV containing uploaded data](images/table.png)
+![CSV before running the script](images/table.png)
 
-The default name of the table is `properties_to_add.csv`. If you use a different name, you need to specify it using the `--file` (or `-F`) option when you run the script.
+The default name of the table is `properties_to_add.csv`. If you use a different name, you need to specify it using the `--file` (or `-F`) option when you run the script. You can download an example file [here](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/properties_to_add.csv).
 
 It is not required that every property have a value for every language. However, at least one label must be provided in at least one language for each property.
 
@@ -62,9 +63,28 @@ To run the script, download the `VanderPropertyBot` script from [this download p
 Open a console window and navigate to the directory where you saved the script. Enter the following command:
 
 ```
+python vanderpropertybot.py
+```
 
+In some installations of Python, you need to enter `python3` instead of `python`. 
 
+Note: the script does not do any checking for duplicate names. Also, I do not think it is possible to change the datatype of a property once it is created. It is possible to change the labels and descriptions, but not using this script, so those changes would need to be done manually. For these reasons, check the CSV file carefully before doing the upload.
 
+<img src="images/terminal.png" style="border:1px solid black">
+
+When the script was run, it skipped the first row because the datatype should have been `wikibase-item` instead of `item`. If we check the CSV after running the script, we see that it added the P IDs for the two properties it created:
+
+![CSV containing uploaded data](images/table_after.png)
+
+We can now check the property page for new property P34:
+
+<img src="images/gui_new_prop.png" style="border:1px solid black">
+
+We can see that the labels were added in the languages we chose and that the correct datatype was assigned. 
+
+If we want to fix the problem with the first property, we can just correct the error in the datatype name and run the script again. The lines for the previously uploaded properties will be ignored.
+
+----
 
 [back to the wikibase model](../)
 
