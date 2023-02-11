@@ -37,6 +37,33 @@ Each property is restricted to a specific types of value that can be used with i
 <sup>*</sup> Types with no value in this column are not currently supported by VanderBot.
 <sup>**</sup> Supported by VanderBot, but under special conditions. See the [VanderBot documentation](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/README.md#the-wikidata-image-property-p18-and-image-file-identification) for more information.
 
+# The source CSV file
+
+The source CSV file must have two columns with specific names and additional columns for labels and descriptions. 
+
+One column must be named `pid`. This column must be empty in order to write the property to the wikibase using the API. Once the property is created, the API response will indicate the P ID assigned to the new property and the script will capture that P ID and insert it into the table. This is useful if the script is interrupted, or if additional new properties are added to the table after a previous upload -- the rows for existing properties will be ignored because their `pid` column is not empty.
+
+A second column must be named `datatype`. This column must contain one of the controlled value strings from the table above. If no value is provided, or if the value provided doesn't match any of the known types, that row will be skipped.
+
+The remaining columns should contain pairs consisting of a label and description in a particular language. At least one pair must be present. Additional pairs are optional. In each pair of label/description columns, the name of the label column must begin with `label_` followed by the [ISO 639-1 two letter code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the language of the label. For example, an English label column would be named `label_en`. The corresponding description column for that language must begin with `description_` followed by the same language code as the label in the pair. For example, the column for the English description paired with the English label would be named `description_en`. 
+
+Here is an example of a correctly labeled table with labels and descriptions in English and French:
+
+![CSV containing uploaded data](images/table.png)
+
+The default name of the table is `properties_to_add.csv`. If you use a different name, you need to specify it using the `--file` (or `-F`) option when you run the script.
+
+It is not required that every property have a value for every language. However, at least one label must be provided in at least one language for each property.
+
+# Running the script
+
+To run the script, download the `VanderPropertyBot` script from [this download page](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/vanderpropertybot.py). Right-click on the `Raw` button and select `Save Link As ...`, then save the file in the same directory where the source CSV file is located. 
+
+Open a console window and navigate to the directory where you saved the script. Enter the following command:
+
+```
+
+
 
 
 [back to the wikibase model](../)
