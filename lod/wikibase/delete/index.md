@@ -14,7 +14,7 @@ The MediaWiki API provides two modules for making deletions in wikibases: [wbrem
 
 This information isn't typically known if the statements or references were added using the graphical interface. However, if the [VanderBot](http://vanderbi.lt/vanderbot) script was used to [load data into a wikibase](../load/), those identifiers are captured and saved along in the source data CSV. In this tutorial, we'll see how to use a Python script called [VanderDeleteBot](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/vanderdeletebot.md) to use this saved information to make multiple deletions. 
 
-Before you can use this script, you need to have a credentials for the wikibase in which you want to make the deletions. For more information about this, see the section on [setting up a bot password](../load/#set-up-a-bot-password) in the page about loading data into a wikibase.
+Before you can use this script, you need to have credentials for the wikibase in which you want to make the deletions. For more information about this, see the section on [setting up a bot password](../load/#set-up-a-bot-password) in the page about loading data into a wikibase.
 
 ![CSV containing uploaded data](images/uploaded_data.png)
 
