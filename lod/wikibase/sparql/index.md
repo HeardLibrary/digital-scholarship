@@ -74,38 +74,76 @@ The result would produce the Q IDs for all of the anchors along with the Q IDs o
 
 ## Querying via statement nodes
 
-![links via a statement node](../../images/wikidata-statement-instance.png)
+![link via a statement node](../../images/wikidata-statement-instance.png)
 
 We can also create a graph pattern that connects two resources through an indirect path that connects the resources through a statement node. For example, the first query in the previous section could also be written:
 
 ```
 select distinct ?show where {
-    wd:Q2 p:P2 ?statementNode.
-    ?statementNode ps:P2 ?show.
+    wd:Q2 p:P2 ?statement.
+    ?statement ps:P2 ?show.
 }
 ```
 
-The results would be the same as before. Why would we want to use this more complicated path? There are two circumstances where this might be necessary. 
+The results would be the same as before. Why would we want to use this more complicated path? There are three circumstances where this might be necessary. 
 
 Statements can have "ranks": `preferred`, `normal`, and `deprecated`. Truthy (direct) links are not generated for statements with deprecated ranks. So for example, there may be an incorrect statement asserting that a show was broadcast by NBC. Although it is incorrect, it may have been asserted by someone and documented with a reference. In that case, the statement could be assigned a rank of `deprecated`. In that case, the results of a query using direct properties would not include that show in the results, whereas a query through the statement node would.
 
-![links via a statement node](../../images/wikidata-qualifier-instance.png)
+![link to a qualifier via a statement node](../../images/wikidata-qualifier-instance.png)
 
 Another situation where one needs to query via the statement node is if a qualifier of the statement is involved in the query. For example, one might query for authors (P50) of a work, but only be interested in first authors. In Wikidata, the order of authorship is indicated using a series ordinal qualifier (P1545). Since qualifiers are attached to the statement node, we would need to construct the query with a graph pattern including the statement node like this:
 
 ```
 select distinct ?work ?author where {
-    ?work p:P50 ?statementNode.
-    ?statementNode pq:P1545 "1".
-    ?statementNode ps:P50 ?author.
+    ?work p:P50 ?statement.
+    ?statement pq:P1545 "1".
+    ?statement ps:P50 ?author.
 }
 ```
 
 ## Querying references
 
+![link to a reference via a statement node](../../images/wikidata-statement-reference.png)
+
+The third situation where you may need to construct a query through a statement node is in the case where you want information about references associated with the statement. For example, if you want to know all of the references that support the assertion that the NBC Nightly News is broadcasted by NBC, you could use this query:
+
+```
+select distinct ?reference where {
+    wd:Q2 p:P2 ?statementNode.
+    ?statement prov:wasDerivedFrom ?reference.
+    ?statement ps:P2 wd:Q3.
+}
+```
+
+The result of this query would be the identifiers for the references, composed of the `wdref:` namespace and the hash identifier for the reference. Since this identifier is opaque, this query isn't probably very helpful. However, if we add an additional link to reference URLs that are linked to the reference, the query results would produce the source URLs, which would be much more useful.
+
+```
+select distinct ?url where {
+    wd:Q2 p:P2 ?statementNode.
+    ?statement prov:wasDerivedFrom ?reference.
+    ?reference pr:P3 ?url.
+    ?statement ps:P2 wd:Q3.
+}
+```
+
+## Queries that involve value nodes
+
+![link to a reference via a statement node](../images/value_node_diagram.png)
+
+Certain value types are more complex than others. Dates, quantities, and geocoordinates cannot be represented as a single simple value. For example, in the wikibase model, completely describing a date requires not only the time, but the precision of that time, and the calendar model for the date. 
+
+Here is a query to determine the date on which the artwork "The Farmhouse by the Water" by Anthonie Waterloo ([Q102974173](https://www.wikidata.org/wiki/Q102974173) was created. The property "inception" (P571) is used to link to the date an artwork was created. We can use the following query to discover the date:
+
+```
+select distinct ?date where {
+    wd:Q102974173 wdt:P571 ?date.
+}
+```
+
+The result is `1700-01-01T00:00:00Z`. However, this query does not tell us whether it is 1 January 1700, the year 1700, or the 17th century. All of those dates are represented by the same value in the wikibase model.
 
 
-------
+
 
 ## Querying for label information
 
