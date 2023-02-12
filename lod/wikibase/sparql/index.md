@@ -223,22 +223,22 @@ filter(lang(?label) = "en")
 
 # Querying programatically using Python
 
-Although the Query Service graphical interface is nice for testing queries and learning SPARQL, it is often more effective to retrieve information from the Query Service SPARQL endpoint via HTTP using a script. There are a number of ways to accomplish sending and receiving data, but there are various issues that make some methods better than others. The [sparqler class](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikidata/sparqler.py) was written as a general way to make SPARQL queries using Python, but it was specifically designed to alleviate some known issues with using the Wikidata Query Service. For details, see [this blog post](https://baskauf.blogspot.com/2022/06/making-sparql-queries-to-wikidata-using.html). The information here will provide the minimal information required to use it to query the Wikidata Query Service or a custom wikibase Query Service.
+Although the Query Service graphical interface is nice for testing queries and learning SPARQL, it is often more effective to retrieve information from the Query Service SPARQL endpoint via HTTP using a script. There are a number of ways to accomplish sending and receiving data, but there are issues that make some methods better than others. The [sparqler class](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikidata/sparqler.py) was written as a general way to make SPARQL queries using Python, but it was specifically designed to alleviate some known issues with using the Wikidata Query Service. For details, see [this blog post](https://baskauf.blogspot.com/2022/06/making-sparql-queries-to-wikidata-using.html). The information here will provide the minimal information required to use it to query the Wikidata Query Service or a custom wikibase Query Service.
 
 ## Setup
 
-The easiest way to use the sparqler class is to go to [its raw page](https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/code/wikidata/sparqler.py), copy the code, and paste it into your code editor. Because a wikibase Query Service is read-only, you really only need the code through the `query` method ([lines 11 through 140](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikidata/sparqler.py#L11-L140) since the `update`, `load`, and `drop` methods won't work. If you just run the code as-is, it will query the Wikidata Query Service and retrieve Q IDs associated with a list of labels.
+The easiest way to use the `sparqler` class is to go to [its raw page](https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/code/wikidata/sparqler.py), copy the code, and paste it into your code editor. Because a wikibase Query Service is read-only, you really only need the code through the `query` method ([lines 11 through 140](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikidata/sparqler.py#L11-L140) since the `update`, `load`, and `drop` methods require write access and won't work. If you just run all of the code as it is in the GitHub file (the class plus a minimal script that uses it), it will query the Wikidata Query Service and retrieve Q IDs associated with a list of labels.
 
-To use the class in your own script, you need to pass in a user-agent string when you create an instance of the class if you are querying the Wikidata Query Service:
+To use the class to query the Wikidata Query Service in your own script, you need to pass in a user-agent string when you create an instance of the class:
 
 ```
 user_agent = 'TestAgent/0.1 (mailto:email@domain.com)'
 wdqs = Sparqler(useragent=user_agent)
 ```
 
-Wikimedia policy requires applications that request data from the API to identify themselves. So you should modify the `user_agent` string to include some name for your script and your own email address if you are using the Wikidata Query Service. For your own custom Query Service, a user-agent string is optional.  
+Wikimedia policy requires applications that request data from an API to identify themselves. Unidentified scripts or scripts with an ambiguous user-agent header may be suspected of carrying out a denial of service attack. So if you are using the Wikidata Query Service, you should modify the `user_agent` string to include some name for your script and your own email address. For querying your own custom Query Service, a user-agent string is optional.  
 
-The class defaults to the Wikidata Query Service endpoint. If you want to use it with a custom wikibase, you need to pass in the SPARQL endpoint URL as an `endpoint` keyword argument. (See the first section of this page for information about determining the endpoint URL.) Here is an example of an endpoint URL for a wikibase.cloud wikibase:
+The class defaults to the Wikidata Query Service SPARQL endpoint. If you want to use it with a custom wikibase, you need to pass in the SPARQL endpoint URL as an `endpoint` keyword argument. (See the first section of this page for information about determining the endpoint URL.) Here is an example of an endpoint URL for a wikibase.cloud wikibase:
 
 ```
 wbwh = Sparqler(endpoint='https://wbwh-test.wikibase.cloud/query/sparql')
@@ -246,7 +246,7 @@ wbwh = Sparqler(endpoint='https://wbwh-test.wikibase.cloud/query/sparql')
 
 ## Sending a query
 
-To send a query, you need to define the query as a multi-line string. Here is an example that lists all of the values of "instance of" in a wikibase where P1 is the "instance of" property:
+To send a query, you need to define the query as a string. Here is an example that lists all of the values of "instance of" in a wikibase, where P1 is the "instance of" property:
 
 ```
 query_string = '''PREFIX wdt: <https://wbwh-test.wikibase.cloud/prop/direct/>
@@ -259,8 +259,8 @@ FILTER(lang(?label)="en")
 
 Notes:
 - To make the query easier to read, it is assigned as a multi-line string (using triple single-quotes).
-- SPARQL queries are case insensitive, so the keywords don't need to be capitalized.
-- Since this is a query to a custom wikibase, any prefix abbreviations like `wdt:` must be defined in a prolog. The prefix IRI needs to be adjusted to use the domain name of the wikibase.
+- SPARQL queries are case insensitive, so capitalizing the keywords is optional.
+- Since this is a query to a custom wikibase, any prefix abbreviations like `wdt:` must be defined in a prolog (see the [namespace prolog](#namespace-prolog) section of this page). The prefix IRI needs to be adjusted to use the domain name of the wikibase.
 - If the labels are only available in English, the FILTER line can be omitted.
 
 Once the query string has been defined, it is passed in as the first argument of the `.query()` method:
@@ -269,7 +269,7 @@ Once the query string has been defined, it is passed in as the first argument of
 data = wbwh.query(query_string)
 ```
 
-The query defaults to the `select` query form. To use the `ask`, `construct`, or `describe` forms, a `form` keyword argument must be provided.
+The query defaults to the `select` query form. To use the `ask`, `construct`, or `describe` forms, a `form` keyword argument must be provided. See the [parameters](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikidata/sparqler.py#L53-L63) and [return value](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikidata/sparqler.py#L76-L81) documentation in the script for details.
 
 ## Using the response
 
@@ -302,7 +302,7 @@ When a SELECT query is sent, the data returned from the method is Python list of
 ]
 ```
 
-Each dictionary in the list has as its keys the variables that were specified by the SELECT clause (`class` and `label` in this example). The values of those keys depend on the datatype of the values that are bound to those variables by the query (`uri` and `literal` in the example). You can access those values by looping through the list and specifying the values you want as you would typically do for dictionaries. Here is an example that prints all of the labels:
+Each dictionary in the list has as its keys the variables that were specified by the SELECT clause (`class` and `label` in this example). The values of those keys depend on the datatype of the values that are bound to those variables by the query (`uri` and `literal` in the example). You can access the data about the bound variables by looping through the list and specifying the values you want as you would typically do for dictionaries. Here is an example that prints all of the labels:
 
 ```
 for result in data:
@@ -354,5 +354,5 @@ statue
 [creating properties using a script](../properties/)
 
 ----
-Revised 2023-02-11
+Revised 2023-02-12
 
