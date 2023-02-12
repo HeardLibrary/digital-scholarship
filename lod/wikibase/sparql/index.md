@@ -39,7 +39,9 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 
 If you are using your own wikibase, you will need to paste the namespace abbreviations, listed above, into the query text box as a query prolog.  Replace the domain name `http://wikibase.svc` with the domain name of your wikibase. For example, if you've set up a wikibase at wikibase.cloud named `wbwh-test`, you would replace the domain name with `https://wbwh-test.wikibase.cloud`.
 
-You actually only need to include the prefixes that you are using in your query, but it doesn't hurt anything to paste them all in.  
+You actually only need to include the prefixes that you are using in your query, but it doesn't hurt anything to paste them all in. 
+
+Note: the Query service seems to know the `rdfs:` namespace without requiring it to be defined.
 
 # Wikibase SPARQL graph pattern variants
 
@@ -270,6 +272,48 @@ data = wbwh.query(query_string)
 ```
 
 The query defaults to the `select` query form. To use the `ask`, `construct`, or `describe` forms, a `form` keyword argument must be provided. See the [parameters](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikidata/sparqler.py#L53-L63) and [return value](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikidata/sparqler.py#L76-L81) documentation in the script for details.
+
+**Technical note on the use of quotes in query strings**
+
+Because double (`"`) and single (`'`) quotes are used in Python and SPARQL to delineate literal strings, but may also be used within the strings themselves as quotation marks and apostrophes, it can be challenging to avoid generating errors in your code and when the SPARQL query is processed if the string is variable and you don't know what it will be in advance.
+
+A general solution to this problem is as follows:
+
+1. Enclose the string in either triple double or triple single quotes. Do this by concatenating literal triple quotes to the beginning and end of the string variable and assigning the result to a variable for the enclosed string.
+2. Choose whether to use triple double or triple single quotes based on the value of the last character of the string. If the last character in the string is a double quote, use triple single quotes. Otherwise, use triple double quotes.
+3. Insert the enclosed string into the query by concatenation.
+
+Here is a function that will automatically enclose the string correctly:
+
+```
+def safe_quotes(label: str) -> str:
+    """Encloses a string in appropriate triple quotes to prevent malformed SPARQL query."""
+    if label[-1]=='"':
+        enclosed = "'''" + label + "'''"
+    else:
+        enclosed = '"""' + label + '"""'
+    return enclosed
+```
+
+Here is an example of a query that uses the function (Sparqler object instantiated as in the examples above):
+
+```
+import json
+
+test_string = 'theme from "Dr. Zhivago"'
+#test_string = "Ain't Misbehavin'"
+#test_string = '''She's the "Mona Lisa"'''
+
+query_string = '''select distinct ?item where {
+  ?item rdfs:label ''' + safe_quotes(test_string) + '''@en.
+}'''
+print(query_string)
+
+data = wdqs.query(query_string)
+print(json.dumps(data, indent=2))
+```
+
+You can test the different test strings by uncommenting them.
 
 ## Using the response
 
