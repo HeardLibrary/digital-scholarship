@@ -132,7 +132,7 @@ select distinct ?url where {
 
 Certain value types are more complex than others. Dates, quantities, and geocoordinates cannot be represented as a single simple value. For example, in the wikibase model, completely describing a date requires not only the time, but the precision of that time, and the calendar model for the date. 
 
-Here is a query to determine the date on which the artwork "The Farmhouse by the Water" by Anthonie Waterloo ([Q102974173](https://www.wikidata.org/wiki/Q102974173) was created. The property "inception" (P571) is used to link to the date an artwork was created. We can use the following query to discover the date:
+Here is a query to determine the date on which the artwork "The Farmhouse by the Water" by Anthonie Waterloo ([Q102974173](https://www.wikidata.org/wiki/Q102974173)) was created. The property "inception" (P571) is used to link to the date an artwork was created. We can use the following query to discover the date:
 
 ```
 select distinct ?date where {
@@ -142,8 +142,29 @@ select distinct ?date where {
 
 The result is `1700-01-01T00:00:00Z`. However, this query does not tell us whether it is 1 January 1700, the year 1700, or the 17th century. All of those dates are represented by the same value in the wikibase model.
 
+We could also perform the query via the statement node, using the `p:` and `ps:` property links as we did in the previous queries:
 
+```
+select distinct ?date where {
+    wd:Q102974173 p:P571 ?statement.
+    ?statement ps:P571 ?date.
+}
+```
 
+However, this isn't an improvement, because it still only links to the time value and not to the other information about the date. To find those simple values, we need to link through the value node that groups the simple date values. Here's what that query would look like:
+
+```
+select distinct ?date ?precision where {
+  wd:Q102974173 p:P571 ?statement.
+  ?statement psv:P571 ?valueNode.
+  ?valueNode wikibase:timeValue ?date.
+  ?valueNode wikibase:timePrecision ?precision.
+}
+```
+
+This query provides `1700-01-01T00:00:00Z` for the date, as before, but also indicates that the precision is "7", the value used in the wikibase model to indicate precision to the nearest century. If you view the [Wikidata page for Q102974173](https://www.wikidata.org/wiki/Q102974173), you will see that it displays the date as "17. century".
+
+Other datatypes that require value nodes include quantities (linked to `wikibase:quantityAmount` and `wikibase:quantityUnit`) and geocoordinates (linked to `wikibase:geoLatitude`, `wikibase:geoLongitude`, and `wikibase:geoPrecision`).
 
 ## Querying for label information
 
