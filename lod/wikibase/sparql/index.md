@@ -172,42 +172,42 @@ It is relatively simple to acquire the labels associated with items. However, si
 
 ![links from a generic property to variants](../../images/generic-prop-relationships.png)
 
-Here is a query that asks what properties are associated with the "NBC" item in the diagram:
+Here is a query that asks what generic properties are associated with the "NBC" item in the diagram:
 
 ```
 SELECT DISTINCT ?directProp ?label
 WHERE {
-  wd:Q2 ?directProp ?value.
-  ?prop wikibase:directClaim ?directProp.
-  ?prop rdfs:label ?label.
-  }
-  ```
+wd:Q2 ?directProp ?value.
+?prop wikibase:directClaim ?directProp.
+?prop rdfs:label ?label.
+}
+```
 
-  Notice that in order to differentiate between the direct property that I care about and other flavors of properties, I include the triple pattern:
+Notice that in order to differentiate between the direct property that I care about and other flavors of properties, I include the triple pattern:
 
-  ```
-    ?prop wikibase:directClaim ?directProp.
-  ```
+```
+?prop wikibase:directClaim ?directProp.
+```
 
-  which only applies to direct properties.  That also serves the purpose of including in my graph pattern a link to the generic property so that I can access the property label.
+which only applies to direct properties.  That also serves the purpose of including in my graph pattern a link to the generic property so that I can access the property label.
 
-  Note that this query will return the property labels for every available language. In a custom wikibase, labels may be available in only one or a few languages. However, if this query is run in Wikidata, there are likely to be many language labels. To restrict the labels to a single language, we can filter the labels:
+Note that this query will return the property labels for every available language. In a custom wikibase, labels may be available in only one or a few languages. However, if this query is run in Wikidata, there are likely to be many language labels. To restrict the labels to a single language, we can filter the labels:
 
-  ```
-  SELECT DISTINCT ?directProp ?label
+```
+SELECT DISTINCT ?directProp ?label
 WHERE {
-  wd:Q23197 ?directProp ?value.
-  ?prop wikibase:directClaim ?directProp.
-  ?prop rdfs:label ?label.
-  filter(lang(?label) = "en")
-  }
-  ```
+wd:Q23197 ?directProp ?value.
+?prop wikibase:directClaim ?directProp.
+?prop rdfs:label ?label.
+filter(lang(?label) = "en")
+}
+```
 
-  ![links from a generic property to variants](../../images/generic-ref-prop-relationships.png)
+![links from a generic property to variants](../../images/generic-ref-prop-relationships.png)
 
-  ## Querying for reference property labels
+## Querying for reference property labels
 
-  Here is a more complex query that returns all of the references associated with a particular kind of statement made about NBC. The link to the generic property makes it possible to list the names of the reference properties that were used to define the reference.
+Here is a more complex query that returns all of the references associated with a particular kind of statement made about NBC. The link to the generic property makes it possible to list the names of the reference properties that were used to define the reference.
 
   ```
 SELECT DISTINCT ?refInstance ?refProp ?label ?value
@@ -220,6 +220,7 @@ WHERE {
   filter(lang(?label) = "en")
   }
   ```
+----
 
 [back to the wikibase model](../)
 
