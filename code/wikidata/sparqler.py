@@ -1,7 +1,18 @@
-# (c) 2022 Steven J. Baskauf
+# sparqler, a class for make SPARQL queries to the Wikidata Query Service and other endpoints.
+version = '1.1'
+created = '2023-02-12'
+
+# (c) 2022-2023 Steven J. Baskauf
 # This program is released under a GNU General Public License v3.0 http://www.gnu.org/licenses/gpl-3.0
 # Author: Steve Baskauf
-# Date: 2022-06-07
+
+# -----------------------------------------
+# Version 1.0 change notes (2022-06-07):
+# - Initial version
+# -----------------------------------------
+# Version 1.1 change notes (2023-02-12):
+# - Added support for sessions
+# -----------------------------------------
 
 import requests
 import datetime
@@ -13,15 +24,19 @@ class Sparqler:
 
     Parameters
     -----------
+    method: str
+        Possible values are "post" (default) or "get". Use "get" if read-only query endpoint.
+        Must be "post" for update endpoint.
+    endpoint: URL
+        Defaults to Wikidata Query Service if not provided.
     useragent : str
         Required if using the Wikidata Query Service, otherwise optional.
         Use the form: appname/v.v (URL; mailto:email@domain.com)
         See https://meta.wikimedia.org/wiki/User-Agent_policy
-    endpoint: URL
-        Defaults to Wikidata Query Service if not provided.
-    method: str
-        Possible values are "post" (default) or "get". Use "get" if read-only query endpoint.
-        Must be "post" for update endpoint.
+    session: requests.Session
+        If provided, the session will be used for all queries. Note: required for the Commons Query Service.
+        If not provided, a generic requests method (get or post) will be used.
+        NOTE: Currently only implemented for the .query() method since I don't have any way to test the mehtods that write.
     sleep: float
         Number of seconds to wait between queries. Defaults to 0.1
         
@@ -29,7 +44,7 @@ class Sparqler:
     -------------
     requests, datetime, time
     """
-    def __init__(self, method='post', endpoint='https://query.wikidata.org/sparql', useragent=None, sleep=0.1):
+    def __init__(self, method='post', endpoint='https://query.wikidata.org/sparql', useragent=None, session=None, sleep=0.1):
         # attributes for all methods
         self.http_method = method
         self.endpoint = endpoint
@@ -38,6 +53,7 @@ class Sparqler:
                 print('You must provide a value for the useragent argument when using the Wikidata Query Service.')
                 print()
                 raise KeyboardInterrupt # Use keyboard interrupt instead of sys.exit() because it works in Jupyter notebooks
+        self.session = session
         self.sleep = sleep
 
         self.requestheader = {}
@@ -111,9 +127,15 @@ class Sparqler:
 
         start_time = datetime.datetime.now()
         if self.http_method == 'post':
-            response = requests.post(self.endpoint, data=payload, headers=self.requestheader)
+            if self.session is None:
+                response = requests.post(self.endpoint, data=payload, headers=self.requestheader)
+            else:
+                response = self.session.post(self.endpoint, data=payload, headers=self.requestheader)
         else:
-            response = requests.get(self.endpoint, params=payload, headers=self.requestheader)
+            if self.session is None:
+                response = requests.get(self.endpoint, params=payload, headers=self.requestheader)
+            else:
+                response = self.session.get(self.endpoint, params=payload, headers=self.requestheader)
         elapsed_time = (datetime.datetime.now() - start_time).total_seconds()
         self.response = response.text
         time.sleep(self.sleep) # Throttle as a courtesy to avoid hitting the endpoint too fast.
