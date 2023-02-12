@@ -174,7 +174,7 @@ It is relatively simple to acquire the labels associated with items. However, si
 
 Here is a query that asks what properties are associated with the "NBC" item in the diagram:
 
-```sparql
+```
 SELECT DISTINCT ?directProp ?label
 WHERE {
   wd:Q2 ?directProp ?value.
@@ -185,19 +185,31 @@ WHERE {
 
   Notice that in order to differentiate between the direct property that I care about and other flavors of properties, I include the triple pattern:
 
-  ```sparql
+  ```
     ?prop wikibase:directClaim ?directProp.
   ```
 
   which only applies to direct properties.  That also serves the purpose of including in my graph pattern a link to the generic property so that I can access the property label.
 
+  Note that this query will return the property labels for every available language. In a custom wikibase, labels may be available in only one or a few languages. However, if this query is run in Wikidata, there are likely to be many language labels. To restrict the labels to a single language, we can filter the labels:
+
+  ```
+  SELECT DISTINCT ?directProp ?label
+WHERE {
+  wd:Q23197 ?directProp ?value.
+  ?prop wikibase:directClaim ?directProp.
+  ?prop rdfs:label ?label.
+  filter(lang(?label) = "en")
+  }
+  ```
+
   ![links from a generic property to variants](../../images/generic-ref-prop-relationships.png)
 
-  ## Querying for references
+  ## Querying for reference property labels
 
-  Here is a query that returns all of the references associated with a particular kind of statement made about NBC. The link to the generic property makes it possible to list the names of the reference properties that were used to define the reference.
+  Here is a more complex query that returns all of the references associated with a particular kind of statement made about NBC. The link to the generic property makes it possible to list the names of the reference properties that were used to define the reference.
 
-  ```sparql
+  ```
 SELECT DISTINCT ?refInstance ?refProp ?label ?value
 WHERE {
   wd:Q2 p:P2 ?statementInstance.
@@ -205,6 +217,7 @@ WHERE {
   ?refInstance ?refProp ?value.
   ?refEntity wikibase:reference ?refProp.
   ?refEntity rdfs:label ?label.
+  filter(lang(?label) = "en")
   }
   ```
 
