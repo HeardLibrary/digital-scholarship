@@ -107,5 +107,7 @@ I can then paste in the data for the new references in the `discovery_date_ref1_
 
 [querying a wikibase with SPARQL](../sparql/)
 
+[interacting with Structured Data on Commons](../sdoc/)
+
 ----
 Revised 2023-02-11

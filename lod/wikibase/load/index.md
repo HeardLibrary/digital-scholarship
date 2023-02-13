@@ -363,5 +363,7 @@ Here's a [link to the CSV after the upload](https://github.com/HeardLibrary/link
 
 [querying a wikibase with SPARQL](../sparql/)
 
+[interacting with Structured Data on Commons](../sdoc/)
+
 ----
 Revised 2023-02-11

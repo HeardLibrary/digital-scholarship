@@ -180,11 +180,13 @@ The full script can be downloaded from [here](https://github.com/HeardLibrary/li
 
 [back to the wikibase model](../)
 
-[deleting statements and references](../delete/)
-
 [loading data into a wikibase](../load/)
 
+[deleting statements and references](../delete/)
+
 [creating properties using a script](../properties/)
+
+[querying a wikibase with SPARQL](../sparql/)
 
 ----
 Revised 2023-02-12

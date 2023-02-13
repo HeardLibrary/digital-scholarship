@@ -88,11 +88,13 @@ If we want to fix the problem with the first property, we can just correct the e
 
 [back to the wikibase model](../)
 
-[deleting statements and references](../delete/)
-
 [loading data into a wikibase](../load/)
 
+[deleting statements and references](../delete/)
+
 [querying a wikibase with SPARQL](../sparql/)
+
+[interacting with Structured Data on Commons](../sdoc/)
 
 ----
 Revised 2023-02-11

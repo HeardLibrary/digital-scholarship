@@ -17,6 +17,7 @@ In addition to this general introduction, there are several related tutorials th
 - [Deleting many statements or references from a wikibase using the VanderDeleteBot Python script](delete/)
 - [Mass creation of properties in a non-Wikimedia wikibase using the VanderPropertyBot Python script](properties/)
 - [Querying a generic wikibase using SPARQL](sparql/)
+- [Structured Data on Commons as a wikibase instance](sdoc/)
 
 
 # The Wikibase data model

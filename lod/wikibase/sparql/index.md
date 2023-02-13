@@ -391,11 +391,13 @@ statue
 
 [back to the wikibase model](../)
 
-[deleting statements and references](../delete/)
-
 [loading data into a wikibase](../load/)
 
+[deleting statements and references](../delete/)
+
 [creating properties using a script](../properties/)
+
+[interacting with Structured Data on Commons](../sdoc/)
 
 ----
 Revised 2023-02-12
