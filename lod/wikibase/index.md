@@ -3,6 +3,9 @@ permalink: /lod/wikibase/
 title: The wikibase model
 breadcrumb: wikibase
 ---
+
+A short link to this page is <http://vanderbi.lt/wikibase> .
+
 # About this tutorial
 
 This totorial is intended to be an introduction to any wikibase instance. That means that it not only applies to the most well-known instance, [Wikidata](https://www.wikidata.org/), but also to [Structured Data on Commons](https://commons.wikimedia.org/wiki/Commons:Structured_data), or any generic wikibase, such as those hosted on [wikibase.cloud](https://www.wikibase.cloud/). (When this was originally written in January of 2020, installing Wikibase was only feasible for most people using a Docker image. That was beyond the technical capabilities of most users, so now that wikibase.cloud is available, I recommend using it since it only takes a few button clicks to set up a wikibase. For historical reasons, I will maintain a link here to lessons on [installing and using Docker](../..//host/docker/) and [Installing Wikibase on your local computer](../install/#using-docker-compose-to-create-an-instance-of-wikibase-on-your-local-computer).)
@@ -223,6 +226,8 @@ In this example, the schema for the Access to Biological Collections Data (ABCD)
 [creating properties using a script](../properties/)
 
 [querying a wikibase with SPARQL](../sparql/)
+
+[Structured Data on Commons as a wikibase instance](sdoc/)
 
 ----
 Revised 2023-02-09
