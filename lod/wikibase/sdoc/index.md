@@ -22,15 +22,15 @@ The SDoC uses the multilingual label feature of the wikibase model and these app
 
 ## SDoC properties and statements
 
-SDoC statements can be made using the `Structured data` tab of the Commons file information page. There are two properties that have special importance and that are frequently used to make SDoC statements: "main subject" (`P921`) and "depicts" (`P180`). In the case of exact representations of two dimensional artworks, "digital representation of" (`P6243`) also has special significance described in the [Visual artworks modeling page](https://commons.wikimedia.org/wiki/Commons:Structured_data/Modeling/Visual_artworks).  "depicts" is one one of the most important properties because it feeds the search tools. For more information see the [Depiction modeling page](https://commons.wikimedia.org/wiki/Commons:Structured_data/Modeling/Depiction). 
+SDoC statements can be made using the `Structured data` tab of the information page for any Commons media file. There are two properties that have special importance and that are frequently used to make SDoC statements: "main subject" (`P921`) and "depicts" (`P180`). In the case of exact representations of two dimensional artworks, "digital representation of" (`P6243`) also has special significance described in the [Visual artworks modeling page](https://commons.wikimedia.org/wiki/Commons:Structured_data/Modeling/Visual_artworks).  "depicts" is one one of the most important properties because it feeds the search tools. For more information see the [Depiction modeling page](https://commons.wikimedia.org/wiki/Commons:Structured_data/Modeling/Depiction). 
 
 In some cases, SDoC statements will be added automatically after a media item is created. If an image contains EXIF metadata, they may be used to automatically generate statements about camera model, date created, etc. When a license template is used, the copyright and licensing statements will also be generated automatically.
 
 # Writing data programatically using VanderBot
 
-Unlike in Wikidata, users do not create media file items directly in the SDoC wikibase. Instead, the items are created and M IDs are assigned when the media files are uploaded. Thus it is important to be able to find out the M IDs for media items if you want to use the Commons API to upload SDoC statements or edit captions (i.e. labels). There are [several methods for finding M IDs](https://commons.wikimedia.org/wiki/Commons:SPARQL_query_service#Find_M_IDs). The M IDs are also recorded if you make uploads using the [CommonsTool] Python script (described in [this blog post](https://baskauf.blogspot.com/2022/09/commonstool-script-for-uploading-art.html)). 
+Unlike in Wikidata, users do not create media file items directly in the SDoC wikibase. Instead, the items are created and M IDs are assigned when the media files are uploaded. Thus it is important to be able to find out the M IDs for media items if you want to use the Commons API to upload SDoC statements or edit captions (i.e. labels). There are [several methods for finding M IDs](https://commons.wikimedia.org/wiki/Commons:SPARQL_query_service#Find_M_IDs). The M IDs are also recorded if you make uploads using the [CommonsTool](https://github.com/HeardLibrary/linked-data/blob/master/commonsbot/README.md) Python script (described in [this blog post](https://baskauf.blogspot.com/2022/09/commonstool-script-for-uploading-art.html)). 
 
-Since SDoC is just another wikibase, the [general instructions for writing to wikibases](../) with the VanderBot script apply. In this example, we will see how to write depicts statements using VanderBot. Creating other statements would be similar.
+Since SDoC is just another wikibase, the [general instructions for writing to wikibases](../load/) with the VanderBot script apply. In this example, we will see how to write depicts statements using VanderBot. Creating other statements would be similar.
 
 Credentials are valid across Wikimedia APIs, so if you have already created credentials to use with the Wikidata API, they can be used here. However, the [credentials file](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/wikibase/api/wikibase_credentials.txt) must have `https://commons.wikimedia.org` as the value for `endpointUrl`. 
 
@@ -38,7 +38,7 @@ Because of the way VanderBot works, each interaction with the API can only invol
 
 The [config.yaml](https://github.com/HeardLibrary/linked-data/blob/master/commonsbot/depicts/config.yaml) file that maps the columns in this table shows how I set up the `depicts_label` column as a column to ignore. The value of `manage_descriptions` is set to `false` because descriptions aren't used in SDoC, so there's no point in having a column for that. Before running VanderBot, I need would need to run the [ConvertToMetadataSchema](https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/convert-config.md#details-of-script-to-convert-configuration-data-to-metadata-description-and-csv-files) script to generate the appropriate [csv-metadata.json](https://github.com/HeardLibrary/linked-data/blob/master/commonsbot/depicts/csv-metadata.json) file needed by VanderBot. That script will also generate the header row for the CSV file, which I would need if I didn't already have the [depicts.csv](https://github.com/HeardLibrary/linked-data/blob/master/commonsbot/depicts/depicts.csv) file. 
 
-If I visit the [information page](https://commons.wikimedia.org/wiki/File:Madonna_and_Child_with_St._Elizabeth_and_infant_John_the_Baptist_-_Vanderbilt_Fine_Arts_Gallery_-_1979.0321P_copy.tif) for the media file denoted by `M113161207` and click on the `Structured data` tab, I can see the depicts statements that I created with the script.
+If I visit the [information page](https://commons.wikimedia.org/wiki/File:Madonna_and_Child_with_St._Elizabeth_and_infant_John_the_Baptist_-_Vanderbilt_Fine_Arts_Gallery_-_1979.0321P_copy.tif) for the media file denoted by `M113161207` and click on the `Structured data` tab, I can see the depicts statements that I created with the script. Note: if you know the M ID of a media file, you can load its information page by appending its M ID to the string 'http://commons.wikimedia.org/entity/`, then loading it into your browser, like this: <http://commons.wikimedia.org/entity/M113161207>.
 
 # Querying
 
@@ -64,7 +64,7 @@ Currently (2023-02-12) the authentication method is a bit of a kludge. In order 
 b8d15147d1cfed1129f1f7f38e2acb03.9f8b5d50d1861bf2198ead63ff345c4a94986c61
 ```
 
-When you get this string save it as the only text in a plain text file with no newline (hard return) at the end of the line. You can use a plain text editor like TextEdit on Mac or Notepad on Windows to create the file. Call the file `wcqs_oauth_cookie.txt` and save it in your home directory. 
+When you get this string, save it as the only text in a plain text file with no newline (hard return) at the end of the line. You can use a plain text editor like TextEdit on Mac or Notepad on Windows to create the file. Call the file `wcqs_oauth_cookie.txt` and save it in your home directory. 
 
 **Important note:** This cookie allows any user who has it to query under your user account! It will remain active until you [revoke access to it](https://commons.wikimedia.org/wiki/Commons:SPARQL_query_service/API_endpoint#How_long_is_the_wcqsOauth_cookie_valid?). So do NOT save this file in some location that will be publicly exposed, such as a GitHub repository. The example code assumes that you have saved it in your home directory. You can save it somewhere else and use keyword arguments in the script to indicate that location. But keep this warning in mind if you choose a different location.
 
@@ -87,7 +87,7 @@ class Sparqler:
 (PASTE THE __init__ SECTION AND query METHOD HERE)
 ```
 
-Session initialization code from the example Python script from the Commons wiki.
+Session initialization code modified from the example Python script from the Commons wiki.
 
 ```
 def init_session(endpoint, token):
