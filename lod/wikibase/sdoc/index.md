@@ -26,6 +26,20 @@ SDoC statements can be made using the `Structured data` tab of the information p
 
 In some cases, SDoC statements will be added automatically after a media item is created. If an image contains EXIF metadata, they may be used to automatically generate statements about camera model, date created, etc. When a license template is used, the copyright and licensing statements will also be generated automatically.
 
+## Commons identifiers
+
+Commons uses a dizzying array of identifiers for its media files. There are four:
+
+1. The most basic one is the media filename, unencoded and with file extension.
+
+2.  The Commons web page URL is formed from the media filename by prepending a subpath and "File:", replacing spaces in the filename with _, and URL-encoding the file name string. The reverse conversion may be lossy because it assumes that underscores should be turned into spaces and the filename might actually contain underscores.
+
+3. The Wikidata IRI identifier for the image is formed from the media filename by URL-encoding it and prepending a subpath and "Special:FilePath/". The reverse conversion is lossless since it simply reverse URL-encodes the local name part of the IRI.
+
+4. Each media page is also identified by an M ID, which is the Commons equivalent of a Q ID. Since structured data on Commons is based on a Wikibase instance, the M ID is used when writing structured data to the API.
+
+The appendix at the bottom of this page contains some Python code that can be used to convert among these forms and to look up the M ID using the Commons API if the media filename is known.
+
 # Writing data programatically using VanderBot
 
 Unlike in Wikidata, users do not create media file items directly in the SDoC wikibase. Instead, the items are created and M IDs are assigned when the media files are uploaded. Thus it is important to be able to find out the M IDs for media items if you want to use the Commons API to upload SDoC statements or edit captions (i.e. labels). There are [several methods for finding M IDs](https://commons.wikimedia.org/wiki/Commons:SPARQL_query_service#Find_M_IDs). The M IDs are also recorded if you make uploads using the [CommonsTool](https://github.com/HeardLibrary/linked-data/blob/master/commonsbot/README.md) Python script (described in [this blog post](https://baskauf.blogspot.com/2022/09/commonstool-script-for-uploading-art.html)). 
@@ -189,5 +203,98 @@ The full script can be downloaded from [here](https://github.com/HeardLibrary/li
 [querying a wikibase with SPARQL](../sparql/)
 
 ----
-Revised 2023-02-12
+
+# Appendix: code to convert among Commons identifiers
+
+To use the first four functions, you need to import `urllib.parse`. The last function requires importing the `requests` module, which may need to be installed using PIP on some systems.
+
+## Filename to Commons Wikidata URL
+
+```
+def filename_to_commons_url(filename):
+    """Convert a raw file name to a Wikidata IRI identifier."""
+    encoded_filename = urllib.parse.quote(filename)
+    url = commons_prefix + encoded_filename
+    return url
+```
+
+## Commons Wikidata URL to filename 
+
+```
+def commons_url_to_filename(url):
+    """Convert a Wikidata IRI identifier to an unencoded file name.
+    
+    Note
+    ----
+    The form of the URL is: http://commons.wikimedia.org/wiki/Special:FilePath/Castle%20De%20Haar%20%281892-1913%29%20-%20360%C2%B0%20Panorama%20of%20Castle%20%26%20Castle%20Grounds.jpg
+    """
+    string = url.split(commons_prefix)[1] # get local name file part of URL
+    filename = urllib.parse.unquote(string) # reverse URL-encode the string
+    return filename
+```
+
+## Filename to Commons web page URL
+
+```
+def filename_to_commons_page_url(filename):
+    """Convert a raw file name to a Commons web page URL."""
+    filename = filename.replace(' ', '_')
+    encoded_filename = urllib.parse.quote(filename)
+    url = commons_page_prefix + encoded_filename
+    url = url.replace('%28', '(').replace('%29', ')').replace('%2C', ',')
+    return url
+```
+
+## Commons web page URL to filename (potentially lossy)
+
+```
+def commons_page_url_to_filename(url):
+    """Convert a Commons web page URL to a raw file name.
+    
+    Note
+    ----
+    The form of the URL is: https://commons.wikimedia.org/wiki/File:Castle_De_Haar_(1892-1913)_-_360%C2%B0_Panorama_of_Castle_%26_Castle_Grounds.jpg
+    This conversion may be lossy if the file name contains underscores rather than spaces, since this function assumes that all underscores should be changed to spaces.
+    """
+    string = url.split(commons_page_prefix)[1] # get local name file part of URL
+    string = string.replace('_', ' ')
+    filename = urllib.parse.unquote(string) # reverse URL-encode the string
+    return filename
+```
+
+## Use media filename to look up M ID via API
+
+This script does not perform a time-consuming operation with the API (in contrast to a media file upload). So if it is used repeatedly without intervening operations that take a significant amount of time, you should probably add a `time.sleep` delay between API calls. Otherwise you may be blocked. Alternatively, I think you could modify the params to look up multiple filenames in a single API call.
+
+```
+def get_commons_image_pageid(image_filename):
+    """Look up the Commons image page ID ("M ID") using the image file name.
+    
+    Note
+    ----
+    The wbeditentity_upload function (which writes to a Wikibase API) needs the M ID, 
+    the structured data on Commons equivalent of a Q ID. 
+    """
+    # get metadata for a photo from the file name
+    params = {
+        'action': 'query',
+        'format': 'json',
+        'titles': 'File:' + image_filename,
+        'prop': 'info'
+    }
+
+    response = requests.get('https://commons.wikimedia.org/w/api.php', params=params)
+    data = response.json()
+    #print(json.dumps(data, indent=2))
+    page_dict = data['query']['pages'] # this value is a dict that has the page IDs as keys
+    page_id_list = list(page_dict.keys()) # the result of the .keys() method is a "dict_keys" object, so coerce to a list
+    page_id = page_id_list[0] # info on only one page was requested, so get item 0
+    #print('Page ID:',page_id)
+    
+    # NOTE: appears to return '-1' when it can't find the page.
+    return page_id
+```
+
+----
+Revised 2023-02-16
 
