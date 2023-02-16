@@ -38,7 +38,7 @@ Commons uses a dizzying array of identifiers for its media files. There are four
 
 4. Each media page is also identified by an M ID, which is the Commons equivalent of a Q ID. Since structured data on Commons is based on a Wikibase instance, the M ID is used when writing structured data to the API.
 
-The appendix at the bottom of this page contains some Python code that can be used to convert among these forms and to look up the M ID using the Commons API if the media filename is known.
+The [appendix at the bottom of this page](#appendix-code-to-convert-among-commons-identifiers) contains some Python code that can be used to convert among these forms and to look up the M ID using the Commons API if the media filename is known.
 
 # Writing data programatically using VanderBot
 
@@ -262,11 +262,16 @@ def commons_page_url_to_filename(url):
     return filename
 ```
 
-## Use media filename to look up M ID via API
+## Use media filename to look up M ID via the Commons API
 
-This script does not perform a time-consuming operation with the API (in contrast to a media file upload). So if it is used repeatedly without intervening operations that take a significant amount of time, you should probably add a `time.sleep` delay between API calls. Otherwise you may be blocked. Alternatively, I think you could modify the params to look up multiple filenames in a single API call.
+Because this function performs an HTTP GET and not a POST, authentication with the API is not required. Based on the [Wikimedia User-Agent policy](https://meta.wikimedia.org/wiki/User-Agent_policy), API users must supply a User-Agent header for all requests. This may not be enforced for a small number of GET requests, but if this function is used for more than testing, you should modify the value of `user_agent` to provide a tool name and your email address.
+
+This script does not perform a time-consuming operation with the API (in contrast to a media file upload). So if it is used repeatedly without intervening operations that take a significant amount of time, you should probably add a significant delay between API calls (currently the delay is set for 0.1 seconds). Otherwise you may be blocked. Alternatively, I think you could modify the params to look up multiple filenames in a single API call.
 
 ```
+import requests
+from time import sleep
+
 def get_commons_image_pageid(image_filename):
     """Look up the Commons image page ID ("M ID") using the image file name.
     
@@ -275,6 +280,8 @@ def get_commons_image_pageid(image_filename):
     The wbeditentity_upload function (which writes to a Wikibase API) needs the M ID, 
     the structured data on Commons equivalent of a Q ID. 
     """
+    user_agent = 'tool_name/version (mailto:account@provider.org)'
+
     # get metadata for a photo from the file name
     params = {
         'action': 'query',
@@ -283,7 +290,7 @@ def get_commons_image_pageid(image_filename):
         'prop': 'info'
     }
 
-    response = requests.get('https://commons.wikimedia.org/w/api.php', params=params)
+    response = requests.get('https://commons.wikimedia.org/w/api.php', params=params, headers={'User-Agent': user_agent})
     data = response.json()
     #print(json.dumps(data, indent=2))
     page_dict = data['query']['pages'] # this value is a dict that has the page IDs as keys
@@ -292,6 +299,9 @@ def get_commons_image_pageid(image_filename):
     #print('Page ID:',page_id)
     
     # NOTE: appears to return '-1' when it can't find the page.
+    
+    sleep(0.1)
+
     return page_id
 ```
 
