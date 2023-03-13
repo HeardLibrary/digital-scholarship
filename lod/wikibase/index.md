@@ -219,15 +219,15 @@ In this example, the schema for the Access to Biological Collections Data (ABCD)
 
 ----
 
-[loading data into a wikibase](../load/)
+[loading data into a wikibase](load/)
 
-[deleting statements and references](../delete/)
+[deleting statements and references](delete/)
 
-[creating properties using a script](../properties/)
+[creating properties using a script](properties/)
 
-[querying a wikibase with SPARQL](../sparql/)
+[querying a wikibase with SPARQL](sparql/)
 
 [Structured Data on Commons as a wikibase instance](sdoc/)
 
 ----
-Revised 2023-02-09
+Revised 2023-03-13
