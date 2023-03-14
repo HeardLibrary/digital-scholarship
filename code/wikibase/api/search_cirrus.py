@@ -4,7 +4,7 @@ created = '2023-02-22'
 
 # (c) 2023 Vanderbilt University. This program is released under a GNU General Public License v3.0 http://www.gnu.org/licenses/gpl-3.0
 # Author: Steve Baskauf
-# For more information, see https://github.com/HeardLibrary/linked-data/tree/master/vanderbot
+# For more information, see https://github.com/HeardLibrary/digital-scholarship/tree/master/code/wikibase/api
 
 # General information on Wikimedia Search: https://www.mediawiki.org/wiki/API:Search_and_discovery
 # Wikimedia Search Platform team page: https://www.mediawiki.org/wiki/Wikimedia_Search_Platform
