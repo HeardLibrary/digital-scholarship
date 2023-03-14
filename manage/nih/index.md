@@ -38,5 +38,7 @@ Select a repository for your data according to these priorities:
 
 [CORG/Association of Research Libraries NIH DMSP policy briefing sheet for institutional leadership](https://www.arl.org/wp-content/uploads/2022/05/NIH-2023-Data-Management-and-Sharing-Policy-Briefing-Document.pdf)
 
+[ICPSR guidelines for depositing NIH data](https://www.icpsr.umich.edu/web/deposit/cms/4254)
+
 ----
-Revised 2022-12-05
+Revised 2023-03-14
