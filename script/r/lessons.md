@@ -31,7 +31,7 @@ The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/p
 
 **Instructor:** Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange a time to talk.
 
-I will be presenting the lessons using RStudio in the cloud using the "posit" platform. It behaves almost exactly like RStudio desktop but does not require any installation. Create an account at <https://posit.cloud/> before the first lesson to save time, then go through the [RStudio Cloud quickstart](../../codegraf/003b/) lesson if you haven't used RStudio before. It includes 8 minutes of videos.
+I will be presenting the lessons using RStudio in the cloud using the "posit" platform. It behaves almost exactly like RStudio desktop but does not require any installation. Create an account at <https://posit.cloud/> before the first lesson to save time, then go through the [posit.cloud quickstart](../../codegraf/003b/) lesson if you haven't used RStudio before. It includes 8 minutes of videos.
 
 You are welcome to use desktop RStudio if you already have it installed, but we will not be spending time going over the installation process. There are some [installation videos](../../codegraf/003/) that you are welcome to watch if you want to do an installation yourself. Stop on the page after the `Installing Anaconda` section.
 
@@ -79,4 +79,4 @@ TBD
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2023-01-12
+Revised 2023-03-20
