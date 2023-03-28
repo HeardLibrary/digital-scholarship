@@ -137,28 +137,3 @@ calendar <- read_csv("https://raw.githubusercontent.com/HeardLibrary/digital-sch
 weekdays <- c(0, 1, 1, 1, 1, 1, 0)
 work_week_calls <- calendar$number_calls * weekdays
 
-# -------------------
-# Homework
-# ------------------
-
-# Read in as regular data frame
-schools_data_df <- read.csv("https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/gis/wg/Metro_Nashville_Schools.csv")
-# Read in as tibble
-schools_data <- read_csv("https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/gis/wg/Metro_Nashville_Schools.csv")
-
-# 1. What is the difference between how read.csv() and read_csv() treat spaces in column headers?
-
-
-# 2. Display the values in the zip code column
-
-
-# 3. How many values are there in the zip code column?
-
-
-# 4. Calculate the total number of students in each school by adding the values in the male and female columns
-
-
-# 5. Calculate the fraction of students that are white in each school
-
-
-# 6. Try to load into a data frame some Excel file that you have on your local drive using the read.xlsx() function.

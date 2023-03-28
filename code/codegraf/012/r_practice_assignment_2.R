@@ -4,9 +4,15 @@
 # Write your code in the space after the comment prompt for each problem. Write any 
 # verbal answers to the problems as comments following the prompt.
 
-# Problem 1. Use the code in the lesson script to load the Nashville schools dataset. 
+# Problem 1. Load the Nashville schools dataset two ways using the code below. 
 # What is different about the way spaces in column headers are treated 
 # in regular data frames created by read.csv() and tibbles created by read_csv() ?
+
+
+# Read in as regular data frame
+schools_data_df <- read.csv("https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/gis/wg/Metro_Nashville_Schools.csv")
+# Read in as tibble
+schools_data <- read_csv("https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/gis/wg/Metro_Nashville_Schools.csv")
 
 
 # Problem 2. Display the values in the zip code column. Use the $ notation.
