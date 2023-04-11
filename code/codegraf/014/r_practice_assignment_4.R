@@ -21,7 +21,7 @@
 # only the rows that have a zip code of 37211. Assign those rows to a new tibble. 
 
 
-# B. Convert the new gender column from character stings to a factor using the as.factor() function, then create a 
+# B. Convert the new gender column from character strings to a factor using the as.factor() function, then create a 
 # box and whisker plot of counts vs. gender.
 
 
