@@ -19,7 +19,8 @@ schools_tibble <- read_csv("https://raw.githubusercontent.com/HeardLibrary/digit
 
 # Problem 3. Create two new columns that give the fraction of students that are 
 # economically disadvantaged and that have limited English proficiency (i.e. divide 
-# each of the original columns by the totals). 
+# each of the original columns by the totals).
+
 
 # Problem 4. Create a new tibble that has only the two columns you generated in the 
 # last problem, the "totals" column, and the "School Name" column. You can do this 
