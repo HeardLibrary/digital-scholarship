@@ -43,7 +43,7 @@ If you have never programmed before, I recommend that you work through two optio
 | Mar 29 | 2 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
 | Apr 5 | 3 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
 | Apr 12 | 4 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
-| Apr 19 | 5 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (46 min)  |
+| Apr 19 | 5 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (45 min)  |
 
 
 # R Resources
@@ -66,11 +66,6 @@ Research IT <https://research.vanderbilt.edu/researchadministration/about/resear
 
 Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 
-## Software Carpentries 
-
-Co-sponsored by DiSC, Office of the Vice Provost for Research, Research IT, ACCRE, and the Data Science Institute
-
-TBD
 
 
 
@@ -79,4 +74,4 @@ TBD
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2023-03-20
+Revised 2023-04-18
