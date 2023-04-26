@@ -68,6 +68,8 @@ Dr. Mishra recommends the book *Python for Data Analysis - Data Wrangling with P
 | Nov 22 | 4 | Scraping with Beautiful Soup | [Jupyter notebook](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/lesson4-scrape.ipynb) |
 | Dec 6 | 5 | Project | [Jupyter notebook for Twitter location search project](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/scrape/pylesson/twitter_location_search.ipynb) |
 
+[University of Alabama Libraries Scholarly API Cookbook](https://ualibweb.github.io/UALIB_ScholarlyAPI_Cookbook/content/about/introduction.html)
+
 
 ## Intermediate Lessons (Files and tables) - Fall 2020
 
