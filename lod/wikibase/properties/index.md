@@ -22,7 +22,7 @@ Each property is restricted to one of several types of values that can be used w
 | ------------------| ----------------------- |
 | String | `string` | `string` |
 | Monolingual text | `monolingualtext` | `monolingualtext` |
-| Quantity | quantity | `quantity` |
+| Quantity | `quantity` | `quantity` |
 | Point in time | `time` | `date` |
 | Geographic coordinates | `globe-coordinate` | `globecoordinate` |
 | Item | `wikibase-item` | `item` |
