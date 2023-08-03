@@ -1,8 +1,8 @@
-# Vanderbilt Heard Library digital scholarship resources
+# Vanderbilt Heard Library digital education resources
 
-Code and documentation for digital scholarship resources provided by the Vanderbilt Libraries Digital Scholarship and Scholarly Communications Office.
+Code and documentation for digital education resources provided by the Vanderbilt Libraries Digital Lab.
 
-[Go to the Digital Scholarship Resources website](https://heardlibrary.github.io/digital-scholarship/)
+[Go to the Digital Education Resources website](https://heardlibrary.github.io/digital-scholarship/)
 
 ## Repo structure
 
