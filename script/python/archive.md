@@ -1,10 +1,10 @@
 ---
 permalink: /script/python/archive/
-title: DiSC Python lessons archive
+title: Python lessons archive
 breadcrumb: Archive
 ---
 
-# DiSC Python Lessons Archive
+# Digital Lab Python Lessons Archive
 
 ## Introduction to pandas and Matplotlib - Fall 2022
 
@@ -17,6 +17,9 @@ These lessons will introduce the key features of pandas with an emphasis on reus
 | Nov 16 | 3 | Extracting and changing data in DataFrames | [lesson videos](../../codegraf/009b/) (25 min) / [optional lesson on summarizing and rearanging DataFrames](../../codegraf/009c/) (18 min) |
 | Nov 30 | 4 | Introduction to Matplotlib | [lesson videos](../../codegraf/010/) (22 min, 42 min with optional videos) |
 
+## QT Py Computer Lesson Series: Microcontrollers with CircuitPython - Spring 2022
+
+[Lesson landing page](../circuit/)
 
 ## Archive of Beginners Lessons - Spring 2020
 
@@ -87,4 +90,4 @@ Dr. Mishra recommends the book *Python for Data Analysis - Data Wrangling with P
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2023-01-12
+Revised 2023-08-03

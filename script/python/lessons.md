@@ -1,16 +1,16 @@
 ---
 permalink: /script/python/lessons/
-title: DiSC Python lessons
+title: Digital Lab Python lessons
 breadcrumb: Lessons
 ---
 
-# DiSC Python Lessons
+# Digital Lab Python Lessons
 
 A shortened link to this page is [vanderbi.lt/py](http://vanderbi.lt/py).
 
 ## About the lessons
 
-DiSC Python lessons are provided by the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/) at [Vanderbilt University](https://www.vanderbilt.edu/).  The DiSC office provides regular lessons for Python beginners with a variety of followup intermediate and advanced lessons. There is no cost associated with the lessons.
+Digital Lab Python lessons are provided by the [Digital Lab](https://www.library.vanderbilt.edu/disc/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/) at [Vanderbilt University](https://www.vanderbilt.edu/).  The Digital Lab provides regular lessons for Python beginners with a variety of followup intermediate and advanced lessons. There is no cost associated with the lessons.
 
 The beginners lessons are generally offered at least once per semester.  See the schedule below for session details.   
 
@@ -18,7 +18,7 @@ Each lesson includes of a series of videos with a practice Jupyter/Colab noteboo
 
 The lessons are part of a free, online learning system called [CodeGraf](../../codegraf). You are welcome to work through these lessons or any of the other lesson modules available in CodeGraf on your own at any time (no registration required). To explore all of the lesson modules that are available, visit the [CodeGraf landing page](../../codegraf). 
 
-The DiSC office also provides [lessons for learning R](http://vanderbi.lt/r) and [getting started with GitHub](http://vanderbi.lt/github) in a similar format.
+The Digital Lab also provides [lessons for learning R](http://vanderbi.lt/r) and [getting started with GitHub](http://vanderbi.lt/github) in a similar format.
 
 [Archive of past lessons](../archive/)
 
@@ -52,6 +52,8 @@ If you have never programmed before, I recommend that you work through two optio
 
 Here's a [page of Python resources](../)
 
+Lesson series on [Microcontrollers with CircuitPython](../circuit/)
+
 [O'Reilly for Higher Education](http://www.library.vanderbilt.edu/eres?id=1676) books and videos (Vanderbilt sign-in required)
 
 ## Other sources of Python resources on Vanderbilt's campus
@@ -67,7 +69,7 @@ For more information on all DSI events, visit the [DSI workshops page](https://w
 
 ## Software Carpentries 
 
-Co-sponsored by DiSC, Office of the Vice Provost for Research, Research IT, ACCRE, and the Data Science Institute
+Co-sponsored by the Digital Lab, Office of the Vice Provost for Research, Research IT, ACCRE, and the Data Science Institute
 
 TBD
 
@@ -76,4 +78,4 @@ TBD
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2023-01-12
+Revised 2023-08-03
