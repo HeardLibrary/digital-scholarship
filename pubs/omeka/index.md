@@ -26,7 +26,24 @@ The tutorial only covers installation, setup, and loading files. It does not cov
 
 The following steps are necessary to create a fully functional Omeka site. Under some circumstances, it may be possible to skip some of the steps, particularly if you are only interested in testing Omeka. However, if you want to actually run a production site long-term, you probably will need to complete all of the steps.
 
-1. 
+1. S3 setup.
+2. Set up IAM users.
+3. Create the EC2 web server.
+4. Allocate an Elastic IP address to the EC2 server.
+5. Install and configure Omeka Classic.
+6. Map the EC2 IP address to a domain name.
+7. Enable HTTPS.
+8. Set up AWS Simple Email Service (SES). Optional, but required for multiple users.
+9. Download and enable plugins.
+10. Configure file storage to use S3.
+11. Establish efficient workflow. Optional, but recommended if many image files will be uploaded.
+12. Enable IIIF tools.
+
+Each one of these steps will be described in detail in the following sections
+
+## S3 Setup
+
+
 
 ----
 
