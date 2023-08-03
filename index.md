@@ -1,17 +1,19 @@
 ---
 permalink: /
-title: Digital Scholarship Resources
+title: Digital Education Resources
 breadcrumb: Home
 ---
 
 # About
 
-This site is intended to be a one-stop resource for information broadly related to managing your digital life.  You can access this page via the shortened URL [vanderbi.lt/ds](http://vanderbi.lt/ds).
+This site is intended to be a one-stop resource for information broadly related to managing your digital life.
 
-In addition to the resources on this site, you can browse the Digital Scholarship [code repository](https://github.com/HeardLibrary/digital-scholarship) to find bits of code that might help you.
+In addition to the resources on this site, you can browse the Digital Lab [code repository](https://github.com/HeardLibrary/digital-scholarship) to find bits of code that might help you.
+
+NOTE: Digital Scholarship and Communications (DiSC) is now the Digital Lab.
 
 
-# Lesson series (from previous and current DiSC programming)
+# Lesson series (from previous and current Digital Lab programming)
 
 Understanding My Computer bootcamp (Windows and Mac) [http://vanderbi.lt/computer](http://vanderbi.lt/computer)
 
@@ -69,4 +71,4 @@ The Vanderbilt Libraries maintains [lists of hardware and software](https://www.
 [Go to the site map](map/)
 
 ----
-Revised 2022-09-14
+Revised 2023-08-03
