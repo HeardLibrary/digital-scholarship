@@ -440,8 +440,53 @@ It may be that this is sufficient for HTTPS to fully work. However, before I ins
 
 The configuration is set up so that if a user enters the `http://` version of a URL, it will automatically be redirected to the `https://` version. If your site does not have this desired behavior, you may want to edit your Apache configuration file to be analogous to what is listed above.
 
-
 ## Set up Simple Email Service (SES)
+
+If you are only planning to use the default Super User to edit the site and upload content, then you don't need to enable email for the site. However, if you want to allow other users with their own passwords to perform tasks on the site, you should set up AWS's Simple Email Service (SES). In theory, you should be able to add other users and their passwords via the Users tab in the admin console. However, users that I set up by manually assigning a password could not log in. It appears that a confirmation email is required to enable the user to set up their own password.
+
+When you initially set up SES, you are in its sandbox environment. The sandbox has a limit of 200 emails per day, but the real limitation is that in sandbox mode you can only send emails to verified addresses. The verification process is clunky and I had problems getting it to work. So it is better to just go ahead and apply for production access. That may take up to a day since a human apparently has to review the application. But I was able to get production access with no problem.
+
+1\. Go to SES in the AWS online console and click on Verify identity. Enter your email address.
+
+2\. Click on the link in the verification email.
+
+3\. The Account dashboard should show that you are initially in Sandbox mode with 200 sends per day. Click on SMTP settings in the upper left. Click the "Create SMTP credentials" button.
+
+4\. You will have one chance to see and download the security credentials. Click the `Download Credentials` button to save them. The important information is the SMTP Username and the SMTP Password. 
+
+5\. On the SMTP settings page, the SMTP endpoint is given as 
+
+```
+email-smtp.us-east-1.amazonaws.com
+```
+
+You will need this for the Omeka configuration.
+
+6\. While connected to the EC2 by SSH and logged in as the root user, edit the Omeka configuration file:
+
+```
+cd /var/www/html/archive/application/config
+nano config.ini
+```
+
+Scroll to the Mail section, uncomment (by removing the leading `;`), and edit as follows:
+
+```
+mail.transport.type = "Smtp"
+mail.transport.host = "email-smtp.us-east-1.amazonaws.com"
+mail.transport.port = 587     ; Port number, if applicable.
+mail.transport.name = "localhost"      ; Local client hostname, e.g. "localhost"
+mail.transport.auth = "login" ; For authentication, if required.
+mail.transport.username = "your_smtp_username"
+mail.transport.password = "your_smtp_password"
+mail.transport.ssl = "tls"       ; For SSL support, set to "ssl" or "tls"
+```
+
+Replace the username and password above with yours and set the host to whatever SMTP endpoint was shown on the SMTP settings page.
+
+7\. On the SES website, request production access. You will have to explain how you will use the emails, steps you will take to be a good citizen, etc. I simply said that I needed to send a very small number of confirmation emails to add users to my site, and I didn't have any problem.
+
+8\. When you are approved, you will get an confirmation email with a URL to click on to confirm that you are authorized to use the return email address that you provided. Once you confirm, your Omeka site should be able to send confirmation emails when you add a new user.
 
 ## Downloading and enabling plugins
 
