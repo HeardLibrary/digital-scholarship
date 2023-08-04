@@ -29,18 +29,18 @@ The tutorial only covers installation, setup, and loading files. It does not cov
 
 The following steps are necessary to create a fully functional Omeka site on AWS. Under some circumstances, it may be possible to skip some of the steps, particularly if you are only interested in testing. However, if you want to actually run a production site long-term, you probably will need to complete all of the steps.
 
-1. S3 setup.
-2. Set up IAM users.
-3. Create the EC2 web server.
-4. Allocate an Elastic IP address to the EC2 server.
-5. Install and configure Omeka Classic.
-6. Map the EC2 IP address to a domain name.
-7. Enable HTTPS.
-8. Set up AWS Simple Email Service (SES). Optional, but required for multiple users.
-9. Download and enable plugins.
-10. Configure file storage to use S3.
-11. Establish efficient workflow. Optional, but recommended if many image files will be uploaded.
-12. Enable IIIF tools.
+1. [S3 setup](#s3-setup).
+2. [Set up IAM users](#set-up-iam-users-with-permissions-to-write-to-the-two-buckets).
+3. [Create the EC2 web server](#create-the-web-server).
+4. [Allocate an Elastic IP address to the EC2 server](#allocate-an-elastic-ip-address-to-the-ec2).
+5. [Install and configure Omeka Classic](#install-and-configure-omeka).
+6. [Map the EC2 IP address to a domain name](#mapping-the-ec2s-elastic-ip-to-a-domain-name).
+7. [Enable HTTPS](#enabling-https).
+8. [Set up AWS Simple Email Service (SES)](#set-up-simple-email-service-ses). Optional, but required for multiple users.
+9. [Download and enable plugins](#downloading-and-enabling-plugins).
+10. [Configure file storage to use S3](#configuring-file-storage).
+11. [Establish efficient workflow](#). Optional, but recommended if many image files will be uploaded.
+12. [Enable IIIF tools](#).
 
 Each one of these steps will be described in detail in the following sections. In most cases, I've included one or more links to references I used to figure out that step. 
 
@@ -371,6 +371,75 @@ http://bassettassociates.org/archive/
 which should take you to the Omeka landing page.
 
 ## Enabling HTTPS
+
+Although the site is usable with only HTTP enabled, it is important to enable secure HTTP (HTTPS). The simplest reason is that when a domain name is typed into a browser (e.g. `bassettassociates.org`), the browser will automatically prepend `https://` to form the URL. If only HTTP is enabled, this will result in a file not found error, confusing potential users. The other security-related reason is that with only HTTP enabled, it's possible to intercept usernames and passwords during the login process. Although this is probably unlikely to happen, it is a best practice to carry out login operations using HTTPS to avoid the possibility of compromising login integrety.
+
+If you read online about setting up HTTPS on AWS, you will see all kinds of suggestions, including setting up a load balancer or implementing an Nginx front-end server. Fortunately, these complicated and potentially costly methods are unnecessary to run an Omeka site that is likely to have little traffic. It is relatively easy to set up HTTPS using [Let's Encrypt](https://letsencrypt.org/), a free service that provides security certificates. The following instructions are modified from [a blog post](https://linuxhint.com/secure-apache-lets-encrypt-ubuntu/) and [this article](https://medium.com/jungletronics/aws-letsencrypt-bfce27decd52). Important note: do NOT enable the UFW firewall as indicated in the blog! This is unnecessary given the existing AWS firewall and will result in making it impossible to SSH into the EC2 server.
+
+1\. While logged in as the root user, update again just in case:
+
+```
+apt update
+```
+
+2\. Install Certbot and python3-certbot-apache:
+
+```
+apt install certbot python3-certbot-apache
+```
+
+Check that it worked:
+```
+certbot --version
+```
+
+3\. Get the SSL certificate using Certbot:
+
+```
+certbot --apache -d bassettassociates.org
+```
+
+substituting your domain name for `bassettassociages.org`.
+
+4\. Restart the server:
+
+```
+service apache2 restart
+```
+
+It may be that this is sufficient for HTTPS to fully work. However, before I installed Let's Encrypt, I had experimented with using Open SSL to create a self-signed certificate using instructions from [this blog post](https://linuxhint.com/enable-https-apache-web-server/). Setting up the self-signed certificate involved editing the same Apache configuration file that is modified by installing Let's Encrypt. So when I examined the configuration file after installing Let's Encrypt, I wasn't sure what modifications were made by the Let's Encrypt installations and which were left over from my Open SSL experiment. Whatever the case, this is the final form of the file `000-default.conf` in the  `/etc/apache2/sites-enabled/` directory (minus comments): 
+
+```
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    RewriteEngine on
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R=301,L]
+
+    RewriteCond %{SERVER_NAME} =bassettassociates.org
+    RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+</VirtualHost>
+
+<VirtualHost *:443>
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+    SSLEngine on
+    ServerName bassettassociates.org
+    SSLCertificateFile /etc/letsencrypt/live/bassettassociates.org/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/bassettassociates.org/privkey.pem
+    Include /etc/letsencrypt/options-ssl-apache.conf
+</VirtualHost>
+```
+
+The configuration is set up so that if a user enters the `http://` version of a URL, it will automatically be redirected to the `https://` version. If your site does not have this desired behavior, you may want to edit your Apache configuration file to be analogous to what is listed above.
+
 
 ## Set up Simple Email Service (SES)
 
