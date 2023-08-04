@@ -279,6 +279,7 @@ host     = "localhost"
 username = "omeka"
 password = "%8)&2P^TFR2C"
 dbname   = "omeka"
+```
 
 Be sure to replace the fake password above with the real one that you used. Save and exit the file.
 
@@ -289,34 +290,199 @@ apt install libpng-dev libjpeg-dev libtiff-dev
 apt install imagemagick
 ```
 
-12\. Append `/archive/install/install.php` to the IP address to go to the setup URL:
+12\. Append `/archive/install/install.php` to the IP address to go to the setup URL, e.g.:
+
+```
 http://54.243.224.52/archive/install/install.php
-13\. Fill out the configuration form. (I used baskauf and the same password as the database access password). For the ImageMagic Directory Path, use
-/usr/bin
-Note: there are some unspecified requirements for the password. You can’t use “pwd”, so use something longer and more complicated.
+```
+
+13\. Fill out the configuration form. The username and password given here are important as they will be used to log into the website. For the ImageMagic Directory Path, use `/usr/bin`. **Note:** there are some unspecified requirements for the password, so use something relatively long and complicated.
+
 14\. Change to the Apache directory and edit the Apache2 configuration file:
+
+```
 cd /etc/apache2
 nano apache2.conf
-Scroll down to the directory access section and for /var/www/ change to 
-AllowOverride All
-Reboot the server using:
-service apache2 restart
-15\. Go to the admin page:
-http://54.243.224.52/archive/admin/
-The first time, you will be redirected to a login page. On that page, give the username and password you set up for the super user.
-16. You can also view the site as a user by going to 
-http://54.243.224.52/archive/
+```
 
-17\. It probably is a good idea to turn on error messages, at least while setting up.
+In the configuration file, scroll down to the directory access section and for the `/var/www/`` setting, change to:
+
+```
+AllowOverride All
+```
+
+Reboot the server using:
+
+```
+service apache2 restart
+```
+
+15\. Go to the admin page:
+
+```
+http://54.243.224.52/archive/admin/
+```
+
+The first time, you will be redirected to a login page. On that page, give the username and password you set up for the super user. You can also view the public site by going to
+
+```
+http://54.243.224.52/archive/
+```
+
+16\. It probably is a good idea to turn on error messages, at least while setting up. From the server command line:
+
+```
 cd /var/www/html/archive
 nano .htaccess
+```
 
-Uncomment:
+Uncomment the line:
+
+```
 SetEnv APPLICATION_ENV development
+```
 
-18\. Restart the server:
+17\. Restart the server:
+
+```
 service apache2 restart
+```
 
+At this point, you can experiment with uploading a file, but do not upload many files since they will be lost when the S3 storage adapter is installed later. 
+
+## Mapping the EC2's Elastic IP to a domain name
+
+The easiest way to attach a custom domain name is by registering it through AWS's [Route 53 domain registration system](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-ec2-instance.html). 
+
+1\. From the AWS control panel, go to Route 53, select and register a domain name. In the remaining examples, I'm using the domain name `bassettassociates.org`. Monitor the status using the Requests page under Domains. When the domain is registered, the `Status` in the `Domains`, `Requests` page will change to Successful. You should also receive a confirmation email at the email address you used to register the domain. 
+
+2\. Get the IP address for your Elastic IP from the EC2 control panel if you don't already have it.
+
+3\. At the [Route 53 dashboard](https://console.aws.amazon.com/route53/), click on `Hosted zones`, then the link with the name of your zone. Click on `Create record`.
+
+4\. If you want to use a subdomain (such as "www") in front of your domain name, type it in the Record name box. Otherwise, leave it blank to use only the domain name. Leave the Record type at it's default "A" value. In the `Value` box, enter the IP address you got from step 3. Leave the Routing policy at its default, `Simple routing`. Click `Create records`.
+
+5\. It should take about a minute for the changes to proliferate in the system. After a minute, you can click the View status button at the top of the page. A status of `INSYNC` means it's ready to go. You can try out the domain name by going to the domain name using an http:// URL:
+
+```
+http://bassettassociates.org/archive/
+```
+
+which should take you to the Omeka landing page.
+
+## Enabling HTTPS
+
+## Set up Simple Email Service (SES)
+
+## Downloading and enabling plugins
+
+In this section we will install the S3 storage adapter plugin, necessary to use AWS S3 instead of internal EC2 storage. We will also install plugins that will allow you to import and export data about multiple items using CSV files. CSV import is optional, but is useful to avoid the drudgery of manually uploading many files. CSV export is also optional but is useful for obtaining a summary of metadata added for items.
+
+1\. While connected to the server via SSH and working as the root user, change to the plugins directory:
+
+```
+cd /var/www/html/archive/plugins
+```
+
+2\. **Install the S3 storage adapter.** Go to <https://github.com/EHRI/omeka-amazon-s3-storage-adapter/releases>. Under the most recent release, and “Assets”, locate the zip link. Right click and select `Copy link`. At the command line, type “wget” then paste the link, like this:
+
+```
+wget https://github.com/EHRI/omeka-amazon-s3-storage-adapter/releases/download/v1.1.0/omeka-amazon-s3-storage-adapter-1.1.0.zip
+```
+
+Unzip the downloaded file:
+
+```
+unzip omeka-amazon-s3-storage-adapter-1.1.0.zip
+```
+
+Delete the zip file:
+
+```
+rm omeka-amazon-s3-storage-adapter-1.1.0.zip
+```
+
+3\. **Install the CSV Import and CSV Export plugins.** Go to <https://omeka.org/classic/plugins/> , scroll down to `CSV Import``, right click on the download button, and select `Copy link``. At the server command line, paste the link you copied after `wget` like this:
+
+```
+wget https://github.com/omeka/plugin-CsvImport/releases/download/v2.0.7/CsvImport-2.0.7.zip
+```
+
+Go to <https://omeka.org/classic/plugins/CsvExport/>, right click the download button, and paste the link after wget:
+
+```
+wget https://github.com/utlib/CsvExport/releases/download/v1.1.2/CsvExport.zip
+```
+
+Unzip the two zip files:
+
+```
+unzip CsvImport-2.0.7.zip
+unzip CsvExport.zip
+```
+
+Delete the two zip files:
+
+```
+rm CsvImport-2.0.7.zip
+rm CsvExport.zip
+```
+
+4\. Go to the admin web page if you don’t already have it open and log in if necessary. In my case, the URL is:
+
+```
+http://bassettassociates.org/archive/admin/
+```
+
+5\. Click on the plugins tab. Click on the Install buttons for Amazon S3 Storage Adapter, CSV Import, CSV Export Format, Simple Pages, and Exhibit Builder (if you are interested in using the last two). Click on CSV Export Format. Check the box if you want it to use the original source URLs or leave it unchecked to use the Omeka-generated URLs for the imported original files. If you are using the CSV import from an S3 bucket, you may want to use the original source URL. Otherwise, you will probably want to use the Omeka-generated ones.
+
+## Configuring file storage
+
+Since we are going to use AWS S3 storage, there isn’t really any reason to restrict the file size. It’s possible that if pyramidal TIFFs are uploaded, the files could be very large, so I set the maximum size to 100 MB. As a practical matter, a T2 micro EC2 instance has problems processing image files larger than 50 MB, so 100 MB seems fine as a limit.
+
+1\. Set the maximum file upload size and S3 source in the Omeka configuration file. 
+
+```
+cd /var/www/html/archive/application/config
+nano config.ini
+```
+
+In the Storage section, uncomment (remove prepended “;”) and change to:
+
+```
+storage.adapter = "Omeka_Storage_Adapter_AmazonS3"
+storage.adapterOptions.accessKeyId = your_access_key_id
+storage.adapterOptions.secretAccessKey = your_secret_key
+storage.adapterOptions.bucket = bassett-omeka-storage
+```
+
+Add the line:
+
+```
+storage.adapterOptions.region = us-east-1
+```
+
+In the Upload section, uncomment (remove prepended “;”) and change:
+
+```
+upload.maxFileSize = "100M"
+```
+
+2\. Set the upload limits in the Apache PHP configuration file:
+
+```
+cd /etc/php/8.1/apache2/
+nano php.ini
+```
+
+Change values to:
+
+```
+post_max_size = 100M
+upload_max_filesize = 100M
+```
+
+Note: do not set post_max_size to 0M. Although this disables the maximum for file uploads, it will prevent uploading in other circumstances.
 
 
 ----
