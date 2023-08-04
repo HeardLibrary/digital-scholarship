@@ -21,7 +21,7 @@ As a general reference, I made heavy use of [some general instructions on The Pr
 
 This tutorial is intended for users who want to set up a single digital archive or create a relatively simple digital online exhibit using Omeka Classic. Larger users may be better off with the multi-site Omeka S product (not covered in this tutorial). When you have finished the tutorial, you will have a real functioning website and not a test or "toy" instance. The tutorial includes enabling editing access to the site by multiple users.
 
-The cost to run the site should be around US$10 per month, excluding costs for a custom domain name.
+The cost to run the site should be around US$10 per month, excluding costs for a custom domain name. One reason that the cost is so low is that with the setup below, files are stored in AWS S3 buckets rather than in the file storage allocated to the EC2 instance. S3 storage is very inexpensive and can expand without limit, so the file storage attached to the EC2 server can be minimal. When the Omeka server is running, it requires few resources, so a relatively inexpensive, minimally provisioned EC2 type (T2 micro) can be used.
 
 The tutorial only covers installation, setup, and loading files. It does not cover styling or creating custom web pages. Using International Image Interoperability Framework (IIIF) features is covered to some extent.
 
@@ -48,7 +48,7 @@ Each one of these steps will be described in detail in the following sections. I
 
 The instructions in this step are based in part on [an article from Reclaim Hosting](https://support.reclaimhosting.com/hc/en-us/articles/1500005621161-Setting-up-S3-storage-with-Omeka-Classic#setting-up-s3-storage-with-omeka-classic-0-0).
 
-1\. Log in to AWS and create a bucket for Omeka file storage. In these examples I'm using a bucket called `bassett-omeka-storage``. 
+1\. Log in to AWS and create a bucket for Omeka file storage. In these examples I'm using a bucket called `bassett-omeka-storage`. 
 - I chose to create the project in `us-east-1`. If you chose another zone it's possible that some features may not be available.
 - You MUST choose ACLs enabled in order for Omeka to write to this bucket.
 - To make the images accessible via the web, uncheck “Block all public access”.
@@ -649,9 +649,125 @@ upload_max_filesize = 100M
 
 Note: do not set post_max_size to 0M. Although this disables the maximum for file uploads, it will prevent uploading in other circumstances.
 
+3\. Restart the server:
+
+```
+service apache2 restart
+```
+
+Now when you upload files, they will not be saved in the EC2 file storage, but rather be stored in the S3 bucket you set up in the [S3 setup](#s3-setup) section (`bassett-omeka-storage` in my examples). It is therefore possible to access the files directly from their S3 URLs independently of the Omeka EC2 server. However, the file names are based on opaque IDs assigned by Omeka, so without knowing the IDs, accessing the files is not practical. In the next section, we'll see how to capture the ID numbers after upload.
+
 ## Establish an efficient work flow
 
+Once the S3 file storage is set up, you can manually upload items and enter their metadata by typing into boxes in the Omeka graphical interface. That's fine if you will only have a few objects. However, if you will be uploading many objects, uploading using the graphical interface is very tedious and requires many button clicks. 
 
+The workflow described here is based on assembling the metadata in the most automated way possible, using file naming conventions, a Python script, and programatically created CSV files. Python scripts are also used to upload the files to S3, and from there they can be automatically imported into Omeka. 
+
+After the items are imported, the CSV export plugin can be used to extract the ID numbers assigned to the items by Omeka. A Python script then extracts the IDs from the resulting CSV and inserts them into the original CSVs used to assemble the metadata.
+
+**Notes about TIFF image files**. If original image files are available as high-resolution TIFFs, that is probably the best format to archive from the preservation standpoint. However, there are two considerations. Most browsers will not display TIFFs natively, while JPEGs can be displayed onscreen. The practical implication of this is that image thumbnails are linked directly to the original highres image file. So when a user clicks on the thumbnail of a JPEG, the image is displayed in their browser, but when a TIFF thumbnail is clicked, the file downloads to the user's hard drive without being displayed. When an image is uploaded, Omeka makes several JPEG copies at lower resolution so that they can be displayed onscreen.
+
+The other thing to consider is that if the TIFFs will be used in a IIIF viewer, it is best for them to be saved in [tiled pyramidal form](https://cantaloupe-project.github.io/manual/3.3/images.html#Multi-Resolution). So if TIFFs are used, it is best to pre-process them to generate tiled pyramidal versions of them. In the workflow that follows, there is an additional first step that only applies to TIFFs. 
+
+**Note about file sizes**. In the file configuration settings (previous section), we set a maximum file size of 100 MB. Virtually no JPEGs are ever that big, but some large TIFF files may exceed that size. As a practical matter, the upper limit on file size in this installation is actually about 50 MB. I have found from practical experience that original TIFF files between 50 and 100 MB can generate errors that will cause the server to hang. I have not been able to isolate the actual source of the problem, but it may be related to the process of generating the lower resolution JPEG copies. The problem may be isolated to using the CSV import plugin because some files that hung the server when using the CSV import were then able to be uploaded manually after creating the item record. In one instance, a JPEG that was only 11.4 MB repeatedly failed to upload using the CSV import. Apparently its large pixel dimensions (6144x4360) were the problem (it also was successfully uploaded manually).
+
+The other thing to consider is that when TIFFs are converted to tiled pyramidal form, there is an increase in size of roughly 25% when the low-res layers are added to the original high-res layer. So a 40 MB raw TIFF may be at or over 50 MB after conversion. I have found that if I keep the original file size below 35 MB, the files usually load without problems.
+
+The CSV import plugin requires that all items imported as a batch be the same general type. Since this process is build to handle images, that shouldn't be a problem -- all items will be Still Images. As a practical matter, it is convenient to assign all images in a batch to the same collection. If images intended for several collections are uploaded together in a batch, they will have to be assigned to collections manually after upload.
+
+1\. If the files are TIFFs, use the script [convert_to_pyramidal_tiled_tiff.py](https://github.com/baskaufs/bassettassociates/blob/main/code/convert_to_pyramidal_tiled_tiff.py) to convert raw TIFFs to tiled pyramidal TIFFs. See the script comments for setup. Non-TIFF files (e.g. JPEGs) should be placed directly in the output directory.
+
+2\. If you want to automate upload of the images, create a file called `credentials` (no file extension) that contains the following text:
+
+```
+[default]
+aws_access_key_id = your_access_key
+aws_secret_access_key = your_secret_access_key
+```
+
+Where `your_access_key` and `your_secret_access_key` are the credentials you saved after creating the IAM user for uploading to S3 from your computer. Save the file in a subdirectory of you home directory called `.aws` (note the dot in front of the name -- this will be a hidden directory). This is the correct location for Macs; I'm not sure if it's right for Windows. As noted before, do not expose this information publicly, although because of the security role given to the AIM user, the keys can only be used for uploading or deleting in the one S3 bucket.
+
+3\. The Python script [omeka_upload_data.py](https://github.com/baskaufs/bassettassociates/blob/main/code/omeka_upload_data.py) uses some coding to automatically generate tags and original format types. The coding is also used to generate unique IDs for the items and file names corresponding to the IDs. The meaning of the codes is set in [the global variables section](https://github.com/baskaufs/bassettassociates/blob/8f5b139ede9a4c2107c8879668c2e52b0d04db3e/code/omeka_upload_data.py#L27-L92) of the script. 
+
+The ID is composed of segments separated by underscores. The first one or two segments specifies any tags to be applied to the item. The next to last segment specifies the original format. The final segment is numeric and used to differentiate between items of the same type. If there are more than four segments, segments from the third to the third from last are ignored. 
+
+Here are some examples:
+
+----
+
+Item identifier: [cmp_blu_pl_09](https://bassettassociates.org/archive/items/show/228)
+
+Tags assigned: campus (from cmp) and Bluffton (from blu)
+Original format: plan (from pl)
+Sequence: 09 (from among Bluffton campus plans)
+
+Optionally, the creator of the item can be assigned based on the original format code used as a key in the CREATOR_MAP. In this example, the creator is assigned as "Bassett Associates" whenever the original format type is plan.
+
+----
+
+Item identifier: [zoo_kcz_chimp_sk_01](https://bassettassociates.org/archive/items/show/410)
+
+Tags assigned: zoo (from zoo) and Kansas City (from kcz)
+Original format: sketch (from sk)
+Sequence: 01 (from among Kansas City Zoo chimp exhibit sketches)
+Creator: James H. Bassett (from original format of sketch)
+
+In this example the `chimp` segment is ignored - it is just used to differentiate from among the several exhibits featured in the archive.
+
+----
+
+The Dublin Core Language value is assigned based on the [LANGUAGE_MAP](https://github.com/baskaufs/bassettassociates/blob/8f5b139ede9a4c2107c8879668c2e52b0d04db3e/code/omeka_upload_data.py#L52-L56). If an original media type is not in the map, it will not be assigned a language value. 
+
+The identifiers created for the works should be put in a column with the header `identifier` in a CSV spreadsheet called `identifiers.csv`. There must also be two empty columns named `item_id` and `omeka_id`. (Note: it is assumed that there will be one media item per item. More are allowed by Omeka, but the workflow would need to be modified to account for this.). There may be additional columns that will be ignored by the Python scripts. See [this file](https://github.com/baskaufs/bassettassociates/blob/main/data/identifiers.csv) for an example. 
+
+4\. The files should be renamed so that the first part (before the extension) of their name matches the assigned code. The extensions should correspond to those in the [FORMAT_MAP of the script](https://github.com/baskaufs/bassettassociates/blob/8f5b139ede9a4c2107c8879668c2e52b0d04db3e/code/omeka_upload_data.py#L27-L32) so that the Dublin Core Format values can be set automatically to the correct media type (MIME type) for the file. Note: the script was created to process images, so if non-image file types are used, an error will be generated [when the script tries to determine the pixel dimensions](https://github.com/baskaufs/bassettassociates/blob/8f5b139ede9a4c2107c8879668c2e52b0d04db3e/code/omeka_upload_data.py#L181-L184).
+
+5\. Once the files have been renamed, run the `omeka_upload_data.py` script from the command line. Some metadata values are [hard-coded in the script](https://github.com/baskaufs/bassettassociates/blob/8f5b139ede9a4c2107c8879668c2e52b0d04db3e/code/omeka_upload_data.py#L165-L168), so they should be changed before the script is run. NOTE: it is important that a path argument be given after the script name in the command. This argument is used as the subpath for both the local storage location for the files and the subdirectory path in the S3 bucket. For example:
+
+```
+python3 omeka_upload_data.py zoo/kcz/chimp/
+```
+
+would append `zoo/kcz/chimp/` to the local storage directory path to make
+
+```
+/Users/baskausj/Downloads/bassett_raw_images/zoo/kcz/chimp/
+```
+
+and to generate the S3 bucket base URL:
+
+```
+https://bassettassociates.s3.amazonaws.com/zoo/kcz/chimp/
+```
+
+The script does three things:
+1. Moves the files from the pyramidal TIFF output directory to the appropriate local storage location.
+2. Uploads the files to the S3 raw image source bucket.
+3. Create a metadata CSV file called `upload.csv` filled in based on the codes in the ID and values hard-coded in the script. The CSV is saved in the data directory specified by the `DATA_PATH` constant in the script.
+
+6\. Open the `upload.csv` file using a spreadsheet editor like Libre Office Calc. Check that the Dublin Core:Language value is correct. Some automatically assigned types (e.g. sketch) may not actually have writing on them and should have the value deleted. Add the Dublin Core:Title value to all item records. It is best if the titles are unique and succinctly descriptive, although uniqueness is not required by Omeka. Add the Dublin Core:Date and Dublin Core:Description values if available. Examine the tags list (comma separated) and add or remove any as appropriate. Save the file in CSV format with UTF-8 encoding. Here is an [Example](https://github.com/baskaufs/bassettassociates/blob/1ebeee057edd22f8f71067a1028f3e46d0fba487/data/upload.csv) of a completed metadata upload file. 
+
+7\. Before doing the CSV import for the first time, check to make sure that one of the `upload_url` values actually retrieves the designated file. If it does not, make sure the file has actually been uploaded into S3 using the AWS online console. Check that the `Object URL` for the file matches the value in the CSV and that the bucket is identified as having Access: Public.
+
+8\. Log in to the Omeka site as an administrator or Super User. Add a public collection for the images if there isn't already one. 
+
+9\. Click on the CSV Import option on the left pane. Browse to the `upload.csv` file and select it. Select "Still Image" as the item type. Select the collection you just created. Check the "Make All Items Public?" checkbox. Click `next`.
+
+10\. Because the column headers in the CSV match the standard metadata field names, they should all be matched except for two. For upload_url, check the "Files?" checkbox. For the tags, check the "Tags?" checkbox. Click the Import CSV File button.
+
+11\.You can refresh periodically to watch the upload progress. If the number of files in a batch are few and the file sizes are relatively small (<20 MB), the import usually works without any problems. If the process crashes or hangs, you may need to go into AWS and reboot the EC2 instance. In the EC2 control panel, check the box for the instance and select `Reboot instance` from the `Instance state` dropdown. Be patient and eventually the site will come up again. Check the items and delete items from the incomplete upload. Then start the upload again. The status of the incomplete upload will stay at "In Progress" forever but don't worry about it. 
+
+12\. At this point, the items should be created and assigned to a collection, with the image file uploaded and viewable on the item page. The original image and the derived lower-resolution JPEG images will be in the S3 Omeka storage bucket you set up (`bassett-omeka-storage` in the examples). The versions will be stored in folders called `fullsize`, `original`, `square_thumbnails`, and `thumbnails`. As noted previously, the files will be named using an opaque identifier assigned by Omeka (e.g. `04864eefe984b71b50412faa2e65606d.jpg`). The files that you uploaded to the raw image source bucket (`bassettassociates` in this example) will still be there. In theory, you don't need them any more and could delete them. However, S3 storage costs are so low that you probably will just want to leave them there. Since they have meaningful file names and a subfolder organization of your choice, they would make a pretty nice cloud backup system that is independent of the Omeka instance. After your archive project is complete, you could change the raw image source bucket over to one of the cheaper, low-access types (like Glacier) that have even lower storage costs than a standard S3 bucket. Because both buckets are public, you can use them as a means of giving access to the original high-res files by simply giving the Object URL to the person wanting a copy of the file. 
+
+13\. If you want to maintain an association between the original identifiers/file names and the opaque identifiers assigned by Omeka, you can optionally add a final step to your workflow. The CSV Export Format plugin allows you to export metadata about items as a CSV downloaded to your local computer. The annoying aspect of this is that you can only export data about items that are viewable on a single page of items (the `Select all x results` button does not seem to work for me). You can improve the situation by increasing the number of items displayed per page by going to the Appearance menu of the admin page, clicking on the Settings tabe, and then increasing the number for `Results Per Page (admin)`. To download the metadata, scroll to the bottom of the page containing the items you care about and click on the `csv` link after `Output Formats:`. It doesn't matter if other items that you don't care about are included. Put the resulting `export.csv` file into your local data directory. 
+
+14\. Run the script [extract_omeka_csv_export_data.py](https://github.com/baskaufs/bassettassociates/blob/main/code/extract_omeka_csv_export_data.py). It will extract the item numbers and Omeka image IDs for the uploaded images and put them in the empty columns of the `identifiers.csv` file that you created earlier. It will also concatenate the newly written items from the `upload.csv`` file to the end of a file called `items.csv`. NOTE: you should run this script after each batch is uploaded since the `omeka_upload_data.py` script overwrites any previous `upload.csv` file. 
+
+15. **Backing up data**. There are two mechanisms for backing up your data periodically. 
+
+The most straightforward is to create an Amazon Machine Image (AMI) of the EC2 server. Not only will this save all of your data, but it will also archive the complete configuration of the server at the time the image is made. This is critical if you have any disasters while making major configuration changes and need to roll back the EC2 to an earlier (functional) state. To create an image, go to the EC2 control panel, check the box to the left of your instance name, then from the `Actions` menu, click `Images and templates`. Then select `Create image`. This will create both an "image" and a "snapshot". Give the image a name and detailed description and leave all of the other settings at their defaults. Click `Create image`. If you ever need to restore an image, click `AMIs` from the menu on the left (under `Images`). Select the checkbox of the image you want, and click the `Launch instance from AMI` button.
+
+A simpler way to back up the item metadata is to push the `items.csv` and `identifiers.csv` files to GitHub after each CSV import. Any set of rows from the `items.csv` file can be saved as `upload.csv` and be used to re-upload those items onto any Omeka instance as long as the original files are still in the raw source image S3 bucket. The `identifiers.csv` file documents the link between the file identifiers you assigned and the opaque IDs assigned to the media items by Omeka. This information would be especially useful if you did not keep the originally uploaded files, since it would allow you to find the appropriate files in the `original` folder of the S3 Omeka storage bucket. Of course, if you make manual edits to the metadata, the metadata in the `items.csv` file would be stale.
 
 ## Enable IIIF tools
 
