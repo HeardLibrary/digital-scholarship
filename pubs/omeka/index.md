@@ -21,7 +21,7 @@ As a general reference, I made heavy use of [some general instructions on The Pr
 
 This tutorial is intended for users who want to set up a single digital archive or create a relatively simple digital online exhibit using Omeka Classic. Larger users may be better off with the multi-site Omeka S product (not covered in this tutorial). When you have finished the tutorial, you will have a real functioning website and not a test or "toy" instance. The tutorial includes enabling editing access to the site by multiple users.
 
-The cost to run the site should be around US$10 per month, excluding costs for a custom domain name. One reason that the cost is so low is that with the setup below, files are stored in AWS S3 buckets rather than in the file storage allocated to the EC2 instance. S3 storage is very inexpensive and can expand without limit, so the file storage attached to the EC2 server can be minimal. When the Omeka server is running, it requires few resources, so a relatively inexpensive, minimally provisioned EC2 type (T2 micro) can be used.
+The cost to run the site should be around US$10 per month, excluding costs for a custom domain name. One reason that the cost is so low is that with the setup below, files are stored in AWS S3 buckets rather than in the file storage allocated to the EC2 instance. S3 storage is very inexpensive and can expand without limit, so the file storage attached to the EC2 server can be minimal. When the Omeka server is running, it requires few resources, so a relatively inexpensive, minimally provisioned EC2 type (t2.micro) can be used.
 
 The tutorial only covers installation, setup, and loading files. It does not cover styling or creating custom web pages. Using International Image Interoperability Framework (IIIF) features is covered to some extent.
 
@@ -603,7 +603,7 @@ http://bassettassociates.org/archive/admin/
 
 ## Configuring file storage
 
-Since we are going to use AWS S3 storage, there isn’t really any reason to restrict the file size. It’s possible that if pyramidal TIFFs are uploaded, the files could be very large, so I set the maximum size to 100 MB. As a practical matter, a T2 micro EC2 instance has problems processing image files larger than 50 MB, so 100 MB seems fine as a limit.
+Since we are going to use AWS S3 storage, there isn’t really any reason to restrict the file size. It’s possible that if pyramidal TIFFs are uploaded, the files could be very large, so I set the maximum size to 100 MB. As a practical matter, a t2.micro EC2 instance has problems processing image files larger than 50 MB, so 100 MB seems fine as a limit.
 
 1\. Set the maximum file upload size and S3 source in the Omeka configuration file. 
 
@@ -770,6 +770,60 @@ The most straightforward is to create an Amazon Machine Image (AMI) of the EC2 s
 A simpler way to back up the item metadata is to push the `items.csv` and `identifiers.csv` files to GitHub after each CSV import. Any set of rows from the `items.csv` file can be saved as `upload.csv` and be used to re-upload those items onto any Omeka instance as long as the original files are still in the raw source image S3 bucket. The `identifiers.csv` file documents the link between the file identifiers you assigned and the opaque IDs assigned to the media items by Omeka. This information would be especially useful if you did not keep the originally uploaded files, since it would allow you to find the appropriate files in the `original` folder of the S3 Omeka storage bucket. Of course, if you make manual edits to the metadata, the metadata in the `items.csv` file would be stale.
 
 ## Enable IIIF tools
+
+There are two Omeka plugins that add International Image Interoperability Framework (IIIF) capabilities. 
+
+The [UniversalViewer plugin](https://omeka.org/classic/plugins/UniversalViewer/) allows Omeka to serve images like a IIIF image server and it generates IIIF manifests using the existing metadata. That makes it possible for the Universal Viewer player (included in the plugin) to display images in a rich manner that allows pan and zoom. This plugin was very appealing to me because if it functioned well, it would enable IIIF capabilities without needing to manage any other servers. I was able to install it and the embedded Universal Viewer did launch, but the images never loaded. Despite spending a lot of time messing around with the settings, disabling S3 storage, and launching a larger EC2 image, I was never able to get it to work, even for a tiny JPEG file. I read a number of Omeka forum posts about troubleshooting, but eventually gave up. If I had gotten it to work, there was one potential problem with the setup anyway. The t2.micro instance that I'm running has very low resource capacity (memory, number of CPUs, drive storage), which is OK as I've configured it because the server just has to run a relatively tiny MySQL database and serve static files from S3. Presumably this plugin would also have to generate the image variants that it's serving on the fly and that could max out it out quite easily. I'm disappointed that I couldn't get it to work, but I'm not confident that it's the right tool for a budget installation like this one.
+
+I had more success with the [Iiif Toolkit plugin](https://omeka.org/classic/plugins/IiifItems/). It also provides an embedded Universal Viewer that can be inserted various places in Omeka. The major downside is that you must have access to a separate IIIF server to actually provide the images used in the viewer. I was able to test it out by loading images into the Vanderbilt Libraries' Cantaloupe IIIF server and it worked pretty well. However, setting up your own Cantaloupe server on AWS does not appear to be a trivial task and because of the resourcing issues I just described, it would probably cost a lot more per month to operate than the Omeka site itself. (Vanderbilt's server is running on a cluster with a load balancer, 2 vCPU, and 4 GB memory. All of these increases over a single t2.micro instance involve a significantly increased cost.) So in the absence of an available external IIIF server, this plugin probably would not be useful for an independent user with a small budget. 
+
+One nice feature that I was not able to try was pointing the external server to the `original` folder of the S3 storage bucket. That would be a really nice feature since it would not require loading the images separately into dedicated storage for the IIIF server separate from what is already being provisioned for Omeka. Unfortunately, we have not yet got that working on the Libraries' Cantaloupe server as it seems to require some custom Ruby coding to implement.
+
+**Installation instructions for the IIIF Toolkit**
+
+Based on [instructions on the plugin page](https://omeka.org/classic/plugins/IiifItems/)
+
+1\. While connected to the EC2 server via SSH and logged in as the root user:
+
+```
+cd /var/www/html/omeka/plugins
+```
+
+2\. Issue the command:
+
+```
+git clone https://github.com/utlib/IiifItems.git
+```
+
+git should be installed on the EC2 by default. There is no zip file to unzip or delete since the directories are being cloned directly from GitHub.
+
+3\. Restart the server:
+
+```
+service apache2 restart
+```
+
+4\. From the Omeka admin page, go to the Plugins tab. Under IIIF Toolkit, click the `Install` button. 
+
+5\. There are two other plugins that you may want to install that can make use of the IIIF Toolkit: Exhibit Builder and Simple Pages. They are included in the basic installation of Omeka, so no downloading is required. Just click their install buttons.
+
+6\. There are two ways to get IIIF content into Omeka pages. One is to simply load an existing manifest into an Exhibit Builder page. After creating an exhibit, add a page. For content, select IIIF Manifest as the layout type, then click `Add new content block`. In the Content area, enter a manifest URL in the field to the right of the `Manifest` dropdown value. The IIIF manifest is simply rendered as is in an embedded viewer on the page. No items or metadata are added to the Omeka collection itself.
+
+7\. A more useful function is to import canvases in order to add their content as Omeka items. Click on `IIIF Toolkit` in the left menu, then go to the `Import Items` tab. There are three import types. I explored importing `Manifest` and `Canvas` types since I had those data available. 
+
+Manifest is the most straightforward, but the import was messy and always created a new collection for each item imported. In theory, this could be avoided by selecting an existing collection using the `Parent` dropdown, but this never worked for me. 
+
+I concluded that importing canvases was the only feasible method. Unfortunately, canvas JSON usually doesn't exist in isolation -- it usually is part of the JSON for an entire manifest. The `From Paste` option is useful if you are capable of the tedious task of searching through the JSON for a whole manifest and copying just the JSON for a single canvas from it. I found it much more useful to just create a script that would generate minimal canvas JSON for an image and save it as a file, which could either be uploaded directly, or pushed to the web and read in through a URL. 
+
+The script that I used to do this was [minimal_manifest.py](https://github.com/baskaufs/bassettassociates/blob/main/code/manifests/minimal_manifest.py). See the notes at the top of the script for use. In a nutshell, it gets the pixel dimensions from the image file, with labels and descriptions taken from a CSV file (the import does not use more information than that). These values are inserted into a JSON canvas template, then saved as a file. The script will loop through an entire directory of files, so it's relatively easy to make canvases for a number of images that were already uploaded using the CSV import function (just copy and paste labels and descriptions from the metadata CSV file). An example labels.csv file is [here](https://github.com/baskaufs/bassettassociates/blob/main/code/manifests/labels.csv). 
+
+8\. Once the manifests have been generated, either upload them or paste their URLs (if they were pushed to the web). See [this example](https://s3.amazonaws.com/iiif-manifest.library.vanderbilt.edu/bassett/canvas/exhibit_pike_po_00.json) canvas file generated by the script from the CSV data above. Do not bother to check the `Set as Public?` checkbox because it does not work. For `Local Preview Size` and `Annotation Preview Size`, select Maximum. Click `Import`. 
+
+9\. You will be taken to the Status panel. When the Status bar goes to "Completed", the item has been imported and you can look at it under items. See [this item created from the example data above](https://bassettassociates.org/archive/items/show/512). 
+
+10\. Because there is no way to do this as a batch, nor to import metadata beyond the title and description, each item needs to be imported one at a time and the metadata added manually, or using the Bulk Metadata Editor plugin if possible. This makes uploading many items somewhat impractical. However, for very large images whose detail cannot be seen well in a single image on a screen, the ability to pan and zoom is pretty important. So for some items, like large maps, this tool can be very nice despite the extra work. For a good example, see the [panels page](https://bassettassociates.org/archive/exhibits/show/artspace/panels) from an Omeka exhibit. It is best viewed by changing the embedded viewer to full screen.
+
+One thing that should be noted is that like other images associated with Omeka items, image import using the IIIF Toolkit generates thumbnail, square_thumbnail, and fullsize versions of the image. A IIIF import also generates an "original" JPEG version that is much smaller than the pyramidal tiled TIFF uploaded to the IIIF server. This means that it is possible to create items for TIFF images that are larger than the 50 MB recommended above. An example is the [Binder Park Master Plan](https://bassettassociates.org/archive/items/show/418). If you scroll to the bottom of its page and zoom in, you will see that an incredible amount of detail is visible because the original TIFF file was huge (347 MB). So using IIIF import is a way to display and make available very large image files that exceed the practical limit of 50 MB discussed above.
 
 
 
