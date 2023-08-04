@@ -30,7 +30,7 @@ The tutorial only covers installation, setup, and loading files. It does not cov
 The following steps are necessary to create a fully functional Omeka site on AWS. Under some circumstances, it may be possible to skip some of the steps, particularly if you are only interested in testing. However, if you want to actually run a production site long-term, you probably will need to complete all of the steps.
 
 1. [S3 setup](#s3-setup).
-2. [Set up IAM users](#set-up-iam-users-with-permissions-to-write-to-the-two-buckets).
+2. [Set up AWS user credentials](#set-up-credentials-to-write-to-the-two-buckets).
 3. [Create the EC2 web server](#create-the-web-server).
 4. [Allocate an Elastic IP address to the EC2 server](#allocate-an-elastic-ip-address-to-the-ec2).
 5. [Install and configure Omeka Classic](#install-and-configure-omeka).
@@ -39,8 +39,8 @@ The following steps are necessary to create a fully functional Omeka site on AWS
 8. [Set up AWS Simple Email Service (SES)](#set-up-simple-email-service-ses). Optional, but required for multiple users.
 9. [Download and enable plugins](#downloading-and-enabling-plugins).
 10. [Configure file storage to use S3](#configuring-file-storage).
-11. [Establish efficient workflow](#). Optional, but recommended if many image files will be uploaded.
-12. [Enable IIIF tools](#).
+11. [Establish efficient workflow](#establish-an-efficient-work-flow). Optional, but recommended if many image files will be uploaded.
+12. [Enable IIIF tools](#enable-iiif-tools).
 
 Each one of these steps will be described in detail in the following sections. In most cases, I've included one or more links to references I used to figure out that step. 
 
@@ -73,9 +73,60 @@ Substitute the name of your bucket for “bassett-omeka-storage” and save the 
 
 2\. If you are going to upload all of your content manually, you can skip this step. However, if you plan to do larger scale uploads using the CSV import plugin, repeat the process to create another bucket to hold the raw images that will be used as a data source. I called this one “bassettassociates” so that it will look sensible in the URL, which will be exposed to users.
 
-## Set up IAM users with permissions to write to the two buckets
+## Set up credentials to write to the two buckets
 
+In order to write objects to the S3 buckets and to delete them programatically, you need to set up security credentials. The preferred method for doing this is to set up Identity and Access Management (IAM) users that have very restricted access policies attached to them, i.e. only able to write to and delete objects from particular S3 buckets. However, I was not able to get restricted user credentials to work from Omeka, despite the credentials working fine when tested in Python with the boto3 package for accessing AWS. So I had to use the full root user credentials from my AWS account. This would normally be considered extremely risky, since if those credentials were stolen or accidently exposed they could be used to perform any operation on the AWS account. However, given that the credentials are only being used in a configuration file inside the EC2 server, they should be secure as long as SSH access to the EC2 is guarded. One must be cautious and make sure that no copies of the configuration file are stored in a publicly-accessible place like GitHub.
 
+If you are going to upload content to S3 manually, then you can skip creating an IAM user to upload the files to S3 from your local computer. However, if you are going to use a Python script to do the uploading as part of a streamlined workflow, you should use credentials from a restricted IAM user rather than your full root user credentials to avoid the risk of them being accidentally stolen or exposed by being present on your hard drive. 
+
+1\. **Creating a root user key for access from Omeka**. Click on your username in the upper right of the AWS online console and select `Security Credentials`. 
+
+2\. Under Access keys, click `Create access key`. On the warning page, check the box and click `Create access key`. 
+
+3\. You will have one opportunity to copy or download the `Access key` and `Secret access key` values. Click the `Download .csv file` button and save the file in a secure location where it will NOT be publicly accessible. You will substitute the values in this file for `your_access_key_id` and `your_secret_key` in the configuration file example in the [Configuring file storage](#configuring-file-storage) section of these instructions.
+
+4\. **Creating IAM credentials for automating S3 upload from your computer**. Go to the IAM section of the AWS online console. Click on `Policies` from the left menu.
+
+5\. Click on `Create policy`. Click on the JSON button and erase the existing text.
+
+6\. Paste in the following text:
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:DeleteObject"
+            ],
+            "Resource": "arn:aws:s3:::bassettassociates/*"
+        }
+    ]
+}
+```
+
+In the last line of text, replace `bassettassociates` with the name of the S3 bucket you will use to store the raw images that will be used as a data source.
+
+Click `Next`.
+
+7\. On the next screen enter a policy name and description. I called mine `write-to-bassettassociates-storage`. Click the `Create` button.
+
+8\. Click `Users` in the left menu then click the `Add users` button.
+
+9\. Enter the User name and leave the checkbox unchecked. Click `Next`.
+
+10\. Select the `Add policies directly` button. Under the Permissions policies section, paste the name of the policy that you created in the search box. Check the box at the left of the name of your policy. Click `Next`.
+
+11\. On the review screen, click `Create`. 
+
+12\. On the Users page, click on the name of the user you created. Click on the `Security credentials` tab. Scroll down to the Access keys section and click `Create access key`. 
+
+13\. The next page is designed to scare you away from using the access key. Click on the `Local code button`. Click the Confirmation check box, then click the `Next button`. Give the access key a description, then click `Create access key`. 
+
+14\. You will have one opportunity to copy or download the `Access key` and `Secret access key` values. Click the `Download .csv file` button and save the file in a secure location where it will NOT be publicly accessible. You will use these values later in the instructions for the [Establish efficient workflow](#establish-an-efficient-work-flow) section. 
 
 ## Create the web server
 
@@ -598,10 +649,17 @@ upload_max_filesize = 100M
 
 Note: do not set post_max_size to 0M. Although this disables the maximum for file uploads, it will prevent uploading in other circumstances.
 
+## Establish an efficient work flow
+
+
+
+## Enable IIIF tools
+
+
 
 ----
 
 Questions? Comments? [Contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2023-08-03
+Revised 2023-08-04
