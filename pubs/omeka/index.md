@@ -19,9 +19,9 @@ As a general reference, I made heavy use of [some general instructions on The Pr
 
 **Intended users**
 
-This tutorial is intended for users who want to set up a single digital archive or create a relatively simple digital online exhibit using Omeka Classic. Larger users may be better off with the multi-site Omeka S product (not covered in this tutorial). When you have finished the tutorial, you will have a real functioning website and not a test or "toy" instance. The tutorial includes enabling editing access to the site by multiple users.
+This tutorial is intended for users who want to set up a single digital archive or create a relatively simple digital online exhibit using Omeka Classic. Larger users may be better off with the multi-site Omeka S product (not covered in this tutorial). When you have finished the tutorial, you will have a real functioning website and not a test or "toy" instance. The tutorial includes enabling multi-user editing access.
 
-The cost to run the site should be around US$10 per month, excluding costs for a custom domain name. One reason that the cost is so low is that with the setup below, files are stored in AWS S3 buckets rather than in the file storage allocated to the EC2 instance. S3 storage is very inexpensive and can expand without limit, so the file storage attached to the EC2 server can be minimal. When the Omeka server is running, it requires few resources, so a relatively inexpensive, minimally provisioned EC2 type (t2.micro) can be used.
+The cost to run the site should be around US$10 per month, excluding costs for a custom domain name. One reason that the cost is so low is that with the setup below, files are stored in AWS S3 buckets rather than in the file storage allocated to the EC2 instance. S3 storage is very inexpensive and can expand without limit, so the file storage attached to the EC2 server itself can be minimal. When the Omeka server is running, it requires few resources, so a relatively inexpensive, minimally provisioned EC2 type (t2.micro) can be used.
 
 The tutorial only covers installation, setup, and loading files. It does not cover styling or creating custom web pages. Using International Image Interoperability Framework (IIIF) features is covered to some extent.
 
@@ -75,7 +75,7 @@ Substitute the name of your bucket for “bassett-omeka-storage” and save the 
 
 ## Set up credentials to write to the two buckets
 
-In order to write objects to the S3 buckets and to delete them programatically, you need to set up security credentials. The preferred method for doing this is to set up Identity and Access Management (IAM) users that have very restricted access policies attached to them, i.e. only able to write to and delete objects from particular S3 buckets. However, I was not able to get restricted user credentials to work from Omeka, despite the credentials working fine when tested in Python with the boto3 package for accessing AWS. So I had to use the full root user credentials from my AWS account. This would normally be considered extremely risky, since if those credentials were stolen or accidently exposed they could be used to perform any operation on the AWS account. However, given that the credentials are only being used in a configuration file inside the EC2 server, they should be secure as long as SSH access to the EC2 is guarded. One must be cautious and make sure that no copies of the configuration file are stored in a publicly-accessible place like GitHub.
+In order to write objects to the S3 buckets and to delete them programatically, you need to set up security credentials. The preferred method for doing this is to set up Identity and Access Management (IAM) users that have very restricted access policies attached to them, i.e. only able to write to and delete objects from particular S3 buckets. However, I was not able to get restricted user credentials to work from Omeka, despite the credentials working fine when tested in Python using the `boto3` package for accessing AWS. So I had to use the full root user credentials from my AWS account. This would normally be considered extremely risky, since if those credentials were stolen or accidently exposed they could be used to perform any operation on the AWS account. However, given that the credentials are only being used in a configuration file inside the EC2 server, they should be secure as long as SSH access to the EC2 is guarded. One must be cautious and make sure that no copies of the configuration file are stored in a publicly-accessible place like GitHub.
 
 If you are going to upload content to S3 manually, then you can skip creating an IAM user to upload the files to S3 from your local computer. However, if you are going to use a Python script to do the uploading as part of a streamlined workflow, you should use credentials from a restricted IAM user rather than your full root user credentials to avoid the risk of them being accidentally stolen or exposed by being present on your hard drive. 
 
@@ -130,7 +130,7 @@ Click `Next`.
 
 ## Create the web server
 
-1\. Set up an EC2 instance on AWS called “omeka”, provisioned with Ubuntu and using system defaults (64-bit x86, t2.micro, 1x8 GB storage). Created a new RSA key called omeka_project.pem and used it. Let it create a new security group. Allow SSH traffic from anywhere. Check the Allow HTTPS traffic and Allow HTTP traffic. Then click Launch Instance.
+1\. Set up an EC2 instance on AWS called “omeka”, provisioned with Ubuntu and using system defaults (64-bit x86, t2.micro, 1x8 GB storage). Create a new RSA key called `omeka_project.pem` and use it. Let it create a new security group. Allow SSH traffic from anywhere. Check `Allow HTTPS traffic` and `Allow HTTP traffic`. Then click `Launch Instance`.
 
 Instructions in the next two steps are for Linux (i.e. Mac command line). For other operating systems like Windows, you may need to modify them. 
 
@@ -228,17 +228,17 @@ exit
 
 ## Allocate an Elastic IP address to the EC2
 
-An AWS Elastic IP address will keep your IP address stable. For example, if you have to recreate your EC2 instance, you can transfer the Elastic IP to it without disrupting other resources linked to that IP. An Elastic IP is free as long as it is associated with a running EC2 instance. Since you will be changing the IP address, you need to exit your SSH connection with the EC2. Enter `exit`` twice to exit the root user and close the SSH.
+An AWS Elastic IP address will keep your IP address stable. For example, if you have to recreate your EC2 instance, you can transfer the Elastic IP to it without disrupting other resources linked to that IP. An Elastic IP is free as long as it is associated with a running EC2 instance. Since you will be changing the IP address, you need to exit your SSH connection with the EC2. Enter `exit` twice to exit the root user and close the SSH.
 
 1\. In the AWS console, go to EC2, Network & Security, Elastic IPs. Click the `Allocate Elastic IP address` button. 
 
-2\. Select the `Network Border Group` for your EC2 instance, then click Allocate.
+2\. Select the `Network Border Group` for your EC2 instance, then click `Allocate`.
 
-3\. From the Elastic IP addresses page, check the box by the address, then drop down Actions and select Associate Elastic IP address.
+3\. From the Elastic IP addresses page, check the box by the address, then drop down Actions and select `Associate Elastic IP address`.
 
 4\. Click the Instance radio button. Click on Instance and select your running instance. 
 
-5\. Click on the Associate button. At this point, the former public IP is replaced with the elastic IP (in this example, 54.243.224.52).
+5\. Click on the Associate button. At this point, the former public IP is replaced with the elastic IP (in this example, the IP address changes to 54.243.224.52).
 
 6\. Go to the EC2 console and click on your instance to find the new DNS address and IP address. Test that they work by loading the Apache Default Page:
 
@@ -334,7 +334,7 @@ dbname   = "omeka"
 
 Be sure to replace the fake password above with the real one that you used. Save and exit the file.
 
-11\. I am not sure if this step is required, but I installed Image Magick using directions [these instructions](https://www.linuxcapable.com/how-to-install-imagemagick-on-ubuntu-linux/):
+11\. I am not sure if this step is required, but I installed Image Magick using [these instructions](https://www.linuxcapable.com/how-to-install-imagemagick-on-ubuntu-linux/):
 
 ```
 apt install libpng-dev libjpeg-dev libtiff-dev
@@ -347,7 +347,7 @@ apt install imagemagick
 http://54.243.224.52/archive/install/install.php
 ```
 
-13\. Fill out the configuration form. The username and password given here are important as they will be used to log into the website. For the ImageMagic Directory Path, use `/usr/bin`. **Note:** there are some unspecified requirements for the password, so use something relatively long and complicated.
+13\. Fill out the configuration form. The Super User username and password given here are important as they will be used to log into the website. For the ImageMagic Directory Path, use `/usr/bin`. **Note:** there are some unspecified requirements for the Super User password, so use something relatively long and complicated.
 
 14\. Change to the Apache directory and edit the Apache2 configuration file:
 
@@ -356,7 +356,7 @@ cd /etc/apache2
 nano apache2.conf
 ```
 
-In the configuration file, scroll down to the directory access section and for the `/var/www/`` setting, change to:
+In the configuration file, scroll down to the directory access section and for the `/var/www/` setting, change to:
 
 ```
 AllowOverride All
@@ -411,7 +411,7 @@ The easiest way to attach a custom domain name is by registering it through AWS'
 
 3\. At the [Route 53 dashboard](https://console.aws.amazon.com/route53/), click on `Hosted zones`, then the link with the name of your zone. Click on `Create record`.
 
-4\. If you want to use a subdomain (such as "www") in front of your domain name, type it in the Record name box. Otherwise, leave it blank to use only the domain name. Leave the Record type at it's default "A" value. In the `Value` box, enter the IP address you got from step 3. Leave the Routing policy at its default, `Simple routing`. Click `Create records`.
+4\. If you want to use a subdomain (such as `www``) in front of your domain name, type it in the Record name box. Otherwise, leave it blank to use only the domain name. Leave the Record type at its default "A" value. In the `Value` box, enter the IP address you got from step 3. Leave the Routing policy at its default, `Simple routing`. Click `Create records`.
 
 5\. It should take about a minute for the changes to proliferate in the system. After a minute, you can click the View status button at the top of the page. A status of `INSYNC` means it's ready to go. You can try out the domain name by going to the domain name using an http:// URL:
 
@@ -425,7 +425,7 @@ which should take you to the Omeka landing page.
 
 Although the site is usable with only HTTP enabled, it is important to enable secure HTTP (HTTPS). The simplest reason is that when a domain name is typed into a browser (e.g. `bassettassociates.org`), the browser will automatically prepend `https://` to form the URL. If only HTTP is enabled, this will result in a file not found error, confusing potential users. The other security-related reason is that with only HTTP enabled, it's possible to intercept usernames and passwords during the login process. Although this is probably unlikely to happen, it is a best practice to carry out login operations using HTTPS to avoid the possibility of compromising login integrety.
 
-If you read online about setting up HTTPS on AWS, you will see all kinds of suggestions, including setting up a load balancer or implementing an Nginx front-end server. Fortunately, these complicated and potentially costly methods are unnecessary to run an Omeka site that is likely to have little traffic. It is relatively easy to set up HTTPS using [Let's Encrypt](https://letsencrypt.org/), a free service that provides security certificates. The following instructions are modified from [a blog post](https://linuxhint.com/secure-apache-lets-encrypt-ubuntu/) and [this article](https://medium.com/jungletronics/aws-letsencrypt-bfce27decd52). Important note: do NOT enable the UFW firewall as indicated in the blog! This is unnecessary given the existing AWS firewall and will result in making it impossible to SSH into the EC2 server.
+If you read online about setting up HTTPS on AWS, you will see all kinds of suggestions, including setting up a load balancer or implementing an Nginx front-end server. Fortunately, these complicated and potentially costly methods are unnecessary to run an Omeka site that is likely to have little traffic. It is relatively easy to set up HTTPS using [Let's Encrypt](https://letsencrypt.org/), a free service that provides security certificates. The following instructions are modified from [a blog post](https://linuxhint.com/secure-apache-lets-encrypt-ubuntu/) and [this article](https://medium.com/jungletronics/aws-letsencrypt-bfce27decd52). **Important note:** do NOT enable the UFW firewall as indicated in the blog! This is unnecessary given the existing AWS firewall and will result in making it impossible to SSH into the EC2 server.
 
 1\. While logged in as the root user, update again just in case:
 
@@ -450,7 +450,7 @@ certbot --version
 certbot --apache -d bassettassociates.org
 ```
 
-substituting your domain name for `bassettassociages.org`.
+substituting your domain name for `bassettassociates.org`.
 
 4\. Restart the server:
 
@@ -495,13 +495,13 @@ The configuration is set up so that if a user enters the `http://` version of a 
 
 If you are only planning to use the default Super User to edit the site and upload content, then you don't need to enable email for the site. However, if you want to allow other users with their own passwords to perform tasks on the site, you should set up AWS's Simple Email Service (SES). In theory, you should be able to add other users and their passwords via the Users tab in the admin console. However, users that I set up by manually assigning a password could not log in. It appears that a confirmation email is required to enable the user to set up their own password.
 
-When you initially set up SES, you are in its sandbox environment. The sandbox has a limit of 200 emails per day, but the real limitation is that in sandbox mode you can only send emails to verified addresses. The verification process is clunky and I had problems getting it to work. So it is better to just go ahead and apply for production access. That may take up to a day since a human apparently has to review the application. But I was able to get production access with no problem.
+When you initially set up SES, you are in its sandbox environment. The sandbox has a limit of 200 emails per day, but the real limitation in this situation is that in sandbox mode you can only send emails to verified addresses. The verification process is clunky and I had problems getting it to work. So it is better to just go ahead and apply for production access. That may take up to a day since a human apparently has to review the application. But I was able to get production access with no problem.
 
-1\. Go to SES in the AWS online console and click on Verify identity. Enter your email address.
+1\. Go to SES in the AWS online console and click on `Verify identity`. Enter your email address.
 
 2\. Click on the link in the verification email.
 
-3\. The Account dashboard should show that you are initially in Sandbox mode with 200 sends per day. Click on SMTP settings in the upper left. Click the "Create SMTP credentials" button.
+3\. The Account dashboard should show that you are initially in Sandbox mode with 200 sends per day. Click on SMTP settings in the upper left. Click the `Create SMTP credentials` button.
 
 4\. You will have one chance to see and download the security credentials. Click the `Download Credentials` button to save them. The important information is the SMTP Username and the SMTP Password. 
 
@@ -511,7 +511,7 @@ When you initially set up SES, you are in its sandbox environment. The sandbox h
 email-smtp.us-east-1.amazonaws.com
 ```
 
-You will need this for the Omeka configuration.
+Yours may be different if you are using an availability zone different from `us-east-1`. You will need to know this endpoint subdomain name for the Omeka configuration.
 
 6\. While connected to the EC2 by SSH and logged in as the root user, edit the Omeka configuration file:
 
@@ -567,7 +567,7 @@ Delete the zip file:
 rm omeka-amazon-s3-storage-adapter-1.1.0.zip
 ```
 
-3\. **Install the CSV Import and CSV Export plugins.** Go to <https://omeka.org/classic/plugins/> , scroll down to `CSV Import``, right click on the download button, and select `Copy link``. At the server command line, paste the link you copied after `wget` like this:
+3\. **Install the CSV Import and CSV Export plugins.** Go to <https://omeka.org/classic/plugins/>, scroll down to `CSV Import`, right click on the download button, and select `Copy link`. At the server command line, paste the link you copied after `wget` like this:
 
 ```
 wget https://github.com/omeka/plugin-CsvImport/releases/download/v2.0.7/CsvImport-2.0.7.zip
@@ -603,7 +603,7 @@ http://bassettassociates.org/archive/admin/
 
 ## Configuring file storage
 
-Since we are going to use AWS S3 storage, there isn’t really any reason to restrict the file size. It’s possible that if pyramidal TIFFs are uploaded, the files could be very large, so I set the maximum size to 100 MB. As a practical matter, a t2.micro EC2 instance has problems processing image files larger than 50 MB, so 100 MB seems fine as a limit.
+Since we are going to use AWS S3 storage, there isn’t really any reason to restrict the file size. It’s possible that if pyramidal TIFFs are uploaded, the files could be very large, so I increased the maximum size to 100 MB. As a practical matter, a t2.micro EC2 instance has problems processing image files larger than 50 MB, so 100 MB is sufficiently large for a limit.
 
 1\. Set the maximum file upload size and S3 source in the Omeka configuration file. 
 
@@ -612,7 +612,7 @@ cd /var/www/html/archive/application/config
 nano config.ini
 ```
 
-In the Storage section, uncomment (remove prepended “;”) and change to:
+In the Storage section, uncomment (remove prepended `;`) and change to:
 
 ```
 storage.adapter = "Omeka_Storage_Adapter_AmazonS3"
@@ -627,7 +627,7 @@ Add the line:
 storage.adapterOptions.region = us-east-1
 ```
 
-In the Upload section, uncomment (remove prepended “;”) and change:
+In the Upload section, uncomment (remove prepended `;`) and change:
 
 ```
 upload.maxFileSize = "100M"
@@ -647,7 +647,7 @@ post_max_size = 100M
 upload_max_filesize = 100M
 ```
 
-Note: do not set post_max_size to 0M. Although this disables the maximum for file uploads, it will prevent uploading in other circumstances.
+Note: do not set `post_max_size` to 0M. Although this disables the maximum for file uploads, it will prevent uploading in other circumstances.
 
 3\. Restart the server:
 
@@ -655,7 +655,7 @@ Note: do not set post_max_size to 0M. Although this disables the maximum for fil
 service apache2 restart
 ```
 
-Now when you upload files, they will not be saved in the EC2 file storage, but rather be stored in the S3 bucket you set up in the [S3 setup](#s3-setup) section (`bassett-omeka-storage` in my examples). It is therefore possible to access the files directly from their S3 URLs independently of the Omeka EC2 server. However, the file names are based on opaque IDs assigned by Omeka, so without knowing the IDs, accessing the files is not practical. In the next section, we'll see how to capture the ID numbers after upload.
+Now when you upload files, they will not be saved in the EC2 file storage, but rather be stored in the S3 bucket you set up in the [S3 setup](#s3-setup) section (`bassett-omeka-storage` in my examples). It is therefore possible to access the files directly from their S3 URLs independently of the Omeka EC2 server. However, the file names are based on opaque IDs assigned by Omeka, so without knowing the IDs, accessing the files is not practical. In the next section, we'll see how to capture the ID numbers after upload so that particular image files can be located.
 
 ## Establish an efficient work flow
 
@@ -673,7 +673,7 @@ The other thing to consider is that if the TIFFs will be used in a IIIF viewer, 
 
 The other thing to consider is that when TIFFs are converted to tiled pyramidal form, there is an increase in size of roughly 25% when the low-res layers are added to the original high-res layer. So a 40 MB raw TIFF may be at or over 50 MB after conversion. I have found that if I keep the original file size below 35 MB, the files usually load without problems.
 
-The CSV import plugin requires that all items imported as a batch be the same general type. Since this process is build to handle images, that shouldn't be a problem -- all items will be Still Images. As a practical matter, it is convenient to assign all images in a batch to the same collection. If images intended for several collections are uploaded together in a batch, they will have to be assigned to collections manually after upload.
+The CSV import plugin requires that all items imported as a batch be the same general type. Since this process is build to handle images, that shouldn't be a problem -- all items will be Still Images. As a practical matter, it is best to restrice all of the images in a batch to be for the same collection. If images intended for several collections are uploaded together in a batch, they will have to be assigned to collections manually after upload.
 
 1\. If the files are TIFFs, use the script [convert_to_pyramidal_tiled_tiff.py](https://github.com/baskaufs/bassettassociates/blob/main/code/convert_to_pyramidal_tiled_tiff.py) to convert raw TIFFs to tiled pyramidal TIFFs. See the script comments for setup. Non-TIFF files (e.g. JPEGs) should be placed directly in the output directory.
 
@@ -685,11 +685,11 @@ aws_access_key_id = your_access_key
 aws_secret_access_key = your_secret_access_key
 ```
 
-Where `your_access_key` and `your_secret_access_key` are the credentials you saved after creating the IAM user for uploading to S3 from your computer. Save the file in a subdirectory of you home directory called `.aws` (note the dot in front of the name -- this will be a hidden directory). This is the correct location for Macs; I'm not sure if it's right for Windows. As noted before, do not expose this information publicly, although because of the security role given to the AIM user, the keys can only be used for uploading or deleting in the one S3 bucket.
+where `your_access_key` and `your_secret_access_key` are the credentials you saved after creating the IAM user for uploading to S3 from your computer. Save the file in a subdirectory of you home directory called `.aws` (note the dot in front of the name -- this will be a hidden directory). This is the correct location for Macs; I'm not sure if it's right for Windows. As noted before, do not expose this information publicly, although because of the security role given to the AIM user, the keys can only be used for uploading or deleting in the one S3 bucket.
 
 3\. The Python script [omeka_upload_data.py](https://github.com/baskaufs/bassettassociates/blob/main/code/omeka_upload_data.py) uses some coding to automatically generate tags and original format types. The coding is also used to generate unique IDs for the items and file names corresponding to the IDs. The meaning of the codes is set in [the global variables section](https://github.com/baskaufs/bassettassociates/blob/8f5b139ede9a4c2107c8879668c2e52b0d04db3e/code/omeka_upload_data.py#L27-L92) of the script. 
 
-The ID is composed of segments separated by underscores. The first one or two segments specifies any tags to be applied to the item. The next to last segment specifies the original format. The final segment is numeric and used to differentiate between items of the same type. If there are more than four segments, segments from the third to the third from last are ignored. 
+The ID is composed of coded segments separated by underscores. The first one or two segments specifies any tags to be applied to the item. The next to last segment specifies the original format. The final segment is numeric and used to differentiate between items of the same type. If there are more than four segments, segments from the third to the third from last are ignored. 
 
 Here are some examples:
 
@@ -697,9 +697,11 @@ Here are some examples:
 
 Item identifier: [cmp_blu_pl_09](https://bassettassociates.org/archive/items/show/228)
 
+```
 Tags assigned: campus (from cmp) and Bluffton (from blu)
 Original format: plan (from pl)
 Sequence: 09 (from among Bluffton campus plans)
+```
 
 Optionally, the creator of the item can be assigned based on the original format code used as a key in the CREATOR_MAP. In this example, the creator is assigned as "Bassett Associates" whenever the original format type is plan.
 
@@ -707,10 +709,12 @@ Optionally, the creator of the item can be assigned based on the original format
 
 Item identifier: [zoo_kcz_chimp_sk_01](https://bassettassociates.org/archive/items/show/410)
 
+```
 Tags assigned: zoo (from zoo) and Kansas City (from kcz)
 Original format: sketch (from sk)
 Sequence: 01 (from among Kansas City Zoo chimp exhibit sketches)
 Creator: James H. Bassett (from original format of sketch)
+```
 
 In this example the `chimp` segment is ignored - it is just used to differentiate from among the several exhibits featured in the archive.
 
@@ -722,7 +726,9 @@ The identifiers created for the works should be put in a column with the header 
 
 4\. The files should be renamed so that the first part (before the extension) of their name matches the assigned code. The extensions should correspond to those in the [FORMAT_MAP of the script](https://github.com/baskaufs/bassettassociates/blob/8f5b139ede9a4c2107c8879668c2e52b0d04db3e/code/omeka_upload_data.py#L27-L32) so that the Dublin Core Format values can be set automatically to the correct media type (MIME type) for the file. Note: the script was created to process images, so if non-image file types are used, an error will be generated [when the script tries to determine the pixel dimensions](https://github.com/baskaufs/bassettassociates/blob/8f5b139ede9a4c2107c8879668c2e52b0d04db3e/code/omeka_upload_data.py#L181-L184).
 
-5\. Once the files have been renamed, run the `omeka_upload_data.py` script from the command line. Some metadata values are [hard-coded in the script](https://github.com/baskaufs/bassettassociates/blob/8f5b139ede9a4c2107c8879668c2e52b0d04db3e/code/omeka_upload_data.py#L165-L168), so they should be changed before the script is run. NOTE: it is important that a path argument be given after the script name in the command. This argument is used as the subpath for both the local storage location for the files and the subdirectory path in the S3 bucket. For example:
+5\. Once the files have been renamed, run the `omeka_upload_data.py` script from the command line. Some Dublin Core metadata values are [hard-coded in the script](https://github.com/baskaufs/bassettassociates/blob/8f5b139ede9a4c2107c8879668c2e52b0d04db3e/code/omeka_upload_data.py#L165-L168), so they should be changed before the script is run. 
+
+NOTE: it is important that a path argument be given after the script name in the command for running the script. This argument is used as the subpath for both the local storage location for the files and the subdirectory path in the S3 bucket. For example:
 
 ```
 python3 omeka_upload_data.py zoo/kcz/chimp/
@@ -745,37 +751,39 @@ The script does three things:
 2. Uploads the files to the S3 raw image source bucket.
 3. Create a metadata CSV file called `upload.csv` filled in based on the codes in the ID and values hard-coded in the script. The CSV is saved in the data directory specified by the `DATA_PATH` constant in the script.
 
-6\. Open the `upload.csv` file using a spreadsheet editor like Libre Office Calc. Check that the Dublin Core:Language value is correct. Some automatically assigned types (e.g. sketch) may not actually have writing on them and should have the value deleted. Add the Dublin Core:Title value to all item records. It is best if the titles are unique and succinctly descriptive, although uniqueness is not required by Omeka. Add the Dublin Core:Date and Dublin Core:Description values if available. Examine the tags list (comma separated) and add or remove any as appropriate. Save the file in CSV format with UTF-8 encoding. Here is an [Example](https://github.com/baskaufs/bassettassociates/blob/1ebeee057edd22f8f71067a1028f3e46d0fba487/data/upload.csv) of a completed metadata upload file. 
+6\. Open the `upload.csv` file using a spreadsheet editor like Libre Office Calc. Check that the Dublin Core:Language value is correct. Some automatically assigned types (e.g. sketch) may not actually have writing on them and should have the value deleted. Add the Dublin Core:Title value to all item records. It is best if the titles are unique and succinctly descriptive, although uniqueness is not required by Omeka. Add the Dublin Core:Date and Dublin Core:Description values if available. Examine the tags list (comma separated) and add or remove any as appropriate. Save the file in CSV format with UTF-8 encoding. Here is an [example](https://github.com/baskaufs/bassettassociates/blob/1ebeee057edd22f8f71067a1028f3e46d0fba487/data/upload.csv) of a completed metadata upload file. 
 
 7\. Before doing the CSV import for the first time, check to make sure that one of the `upload_url` values actually retrieves the designated file. If it does not, make sure the file has actually been uploaded into S3 using the AWS online console. Check that the `Object URL` for the file matches the value in the CSV and that the bucket is identified as having Access: Public.
 
-8\. Log in to the Omeka site as an administrator or Super User. Add a public collection for the images if there isn't already one. 
+8\. Log in to the Omeka site as an administrator or Super User. Add a public collection for the images you are going to upload if there isn't already one. 
 
-9\. Click on the CSV Import option on the left pane. Browse to the `upload.csv` file and select it. Select "Still Image" as the item type. Select the collection you just created. Check the "Make All Items Public?" checkbox. Click `next`.
+9\. Click on the CSV Import option on the left pane. Browse to the `upload.csv` file and select it. Select `Still Image` as the item type. Select the collection you just created. Check the `Make All Items Public?` checkbox. Click `next`.
 
-10\. Because the column headers in the CSV match the standard metadata field names, they should all be matched except for two. For upload_url, check the "Files?" checkbox. For the tags, check the "Tags?" checkbox. Click the Import CSV File button.
+10\. Because the column headers in the CSV match the standard metadata field names, they should all be matched except for two. For upload_url, check the `Files?` checkbox. For the tags, check the `Tags?` checkbox. Click the Import CSV File button.
 
-11\.You can refresh periodically to watch the upload progress. If the number of files in a batch are few and the file sizes are relatively small (<20 MB), the import usually works without any problems. If the process crashes or hangs, you may need to go into AWS and reboot the EC2 instance. In the EC2 control panel, check the box for the instance and select `Reboot instance` from the `Instance state` dropdown. Be patient and eventually the site will come up again. Check the items and delete items from the incomplete upload. Then start the upload again. The status of the incomplete upload will stay at "In Progress" forever but don't worry about it. 
+11\.You can refresh the page periodically to watch the upload progress. If the number of files in a batch are few and the file sizes are relatively small (< 20 MB), the import usually works without any problems. If the process crashes or hangs, you may need to go into AWS and reboot the EC2 instance. In the EC2 control panel, check the box for the instance and select `Reboot instance` from the `Instance state` dropdown. Be patient and eventually the site will come up again. Check the items and delete items from the incomplete upload. Then start the upload again. The status of the incomplete upload will stay at "In Progress" forever but don't worry about it. 
 
 12\. At this point, the items should be created and assigned to a collection, with the image file uploaded and viewable on the item page. The original image and the derived lower-resolution JPEG images will be in the S3 Omeka storage bucket you set up (`bassett-omeka-storage` in the examples). The versions will be stored in folders called `fullsize`, `original`, `square_thumbnails`, and `thumbnails`. As noted previously, the files will be named using an opaque identifier assigned by Omeka (e.g. `04864eefe984b71b50412faa2e65606d.jpg`). The files that you uploaded to the raw image source bucket (`bassettassociates` in this example) will still be there. In theory, you don't need them any more and could delete them. However, S3 storage costs are so low that you probably will just want to leave them there. Since they have meaningful file names and a subfolder organization of your choice, they would make a pretty nice cloud backup system that is independent of the Omeka instance. After your archive project is complete, you could change the raw image source bucket over to one of the cheaper, low-access types (like Glacier) that have even lower storage costs than a standard S3 bucket. Because both buckets are public, you can use them as a means of giving access to the original high-res files by simply giving the Object URL to the person wanting a copy of the file. 
 
 13\. If you want to maintain an association between the original identifiers/file names and the opaque identifiers assigned by Omeka, you can optionally add a final step to your workflow. The CSV Export Format plugin allows you to export metadata about items as a CSV downloaded to your local computer. The annoying aspect of this is that you can only export data about items that are viewable on a single page of items (the `Select all x results` button does not seem to work for me). You can improve the situation by increasing the number of items displayed per page by going to the Appearance menu of the admin page, clicking on the Settings tabe, and then increasing the number for `Results Per Page (admin)`. To download the metadata, scroll to the bottom of the page containing the items you care about and click on the `csv` link after `Output Formats:`. It doesn't matter if other items that you don't care about are included. Put the resulting `export.csv` file into your local data directory. 
 
-14\. Run the script [extract_omeka_csv_export_data.py](https://github.com/baskaufs/bassettassociates/blob/main/code/extract_omeka_csv_export_data.py). It will extract the item numbers and Omeka image IDs for the uploaded images and put them in the empty columns of the `identifiers.csv` file that you created earlier. It will also concatenate the newly written items from the `upload.csv`` file to the end of a file called `items.csv`. NOTE: you should run this script after each batch is uploaded since the `omeka_upload_data.py` script overwrites any previous `upload.csv` file. 
+14\. Run the script [extract_omeka_csv_export_data.py](https://github.com/baskaufs/bassettassociates/blob/main/code/extract_omeka_csv_export_data.py). It will extract the item numbers and Omeka image IDs for the uploaded images and put them in the empty columns of the `identifiers.csv` file that you created earlier. It will also concatenate the newly written items from the `upload.csv` file to the end of a file called `items.csv`. NOTE: you should run this script after each batch is uploaded since the `omeka_upload_data.py` script overwrites any previous `upload.csv` file. 
 
-15. **Backing up data**. There are two mechanisms for backing up your data periodically. 
+15\. **Backing up data**. There are two mechanisms for backing up your data periodically. 
 
 The most straightforward is to create an Amazon Machine Image (AMI) of the EC2 server. Not only will this save all of your data, but it will also archive the complete configuration of the server at the time the image is made. This is critical if you have any disasters while making major configuration changes and need to roll back the EC2 to an earlier (functional) state. To create an image, go to the EC2 control panel, check the box to the left of your instance name, then from the `Actions` menu, click `Images and templates`. Then select `Create image`. This will create both an "image" and a "snapshot". Give the image a name and detailed description and leave all of the other settings at their defaults. Click `Create image`. If you ever need to restore an image, click `AMIs` from the menu on the left (under `Images`). Select the checkbox of the image you want, and click the `Launch instance from AMI` button.
 
-A simpler way to back up the item metadata is to push the `items.csv` and `identifiers.csv` files to GitHub after each CSV import. Any set of rows from the `items.csv` file can be saved as `upload.csv` and be used to re-upload those items onto any Omeka instance as long as the original files are still in the raw source image S3 bucket. The `identifiers.csv` file documents the link between the file identifiers you assigned and the opaque IDs assigned to the media items by Omeka. This information would be especially useful if you did not keep the originally uploaded files, since it would allow you to find the appropriate files in the `original` folder of the S3 Omeka storage bucket. Of course, if you make manual edits to the metadata, the metadata in the `items.csv` file would be stale.
+A simpler way to back up the item metadata is to push the `items.csv` and `identifiers.csv` files to GitHub after each CSV import ([example](https://github.com/baskaufs/bassettassociates/tree/main)). Any set of rows from the `items.csv` file can be saved as `upload.csv` and be used to re-upload those items onto any Omeka instance as long as the original files are still in the raw source image S3 bucket. The `identifiers.csv` file documents the link between the file identifiers you assigned and the opaque IDs assigned to the media items by Omeka. This information would be especially useful if you did not keep the originally uploaded files, since it would allow you to find the appropriate files in the `original` folder of the S3 Omeka storage bucket. Of course, if you make manual edits to the metadata, the metadata in the `items.csv` file would be stale.
 
 ## Enable IIIF tools
 
 There are two Omeka plugins that add International Image Interoperability Framework (IIIF) capabilities. 
 
-The [UniversalViewer plugin](https://omeka.org/classic/plugins/UniversalViewer/) allows Omeka to serve images like a IIIF image server and it generates IIIF manifests using the existing metadata. That makes it possible for the Universal Viewer player (included in the plugin) to display images in a rich manner that allows pan and zoom. This plugin was very appealing to me because if it functioned well, it would enable IIIF capabilities without needing to manage any other servers. I was able to install it and the embedded Universal Viewer did launch, but the images never loaded. Despite spending a lot of time messing around with the settings, disabling S3 storage, and launching a larger EC2 image, I was never able to get it to work, even for a tiny JPEG file. I read a number of Omeka forum posts about troubleshooting, but eventually gave up. If I had gotten it to work, there was one potential problem with the setup anyway. The t2.micro instance that I'm running has very low resource capacity (memory, number of CPUs, drive storage), which is OK as I've configured it because the server just has to run a relatively tiny MySQL database and serve static files from S3. Presumably this plugin would also have to generate the image variants that it's serving on the fly and that could max out it out quite easily. I'm disappointed that I couldn't get it to work, but I'm not confident that it's the right tool for a budget installation like this one.
+The [UniversalViewer plugin](https://omeka.org/classic/plugins/UniversalViewer/) allows Omeka to serve images like a IIIF image server and it generates IIIF manifests using the existing metadata. That makes it possible for the Universal Viewer player (included in the plugin) to display images in a rich manner that allows pan and zoom. This plugin was very appealing to me because if it functioned well, it would enable IIIF capabilities without needing to manage any other servers. I was able to install it and the embedded Universal Viewer did launch, but the images never loaded in the viewer. Despite spending a lot of time messing around with the settings, disabling S3 storage, and launching a larger EC2 image, I was never able to get it to work, even for a tiny JPEG file. I read a number of Omeka forum posts about troubleshooting, but eventually gave up. 
 
-I had more success with the [Iiif Toolkit plugin](https://omeka.org/classic/plugins/IiifItems/). It also provides an embedded Universal Viewer that can be inserted various places in Omeka. The major downside is that you must have access to a separate IIIF server to actually provide the images used in the viewer. I was able to test it out by loading images into the Vanderbilt Libraries' Cantaloupe IIIF server and it worked pretty well. However, setting up your own Cantaloupe server on AWS does not appear to be a trivial task and because of the resourcing issues I just described, it would probably cost a lot more per month to operate than the Omeka site itself. (Vanderbilt's server is running on a cluster with a load balancer, 2 vCPU, and 4 GB memory. All of these increases over a single t2.micro instance involve a significantly increased cost.) So in the absence of an available external IIIF server, this plugin probably would not be useful for an independent user with a small budget. 
+If I had gotten it to work, there was one potential problem with the setup anyway. The t2.micro instance that I'm running has very low resource capacity (memory, number of CPUs, drive storage), which is OK as I've configured it because the server just has to run a relatively tiny MySQL database and serve static files from S3. But presumably this plugin would also have to generate the image variants that it's serving on the fly and that could max out the server quite easily. I'm disappointed that I couldn't get it to work, but I'm not confident that it's the right tool for a budget installation like this one.
+
+I had more success with the [IIIF Toolkit plugin](https://omeka.org/classic/plugins/IiifItems/). It also provides an embedded Universal Viewer that can be inserted various places in Omeka. The major downside is that you must have access to a separate IIIF server to actually provide the images used in the viewer. I was able to test it out by loading images into the Vanderbilt Libraries' Cantaloupe IIIF server and it worked pretty well. However, setting up your own Cantaloupe server on AWS does not appear to be a trivial task and because of the resources required for the IIIF server to run effectively, it would probably cost a lot more per month to operate than the Omeka site itself. (Vanderbilt's server is running on a cluster with a load balancer, 2 vCPU, and 4 GB memory. All of these increases over a basic single t2.micro instance would involve a significantly increased cost.) So in the absence of an available external IIIF server, this plugin probably would not be useful for an independent user with a small budget. 
 
 One nice feature that I was not able to try was pointing the external server to the `original` folder of the S3 storage bucket. That would be a really nice feature since it would not require loading the images separately into dedicated storage for the IIIF server separate from what is already being provisioned for Omeka. Unfortunately, we have not yet got that working on the Libraries' Cantaloupe server as it seems to require some custom Ruby coding to implement.
 
@@ -811,19 +819,19 @@ service apache2 restart
 
 7\. A more useful function is to import canvases in order to add their content as Omeka items. Click on `IIIF Toolkit` in the left menu, then go to the `Import Items` tab. There are three import types. I explored importing `Manifest` and `Canvas` types since I had those data available. 
 
-Manifest is the most straightforward, but the import was messy and always created a new collection for each item imported. In theory, this could be avoided by selecting an existing collection using the `Parent` dropdown, but this never worked for me. 
+Manifest is the most straightforward, but the import was messy and always created a new collection for each item imported. In theory, this could be avoided by selecting an existing collection using the `Parent` dropdown, but that never worked for me. 
 
-I concluded that importing canvases was the only feasible method. Unfortunately, canvas JSON usually doesn't exist in isolation -- it usually is part of the JSON for an entire manifest. The `From Paste` option is useful if you are capable of the tedious task of searching through the JSON for a whole manifest and copying just the JSON for a single canvas from it. I found it much more useful to just create a script that would generate minimal canvas JSON for an image and save it as a file, which could either be uploaded directly, or pushed to the web and read in through a URL. 
+I concluded that importing canvases was the only feasible method. Unfortunately, canvas JSON usually doesn't exist in isolation -- it usually is part of the JSON for an entire manifest. The `From Paste` option is useful if you are capable of the tedious task of searching through the JSON of a whole manifest and copying just the JSON for a single canvas from it. I found it much more useful to just create a script that would generate minimal canvas JSON for an image and save it as a file, which could either be uploaded directly, or pushed to the web and read in through a URL. 
 
 The script that I used to do this was [minimal_manifest.py](https://github.com/baskaufs/bassettassociates/blob/main/code/manifests/minimal_manifest.py). See the notes at the top of the script for use. In a nutshell, it gets the pixel dimensions from the image file, with labels and descriptions taken from a CSV file (the import does not use more information than that). These values are inserted into a JSON canvas template, then saved as a file. The script will loop through an entire directory of files, so it's relatively easy to make canvases for a number of images that were already uploaded using the CSV import function (just copy and paste labels and descriptions from the metadata CSV file). An example labels.csv file is [here](https://github.com/baskaufs/bassettassociates/blob/main/code/manifests/labels.csv). 
 
-8\. Once the manifests have been generated, either upload them or paste their URLs (if they were pushed to the web). See [this example](https://s3.amazonaws.com/iiif-manifest.library.vanderbilt.edu/bassett/canvas/exhibit_pike_po_00.json) canvas file generated by the script from the CSV data above. Do not bother to check the `Set as Public?` checkbox because it does not work. For `Local Preview Size` and `Annotation Preview Size`, select Maximum. Click `Import`. 
+8\. Once the manifests have been generated, either upload them or paste their URLs (if they were pushed to the web) on the IIIF Toolkit Import Items page. See [this example](https://s3.amazonaws.com/iiif-manifest.library.vanderbilt.edu/bassett/canvas/exhibit_pike_po_00.json) canvas file generated by the script from the CSV data above. Do not bother to check the `Set as Public?` checkbox because it does not work. For `Local Preview Size` and `Annotation Preview Size`, select Maximum. Click `Import`. 
 
 9\. You will be taken to the Status panel. When the Status bar goes to "Completed", the item has been imported and you can look at it under items. See [this item created from the example data above](https://bassettassociates.org/archive/items/show/512). 
 
-10\. Because there is no way to do this as a batch, nor to import metadata beyond the title and description, each item needs to be imported one at a time and the metadata added manually, or using the Bulk Metadata Editor plugin if possible. This makes uploading many items somewhat impractical. However, for very large images whose detail cannot be seen well in a single image on a screen, the ability to pan and zoom is pretty important. So for some items, like large maps, this tool can be very nice despite the extra work. For a good example, see the [panels page](https://bassettassociates.org/archive/exhibits/show/artspace/panels) from an Omeka exhibit. It is best viewed by changing the embedded viewer to full screen.
+10\. Because there is no way to import IIIF items as a batch, nor to import metadata from the canvas beyond the title and description, each item needs to be imported one at a time and the metadata added manually, or added using the Bulk Metadata Editor plugin if possible. This makes uploading many items somewhat impractical. However, for very large images whose detail cannot be seen well in a single image on a screen, the ability to pan and zoom is pretty important. So for some items, like large maps, this tool can be very nice despite the extra work. For a good example, see the [panels page](https://bassettassociates.org/archive/exhibits/show/artspace/panels) from an Omeka exhibit. It is best viewed by changing the embedded viewer to full screen.
 
-One thing that should be noted is that like other images associated with Omeka items, image import using the IIIF Toolkit generates thumbnail, square_thumbnail, and fullsize versions of the image. A IIIF import also generates an "original" JPEG version that is much smaller than the pyramidal tiled TIFF uploaded to the IIIF server. This means that it is possible to create items for TIFF images that are larger than the 50 MB recommended above. An example is the [Binder Park Master Plan](https://bassettassociates.org/archive/items/show/418). If you scroll to the bottom of its page and zoom in, you will see that an incredible amount of detail is visible because the original TIFF file was huge (347 MB). So using IIIF import is a way to display and make available very large image files that exceed the practical limit of 50 MB discussed above.
+One thing that should be noted is that like other images associated with Omeka items, image import using the IIIF Toolkit generates thumbnail, square_thumbnail, and fullsize versions of the image. A IIIF import also generates an "original" JPEG version that is much smaller than the pyramidal tiled TIFF uploaded to the IIIF server. This means that it is possible to create items for TIFF images that are larger than the 50 MB recommended above. An example is the [Binder Park Master Plan](https://bassettassociates.org/archive/items/show/418). If you scroll to the bottom of its page and zoom in, you will see that an incredible amount of detail is visible because the original TIFF file being used by the IIIF server is huge (347 MB). So using IIIF import is a way to display and make available very large image files that exceed the practical limit of 50 MB discussed above.
 
 
 
