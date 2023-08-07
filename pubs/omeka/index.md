@@ -411,9 +411,9 @@ The easiest way to attach a custom domain name is by registering it through AWS'
 
 2\. Get the IP address for your Elastic IP from the EC2 control panel if you don't already have it.
 
-3\. At the [Route 53 dashboard](https://console.aws.amazon.com/route53/), click on `Hosted zones`, then the link with the name of your zone. Click on `Create record`.
+3\. At the Route 53 dashboard, click on `Hosted zones`, then the link with the name of your zone. Click on `Create record`.
 
-4\. If you want to use a subdomain (such as `www``) in front of your domain name, type it in the Record name box. Otherwise, leave it blank to use only the domain name. Leave the Record type at its default "A" value. In the `Value` box, enter the IP address you got from step 3. Leave the Routing policy at its default, `Simple routing`. Click `Create records`.
+4\. If you want to use a subdomain (such as `www`) in front of your domain name, type it in the Record name box. Otherwise, leave it blank to use only the domain name. Leave the Record type at its default "A" value. In the `Value` box, enter the IP address you got from step 3. Leave the Routing policy at its default, `Simple routing`. Click `Create records`.
 
 5\. It should take about a minute for the changes to proliferate in the system. After a minute, you can click the View status button at the top of the page. A status of `INSYNC` means it's ready to go. You can try out the domain name by going to the domain name using an http:// URL:
 
