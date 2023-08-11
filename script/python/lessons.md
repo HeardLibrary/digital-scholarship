@@ -14,7 +14,7 @@ Digital Lab Python lessons are provided by the [Digital Lab](https://www.library
 
 The beginners lessons are generally offered at least once per semester.  See the schedule below for session details.   
 
-Each lesson includes of a series of videos with a practice Jupyter/Colab notebook and homework assignments. The live working sessions provide an opportunity for participants to ask questions about the lesson videos and homework, or to work on the homework with assistance.  
+Each lesson includes of a series of videos with a practice Jupyter notebook and homework assignments. The live sessions will demonstrate how to code the practice assignments with the assistance of GitHub Copilot, a generative AI-based plugin for VS Code. 
 
 The lessons are part of a free, online learning system called [CodeGraf](../../codegraf). You are welcome to work through these lessons or any of the other lesson modules available in CodeGraf on your own at any time (no registration required). To explore all of the lesson modules that are available, visit the [CodeGraf landing page](../../codegraf). 
 
@@ -23,27 +23,26 @@ The Digital Lab also provides [lessons for learning R](http://vanderbi.lt/r) and
 [Archive of past lessons](../archive/)
 
 
-## Beginners Lessons - Spring 2023
+## Beginners Lessons - Fall 2023
 
-**Time:** Wednesdays from 1:00-2:00 PM Central (US) Time (starting February 1). 
+**Time:** Wednesdays from 1:00-2:00 PM Central (US) Time (starting October 25). 
 
-**Venue:** Virtually via Zoom.  [Registration link](https://vanderbilt.zoom.us/meeting/register/tJUpd-uqrzsjGtKW_B405-79c6IUnKtMnTZr). After registering, you will receive a confirmation email containing information about joining the Zoom session. 
+**Venue:** Synchronously on Zoom and in-person in the Digital Lab, 4th floor Central Library. You should complete the Zoom registration even if you plan to attend in person. [Registration link](https://vanderbilt.zoom.us/meeting/register/). After registering, you will receive a confirmation email containing information about joining the Zoom session. 
 
 **Instructor:** Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange a time to talk.
 
-I will be presenting the lessons using Colab notebooks. They behave very similarly to the popular Jupyter notebooks but do not require any installation. They do require you to have a Google account. Before the first lesson, you should go through the [Colab quickstart](../../codegraf/003a/) lesson if you haven't used Colab before. It includes 14 minutes of videos.
-
-You are welcome to use desktop Jupyter notebook if you already have it installed, but we will not be spending time going over the installation process. There are some [installation videos](../../codegraf/003/) that you are welcome to watch if you want to do an installation yourself. The practice notebooks are also available as downloadable Jupyter notebooks.
+I will be presenting the lessons using Jupyter notebooks in the Visual Studio Code (VS Code) environment. Before you come on the first day, you should install the [Anaconda environment](../../codegraf/003/) in order to have VS Code and the Jupyter environment available. At the first lesson, we will enable using Jupyter notebooks in VS Code and will install the GitHub Copilot plugin. Copilot is generally a paid service, however, people with an academic email address have free access. So if you have a `vanderbilt.edu` email address, you will be able to use this feature for free. Using Copilot is not required, but it makes the coding process much easier.
 
 If you have never programmed before, I recommend that you work through two optional lessons on your own: [terminology](../../codegraf/001/) (18 min) and [programming environments](../../codegraf/002/) (50 min). I will assume that you are familiar with the concepts and terms covered in these lessons as we work through the actual Python lessons.
 
 | Working session date | Lesson | Topic | Web page (times are total video length) |
 |---|---|---|---|
-| Feb 1 | 1 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
-| Feb 8 | 2 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
-| Feb 15 | 3 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
-| Feb 22 | 4 | Loops | [lesson videos](../../codegraf/006b/) (33 min lessons, 61 min including demos) |
-| Mar 1 | 5 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
+| Oct 25 | 1 | Setting up and using Copilot | lesson videos (x min) |
+| Nov 1 | 1 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
+| Nov 8 | 2 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
+| Nov 15 | 3 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
+| Nov 29 | 4 | Loops | [lesson videos](../../codegraf/006b/) (33 min lessons, 61 min including demos) |
+| Dec 6 | 5 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
 
 
 

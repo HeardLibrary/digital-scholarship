@@ -47,6 +47,12 @@ If you have never programmed before, I recommend that you work through two optio
 
 ## Data visualization with ggplot (Intermediate topic) - Fall 2023
 
+**Time:** Wednesdays from 11:00 AM-noon Central (US) Time (starting October 25). 
+
+**Venue** Synchronously  on Zoom and in-person in the Digital Lab, 4th floor Central Library. You should complete the Zoom registration even if you plan to attend in person. [Registration link](https://vanderbilt.zoom.us/meeting/register/). After registering, you will receive a confirmation email containing information about joining the Zoom session.
+
+**Instructor:** Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange a time to talk.
+
 This hands-on lesson series will quickly get you started using the R library `ggplot` to create data visualizations. These lessons assume that you have a basic familiarity with R and RStudio. However, those with no background can still participate by trying and modifying the provided code examples. To visualize your own data, you will want to take the beginner lessons during the first half of the semester or work through them on your own.
 
 The session topics are subject to change.
