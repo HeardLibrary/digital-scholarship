@@ -1,6 +1,6 @@
 ---
 permalink: /script/python/lessons/
-title: Digital Lab Python lessons
+title: Python lessons
 breadcrumb: Lessons
 ---
 
@@ -60,22 +60,14 @@ Lesson series on [Microcontrollers with CircuitPython](../circuit/)
 
 Research IT <https://research.vanderbilt.edu/researchadministration/about/research-it/>
 
-Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
-
 Vanderbilt Data Science Institute (DSI) <https://www.vanderbilt.edu/datascience/>
 
 For more information on all DSI events, visit the [DSI workshops page](https://www.vanderbilt.edu/datascience/events/data-science-workshops/). For registration, visit [this registration link](https://docs.google.com/forms/d/e/1FAIpQLSdHoJitkCQ1zXwTEQuLpGCqBGZvUYwLB4Nhcrs19t_-Wi_HCg/viewform?usp=sf_link).
 
-
-## Software Carpentries 
-
-Co-sponsored by the Digital Lab, Office of the Vice Provost for Research, Research IT, ACCRE, and the Data Science Institute
-
-TBD
 
 --------------------
 
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2023-08-03
+Revised 2023-08-11

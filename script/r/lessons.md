@@ -1,24 +1,24 @@
 ---
 permalink: /script/r/lessons/
-title: DiSC R lessons
+title: R lessons
 breadcrumb: Lessons
 ---
 
-# DiSC R Lessons
+# Digital Lab R Lessons
 
 A shortened link to this page is [vanderbi.lt/r](http://vanderbi.lt/r).
 
 ## About the lessons
 
-DiSC R lessons are provided by the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/) at [Vanderbilt University](https://www.vanderbilt.edu/).  The DiSC office provides regular lessons for R beginners with a variety of followup intermediate lessons.  There is no cost associated with the lessons.
+R lessons are provided by the [Digital Lab](https://www.library.vanderbilt.edu/digital-lab/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/) at [Vanderbilt University](https://www.vanderbilt.edu/).  The Digital Lab provides regular lessons for R beginners with a variety of followup intermediate lessons.  There is no cost associated with the lessons.
 
-The beginners lessons are generally offered at least once per semester.  See the schedule below for session details.  
+The beginners lessons are generally offered once per semester.  See the schedule below for session details.  
 
 Each lesson includes of a series of videos with a practice scripts and homework assignments. The live working sessions provide an opportunity for participants to ask questions about the lesson videos and homework, or to work on the homework with assistance. 
 
 The lessons are part of a free, online learning system called [CodeGraf](../../codegraf). You are welcome to work through these lessons or any of the other lesson modules available in CodeGraf on your own at any time (no registration required). To explore all of the lesson modules that are available, visit the [CodeGraf landing page](../../codegraf). 
 
-The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/py) and [getting started with GitHub](http://vanderbi.lt/github) in a similar format.
+The Digital Lab also provides [lessons for learning Python](http://vanderbi.lt/py) and [getting started with GitHub](http://vanderbi.lt/github) in a similar format.
 
 [Archive of past lessons](../archive/)
 
@@ -64,7 +64,6 @@ Data Science Institute (DSI) <https://www.vanderbilt.edu/datascience/>
 
 Research IT <https://research.vanderbilt.edu/researchadministration/about/research-it/>
 
-Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 
 
 
@@ -74,4 +73,4 @@ Digital Humanities (DH) Center <https://www.vanderbilt.edu/digitalhumanities/>
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2023-04-18
+Revised 2023-08-11

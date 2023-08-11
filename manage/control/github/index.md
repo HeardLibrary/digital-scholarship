@@ -1,16 +1,16 @@
 ---
 permalink: /manage/control/github/
-title: DiSC GitHub lessons
+title: GitHub lessons
 breadcrumb: GitHub
 ---
 
-# DiSC GitHub Lessons
+# Digital Lab GitHub Lessons
 
 A short link to this page is [vanderbi.lt/github](http://vanderbi.lt/github)
 
 ## About the lessons
 
-DiSC GitHub lessons are provided by the [Digital Scholarship and Communications Office (DiSC)](https://www.library.vanderbilt.edu/scholarly/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/) at [Vanderbilt University](https://www.vanderbilt.edu/).  The DiSC office provides regular lessons for GitHub beginners with a variety of followup intermediate lessons.  There is no cost associated with the lessons.
+GitHub lessons are provided by the [Digital Lab)](https://www.library.vanderbilt.edu/digital-lab/) of the [Jean and Alexander Heard Libraries](https://www.library.vanderbilt.edu/) at [Vanderbilt University](https://www.vanderbilt.edu/).  The Digital Lab provides regular lessons for GitHub beginners with a variety of followup intermediate lessons.  There is no cost associated with the lessons.
 
 The beginners lessons generally cycle once per year, although they may be offered more frequently depending on demand.  See the schedule below for session details.  
 
@@ -18,7 +18,7 @@ Each beginner lesson includes of a series of videos and homework assignments. Th
 
 The lessons are part of a free, online learning system called [CodeGraf](../../../script/codegraf). You are welcome to work through these lessons or any of the other lesson modules available in CodeGraf on your own at any time (no registration required). To explore all of the lesson modules that are available, visit the [CodeGraf landing page](../../../script/codegraf). 
 
-The DiSC office also provides [lessons for learning Python](http://vanderbi.lt/py) and [learning R](http://vanderbi.lt/r) in a similar format.
+The Digital Lab also provides [lessons for learning Python](http://vanderbi.lt/py) and [learning R](http://vanderbi.lt/r) in a similar format.
 
 ## Beginners Lessons - Spring 2022 
 
@@ -59,4 +59,4 @@ For more information on all DSI events, visit the [DSI workshops page](https://w
 
 
 ----
-Revised 2022-08-23
+Revised 2023-08-11
