@@ -27,7 +27,7 @@ The Digital Lab also provides [lessons for learning R](http://vanderbi.lt/r) and
 
 **Time:** Wednesdays from 1:00-2:00 PM Central (US) Time (starting October 25). 
 
-**Venue:** Synchronously on Zoom and in-person in the Digital Lab, 4th floor Central Library. You should complete the Zoom registration even if you plan to attend in person. [Registration link](https://vanderbilt.zoom.us/meeting/register/). After registering, you will receive a confirmation email containing information about joining the Zoom session. 
+**Venue:** Synchronously on Zoom and in-person in the Digital Lab, 4th floor Central Library. You should complete the Zoom registration even if you plan to attend in person. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJwudOyrqDgjGtEI_mzkDBInoYRSSeQnTKKC). After registering, you will receive a confirmation email containing information about joining the Zoom session. 
 
 **Instructor:** Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange a time to talk.
 

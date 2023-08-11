@@ -27,7 +27,7 @@ The Digital Lab also provides [lessons for learning Python](http://vanderbi.lt/p
 
 **Time:** Wednesdays from 1:00-2:00 PM Central (US) Time (starting August 3). 
 
-**Venue** Synchronously on Zoom. [Registration link](https://vanderbilt.zoom.us/meeting/register/). After registering, you will receive a confirmation email containing information about joining the Zoom session.
+**Venue** Synchronously on Zoom. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJwsceyrpjMiE9f6qDcQYiZFApgo_np2ZxdB). After registering, you will receive a confirmation email containing information about joining the Zoom session.
 
 **Instructor:** Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange a time to talk.
 
@@ -49,7 +49,7 @@ If you have never programmed before, I recommend that you work through two optio
 
 **Time:** Wednesdays from 11:00 AM-noon Central (US) Time (starting October 25). 
 
-**Venue** Synchronously  on Zoom and in-person in the Digital Lab, 4th floor Central Library. You should complete the Zoom registration even if you plan to attend in person. [Registration link](https://vanderbilt.zoom.us/meeting/register/). After registering, you will receive a confirmation email containing information about joining the Zoom session.
+**Venue** Synchronously  on Zoom and in-person in the Digital Lab, 4th floor Central Library. You should complete the Zoom registration even if you plan to attend in person. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJUkfu6rqTsvE9UCDOqi-9RYFzxfakWsXRWk). After registering, you will receive a confirmation email containing information about joining the Zoom session.
 
 **Instructor:** Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange a time to talk.
 
