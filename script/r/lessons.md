@@ -14,7 +14,7 @@ R lessons are provided by the [Digital Lab](https://www.library.vanderbilt.edu/d
 
 The beginners lessons are generally offered once per semester.  See the schedule below for session details.  
 
-Each lesson includes of a series of videos with a practice scripts and homework assignments. The live working sessions provide an opportunity for participants to ask questions about the lesson videos and homework, or to work on the homework with assistance. 
+Each lesson includes of a series of videos with a practice scripts and homework assignments. The live sessions present the lesson content and provide an opportunity for participants to ask questions. 
 
 The lessons are part of a free, online learning system called [CodeGraf](../../codegraf). You are welcome to work through these lessons or any of the other lesson modules available in CodeGraf on your own at any time (no registration required). To explore all of the lesson modules that are available, visit the [CodeGraf landing page](../../codegraf). 
 
@@ -23,11 +23,11 @@ The Digital Lab also provides [lessons for learning Python](http://vanderbi.lt/p
 [Archive of past lessons](../archive/)
 
 
-## Beginners Lessons - Spring 2023
+## Beginners Lessons - Fall 2023
 
-**Time:** Wednesdays from 1:00-2:00 PM Central (US) Time (starting March 22). 
+**Time:** Wednesdays from 1:00-2:00 PM Central (US) Time (starting August 3). 
 
-**Venue** Synchronously on Zoom. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJYrcOmorTgsHtW74vWxpL-Ac2JWDiYUMIHj). After registering, you will receive a confirmation email containing information about joining the Zoom session.
+**Venue** Synchronously on Zoom. [Registration link](https://vanderbilt.zoom.us/meeting/register/). After registering, you will receive a confirmation email containing information about joining the Zoom session.
 
 **Instructor:** Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange a time to talk.
 
@@ -39,11 +39,26 @@ If you have never programmed before, I recommend that you work through two optio
 
 | Working session date | Lesson | Topic | Web pages (times are total video length) |
 |---|---|---|---|
-| Mar 22 | 1 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (45 min) |
-| Mar 29 | 2 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
-| Apr 5 | 3 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
-| Apr 12 | 4 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
-| Apr 19 | 5 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (45 min)  |
+| Aug 30 | 1 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (45 min) |
+| Sep 6 | 2 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
+| Sep 13 | 3 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
+| Sep 20 | 4 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
+| Oct 4 | 5 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (45 min)  |
+
+## Data visualization with ggplot (Intermediate topic) - Fall 2023
+
+This hands-on lesson series will quickly get you started using the R library `ggplot` to create data visualizations. These lessons assume that you have a basic familiarity with R and RStudio. However, those with no background can still participate by trying and modifying the provided code examples. To visualize your own data, you will want to take the beginner lessons during the first half of the semester or work through them on your own.
+
+The session topics are subject to change.
+
+| Working session date | Lesson | Topics | Web pages |
+|---|---|---|---|
+| Oct 25 | 1 | Grammar of Graphics, 3 common geoms, formatting | [lesson videos](../../codegraf/032/) (25 min) |
+| Nov 1 | 2 | controlling asthetics like color and size, labels | [lesson webpage](../../codegraf/033/) |
+| Nov 8 | 3 | stats: binning, distributions, error bars | [lesson webpage](../../codegraf/034/) |
+| Nov 15 | 4 | displaying complex data: arranging plots, grouping, and facets | [lesson webpage](../../codegraf/035/) |
+| Nov 29 | 5 | maps, coordinate systems, axis transformations | [lesson webpage](../../codegraf/036/)  |
+| Dec 6 | 6 | interactive ggplots with Shiny | [lesson webpage](../../codegraf/037/)  |
 
 
 # R Resources
