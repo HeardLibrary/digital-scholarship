@@ -192,8 +192,47 @@ A bunch of lines will scroll up the console window.  When it says "The downloade
 
 The practice assignment is [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/011/r_practice_assignment_1.R). You will need to load it into the editor pane of RStudio -- see the "Loading an R script" instructions above if you need help.
 
+It is best to try to complete each problem on your own before resorting to watching the solution videos below.
+
+----
+
+Problem 1 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/7nn2Z9Oioig" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 2 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/pOjT4L9NJ6A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 3 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/Lz5t-SKyM1s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 4 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/Ov3WITBnbXM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 5 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/VNUVD9Q5bOU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 6 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/xI5H7Q_aAss" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
 
 Next lesson: [Lists and dataframes](../012)
 
 ----
-Revised 2023-03-20
+Revised 2023-08-17
