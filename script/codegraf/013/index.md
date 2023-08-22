@@ -230,8 +230,29 @@ summary(model) # gives statistical quantities related to the regression
 
 The practice assignment is [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/013/r_practice_assignment_3.R). You will need to load it into the editor pane of RStudio.
 
+It is best to try to complete each problem on your own before resorting to watching the solution videos below.
+
+----
+
+Problem 1 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/P25hVX29H04" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 2 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/n0qb5XL2_rA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 3 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/oiNHCkMQWxY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
 
 Next lesson: [Tidy Data and basic data wrangling](../014a)
 
 ----
-Revised 2023-04-04
+Revised 2023-08-22
