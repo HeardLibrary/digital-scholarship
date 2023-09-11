@@ -211,13 +211,13 @@ The practice assignment is [here](https://github.com/HeardLibrary/digital-schola
 
 Problem 1a solution
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/NifUVUDXU8I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/yCyDfj_dofg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ----
 
 Problem 1b solution
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/tMc3Dpb1o2k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/o2eXduNZ-pM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ----
 
