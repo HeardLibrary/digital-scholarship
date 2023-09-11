@@ -207,8 +207,57 @@ would replace the original `schools_tibble` tibble with the new one having the a
 
 The practice assignment is [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/014/r_practice_assignment_4.R). You will need to load it into the editor pane of RStudio.
 
+----
+
+Problem 1a solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/NifUVUDXU8I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 1b solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/tMc3Dpb1o2k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 2a and b solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/sC4RdxiLJOs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 2c solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/7vYIKnTbDAk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 3 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/X9tAMXuSZX4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 4a solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/3Y2vghRZFb4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 4b solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/dntNAxIPKrU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 4c and d solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/awZbtrAN_KQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 
 Next lesson: [piping and more data wrangling](../014b)
 
 ----
-Revised 2023-04-11
+Revised 2023-09-11
