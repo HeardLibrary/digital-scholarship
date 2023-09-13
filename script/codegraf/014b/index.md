@@ -180,7 +180,48 @@ The practice assignment is [here](https://github.com/HeardLibrary/digital-schola
 
 ----
 
+Problem 1 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/oGaI7qaoO9Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+----
+
+Problem 2 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/gVaUnEAgc8E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+----
+
+Problem 3 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/RwWdq1TEXjI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+----
+
+Problem 4 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/zzbysJ3lkAU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+----
+
+Problem 5 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/iDGZIlFLybM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+----
+
+Problem 6 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/T-0F0MCQ-WU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
 This is the last lesson in this module. Intermediate-level modules are under construction for [Statistics with R](../026) and [Data visualization using ggplot](../032). [Return to the CodeGraf landing page](../)
 
 ----
-Revised 2023-04-18
+Revised 2023-09-13
