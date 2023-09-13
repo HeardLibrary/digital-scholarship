@@ -42,7 +42,7 @@ If you have never programmed before, I recommend that you work through two optio
 | Aug 30 | 1 | Basics: Vectors and vectorized computing, packages | [lesson videos](../../codegraf/011/) (45 min) |
 | Sep 6 | 2 | Lists and dataframes, tibbles | [lesson videos](../../codegraf/012/) (40 min) |
 | Sep 13 | 3 | Missing data, basic stats, basic plots | [lesson videos](../../codegraf/013/) (47 min) |
-| Sep 20 | 4 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
+| Sep 28 (Thursday) | 4 | Tidy Data and basic data wrangling | [lesson videos](../../codegraf/014a/) (31 min) |
 | Oct 4 | 5 | More data wrangling and piping | [lesson videos](../../codegraf/014b/) (45 min)  |
 
 ## Data visualization with ggplot (Intermediate topic) - Fall 2023
