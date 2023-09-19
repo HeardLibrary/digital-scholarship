@@ -58,11 +58,21 @@ To start using Anaconda, go to the Anaconda Navigator.  It will show up in your 
 
 Installing VS Code is fairly straightforward. In the Anaconda Navigator, just find the VS Code panel and click on the `Install` button as described above.
 
+--------
+install VS code, had to unzip and drag to applications folder
+Skip this. pip3 install jupyter (with Python)
+
+no kernal shows up anywhere by default
+installed the Python extension and the Jupyter extension
+
+
 ## Activating an environment in a Jupyter notebook
 
 There are two aspects to running a Jupiter notebook in VS Code. One is manipulating the notebook cells and writing code in them, and the other is getting the notebook to actually run in an environment. In theory, you should activate an Anaconda environment before you run the notebook, but you can get away with just editing the notebook and the first time you try to run a cell, you will be prompted to activate an environment. 
 
 To activate the environment first, open the Command Pallette by pressing the `shift` and `command` then `P` keys on a Mac. On Windows, press `Shift` and `Ctrl` then `P`. From the menu, select `Python: Select Interpreter`. This will bring up a popup from which you can select the installation of Python you want to use. Generally, there will be a Recommended one and it is usually safe to just select that. The main reason this makes a difference is that you may have different packages installed in different environments. For example, if you select the Anaconda installation, it will probably have many of the typical libraries you would want to use already installed. If you pick a generic installation, you may need to install some packages from the command line using PIP. 
+
+no choices from select kernal at first
 
 If you already have a notebook open, you'll see a `Select Kernal` option in the upper right. Clicking on that will bring up the same options that you'll see in the `Python: Select Interpreter` dialog. Similarly, if you run a cell without setting an environment, the selection dialog will pop up at the top of the screen.
 
@@ -88,16 +98,23 @@ To run a cell, click on the "play" button at the left of the cell. Any output wi
 
 # Activating GitHub Copilot
 
-The first step in activating GitHub Copilot is to create a GitHub account if you don't already have one. They are free and you can sign up at <https://github.com/>. Sign into your account and make note of the username you chose. 
+The first step in activating GitHub Copilot is to create a GitHub account if you don't already have one. They are free and you can sign up at <https://github.com/>. Sign into your account and make note of the username you chose. Complete your Public Profile and make sure that you give your name exactly like it will appear on your academic ID. Also, complete the Bio section.
+
+NOTE: when you sign up, if you do not use your school email you will need to add it as an additional email and verify it. You can do this under the settings, email. After adding the email, verify using the email that is generated.
 
 ## Obtaining free educational access
 
-Once you have the account you need to sign up for free access if you have a `.edu` email address. Go to <https://education.github.com/>. 
+Once you have the account you need to sign up for free access if you have a school email address. Go to <https://education.github.com/>. 
 
 If you are a student:
 
 1. Under the `Student` menu, select `Student Developer Pack`.
 2. Click the `Yes, I'm a student` button. 
+3. Select "Student" radio button if it isn't already selected.
+4. Select school address. If it is not already there, go to github account settings, email, (click the button on the page) and verify. 
+5. How you will use github (fill in)
+6. On next page, you need to submit a photo of your student ID.
+7. If all goes well and your application processes successfully, you will either get an email within an hour or within 10 days. 
 
 If you are a teacher, follow the instructions on the [Apply to GitHub Global Campus as a teacher](https://docs.github.com/en/education/explore-the-benefits-of-teaching-and-learning-with-github-education/github-global-campus-for-teachers/apply-to-github-global-campus-as-a-teacher) page:
 
