@@ -16,13 +16,9 @@ Previous lesson: [Programming environments](../002)
 - set up a GitHub account.
 - enable the GitHub Copilot plugin.
 
-Total video time: m s
-
 ## Links
 
 [Example Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/003/example.ipynb)
-
-[Lesson slides](../slides/lesson003.pdf)
 
 # Getting access to GitHub Copilot
 
@@ -34,7 +30,7 @@ The first step in activating GitHub Copilot is to create a GitHub account if you
 
 NOTE: when you sign up, if you do not use your school email you will need to add it as an additional email and verify it. You can do this under the settings, email. After adding the email, verify using the email that is generated. It is simplest to just sign up for GitHub using your school email if you plan to get the free educational access.
 
-## Obtaining free educational access
+**Obtaining free educational access**
 
 Once you have the account you need to sign up for free access if you have a school email address. Go to <https://education.github.com/>. 
 
@@ -58,7 +54,7 @@ There are various ways to install VS Code and run Jupyter notebooks in the VS Co
 
 In these instructions, we will consider two options: installing a Jupiter environment as part of the Anaconda distribution, and installing Jupyter notebooks directly. Installing via Anaconda is probably more straightforward and if you already have it installed, the setup is easier. However, it is fairly frequent for people to have problems with the Anaconda installation, so a direct install may be a better option in that situation.
 
-## What is Anaconda? (6m30s)
+**What is Anaconda? (6m30s)**
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/T19e_Idg2WY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -66,7 +62,7 @@ Anaconda is an umbrella system for data science that includes many of the most i
 
 Technically, there are two different pieces in play.  *Anaconda* itself is a software distribution - it includes a number of pre-configured programs and packages.  *Conda* is a *package manager* that is installed automatically when Anaconda is installed.  Conda is used to install, remove, and update the packages associated with the software that is a part of the Anaconda distribution.  Conda can actually be used as a package management system independently of Anaconda.  [This blog post](https://jakevdp.github.io/blog/2016/08/25/conda-myths-and-misconceptions/) contains more details.
 
-## Is Anaconda for me?
+**Is Anaconda for me?**
 
 Using Anaconda is appealing because it allows you to have access to many data science tools with a single install.  However, there are several things to consider before installing Anaconda.
 
@@ -133,23 +129,23 @@ If you already have a notebook open, you'll see a `Select Kernal` option in the 
 
 # Using Jupyter notebooks in VS Code
 
-## Downloading and running a Jupyter notebook from GitHub (1m54s)
+**Downloading and running a Jupyter notebook from GitHub (1m54s)**
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/FsMZ40jL4uQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 [Example Jupyter notebook to download from GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/003/example.ipynb)
 
-## Workspace Trust
+**Workspace Trust**
 
 If you work with a new notebook that you've downloaded from somewhere else, you can look at the code but you can't run it without indicating that you trust it. There will be a popup dialog at the top of the screen for you to do this. If this annoys you, you can set a particular folder to be trusted by default. All notebooks run from that folder will be trusted and you won't have to go through the dialog each time.
 
-## Running cells
+**Running cells**
 
 To run a cell, click on the "play" button at the left of the cell. Any output will appear below the cell. There are buttons at the top of the screen to `Clear All Outputs` and `Restart` (which clears the values of all variables in the environment). These two functions are independent -- clearing the output does not clear the environment and vice versa. 
 
 # Using GitHub Copilot in the VS Code environment
 
-## Activating GitHub Copilot
+**Activating GitHub Copilot**
 
 Instructions from [this page](https://docs.github.com/en/copilot/getting-started-with-github-copilot)
 
@@ -161,7 +157,7 @@ Instructions from [this page](https://docs.github.com/en/copilot/getting-started
 5. You should get a prompt to authorize GitHub for VS Code. Click the `Authorize Visual-Studio-Code` button. If you don't see this prompt, close and reopen VS Code. Allow it to open the link. 
 6. In the lower right corner you should see the Copilot icon. If not, restart VS Code.
 
-## Using GitHub Copilot
+**Using GitHub Copilot**
 
 GitHub Copilot is an autocompletion tool, meaning that tt will suggest code to you as you type. It is based on an OpenAI system similar to ChatGPT, but trained on code that has been submitted to GitHub. We will be using it to help us write Python code, but it can also be used for other languages such as JavaScript. It can actually be used with Markdown as well, and made suggestions for writing the text on this page. 
 
@@ -170,4 +166,4 @@ When using GitHub Copilot in a Jupyter notebook, the easiest thing to do is to t
 Next Python lesson: [Python programming basics](../004)
 
 ----
-Revised 2023-09-15
+Revised 2023-10-02
