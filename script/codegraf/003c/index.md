@@ -120,7 +120,18 @@ If you are a teacher, follow the instructions on the [Apply to GitHub Global Cam
 
 Note that you have to submit a photo of your academic ID. You may have to wait a few days for your application to be processed. 
 
+## Enabling Copilot
 
+Instructions from [this page](https://docs.github.com/en/copilot/getting-started-with-github-copilot)
+
+1. Go to <https://github.com/github-copilot/free_signup>. You should see "Congratulations! You are eligible to use GitHub Copilot for free." Click on the `Get access to GitHub Copilot` button.
+2. On the "Select your preferences" page, select "Allow". Chose whether you want to allow GitHub to use your code for training (optional). Click the `Save and get started button`. 
+
+3. In the Visual Studio Code Marketplace, go to the [GitHub Copilot extension page](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) and click Install.
+4. A popup will appear, asking to open Visual Studio Code. Click Open Visual Studio Code.
+4. When VS Code opens, you will be in a "Extension: GitHub Copilot" tab. There should be an `Install` button. Click it to complete the install. 
+5. You should get a prompt to authorize GitHub for VS Code. Click the `Authorize Visual-Studio-Code` button. If you don't see this prompt, close and reopen VS Code. Allow it to open the link. 
+6. In the lower right corner you should see the Copilot icon. If not, restart VS Code.
 
 
 Next Python lesson: [Python programming basics](../004)
