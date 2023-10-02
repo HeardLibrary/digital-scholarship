@@ -37,12 +37,12 @@ If you have never programmed before, I recommend that you work through two optio
 
 | Working session date | Lesson | Topic | Web page (times are total video length) |
 |---|---|---|---|
-| Oct 25 | 1 | Setting up and using Copilot | lesson videos (x min) |
-| Nov 1 | 1 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
-| Nov 8 | 2 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
-| Nov 15 | 3 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
-| Nov 29 | 4 | Loops | [lesson videos](../../codegraf/006b/) (33 min lessons, 61 min including demos) |
-| Dec 6 | 5 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
+| Oct 25 | 1 | Setting up and using Copilot | [instructions](../../codegraf/003c/) |
+| Nov 1 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
+| Nov 8 | 3 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
+| Nov 15 | 4 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
+| Nov 29 | 5 | Loops | [lesson videos](../../codegraf/006b/) (33 min lessons, 61 min including demos) |
+| Dec 6 | 6 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
 
 
 
