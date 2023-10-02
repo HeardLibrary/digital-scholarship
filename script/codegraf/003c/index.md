@@ -11,10 +11,10 @@ Previous lesson: [Programming environments](../002)
 [GitHub Copilot](https://github.com/features/copilot) is an artificial intelligence autocompletion code suggestion tool. It is based on an OpenAI system similar to ChatGPT, but trained on code that has been submitted to GitHub. In this lesson, we will install Visual Studio Code (VS Code) and enable GitHub Copilot for use within the VS Code environment. Copilot is free for students and teachers. For others, it has a 30-day trial followed by a paid subscription.
 
 **Learning objectives** At the end of this lesson, the learner will:
+- set up a GitHub account and apply for access to GitHub Copilot.
 - describe the Anaconda distribution.
-- install VS Code.
-- set up a GitHub account.
-- enable the GitHub Copilot plugin.
+- install VS Code and Jupyter environment.
+- enable and use the GitHub Copilot plugin.
 
 ## Links
 
@@ -24,35 +24,36 @@ Previous lesson: [Programming environments](../002)
 
 GitHub Copilot is a paid product, but it is free for students and teachers. If you are not a student or teacher, you can get a 30-day free trial. After that, you will have to pay for a subscription. 
 
-Because there is a waiting time for the free educational access, you should start the process as soon as possible, since you may have to wait for up to several days for your application to be processed.
+Because there is a waiting time for approval for the free educational access, you should start the process as soon as possible, since you may have to wait for up to several days for your application to be processed.
 
 The first step in activating GitHub Copilot is to create a GitHub account if you don't already have one. They are free and you can sign up at <https://github.com/>. Sign into your account and make note of the username you chose. Complete your Public Profile and make sure that you give your name exactly like it will appear on your academic ID. Also, complete the Bio section.
 
-NOTE: when you sign up, if you do not use your school email you will need to add it as an additional email and verify it. You can do this under the settings, email. After adding the email, verify using the email that is generated. It is simplest to just sign up for GitHub using your school email if you plan to get the free educational access.
+NOTE: when you sign up, if you do not use your school email you will need to add it as an additional email and verify it. You can do this under the settings, email. After adding the email, verify using the email message that is generated and sent to you. However, it is simplest to just sign up for GitHub using your school email if you plan to get the free educational access.
 
 **Obtaining free educational access**
 
-Once you have the account you need to sign up for free access if you have a school email address. Go to <https://education.github.com/>. 
+Once you have the account you need to sign up for free access if you have a school email address. Note that for either student or teacher free access, you have to submit a photo of your academic ID.
 
-If you are a student:
+*If you are a student:*
 
-1. Under the `Student` menu, select `Student Developer Pack`.
+1. Go to <https://education.github.com/>. Under the `Student` menu, select `Student Developer Pack`.
 2. Click the `Yes, I'm a student` button. 
 3. Select "Student" radio button if it isn't already selected.
 4. Select school address. If it is not already there, go to github account settings, email, (click the button on the page) and verify. 
-5. How you will use github (fill in)
+5. Fill in the section on how you will use GitHub.
 6. On next page, you need to submit a photo of your student ID.
 7. If all goes well and your application processes successfully, you will either get an email within an hour or within 10 days. 
 
-If you are a teacher, follow the instructions on the [Apply to GitHub Global Campus as a teacher](https://docs.github.com/en/education/explore-the-benefits-of-teaching-and-learning-with-github-education/github-global-campus-for-teachers/apply-to-github-global-campus-as-a-teacher) page.
+*If you are a teacher:*
 
-Note that for either student or teacher free access, you have to submit a photo of your academic ID. You may have to wait a few days for your application to be processed. 
+Follow the instructions on the [Apply to GitHub Global Campus as a teacher](https://docs.github.com/en/education/explore-the-benefits-of-teaching-and-learning-with-github-education/github-global-campus-for-teachers/apply-to-github-global-campus-as-a-teacher) page. You may have to wait a few days for your application to be reviewed.
+
 
 # Installation
 
 There are various ways to install VS Code and run Jupyter notebooks in the VS Code environment. You can find them by searching the web and reading about them. 
 
-In these instructions, we will consider two options: installing a Jupiter environment as part of the Anaconda distribution, and installing Jupyter notebooks directly. Installing via Anaconda is probably more straightforward and if you already have it installed, the setup is easier. However, it is fairly frequent for people to have problems with the Anaconda installation, so a direct install may be a better option in that situation.
+In these instructions, we will consider two options: installing a Jupiter environment as part of the Anaconda distribution, and installing Jupyter notebooks directly. Installing via Anaconda is probably more straightforward and if you already have Anaconda installed, the setup is easier. However, it is fairly frequent for people to have problems with the Anaconda installation, so a direct install may be a better option in that situation.
 
 **What is Anaconda? (6m30s)**
 
@@ -135,6 +136,10 @@ If you already have a notebook open, you'll see a `Select Kernal` option in the 
 
 [Example Jupyter notebook to download from GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/003/example.ipynb)
 
+The video above shows how to run the downloaded notebook from the Jupyter notebook web interface. However, we will be opening the notebooks using VS Code. From within VS Code, go to the file menu and select `Open...`. Navigate to the notebook you want to open and select it. The notebook will open in a new tab.
+
+If you want notebooks to open in VS Code by default when you double-click on a notebook icon in your file system navigator, you can set that using [these instructions for Mac](https://heardlibrary.github.io/digital-scholarship/computer/files-mac/#changing-file-associations) or [these instructions for Windows](https://heardlibrary.github.io/digital-scholarship/computer/files-windows/#changing-file-associations). The file extension for Jupyter notebooks is `.ipynb`.
+
 **Workspace Trust**
 
 If you work with a new notebook that you've downloaded from somewhere else, you can look at the code but you can't run it without indicating that you trust it. There will be a popup dialog at the top of the screen for you to do this. If this annoys you, you can set a particular folder to be trusted by default. All notebooks run from that folder will be trusted and you won't have to go through the dialog each time.
@@ -147,7 +152,7 @@ To run a cell, click on the "play" button at the left of the cell. Any output wi
 
 **Activating GitHub Copilot**
 
-Instructions from [this page](https://docs.github.com/en/copilot/getting-started-with-github-copilot)
+Instructions based on [this detailed page](https://docs.github.com/en/copilot/getting-started-with-github-copilot)
 
 1. Go to <https://github.com/github-copilot/free_signup>. You should see "Congratulations! You are eligible to use GitHub Copilot for free." Click on the `Get access to GitHub Copilot` button.
 2. On the "Select your preferences" page, select "Allow". Chose whether you want to allow GitHub to use your code for training (optional). Click the `Save and get started button`. 
@@ -155,11 +160,15 @@ Instructions from [this page](https://docs.github.com/en/copilot/getting-started
 4. A popup will appear, asking to open Visual Studio Code. Click Open Visual Studio Code.
 4. When VS Code opens, you will be in a "Extension: GitHub Copilot" tab. There should be an `Install` button. Click it to complete the install. 
 5. You should get a prompt to authorize GitHub for VS Code. Click the `Authorize Visual-Studio-Code` button. If you don't see this prompt, close and reopen VS Code. Allow it to open the link. 
-6. In the lower right corner you should see the Copilot icon. If not, restart VS Code.
+6. In the lower right corner you should see the Copilot icon. It looks like this:
+
+![Copilot icon](copilot_icon.png)
+
+If not, restart VS Code.
 
 **Using GitHub Copilot**
 
-GitHub Copilot is an autocompletion tool, meaning that tt will suggest code to you as you type. It is based on an OpenAI system similar to ChatGPT, but trained on code that has been submitted to GitHub. We will be using it to help us write Python code, but it can also be used for other languages such as JavaScript. It can actually be used with Markdown as well, and made suggestions for writing the text on this page. 
+GitHub Copilot is an autocompletion tool, meaning that tt will suggest code to you as you type. We will be using it to help us write Python code, but it can also be used for other languages such as JavaScript. It can actually be used with Markdown as well, and made suggestions for writing the text on this page. 
 
 When using GitHub Copilot in a Jupyter notebook, the easiest thing to do is to type a comment in a cell (comments begin with tht `#` character). Copilot will then suggest code that it thinks will do what you want. You can then select the code you want and press the `Tab` key to insert it into the cell. If the suggested code is not what you want, you can start typing and Copilot will make new suggestions. Usually it will suggest a single line of code, but sometimes it will suggest an entire block of code or function if it thinks that is what you want.
 
