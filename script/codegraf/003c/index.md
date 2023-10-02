@@ -1,12 +1,12 @@
 ---
 permalink: /script/codegraf/003c/
-title: CodeGraf - Installing Jupyter notebooks with VS Code and GitHub Copilot
+title: CodeGraf - Setting up VS Code to use Jupyter notebooks and GitHub Copilot
 breadcrumb: OO3c
 ---
 
 Previous lesson: [Programming environments](../002)
 
-# Installing Jupyter notebooks with VS Code and GitHub Copilot
+# Setting up VS Code to use Jupyter notebooks and GitHub Copilot
 
 [GitHub Copilot](https://github.com/features/copilot) is an artificial intelligence autocompletion code suggestion tool. It is based on an OpenAI system similar to ChatGPT, but trained on code that has been submitted to GitHub. In this lesson, we will install Visual Studio Code (VS Code) and enable GitHub Copilot for use within the VS Code environment. Copilot is free for students and teachers. For others, it has a 30-day trial followed by a paid subscription.
 
