@@ -305,7 +305,7 @@ Notice how this differs from the `strftime()` function from the `time` module. T
 
 # Practice assignment
 
-The questions for the practice assignment are in this [assignment Colab notebook](https://colab.research.google.com/drive/1EwJI9lyeXnzxLJCNr4omnXzG_oK16u5K?usp=sharing). You will need to [make a copy of it in your own drive](../003a#running-someone-elses-colab-notebook-3m35s) before editing it.
+The questions for the practice assignment are in this [Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/005/005_practice.ipynb). It is also available as a [Colab notebook](https://colab.research.google.com/drive/1EwJI9lyeXnzxLJCNr4omnXzG_oK16u5K?usp=sharing). You will need to [make a copy of it in your own drive](../003a#running-someone-elses-colab-notebook-3m35s) before editing it.
 
 For feedback on the assignment, change the sharing properties to allow access for anyone with the link, and send the notebook link to the instructor.
 
@@ -314,4 +314,4 @@ For feedback on the assignment, change the sharing properties to allow access fo
 Next lesson: [Lists and dictionaries](../006a)
 
 ----
-Revised 2023-02-06
+Revised 2023-10-03

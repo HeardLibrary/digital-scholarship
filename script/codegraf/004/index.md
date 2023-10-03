@@ -455,11 +455,9 @@ print(too_many)
 
 ## Practice assignment:
 
-The questions for the practice assignment are in this [assignment Colab notebook](https://colab.research.google.com/drive/1GaNrFR-sR8dVhDqpyzDk1QAxndUxjFwu?usp=sharing). You will need to [make a copy of it in your own drive](../003a#running-someone-elses-colab-notebook-3m35s) before editing it.
-
-For feedback on the assignment, change the sharing properties to allow access for anyone with the link, and send the notebook link to the instructor.
+The questions for the practice assignment are in this [Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/004/004_practice.ipynb). It is also available as a [Colab notebook](https://colab.research.google.com/drive/1GaNrFR-sR8dVhDqpyzDk1QAxndUxjFwu?usp=sharing). You will need to [make a copy of it in your own drive](../003a#running-someone-elses-colab-notebook-3m35s) before editing it.
 
 Next lesson: [Using code libraries](../005)
 
 ----
-Revised 2023-02-06
+Revised 2023-10-03

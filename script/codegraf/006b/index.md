@@ -266,7 +266,7 @@ This basically serves as a utility for us and documenting how all of its pieces 
 
 # Practice assignment
 
-The questions for the practice assignment are in this [assignment Colab notebook](https://colab.research.google.com/drive/1tVC5hSbsW8E-y0-XxE_fhshc0Q1w7Kty?usp=sharing). You will need to [make a copy of it in your own drive](../003a#running-someone-elses-colab-notebook-3m35s) before editing it.
+The questions for the practice assignment are in this [Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/006/006b_practice.ipynb). It is also available as a [Colab notebook](https://colab.research.google.com/drive/1tVC5hSbsW8E-y0-XxE_fhshc0Q1w7Kty?usp=sharing). You will need to [make a copy of it in your own drive](../003a#running-someone-elses-colab-notebook-3m35s) before editing it.
 
 For feedback on the assignment, change the sharing properties to allow access for anyone with the link, and send the notebook link to the instructor.
 
