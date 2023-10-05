@@ -75,13 +75,13 @@ Using Anaconda is appealing because it allows you to have access to many data sc
 
 If you are a newby user with a reasonably new computer, you are probably not going to know or care about any of these things and can probably safely just install Anaconda and get on with your life.  If you are an advanced user and completely understand all of these things, then you will understand the implacations and be able to deal with any problems that may arise.  Things might be complicated if you are an intermediate user and are using the tools mentioned above (e.g. Homebrew or virtual environments), but aren't expert enough to figure out how to fix things if they go wrong.
 
-## Installing VS Code via Anaconda Navigator (Option 1)
+## Installing VS Code with Jupyter installed via Anaconda Navigator (Option 1)
 
 If you decide that Anaconda is for you, go to the [Anaconda Installation page](https://docs.anaconda.com/anaconda/install/) and folow the links for your operating system.
 
-To start using Anaconda, go to the Anaconda Navigator.  It will show up in your Windows Start menu or Launchpad on Mac.  Not every application included in Anaconda will be pre-installed, so the first time you want to use one of the applications in the Anaconda Navigator, you may need to click the `Install` button.  After the first time, the button will change to `Launch`.  The [Getting started page](https://docs.anaconda.com/anaconda/user-guide/getting-started/) has more details.
+The initial installation of VS Code will need to be done separately. To install VS Code, go to the [downloads page](https://code.visualstudio.com/download) and follow the instructions for your operating system. 
 
-Installing VS Code is fairly straightforward. In the Anaconda Navigator, just find the VS Code panel and click on the `Install` button as described above. Since Anaconda includes a Jupyter environment, there are no additional steps to install Jupyter.
+To start using Anaconda, go to the Anaconda Navigator.  It will show up in your Windows Start menu or Launchpad on Mac.  Once you have installed VS Code, it should show up in the Anaconda Navigator, from which you can lauch it. Since Anaconda includes a Jupyter environment, there are no additional steps to install Jupyter. The Anaconda [Getting started page](https://docs.anaconda.com/anaconda/user-guide/getting-started/) has more details. 
 
 ## Installing VS Code and a Jupyter environment directly (Option 2) 
 
@@ -175,4 +175,4 @@ When using GitHub Copilot in a Jupyter notebook, the easiest thing to do is to t
 Next Python lesson: [Python programming basics](../004)
 
 ----
-Revised 2023-10-02
+Revised 2023-10-05
