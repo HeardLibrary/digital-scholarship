@@ -274,15 +274,62 @@ del traits['eye color']
 
 # Practice assignment
 
-The questions for the practice assignment are in this [Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/006/006a_practice.ipynb). It is also available as a [Colab notebook](https://colab.research.google.com/drive/1-nPXPef6B9FFvrbETXP3Nb_rQbfuq6WP?usp=sharing). You will need to [make a copy of it in your own drive](../003a#running-someone-elses-colab-notebook-3m35s) before editing it.
-
-For feedback on the assignment, change the sharing properties to allow access for anyone with the link, and send the notebook link to the instructor.
+The questions for the practice assignment are in this [Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/006/006a_practice.ipynb). It is also available as a [Colab notebook](https://colab.research.google.com/drive/1-nPXPef6B9FFvrbETXP3Nb_rQbfuq6WP?usp=sharing). 
 
 ----
+
+Problem 1 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/rQpCof9Xnew" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 2 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/vpQsR6DwUoc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 3 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/bE544-SBrR0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 4 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/JDRTQ3TffjI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 5 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/IO6jNu6C4Ls" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 6 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/IPcM5iMBWgs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem ex1 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/IM58m5ED4jY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem ex2 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/rLF3cUcj5wY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
 
 Next lesson: [loops](../006b)
 
 
 ----
 
-Revised 2023-10-03
+Revised 2023-10-20
