@@ -455,9 +455,43 @@ print(too_many)
 
 ## Practice assignment:
 
-The questions for the practice assignment are in this [Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/004/004_practice.ipynb). It is also available as a [Colab notebook](https://colab.research.google.com/drive/1GaNrFR-sR8dVhDqpyzDk1QAxndUxjFwu?usp=sharing). You will need to [make a copy of it in your own drive](../003a#running-someone-elses-colab-notebook-3m35s) before editing it.
+The questions for the practice assignment are in this [Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/004/004_practice.ipynb). To use the notebook in VS Code, you will need to [download](https://heardlibrary.github.io/digital-scholarship/script/codegraf/003/#downloading-and-running-a-jupyter-notebook-from-github-1m54s) it to your local drive.
+
+It is also available as a [Colab notebook](https://colab.research.google.com/drive/1GaNrFR-sR8dVhDqpyzDk1QAxndUxjFwu?usp=sharing). If you use the Colab notebook, you will need to [make a copy of it in your own drive](../003a#running-someone-elses-colab-notebook-3m35s) before editing it.
+
+----
+
+Problem 1 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/MWvwBo1g1lE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 2 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/6-NUNkuChuE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 3 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/3G9puUsUHvM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 4 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/lTUIJhIv43s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 5 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/vYiBkeTWddo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
 
 Next lesson: [Using code libraries](../005)
 
 ----
-Revised 2023-10-03
+Revised 2023-10-20
