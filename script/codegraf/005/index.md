@@ -305,13 +305,48 @@ Notice how this differs from the `strftime()` function from the `time` module. T
 
 # Practice assignment
 
-The questions for the practice assignment are in this [Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/005/005_practice.ipynb). It is also available as a [Colab notebook](https://colab.research.google.com/drive/1EwJI9lyeXnzxLJCNr4omnXzG_oK16u5K?usp=sharing). You will need to [make a copy of it in your own drive](../003a#running-someone-elses-colab-notebook-3m35s) before editing it.
-
-For feedback on the assignment, change the sharing properties to allow access for anyone with the link, and send the notebook link to the instructor.
+The questions for the practice assignment are in this [Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/005/005_practice.ipynb). It is also available as a [Colab notebook](https://colab.research.google.com/drive/1EwJI9lyeXnzxLJCNr4omnXzG_oK16u5K?usp=sharing).
 
 ----
+
+Problem 1 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/BIzOeo-Mejk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 2 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/6ygL9DFVMHM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 3 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/nnkTI1TJ3u4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 4 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/gzvY1MYfbyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 5 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/h77ccfMk2GE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 6 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/Lt8kZBfiybw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
 
 Next lesson: [Lists and dictionaries](../006a)
 
 ----
-Revised 2023-10-03
+Revised 2023-10-20
