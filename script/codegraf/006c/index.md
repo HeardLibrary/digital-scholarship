@@ -388,9 +388,13 @@ to generate the range of indices for the list. This is a generalized solution fo
 
 # Practice assignment
 
-The questions for the practice assignment are in this [Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/006/006c_practice.ipynb). It is also available as a [Colab notebook](https://colab.research.google.com/drive/1_rgeUKAfu7Mg2qrVJVlbk-m0kKGXue2I?usp=sharing). You will need to [make a copy of it in your own drive](../003a#running-someone-elses-colab-notebook-3m35s) before editing it.
+The questions for the practice assignment are in this [Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/006/006c_practice.ipynb). It is also available as a [Colab notebook](https://colab.research.google.com/drive/1_rgeUKAfu7Mg2qrVJVlbk-m0kKGXue2I?usp=sharing). 
 
-For feedback on the assignment, change the sharing properties to allow access for anyone with the link, and send the notebook link to the instructor.
+----
+
+Problem 1 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/2QepLi3PXMw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ----
 
@@ -403,4 +407,4 @@ Continue to the intermediate series on [files and tables](../020)
 
 ----
 
-Revised 2023-03-01
+Revised 2023-10-23
