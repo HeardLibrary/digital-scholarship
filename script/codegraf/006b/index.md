@@ -266,15 +266,37 @@ This basically serves as a utility for us and documenting how all of its pieces 
 
 # Practice assignment
 
-The questions for the practice assignment are in this [Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/006/006b_practice.ipynb). It is also available as a [Colab notebook](https://colab.research.google.com/drive/1tVC5hSbsW8E-y0-XxE_fhshc0Q1w7Kty?usp=sharing). You will need to [make a copy of it in your own drive](../003a#running-someone-elses-colab-notebook-3m35s) before editing it.
-
-For feedback on the assignment, change the sharing properties to allow access for anyone with the link, and send the notebook link to the instructor.
+The questions for the practice assignment are in this [Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/006/006b_practice.ipynb). It is also available as a [Colab notebook](https://colab.research.google.com/drive/1tVC5hSbsW8E-y0-XxE_fhshc0Q1w7Kty?usp=sharing). 
 
 ----
 
-## Practice live coding
+Problem 1 solution
 
-These videos will help you do the extra (optional) practice problems at the end of the Practice Assignment Colab notebook.
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/2QepLi3PXMw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 2 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/K8uvZ1YtVk0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 3 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/wCsc60Jze5s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 4 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/Hv7O3JgeuYE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+## Optional practice
+
+These videos will help you do the extra (optional) practice problems at the end of the Practice Assignment notebook.
 
 **Practice problem 1** (1m48s)
 
@@ -317,4 +339,4 @@ Next lesson: [Contitional execution](../006c)
 
 ----
 
-Revised 2023-02-22
+Revised 2023-10-23
