@@ -394,7 +394,37 @@ The questions for the practice assignment are in this [Jupyter notebook at GitHu
 
 Problem 1 solution
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/2QepLi3PXMw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/uGxQOMgOM7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 2 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/5kxxpIDNydo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 3 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/gZZa6YjkbBE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 4 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/CDM5ODaTXEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 5 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/H8Eh2P3olog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
+Problem 6 solution
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/H3_6XR3GR7Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ----
 
