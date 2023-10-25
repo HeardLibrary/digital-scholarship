@@ -28,6 +28,10 @@ Total video time: 25 m 23 s
 
 [Lesson slides](../slides/lesson032.pdf)
 
+[Access to O'Reilly for Higher Education via Vanderbilt Libraries](http://www.library.vanderbilt.edu/eres?id=1676). See "R for Data Science" and "R Graphics Cookbook"
+
+[ggplot cheatsheet](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf)
+
 [ggplot2 book (draft of 3rd edition)](https://ggplot2-book.org/)
 
 [Duke University Center for Data and Visualization Sciences](https://library.capture.duke.edu/Panopto/Pages/Sessions/List.aspx)
@@ -193,4 +197,4 @@ There are a number of built-in datasets included with the R installation that ca
 Next lession: [controlling appearance](../033)
 
 ----
-Revised 2021-09-09
+Revised 2023-10-25
