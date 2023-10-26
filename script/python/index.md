@@ -92,6 +92,8 @@ The Vanderbilt Science and Engineering Library has a number of books on programm
 
 [Library Carpentry Introduction to web scraping](https://librarycarpentry.org/lc-webscraping/)
 
+[GLAM Workbench](https://glam-workbench.net/) - Tools and tutorials for working with data from galleries, libraries, archives, and museums (GLAM).
+
 [Python IDEs and Code Editors (Guide)](https://realpython.com/python-ides-code-editors-guide/)
 
 [Python 3.x documentation](https://docs.python.org/3/) - the official documentation for Python for the latest stable release of Python 3
