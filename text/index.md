@@ -14,6 +14,19 @@ Constellate is a text and data mining resource to which the Vanderbilt community
 
 [Getting Started page](constellate/)
 
+# Presentations from the Text Community of Practice (2023)
+
+## Steve Baskauf - Google Cloud Vision AI for text extraction - 2023-09-06
+
+[Presentation slides](media/google_vision_2023-09-06.pdf)
+
+[Presentation video](https://youtu.be/BrmcitKCBKU)
+
+## Shenmeng Xu - Topic Modeling: An Exploration - 2023-11-14
+
+[Presentation slides](media/topic_modeling.pdf)
+
+[Presentation video](https://youtu.be/2kJH8Y0R3xY)
 
 ----
-Revised 2022-09-14
+Revised 2023-11-16
