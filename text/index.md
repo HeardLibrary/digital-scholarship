@@ -22,11 +22,16 @@ Constellate is a text and data mining resource to which the Vanderbilt community
 
 [Presentation video](https://youtu.be/BrmcitKCBKU)
 
+[Script landing page](https://github.com/HeardLibrary/linked-data/tree/master/image_analysis)
+
 ## Shenmeng Xu - Topic Modeling: An Exploration - 2023-11-14
 
 [Presentation slides](media/topic_modeling.pdf)
 
 [Presentation video](https://youtu.be/2kJH8Y0R3xY)
+
+[analysis Colab notebook](https://colab.research.google.com/drive/18YM5HoLCi1_gb39OaiCgVnaRejAUyN4m?
+usp=sharing)
 
 ----
 Revised 2023-11-16
