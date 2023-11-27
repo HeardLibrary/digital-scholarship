@@ -4,7 +4,7 @@
 # Date: 2020-11-27
 
 library(tidyverse)
-library(haven)
+library(haven) # Library to read Stata .dta files
 
 # NOTE: one could probably use one of the three "wave" subsets rather than the whole giant file containing
 # all of the data. That would require figuring out which wave correspondes to which hear. I think mostly
