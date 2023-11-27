@@ -15,7 +15,7 @@ file_path = "/Users/baskausj/Downloads/gallup/Gallup_World_Poll_021723.dta"
 stata_dataframe <- read_dta(file_path) # when trying to load full dataset, first time I got "Error: vector memory exhausted (limit reached?)"
 # see https://stackoverflow.com/questions/51295402/r-on-macos-error-vector-memory-exhausted-limit-reached
 # As suggested in the post, I edited the .Renviron file to a max size of 100Gb. After doing that, the file 
-# did load, although it took over an hour.
+# did load, although it took over an hour. The memory use was 7.25 GB, which RStudio reported as 40% of Mac OS memory.
 head(stata_dataframe, 10)
 dim(stata_dataframe)
 
