@@ -1,7 +1,7 @@
 # gallup_downloader.py - Downloads Gallup microdata files from the Gallup SFTP server.
 # (c) 2023 Vanderbilt University. This program is released under a GNU General Public License v3.0 http://www.gnu.org/licenses/gpl-3.0
 # Author: Steve Baskauf
-# Date: 2020-11-22
+# Date: 2020-11-27
 
 # The credentials are provided by Gallup. They need to be stored in a plain text file stored
 # in the user's home directory using the name specified in the CREDENTIALS_FILENAME constant.
