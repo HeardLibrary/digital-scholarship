@@ -140,6 +140,17 @@ for attr in directory_structure:
     # Delete the zip file
     os.remove(path_to_zip_file)
 
+    # If the unzipping resulted in a subdirectory with the same name as the containing directory, 
+    # move the files up one level and delete the subdirectory. This works in most cases, although in some
+    # the subdirectory has a different name.
+    subfolder_path = extract_path + extract_folder + '/'
+    if os.path.exists(subfolder_path):
+        # Move the files up one level.
+        for file in os.listdir(subfolder_path):
+            shutil.move(subfolder_path + file, extract_path)
+        # Delete the subfolder.
+        os.rmdir(subfolder_path)
+
     print()
 
     # Update the last download dataframe.
