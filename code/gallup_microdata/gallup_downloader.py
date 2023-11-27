@@ -100,6 +100,8 @@ for attr in directory_structure:
     # Convert the size to MB, rounded to the nearest 0.1 MB
     size_in_mb = round(size_in_bytes / 1048576, 1)
 
+    extract_folder = filename[:-4] # remove the .zip extension
+
     # Check whether the file has already been downloaded.
     if filename in last_download_df.index:
         # Check whether the file size and last modified date are the same as in the last download.
@@ -107,6 +109,11 @@ for attr in directory_structure:
             # Skip this file.
             print('Skipping ' + filename + ' because it has already been downloaded.')
             continue
+        else:
+            # If the file has the same name but has been updated, add the ISO date to the extract_folder.
+            # This will ensure that the newer version gets downloaded. NOTE: the code below that removes
+            # redundant subfolders will not work if the extract_folder name has been changed.
+            extract_folder = extract_folder + '_' + last_modified_iso
 
     print('filename: ' + filename, ', size: ' + str(size_in_mb), 'MB, last modified: ' + str(last_modified_iso))
 
@@ -124,7 +131,6 @@ for attr in directory_structure:
     print('Download time: ' + str(elapsed_time) + ' seconds')
 
     # Set up local folder to hold the extracted files.
-    extract_folder = filename[:-4] # remove the .zip extension
     extract_path = home + GALLUP_BOX_DIRECTORY + extract_folder + '/'
     # If the extract folder does not exist, create it.
     if not os.path.exists(extract_path):
