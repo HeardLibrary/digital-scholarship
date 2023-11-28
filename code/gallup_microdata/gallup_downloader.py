@@ -136,7 +136,17 @@ for attr in directory_structure:
     if not os.path.exists(extract_path):
         os.makedirs(extract_path)
 
-    # Unzip the downloaded file and put the contents in the gallup_box_path
+    # Unzip the downloaded file and put the contents in the gallup_box_path.
+
+    # NOTE about unzipping: I had no problem unzipping these container zip files. However, in several cases
+    # the unzipped files were themselves zip files. I could have modified this code to unzip them. However, 
+    # there were several files that would not unzip using the Python zipfile module. They also would not unzip 
+    # using the Mac unzipping tool. However, if I downloaded them to a Windows machine and unzipped them there,
+    # they unzipped without a problem. I have not fully investigated this to figure out what is the difference 
+    # in the compressed file formats that causes the problem. So I have not added any additional code to unzip 
+    # any contained zip files. They can just be downloaded and unzipped (on a Windows machine if necessary) when
+    # a patron requests therm.
+    
     path_to_zip_file = cwd + filename
     print('Unzipping ...')
     with zipfile.ZipFile(path_to_zip_file, 'r') as zip_ref:
