@@ -18,11 +18,11 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 ### Installation requirements
 
-This script requires the pandas library, which is not part of the standard Python library, but is commonly included in distributions such as Anaconda. 
+The pandas library is REQUIRED. It is not part of the standard Python library, but is commonly included in distributions such as Anaconda. 
 
 ### Command line options
 
-Generally the command line options will not change for a given installation, so optionally the hard-coded defaults in [lines 54 to 72](https://github.com/HeardLibrary/digital-scholarship/blob/4aa06440486702bc95e518dd4f6c5478c1f5dfcb/code/iiif/collections/generate_collections_json.py#L54C1-L73C1) can be changed rather than specifying them on the command line. 
+Generally the command line options will not change for a given installation, using them is OPTIONAL if the hard-coded defaults in [lines 54 to 72](https://github.com/HeardLibrary/digital-scholarship/blob/4aa06440486702bc95e518dd4f6c5478c1f5dfcb/code/iiif/collections/generate_collections_json.py#L54C1-L73C1) are changed rather than specifying them on the command line. 
 
 | long form | short form | values | default if omitted |
 | --------- | ---------- | ------ | ------- |
@@ -35,7 +35,7 @@ Generally the command line options will not change for a given installation, so 
 
 ### Configuration file
 
-The [configuration file](collections_config.yml) is a YAML file that contains information specific to the collection. The values in the file should be set prior to running the script. The keys in the file are:
+The [configuration file](collections_config.yml) is a REQIORED YAML file that contains information specific to the collection. The values in the file MUST be set prior to running the script. The keys in the file are:
 
 | key | information provided by value |
 | --- | ----- |
@@ -46,7 +46,7 @@ The [configuration file](collections_config.yml) is a YAML file that contains in
 
 ### Data file
 
-The [data file](manifest_data.csv) is a CSV file that contains information about the manifests that will be included in the collection. The columns in the file are:
+The [data file](manifest_data.csv) is a REQIRED CSV file that contains information about the manifests that will be included in the collection. There MUST be at least one row in the table. The columns in the file are:
 
 | column | information provided by value |
 | ------ | ----- |
