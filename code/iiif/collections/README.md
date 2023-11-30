@@ -35,7 +35,7 @@ Generally the command line options will not change for a given installation, usi
 
 ### Configuration file
 
-The [configuration file](collections_config.yml) is a REQIORED YAML file that contains information specific to the collection. The values in the file MUST be set prior to running the script. The keys in the file are:
+The [configuration file](collections_config.yml) is a REQUIRED YAML file that contains information specific to the collection. The values in the file MUST be set prior to running the script. The keys in the file are:
 
 | key | information provided by value |
 | --- | ----- |
@@ -46,7 +46,7 @@ The [configuration file](collections_config.yml) is a REQIORED YAML file that co
 
 ### Data file
 
-The [data file](manifest_data.csv) is a REQIRED CSV file that contains information about the manifests that will be included in the collection. There MUST be at least one row in the table. The columns in the file are:
+The [data file](manifest_data.csv) is a REQUIRED CSV file that contains information about the manifests that will be included in the collection. There MUST be at least one row in the table. The columns in the file are:
 
 | column | information provided by value |
 | ------ | ----- |
@@ -56,7 +56,7 @@ The [data file](manifest_data.csv) is a REQIRED CSV file that contains informati
 
 ### Sample output
 
-An example of output produced by the script based on the data included in the configuration and data files is viewable in the [www1_posters.json](www1_posters.json) file in this directory. The file is served directly with an `application/json` Content-Type header at <https://iiif-manifest.library.vanderbilt.edu/gallery/collections/ww1_posters.json>.
+An example of output produced by the script based on the data included in the configuration and data files is viewable in the [www1_posters.json](ww1_posters.json) file in this directory. The file is served directly with an `application/json` Content-Type header at <https://iiif-manifest.library.vanderbilt.edu/gallery/collections/ww1_posters.json>.
 
 ## Viewing the collection in a IIIF viewer
 
@@ -68,11 +68,11 @@ The most intuitive interface is provided by the [Annonatate viewer](https://anno
 
 To see the manifests included in the collection along with their thumbnails, click on the "i" button at the upper left, then click on the Collection link in the popup window. To view one of the manifests in the collection, click on the manifest thumbnail image or title. 
 
-Universal Viewer also supports IIIF Collections, although it sometimes seems to have trouble displaying the thumbnails and does not show them for all of the manifests in the Index tab. 
+[Universal Viewer](https://universalviewer.io/) also supports IIIF Collections, although it sometimes seems to have trouble displaying the thumbnails and does not show them for all of the manifests in the Index tab. 
 
 <https://uv-v3.netlify.app/#?manifest=https://iiif-manifest.library.vanderbilt.edu/gallery/collections/ww1_posters.json>
 
-Mirador supports IIIF collections, but navigation is through an annoying popup window which does not show the thumbnails for the manifests. 
+[Mirador](https://projectmirador.org/) supports IIIF collections, but navigation is through an annoying popup window which does not show the thumbnails for the manifests. 
 
 <https://projectmirador.org/embed/?iiif-content=https://iiif-manifest.library.vanderbilt.edu/gallery/collections/ww1_posters.json>
 
