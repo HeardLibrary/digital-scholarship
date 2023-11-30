@@ -56,7 +56,7 @@ The [data file](manifest_data.csv) is a REQUIRED CSV file that contains informat
 
 ### Sample output
 
-An example of output produced by the script based on the data included in the configuration and data files is viewable in the [www1_posters.json](ww1_posters.json) file in this directory. The file is served directly with an `application/json` Content-Type header at <https://iiif-manifest.library.vanderbilt.edu/gallery/collections/ww1_posters.json>.
+An example of output produced by the script based on the data included in the configuration and data files is viewable in the [ww1_posters.json](ww1_posters.json) file in this directory. The file is served directly with an `application/json` Content-Type header at <https://iiif-manifest.library.vanderbilt.edu/gallery/collections/ww1_posters.json>.
 
 ## Viewing the collection in a IIIF viewer
 
@@ -81,3 +81,7 @@ To see the manifests included in the collection along with their thumbnails, cli
 [IIIF Cookbook: Multi-volume Work with Individually-bound Volumes](https://iiif.io/api/cookbook/recipe/0030-multi-volume/) (see example collection with links)
 
 [IIIF Presentation API Validator](https://presentation-validator.iiif.io/)
+
+-----
+
+Revised 2023-11-30
