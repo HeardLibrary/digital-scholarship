@@ -42,7 +42,7 @@ if '--version' in arg_vals or '-V' in arg_vals: # provide version information ac
 
 if '--help' in arg_vals or '-H' in arg_vals: # provide help information according to GNU standards
     # needs to be expanded to include brief info on invoking the program
-    print('For help, see the generate_collections_json landing page at https://github.com/HeardLibrary/linked-data/tree/master/commonsbot/README.md')
+    print('For help, see the generate_collections_json landing page at https://github.com/HeardLibrary/digital-scholarship/tree/master/code/iiif/collections')
     print('Report bugs to: steve.baskauf@vanderbilt.edu')
     print()
     sys.exit()
