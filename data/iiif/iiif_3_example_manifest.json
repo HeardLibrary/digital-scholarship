@@ -1,0 +1,111 @@
+{
+    "@context": "http://iiif.io/api/presentation/3/context.json",
+    "id": "https://baskaufs.github.io/iiif/kim/1979.1230P.json",
+    "type": "Manifest",
+    "label": { "en": ["Industrial Division: Help Uncle Sam's Boys, Give your days' pay, November 11 to 18"]},
+    "requiredStatement": 
+        {
+            "label": { "en": [ "Attribution" ] },
+            "value": { "en": [ "Provided by Vanderbilt University Art Gallery" ] }
+        },
+    "provider": [
+        {
+          "id": "https://www.library.vanderbilt.edu/gallery/about",
+          "type": "Agent",
+          "label": { "en": [ "Vanderbilt Art Gallery" ] },
+          "homepage": [
+            {
+              "id": "https://www.library.vanderbilt.edu/gallery/",
+              "type": "Text",
+              "label": { "en": [ "Vanderbilt Art Gallery homepage" ] },
+              "format": "text/html"
+            }
+          ],
+          "logo": [
+            {
+              "id": "https://iiif.library.vanderbilt.edu/iiif/3/vu_gallery_logo.png/full/!200,200/0/default.jpg",
+              "type": "Image",
+              "format": "image/png",
+              "service": [
+                {
+                  "id": "https://iiif.library.vanderbilt.edu/iiif/3/vu_gallery_logo.png",
+                  "type": "ImageService3",
+                  "profile": "level2"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "thumbnail": [
+        {
+            "id": "https://iiif.library.vanderbilt.edu/iiif/3/gallery%2F1979%2F1979.1230_LARGE.tif/full/!100,100/0/default.jpg",
+            "type": "Image",
+            "format": "image/jpeg",
+            "service": [
+                {
+                "id": "https://iiif.library.vanderbilt.edu/iiif/3/gallery%2F1979%2F1979.1230_LARGE.tif",
+                "type": "ImageService3",
+                "profile": "level2"
+                }
+            ]
+        }
+    ],
+    "metadata": [
+        {
+            "label": { "en": [ "Artist"]},
+            "value": { "en": ["artist unknown"]}
+        },
+        {
+            "label": { "en": ["Accession Number"]},
+            "value": { "en": ["1979.1230P"]}
+        },
+        {
+            "label": { "en": ["Creation Year"]},
+            "value": { "en": ["1918 CE"]}
+        },
+        {
+            "label": { "en": ["Title"]},
+            "value": { "en": ["Industrial Division: Help Uncle Sam's Boys, Give your days' pay, November 11 to 18"]}
+        }
+    ],
+    "viewingDirection": "left-to-right",
+    "items": [
+        {
+            "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1979/1979.1230P.json/1",
+            "type": "Canvas",
+            "width": 6884,
+            "height": 9558,
+            "label": { "en": ["Industrial Division: Help Uncle Sam's Boys, Give your days' pay, November 11 to 18"]},
+            "items": [
+                {
+                    "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1979/1979.1230P.json/1/1",
+                    "type": "AnnotationPage",
+                    "items": [
+                        {
+                            "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1979/1979.1230P.json/1/1/1",
+                            "type": "Annotation",
+                            "motivation": "painting",
+                            "body": 
+                                {
+                                    "id": "https://iiif.library.vanderbilt.edu/iiif/3/gallery%2F1979%2F1979.1230_LARGE.tif/full/max/0/default.jpg",
+                                    "type": "Image",
+                                    "format": "image/jpeg",
+                                    "width": 6884,
+                                    "height": 9558,
+                                    "service": [
+                                        {
+                                            "type": "ImageService3",
+                                            "id": "https://iiif.library.vanderbilt.edu/iiif/3/gallery%2F1979%2F1979.1230_LARGE.tif",
+                                            "profile": "level2"
+                                        }
+                                    ]
+                                },
+                            "target": "https://iiif-manifest.library.vanderbilt.edu/gallery/1979/1979.1230P.json/1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
