@@ -1,6 +1,6 @@
 # Collection metadata
-collection_label: World War I Propaganda Posters
-collection_summary: A collection of prints by unknown American artists.
+collection_label: The Beggars
+collection_summary: A collection of prints by engraver Jacques Callot c. 1623.
 attribution: Provided by Vanderbilt University Art Gallery
 language_tag: en
 
@@ -10,7 +10,7 @@ language_tag: en
 # https://iiif-manifest.library.vanderbilt.edu/gallery/collections/ww1_posters.json
 
 # The collection_json_filename and subdir values will also be used along with the s3_bucket_name in the S3 upload process.
-collection_json_filename: ww1_posters.json
+collection_json_filename: callot_beggars.json
 base_url: https://iiif-manifest.library.vanderbilt.edu/
 subdir: gallery/collections/
 # Set s3_bucket_name value to empty sting "" to suppress upload to S3

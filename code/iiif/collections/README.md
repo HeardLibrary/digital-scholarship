@@ -6,9 +6,9 @@ This directory contains a Python script for generating [IIIF Presentation API 3.
 
 Script location: <https://github.com/HeardLibrary/digital-scholarship/blob/master/code/iiif/collections/generate_collections_json.py>
 
-Current version: 0.1.0
+Current version: 0.1.1
 
-Written by Steve Baskauf 2023-11-30
+Written by Steve Baskauf 2023-12-05
 
 Copyright 2023 Vanderbilt University. This program is released under a [GNU General Public License v3.0](http://www.gnu.org/licenses/gpl-3.0).
 
@@ -26,23 +26,14 @@ Generally the command line options will not change for a given installation, usi
 
 | long form | short form | values | default if omitted |
 | --------- | ---------- | ------ | ------- |
-| --baseurl | -B | first part of collection JSON URL | `https://iiif-manifest.library.vanderbilt.edu/gallery/collections/` |
 | --config | -C | path to configuration file | `collections_config.yml` |
 | --datafile | -D | path to CSV file containing manifest data | `manifest_data.csv` |
-| --lang | -L | language tag | `en` |
 | --version | -V | no values; displays current version information |  |
 | --help | -H | no values; displays link to this page |  |
 
 ### Configuration file
 
-The [configuration file](collections_config.yml) is a REQUIRED YAML file that contains information specific to the collection. The values in the file MUST be set prior to running the script. The keys in the file are:
-
-| key | information provided by value |
-| --- | ----- |
-| collection_json_filename | the filename of the output file that will be served on the web; it is appended to the `baseurl` value to form the URL for the IIIF collections JSON . |
-| collection_label | a title displayed for the collection of manifests |
-| collection_summary | a description of the collection of manifests |
-| attribution | an attribution statement for the provider of the collection |
+The [configuration file](collections_config.yml) is a REQUIRED YAML file that contains information specific to the collection. The values in the file MUST be set prior to running the script. See comments in the file for details.
 
 ### Data file
 
@@ -84,4 +75,4 @@ To see the manifests included in the collection along with their thumbnails, cli
 
 -----
 
-Revised 2023-11-30
+Revised 2023-12-05

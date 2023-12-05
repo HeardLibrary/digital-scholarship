@@ -3,8 +3,14 @@
 # (c) 2023 Vanderbilt University. This program is released under a GNU General Public License v3.0 http://www.gnu.org/licenses/gpl-3.0
 # Author: Steve Baskauf
 
-script_version = '0.1.0'
-version_modified = '2023-11-30'
+script_version = '0.1.1'
+version_modified = '2023-12-05'
+
+# -----------------------------------------
+# Version 1.0.1 change notes: 2023-12-05
+# - move URL data to configuration file
+# - move language tag to configuration file
+# - add support for S3 upload
 
 # ----------------
 # Module imports
@@ -14,6 +20,7 @@ import sys
 import pandas as pd
 import yaml
 import json
+# NOTE: boto3 import is placed in upload function definition so that its installation isn't needed if no upload
 
 # ----------------
 # Global variables
@@ -57,18 +64,6 @@ if '--datafile' in opts:
 if '-D' in opts: 
     DATA_FILE_PATH = args[opts.index('-D')]
 
-LANG = 'en' # Set default language if not provided.
-if '--lang' in opts:
-    LANG = args[opts.index('--lang')]
-if '-L' in opts: 
-    LANG = args[opts.index('-L')]
-
-BASE_URL = 'https://iiif-manifest.library.vanderbilt.edu/gallery/collections/' # Set default collection base URL if not provided.
-if '--baseurl' in opts:
-    BASE_URL = args[opts.index('--baseurl')]
-if '-B' in opts:
-    BASE_URL = args[opts.index('-B')]
-
 config_path = 'collections_config.yml' # Set default path to configuration file if not provided.
 if '--config' in opts: #  set path to configuration file
     config_path = args[opts.index('--config')]
@@ -79,6 +74,21 @@ with open(config_path, 'r') as file:
     CONFIG_VALUES = yaml.safe_load(file)
 
 # ----------------
+# Function definitions
+# ----------------
+
+def upload_file_to_aws() -> None:
+    """Upload file to IIIF server S3 bucket. NOTE: File must be in the current working directory."""
+    import boto3 # AWS Python SDK
+
+    # See https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3.html#uploads
+    s3_iiif_key = CONFIG_VALUES['subdir'] + CONFIG_VALUES['collection_json_filename']
+
+    s3 = boto3.client('s3')
+    print('Uploading to s3:', CONFIG_VALUES['collection_json_filename'])
+    s3.upload_file(CONFIG_VALUES['collection_json_filename'], CONFIG_VALUES['s3_bucket_name'], s3_iiif_key)
+
+# ----------------
 # Main script
 # ----------------
 
@@ -87,17 +97,17 @@ manifest_df = pd.read_csv(DATA_FILE_PATH, na_filter=False, dtype = str)
 # Create the collections metadata dictionary
 collections_dict = {}
 collections_dict['@context'] = 'http://iiif.io/api/presentation/3/context.json'
-collections_dict['id'] = BASE_URL + CONFIG_VALUES['collection_json_filename']
+collections_dict['id'] =  CONFIG_VALUES['base_url'] + CONFIG_VALUES['subdir'] + CONFIG_VALUES['collection_json_filename']
 collections_dict['type'] = 'Collection'
 collections_dict['label'] = {}
-collections_dict['label'][LANG] = [CONFIG_VALUES['collection_label']]
+collections_dict['label'][CONFIG_VALUES['language_tag']] = [CONFIG_VALUES['collection_label']]
 collections_dict['summary'] = {}
-collections_dict['summary'][LANG] = [CONFIG_VALUES['collection_summary']]
+collections_dict['summary'][CONFIG_VALUES['language_tag']] = [CONFIG_VALUES['collection_summary']]
 collections_dict['requiredStatement'] = {}
 collections_dict['requiredStatement']['label'] = {}
-collections_dict['requiredStatement']['label'][LANG] = ['Attribution']
+collections_dict['requiredStatement']['label'][CONFIG_VALUES['language_tag']] = ['Attribution']
 collections_dict['requiredStatement']['value'] = {}
-collections_dict['requiredStatement']['value'][LANG] = [CONFIG_VALUES['attribution']]
+collections_dict['requiredStatement']['value'][CONFIG_VALUES['language_tag']] = [CONFIG_VALUES['attribution']]
 
 # Generate a list of manifest dictionaries from the Pandas DataFrame of manifest data
 manifests_list = []
@@ -106,7 +116,7 @@ for index, row in manifest_df.iterrows():
     manifest_dict['id'] = row['manifest_id']
     manifest_dict['type'] = 'Manifest'
     manifest_dict['label'] = {}
-    manifest_dict['label'][LANG] = [row['manifest_label']]
+    manifest_dict['label'][CONFIG_VALUES['language_tag']] = [row['manifest_label']]
     manifest_dict['thumbnail'] = []
     manifest_dict['thumbnail'].append({})
     manifest_dict['thumbnail'][0]['id'] = row['thumbnail_id']
@@ -120,6 +130,13 @@ collections_dict['items'] = manifests_list
 # Write the collections metadata dictionary to a JSON file
 with open(CONFIG_VALUES['collection_json_filename'], 'w') as outfile:
     json.dump(collections_dict, outfile, indent=2)
+
+# AWS S3 upload
+if CONFIG_VALUES['s3_bucket_name'] != '':
+    upload_file_to_aws()
+
+print('Created collections JSON file:')
+print(collections_dict['id'])
 
 # End of program
 print('done')

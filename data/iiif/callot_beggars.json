@@ -1,0 +1,93 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/collections/callot_beggars.json",
+  "type": "Collection",
+  "label": {
+    "en": [
+      "The Beggars"
+    ]
+  },
+  "summary": {
+    "en": [
+      "A collection of prints by engraver Jacques Callot c. 1623."
+    ]
+  },
+  "requiredStatement": {
+    "label": {
+      "en": [
+        "Attribution"
+      ]
+    },
+    "value": {
+      "en": [
+        "Provided by Vanderbilt University Art Gallery"
+      ]
+    }
+  },
+  "items": [
+    {
+      "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1956/1956.010.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Beggar with Dog, from Les Gueux (The Beggars), a series of 25 etchings"
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1956%2F1956.010.jpg/full/full/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1956/1956.011.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Beggar Woman Holding Coins, from Les Gueux (The Beggars), a series of 25 etchings"
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1956%2F1956.011.jpg/full/full/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1956/1956.008.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Beggar Woman with a Bowl, from Les Gueux (The Beggars), a series of 25 etchings"
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1956%2F1956.008.jpg/full/full/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1956/1956.009.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Corpulent Beggar with Empty Cap, plate 21, from Les Gueux (The Beggars), a series of 25 etchings"
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1956%2F1956.009.jpg/full/full/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    }
+  ]
+}
