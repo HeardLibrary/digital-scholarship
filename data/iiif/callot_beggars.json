@@ -35,7 +35,7 @@
       },
       "thumbnail": [
         {
-          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1956%2F1956.010.jpg/full/full/0/default.jpg",
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1956%2F1956.010.jpg/full/!200,200/0/default.jpg",
           "type": "Image",
           "format": "image/jpeg"
         }
@@ -51,7 +51,7 @@
       },
       "thumbnail": [
         {
-          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1956%2F1956.011.jpg/full/full/0/default.jpg",
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1956%2F1956.011.jpg/full/!200,200/0/default.jpg",
           "type": "Image",
           "format": "image/jpeg"
         }
@@ -67,7 +67,7 @@
       },
       "thumbnail": [
         {
-          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1956%2F1956.008.jpg/full/full/0/default.jpg",
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1956%2F1956.008.jpg/full/!200,200/0/default.jpg",
           "type": "Image",
           "format": "image/jpeg"
         }
@@ -83,7 +83,7 @@
       },
       "thumbnail": [
         {
-          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1956%2F1956.009.jpg/full/full/0/default.jpg",
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1956%2F1956.009.jpg/full/!200,200/0/default.jpg",
           "type": "Image",
           "format": "image/jpeg"
         }

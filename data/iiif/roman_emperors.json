@@ -1,0 +1,221 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/collections/roman_emperors.json",
+  "type": "Collection",
+  "label": {
+    "en": [
+      "Images of the Roman emperors, drawn to life from ancient coins, and illustrated with a brief historical narrative"
+    ]
+  },
+  "summary": {
+    "en": [
+      "A collection of prints by Hubert Goltzius created in 1645."
+    ]
+  },
+  "requiredStatement": {
+    "label": {
+      "en": [
+        "Attribution"
+      ]
+    },
+    "value": {
+      "en": [
+        "Provided by Vanderbilt University Art Gallery"
+      ]
+    }
+  },
+  "items": [
+    {
+      "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1999/1999.174a.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Leo"
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1999%2F1999.174a.med.jpg/full/!200,200/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1999/1999.174b.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Martianvs"
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1999%2F1999.174b.med.jpg/full/!200,200/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1999/1999.174c.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Theodosivs"
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1999%2F1999.174c.med.jpg/full/!200,200/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1999/1999.174d.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          " Ivstinian"
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1999%2F1999.174d.med.jpg/full/!200,200/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1999/1999.174e.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Theodosivs"
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1999%2F1999.174e.med.jpg/full/!200,200/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1999/1999.174f.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Arcadivs"
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1999%2F1999.174f.med.jpg/full/!200,200/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1999/1999.174g.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Ivstinvs"
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1999%2F1999.174g.tif/full/!200,200/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1999/1999.174h.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Ivstinvs"
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1999%2F1999.174h.tif/full/!200,200/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1999/1999.174i.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Valentinianvs"
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1999%2F1999.174i.med.jpg/full/!200,200/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1999/1999.174j.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Anastasivs"
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1999%2F1999.174j.tif/full/!200,200/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1999/1999.174k.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Zeno"
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1999%2F1999.174k.tif/full/!200,200/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "id": "https://iiif-manifest.library.vanderbilt.edu/gallery/1999/1999.174l.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Honorivs"
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.library.vanderbilt.edu/iiif/2/gallery%2F1999%2F1999.174l.tif/full/!200,200/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg"
+        }
+      ]
+    }
+  ]
+}

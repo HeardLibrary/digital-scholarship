@@ -14,5 +14,5 @@ collection_json_filename: roman_emperors.json
 base_url: https://iiif-manifest.library.vanderbilt.edu/
 subdir: gallery/collections/
 # Set s3_bucket_name value to empty sting "" to suppress upload to S3
-s3_bucket_name: ""
-#s3_bucket_name: iiif-manifest.library.vanderbilt.edu
+#s3_bucket_name: ""
+s3_bucket_name: iiif-manifest.library.vanderbilt.edu
