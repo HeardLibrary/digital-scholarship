@@ -23,28 +23,28 @@ The Digital Lab also provides [lessons for learning R](http://vanderbi.lt/r) and
 [Archive of past lessons](../archive/)
 
 
-## Beginners Lessons - Fall 2023
+## Introduction to Python with GitHub Copilot - Spring 2024
 
-**Time:** Wednesdays from 1:00-2:00 PM Central (US) Time (starting October 25). 
+**Time:** Tuesdays from 1:00-2:00 PM Central (US) Time (starting January 16). 
 
-**Venue:** Synchronously on Zoom and in-person in the Digital Lab, 4th floor Central Library. You should complete the Zoom registration even if you plan to attend in person. [Registration link](https://vanderbilt.zoom.us/meeting/register/tJwudOyrqDgjGtEI_mzkDBInoYRSSeQnTKKC). After registering, you will receive a confirmation email containing information about joining the Zoom session. 
+**Venue:** In-person in the Digital Lab, 4th floor Central Library. Resistration is preferred, although walk-ins are OK. [Registration link](https://forms.gle/nbhE7La2xQA1MQQj6). 
 
 **Instructor:** Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu) to arrange a time to talk.
 
-I will be presenting the lessons using Jupyter notebooks in the Visual Studio Code (VS Code) environment. Before you come on the first day, you should install the [Anaconda environment](../../codegraf/003/) in order to have VS Code and the Jupyter environment available. At the first lesson, we will enable using Jupyter notebooks in VS Code and will install the GitHub Copilot plugin. Copilot is generally a paid service, however, people with an academic email address have free access. So if you have a `vanderbilt.edu` email address, you will be able to use this feature for free. Using Copilot is not required, but it makes the coding process much easier.
+**Important note: You should apply for free educational access to GitHub Copilot as soon as possible, since there is often a delay in getting access.** See below for details.
+
+I will be presenting the lessons using Jupyter notebooks in the Visual Studio Code (VS Code) environment. Before you come on the first day, you should do two things: apply for free educational access to GitHub Copilot and install VS Code and a Jupyter environment. There are instructions for these two tasks on the [setup page](../../codegraf/003c/). You can use either of the two options for installing a Jupyter environment. At the first lesson, we will troubleshoot any problems you had with the installation and finish the setup of VS Code to use the GitHub Copilot plugin. Copilot is generally a paid service, however, people with an academic email address have free access. So if you have a `vanderbilt.edu` email address, you will be able to use this feature for free. Using Copilot is not required, but it makes the coding process much easier.
 
 If you have never programmed before, I recommend that you work through two optional lessons on your own: [terminology](../../codegraf/001/) (18 min) and [programming environments](../../codegraf/002/) (50 min). I will assume that you are familiar with the concepts and terms covered in these lessons as we work through the actual Python lessons.
 
 | Working session date | Lesson | Topic | Web page (times are total video length) |
 |---|---|---|---|
-| Oct 25 | 1 | Setting up and using Copilot | [instructions](../../codegraf/003c/) |
-| Nov 1 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
-| Nov 8 | 3 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
-| Nov 15 | 4 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
-| Nov 29 | 5 | Loops | [lesson videos](../../codegraf/006b/) (33 min lessons, 61 min including demos) |
-| Dec 6 | 6 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
-
-
+| Jan 16 | 1 | Setting up and using Copilot | [instructions](../../codegraf/003c/) |
+| Jan 23 | 2 | Programming basics | [lesson videos](../../codegraf/004/) (67 min) |
+| Jan 30 | 3 | Code libraries | [lesson videos](../../codegraf/005/) (34 min) |
+| Feb 6 | 4 | List and dictionary objects | [lesson videos](../../codegraf/006a/) (32 min) |
+| Feb 13 | 5 | Loops | [lesson videos](../../codegraf/006b/) (33 min) |
+| Feb 20 | 6 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
 
 
 # Python Resources
