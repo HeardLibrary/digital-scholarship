@@ -46,22 +46,29 @@ If you have never programmed before, I recommend that you work through two optio
 | Feb 13 | 5 | Loops | [lesson videos](../../codegraf/006b/) (33 min) |
 | Feb 20 | 6 | Conditional execution | [lesson videos](../../codegraf/006c/) (44 min) |
 
+## Microcontrollers drop-in sessions
+
+**Time:** Tuesdays from noon-1:00 PM Central (US) Time (starting January 16).
+
+**Venue:** In-person in the Digital Lab, 4th floor Central Library.
+
+ If you are interested in single-board computers like Arduino or Raspberry Pi, or microcontrollers such as the QTPy, and you want to interact with people having that common interest, come by the Digital Lab during our microcontroller drop-in sessions. During those sessions we will have hardware available for you to experiment with to build your skills in these technologies. No experience is necessary! 
+ 
+ Although this isn't strictly Python-related, Python can be used to program the Raspberry Pi and is used to program the QTPy. So if you are interested in learning to use Python to control hardware, this is a good opportunity to do that.
+
+For more information, contact Steve Baskauf. Email [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu). There are also notes and videos from a lesson series on [Microcontrollers with CircuitPython](../circuit/).
 
 # Python Resources
 
 Here's a [page of Python resources](../)
 
-Lesson series on [Microcontrollers with CircuitPython](../circuit/)
-
 [O'Reilly for Higher Education](http://www.library.vanderbilt.edu/eres?id=1676) books and videos (Vanderbilt sign-in required)
 
 ## Other sources of Python resources on Vanderbilt's campus
 
-Research IT <https://research.vanderbilt.edu/researchadministration/about/research-it/>
-
 Vanderbilt Data Science Institute (DSI) <https://www.vanderbilt.edu/datascience/>
 
-For more information on all DSI events, visit the [DSI workshops page](https://www.vanderbilt.edu/datascience/events/data-science-workshops/). For registration, visit [this registration link](https://docs.google.com/forms/d/e/1FAIpQLSdHoJitkCQ1zXwTEQuLpGCqBGZvUYwLB4Nhcrs19t_-Wi_HCg/viewform?usp=sf_link).
+For more information on all DSI events, visit the [DSI workshops page](https://www.vanderbilt.edu/datascience/events/data-science-workshops/). .
 
 
 --------------------
@@ -69,4 +76,4 @@ For more information on all DSI events, visit the [DSI workshops page](https://w
 Questions? [contact Steve Baskauf](mailto:steve.baskauf@vanderbilt.edu)
 
 ----
-Revised 2023-08-11
+Revised 2024-01-09
