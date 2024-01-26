@@ -38,6 +38,7 @@ requests_cache.install_cache('zotero_cache', backend='sqlite', expire_after=300,
 
 arg_vals = sys.argv[1:]
 if '--version' in arg_vals or '-V' in arg_vals: # provide version information according to GNU standards 
+    print()
     print('Zotero export tool', version)
     print('Copyright ©', created[:4], 'Vanderbilt University')
     print('License GNU GPL version 3.0 <http://www.gnu.org/licenses/gpl-3.0>')
@@ -45,12 +46,16 @@ if '--version' in arg_vals or '-V' in arg_vals: # provide version information ac
     print('There is NO WARRANTY, to the extent permitted by law.')
     print('Author: Steve Baskauf')
     print('Revision date:', created)
+    print()
     sys.exit()
 
 if '--help' in arg_vals or '-H' in arg_vals: # provide help information according to GNU standards
-    print ('Example usage: python zotero_export_tool.py --id 2267085')
+    print()
+    print ('Example usage: ')
+    print('python zotero_export_tool.py --id 2267085 --path ./data/')
     print('For help, see the documentation page at https://github.com/HeardLibrary/digital-scholarship/blob/master/code/api/python/zotero/README.md')
     print('Report bugs to: digital.lab@vanderbilt.edu')
+    print()
     sys.exit()
 
 opts = [opt for opt in arg_vals if opt.startswith('-')]
@@ -228,7 +233,7 @@ while paging_start < total_results:
     data_structure, backoff_time, total_results = retrieve_page_of_data(agent_id, backoff_time, request_limit=request_limit, paging_start=paging_start)
 
     # For testing, hard code the total_results value.
-    #total_results = 250
+    #total_results = 150
 
     # Print the number of records to be retrieved in the first loop only.
     if paging_start == 0:

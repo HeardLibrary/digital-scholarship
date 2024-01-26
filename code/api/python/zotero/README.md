@@ -2,7 +2,7 @@
 
 ## Summary
 
-zotero_export_tool.py is a Python script that exports the contents of a Zotero library to a series of JSON files, each of which contains 100 records. The output files are raw API output. The script is intended to be used as a component of a larger workflow that will convert the JSON files to TEI XML for ingest into a database.
+`zotero_export_tool.py` is a Python script that exports the contents of a Zotero library to a series of JSON files, each of which contains 100 records (or fewer for the last file). The output files are raw API output. The script is intended to be used as a component of a larger workflow that will convert the JSON files to TEI XML for ingest into a database.
 
 ## Current limitations
 
@@ -17,7 +17,7 @@ zotero_export_tool.py is a Python script that exports the contents of a Zotero l
 
 # Script details
 
-Script location: <https://github.com/HeardLibrary/linked-data/blob/master/vanderbot/vanderbot.py>
+Script location: <https://github.com/HeardLibrary/digital-scholarship/blob/master/code/api/python/zotero/zotero_export_tool.py>
 
 Current version: v0.1.0
 
@@ -46,7 +46,7 @@ where \[options\] are the command line options described below. NOTE: your imple
 Example usage:
 
 ```
-python zotero_export_tool.py --id 2267085
+python zotero_export_tool.py --id 2267085 --path ./data/
 ```
 
 ## Command line options
@@ -54,6 +54,6 @@ python zotero_export_tool.py --id 2267085
 | long form | short form | values | default |
 | --------- | ---------- | ------ | ------- |
 | --id | -I | REQUIRED Zotero user or group identifier | none |
-| --path | -P | OPTIONAL path string to be prepended to filename. | '' (current working directory) |
+| --path | -P | OPTIONAL path string to be prepended to filename. The path MUST exist before the script is run. | '' (current working directory) |
 | --version | -V | no values; displays current version information |  |
 | --help | -H | no values; displays link to this page |  |
