@@ -8,7 +8,9 @@ To get to this page, go to <https://tinyurl.com/4tjupkx4>
 
 Previous lesson: 
 
-Go back to: [Quickstart guide for running Python in a Colab notebook](../003a)
+If you wanted to code using the AI tool GitHub Copilot, see [Setting up VS Code to use Jupyter notebooks and GitHub Copilot](../003c)
+
+If you wanted to start coding Python as quickly as possible: [Quickstart guide for running Python in a Colab notebook](../003a)
 
 # Python programming basics - EES 2580
 
@@ -29,6 +31,8 @@ This lesson is focused on developing familiarity with core statements and functi
 Total video time: 53m 8s (66m 40s with optional practice script videos)
 
 ## Links
+
+[Lesson Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/ees1/ees1.ipynb)
 
 [Lesson Colab notebook](https://colab.research.google.com/drive/1QfitXEOc_3gxq8USPX6S00hHkit8UJN2?usp=sharing)
 
@@ -124,7 +128,7 @@ The following **characters** can be considered "safe" for names in Python: upper
 
 For **names** of variables and functions, the [PEP 8 style guide](https://www.python.org/dev/peps/pep-0008/) recommends separating words with underscores.  Examples: `company_report_file_name` and `convert_xml_to_json`.  This style is sometimes called *snake_case*.
 
-camelCase is also frequently used.  In camelCase, descriptive words are concatenated, with the first word beginning with a lower case letter and subsequent words beginning with capital letters.  Examples: `companyReportFileName` and `convertXmlToJson`.  
+camelCase is also used sometimes.  In camelCase, descriptive words are concatenated, with the first word beginning with a lower case letter and subsequent words beginning with capital letters.  Examples: `companyReportFileName` and `convertXmlToJson`.  
 
 ----
 
@@ -377,7 +381,7 @@ print('First animal the same as second animal?', same_animal)
 
 # Optional Practice scripts
 
-Look at the scripts in the lesson Colab notebook and try to explain what they do before you run them. Then try running the to see if what you predicted was correct. If you don't understand what happened, you can watch the following videos.
+Look at the scripts in the lesson notebook and try to explain what they do before you run them. Then try running the to see if what you predicted was correct. If you don't understand what happened, you can watch the following videos.
 
 ## Practice instructions (0m47s)
 
@@ -451,20 +455,17 @@ print(too_many)
 
 ## Practice assignment:
 
-**Instructions:** Go to the [practice assignment Colab notebook](https://colab.research.google.com/drive/1s7UIiAsfqhb8E3JqEX1zx6eQzwi-qdzs?usp=sharing) and make a copy in your own drive as you did the practice notebook. Put you name in the first text cell and save the notebook.
+**Instructions:** The questions for the practice assignment are in this [Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/ees1/ees1_practice.ipynb). To use the notebook in VS Code, you will need to [download](https://heardlibrary.github.io/digital-scholarship/script/codegraf/003/#downloading-and-running-a-jupyter-notebook-from-github-1m54s) it to your local drive. You should save the notebook within the GitHub repository you created for this course.
 
 In each of the scripts that you write, for each variable in the script use a meaningful name that follows the PEP 8 style ("snake case").
 
-When you've finished the script, be sure to save a final time. Click on the Share button in the upper right, and change the `Get link` value to `Anyone on the internet with this lik can view`.  Click on `Copy link` and submit the link to Brightspace as instructed.
+When you've finished the assignment, be sure to save a final time. Do not clear the output so that viewers can see what the output was when you submit the assignment. Commit the changes to the repository and push the changes to the remote repository on GitHub.  
 
-1. Create a code cell that assigns a string to a variable, then prints the length of the string.
-2. Create a code cell that allows the user to input two numbers, then prints the difference between them. Don't forget that the `input()` function produces a string that must be turned into a number before subtracting. Write this script two ways: one where the input strings are assigned to variables, then converted into numbers using separate statements, and another where the number conversion is done directly on the output of the `input()` function by nesting the two functions.
-3. Create code where the user enters a string. The script concatenates 'Simon says: ' to the front of their string and prints the result for the user.
-4. Create a variation of the previous script where the entered string is not concatenated to 'Simon says: ', but rather is printed as a second argument of the `print()` function along with the 'Simon says:' string. How can you make the output be exactly the same as before (having a single space between the `:` and the string they entered)? What have you learned about the spacing of the output when `print()` has several arguments?
-5. Create a number guessing game. Set the value of the secret number using an assignment statement. Then let the user enter a number. Print two feedback statements. The first one should tell the user whether the guess was correct (`True` or `False`). The second print statement should tell the user whether the guess was too high (`True` or `False`). The user will need to re-run the cell with each guess.
+Go to the web page for the repository on GitHub and locate the notebook. Submit the link for the notebook web page to Brightspace as instructed.
 
+----
 
 Next lesson: [Code libraries and lists](../ees2)
 
 ----
-Revised 2022-02-28
+Revised 2024-02-01

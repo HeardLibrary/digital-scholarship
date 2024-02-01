@@ -128,7 +128,7 @@ The following **characters** can be considered "safe" for names in Python: upper
 
 For **names** of variables and functions, the [PEP 8 style guide](https://www.python.org/dev/peps/pep-0008/) recommends separating words with underscores.  Examples: `company_report_file_name` and `convert_xml_to_json`.  This style is sometimes called *snake_case*.
 
-camelCase is also frequently used.  In camelCase, descriptive words are concatenated, with the first word beginning with a lower case letter and subsequent words beginning with capital letters.  Examples: `companyReportFileName` and `convertXmlToJson`.  
+camelCase is also used sometimes.  In camelCase, descriptive words are concatenated, with the first word beginning with a lower case letter and subsequent words beginning with capital letters.  Examples: `companyReportFileName` and `convertXmlToJson`.  
 
 ----
 
@@ -381,7 +381,7 @@ print('First animal the same as second animal?', same_animal)
 
 # Optional Practice scripts
 
-Look at the scripts in the lesson Colab notebook and try to explain what they do before you run them. Then try running the to see if what you predicted was correct. If you don’t understand what happened, you can watch the following videos.
+Look at the scripts in the lesson notebook and try to explain what they do before you run them. Then try running the to see if what you predicted was correct. If you don’t understand what happened, you can watch the following videos.
 
 ## Practice instructions (0m47s)
 
@@ -494,4 +494,4 @@ Problem 5 solution
 Next lesson: [Using code libraries](../005)
 
 ----
-Revised 2023-10-20
+Revised 2024-02-01
