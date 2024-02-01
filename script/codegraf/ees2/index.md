@@ -29,6 +29,8 @@ Total video time: 41 m 36 s (plus 16 m optional)
 
 ## Links
 
+[Lesson Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/ees2/ees2.ipynb)
+
 [Lesson Colab notebook](https://colab.research.google.com/drive/1SI83Hg3GuTm72nvA61AFQCgFuIdCcDCS?usp=sharing)
 
 [lesson slides](ees2.pdf)
@@ -122,9 +124,9 @@ Note that some functions return a value, as in the first example where the curre
 
 In the examples we have used so far, the modules we have wanted to import have been included in the Standard Library, so we have been able to load them using an `import` statement. However, sometimes when you try to import a module that you've seen in code examples, you will receive an error message saying that the module can't be found. In that case, the library containing that module isn't downloaded to your computer and it must be installed. (Note: we will use "package" and "library" interchangeably and ignore their technical differences.)
 
-The libraries that are installed automatically will depend at least partly on how you installed and are using Python. If you are using Jupyter notebooks installed as part of an Anaconda distribution or Colab notebooks, many of the commonly used modules not included in the Standard Library will be available to you without needing to install them. The same is true with Colab. If you did a stand-alone installation of Jupyter notebooks, you are more likely to need to install additional libraries. 
+The libraries that are installed automatically will depend at least partly on how you installed and are using Python. If you are using Jupyter notebooks installed as part of an Anaconda distribution or Colab notebooks, many of the commonly used modules not included in the Standard Library will be available to you without needing to install them. If you did a stand-alone installation of Jupyter notebooks, you are more likely to need to install additional libraries. 
 
-There are two common installation methods. The standard method uses `pip`. If you are using Anaconda, it comes with its own package manager, `conda`. Both of these applications are used in the console (`Command prompte` on Windows or `Terminal` on Mac.) Here is an example of how to install a commonly used package: `requests`. In the console, enter the following:
+There are two common installation methods. The standard method uses `pip`. If you are using Anaconda, it comes with its own package manager, `conda`. Both of these applications are used in the console (`Command prompt` on Windows or `Terminal` on Mac.) Here is an example of how to install a commonly used package: `requests`. In the console, enter the following:
 
 ```
 pip3 install requests
@@ -154,13 +156,41 @@ where `bs4` is the actual module name. Check the documentation for the library t
 
 ----
 
+## Installing modules in a notebook environment
+
+If you are running a Jupyter on your local computer (vs. in the cloud on Colab) you can issue the `pip` (or `pip3`) command directly from a command line prompt.
+
+However, in some situations such as Colab or a Jupyter notebook running on a remote server using Jupyter Lab, you cannot easily access the environment through a terminal window. In that case, you can't issue the `pip` command directly from a command line. Fortunately, the `iPython` notebook system (used by both Jupyter and Colab notebooks) includes several ways to run command line commands from within the notebook itself.
+
+One way is to use "[magic commands](https://ipython.readthedocs.io/en/stable/interactive/magics.html)". When a code line begins with a percent sign (`%`), it is interpreted as a special "magic" command rather than a Python command. Here's how you would install the `requests` library in a notebook environment:
+
+```
+%pip install requests
+```
+
+There is also a magic `%conda` command if you are using the Conda package manager that is installed with Jupyter notebooks in the Anaconda distribution.
+
+Another option for running `pip` is to begin the line with an exclamation mark (`!`), which runs the following text as if it were given from the command line. Using that method, you would enter:
+
+```
+!pip install requests
+```
+
+However, the magic command method is probably better since it automatically installs the module using the version that is correct for the version of Python that is running the notebook.
+
+If you are running Jupyter notebooks in your local environment, you don't need to run these install commands every time you run the notebook, since the installation will persist on your local hard drive. In a cloud environment, you may need to run the install command every time you start the notebook, since the environment is reset each time you start a new notebook.
+
+----
+
 ## The `requests` module
 
-The `requests` module is a super-useful module that allows us to retrieve information from the web. Although the `requests` module is not part of the Standard Library, it is already installed in Colab. So we can use it in a Colab notebook just by importing it.
+The `requests` module is a super-useful module that allows us to retrieve information from the web. Although the `requests` module is not part of the Standard Library, it may already be installed in your environment (e.g. if you are using Anaconda or Colab). You can find out whether it is installed in your environment by trying to import it using the command below. If it is installed, the line will execute without problems. If it is not installed, you will receive an error message. 
 
 ```
 import requests
 ```
+
+If you receive an error message, you can install the `requests` module using the `pip` command as described above.
 
 The `get()` function of the `requests` module retrieves a web document. If the document is an HTML web page, it's not that useful, but if the document contains data, it's an easy way to access those data. The argument passed into the function is the URL of the document.
 
@@ -462,25 +492,11 @@ Two lists can be combined using the `+` operator.
 
 # Practice assignment
 
-**Instructions:** Go to the [practice assignment Colab notebook](https://colab.research.google.com/drive/1EEc8D-hBvXAh9tkZu83fR0jZFQDI2DnM?usp=sharing) and make a copy in your own drive as you did the practice notebook. Put you name in the first text cell and save the notebook.
+**Instructions:**  The questions for the practice assignment are in this [Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/ees2/ees2_practice.ipynb). Download it to your local drive within the GitHub repository you created for this course.
 
-1. Import the `cos()` function from the math module so that you don't have to specify the module name when you want to use the function. Also import `pi` from the math module in the same way. Write a script to calculate the cosine of pi and also the circumference of a circle with a diameter of 3. If you don't remember how to calculate circumference, Google it.
-2. Modify the previous script to allow the user to input their own diameter. Don't forget that the `input()` function returns strings, not numbers.
-3. When describing angles, Python measures angles in radians, where 180 degrees = pi radian. That is, divide the angle in degrees by 180, then multiply by pi. Since most people aren't familiar with radians, write a script that will allow a user to input an angle in degrees, convert the degrees to radians, then calculate the cosine of the input angle. Test your script with 45 degrees, whose cosine is 0.70710678118 .
-4. Write a script that lets a user enter a string. Then convert what they entered into all caps, all lower case, and title case.
-5. **Case insensitivity**. It is often useful to check a user's input without concern for capitalization. The easiest way to do that is to convert what the user entered into all lower case, then check for equivalence with an all lower-case string. Write a script that lets the user input a string, then print the boolean result for comparing whether their string was equal to 'sister' with any kind of capitalization. 
-6. Import the `time.sleep()` function to use without a prefix. Then make the script wait (sleep) for one second. 
-7. Create a list containing the names of the days of the week. Print the list item for Tuesday by specifying its index. 
-8. Assign a URL (including the `http://` or `https://` part) to a variable, then use the `.split()` method to break the URL into pieces based on the position of `/` characters. Note: select and copy a URL from the URL bar of a browser to get the full URL. Which list item contains the domain name (e.g. `vanderbilt.edu` or `calendar.google.com`)? Will that always be the same? Write an expression for the domain name, and print it.
-9. If you have a domain name like `vanderbilt.edu`, `www.library.vanderbilt.edu`, or `calendar.google.com`, how can you determine how many parts it has that are separated by periods (dots)? (Hint: first split it into a list.) How can you write a general expression for the last part of any domain name? Modify your script from the last exercise to allow a user to paste in a full URL copied from a browser bar, then tell the user the kind of domain (`com`, `edu`, `org`, etc.) for the URL. Note: copy the URL from the browser bar so that it will have the `http://` or `https://` part of the URL.
-10. Write a script that instantiates the fruit basket list, allows a user to type in a fruit, then add the fruit they typed in to the end of the list. Print the list after adding their fruit.
-11. Modify the previous script to pick a random fruit from the modified list and print it.
-12. Modify the previous script to pick a random fruit from the list, remove it from the list, tell the user that they can't have that fruit, then print the new list without the fruit you removed.
-13. The file [mesa_prcp_by_month.txt](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/codegraf/mesa_prcp_by_month.txt) contains the average precipitation by month in mm for Mesa, Arizona, with each value on a separate line terminated by a newline character. Use the `get()` function from the `requests` module to retrieve the data and extract the text into a variable containing a single text string. Split the string by newline (`\n`) characters into a list that contains each value. *Non-rhetorical question:* Can you use the `max()` function to determine the number in the list? If so, do it in your script. If not, explain why in a comment in the script. The URL to access the data is:
+When you've finished the assignment, be sure to save a final time. Do not clear the output so that viewers can see what the output was when you submit the assignment. Commit the changes to the repository and push the changes to the remote repository on GitHub.  
 
-```
-url = 'https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/codegraf/mesa_prcp_by_month.txt'
-```
+Go to the web page for the repository on GitHub and locate the notebook. Submit the link for the notebook web page to Brightspace as instructed.
 
 
 ----
@@ -559,7 +575,6 @@ Notice how this differs from the `strftime()` function from the `time` module. T
 **Optional practice** (if you want to practice using the datetime and time modules):
 
 1. Import the datetime module abbreviated as `dt`. Instantiate `now` as a date and as a datetime using the abbreviation, and print the value of `now`. You will probably need to look at the examples. If you get stuck, you can watch the video below.
-2. The `time()` funtion (no arguments) from the time (NOT datetime) module gives the number of seconds since the midnight before January 1, 1970. Time how long it takes the user to enter something (or just press the `Enter`/`return` key) by finding the difference in time from before the input statement and after it. You can turn this into a reaction time tester by having one person click the run button and another person press the `Enter` key as soon as they see or hear the first person click run. You can also see how long it takes Python to execute a line of code by just not having an input statement.
 
 
 ## Optional practice script 1 (3m41s)
@@ -572,4 +587,4 @@ Notice how this differs from the `strftime()` function from the `time` module. T
 Next lesson: [Dictionaries and loops](../ees3)
 
 ----
-Revised 2022-03-04
+Revised 2024-02-01
