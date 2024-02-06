@@ -3,8 +3,8 @@
 # (c) 2024 Vanderbilt University. This program is released under a GNU General Public License v3.0 http://www.gnu.org/licenses/gpl-3.0
 # Author: Steve Baskauf
 
-version = '0.1.0'
-created = '2024-01-26'
+version = '0.2.0'
+created = '2024-02-06'
 
 # Zotero API developer guide: https://www.zotero.org/support/dev/web_api/v3/start
 # Example request URL: https://api.zotero.org/groups/2267085/items?format=json&amp;include=bib,data,coins,citation&amp;style=chicago-fullnote-bibliography
@@ -17,6 +17,11 @@ created = '2024-01-26'
 #   it does support Backoff and Retry-After headers from the server when it is overloaded or too many requests are made in a certain period of time.
 # - The script does not handle every possible error condition, but if an agent ID is invalid (resulting in a 500 error), it 
 #  does prompt the user to check the submitted ID.
+# -----------------------------------------
+# Version 0.2.0 change notes:
+# - Add support for a command line argument (--start or -S) to start the paging at a number other than
+#   the default 0 (i.e. the first page). This enables restart if the download crashes.
+# - Change handling of 500 error code to allow the user to choose to abort or try again after they wait awhile. 
 
 # -----------------------------------------
 # Import modules.
@@ -79,6 +84,12 @@ if '--path' in opts: #  set path to output data file
     data_path = args[opts.index('--path')]
 if '-P' in opts: 
     data_path = args[opts.index('-P')]
+
+paging_start = 0 # Default to the first page.
+if '--start' in opts: #  get the integer paging start value
+    paging_start = int(args[opts.index('--start')])
+if '-S' in opts: 
+    paging_start = int(args[opts.index('-S')])
 
 # Global variables.
 BASE_URL = 'https://api.zotero.org'
@@ -189,9 +200,19 @@ def retrieve_page_of_data(agent_id: str, backoff_time: int, request_limit=100, p
                 delay = int(headers['Retry-After'])
                 sleep(delay)
         elif code == 500:
-            print('500 status code. Did you specify a valid agent ID?')
-            print('message:', data_string)
-            sys.exit(0)
+            if tries >= max_tries + 1:
+                print('Too many tries. Giving up.')
+                sys.exit(0)
+            else:
+                print('500 status code.')
+                print('message:', data_string)
+                print('This error occurs when the provided ID is invalid, but may occur for')
+                print('other unknown reasons.')
+                print()
+                user_response = input('To quit the download, enter "Q". To try again, press the Enter key.')
+                if user_response != '':
+                    sys.exit(0)
+            
         elif code == 503: # Service unavailable. Wait the indicated number of seconds and try again.
             if tries >= max_tries + 1:
                 print('Too many tries. Giving up.')
@@ -216,10 +237,11 @@ def retrieve_page_of_data(agent_id: str, backoff_time: int, request_limit=100, p
 # -----------------------------------------
 
 backoff_time = 0 # Set the initial backoff time to zero. It will be updated after each page is retrieved if the server is overloaded.
-paging_start = 0 # Start retrieving records from the first one. This will be incremented by the request_limit after each page is retrieved.
+# paging_start is set at the start of the program either by a command line argument or defaulting to 0.
+#paging_start = 0 # Start retrieving records from the first one. This will be incremented by the request_limit after each page is retrieved.
 request_limit = 100 # Maximum number of records to retrieve in one request.
 
-total_results = 1 # Set to 1 to force the first retrieval. Actual value will be set in the while loop.
+total_results = 1000000 # Set to a high value to force the first retrieval. Actual value will be set in the while loop.
 
 while paging_start < total_results:
     print('paging start index:', paging_start)
@@ -233,7 +255,7 @@ while paging_start < total_results:
     data_structure, backoff_time, total_results = retrieve_page_of_data(agent_id, backoff_time, request_limit=request_limit, paging_start=paging_start)
 
     # For testing, hard code the total_results value.
-    #total_results = 150
+    #total_results = 1500
 
     # Print the number of records to be retrieved in the first loop only.
     if paging_start == 0:
@@ -244,4 +266,4 @@ while paging_start < total_results:
         json.dump(data_structure, outfile, indent=2)
     paging_start += request_limit # Increment the paging start value for the next request.
 
-print('done')
+print('Download completed successfully')

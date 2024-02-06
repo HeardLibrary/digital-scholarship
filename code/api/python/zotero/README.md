@@ -19,7 +19,7 @@
 
 Script location: <https://github.com/HeardLibrary/digital-scholarship/blob/master/code/api/python/zotero/zotero_export_tool.py>
 
-Current version: v0.1.0
+Current version: v0.2.0
 
 Written by Steve Baskauf 2024.
 
@@ -55,5 +55,14 @@ python zotero_export_tool.py --id 2267085 --path ./data/
 | --------- | ---------- | ------ | ------- |
 | --id | -I | REQUIRED Zotero user or group identifier | none |
 | --path | -P | OPTIONAL path string to be prepended to filename. The path MUST exist before the script is run. | '' (current working directory) |
+| --start | -S | OPTIONAL integer starting record for paging | 0 |
 | --version | -V | no values; displays current version information |  |
 | --help | -H | no values; displays link to this page |  |
+
+## Restarting after a crash
+
+Each set of 100 records is saved in a file that has the paging start integer appended to the filename, e.g. `zotero_400.json`. If the script crashes or is aborted and there is no "Download completed successfully" message, examine the output files to determine the last successful page retrieved and the integer of the start of the next page. For example, if the script aborted after retrieving `zotero_400.json`, the script should be restarted with a paging starting record of 500. This can be specified using the `--start` or `-S` command line argument:
+
+```
+python zotero_export_tool.py --id 2267085 --start 500
+```
