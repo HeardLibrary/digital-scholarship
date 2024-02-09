@@ -31,7 +31,7 @@ The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
 
 ## Installation requirements
 
-The script REQUIRES that you have Python 3 installed on your computer. It REQUIRES the [requests](https://docs.python-requests.org/en/latest/) module, which is not part of the Python Standard Library, so you may have to use PIP to install it prior to running the script.
+The script REQUIRES that you have Python 3 installed on your computer. It REQUIRES the [requests](https://docs.python-requests.org/en/latest/) module, which is not part of the Python Standard Library, so you may have to use PIP to install it prior to running the script. It also REQUIRES the [requests-cache](https://pypi.org/project/requests-cache/) module, although that feature can be disabled as described above.
 
 ## Usage
 
