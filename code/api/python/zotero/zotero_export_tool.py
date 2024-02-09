@@ -22,6 +22,11 @@ created = '2024-02-08'
 # - Add support for a command line argument (--start or -S) to start the paging at a number other than
 #   the default 0 (i.e. the first page). This enables restart if the download crashes.
 # - Change handling of 500 error code to allow the user to choose to abort or try again after they wait awhile. 
+# -----------------------------------------
+# Version 0.3.0 change notes:
+# - Add support for a command line argument (--modpath or -M) to specify the path to a file that contains the last modified version of the library.
+#   If this file is specified, the script will retrieve only records that have been modified since the last download. Otherwise, the entire dataset will be retrieved.
+# - Change behavior of the 500 error code to wait 10 minutes before trying again.
 
 # -----------------------------------------
 # Import modules.
