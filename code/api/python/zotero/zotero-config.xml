@@ -1,0 +1,26 @@
+<zotero-config>
+    <!-- Used by get-zotero-data.pp.xql-->
+    <groupid>4419449</groupid>
+    <api-key/>
+    <last-modified-version>7323</last-modified-version>
+    <!-- format json or tei -->
+    <format>json</format>
+    <data-dir>/db/apps/majlis-data/data/bibl/tei</data-dir>
+    <base-uri>https://majlis.net/bibl</base-uri>
+    <!-- Allowed values: auto-generated, zotero -->
+    <id-pattern>zotero</id-pattern>
+    <!-- Values used to build TEI records -->
+    <!--
+    <principal xmlns="http://www.tei-c.org/ns/1.0">Tracy Miller</principal>
+    <editor xmlns="http://www.tei-c.org/ns/1.0" role="general">Tracy Miller</editor>
+    <respStmt xmlns="http://www.tei-c.org/ns/1.0">
+        <resp>TEI encoding by</resp>
+        <name>Tracy Miller</name>
+    </respStmt>
+    <availability xmlns="http://www.tei-c.org/ns/1.0">
+        <licence target="http://creativecommons.org/licenses/by/3.0/">
+            <p>Distributed under a Creative Commons Attribution 3.0 Unported License.</p>
+        </licence>
+    </availability>
+    -->
+</zotero-config>

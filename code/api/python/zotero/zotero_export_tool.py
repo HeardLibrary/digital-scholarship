@@ -3,8 +3,8 @@
 # (c) 2024 Vanderbilt University. This program is released under a GNU General Public License v3.0 http://www.gnu.org/licenses/gpl-3.0
 # Author: Steve Baskauf
 
-version = '0.2.0'
-created = '2024-02-06'
+version = '0.3.0'
+created = '2024-02-08'
 
 # Zotero API developer guide: https://www.zotero.org/support/dev/web_api/v3/start
 # Example request URL: https://api.zotero.org/groups/2267085/items?format=json&amp;include=bib,data,coins,citation&amp;style=chicago-fullnote-bibliography
@@ -31,6 +31,7 @@ import requests
 from typing import List, Dict, Tuple, Optional, Any
 import requests_cache
 import json
+import xml.etree.ElementTree as ET
 import sys
 from time import sleep
 
@@ -91,6 +92,26 @@ if '--start' in opts: #  get the integer paging start value
 if '-S' in opts: 
     paging_start = int(args[opts.index('-S')])
 
+# If the modification file path is specified, the query will retrieve only records that have
+# been modified since the last download. Otherwise, the entire dataset will be retrieved.
+modification_file_path = ''
+LAST_MODIFIED_VERSION = 0
+if '--modpath' in opts: #  get the path to the config XML file with the last modified version
+    modification_file_path = args[opts.index('--modpath')]
+if '-M' in opts: 
+    modification_file_path = args[opts.index('-M')]
+
+if modification_file_path != '':
+    # Open the zotero-config.xml file and read it into a string.
+    with open(modification_file_path, 'r') as file:
+        xml_text = file.read()
+
+    # Convert the XML text string to a data structure
+    root_node = ET.fromstring(xml_text)
+    # Get the last-modified-version from the XML.
+    LAST_MODIFIED_VERSION = int(root_node.find('last-modified-version').text)
+    print('last modified version:', LAST_MODIFIED_VERSION)
+
 # Global variables.
 BASE_URL = 'https://api.zotero.org'
 VERSION_HTTP_HEADER = {'Zotero-API-Version': '3'}
@@ -121,7 +142,7 @@ def get_zotero_data(agent_id: str, request_limit=100, paging_start=0, library_ty
     Tuple consisting of the HTTP status code, the response header, and the data in text format. 
         If status 200, the data are JSON. Otherwise they are probably an error message.
     """
-    global BASE_URL, VERSION_HTTP_HEADER
+    global BASE_URL, VERSION_HTTP_HEADER, LAST_MODIFIED_VERSION
     
     query_string_dict = {
         'format': 'json',
@@ -130,6 +151,12 @@ def get_zotero_data(agent_id: str, request_limit=100, paging_start=0, library_ty
         'limit': request_limit,
         'start': paging_start
     }
+
+    # If the modification file path was specified, the query will retrieve only records that have
+    # been modified since the last download. Otherwise, the entire dataset will be retrieved.
+    if LAST_MODIFIED_VERSION > 0:
+        query_string_dict['since'] = LAST_MODIFIED_VERSION
+
     url = BASE_URL + '/' + library_type + '/' + agent_id + '/' + endpoint
     r = requests.get(url, params=query_string_dict, headers=VERSION_HTTP_HEADER)
     
@@ -157,7 +184,9 @@ def retrieve_page_of_data(agent_id: str, backoff_time: int, request_limit=100, p
     Returns
     -------
     Tuple consisting of a list of dictionaries with each dictionary representing one reference, 
-    and an integer indicating the number of seconds to wait before trying again if the server is overloaded.
+    an integer indicating the number of seconds to wait before trying again if the server is overloaded,
+    an integer indicating the total number of results available, and an integer indicating
+    # the last modified version of the library.
     """
     try_again = True
     max_tries = 10
@@ -172,6 +201,11 @@ def retrieve_page_of_data(agent_id: str, backoff_time: int, request_limit=100, p
         # Make HTTP request to API.
         code, headers, data_string = get_zotero_data(agent_id, request_limit=request_limit, paging_start=paging_start, library_type=library_type, what_to_include=what_to_include, endpoint=endpoint, citation_style=citation_style)
         #print(headers)
+
+        # Get the library version to save to use in the "since" parameter in the next request. 
+        if 'Last-Modified-Version' in headers:
+            latest_modified_version = int(headers['Last-Modified-Version'])
+            #print('latest modified version:', latest_modified_version)
 
         # Check whether the server is overloaded and has requested the client to back off. The request is not handled here
         # because if there is only one page requested, or if this is the last page, we don't want to make the user wait.
@@ -209,9 +243,12 @@ def retrieve_page_of_data(agent_id: str, backoff_time: int, request_limit=100, p
                 print('This error occurs when the provided ID is invalid, but may occur for')
                 print('other unknown reasons.')
                 print()
-                user_response = input('To quit the download, enter "Q". To try again, press the Enter key.')
-                if user_response != '':
-                    sys.exit(0)
+                print('Waiting 10 minutes before trying again.')
+                #user_response = input('To quit the download, enter "Q". To try again, press the Enter key.')
+                #if user_response != '':
+                #    sys.exit(0)
+                delay = 600
+                sleep(delay)
             
         elif code == 503: # Service unavailable. Wait the indicated number of seconds and try again.
             if tries >= max_tries + 1:
@@ -230,7 +267,7 @@ def retrieve_page_of_data(agent_id: str, backoff_time: int, request_limit=100, p
     total_results = int(headers['Total-Results'])
 
     #print(json.dumps(data_structure, indent=2))
-    return data_structure, backoff_time, total_results
+    return data_structure, backoff_time, total_results, latest_modified_version
 
 # -----------------------------------------
 # Main program.
@@ -252,10 +289,10 @@ while paging_start < total_results:
         print('Server overloaded. Waiting', backoff_time, 'seconds before trying again.')
         sleep(backoff_time)
 
-    data_structure, backoff_time, total_results = retrieve_page_of_data(agent_id, backoff_time, request_limit=request_limit, paging_start=paging_start)
+    data_structure, backoff_time, total_results, latest_modified_version = retrieve_page_of_data(agent_id, backoff_time, request_limit=request_limit, paging_start=paging_start)
 
     # For testing, hard code the total_results value.
-    #total_results = 1500
+    #total_results = 100
 
     # Print the number of records to be retrieved in the first loop only.
     if paging_start == 0:
@@ -265,5 +302,7 @@ while paging_start < total_results:
     with open(data_path + 'zotero_' + str(paging_start) + '.json', 'w') as outfile:
         json.dump(data_structure, outfile, indent=2)
     paging_start += request_limit # Increment the paging start value for the next request.
+
+print('The number of the latest modified version is:', latest_modified_version)
 
 print('Download completed successfully')
