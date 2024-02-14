@@ -1,7 +1,7 @@
 ---
 permalink: /viz/
 title: Data visualization and analysis
-breadcrumb: Visualization/analysis
+breadcrumb: visualization
 ---
 
 # Data Visualization Resources
