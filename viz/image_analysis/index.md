@@ -1,5 +1,5 @@
 ---
-permalink: /viz/image_analysis
+permalink: /viz/image_analysis/
 title: ChatGPT Vision image analysis
 breadcrumb: image analysis
 ---
