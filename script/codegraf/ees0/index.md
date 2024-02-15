@@ -74,6 +74,25 @@ To see videos showing how these things work in the Jupyter browser and Colab env
 
 Although GitHub is a cloud-based system similar to systems like Dropbox, Box, OneDrive, and Google Drive that can synchronize local files with copies in the cloud, it is different in a very fundamental way. When you make changes on your local computer, they are not automatically synched. Instead, synching files requires a three-stage process: staging, committing, and pushing. In command line Git, each of these steps requires issuing a separate command. In GitHub Desktop, they are accomplished by checking boxes and clicking on buttons.
 
+## Setting up a repository and cloning it with GitHub Desktop
+
+The complete instructions, with videos, for this subject is at [this web page](https://heardlibrary.github.io/digital-scholarship/script/codegraf/016/). 
+
+## Stage, commit and push in GitHub Desktop
+
+When you have made a change in a cloned repository, the changed files will show up under the `Changes` tab. You can decide whether a particular change should be documented by "staging it for commit". Changes that are staged have a checkmark in the checkbox to the left of their name. Changes whose checkbox are unchecked will be not be documented until they are staged (checked). 
+
+Once changes reach the point where the state of the project needs to be documented, you need to make a commit. Describe the changes in the box.
+
+<img src="../../../manage/control/github/images-clone/file-changes.png" style="border:1px solid black">
+
+Commit your changes by clicking the button.  You'll then see the new commit in the history and as a change that's ready to push up to GitHub.
+
+<img src="../../../manage/control/github/images-clone/make-commit.png" style="border:1px solid black">
+
+Click on the `Push origin` button to push your changes from the desktop client to GitHub. If you check the web interface, you should see the changes recorded in the GitHub cloud.
+
+
 
 ----
 
