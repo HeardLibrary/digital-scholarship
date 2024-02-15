@@ -8,9 +8,7 @@ To get to this page, go to <https://tinyurl.com/4tjupkx4>
 
 Previous lesson: 
 
-If you wanted to code using the AI tool GitHub Copilot, see [Setting up VS Code to use Jupyter notebooks and GitHub Copilot](../003c)
-
-If you wanted to start coding Python as quickly as possible: [Quickstart guide for running Python in a Colab notebook](../003a)
+[Background](../ees0)
 
 # Python programming basics - EES 2580
 
@@ -468,4 +466,4 @@ Go to the web page for the repository on GitHub and locate the notebook. Submit 
 Next lesson: [Code libraries and lists](../ees2)
 
 ----
-Revised 2024-02-01
+Revised 2024-02-15
