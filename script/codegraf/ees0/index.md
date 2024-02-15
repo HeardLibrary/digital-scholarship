@@ -90,9 +90,13 @@ Commit your changes by clicking the button.  You'll then see the new commit in t
 
 <img src="../../../manage/control/github/images-clone/make-commit.png" style="border:1px solid black">
 
-Click on the `Push origin` button to push your changes from the desktop client to GitHub. If you check the web interface, you should see the changes recorded in the GitHub cloud.
+Click on the `Push origin` button to push your changes from the desktop client to GitHub. 
 
+## Getting the URL of a file to share it
 
+If you check the web interface, you should see the changes recorded in the GitHub cloud. Go to the URL of your GitHub account and select the repository where you are documenting the project. If there are subfolders, navigate to the one where the file is saved. Click on the filename.
+
+The URL at the top of the browser can be copied and shared. Jupyter notebooks will be rendered on the page so that its contents can be viewed, although it is not runnable.
 
 ----
 
