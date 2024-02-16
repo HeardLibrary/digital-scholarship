@@ -4,7 +4,7 @@ title: EES 2580 - Background
 breadcrumb: ees0
 ---
 
-To get to this page, go to <https://tinyurl.com/>
+To get to this page, go to <http://tinyurl.com/33fx5knb>
 
 Previous lesson: 
 
@@ -12,7 +12,7 @@ Previous lesson:
 
 # Background - EES 2580
 
-This lesson will provide you with the background necessary to run Jupyter notebooks, and to upload and download files to GitHub.
+This lesson will provide you with the background necessary to run Jupyter notebooks, and to upload files to GitHub.
 
 **Learning objectives** At the end of this lesson, the learner will:
 - define "literate programming".
@@ -26,8 +26,6 @@ This lesson will provide you with the background necessary to run Jupyter notebo
 ## Links
 
 [Example Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/003/example.ipynb)
-
-[lesson slides](ees0.pdf)
 
 # Jupyter notebooks
 
@@ -56,7 +54,7 @@ Integrated development environments (IDEs) and notebook environments often have 
 
 ## Coding notebook basics
 
-1. When you first run a cell in a code notebook, there may be some delay caused by starting up the environment. In a Colab notebook, this is simple an extra-long delay. In the VS Code environment, you will need to select an available environment if you didn't specify one before running the notebook. Once the environment is running, the execution of cells will be a lot faster.
+1. When you first run a cell in a code notebook, there may be some delay caused by starting up the environment. In a Colab notebook, this is simply an extra-long delay. In the VS Code environment, you will need to select an available environment if you didn't specify one before running the notebook. Once the environment is running, the execution of cells will be a lot faster.
 2. Running a code cell is accomplished in different ways depending on the platform. In VS Code and Colab, there is a "run" button (symbolized by a triangle) at the left of the cell. In web browser-based Jupyter notebook systems, you select a cell and click on the `Run` button at the top of the page. When a cell is running there is some indicator showing that it has not yet finished. In Colab, the run button turns into a spinning circle. In VS Code, a spinning circle appears below the cell. In a browser Jupyter notebook, a star appears at the left of the cell. In each system, there is also an indication that the code in the cell is finished running. In Colab, the spinning circle turns back into the start triangle. In VS Code, a checkmark appears below the cell. In a browser Jupyter notebook, a number appears to the left of the cell.
 3. Cells in a notebook are not independent. The state of the environment persists when you switch from one cell to another. Therefore, the order in which cells are run makes a difference. If a cell needs the value of a variable that is set in a previous cell, it will throw an error if the previous cell is not run first. Typically, cells are run in order from the top of the notebook downwards. Depending on the code, you may be able to re-run a cell, or go up one or more cells to re-run previous cells.
 4. If the last line in a cell is a single variable or expression, it will be evalutated and displayed below the cell. The results of any `print` statements will also be displayed below the cell in the order they are executed. A single variable or expression that is not at the end of a cell will be ignored.
@@ -96,7 +94,7 @@ Click on the `Push origin` button to push your changes from the desktop client t
 
 If you check the web interface, you should see the changes recorded in the GitHub cloud. Go to the URL of your GitHub account and select the repository where you are documenting the project. If there are subfolders, navigate to the one where the file is saved. Click on the filename.
 
-The URL at the top of the browser can be copied and shared. Jupyter notebooks will be rendered on the page so that its contents can be viewed, although it is not runnable.
+The URL at the top of the browser can be copied and shared. Jupyter notebooks will be rendered on the page so that their contents can be viewed, although they are not runnable.
 
 ----
 
