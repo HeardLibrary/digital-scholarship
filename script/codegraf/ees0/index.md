@@ -27,6 +27,8 @@ This lesson will provide you with the background necessary to run Jupyter notebo
 
 [Example Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/003/example.ipynb)
 
+[Example Google Colab notebook](https://colab.research.google.com/drive/1ecKhoDFevC_M9mFSDPDu0fGujyQH43Iu)
+
 # Jupyter notebooks
 
 ## Literate programming paradigm (9m04s)
