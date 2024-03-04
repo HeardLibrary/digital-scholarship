@@ -32,12 +32,6 @@ Total video time: 51 m 42 s
 [feedback form](https://forms.gle/62Z5Ln9p2Qhsh7B9A)
 
 
-# Procedural vs. vectorized paradigm (4m 10s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/joHgR4vtnuY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-----
-
 # Conditional execution
 
 ## if statements (9m 29s)

@@ -26,7 +26,6 @@ We also introduce two kinds of *loops*, which are ways to step through *iterable
 - describe how ordering of columns differs between a list of lists and a list of dictionaries.
 - print the items on a list using a `for` loop.
 - explain how an *indented code block* is used to define sections of code.
-- describe the actions that occur when several methods are attached sequentially.
 
 Total video time: 50 m 09 s (additional time for optional live coding videos)
 
@@ -114,6 +113,74 @@ characters = [{'name':'Mickey Mouse', 'company':'Disney', 'gender': 'male'}, {'n
 
 ![list of dictionaries as a table](list-of-dictionaries.png)
 
+----
+
+## Introduction to pandas Series (5m59s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/RXFjPbUWH6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The form of the statement to create a Series from a Python dictionary is:
+
+```
+series_name = pd.Series(values_dictionary)
+```
+
+pandas *Series* are similar to both lists and dictionaries since they can be indexed by either a label index (similar to a dictionary key) or an integer position index (similar to the index of a list). 
+
+```
+states_series = pd.Series(states_dict)
+print(states_series[2])
+print(states_series['TN'])
+```
+
+**NOTE:** As with other Python indexing, the integer position index is zero-based (counting starts with zero). So an integer index of 2 locates the 3rd item in the Series.
+
+To avoid ambiguity, the indexing system can be made explicit by indexing using `.loc[]` for label indices and `.iloc[]` for integer position indexing:
+
+```
+states_series.loc['TN']
+states_series.iloc[2]
+```
+
+Do not associate the "i" in `.iloc[]` with the word "index", since "index" is used generically to describe the label index. It's better to think of the "i" as representing "integer".
+
+A pandas Series is composed of a NumPy array with an associated label index object. Basing the Series data structure on a NumPy array allows the Series to be used in vectorized operations and provides better performance than with basic Python data structures like lists and dictionaries.
+
+The `.values` attribute of a Series returns the NumPy array and the `.index` attribute returns the label index. Both are iterable.
+
+----
+
+## pandas DataFrame structure (6m28s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/zOk1LyaQOTo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Columns of a data frame can be referred to by their label in two ways:
+
+```
+states_df['capital']
+states_df.capital
+```
+
+The "dot notation" can only be used if the column label is a valid Python object name (i.e. can't have spaces). The resulting object is a series whose values are the values in the column labeled by the row label indices.
+
+Rows in a data frame can be referred to by either their index label (using `.loc[]`) or their integer position (using `.iloc[]`):
+
+```
+states_df.loc['AZ']
+states_df.iloc[1]
+```
+
+The resulting object is a series whose values are the values in the row labeled by the column headers.
+
+Cells in a data frame can be referred to by their row, column labels (using `.loc[]`):
+
+```
+states_df.loc['PA', 'population']
+```
+
+The resulting object has the type of the cell value.
+
+
 ---
 
 # Loops
@@ -194,66 +261,9 @@ Notice several things:
 
 ----
 
-## while loops (10m44s)
+# Procedural vs. vectorized paradigm (4m 10s)
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/UU1i2KhFg9I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Example:
-
-```
-power = 0 # must have an initial value
-exponent = 0
-print('exponent\tpower') # \t is the escaped tab character
-while power < 100:
-    power = 2**exponent  # exponentiation is done with **
-    exponent += 1 # incrementing is critical for the loop to end
-    print(exponent, '\t', power)
-print("Those are the powers of two.")
-```
-
-Pressing the return/enter key without entering any text generates an empty string (`''`). We can use this as a way for a user to indicate that they are done entering items.
-
-```
-print('Enter your list items and press Enter when done')
-item = 'something'
-word_list = []
-
-while item != '': # check for the empty string
-    item = input('Next item: ')
-    word_list.append(item)
-
-# remove the final empty string
-del word_list[len(word_list)-1]
-#word_list = word_list[:len(word_list)] # alternate way to remove by slicing
-print('Your list is:', word_list)
-```
-
-**Notes:**
-1. Here we use a similar trick to the one we saw earlier where we built upon an empty string. In this example, we start with an empty list, then add list items one at a time until the user indicates that they are done by pressing the enter key.
-2. Because the `while` loop tests the condition at the start of the loop, the empty string entered by the user gets added to the list during the execution of the indented code block. So when the loop is finished, we need to remove the extra empty string that got added to the end of the list. The script uses the `del` command, but an alternate method is in the commented-out line. That alternate method generates a slice of the list from the first item to the next to last item, then replaces the original list with the slice.
-
-
-----
-
-# Applying methods sequentially (6m17s)
-
-This section describes two approaches to carring out methods sequentially.
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/Lx0HGUmfX-g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Applying several methods sequentially in a single statement results in very compact code. But the code becomes less understandable than when the methods are carried out in separate statements.
-
-**Note:** In order to apply methods sequentially as shown here, the return value of a method must be an object that is of the correct type to be operated upon by the next method. In this example, `my_sentence` is a string, which can be operated upon by the `.lower()` method. The `.lower()` method returns a string, which can be operated upon by the `.split()` method. The `.split()` method returns a list, which can be operatied upon by the `.count()` method. The `.count()` method returns an iteger and that is the type of the output of the entire sequence of methods.
-
-In some cases, it makes sense to just pile up several methods. For example, if we just want a line of code that generates a ISO 8601 dateTime string to be used for a timestamp, it's convenient to just put the code on one line like this:
-
-```
-import datetime
-# Generate an ISO 8601 dateTime string
-wholeTimeStringZ = datetime.datetime.utcnow().isoformat() # form: 2019-12-05T15:35:04.959311
-```
-
-This basically serves as a utility for us and documenting how all of its pieces work isn't really that important for understanding the code.
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/joHgR4vtnuY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ----
 
