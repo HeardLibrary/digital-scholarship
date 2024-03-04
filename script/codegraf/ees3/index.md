@@ -223,6 +223,14 @@ The `.index` returns the row label indices as a pandas Index object. Use the `li
 
 # Loops
 
+----
+
+## Procedural vs. vectorized paradigm (4m 10s)
+
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/joHgR4vtnuY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+----
+
 ## for loops (5m46s)
 
 <iframe width="1120" height="630" src="https://www.youtube.com/embed/uAlD1Y5e4Ao" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -249,60 +257,29 @@ print('That wore me out.')
 
 ----
 
-## Iterating over a range object (10m28s)
+## Iterating through DataFrame rows (4m11s)
 
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/WeoJz01w1ww" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1120" height="630" src="https://www.youtube.com/embed/4x6C2VLtDoU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-You can generate an iterable range of numbers using a `range()` object.  The form of the numbers we use in `range()` is similar to the numbering in slices, although we separate them with commas.  The first number is the starting number and the second number is one more than the ending number. An optional third number can specify the step (e.g. 2 would generate every second number).  The step can also be negative.
+Typically, we don't want to iterate through rows in a pandas DataFrame because it's faster and more efficient to make changes to an entire column of the table using vectorized operations. However, there are some cases where it is difficult or impossible to do this and it's necessary to operate on one row at a time. Examples of such situations include:
 
-We can use a `for` statement to iterate through a range.  Here are examples:
+- operations involving a complex sequence of operations or conditions involving multiple cells in a row.
+- operations on row cells that involve retrieving data from somewhere outside of the DataFrame.
+- operations that involve output calculated from row values to somewhere outside of the dataframe.
 
-```python
-for count in range(1,11):
-    print(count)
+The `.iterrows()` method creates an iterable object from the DataFrame. With each iteration, a tuple is generated that contains the label index as its first item and a series containing row data as the second item. The row data series has the column headers as the series label indices and the row values as the series values. 
+
+Values in the row series can be referenced as shown [in this lesson](../008/#introduction-to-pandas-series-5m59s), either by direct indexing:
+
+```
+row_series['column_header']
 ```
 
-```python
-print('Prepare to launch!')
-for count_down in range(10, 0, -1):
-    print(count_down)
-print('Lift off!')
+or by passing the series label (the column header) into `.loc[]`:
+
 ```
-
-Notice how we need to be careful that our second number goes one step beyond our intended range.  
-
-```python
-cheer = ''
-for skipper in range(2, 10, 2):
-    cheer = cheer + str(skipper) + ', '
-cheer = cheer + 'who do we appreciate?'
-print(cheer)
+row_series.loc['column_header']
 ```
-
-Notice in this example that if we wanted to treat the integer that we generated as a string, we needed to convert it to a string using the `str()` function. That allows us to do a clever trick of starting the `cheer` object as an empty string, then concatenating more strings to its end each time the code block is executed in the loop.
-
-Ranges are often used to index list items when we want to iterate through a list, but have access to the index number.  Here is an example:
-
-```python
-basket = ['apple', 'orange', 'banana', 'lemon', 'lime']
-print("Here's a list of the fruit in the basket:")
-for fruit_number in range(0, len(basket)):
-    print(str(fruit_number + 1) + ' ' + basket[fruit_number])
-print('You can see that there are ' + str(len(basket)) + ' fruits in the basket.')
-```
-
-Notice several things:
-1. Because the number of items in the list `len(basket)` (5) is one more than the index of the last item in the list `basket[4]`, the range covers the entire list, since ranges must end one number greater than the range you want.
-2. I had to add 1 to the `fruit_number` as it iterated because Python counts starting from zero and I wanted to start numbering from one.
-3. I had to use the `str()` function each time I wanted to concatenate one of the integer numbers to other strings. I also could have printed the numbers by passing them into the `print()` function as several arguments separated by commas. That would not have required converting them from integers to strings.
-
-
-----
-
-# Procedural vs. vectorized paradigm (4m 10s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/joHgR4vtnuY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ----
 
 # Practice
