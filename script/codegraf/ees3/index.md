@@ -12,6 +12,8 @@ In this lesson we introduce a second complex object: *dictionaries*. A dictionar
 
 We can build more complex objects by nesting one object inside another. Two examples we examine are lists of lists and lists of dictionaries.
 
+The pandas module introduces a useful two-dimensional data structure called a *DataFrame*. We examine the structure of a DataFrame and how to reference its elements.
+
 We also introduce two kinds of *loops*, which are ways to step through *iterable* objects like lists or to repeat an action many times.
 
 **Learning objectives** At the end of this lesson, the learner will be able to:
@@ -27,13 +29,10 @@ We also introduce two kinds of *loops*, which are ways to step through *iterable
 - print the items on a list using a `for` loop.
 - explain how an *indented code block* is used to define sections of code.
 
-Total video time: 50 m 09 s (additional time for optional live coding videos)
 
 ## Links
 
 [Lesson Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/ees3/ees3.ipynb)
-
-[lesson slides](ees3.pdf)
 
 
 # Dictionaries
