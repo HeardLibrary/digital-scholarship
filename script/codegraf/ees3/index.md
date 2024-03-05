@@ -22,12 +22,17 @@ We also introduce two kinds of *loops*, which are ways to step through *iterable
 - remove a dictionary value.
 - create a complex Python data structure by creating a list that contains lists or dictionaries as list items.
 - describe how a list of lists can be compared to cells of a table.
-- reference an item in a list of lists by correctly placing index numbers in square brackets.
-- describe how a list of dictionaries can be compared to cells of a table.
-- reference an item in a list of dictionaries by correctly placing the row index number and column key string in square brackets.
-- describe how ordering of columns differs between a list of lists and a list of dictionaries.
+- create a pandas Series from a Python dictionary.
+- reference a value in a pandas Series by its label index or integer position index.
+- reference a column in a pandas DataFrame by its label index.
+- reference a row in a pandas DataFrame by its label index or integer position index.
+- reference a cell in a pandas DataFrame by its row and column label indices.
+- load a spreadsheet from a URL into a pandas DataFrame.
+- use the `.head()` method to view the first few lines of a DataFrame.
+- preform vectorized operations on columns of a pandas DataFrame.
 - print the items on a list using a `for` loop.
 - explain how an *indented code block* is used to define sections of code.
+- use the `.iterrows()` method to iterate through the rows of a pandas DataFrame.
 
 
 ## Links
