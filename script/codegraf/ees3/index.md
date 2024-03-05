@@ -266,6 +266,47 @@ for letter in word:
 print('That wore me out.')
 ```
 
+----
+
+## Building a sequence with a for loop
+
+A common strategy in programming is to build a sequence by starting with an empty sequence and adding items to it one at a time. Here's an example using strings:
+
+```
+list_of_words = ['The ', 'quick ', 'brown ', 'fox ', 'jumps ', 'over ', 'the ', 'lazy ', 'dog ']
+sentence = ''
+for word in list_of_words:
+    sentence = sentence + word # Concatenate the word to the sentence
+print(sentence + '!')
+```
+
+The statement pattern `sequence = sequence + item` is a common pattern in programming.  It is so common that there is a shorthand for it: `sequence += item`.  Here's the same example using the shorthand:
+
+```
+sentence = ''
+for word in list_of_words:
+    sentence += word
+print(sentence + '!')
+```
+
+We can use the same kind of strategy to add numbers:
+    
+```
+total = 0
+for number in [3, 5, 7, 9]:
+    total += number
+print('The total is', total)
+```
+
+In both of these cases, we knew the items in advance. We can use the `range()` function to generate a sequence of numbers that can be used to control the number of times we add items to a sequence. Here's an example:
+
+```
+bird_list = []
+for i in range(4):
+    bird = input('Enter a bird name: ')
+    bird_list.append(bird)
+print('Your bird list is:', bird_list)
+```
 
 ----
 
