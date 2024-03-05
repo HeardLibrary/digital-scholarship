@@ -208,6 +208,14 @@ For details about reading from particular sheets in an Excel file, delimiters ot
 
 Note: when loading files via a URL, be sure that the URL delivers the raw file, not an HTML representation of the file.
 
+When a CSV file is loaded into a DataFrame, the first row of the file is assumed to contain the column headers. Those column headers are automatically set to be the label indices for the columns. However, no particular column is set as the label indices for the rows. The default row label indices are a sequence of integers starting with zero. To set a column to be the row indices, use the `.set_index()` method:
+
+```
+dataframe = dataframe.set_index('row_ids')
+```
+
+where `row_ids` is a column containing unique values that will be used as the row label indices.
+
 **Examining the DataFrame**
 
 Use the `.head()` method to view only the first few lines of a DataFrame (default is 5 if `number_of_lines` argument omitted):
