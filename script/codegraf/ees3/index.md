@@ -294,7 +294,7 @@ When you've finished the assignment, be sure to save a final time. Do not clear 
 
 Go to the web page for the repository on GitHub and locate the notebook. Submit the link for the notebook web page to Brightspace as instructed.
 
-----
+-----
 
 Next lesson: [Contitional execution](../ees4)
 
