@@ -4,7 +4,7 @@ title: EES 2580 - Loops, conditional execution, and Matplotlib
 breadcrumb: ees4
 ---
 
-Previous lesson: [Dictionaries and loops](../ees3)
+Previous lesson: [Dictionaries and complex data structures](../ees3)
 
 # Loops, conditional execution, and Matplotlib - EES 2580
 
@@ -89,7 +89,7 @@ We can use the same kind of strategy to add numbers:
 ```
 total = 0
 for number in [3, 5, 7, 9]:
-    total += number
+    total += number # Add the number to the total
 print('The total is', total)
 ```
 
@@ -99,7 +99,7 @@ In both of these cases, we knew the items in advance. We can use the `range()` f
 bird_list = []
 for i in range(4):
     bird = input('Enter a bird name: ')
-    bird_list.append(bird)
+    bird_list.append(bird) # Append the bird name to the list
 print('Your bird list is:', bird_list)
 ```
 
@@ -115,7 +115,7 @@ Typically, we don't want to iterate through rows in a pandas DataFrame because i
 - operations on row cells that involve retrieving data from somewhere outside of the DataFrame.
 - operations that involve output calculated from row values to somewhere outside of the dataframe.
 
-The `.iterrows()` method creates an iterable object from the DataFrame. With each iteration, a tuple is generated that contains the label index as its first item and a series containing row data as the second item. The row data series has the column headers as the series label indices and the row values as the series values. 
+The `.iterrows()` method creates an iterable object from the DataFrame. With each iteration, a tuple is generated that contains the label index as its first item and a series containing row data as the second item. (For more information about tuples, see the optional section at the end of the lesson.) The row data series has the column headers as the series label indices and the row values as the series values. 
 
 Values in the row series can be referenced as shown [in this lesson](../008/#introduction-to-pandas-series-5m59s), either by direct indexing:
 

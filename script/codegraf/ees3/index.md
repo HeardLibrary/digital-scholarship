@@ -238,7 +238,7 @@ Go to the web page for the repository on GitHub and locate the notebook. Submit 
 
 -----
 
-Next lesson: [Contitional execution](../ees4)
+Next lesson: [Loops and contitional execution](../ees4)
 
 ----
 
