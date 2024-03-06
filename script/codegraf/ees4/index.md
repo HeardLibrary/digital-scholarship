@@ -271,7 +271,24 @@ average_injury_rate = [0.7, 1.0, 1.9, 2.0, 2.3, 2.4, 1.0]
 stories_fallen = [2, 3, 4, 5, 6, 8, 11]
 ```
 
-Each corresponding item in the lists represents a particular data point (e.g. average injury rate for falling 2 stories was 0.7).
+Each corresponding item in the lists represents a particular data point (e.g. average injury rate for falling 2 stories was 0.7). 
+
+We could also acquire the values from a pandas DataFrame. If the first few rows of the DataFrame `cat_injuries` look like this:
+
+| stories_fallen | average_injury_rate |
+|----------------|---------------------|
+| 2              | 0.7                 |
+| 3              | 1.0                 |
+| 4              | 1.9                 |
+
+we could refer to the columns of the DataFrame like this:
+
+```
+cat_injuries['average_injury_rate']
+cat_injuries['stories_fallen']
+```
+
+These expressions would be evaluated as pandas Series objects, which are iterable and can be used as input to Matplotlib functions.
 
 ## Pyplot figures and subplots (7m34s)
 
@@ -313,6 +330,8 @@ plt.show()
 
 Matplotlib provides methods to generate simple two-dimensional plot types. The first two arguments are the variables to be plotted as `(x, y)`.
 
+Plots generated from lists:
+
 ```
 ax.scatter(stories_fallen, injury_rate, color='r') # dot plot (scatterplot) with red color
 ax.plot(stories_fallen, injury_rate) # line plot (points connected by lines)
@@ -323,6 +342,15 @@ ax.errorbar(stories_fallen, injury_rate, yerr=[lower_deviation, upper_deviation]
 ```
 
 `lower_deviation` and `upper_deviation` are one-dimensional data structures (e.g. lists) that have the same length as the data list, with corresponding items.
+
+Plots generated from pandas Series:
+
+```
+ax.scatter(cat_injuries['stories_fallen'], cat_injuries['average_injury_rate'], color='r')
+ax.plot(cat_injuries['stories_fallen'], cat_injuries['average_injury_rate'])
+ax.bar(cat_injuries['stories_fallen'], cat_injuries['average_injury_rate'])
+ax.errorbar(cat_injuries['stories_fallen'], cat_injuries['average_injury_rate'], yerr=[lower_deviation, upper_deviation], fmt='o')
+```
 
 Axis labels are generated using two methods:
 
