@@ -1,20 +1,18 @@
 ---
 permalink: /script/codegraf/ees3/
-title: EES 2580 - Dictionaries, loops, and complex data structures
+title: EES 2580 - Dictionaries, and complex data structures
 breadcrumb: ees3
 ---
 
 Previous lesson: [Code libraries and lists](../ees2)
 
-# Dictionaries, loops, and complex data structures - EES 2580
+# Dictionaries and complex data structures - EES 2580
 
 In this lesson we introduce a second complex object: *dictionaries*. A dictionary is a one-dimensional data structure like a list, but its elements are referenced by name using a *key* rather than by index number. 
 
 We can build more complex objects by nesting one object inside another. Two examples we examine are lists of lists and lists of dictionaries.
 
 The pandas module introduces a useful two-dimensional data structure called a *DataFrame*. We examine the structure of a DataFrame and how to reference its elements.
-
-We also introduce two kinds of *loops*, which are ways to step through *iterable* objects like lists or to repeat an action many times.
 
 **Learning objectives** At the end of this lesson, the learner will be able to:
 - create a dictionary by specifying the items it contains.
@@ -30,9 +28,6 @@ We also introduce two kinds of *loops*, which are ways to step through *iterable
 - load a spreadsheet from a URL into a pandas DataFrame.
 - use the `.head()` method to view the first few lines of a DataFrame.
 - preform vectorized operations on columns of a pandas DataFrame.
-- print the items on a list using a `for` loop.
-- explain how an *indented code block* is used to define sections of code.
-- use the `.iterrows()` method to iterate through the rows of a pandas DataFrame.
 
 
 ## Links
@@ -233,108 +228,6 @@ The `.index` returns the row label indices as a pandas Index object. Use the `li
 
 ----
 
-# Loops
-
-----
-
-## Procedural vs. vectorized paradigm (4m 10s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/joHgR4vtnuY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-----
-
-## for loops (5m46s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/uAlD1Y5e4Ao" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-A very common task in Python is to repeat some code multiple times.  For example, suppose we want to do something with every item in a list.  A list is *iterable*, meaning that you can step through the list and operate on each of the items in the sequence.  Here's an example:
-
-```
-basket = ['apple', 'orange', 'banana', 'lemon', 'lime']
-for fruit in basket:
-    print('I ate one ' + fruit)
-print("I'm full now!")
-```
-
-Each time the script iterates to another item in the list, it repeats the indented code block below the `for` statement and the value of the iterator (`fruit` in this case) changes to the next item.  Strings are also iterable:
-
-```
-word = 'supercalifragilisticexpialidocious'
-print('Spell it out!')
-for letter in word:
-    print(letter)
-print('That wore me out.')
-```
-
-----
-
-## Building a sequence with a for loop
-
-A common strategy in programming is to build a sequence by starting with an empty sequence and adding items to it one at a time. Here's an example using strings:
-
-```
-list_of_words = ['The ', 'quick ', 'brown ', 'fox ', 'jumps ', 'over ', 'the ', 'lazy ', 'dog ']
-sentence = ''
-for word in list_of_words:
-    sentence = sentence + word # Concatenate the word to the sentence
-print(sentence + '!')
-```
-
-The statement pattern `sequence = sequence + item` is a common pattern in programming.  It is so common that there is a shorthand for it: `sequence += item`.  Here's the same example using the shorthand:
-
-```
-sentence = ''
-for word in list_of_words:
-    sentence += word
-print(sentence + '!')
-```
-
-We can use the same kind of strategy to add numbers:
-    
-```
-total = 0
-for number in [3, 5, 7, 9]:
-    total += number
-print('The total is', total)
-```
-
-In both of these cases, we knew the items in advance. We can use the `range()` function to generate a sequence of numbers that can be used to control the number of times we add items to a sequence. Here's an example:
-
-```
-bird_list = []
-for i in range(4):
-    bird = input('Enter a bird name: ')
-    bird_list.append(bird)
-print('Your bird list is:', bird_list)
-```
-
-----
-
-## Iterating through DataFrame rows (4m11s)
-
-<iframe width="1120" height="630" src="https://www.youtube.com/embed/4x6C2VLtDoU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Typically, we don't want to iterate through rows in a pandas DataFrame because it's faster and more efficient to make changes to an entire column of the table using vectorized operations. However, there are some cases where it is difficult or impossible to do this and it's necessary to operate on one row at a time. Examples of such situations include:
-
-- operations involving a complex sequence of operations or conditions involving multiple cells in a row.
-- operations on row cells that involve retrieving data from somewhere outside of the DataFrame.
-- operations that involve output calculated from row values to somewhere outside of the dataframe.
-
-The `.iterrows()` method creates an iterable object from the DataFrame. With each iteration, a tuple is generated that contains the label index as its first item and a series containing row data as the second item. The row data series has the column headers as the series label indices and the row values as the series values. 
-
-Values in the row series can be referenced as shown [in this lesson](../008/#introduction-to-pandas-series-5m59s), either by direct indexing:
-
-```
-row_series['column_header']
-```
-
-or by passing the series label (the column header) into `.loc[]`:
-
-```
-row_series.loc['column_header']
-```
-----
-
 # Practice assignment
 
 **Instructions:**  The questions for the practice assignment are in this [Jupyter notebook at GitHub](https://github.com/HeardLibrary/digital-scholarship/blob/master/code/codegraf/ees3/ees3_practice.ipynb). Download it to your local drive within the GitHub repository you created for this course.
@@ -349,4 +242,4 @@ Next lesson: [Contitional execution](../ees4)
 
 ----
 
-Revised 2024-03-04
+Revised 2024-03-06
