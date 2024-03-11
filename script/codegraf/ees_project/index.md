@@ -9,23 +9,20 @@ breadcrumb: ees
 ## Project learning objectives:
 
 The learner will:
-- acquire data from a tabular data source and load it into a Python data structure (list of dictionaries).
+- acquire data from a tabular data source and load it into a Python data structure (pandas DataFrame).
 - extract necessary data from the data structure and wrangle it into a form usable in their analysis.
 - use the basic Python statements they have learned: `if`, `for`, assignment, use a function from a module, apply methods to an object.
-- manipulate lists and dictionaries by looping through list items, specifying dictionary items, and building lists by appending items.
 - create a simple visualization using `matplotlib.pyplot`. 
 
 ## Overall goals
 
-We have monthly average climate data in tabular form acquired from the National Centers for Environmental Information <https://www.ncdc.noaa.gov/cdo-web/> for a number of locations around the U.S. The data look like this:
+We have monthly average climate data in tabular form acquired from the National Centers for Environmental Information <https://www.ncdc.noaa.gov/cdo-web/> for a number of locations around the U.S. We will be analyzing data for Mesa, Arizona from 1896 through 2017. The data have been extracted and stored in GitHub [here](https://github.com/HeardLibrary/digital-scholarship/blob/master/data/codegraf/mesa2880172.csv). The data look like this:
 
 ![climate data table example](input_table.png)
 
 In order to visualize these data, we need to summarize it by averaging values by year or by month. We also will need to deal with situations where values are missing.
 
-In the end, we want one list containing the time values to be plotted (the X values) and another list with the average values that correspond to those time values (the Y values). For example, here are two lists for yearly averages for precipitation (in mm):
-
-![example output lists](output_lists.png)
+In the end, we want one Series containing the time values to be plotted (the X values) and another Series with the average values of yearly averages for precipitation (in mm) that correspond to those time values (the Y values). 
 
 We can then visualize these data using Matplotlib. Here is an example for the data above:
 
@@ -44,20 +41,19 @@ Much of the data wrangling code can be reused with modification after you comple
 
 # Tasks and subtasks
 
-1 Acquire data<br/>
-1\.1 Use a script-defined function (provided) to load CSV from URL to a list of dictionaries<br/>
+1 Acquire data and wrangle date<br/>
+1\.1 Use the `pd.read_csv()` function to load CSV from URL to a pandas DataFrame.<br/>
+1\.2 Split the YYYY-MM date strings into separate year and month columns<br/>
+1\.3 Create a list of intervals for the desired time range<br/>
 
 2 Calculate means for desired quantity (rainfall or temperature)<br/>
-2\.1 Step through all data in column for the quantity, then sum for period to be averaged<br/>
-2\.1.1 Extract year or month from date string if necessary<br/>
-2\.1.2 Screen whether a particular datum is from the correct time interval<br/>
-2\.1.3 Skip missing data<br/>
-2\.1.4 Add screened data to sum<br/>
-2\.1.5 Count data that were summarized (exclude missing data)<br/>
-2\.2 Calculate the mean from the sum and count<br/>
-2\.3 Repeat the screening for every time interval to be graphed (year or month)<br/>
-2\.3.1 Determine the limits of the period for that analysis<br/>
-2\.3.2 Append time point and mean to growing lists of summary data<br/>
+2\.1 Create an empty table<br/>
+2\.2 Step through all of the time intervals and calculate the mean<br/>
+2\.2.1 Slice the DataFrame to include only the current time interval<br/>
+2\.2.2 Calculate the mean for the slice<br/>
+2\.2.3 Skip missing data<br/>
+2\.2.4 Add the calculated data to the table<br/>
+2\.3 Turn the table into a pandas DataFrame<br/>
 
 3 Visualize data<br/>
 3\.1 Set up subplot<br/>
@@ -76,32 +72,9 @@ For particular tasks, it is best to start with the narrowest subtasks and work y
 
 The raw data will be provided as a file available from GitHub using a URL given to you. 
 
-**1\.1 Use a script-defined function (provided) to load CSV from URL to a list of dictionaries**
+**1\.1 Use `pd.read_csv()()` to load the CSV from URL to a pandas DataFrame**
 
-Use the function below as a starting point for your code. The function will get the data, convert it to a Python list of dictionaries, and return the list of dictionaries. The dictionaries are a special kind known as an *ordered dictionary*, but you can use them just like regular dictionaries.
 
-```
-import requests
-import csv
-import matplotlib.pyplot as plt
-import numpy as np
-
-def read_dicts_from_github_csv(path):
-    """read from a CSV file in GitHub into a tabular form. Pass in the URL, return a list of dictionaries."""
-    response = requests.get(path)
-    file_text = response.text.split('\n')
-    file_rows = csv.DictReader(file_text)
-    table = []
-    for row in file_rows:
-        table.append(row)
-    return table
-```
-
-To use the function, call it as you would any other function:
-
-```
-data = read_dicts_from_github_csv(url)
-```
 
 **2 Calculate means for desired quantity (rainfall or temperature)**
 
