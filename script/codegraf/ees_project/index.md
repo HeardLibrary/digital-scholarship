@@ -65,6 +65,15 @@ Much of the data wrangling code can be reused with modification after you comple
 
 ## Task details
 
+You will need to include the following import statements at the beginning of your script:
+
+```
+import requests
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+```
+
 1 **Acquire data.**
  
 The URL for loading the CSV of raw data is: <https://raw.githubusercontent.com/HeardLibrary/digital-scholarship/master/data/codegraf/mesa2880172.csv>
@@ -135,34 +144,40 @@ The plot setup should be fairly straightforward and be similar to examples we di
 
 We should only need a single subplot (`ax`) within each figure.
 
-**3\.2 Plot data using appropriate style (scatterplot, bar, error bars)**
+3\.2 **Plot the annual precipitation data using a scatterplot**
 
-Each plot will differ in details, but the first argument (x) of the plot will be the timepoints and the second argument (y) will be the quantity averaged (precipitation or temperature).
+Use the `.scatter()` method to plot the precipitation data. The first argument (x values) should be the `year` column from the DataFrame you create and the second argument (y values) should be the `precipitation` column from the DataFrame.
 
-**3\.3 Add trendline if appropriate**
+3\.3 **Add a linear trendline**
 
-A trendline is generally appropriate for scatterplots. A linear trendline (best-fit line) is appropriate if we want to assess whether changes over time increase or decrease over the time interval being visualized. 
+A trendline is generally appropriate for scatterplots. A linear trendline (best-fit line) is appropriate if we want to assess whether changes over time increase or decrease over the time interval being visualized.
 
-**3\.3.1 Fit linear polynomial to summary data<br/>
+3\.3.1 **Fit a linear polynomial to annual mean data
+
+Use the `np.polyfit()` function to fit a linear polynomial to the data and acquire its coefficients. As in the example from the Matplotlib lesson, the final argument is the order of the polynomial, which is `1` for a linear polynomial. 
+
+The coefficients can be passed into the `np.poly1d()` function to create the actual polynomial function that can be use to generate the predicted values for the trendline. 
+
 3\.3.2 Add polynomial data to plot**
 
-Follow the examples from the lesson. It may be clearer to make the trendline be a different color than the scatterplot points. You can controll this several ways.
+Use the `.plot()` method to add the trendling to the plot. The first argument is the year and the second argument is the polynomial function applied to the year: `p(yearly_precip_data['year'])`. You should make the trendline a different color from the datapoints to make it stand out. 
 
-**3\.1.2 Label axes**
+3\.4 **Label axes**
 
 Each axis should be labeled with both the quantity represented on that axis and the units of that quantity.
+
+## Creating the other plots
+
+After you have completed the first plot, you can reuse much of the code to create the other plots. The main differences will be in the particular summary data you are plotting and the type of plot you are using. 
+
+Note that for the error bar plot, you will need to create four columns in the DataFrame: year, month, lower_deviation, and upper_deviation. The lower and upper deviations will need to be calculated by subtracting the mean minimum temperature from the mean temperature and the mean temperature from the mean maximum temperature, respectively. 
 
 ## Project rubric:
 
 | possible points | feature |
 | --------------- | ------- |
-| 10 | User input with an informative prompt |
-| 10 | At least one `if` clause |
-| 20 | extract data from, or store data in one or more of the basic Python data structures (list, dictionary, tuple) |
-| 10 | a `for` or `while` loop as appropriate for the task |
-| 10 | use a function to perform a calculation based on multiple values from the dataset |
-| 20 | a visualization using the `matplot.pyplot` module |
-| 20 | "does it work" points (i. e. to what extent does the script actually do the required task?) |
+| 10 |  |
+| 10 |  |
 
 ----
-Revised: 2024-03-06
+Revised: 2024-03-11
