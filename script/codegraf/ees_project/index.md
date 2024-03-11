@@ -172,12 +172,6 @@ After you have completed the first plot, you can reuse much of the code to creat
 
 Note that for the error bar plot, you will need to create four columns in the DataFrame: year, month, lower_deviation, and upper_deviation. The lower and upper deviations will need to be calculated by subtracting the mean minimum temperature from the mean temperature and the mean temperature from the mean maximum temperature, respectively. 
 
-## Project rubric:
-
-| possible points | feature |
-| --------------- | ------- |
-| 10 |  |
-| 10 |  |
 
 ----
 Revised: 2024-03-11
