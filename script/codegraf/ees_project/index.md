@@ -152,13 +152,13 @@ Use the `.scatter()` method to plot the precipitation data. The first argument (
 
 A trendline is generally appropriate for scatterplots. A linear trendline (best-fit line) is appropriate if we want to assess whether changes over time increase or decrease over the time interval being visualized.
 
-3\.3.1 **Fit a linear polynomial to annual mean data
+3\.3.1 **Fit a linear polynomial to annual mean data**
 
 Use the `np.polyfit()` function to fit a linear polynomial to the data and acquire its coefficients. As in the example from the Matplotlib lesson, the final argument is the order of the polynomial, which is `1` for a linear polynomial. 
 
 The coefficients can be passed into the `np.poly1d()` function to create the actual polynomial function that can be use to generate the predicted values for the trendline. 
 
-3\.3.2 Add polynomial data to plot**
+3\.3.2 **Add polynomial data to plot**
 
 Use the `.plot()` method to add the trendling to the plot. The first argument is the year and the second argument is the polynomial function applied to the year: `p(yearly_precip_data['year'])`. You should make the trendline a different color from the datapoints to make it stand out. 
 
