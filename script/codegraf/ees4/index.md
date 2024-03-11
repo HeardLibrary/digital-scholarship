@@ -482,6 +482,8 @@ print("It's been a pleasure doing business with you!")
 
 This is the end of the EES 2580 Beginning Python module. 
 
+[Go to the project page](../ees_project/)
+
 If you want to continue on with lessons on vectorized programming with pandas, you can begin the lesson on [NumPy arrays](../007)
 
 Continue to the intermediate series on [files and tables](../020)

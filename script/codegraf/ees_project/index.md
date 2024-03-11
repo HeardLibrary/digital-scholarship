@@ -1,10 +1,16 @@
 ---
 permalink: /script/codegraf/ees_project/
 title: EES 2580 project
-breadcrumb: ees
+breadcrumb: EES 2580 project
 ---
 
 # EES 2580 Python data visualization project
+
+- [Lesson 1: Background](../ees0)
+- [Lesson 2: Python programming basics](../ees1)
+- [Lesson 3: Code libraries and lists](../ees2)
+- [Lesson 4: Dictionaries and complex data structures](../ees3)
+
 
 ## Project learning objectives:
 
