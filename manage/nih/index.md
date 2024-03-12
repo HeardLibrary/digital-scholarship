@@ -40,5 +40,7 @@ Select a repository for your data according to these priorities:
 
 [ICPSR guidelines for depositing NIH data](https://www.icpsr.umich.edu/web/deposit/cms/4254)
 
+[CEDAR workbench for managing biomedical metadata](https://metadatacenter.org/)
+
 ----
-Revised 2023-03-14
+Revised 2024-03-12
