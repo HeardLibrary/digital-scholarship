@@ -18,7 +18,7 @@ The learner will:
 - acquire data from a tabular data source and load it into a Python data structure (pandas DataFrame).
 - extract necessary data from the data structure and wrangle it into a form usable in their analysis.
 - use the basic Python statements they have learned: `if`, `for`, assignment, use a function from a module, apply methods to an object.
-- create a simple visualization using `matplotlib.pyplot`. 
+- create simple visualizations of temperature and precipitation over time using `matplotlib.pyplot`. 
 
 ## Overall goals
 
@@ -28,7 +28,12 @@ Monthly average climate data in tabular form is available from the National Cent
 
 In order to visualize these data, we need to summarize it by averaging values by year or by month. We also will need to deal with situations where values are missing.
 
-In the end, we want one Series containing the time values to be plotted (the X values) and another Series with the average values of yearly averages for precipitation (in mm) that correspond to those time values (the Y values). 
+In the end, we want one Series containing the time values to be plotted (the X values) and another Series with the average values for the climatic variable that corresponds to those time values (the Y values). We will be creating four plots:
+
+- mean precipitation by year
+- mean temperature by year
+- mean precipitation by month
+- mean temperature by month
 
 We can then visualize these data using Matplotlib. Here is an example for the data above:
 
@@ -36,7 +41,7 @@ We can then visualize these data using Matplotlib. Here is an example for the da
 
 ## Specific requirements
 
-Each plot must have descriptive axis labels, including units if appropriate. 
+Each plot must have descriptive axis labels, including units if appropriate. These are the four required plots:
 
 1. Create an XY scatter plot of mean precipitation by year. Add a linear trendline (first-order polynomial) fit to the data.
 2. Create an XY scatter plot of mean temperature by year. Add a linear trendline (first-order polynomial) fit to the data.
@@ -70,6 +75,8 @@ Much of the data wrangling code can be reused with modification after you comple
 3\.4 Label axes<br/>
 
 ## Task details
+
+These are the specific steps required to create a plot of mean precipitation by year (the first plot).
 
 You will need to include the following import statements at the beginning of your script:
 
@@ -174,10 +181,10 @@ Each axis should be labeled with both the quantity represented on that axis and 
 
 ## Creating the other plots
 
-After you have completed the first plot, you can reuse much of the code to create the other plots. The main differences will be in the particular summary data you are plotting and the type of plot you are using. 
+After you have completed the first plot, you can reuse much of the code to create the other plots. The main differences will be in the particular summary data you are plotting and the type of plot you are using. See the "Specific requirements" section for the details of the other plots.
 
 Note that for the error bar plot, you will need to create four columns in the DataFrame: year, month, lower_deviation, and upper_deviation. The lower and upper deviations will need to be calculated by subtracting the mean minimum temperature from the mean temperature and the mean temperature from the mean maximum temperature, respectively. 
 
 
 ----
-Revised: 2024-03-11
+Revised: 2024-03-18
