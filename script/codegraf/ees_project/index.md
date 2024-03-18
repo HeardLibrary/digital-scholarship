@@ -4,21 +4,58 @@ title: EES 2580 project
 breadcrumb: EES 2580 project
 ---
 
-# EES 2580 Python data visualization project
+# Earth Systems Dynamics (EES 2580) Python Project Rubric and Instructions
 
 - [Lesson 1: Background](../ees0)
 - [Lesson 2: Python programming basics](../ees1)
 - [Lesson 3: Code libraries and lists](../ees2)
 - [Lesson 4: Dictionaries and complex data structures](../ees3)
 
+# Project Part 1: Data Acquisition and Analysis with Python
 
-## Project learning objectives:
+## Learning objectives:
 
 The learner will:
 - acquire data from a tabular data source and load it into a Python data structure (pandas DataFrame).
 - extract necessary data from the data structure and wrangle it into a form usable in their analysis.
 - use the basic Python statements they have learned: `if`, `for`, assignment, use a function from a module, apply methods to an object.
 - create simple visualizations of temperature and precipitation over time using `matplotlib.pyplot`. 
+
+## Criteria
+
+1\.	Data Acquisition (20 points)
+•	Exemplary (20-18 points): Student successfully acquires data from a tabular data source, loading it into a pandas DataFrame. The process is well-documented and error-handling is implemented effectively.
+•	Proficient (17-14 points): Student is able to acquire data and load it into a pandas DataFrame, with minor errors in documentation or handling.
+•	Developing (13-10 points): Student encounters some difficulties in acquiring and loading the data, with notable errors in documentation or handling.
+•	Needs Improvement (9-0 points): Student struggles significantly with acquiring and loading data, with inadequate documentation or han- dling of errors.
+2\.	Data Wrangling (30 points)
+•	Exemplary (30-27 points): Student extracts necessary data from the DataFrame and successfully wrangles it into a usable form for anal- ysis. Data manipulation techniques are effectively applied.
+•	Proficient (26-21 points): Student extracts most of the necessary data and conducts basic data wrangling, with some inconsistencies or minor errors.
+•	Developing (20-15 points): Student struggles with extracting necessary data or encounters difficulties in wrangling the data into a usable form.
+•	Needs Improvement (14-0 points): Student demonstrates limited abil- ity to extract necessary data or perform data wrangling.
+3\.	Python Proficiency (30 points)
+•	Exemplary (30-27 points): Student demonstrates proficient use of ba- sic Python statements (if, for, assignment), effectively utilizes func- tions from modules, and applies methods to objects.
+•	Proficient (26-21 points): Student applies basic Python statements adequately but may demonstrate some inconsistencies or errors.
+•	Developing (20-15 points): Student struggles with basic Python state- ments and may have difficulty applying functions or methods correctly.
+•	Needs Improvement (14-0 points): Student demonstrates limited understanding or application of basic Python statements.
+4\.	Data Visualization (20 points)
+•	Exemplary (20-18 points): Student creates multiple clear and informative visualizations using matplotlib.pyplot that effectively repre- sent the analyzed data.
+•	Proficient (17-14 points): Student creates a visualization that represents the data adequately, but may have minor inconsistencies or lack some clarity.
+•	Developing (13-10 points): Student attempts to create a visualization but encounters difficulties in clarity or effectiveness.
+•	Needs Improvement (9-0 points): Student demonstrates limited ability to create a visualization or fails to do so.
+
+Total: 100 points
+
+
+# Project Part 2: Data interpretation (20 points)
+
+In addition to submitting your python notebook, please submit a word document or pdf that addresses the following. 
+Please write one paragraph that describes in your own words what your plots show. This paragraph should answer the following questions: How do temperature and precipitation evolve over time? What evidence suggests that temperature and precipitation are or are not changing through time?
+
+You can get up to four bonus points for embedding figures you produced via your python script into your word document. To get the bonus points, you must include a caption that describes the figure below each figure. 
+
+
+# Project Goals and Requirements
 
 ## Overall goals
 
