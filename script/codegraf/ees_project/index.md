@@ -36,9 +36,9 @@ The learner will:
 - Needs Improvement (14-0 points): Student demonstrates limited ability to extract necessary data or perform data wrangling.
 
 3\.	Python Proficiency (30 points)
-- Exemplary (30-27 points): Student demonstrates proficient use of ba- sic Python statements (if, for, assignment), effectively utilizes functions from modules, and applies methods to objects.
+- Exemplary (30-27 points): Student demonstrates proficient use of basic Python statements (if, for, assignment), effectively utilizes functions from modules, and applies methods to objects.
 - Proficient (26-21 points): Student applies basic Python statements adequately but may demonstrate some inconsistencies or errors.
-- Developing (20-15 points): Student struggles with basic Python state- ments and may have difficulty applying functions or methods correctly.
+- Developing (20-15 points): Student struggles with basic Python statements and may have difficulty applying functions or methods correctly.
 - Needs Improvement (14-0 points): Student demonstrates limited understanding or application of basic Python statements.
 
 4\.	Data Visualization (20 points)
@@ -52,7 +52,8 @@ Total: 100 points
 
 # Project Part 2: Data interpretation (20 points)
 
-In addition to submitting your python notebook, please submit a word document or pdf that addresses the following. 
+In addition to submitting your Python notebook, please submit a word document or pdf that addresses the following. 
+
 Please write one paragraph that describes in your own words what your plots show. This paragraph should answer the following questions: How do temperature and precipitation evolve over time? What evidence suggests that temperature and precipitation are or are not changing through time?
 
 You can get up to four bonus points for embedding figures you produced via your python script into your word document. To get the bonus points, you must include a caption that describes the figure below each figure. 
@@ -193,7 +194,7 @@ The list of dictionaries can be passed directly into the `pd.DataFrame()` functi
 
 The plot setup should be fairly straightforward and be similar to examples we did in class.
 
-3\.1.1 **Create up subplot**
+3\.1.1 **Create a subplot**
 
 We should only need a single subplot (`ax`) within each figure.
 
