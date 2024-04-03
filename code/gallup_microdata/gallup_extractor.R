@@ -10,7 +10,7 @@ library(haven) # Library to read Stata .dta files
 # all of the data. That would require figuring out which wave corresponds to which year. I think mostly
 # they are just assigned consecutively with wave 1 = 2005 or 2006.
 #file_path = "/Users/baskausj/Library/CloudStorage/Box-Box/VU Gallup Microdata/Tripp__worldPoll__08082023/Tripp__worldPoll__08082023.dta"
-file_path = "/Users/baskausj/Downloads/gallup/Gallup_World_Poll_102023.dta"
+file_path = "/Users/baskausj/Library/CloudStorage/Box-Box/VU Gallup Microdata/current_download/World Poll Datasets and Methodology_021524/Gallup_World_Poll_021524_ALL WAVES/Gallup_World_Poll_021524.dta"
 
 stata_dataframe <- read_dta(file_path) # when trying to load full dataset, first time I got "Error: vector memory exhausted (limit reached?)"
 # see https://stackoverflow.com/questions/51295402/r-on-macos-error-vector-memory-exhausted-limit-reached
@@ -19,16 +19,26 @@ stata_dataframe <- read_dta(file_path) # when trying to load full dataset, first
 head(stata_dataframe)
 dim(stata_dataframe)
 
+# Display the unique values for the countrynew column
+sort(unique(stata_dataframe$countrynew))
+
 # Filter rows by Turkey
-sub_frame <- filter(stata_dataframe, countrynew=="Turkey")
+sub_frame <- filter(stata_dataframe, countrynew=="United States")
 head(sub_frame)
 dim(sub_frame)
 
 # Save the filtered file in .dta format (not really necessary if also filtering by years)
 #write_dta(sub_frame, "/Users/baskausj/Downloads/turkey.dta")
 
+years_vector = c("2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023")
+
+# Filter by any year in the vector
+year_subframe <- filter(sub_frame, YEAR_CALENDAR %in% years_vector)
+head(year_subframe)
+dim(year_subframe)
+
 # Filter for 2016 or 2019 or 2022
-year_subframe <- filter(sub_frame, YEAR_CALENDAR=="2016" | YEAR_CALENDAR=="2019" | YEAR_CALENDAR=="2022")
+#year_subframe <- filter(sub_frame, YEAR_CALENDAR=="2016" | YEAR_CALENDAR=="2019" | YEAR_CALENDAR=="2022")
 
 # Save the filtered file in .dta format
-write_dta(year_subframe, "/Users/baskausj/Downloads/turkey_years.dta")
+write_dta(year_subframe, "/Users/baskausj/Downloads/usa_years.dta")
