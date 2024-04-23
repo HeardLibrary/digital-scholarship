@@ -52,6 +52,8 @@ HOME = str(Path.home()) # gets path to home directory; supposed to work for both
 # These may vary among users, so make them mutable here rather than hardcoding in the script.
 FILENAME_COLUMN_HEADER = 'fileName'
 ACCESS_URL_COLUMN_HEADER = 'ac_hasServiceAccessPoint'
+METADATA_FILENAME = 'images.csv'
+OUTPUT_FILENAME = 'modified_image.csv'
 
 # -----------------------------------------
 # Idiosyncratic functions
@@ -306,7 +308,7 @@ error_log_object = open('log_error.txt', 'wt', encoding='utf-8') # direct the ou
 api_access_token = read_access_token()
 
 # Load file metadata from CSV spreadsheet
-files_metadata = pd.read_csv('images.csv', na_filter=False, dtype = str)
+files_metadata = pd.read_csv(METADATA_FILENAME, na_filter=False, dtype = str)
 
 # Set up a list to hold the modified metadata dictionaries for each file (for eventual output as CSV).
 modified_metadata_list = []
@@ -376,7 +378,7 @@ for index, file_series in files_metadata.iterrows():
 
     # Write the modified metadata list to a CSV file in each loop in case the script aborts.
     modified_metadata_df = pd.DataFrame(modified_metadata_list)
-    modified_metadata_df.to_csv('modified_image.csv', index=False)
+    modified_metadata_df.to_csv(OUTPUT_FILENAME, index=False)
     print()
 
 error_log_object.close()
