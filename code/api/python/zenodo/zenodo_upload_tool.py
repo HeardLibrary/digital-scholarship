@@ -3,8 +3,8 @@
 # (c) 2024 Vanderbilt University. This program is released under a GNU General Public License v3.0 http://www.gnu.org/licenses/gpl-3.0
 # Author: Steve Baskauf
 
-version = '0.0.1'
-created = '2024-04-17'
+version = '0.1.0'
+created = '2024-04-23'
 
 # Zenodo API developer guide: https://developers.zenodo.org/#quickstart-upload
 
@@ -12,6 +12,13 @@ created = '2024-04-17'
 # On the Applications page, click "New token" and fill out the form, checking the actions and write scopes.
 # Copy the access token and save it in a plain text file in your home directory. 
 # The file must contain only the key and no other text.
+
+# -----------------------------------------
+# Version 0.1.0 change notes: 
+# - There is at least one untrapped error contition that does not seem to be detected. If the deposition record is created
+#   but the upload does not complete, there will be a metadata record for the user that is not published and therefore
+#   does not have a registered DOI. I'm not sure which stage in the process this is happening or how to detect and trap it.
+# -----------------------------------------
 
 # -----------------------------------------
 # Import modules.
@@ -32,18 +39,19 @@ import pandas as pd
 # NOTE: The access tokens for the sandbox and production Zenodo instances are different. To use the sandbox, you need
 # to log in to the sandbox instance and create a new access token.
 
-BASE_URL = 'https://zenodo.org/api'
-#BASE_URL = 'https://sandbox.zenodo.org/api' # for testing
+#BASE_URL = 'https://zenodo.org/api'
+BASE_URL = 'https://sandbox.zenodo.org/api' # for testing
 HTTP_HEADER = {
     'Content-Type': 'application/json'
     }
-API_ACCESS_TOKEN_FILENAME = 'zenodo_bioimages_upload_access_token.txt'
-#API_ACCESS_TOKEN_FILENAME = 'zenodo_sandbox_access_token.txt'
+#API_ACCESS_TOKEN_FILENAME = 'zenodo_bioimages_upload_access_token.txt'
+API_ACCESS_TOKEN_FILENAME = 'zenodo_sandbox_access_token.txt'
 
 HOME = str(Path.home()) # gets path to home directory; supposed to work for both Win and Mac
 
-# This may vary among users, so make it mutable here rather than hardcoding in the script.
+# These may vary among users, so make them mutable here rather than hardcoding in the script.
 FILENAME_COLUMN_HEADER = 'fileName'
+ACCESS_URL_COLUMN_HEADER = 'ac_hasServiceAccessPoint'
 
 # -----------------------------------------
 # Idiosyncratic functions
@@ -233,6 +241,10 @@ def add_metadata_to_deposition(api_access_token: str, deposition_id: str, metada
         ID of the deposition to which metadata will be added.
     metadata : dict
         Metadata to add to the deposition.
+
+    Returns
+    -------
+    A string 'success' if successful or None if unsuccessful.
     """
     deposition_url = BASE_URL + '/deposit/depositions/' + str(deposition_id)
     request_params = {'access_token': api_access_token}
@@ -245,7 +257,7 @@ def add_metadata_to_deposition(api_access_token: str, deposition_id: str, metada
     else:
         return 'success'
     
-def publish_deposition(api_access_token: str, deposition_id: str) -> Union[str, None]:
+def publish_deposition(api_access_token: str, deposition_id: str) -> Tuple[Union[str, None], int]:
     """Publish a deposition on Zenodo.
 
     Parameters
@@ -254,6 +266,10 @@ def publish_deposition(api_access_token: str, deposition_id: str) -> Union[str, 
         API access token loaded from hard drive.
     deposition_id : str
         ID of the deposition to publish.
+
+    Returns
+    -------
+    A tuple consisting of a concept DOI string if successful or None if unsuccessful, and the record ID.
     """
     publication_url = BASE_URL + '/deposit/depositions/' + str(deposition_id) + '/actions/publish'
     request_params = {'access_token': api_access_token}
@@ -264,7 +280,14 @@ def publish_deposition(api_access_token: str, deposition_id: str) -> Union[str, 
         return None
     else:
         # Capture the conceptdoi, which always refers to the latest version rather than doi, which is version-specific.
-        return response.json()['conceptdoi']
+        try:
+            concept_doi = response.json()['conceptdoi']
+        except KeyError:
+            concept_doi = None
+        # Also capture the record ID, which is needed to build the permanent access URL for the file (i.e. image).
+        record_id = response.json()['id']
+
+        return concept_doi, record_id
 
 # -----------------------------------------
 # Main routine
@@ -305,10 +328,11 @@ for index, file_series in files_metadata.iterrows():
     # The home subpath is ideosyncratic to the particular user, so put it in a function rather than hardcoding it here.
     home_subpath = construct_home_subpath(metadata)
 
+    # The access_url actually isn't the one that should be used as the service access point for the original image,
+    # since I don't know if the uploaded file is maintained in that bucket indefinitely. However, it is useful for
+    # as a test to know that the upload was successful. 
     access_url = upload_file_to_bucket(api_access_token, bucket_url, metadata[FILENAME_COLUMN_HEADER], home_subpath)
     if access_url is not None:
-        print('Access URL:', access_url)
-
         # Add metadata to the deposition
         metadata_dict = construct_metadata_dict(metadata)
         metadata_response = add_metadata_to_deposition(api_access_token, deposition_id, metadata_dict)
@@ -316,7 +340,7 @@ for index, file_series in files_metadata.iterrows():
             print('Metadata added')
 
             # Publish the deposition
-            publication_doi = publish_deposition(api_access_token, deposition_id)
+            publication_doi, record_id = publish_deposition(api_access_token, deposition_id)
             if publication_doi is not None:
                 print('Deposition published with DOI:', publication_doi)
             else:
@@ -336,11 +360,10 @@ for index, file_series in files_metadata.iterrows():
         print(warnings_text, file=error_log_object)
         print('', file=error_log_object) # Skip a line in the log file between loop iterations
 
-    # Insert the access_url into the original metadata as the ac_hasServiceAccessPoint value.
-    if access_url is not None:
-        metadata['ac_hasServiceAccessPoint'] = access_url
-    else:
-        metadata['ac_hasServiceAccessPoint'] = ''
+    # Construct the access_url and insert it into the original metadata as the ac_hasServiceAccessPoint value.
+    # The form of the access_url is https://zenodo.org/records/[record_id]/files/[filename]
+    access_url = 'https://zenodo.org/records/' + str(record_id) + '/files/' + metadata[FILENAME_COLUMN_HEADER]
+    metadata[ACCESS_URL_COLUMN_HEADER] = access_url
 
     # Add the doi to the metadata dict.
     if publication_doi is not None:
