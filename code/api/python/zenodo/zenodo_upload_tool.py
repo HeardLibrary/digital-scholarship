@@ -18,6 +18,7 @@ created = '2024-04-23'
 # - There is at least one untrapped error contition that does not seem to be detected. If the deposition record is created
 #   but the upload does not complete, there will be a metadata record for the user that is not published and therefore
 #   does not have a registered DOI. I'm not sure which stage in the process this is happening or how to detect and trap it.
+#   I'm logging an error for failure to return an access_url, which seems to be a detectable effect of this problem.
 # -----------------------------------------
 
 # -----------------------------------------
@@ -285,6 +286,7 @@ def publish_deposition(api_access_token: str, deposition_id: str) -> Tuple[Union
         try:
             concept_doi = response.json()['conceptdoi']
         except KeyError:
+            logging.warning('Error: conceptdoi not found in response.')
             concept_doi = None
         # Also capture the record ID, which is needed to build the permanent access URL for the file (i.e. image).
         record_id = response.json()['id']
@@ -342,6 +344,10 @@ for index, file_series in files_metadata.iterrows():
             print('Metadata added')
 
             # Publish the deposition
+
+            # Something weird is going on here. Sometimes the previous publication_doi is returned, which it should
+            # be None if the deposition publication fails. This results in two rows in the metadata file with the same
+            # publication DOI.
             publication_doi, record_id = publish_deposition(api_access_token, deposition_id)
             if publication_doi is not None:
                 print('Deposition published with DOI:', publication_doi)
@@ -350,6 +356,7 @@ for index, file_series in files_metadata.iterrows():
         else:
             print('Error adding metadata')
     else:
+        logging.warning('Error uploading file: ' + metadata[FILENAME_COLUMN_HEADER])
         print('Error uploading file:', metadata[FILENAME_COLUMN_HEADER])
 
     # Read the warnings log and write to the error log file if there are any warnings.
